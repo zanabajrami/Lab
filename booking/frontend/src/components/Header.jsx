@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 
 function Header() {
   return (
@@ -31,9 +32,9 @@ function Header() {
 
           {/* Login/Register */}
           <div className="hidden md:flex space-x-4">
-            <button className="px-4 py-2 text-gray-800 hover:text-red-600 transition">
+          <Link to="/login" className="px-4 py-2 text-gray-800 hover:text-red-600 transition">
               Login
-            </button>
+            </Link>
             <button className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-800 transition">
               Sign Up
             </button>

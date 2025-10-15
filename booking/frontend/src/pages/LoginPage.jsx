@@ -1,0 +1,62 @@
+import React, { useState } from "react";
+
+function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!email.endsWith("@gmail.com") && !email.endsWith("@hotmail.com")) {
+      alert("Please enter a valid email ending with @gmail.com or @hotmail.com");
+      return;
+    }
+
+    if (password.length < 8) {
+      alert("Password must be at least 8 characters long");
+      return;
+    }
+
+    alert(`Login with: ${email}`);
+  };
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
+      <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Login</h2>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <input
+            type="email"
+            placeholder="Email"
+            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button
+            type="submit"
+            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-lg"
+          >
+            Login
+          </button>
+        </form>
+        <p className="mt-4 text-gray-600 text-sm">
+          Don't have an account?{" "}
+          <a href="/register" className="text-red-600 hover:underline">
+            Register
+          </a>
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default Login;
