@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Eye, EyeOff } from "lucide-react";
 
 function Register() {
   const [firstName, setFirstName] = useState("");
@@ -8,34 +7,36 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(true); // On nga fillimi
-  const [showConfirmPassword, setShowConfirmPassword] = useState(true); // On nga fillimi
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (firstName.trim().length < 1) {
       alert("First Name must be at least 1 character");
       return;
     }
+
     if (lastName.trim().length < 1) {
       alert("Last Name must be at least 1 character");
       return;
     }
+
     if (!email.endsWith("@gmail.com") && !email.endsWith("@hotmail.com")) {
       alert("Email must end with @gmail.com or @hotmail.com");
       return;
     }
-    const passwordRegex = /^(?=.*[0-9]).{8,}$/;
-    if (!passwordRegex.test(password)) {
-      alert(
-        "Password must be at least 8 characters and include at least one number"
-      );
+
+    if (password.length < 8) {
+      alert("Password must have at least 8 characters");
       return;
     }
+
     if (password !== confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
+
     alert(`Registered successfully: ${firstName} ${lastName}, ${email}`);
   };
 
@@ -72,39 +73,37 @@ function Register() {
           />
 
           {/* Password */}
-          <div className="relative">
-            <input
-              type={showPassword ? "text" : "password"}
-              placeholder="Password"
-              className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-red-600 pr-10"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            <span
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500 z-10"
-              onClick={() => setShowPassword(!showPassword)}
-            >
-              {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
-            </span>
-          </div>
+          <input
+            type={showPassword ? "text" : "password"}
+            placeholder="Password"
+            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
 
           {/* Confirm Password */}
-          <div className="relative">
+          <input
+            type={showPassword ? "text" : "password"}
+            placeholder="Confirm Password"
+            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required
+          />
+
+          {/* Show Password Checkbox */}
+          <div className="flex items-center">
             <input
-              type={showConfirmPassword ? "text" : "password"}
-              placeholder="Confirm Password"
-              className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-red-600 pr-10"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              required
+              type="checkbox"
+              id="showPassword"
+              className="mr-2"
+              checked={showPassword}
+              onChange={() => setShowPassword(!showPassword)}
             />
-            <span
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500 z-10"
-              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-            >
-              {showConfirmPassword ? <EyeOff size={20} /> : <Eye size={20} />}
-            </span>
+            <label htmlFor="showPassword" className="text-sm text-gray-600">
+              Show Password
+            </label>
           </div>
 
           <button
@@ -126,4 +125,4 @@ function Register() {
   );
 }
 
-export default Register; 
+export default Register;
