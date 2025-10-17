@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
-function Register() {
+function Register({ onSwitchToLogin }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -41,7 +40,7 @@ function Register() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="flex flex-col items-center justify-center">
       <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
           Register
@@ -116,9 +115,12 @@ function Register() {
 
         <p className="mt-4 text-gray-600 text-sm text-center">
           Already have an account?{" "}
-          <Link to="/login" className="text-red-600 hover:underline">
+          <button
+            onClick={onSwitchToLogin}
+            className="text-red-600 hover:underline"
+          >
             Login
-          </Link>
+          </button>
         </p>
       </div>
     </div>

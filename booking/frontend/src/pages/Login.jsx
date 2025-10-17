@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
-function Login() {
+function Login({ onSwitchToRegister }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
@@ -23,8 +22,8 @@ function Login() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
+        <div className="flex flex-col items-center justify-center">
+            <div className="w-full">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Login</h2>
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <input
@@ -64,12 +63,16 @@ function Login() {
                         Login
                     </button>
                 </form>
-                <p className="mt-4 text-gray-600 text-sm">
+                <p className="mt-4 text-gray-600 text-sm text-center">
                     Don't have an account?{" "}
-                    <Link to="/register" className="text-red-600 hover:underline">
+                    <button
+                        onClick={onSwitchToRegister}
+                        className="text-red-600 hover:underline"
+                    >
                         Register
-                    </Link>
+                    </button>
                 </p>
+
             </div>
         </div>
     );
