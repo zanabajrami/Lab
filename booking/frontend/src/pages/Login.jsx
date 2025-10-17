@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -34,14 +35,28 @@ function Login() {
                         onChange={(e) => setEmail(e.target.value)}
                         required
                     />
-                    <input
-                        type="password"
-                        placeholder="Password"
-                        className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
+                    <div>
+                        <input
+                            type={showPassword ? "text" : "password"}
+                            placeholder="Password"
+                            className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-red-600"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                        <div className="flex items-center mt-2">
+                            <input
+                                type="checkbox"
+                                id="showPassword"
+                                className="mr-2"
+                                checked={showPassword}
+                                onChange={() => setShowPassword(!showPassword)}
+                            />
+                            <label htmlFor="showPassword" className="text-sm text-gray-600">
+                                Show Password
+                            </label>
+                        </div>
+                    </div>
                     <button
                         type="submit"
                         className="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-lg"
