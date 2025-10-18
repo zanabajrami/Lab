@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './index.css';
 import Header from './components/Header';
@@ -6,8 +6,20 @@ import Footer from './components/Footer';
 import SearchBar from './components/SearchBar';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Deals from "./pages/Deals";
+import Favorites from "./pages/Favorites";
 
 function App() {
+  const [favorites, setFavorites] = useState([]);
+  const toggleFavorite = (deal) => {
+    const isFavorited = favorites.some(fav => fav.id === deal.id);
+    if (isFavorited) {
+      setFavorites(favorites.filter(fav => fav.id !== deal.id));
+    } else {
+      setFavorites([...favorites, deal]);
+    }
+  };
+
   return (
     <Router>
       <div className="bg-gray-100 min-h-screen flex flex-col">
@@ -31,6 +43,8 @@ function App() {
             />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/deals" element={<Deals />} />
+            <Route path="/favorites" element={<Favorites favorites={favorites} />} />
           </Routes>
         </main>
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Contact from "../pages/Contact";
+import { Link } from "react-router-dom";
 
 function Header() {
     const [showLogin, setShowLogin] = useState(false);
@@ -21,7 +22,12 @@ function Header() {
                     <nav className="hidden md:flex space-x-6">
                         <a href="/" className="text-gray-700 hover:text-red-600 transition">Destinations</a>
                         <a href="/" className="text-gray-700 hover:text-red-600 transition">Hotels</a>
-                        <a href="/" className="text-gray-700 hover:text-red-600 transition">Deals</a>
+                        <Link
+                            to="/deals"
+                            className="text-gray-700 hover:text-red-600 transition"
+                        >
+                            Deals
+                        </Link>
                         <button
                             onClick={() => setShowContact(true)}
                             className="text-gray-700 hover:text-red-600 transition"
