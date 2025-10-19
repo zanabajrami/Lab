@@ -1,4 +1,5 @@
 import React from "react";
+import { Heart } from "lucide-react";
 import tiranaImage from "../images/tirana.jpg";
 import prishtinaImage from "../images/prishtina.jpg";
 import brezovicaImage from "../images/brezovica.jpg";
@@ -21,8 +22,16 @@ const dealsData = [
   { id: 9, hotelName: "Luxe Apartments", location: "Tirana, Albania", price: "$100 / night", image: tirana2Image },
 ];
 
-function Favorites({ favorites }) {
+function Favorites({ favorites, setFavorites }) {
   const favoriteHotels = dealsData.filter((deal) => favorites.includes(deal.id));
+
+  const toggleFavorite = (id) => {
+    if (favorites.includes(id)) {
+      setFavorites(favorites.filter((fav) => fav !== id));
+    } else {
+      setFavorites([...favorites, id]);
+    }
+  };
 
   if (favoriteHotels.length === 0) {
     return <p className="text-center mt-10 text-gray-600">You have no favorites yet!</p>;
@@ -33,8 +42,21 @@ function Favorites({ favorites }) {
       <h1 className="text-3xl font-bold mb-6">Your Favorites</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {favoriteHotels.map((deal) => (
-          <div key={deal.id} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div key={deal.id} className="bg-white rounded-2xl shadow-lg overflow-hidden relative">
             <img src={deal.image} alt={deal.hotelName} className="w-full h-48 object-cover" />
+
+            <button
+              onClick={() => toggleFavorite(deal.id)}
+              className="absolute top-3 right-3 bg-white p-1 rounded-full hover:scale-110 transition"
+            >
+              <Heart
+                className={`w-5 h-5 ${favorites.includes(deal.id)
+                    ? "text-red-500 fill-red-500"
+                    : "text-gray-500"
+                  }`}
+              />
+            </button>
+
             <div className="p-4">
               <h2 className="font-semibold text-lg">{deal.hotelName}</h2>
               <p className="text-gray-500">{deal.location}</p>

@@ -41,8 +41,9 @@ function App() {
             />
             <Route
               path="/favorites"
-              element={<Favorites favorites={favorites} />}
+              element={<Favorites favorites={favorites} setFavorites={setFavorites} />}
             />
+
 
           </Routes>
         </main>

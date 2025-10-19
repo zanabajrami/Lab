@@ -44,7 +44,6 @@ function Deals({ favorites, setFavorites }) {
                   {deal.discount}
                 </span>
 
-                {/* Zemra */}
                 <button onClick={() => toggleFavorite(deal.id)} className="absolute top-3 right-3 bg-white p-1 rounded-full hover:scale-110 transition">
                   <Heart className={`w-5 h-5 ${favorites.includes(deal.id) ? "text-red-500 fill-red-500" : "text-gray-500"}`} />
                 </button>
