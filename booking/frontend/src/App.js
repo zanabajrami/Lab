@@ -11,14 +11,6 @@ import Favorites from "./pages/Favorites";
 
 function App() {
   const [favorites, setFavorites] = useState([]);
-  const toggleFavorite = (deal) => {
-    const isFavorited = favorites.some(fav => fav.id === deal.id);
-    if (isFavorited) {
-      setFavorites(favorites.filter(fav => fav.id !== deal.id));
-    } else {
-      setFavorites([...favorites, deal]);
-    }
-  };
 
   return (
     <Router>
@@ -43,8 +35,15 @@ function App() {
             />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/deals" element={<Deals />} />
-            <Route path="/favorites" element={<Favorites favorites={favorites} />} />
+            <Route
+              path="/deals"
+              element={<Deals favorites={favorites} setFavorites={setFavorites} />}
+            />
+            <Route
+              path="/favorites"
+              element={<Favorites favorites={favorites} />}
+            />
+
           </Routes>
         </main>
 
