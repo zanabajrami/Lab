@@ -15,8 +15,13 @@ function Header() {
 
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                        <h1 className="text-2xl font-bold text-gray-800">Booking</h1>
+                        <Link to="/">
+                            <h1 className="text-2xl font-bold text-gray-800 cursor-pointer">
+                                Booking
+                            </h1>
+                        </Link>
                     </div>
+
 
                     {/* Navigation */}
                     <nav className="hidden md:flex space-x-6">

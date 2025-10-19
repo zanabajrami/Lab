@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './index.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import SearchBar from './components/SearchBar';
+import HomePage from './pages/HomePage';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Deals from "./pages/Deals";
@@ -19,20 +19,10 @@ function App() {
 
         <main className="flex-grow">
           <Routes>
-            <Route
-              path="/"
-              element={
-                <div className="max-w-7xl mx-auto px-4 py-10">
-                  <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                    Welcome to Booking
-                  </h2>
-                  <p className="text-gray-700 mb-8">
-                    Start your hotel search below...
-                  </p>
-                  <SearchBar />
-                </div>
-              }
-            />
+            {/* Faqja kryesore */}
+            <Route path="/" element={<HomePage />} />
+
+            {/* Faqe të tjera */}
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route
@@ -43,8 +33,6 @@ function App() {
               path="/favorites"
               element={<Favorites favorites={favorites} setFavorites={setFavorites} />}
             />
-
-
           </Routes>
         </main>
 
