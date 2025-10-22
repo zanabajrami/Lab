@@ -82,7 +82,7 @@ function HomePage() {
 
       {/* Destinacionet */}
       <section className="max-w-8xl mx-auto px-4 py-12">
-        <h2 className="text-2xl font-bold mb-6">Destinations</h2>
+        <h2 className="text-2xl font-bold mb-6">Destinacionet</h2>
 
         <Slider {...sliderSettings}>
           {destinations.map((dest) => (
@@ -101,6 +101,20 @@ function HomePage() {
           ))}
         </Slider>
       </section>
+
+      <section className="max-w-7xl mx-auto px-4 py-12 text-center">
+  <h2 className="text-2xl font-bold mb-8">Destinacionet më të njohura</h2>
+  <div className="flex flex-wrap justify-center gap-6">
+    {["Prishtinë", "Tiranë", "Dhërmi", "Brezovicë", "Sarandë"].map((city, i) => (
+      <button
+        key={i}
+        className="px-6 py-2 bg-gray-900 hover:bg-red-900 text-white rounded-full font-semibold transition"
+      >
+        {city}
+      </button>
+    ))}
+  </div>
+</section>
 
 {/* Kategoritë: Hotele, Villa, Apartamente */}
 <section className="max-w-7xl mx-auto px-4 py-12">
@@ -187,7 +201,7 @@ function HomePage() {
           <div className="text-center mt-6">
             <Link
               to="/deals"
-              className="bg-gray-300 hover:bg-red-600 text-gray px-6 py-3 rounded-md font-bold"
+              className="bg-gray-300 hover:bg-blue-800 text-gray px-6 py-3 rounded-md font-bold"
             >
               Shiko të gjitha ofertat
             </Link>
