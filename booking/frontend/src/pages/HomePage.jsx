@@ -103,81 +103,81 @@ function HomePage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 py-12 text-center">
-  <h2 className="text-2xl font-bold mb-8">Destinacionet më të njohura</h2>
-  <div className="flex flex-wrap justify-center gap-6">
-    {["Prishtinë", "Tiranë", "Dhërmi", "Brezovicë", "Sarandë"].map((city, i) => (
-      <button
-        key={i}
-        className="px-6 py-2 bg-gray-900 hover:bg-red-900 text-white rounded-full font-semibold transition"
-      >
-        {city}
-      </button>
-    ))}
-  </div>
-</section>
+        <h2 className="text-2xl font-bold mb-8">Destinacionet më të njohura</h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          {["Prishtinë", "Tiranë", "Dhërmi", "Brezovicë", "Sarandë"].map((city, i) => (
+            <button
+              key={i}
+              className="px-6 py-2 bg-gray-900 hover:bg-red-900 text-white rounded-full font-semibold transition"
+            >
+              {city}
+            </button>
+          ))}
+        </div>
+      </section>
 
-{/* Kategoritë: Hotele, Villa, Apartamente */}
-<section className="max-w-7xl mx-auto px-4 py-12">
+      {/* Kategoritë: Hotele, Villa, Apartamente */}
+      <section className="max-w-7xl mx-auto px-4 py-12">
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
-    {/* Hotele */}
-    <div className="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-      <img
-        src={radhimeImage}
-        alt="Hotels"
-        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-      />
-      <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
-        <h3 className="text-2xl font-bold mb-2">Hotele</h3>
-        <p className="text-sm">Zbuloni hotele të përshtatshme për çdo buxhet.</p>
-        <Link
-          to="/hotels"
-          className="mt-4 bg-gray-900 hover:bg-gray-700 px-5 py-2 rounded-md font-semibold"
-        >
-          Shiko më shumë
-        </Link>
-      </div>
-    </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
+          {/* Hotele */}
+          <div className="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+            <img
+              src={radhimeImage}
+              alt="Hotels"
+              className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
+              <h3 className="text-2xl font-bold mb-2">Hotele</h3>
+              <p className="text-sm">Zbuloni hotele të përshtatshme për çdo buxhet.</p>
+              <Link
+                to="/hotels"
+                className="mt-4 bg-gray-900 hover:bg-gray-700 px-5 py-2 rounded-md font-semibold"
+              >
+                Shiko më shumë
+              </Link>
+            </div>
+          </div>
 
-    {/* Villa */}
-    <div className="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-      <img
-        src={brezovica3Image}
-        alt="Villas"
-        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-      />
-      <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
-        <h3 className="text-2xl font-bold mb-2">Villa</h3>
-        <p className="text-sm">Relaksohu në vilat më luksoze.</p>
-        <Link
-          to="/villas"
-          className="mt-4 bg-gray-900 hover:bg-gray-700 px-5 py-2 rounded-md font-semibold"
-        >
-          Shiko më shumë
-        </Link>
-      </div>
-    </div>
+          {/* Villa */}
+          <div className="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+            <img
+              src={brezovica3Image}
+              alt="Villas"
+              className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
+              <h3 className="text-2xl font-bold mb-2">Villa</h3>
+              <p className="text-sm">Relaksohu në vilat më luksoze.</p>
+              <Link
+                to="/villas"
+                className="mt-4 bg-gray-900 hover:bg-gray-700 px-5 py-2 rounded-md font-semibold"
+              >
+                Shiko më shumë
+              </Link>
+            </div>
+          </div>
 
-    {/* Apartamente */}
-    <div className="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-      <img
-        src={tirana3Image}
-        alt="Apartments"
-        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-      />
-      <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
-        <h3 className="text-2xl font-bold mb-2">Apartamente</h3>
-        <p className="text-sm">Qëndrim komod për familje ose grupe të vogla.</p>
-        <Link
-          to="/apartments"
-          className="mt-4 bg-gray-900 hover:bg-gray-700 px-5 py-2 rounded-md font-semibold"
-        >
-          Shiko më shumë
-        </Link>
-      </div>
-    </div>
-  </div>
-</section>
+          {/* Apartamente */}
+          <div className="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+            <img
+              src={tirana3Image}
+              alt="Apartments"
+              className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
+              <h3 className="text-2xl font-bold mb-2">Apartamente</h3>
+              <p className="text-sm">Qëndrim komod për familje ose grupe të vogla.</p>
+              <Link
+                to="/apartments"
+                className="mt-4 bg-gray-900 hover:bg-gray-700 px-5 py-2 rounded-md font-semibold"
+              >
+                Shiko më shumë
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Ofertat */}
       <section className="bg-gray-100 py-12">
@@ -210,27 +210,27 @@ function HomePage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 py-12 text-center">
-  <div className="max-w-5xl mx-auto text-center">
-    <h2 className="text-2xl font-bold mb-8">Si funksionon platforma jonë?</h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div className="p-6 shadow rounded-lg">
-        <span className="text-3xl">🔍</span>
-        <h3 className="font-bold mt-2">Kërko</h3>
-        <p className="text-gray-600 text-sm mt-1">Gjeni hotelin ideal sipas vendndodhjes, çmimit dhe datës.</p>
-      </div>
-      <div className="p-6 shadow rounded-lg">
-        <span className="text-3xl">🏨</span>
-        <h3 className="font-bold mt-2">Zgjedh</h3>
-        <p className="text-gray-600 text-sm mt-1">Shfletoni ofertat dhe shikoni detajet e çdo hoteli.</p>
-      </div>
-      <div className="p-6 shadow rounded-lg">
-        <span className="text-3xl">✅</span>
-        <h3 className="font-bold mt-2">Rezervo</h3>
-        <p className="text-gray-600 text-sm mt-1">Rezervoni me disa klikime dhe merrni konfirmimin menjëherë.</p>
-      </div>
-    </div>
-  </div>
-</section>
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-8">Si funksionon platforma jonë?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 shadow rounded-lg">
+              <span className="text-3xl">🔍</span>
+              <h3 className="font-bold mt-2">Kërko</h3>
+              <p className="text-gray-600 text-sm mt-1">Gjeni hotelin ideal sipas vendndodhjes, çmimit dhe datës.</p>
+            </div>
+            <div className="p-6 shadow rounded-lg">
+              <span className="text-3xl">🏨</span>
+              <h3 className="font-bold mt-2">Zgjedh</h3>
+              <p className="text-gray-600 text-sm mt-1">Shfletoni ofertat dhe shikoni detajet e çdo hoteli.</p>
+            </div>
+            <div className="p-6 shadow rounded-lg">
+              <span className="text-3xl">✅</span>
+              <h3 className="font-bold mt-2">Rezervo</h3>
+              <p className="text-gray-600 text-sm mt-1">Rezervoni me disa klikime dhe merrni konfirmimin menjëherë.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Pse të zgjedhësh ne */}
       <section className="max-w-7xl mx-auto px-4 py-12 text-center">
@@ -254,9 +254,100 @@ function HomePage() {
           </div>
         </div>
       </section>
+      {/* Këshilla për udhëtim */}
+      <section className="bg-gray-100 py-12">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl font-bold mb-8 text-center">Sugjerime nga ne</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            {/* Artikulli 1 */}
+            <div className="bg-white p-5 rounded-lg shadow hover:shadow-lg transition relative group overflow-hidden">
+              <img
+                src={himare0Image}
+                alt="blog1"
+                className="rounded-md mb-4 h-40 w-full object-cover"
+              />
+              <h3 className="font-bold mb-2">Top 5 vendet për pushime verore në Shqipëri</h3>
+              <p className="text-sm text-gray-600 transition-all duration-500 max-h-16 overflow-hidden group-[.expanded]:max-h-96">
+                Plazhet më të bukura, ushqimi dhe çmimet më të mira... Nga Dhërmi deri në Ksamil, çdo vend ofron përvoja të veçanta.
+                <span className="hidden group-[.expanded]:inline">
+                  {" "}Nëse preferoni qetësinë, Radhima dhe Himara janë ideale për relaks, ndërsa Ksamili dhe Saranda ofrojnë jetën e gjallë të natës.
+                  Mos harroni të provoni ushqimet tradicionale të zonës dhe të rezervoni akomodimin paraprakisht gjatë sezonit të verës.
+                </span>
+              </p>
+              <button
+                className="text-red-600 font-semibold mt-2 hover:underline focus:outline-none"
+                data-text="Lexo më pak ←"
+                onClick={(e) => {
+                  const card = e.target.closest(".group");
+                  const expanded = card.classList.toggle("expanded");
+                  e.target.textContent = expanded ? e.target.dataset.text : "Lexo më shumë →";
+                }}
+              >
+                Lexo më shumë →
+              </button>
+            </div>
+
+            {/* Artikulli 2 */}
+            <div className="bg-white p-5 rounded-lg shadow hover:shadow-lg transition relative group overflow-hidden">
+              <img
+                src={brezovica0Image}
+                alt="blog2"
+                className="rounded-md mb-4 h-40 w-full object-cover"
+              />
+              <h3 className="font-bold mb-2">Pse Brezovica është destinacion perfekt dimëror?</h3>
+              <p className="text-sm text-gray-600 transition-all duration-500 max-h-16 overflow-hidden group-[.expanded]:max-h-96">
+                Brezovica është vendi ideal për ski, pushim dhe natyrë. Shijo ajrin e pastër malor dhe hotelet komode.
+                <span className="hidden group-[.expanded]:inline">
+                  {" "}Pista të përgatitura mirë, peizazhe të mbuluara me borë dhe restorante me ushqim tradicional bëjnë që çdo vizitë të jetë e paharrueshme.
+                  Në mbrëmje mund të relaksohesh pranë zjarrit në lodge ose të provosh spa-t lokale. Për një përvojë më të plotë, vizito edhe fshatrat përreth.
+                </span>
+              </p>
+              <button
+                className="text-red-600 font-semibold mt-2 hover:underline focus:outline-none"
+                data-text="Lexo më pak ←"
+                onClick={(e) => {
+                  const card = e.target.closest(".group");
+                  const expanded = card.classList.toggle("expanded");
+                  e.target.textContent = expanded ? e.target.dataset.text : "Lexo më shumë →";
+                }}
+              >
+                Lexo më shumë →
+              </button>
+            </div>
+
+            {/* Artikulli 3 */}
+            <div className="bg-white p-5 rounded-lg shadow hover:shadow-lg transition relative group overflow-hidden">
+              <img
+                src={tirana0Image}
+                alt="blog-tirana"
+                className="rounded-md mb-4 h-40 w-full object-cover"
+              />
+              <h3 className="font-bold mb-2">Udhëzues për një fundjavë në Tiranë</h3>
+              <p className="text-sm text-gray-600 transition-all duration-500 max-h-16 overflow-hidden group-[.expanded]:max-h-96">
+                Tirana ofron muzeume, restorante moderne dhe jetën e gjallë të natës. 
+                <span className="hidden group-[.expanded]:inline">
+                  {" "}Vizito Sheshin Skënderbej, shijo kafen në Bllok dhe eksploro artin modern dhe galeritë lokale. Perfekte për të përjetuar kulturën dhe energjinë e kryeqytetit.
+                </span>
+              </p>
+              <button
+                className="text-red-600 font-semibold mt-2 hover:underline focus:outline-none"
+                data-text="Lexo më pak ←"
+                onClick={(e) => {
+                  const card = e.target.closest(".group");
+                  const expanded = card.classList.toggle("expanded");
+                  e.target.textContent = expanded ? e.target.dataset.text : "Lexo më shumë →";
+                }}
+              >
+                Lexo më shumë →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section >
 
       {/* Reviews */}
-      <section className="bg-gray-100 py-12">
+      < section className="bg-gray-100 py-12" >
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-6">Përshtypjet e klientëve</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -268,9 +359,9 @@ function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
-    </div>
+    </div >
   );
 }
 
