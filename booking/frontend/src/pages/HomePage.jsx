@@ -254,7 +254,8 @@ function HomePage() {
           </div>
         </div>
       </section>
-      {/* Këshilla për udhëtim */}
+
+      {/* Sugjerimet */}
       <section className="bg-gray-100 py-12">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-2xl font-bold mb-8 text-center">Sugjerime nga ne</h2>

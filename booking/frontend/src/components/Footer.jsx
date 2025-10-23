@@ -1,3 +1,7 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Contact from "../pages/Contact";
+
 function IconFacebook() {
     return (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
@@ -21,6 +25,8 @@ function IconTwitter() {
 }
 
 export default function Footer() {
+    const [showContact, setShowContact] = useState(false);
+
     return (
         <footer className="bg-white text-gray-800 py-10 mt-auto ">
             <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -64,7 +70,9 @@ export default function Footer() {
                 <div>
                     <h3 className="text-lg font-semibold mb-3 text-gray-900">Deals</h3>
                     <ul className="space-y-2 text-gray-700">
-                        <li className="hover:text-blue-600 cursor-pointer">Last Minute Deals</li>
+                        <li className="hover:text-blue-600 cursor-pointer">
+                            <Link to="/deals">Last Minute Deals</Link>
+                        </li>
                     </ul>
                 </div>
 
@@ -72,7 +80,7 @@ export default function Footer() {
                 <div>
                     <h3 className="text-lg font-semibold mb-3 text-gray-900">Contact</h3>
                     <ul className="space-y-2 text-gray-700">
-                        <li className="hover:text-blue-600 cursor-pointer">Contact us</li>
+                        <li className="hover:text-blue-600 cursor-pointer" onClick={() => setShowContact(true)} > Contact us </li>
                     </ul>
                 </div>
             </div>
@@ -86,6 +94,13 @@ export default function Footer() {
                     <span className="cursor-pointer hover:text-blue-600 transition"><IconTwitter /></span>
                 </div>
             </div>
+
+            {/* Popup Contact */}
+            {showContact && (<div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                <div className="bg-white p-6 rounded-lg shadow-lg w-[90%] max-w-md relative"> <button onClick={() => setShowContact(false)} className="absolute top-2 right-2 text-gray-600 hover:text-black text-xl" > ✕ </button>
+                    <Contact />
+                </div> </div>
+            )}
         </footer>
     );
 }
