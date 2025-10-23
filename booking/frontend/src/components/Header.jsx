@@ -17,7 +17,7 @@ function Header() {
                     <div className="flex-shrink-0">
                         <Link to="/">
                             <h1 className="text-2xl font-bold text-gray-800 cursor-pointer">
-                                Booking
+                                BookInn
                             </h1>
                         </Link>
                     </div>
