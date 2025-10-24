@@ -9,7 +9,7 @@ function SearchBar() {
   const [endDate, setEndDate] = useState(today);
 
   return (
-    <div className="bg-white rounded-xl border-2 border-red-700 flex items-center shadow-md w-full max-w-5xl mx-auto overflow-hidden">
+    <div className="bg-white rounded-xl border-2 border-cyan-700 flex items-center shadow-md w-full max-w-5xl mx-auto overflow-hidden">
       
       {/* Destination */}
       <div className="flex items-center px-4 py-3 flex-1 border-r border-gray-200">
@@ -56,9 +56,19 @@ function SearchBar() {
       </div>
 
       {/* Search Button */}
-      <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-none">
-        Search
-      </button>
+      <button className="
+  px-6 py-3 
+  rounded-lg 
+  bg-gray-900 text-white 
+  font-semibold 
+  shadow-md 
+  hover:bg-cyan-900 
+  transition-colors duration-300
+  focus:outline-none focus:ring-2 focus:ring-cyan-400
+">
+  Search
+</button>
+
     </div>
   );
 }
