@@ -25,25 +25,25 @@ function Header() {
 
                     {/* Navigation */}
                     <nav className="hidden md:flex space-x-6">
-                        <a href="/" className="text-gray-700 hover:text-red-600 transition">Destinations</a>
-                        <a href="/" className="text-gray-700 hover:text-red-600 transition">Hotels</a>
+                        <a href="/" className="text-gray-700 hover:text-blue-600 transition">Destinations</a>
+                        <a href="/" className="text-gray-700 hover:text-blue-600 transition">Hotels</a>
                         <Link
                             to="/deals"
-                            className="text-gray-700 hover:text-red-600 transition"
+                            className="text-gray-700 hover:text-blue-600 transition"
                         >
                             Deals
                         </Link>
                         <button
                             onClick={() => setShowContact(true)}
-                            className="text-gray-700 hover:text-red-600 transition"
+                            className="text-gray-700 hover:text-blue-600 transition"
                         >
                             Contact
                         </button>
                         <Link
                             to="/favorites"
-                            className="text-gray-700 hover:text-red-600 transition"
+                            className="text-gray-700 hover:text-blue-600 transition"
                         >
-                            Favorites ❤️
+                            Favorites💗
                         </Link>
                     </nav>
 
@@ -51,13 +51,33 @@ function Header() {
                     <div className="hidden md:flex space-x-4">
                         <button
                             onClick={() => setShowLogin(true)}
-                            className="px-4 py-2 text-gray-800 hover:text-red-600 transition"
+                            className="
+      px-5 py-2 
+      rounded-lg 
+      border border-cyan-700 
+      text-cyan-700 
+      bg-transparent 
+      hover:bg-blue-500 hover:text-white 
+      transition-all duration-300 
+      shadow-sm hover:shadow-md
+      font-medium
+    "
                         >
                             Login
                         </button>
+
                         <button
                             onClick={() => setShowRegister(true)}
-                            className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-800 transition"
+                            className="
+      px-5 py-2 
+      rounded-lg 
+      bg-cyan-900 
+      text-white 
+      font-medium 
+      shadow-sm 
+      hover:bg-blue-400 
+      transition-colors duration-300
+    "
                         >
                             Sign Up
                         </button>
