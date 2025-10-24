@@ -51,7 +51,7 @@ function Favorites({ favorites, setFavorites }) {
             >
               <Heart
                 className={`w-5 h-5 ${favorites.includes(deal.id)
-                    ? "text-red-500 fill-red-500"
+                    ? "text-red-800 fill-red-700"
                     : "text-gray-500"
                   }`}
               />
@@ -59,7 +59,12 @@ function Favorites({ favorites, setFavorites }) {
 
             <div className="p-4">
               <h2 className="font-semibold text-lg">{deal.hotelName}</h2>
-              <p className="text-gray-500">{deal.location}</p>
+             <p className="flex items-center text-gray-500 text-sm mt-1">
+                  <svg className="w-4 h-4 mr-1 text-red-800" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 2C6.13 2 3 5.13 3 9c0 5.25 7 11 7 11s7-5.75 7-11c0-3.87-3.13-7-7-7z" />
+                  </svg>
+                  {deal.location}
+                </p>
               <p className="text-gray-900 font-bold mt-2">{deal.price}</p>
             </div>
           </div>

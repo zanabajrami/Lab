@@ -40,25 +40,25 @@ function Deals({ favorites, setFavorites }) {
             <div key={deal.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transform transition duration-300 relative">
               <div className="relative">
                 <img src={deal.image} alt={deal.hotelName} className="w-full h-48 object-cover" />
-                <span className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                <span className="absolute top-3 left-3 bg-red-700 text-white text-xs font-bold px-2 py-1 rounded">
                   {deal.discount}
                 </span>
 
                 <button onClick={() => toggleFavorite(deal.id)} className="absolute top-3 right-3 bg-white p-1 rounded-full hover:scale-110 transition">
-                  <Heart className={`w-5 h-5 ${favorites.includes(deal.id) ? "text-red-500 fill-red-500" : "text-gray-500"}`} />
+                  <Heart className={`w-5 h-5 ${favorites.includes(deal.id) ? "text-red-800 fill-red-700" : "text-gray-500"}`} />
                 </button>
               </div>
 
               <div className="p-4">
                 <h2 className="font-semibold text-lg text-gray-800">{deal.hotelName}</h2>
                 <p className="flex items-center text-gray-500 text-sm mt-1">
-                  <svg className="w-4 h-4 mr-1 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-4 h-4 mr-1 text-red-800" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10 2C6.13 2 3 5.13 3 9c0 5.25 7 11 7 11s7-5.75 7-11c0-3.87-3.13-7-7-7z" />
                   </svg>
                   {deal.location}
                 </p>
                 <p className="text-gray-900 font-bold mt-2">{deal.price}</p>
-                <button className="mt-4 w-full bg-gray-900 text-white py-2 rounded-lg hover:bg-red-600 hover:scale-105 transition-transform duration-300">
+                <button className="mt-4 w-full bg-gray-900 text-white py-2 rounded-lg hover:bg-gray-800 hover:scale-105 transition-transform duration-300">
                   More
                 </button>
               </div>
