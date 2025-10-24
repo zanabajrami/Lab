@@ -46,7 +46,7 @@ function Contact({ onClose }) {
         ></textarea>
         <button
           type="submit"
-          className="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-800 transition"
+          className="w-full bg-gray-900 text-white py-2 rounded-lg hover:bg-blue-800 transition"
         >
           Send Message
         </button>
