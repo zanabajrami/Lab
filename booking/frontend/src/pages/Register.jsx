@@ -49,7 +49,7 @@ function Register({ onSwitchToLogin }) {
           <input
             type="text"
             placeholder="First Name"
-            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             required
@@ -57,7 +57,7 @@ function Register({ onSwitchToLogin }) {
           <input
             type="text"
             placeholder="Last Name"
-            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             required
@@ -65,7 +65,7 @@ function Register({ onSwitchToLogin }) {
           <input
             type="email"
             placeholder="Email"
-            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -75,7 +75,7 @@ function Register({ onSwitchToLogin }) {
           <input
             type={showPassword ? "text" : "password"}
             placeholder="Password"
-            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -85,7 +85,7 @@ function Register({ onSwitchToLogin }) {
           <input
             type={showPassword ? "text" : "password"}
             placeholder="Confirm Password"
-            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             required
@@ -107,17 +107,18 @@ function Register({ onSwitchToLogin }) {
 
           <button
             type="submit"
-            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-lg"
+            className="bg-gradient-to-r from-gray-800 to-blue-800 hover:from-blue-800 hover:to-gray-800 text-white font-semibold px-4 py-2 rounded-xl shadow-lg transition-all duration-300"
           >
             Register
           </button>
+
         </form>
 
         <p className="mt-4 text-gray-600 text-sm text-center">
           Already have an account?{" "}
           <button
             onClick={onSwitchToLogin}
-            className="text-red-600 hover:underline"
+            className="text-cyan-600 hover:underline"
           >
             Login
           </button>

@@ -58,7 +58,7 @@ function Login({ onSwitchToRegister }) {
                     </div>
                     <button
                         type="submit"
-                        className="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-lg"
+                        className="bg-gradient-to-r from-gray-800 to-blue-800 hover:from-blue-800 hover:to-gray-800 text-white font-semibold px-4 py-2 rounded-xl shadow-lg transition-all duration-300"
                     >
                         Login
                     </button>
@@ -67,7 +67,7 @@ function Login({ onSwitchToRegister }) {
                     Don't have an account?{" "}
                     <button
                         onClick={onSwitchToRegister}
-                        className="text-red-600 hover:underline"
+                        className="text-cyan-600 hover:underline"
                     >
                         Register
                     </button>

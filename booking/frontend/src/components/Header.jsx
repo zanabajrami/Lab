@@ -54,10 +54,10 @@ function Header() {
                             className="
       px-5 py-2 
       rounded-lg 
-      border border-cyan-700 
+      border border-cyan-600 
       text-cyan-700 
       bg-transparent 
-      hover:bg-blue-500 hover:text-white 
+      hover:bg-blue-300 hover:text-blue 
       transition-all duration-300 
       shadow-sm hover:shadow-md
       font-medium
