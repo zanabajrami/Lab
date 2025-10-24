@@ -108,7 +108,7 @@ function HomePage() {
           {["Prishtinë", "Tiranë", "Dhërmi", "Brezovicë", "Sarandë"].map((city, i) => (
             <button
               key={i}
-              className="px-6 py-2 bg-gray-900 hover:bg-red-900 text-white rounded-full font-semibold transition"
+              className="px-6 py-2 bg-gray-800 hover:bg-gray-600 text-gray-300 rounded-full font-semibold transition"
             >
               {city}
             </button>
@@ -132,7 +132,7 @@ function HomePage() {
               <p className="text-sm">Zbuloni hotele të përshtatshme për çdo buxhet.</p>
               <Link
                 to="/hotels"
-                className="mt-4 bg-gray-900 hover:bg-gray-700 px-5 py-2 rounded-md font-semibold"
+                className="mt-4 bg-gray-900 hover:bg-gray-700 text-gray-400 px-5 py-2 rounded-md font-semibold"
               >
                 Shiko më shumë
               </Link>
@@ -151,7 +151,7 @@ function HomePage() {
               <p className="text-sm">Relaksohu në vilat më luksoze.</p>
               <Link
                 to="/villas"
-                className="mt-4 bg-gray-900 hover:bg-gray-700 px-5 py-2 rounded-md font-semibold"
+                className="mt-4 bg-gray-900 hover:bg-gray-700 text-gray-400 px-5 py-2 rounded-md font-semibold"
               >
                 Shiko më shumë
               </Link>
@@ -170,7 +170,7 @@ function HomePage() {
               <p className="text-sm">Qëndrim komod për familje ose grupe të vogla.</p>
               <Link
                 to="/apartments"
-                className="mt-4 bg-gray-900 hover:bg-gray-700 px-5 py-2 rounded-md font-semibold"
+                className="mt-4 bg-gray-900 hover:bg-gray-700 text-gray-400 px-5 py-2 rounded-md font-semibold"
               >
                 Shiko më shumë
               </Link>
@@ -201,7 +201,7 @@ function HomePage() {
           <div className="text-center mt-6">
             <Link
               to="/deals"
-              className="bg-gray-300 hover:bg-blue-800 text-gray px-6 py-3 rounded-md font-bold"
+              className="bg-gray-300 text-gray-700 hover:bg-gray-500 text-gray px-6 py-3 rounded-md font-bold"
             >
               Shiko të gjitha ofertat
             </Link>
@@ -277,7 +277,7 @@ function HomePage() {
                 </span>
               </p>
               <button
-                className="text-red-600 font-semibold mt-2 hover:underline focus:outline-none"
+                className="text-cyan-600 font-semibold mt-2 hover:underline focus:outline-none"
                 data-text="Lexo më pak ←"
                 onClick={(e) => {
                   const card = e.target.closest(".group");
@@ -305,7 +305,7 @@ function HomePage() {
                 </span>
               </p>
               <button
-                className="text-red-600 font-semibold mt-2 hover:underline focus:outline-none"
+                className="text-cyan-600 font-semibold mt-2 hover:underline focus:outline-none"
                 data-text="Lexo më pak ←"
                 onClick={(e) => {
                   const card = e.target.closest(".group");
@@ -332,7 +332,7 @@ function HomePage() {
                 </span>
               </p>
               <button
-                className="text-red-600 font-semibold mt-2 hover:underline focus:outline-none"
+                className="text-cyan-600 font-semibold mt-2 hover:underline focus:outline-none"
                 data-text="Lexo më pak ←"
                 onClick={(e) => {
                   const card = e.target.closest(".group");
