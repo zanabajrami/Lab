@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import SearchBar from "../components/SearchBar";
 import mainImage from "../images/main.jpg";
 import prishtina0Image from "../images/prishtina-.jpeg";
@@ -66,6 +69,10 @@ const sliderSettings = {
 };
 
 function HomePage() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: false, mirror: true });
+  }, []);
+
   return (
     <div>
       {/* Hero Section */}
@@ -210,47 +217,100 @@ function HomePage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 py-12 text-center">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-8">Si funksionon platforma jonë?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 shadow rounded-lg">
-              <span className="text-3xl">🔍</span>
-              <h3 className="font-bold mt-2">Kërko</h3>
-              <p className="text-gray-600 text-sm mt-1">Gjeni hotelin ideal sipas vendndodhjes, çmimit dhe datës.</p>
-            </div>
-            <div className="p-6 shadow rounded-lg">
-              <span className="text-3xl">🏨</span>
-              <h3 className="font-bold mt-2">Zgjedh</h3>
-              <p className="text-gray-600 text-sm mt-1">Shfletoni ofertat dhe shikoni detajet e çdo hoteli.</p>
-            </div>
-            <div className="p-6 shadow rounded-lg">
-              <span className="text-3xl">✅</span>
-              <h3 className="font-bold mt-2">Rezervo</h3>
-              <p className="text-gray-600 text-sm mt-1">Rezervoni me disa klikime dhe merrni konfirmimin menjëherë.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="max-w-5xl mx-auto text-center">
+    <h2
+      className="text-2xl font-bold mb-8"
+      data-aos="fade-up"
+    >
+      Si funksionon platforma jonë?
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div
+        className="p-6 shadow rounded-lg bg-white transition-transform hover:scale-105"
+        data-aos="zoom-in"
+        data-aos-delay="100"
+      >
+        <span className="text-3xl">🔍</span>
+        <h3 className="font-bold mt-2">Kërko</h3>
+        <p className="text-gray-600 text-sm mt-1">
+          Gjeni hotelin ideal sipas vendndodhjes, çmimit dhe datës.
+        </p>
+      </div>
+
+      <div
+        className="p-6 shadow rounded-lg bg-white transition-transform hover:scale-105"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+      >
+        <span className="text-3xl">🏨</span>
+        <h3 className="font-bold mt-2">Zgjedh</h3>
+        <p className="text-gray-600 text-sm mt-1">
+          Shfletoni ofertat dhe shikoni detajet e çdo hoteli.
+        </p>
+      </div>
+
+      <div
+        className="p-6 shadow rounded-lg bg-white transition-transform hover:scale-105"
+        data-aos="zoom-in"
+        data-aos-delay="300"
+      >
+        <span className="text-3xl">✅</span>
+        <h3 className="font-bold mt-2">Rezervo</h3>
+        <p className="text-gray-600 text-sm mt-1">
+          Rezervoni me disa klikime dhe merrni konfirmimin menjëherë.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Pse të zgjedhësh ne */}
-      <section className="max-w-7xl mx-auto px-4 py-12 text-center">
-        <h2 className="text-2xl font-bold mb-6">Pse të zgjedhësh platformën tonë?</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div className="p-6 shadow-lg rounded-lg hover:shadow-xl transition-shadow">
-            <span className="text-4xl mb-2 block">🕒</span>
-            Rezervim i shpejtë
+      <section className="max-w-7xl mx-auto px-4 py-16 text-center">
+        <h2 className="text-2xl font-bold mb-12" data-aos="fade-up">
+          Pse të zgjedhësh platformën tonë?
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div
+            className="p-6 shadow-lg rounded-lg hover:shadow-2xl transition-all bg-white"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <span className="text-5xl mb-3 block">🕒</span>
+            <h3 className="font-bold text-lg mb-1">Rezervim i shpejtë</h3>
+            <p className="text-gray-600 text-sm">Proces i lehtë dhe i menjëhershëm.</p>
           </div>
-          <div className="p-6 shadow-lg rounded-lg hover:shadow-xl transition-shadow">
-            <span className="text-4xl mb-2 block">💸</span>
-            Çmime më të mira
+
+          <div
+            className="p-6 shadow-lg rounded-lg hover:shadow-2xl transition-all bg-white"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <span className="text-5xl mb-3 block">💸</span>
+            <h3 className="font-bold text-lg mb-1">Çmime më të mira</h3>
+            <p className="text-gray-600 text-sm">Krahaso dhe gjej ofertën më të volitshme.</p>
           </div>
-          <div className="p-6 shadow-lg rounded-lg hover:shadow-xl transition-shadow">
-            <span className="text-4xl mb-2 block">🔒</span>
-            Rezervim i sigurt
+
+          <div
+            className="p-6 shadow-lg rounded-lg hover:shadow-2xl transition-all bg-white"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <span className="text-5xl mb-3 block">🔒</span>
+            <h3 className="font-bold text-lg mb-1">Rezervim i sigurt</h3>
+            <p className="text-gray-600 text-sm">Të dhënat dhe pagesat mbrohen maksimalisht.</p>
           </div>
-          <div className="p-6 shadow-lg rounded-lg hover:shadow-xl transition-shadow">
-            <span className="text-4xl mb-2 block">📞</span>
-            Mbështetje 24/7
+
+          <div
+            className="p-6 shadow-lg rounded-lg hover:shadow-2xl transition-all bg-white"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <span className="text-5xl mb-3 block">📞</span>
+            <h3 className="font-bold text-lg mb-1">Mbështetje 24/7</h3>
+            <p className="text-gray-600 text-sm">Ekipi ynë është gjithmonë në dispozicionin tënd.</p>
           </div>
         </div>
       </section>
@@ -326,7 +386,7 @@ function HomePage() {
               />
               <h3 className="font-bold mb-2">Udhëzues për një fundjavë në Tiranë</h3>
               <p className="text-sm text-gray-600 transition-all duration-500 max-h-16 overflow-hidden group-[.expanded]:max-h-96">
-                Tirana ofron muzeume, restorante moderne dhe jetën e gjallë të natës. 
+                Tirana ofron muzeume, restorante moderne dhe jetën e gjallë të natës.
                 <span className="hidden group-[.expanded]:inline">
                   {" "}Vizito Sheshin Skënderbej, shijo kafen në Bllok dhe eksploro artin modern dhe galeritë lokale. Perfekte për të përjetuar kulturën dhe energjinë e kryeqytetit.
                 </span>
