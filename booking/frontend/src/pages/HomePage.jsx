@@ -1,8 +1,13 @@
 import React from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import Tilt from 'react-parallax-tilt';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
 import SearchBar from "../components/SearchBar";
 import mainImage from "../images/main.jpg";
 import prishtina0Image from "../images/prishtina-.jpeg";
@@ -23,9 +28,7 @@ import tirana3Image from "../images/tirana3.jpg";
 import brezovica3Image from "../images/brezovica3.jpg";
 import radhimeImage from "../images/radhime.jpg";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+
 
 const destinations = [
   { name: "Prishtina", image: prishtina0Image },
@@ -193,22 +196,31 @@ function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {deals.map((deal) => (
-              <div key={deal.id} className="relative rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
-                <img src={deal.image} alt={deal.hotelName} className="w-full h-48 object-cover" />
-                <div className="absolute bottom-0 bg-black bg-opacity-60 w-full text-white p-3 text-center">
-                  <p className="font-bold text-lg">{deal.hotelName}</p>
-                  <p className="text-sm">{deal.location}</p>
-                  <p className="mt-1 font-bold">{deal.discount}</p>
+              <Tilt
+                key={deal.id}
+                className="rounded-lg shadow-lg overflow-hidden transition-transform duration-300"
+                tiltMaxAngleX={20}  // sa të rrotullohet horizontal
+                tiltMaxAngleY={20}  // sa të rrotullohet vertical
+                perspective={1000}   // sa "3D" të duket
+                scale={1.05}         // efekti i zoom kur hover
+                transitionSpeed={400}
+              >
+                <div className="relative">
+                  <img src={deal.image} alt={deal.hotelName} className="w-full h-48 object-cover" />
+                  <div className="absolute bottom-0 bg-black bg-opacity-60 w-full text-white p-3 text-center">
+                    <p className="font-bold text-lg">{deal.hotelName}</p>
+                    <p className="text-sm">{deal.location}</p>
+                    <p className="mt-1 font-bold">{deal.discount}</p>
+                  </div>
                 </div>
-              </div>
+              </Tilt>
             ))}
           </div>
 
-          {/* Button për të shikuar të gjitha ofertat */}
           <div className="text-center mt-6">
             <Link
               to="/deals"
-              className="bg-gray-300 text-gray-700 hover:bg-gray-500 text-gray px-6 py-3 rounded-md font-bold"
+              className="bg-gray-300 text-gray-700 hover:bg-gray-500 px-6 py-3 rounded-md font-bold"
             >
               Shiko të gjitha ofertat
             </Link>
@@ -216,54 +228,55 @@ function HomePage() {
         </div>
       </section>
 
+
       <section className="max-w-7xl mx-auto px-4 py-12 text-center">
-  <div className="max-w-5xl mx-auto text-center">
-    <h2
-      className="text-2xl font-bold mb-8"
-      data-aos="fade-up"
-    >
-      Si funksionon platforma jonë?
-    </h2>
+        <div className="max-w-5xl mx-auto text-center">
+          <h2
+            className="text-2xl font-bold mb-8"
+            data-aos="fade-up"
+          >
+            Si funksionon platforma jonë?
+          </h2>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div
-        className="p-6 shadow rounded-lg bg-white transition-transform hover:scale-105"
-        data-aos="zoom-in"
-        data-aos-delay="100"
-      >
-        <span className="text-3xl">🔍</span>
-        <h3 className="font-bold mt-2">Kërko</h3>
-        <p className="text-gray-600 text-sm mt-1">
-          Gjeni hotelin ideal sipas vendndodhjes, çmimit dhe datës.
-        </p>
-      </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+              className="p-6 shadow rounded-lg bg-white transition-transform hover:scale-105"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <span className="text-3xl">🔍</span>
+              <h3 className="font-bold mt-2">Kërko</h3>
+              <p className="text-gray-600 text-sm mt-1">
+                Gjeni hotelin ideal sipas vendndodhjes, çmimit dhe datës.
+              </p>
+            </div>
 
-      <div
-        className="p-6 shadow rounded-lg bg-white transition-transform hover:scale-105"
-        data-aos="zoom-in"
-        data-aos-delay="200"
-      >
-        <span className="text-3xl">🏨</span>
-        <h3 className="font-bold mt-2">Zgjedh</h3>
-        <p className="text-gray-600 text-sm mt-1">
-          Shfletoni ofertat dhe shikoni detajet e çdo hoteli.
-        </p>
-      </div>
+            <div
+              className="p-6 shadow rounded-lg bg-white transition-transform hover:scale-105"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <span className="text-3xl">🏨</span>
+              <h3 className="font-bold mt-2">Zgjedh</h3>
+              <p className="text-gray-600 text-sm mt-1">
+                Shfletoni ofertat dhe shikoni detajet e çdo hoteli.
+              </p>
+            </div>
 
-      <div
-        className="p-6 shadow rounded-lg bg-white transition-transform hover:scale-105"
-        data-aos="zoom-in"
-        data-aos-delay="300"
-      >
-        <span className="text-3xl">✅</span>
-        <h3 className="font-bold mt-2">Rezervo</h3>
-        <p className="text-gray-600 text-sm mt-1">
-          Rezervoni me disa klikime dhe merrni konfirmimin menjëherë.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+            <div
+              className="p-6 shadow rounded-lg bg-white transition-transform hover:scale-105"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <span className="text-3xl">✅</span>
+              <h3 className="font-bold mt-2">Rezervo</h3>
+              <p className="text-gray-600 text-sm mt-1">
+                Rezervoni me disa klikime dhe merrni konfirmimin menjëherë.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       {/* Pse të zgjedhësh ne */}
