@@ -7,28 +7,36 @@ import Tilt from 'react-parallax-tilt';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
 import SearchBar from "../components/SearchBar";
+
 import mainImage from "../images/main.jpg";
 import prishtina0Image from "../images/prishtina-.jpeg";
-import tirana0Image from "../images/tirana-.jpg";
-import brezovica0Image from "../images/brezovica-.jpg";
-import dhermi0Image from "../images/dhermi-.jpg";
-import brezovicaImage from "../images/brezovica.jpg";
-import dhermiImage from "../images/dhermi.jpg";
-import tiranaImage from "../images/tirana.jpg";
-import peja0Image from "../images/peja0.jpg";
-import sarande0Image from "../images/sarande0.jpg";
-import prizren0Image from "../images/prizren0.jpg";
+import prishtina3Image from "../images/prishtina0.jpg";
 import prishtina2Image from "../images/prishtina2.webp";
-import korca0Image from "../images/korca0.jpg";
-import radhime0Image from "../images/radhime0.jpg";
-import himare0Image from "../images/himare0.jpg";
+
+import tirana0Image from "../images/tirana-.jpg";
+import tirana1Image from "../images/tirana0.webp";
+import tiranaImage from "../images/tirana.jpg";
 import tirana3Image from "../images/tirana3.jpg";
+
+import brezovica0Image from "../images/brezovica-.jpg";
+import brezovica1Image from "../images/brezovica0.webp";
+import brezovicaImage from "../images/brezovica.jpg";
 import brezovica3Image from "../images/brezovica3.jpg";
+
+import dhermi0Image from "../images/dhermi-.jpg";
+import dhermiImage from "../images/dhermi.jpg";
+
+import radhime0Image from "../images/radhime0.jpg";
 import radhimeImage from "../images/radhime.jpg";
 
+import sarande0Image from "../images/sarande0.jpg";
+import sarande1Image from "../images/sarande1.jpeg";
 
+import peja0Image from "../images/peja0.jpg";
+import prizren0Image from "../images/prizren0.jpg";
+import korca0Image from "../images/korca0.jpg";
+import himare0Image from "../images/himare0.jpg";
 
 const destinations = [
   { name: "Prishtina", image: prishtina0Image },
@@ -110,18 +118,39 @@ function HomePage() {
             </div>
           ))}
         </Slider>
-      </section>
 
-      <section className="max-w-7xl mx-auto px-4 py-12 text-center">
-        <h2 className="text-2xl font-bold mb-8">Destinacionet më të njohura</h2>
-        <div className="flex flex-wrap justify-center gap-6">
-          {["Prishtinë", "Tiranë", "Dhërmi", "Brezovicë", "Sarandë"].map((city, i) => (
-            <button
+      </section>
+      <section className="py-16 bg-gradient-to-r from-blue-50 to-green-50 text-center">
+        <h2 className="text-2xl font-bold mb-10">Destinacionet më të vizituara📍</h2>
+
+        <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+          {[
+            { img: tirana1Image, name: "Tiranë" },
+            { img: sarande1Image, name: "Sarandë" },
+            { img: prishtina3Image, name: "Prishtinë" },
+            { img: brezovica1Image, name: "Brezovicë" },
+          ].map((dest, i) => (
+            <div
               key={i}
-              className="px-6 py-2 bg-gray-800 hover:bg-gray-600 text-gray-300 rounded-full font-semibold transition"
+              className="relative group overflow-hidden rounded-xl shadow-lg w-60 h-40 hover:scale-105 transition-all duration-300"
             >
-              {city}
-            </button>
+              {/* Fotoja */}
+              <img
+                src={dest.img}
+                alt={dest.name}
+                className="w-full h-full object-cover group-hover:blur-[2px] transition-all duration-300"
+              />
+
+              {/* Emri i qytetit – i dukshëm gjithmonë */}
+              <div className="absolute bottom-0 w-full bg-black/50 text-white text-center py-2 font-semibold text-lg">
+                {dest.name}
+              </div>
+
+              {/* Teksti që shfaqet vetëm kur bën hover */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/40 text-white text-lg font-semibold transition-all">
+                Zbulo më shumë →
+              </div>
+            </div>
           ))}
         </div>
       </section>
