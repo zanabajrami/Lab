@@ -120,10 +120,13 @@ function HomePage() {
         </Slider>
 
       </section>
-      <section className="py-16 bg-gradient-to-r from-blue-50 to-green-50 text-center">
-        <h2 className="text-2xl font-bold mb-10">Destinacionet më të vizituara📍</h2>
 
-        <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+      <section className="py-16 bg-gradient-to-r from-blue-50 to-green-50 text-center">
+        <h2 className="text-2xl font-extrabold mb-12 text-gray-800">
+          Destinacionet më të vizituara 📍
+        </h2>
+
+        <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
           {[
             { img: tirana1Image, name: "Tiranë" },
             { img: sarande1Image, name: "Sarandë" },
@@ -132,22 +135,25 @@ function HomePage() {
           ].map((dest, i) => (
             <div
               key={i}
-              className="relative group overflow-hidden rounded-xl shadow-lg w-60 h-40 hover:scale-105 transition-all duration-300"
+              className="relative overflow-hidden rounded-2xl w-64 h-44 transform transition-all duration-500
+             shadow-[0_20px_60px_rgba(0,0,0,0.4)]
+             hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] group"
             >
+
               {/* Fotoja */}
               <img
                 src={dest.img}
                 alt={dest.name}
-                className="w-full h-full object-cover group-hover:blur-[2px] transition-all duration-300"
+                className="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm group-hover:brightness-90"
               />
 
-              {/* Emri i qytetit – i dukshëm gjithmonë */}
-              <div className="absolute bottom-0 w-full bg-black/50 text-white text-center py-2 font-semibold text-lg">
+              {/* Overlay gradient për emrin */}
+              <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent text-white text-center py-2 font-semibold text-lg">
                 {dest.name}
               </div>
 
-              {/* Teksti që shfaqet vetëm kur bën hover */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/40 text-white text-lg font-semibold transition-all">
+              {/* Teksti që shfaqet kur hover */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 bg-black/40 text-white text-m font-semibold">
                 Zbulo më shumë →
               </div>
             </div>
@@ -220,7 +226,7 @@ function HomePage() {
 
       {/* Ofertat */}
       <section className="bg-gray-100 py-12">
-        <div className="max-w-8xl mx-auto px-4">
+        <div className="max-w-8xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-6">Ofertat tona</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -249,14 +255,13 @@ function HomePage() {
           <div className="text-center mt-6">
             <Link
               to="/deals"
-              className="bg-gray-300 text-gray-700 hover:bg-gray-500 px-6 py-3 rounded-md font-bold"
+              className="bg-gray-700 text-gray-200 hover:bg-gray-500 px-6 py-3 rounded-md font-bold"
             >
               Shiko të gjitha ofertat
             </Link>
           </div>
         </div>
       </section>
-
 
       <section className="max-w-7xl mx-auto px-4 py-12 text-center">
         <div className="max-w-5xl mx-auto text-center">
