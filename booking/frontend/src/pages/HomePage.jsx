@@ -100,8 +100,11 @@ function HomePage() {
 
       {/* Destinacionet */}
       <section className="max-w-8xl mx-auto px-4 py-12">
-        <h2 className="text-2xl font-bold mb-6">Destinacionet</h2>
-
+        <h2 className="text-3xl font-bold mb-10 text-gray-800 flex items-center justify-center gap-4">
+          <span className="w-16 h-[2px] bg-gray-400 rounded-full"></span>
+          <span>Destinacionet</span>
+          <span className="w-16 h-[2px] bg-gray-400 rounded-full"></span>
+        </h2>
         <Slider {...sliderSettings}>
           {destinations.map((dest) => (
             <div key={dest.name} className="px-2">
@@ -122,8 +125,10 @@ function HomePage() {
       </section>
 
       <section className="py-16 bg-gradient-to-r from-blue-50 to-green-50 text-center">
-        <h2 className="text-2xl font-extrabold mb-12 text-gray-800">
-          Destinacionet më të vizituara 📍
+        <h2 className="text-2xl font-extrabold mb-12 text-gray-800 drop-shadow-sm tracking-wide">
+          <span className="border-b-[3px] border-gray-300 pb-1 px-2">
+            Destinacionet më të vizituara 📍
+          </span>
         </h2>
 
         <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
@@ -199,7 +204,7 @@ function HomePage() {
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
               <h3 className="text-2xl font-bold mb-2">Villa</h3>
               <p className="text-sm">Relaksohu në vilat më luksoze.</p>
-             <Link
+              <Link
                 to="/villas"
                 className="mt-4 bg-gray-900 text-gray-400 px-6 py-2 rounded-md font-semibold
              shadow-xl hover:shadow-2xl transition-all duration-300
@@ -242,8 +247,10 @@ function HomePage() {
       {/* Ofertat */}
       <section className="bg-gray-100 py-12">
         <div className="max-w-8xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold mb-6">Ofertat tona</h2>
-
+          <div className="relative mb-10 inline-block">
+            <h2 className="text-2xl font-extrabold text-gray-800">Ofertat tona</h2>
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-24 h-[3px] bg-gradient-to-r from-transparent via-gray-500 to-transparent rounded-full"></div>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {deals.map((deal) => (
               <Tilt
@@ -284,104 +291,128 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 py-12 text-center">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2
-            className="text-2xl font-bold mb-8"
-            data-aos="fade-up"
-          >
-            Si funksionon platforma jonë?
-          </h2>
+      <section className="max-w-7xl mx-auto px-4 py-16 text-center">
+        {/* Section heading */}
+        <h2
+          className="text-3xl md:text-2xl font-bold mb-12 text-gray-800 tracking-tight relative inline-block"
+          data-aos="fade-right"
+          data-aos-duration="800"
+        >
+          Si funksionon platforma jonë?
+          <span className="absolute left-0 -bottom-2 w-full h-1 bg-gradient-to-r from-blue-400 to-pink-400 rounded-full"></span>
+        </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Container with cards and colored blobs */}
+        <div className="relative overflow-hidden rounded-3xl p-12 bg-gray-900">
+          {/* Colored blobs inside container */}
+          <div className="absolute top-0 left-1/4 w-72 h-72 bg-pink-500 opacity-30 rounded-full blur-3xl animate-blob"></div>
+          <div className="absolute top-10 right-1/4 w-80 h-80 bg-blue-500 opacity-25 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-purple-500 opacity-20 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+
+          {/* Cards grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative z-10">
+            {/* Card */}
             <div
-              className="p-6 shadow rounded-lg bg-white transition-transform hover:scale-105"
+              className="p-6 bg-gray-900/50 backdrop-blur-md rounded-3xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer relative z-10 group"
               data-aos="zoom-in"
               data-aos-delay="100"
             >
-              <span className="text-3xl">🔍</span>
-              <h3 className="font-bold mt-2">Kërko</h3>
-              <p className="text-gray-600 text-sm mt-1">
+              <div className="text-5xl mb-4 animate-bounce">🔍</div>
+              <h3 className="font-semibold text-xl mb-2 text-white transition-colors duration-500 group-hover:text-blue-400">
+                Kërko
+              </h3>
+              <p className="text-gray-200 text-sm">
                 Gjeni hotelin ideal sipas vendndodhjes, çmimit dhe datës.
               </p>
+              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-blue-400 to-pink-400 rounded-full mx-auto transition-all duration-500 group-hover:w-full"></div>
             </div>
 
+            {/* Card 2 */}
             <div
-              className="p-6 shadow rounded-lg bg-white transition-transform hover:scale-105"
+              className="p-6 bg-gray-900/50 backdrop-blur-md rounded-3xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer relative z-10 group"
               data-aos="zoom-in"
               data-aos-delay="200"
             >
-              <span className="text-3xl">🏨</span>
-              <h3 className="font-bold mt-2">Zgjedh</h3>
-              <p className="text-gray-600 text-sm mt-1">
+              <div className="text-5xl mb-4 animate-bounce">🏨</div>
+              <h3 className="font-semibold text-xl mb-2 text-white transition-colors duration-500 group-hover:text-blue-400">
+                Zgjedh
+              </h3>
+              <p className="text-gray-200 text-sm">
                 Shfletoni ofertat dhe shikoni detajet e çdo hoteli.
               </p>
+              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-blue-400 to-pink-400 rounded-full mx-auto transition-all duration-500 group-hover:w-full"></div>
             </div>
 
+            {/* Card 3 */}
             <div
-              className="p-6 shadow rounded-lg bg-white transition-transform hover:scale-105"
+              className="p-6 bg-gray-900/50 backdrop-blur-md rounded-3xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer relative z-10 group"
               data-aos="zoom-in"
               data-aos-delay="300"
             >
-              <span className="text-3xl">✅</span>
-              <h3 className="font-bold mt-2">Rezervo</h3>
-              <p className="text-gray-600 text-sm mt-1">
+              <div className="text-5xl mb-4 animate-bounce">✅</div>
+              <h3 className="font-semibold text-xl mb-2 text-white transition-colors duration-500 group-hover:text-blue-400">
+                Rezervo
+              </h3>
+              <p className="text-gray-200 text-sm">
                 Rezervoni me disa klikime dhe merrni konfirmimin menjëherë.
               </p>
+              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-blue-400 to-pink-400 rounded-full mx-auto transition-all duration-500 group-hover:w-full"></div>
             </div>
           </div>
+
         </div>
       </section>
 
-
-      {/* Pse të zgjedhësh ne */}
-      <section className="max-w-7xl mx-auto px-4 py-16 text-center">
-        <h2 className="text-2xl font-bold mb-12" data-aos="fade-up">
+      {/* Pse të zgjedhësh */}
+      <section className="max-w-7xl mx-auto px-4 py-20 text-center relative overflow-hidden">
+        {/* Section heading */}
+        <h2
+          className="text-4xl md:text-2xl font-extrabold mb-16 text-gray-800 inline-block relative bg-clip-text animate-gradient-x"
+          data-aos="fade-down"
+          data-aos-duration="1200"
+        >
           Pse të zgjedhësh platformën tonë?
+          <span className="absolute left-1/2 transform -translate-x-1/2 -bottom-3 w-24 h-1 bg-gradient-to-r from-gray-700 to-purple-400 rounded-full animate-pulse"></span>
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div
-            className="p-6 shadow-lg rounded-lg hover:shadow-2xl transition-all bg-white"
-            data-aos="zoom-in"
-            data-aos-delay="100"
-          >
-            <span className="text-5xl mb-3 block">🕒</span>
-            <h3 className="font-bold text-lg mb-1">Rezervim i shpejtë</h3>
-            <p className="text-gray-600 text-sm">Proces i lehtë dhe i menjëhershëm.</p>
-          </div>
+        {/* Flex container with cards and colored blobs */}
+        <div className="flex flex-wrap justify-center gap-8 relative z-10 overflow-hidden rounded-3xl p-12 bg-gray-900">
+          {/* Colored blobs inside container */}
+          <div className="absolute top-0 left-1/4 w-72 h-72 bg-pink-500 opacity-30 rounded-full blur-3xl animate-blob"></div>
+          <div className="absolute top-10 right-1/4 w-80 h-80 bg-blue-500 opacity-25 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-purple-500 opacity-20 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
 
-          <div
-            className="p-6 shadow-lg rounded-lg hover:shadow-2xl transition-all bg-white"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          >
-            <span className="text-5xl mb-3 block">💸</span>
-            <h3 className="font-bold text-lg mb-1">Çmime më të mira</h3>
-            <p className="text-gray-600 text-sm">Krahaso dhe gjej ofertën më të volitshme.</p>
-          </div>
+          {/* Cards */}
+          {[
+            { icon: "🕒", title: "Rezervim i shpejtë", text: "Proces i lehtë dhe i menjëhershëm.", delay: 100 },
+            { icon: "💸", title: "Çmime më të mira", text: "Krahaso dhe gjej ofertën më të volitshme.", delay: 200 },
+            { icon: "🔒", title: "Rezervim i sigurt", text: "Të dhënat dhe pagesat mbrohen maksimalisht.", delay: 300 },
+            { icon: "📞", title: "Mbështetje 24/7", text: "Ekipi ynë është gjithmonë në dispozicionin tënd.", delay: 400 },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="flex-1 min-w-[220px] max-w-[250px] p-8 bg-gray-800/70 backdrop-blur-md rounded-3xl shadow-2xl hover:shadow-4xl transform hover:-translate-y-4 hover:scale-110 hover:rotate-1 transition-all duration-700 cursor-pointer relative overflow-hidden group"
+              data-aos="fade-up"
+              data-aos-delay={item.delay}
+              data-aos-duration="800"
+            >
+              {/* Subtle floating accents */}
+              <div className="absolute -top-10 -right-10 w-24 h-24 bg-white/20 rounded-full blur-2xl animate-blob animation-delay-1000"></div>
 
-          <div
-            className="p-6 shadow-lg rounded-lg hover:shadow-2xl transition-all bg-white"
-            data-aos="zoom-in"
-            data-aos-delay="300"
-          >
-            <span className="text-5xl mb-3 block">🔒</span>
-            <h3 className="font-bold text-lg mb-1">Rezervim i sigurt</h3>
-            <p className="text-gray-600 text-sm">Të dhënat dhe pagesat mbrohen maksimalisht.</p>
-          </div>
+              {/* Card content */}
+              <div className="relative z-10 text-center">
+                <div className="text-6xl mb-4 animate-pulse">{item.icon}</div>
+                <h3 className="font-bold text-xl mb-2 text-white group-hover:text-pink-400 transition-colors duration-500">{item.title}</h3>
+                <p className="text-sm text-gray-200">{item.text}</p>
 
-          <div
-            className="p-6 shadow-lg rounded-lg hover:shadow-2xl transition-all bg-white"
-            data-aos="zoom-in"
-            data-aos-delay="400"
-          >
-            <span className="text-5xl mb-3 block">📞</span>
-            <h3 className="font-bold text-lg mb-1">Mbështetje 24/7</h3>
-            <p className="text-gray-600 text-sm">Ekipi ynë është gjithmonë në dispozicionin tënd.</p>
-          </div>
+                {/* Animated underline */}
+                <div className="mt-4 h-1 w-12 bg-gradient-to-r from-pink-400 to-blue-400 rounded-full mx-auto scale-x-75 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
+
 
       {/* Sugjerimet */}
       <section className="bg-gray-100 py-12">
