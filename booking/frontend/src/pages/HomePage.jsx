@@ -177,7 +177,12 @@ function HomePage() {
               <p className="text-sm">Zbuloni hotele të përshtatshme për çdo buxhet.</p>
               <Link
                 to="/hotels"
-                className="mt-4 bg-gray-900 hover:bg-gray-700 text-gray-400 px-5 py-2 rounded-md font-semibold"
+                className="mt-4 bg-gray-900 text-gray-400 px-6 py-2 rounded-md font-semibold
+             shadow-xl hover:shadow-2xl transition-all duration-300
+             transform hover:scale-105 active:scale-95
+             bg-gradient-to-r from-gray-800 via-gray-900 to-gray-900
+             hover:from-gray-700 hover:via-gray-800 hover:to-gray-900
+             ring-1 ring-gray-700 hover:ring-gray-500"
               >
                 Shiko më shumë
               </Link>
@@ -194,9 +199,14 @@ function HomePage() {
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
               <h3 className="text-2xl font-bold mb-2">Villa</h3>
               <p className="text-sm">Relaksohu në vilat më luksoze.</p>
-              <Link
+             <Link
                 to="/villas"
-                className="mt-4 bg-gray-900 hover:bg-gray-700 text-gray-400 px-5 py-2 rounded-md font-semibold"
+                className="mt-4 bg-gray-900 text-gray-400 px-6 py-2 rounded-md font-semibold
+             shadow-xl hover:shadow-2xl transition-all duration-300
+             transform hover:scale-105 active:scale-95
+             bg-gradient-to-r from-gray-800 via-gray-900 to-gray-900
+             hover:from-gray-700 hover:via-gray-800 hover:to-gray-900
+             ring-1 ring-gray-700 hover:ring-gray-500"
               >
                 Shiko më shumë
               </Link>
@@ -215,7 +225,12 @@ function HomePage() {
               <p className="text-sm">Qëndrim komod për familje ose grupe të vogla.</p>
               <Link
                 to="/apartments"
-                className="mt-4 bg-gray-900 hover:bg-gray-700 text-gray-400 px-5 py-2 rounded-md font-semibold"
+                className="mt-4 bg-gray-900 text-gray-400 px-6 py-2 rounded-md font-semibold
+             shadow-xl hover:shadow-2xl transition-all duration-300
+             transform hover:scale-105 active:scale-95
+             bg-gradient-to-r from-gray-800 via-gray-900 to-gray-900
+             hover:from-gray-700 hover:via-gray-800 hover:to-gray-900
+             ring-1 ring-gray-700 hover:ring-gray-500"
               >
                 Shiko më shumë
               </Link>
@@ -255,10 +270,16 @@ function HomePage() {
           <div className="text-center mt-6">
             <Link
               to="/deals"
-              className="bg-gray-700 text-gray-200 hover:bg-gray-500 px-6 py-3 rounded-md font-bold"
+              className="relative inline-block px-8 py-3 rounded-md font-bold text-gray-800 
+             bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300
+             shadow-lg transition-all duration-300
+             hover:from-gray-400 hover:via-gray-200 hover:to-gray-400
+             hover:scale-105 hover:shadow-2xl
+             focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
             >
               Shiko të gjitha ofertat
             </Link>
+
           </div>
         </div>
       </section>

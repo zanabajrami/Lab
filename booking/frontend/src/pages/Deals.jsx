@@ -58,9 +58,16 @@ function Deals({ favorites, setFavorites }) {
                   {deal.location}
                 </p>
                 <p className="text-gray-900 font-bold mt-2">{deal.price}</p>
-                <button className="mt-4 w-full bg-gray-900 text-white py-2 rounded-lg hover:bg-gray-800 hover:scale-105 transition-transform duration-300">
+                <button
+                  className="mt-4 w-full bg-gray-900 text-white py-2 rounded-lg 
+             shadow-lg hover:shadow-2xl 
+             transform hover:-translate-y-1 hover:bg-cyan-800 scale-105 active:scale-95
+             transition-all duration-300 ease-out 
+             border border-gray-700 hover:border-gray-600"
+                >
                   More
                 </button>
+
               </div>
             </div>
           ))}
