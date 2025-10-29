@@ -7,44 +7,48 @@ function Contact({ onClose }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // ✅ Alert për sukses
-    alert("Your message has been sent!");
-
-    // ✅ Pastrim i fushave
+    alert("Your message has been sent!📩");
     setName("");
     setEmail("");
     setMessage("");
-
-    // Modal nuk mbyllet automatikisht
   };
 
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget && typeof onClose === "function") {
-      onClose(); // Mbyll modal-in vetëm kur klikohet jashtë formës
+      onClose();
     }
   };
 
   return (
     <div
       onClick={handleOverlayClick}
-      className="fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-50"
+      className="fixed inset-0 flex items-center justify-center bg-black/95 z-50 backdrop-blur-md"
     >
-      <div
-        onClick={(e) => e.stopPropagation()} // Mos mbyll kur klikohet brenda formës
-        className="bg-white p-6 rounded-xl shadow-xl w-full max-w-md relative"
-      >
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
-          Contact us
+    <div
+  onClick={(e) => e.stopPropagation()}
+  className="w-full max-w-md p-10 rounded-3xl relative
+             bg-gradient-to-br from-gray-950 via-gray-900/90 to-gray-950/80
+             border border-gray-800 shadow-[0_0_80px_rgba(0,0,0,0.9)]
+             backdrop-blur-md transform scale-90 animate-heavyPop"
+>
+
+        <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-center 
+               text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 
+               drop-shadow-lg tracking-wide uppercase">
+          Contact Us
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+
+        <form onSubmit={handleSubmit} className="space-y-5">
           <input
             type="text"
             placeholder="Your Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-red-600 focus:outline-none text-black"
+            className="w-full px-5 py-3 rounded-2xl border-2 border-gray-700
+                       bg-gray-900 placeholder-gray-400 text-white
+                       focus:outline-none focus:ring-2 focus:ring-purple-500
+                       shadow-lg shadow-purple-900/50 text-base transition-all duration-300 hover:shadow-purple-700/70"
           />
           <input
             type="email"
@@ -52,24 +56,59 @@ function Contact({ onClose }) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-red-600 focus:outline-none text-black"
+            className="w-full px-5 py-3 rounded-2xl border-2 border-gray-700
+                       bg-gray-900 placeholder-gray-400 text-white
+                       focus:outline-none focus:ring-2 focus:ring-purple-500
+                       shadow-lg shadow-purple-900/50 text-base transition-all duration-300 hover:shadow-purple-700/70"
           />
           <textarea
-            placeholder="Your Message"
             rows="4"
+            placeholder="Your Message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-red-600 focus:outline-none text-black"
+            className="w-full px-5 py-3 rounded-2xl border-2 border-gray-700
+                       bg-gray-900 placeholder-gray-400 text-white
+                       focus:outline-none focus:ring-2 focus:ring-purple-500
+                       shadow-lg shadow-purple-900/50 text-base transition-all duration-300 hover:shadow-purple-700/70 resize-none"
           ></textarea>
           <button
             type="submit"
-            className="w-full bg-gray-900 text-white py-2 rounded-lg hover:bg-blue-800 transition"
+            className="w-full py-3 rounded-2xl bg-gradient-to-r from-indigo-900 via-blue-800 to-cyan-700
+             text-white font-extrabold hover:scale-105 hover:shadow-[0_0_20px_rgba(100,200,255,0.7)]
+             transform transition-all duration-300 text-base tracking-wide"
           >
             Send Message
           </button>
+
         </form>
       </div>
+
+      <style>
+  {`
+    @keyframes heavyPop {
+      0% { transform: scale(0.7); opacity: 0; }
+      60% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+    .animate-heavyPop {
+      animation: heavyPop 0.6s ease-out forwards;
+    }
+
+    /* Autofill për Chrome/Edge/Safari */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 1000px #1f2937 inset; /* bg-gray-900 */
+      -webkit-text-fill-color: #fff; /* text-white */
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  `}
+</style>
+
     </div>
   );
 }
