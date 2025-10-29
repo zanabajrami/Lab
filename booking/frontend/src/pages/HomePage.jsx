@@ -125,7 +125,7 @@ function HomePage() {
       </section>
 
       <section className="py-16 bg-gradient-to-r from-blue-50 to-green-50 text-center">
-        <h2 className="text-2xl font-extrabold mb-12 text-gray-800 drop-shadow-sm tracking-wide">
+        <h2 className="text-3xl font-extrabold mb-12 text-gray-800 drop-shadow-sm tracking-wide">
           <span className="border-b-[3px] border-gray-300 pb-1 px-2">
             Destinacionet më të vizituara 📍
           </span>
@@ -248,7 +248,7 @@ function HomePage() {
       <section className="bg-gray-100 py-12">
         <div className="max-w-8xl mx-auto px-4 text-center">
           <div className="relative mb-10 inline-block">
-            <h2 className="text-2xl font-extrabold text-gray-800">Ofertat tona</h2>
+            <h2 className="text-3xl font-extrabold text-gray-800">Ofertat tona</h2>
             <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-24 h-[3px] bg-gradient-to-r from-transparent via-gray-500 to-transparent rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -294,13 +294,22 @@ function HomePage() {
       <section className="max-w-7xl mx-auto px-4 py-16 text-center">
         {/* Section heading */}
         <h2
-          className="text-3xl md:text-2xl font-bold mb-12 text-gray-800 tracking-tight relative inline-block"
-          data-aos="fade-right"
-          data-aos-duration="800"
+          className="relative text-3xl md:text-3xl font-bold mb-12 text-gray-800 tracking-tight inline-block overflow-hidden"
+          data-aos="fade-up"
+          data-aos-duration="900"
         >
           Si funksionon platforma jonë?
-          <span className="absolute left-0 -bottom-2 w-full h-1 bg-gradient-to-r from-blue-400 to-pink-400 rounded-full"></span>
+          <span className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-blue-400 to-purple-400 animate-[slide_2s_ease-in-out_infinite]"></span>
+
+          <style>{`
+    @keyframes slide {
+      0% { transform: translateX(-100%); }
+      50% { transform: translateX(0); }
+      100% { transform: translateX(100%); }
+    }
+  `}</style>
         </h2>
+
 
         {/* Container with cards and colored blobs */}
         <div className="relative overflow-hidden rounded-3xl p-12 bg-gray-900">
@@ -367,7 +376,7 @@ function HomePage() {
       <section className="max-w-7xl mx-auto px-4 py-20 text-center relative overflow-hidden">
         {/* Section heading */}
         <h2
-          className="text-4xl md:text-2xl font-extrabold mb-16 text-gray-800 inline-block relative bg-clip-text animate-gradient-x"
+          className="text-4xl md:text-3xl font-extrabold mb-16 text-gray-800 inline-block relative bg-clip-text animate-gradient-x"
           data-aos="fade-down"
           data-aos-duration="1200"
         >
@@ -417,109 +426,172 @@ function HomePage() {
       {/* Sugjerimet */}
       <section className="bg-gray-100 py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-8 text-center">Sugjerime nga ne</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-10 transition-transform duration-500 hover:scale-105">
+            🌿 Sugjerime nga ne
+          </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-            {/* Artikulli 1 */}
-            <div className="bg-white p-5 rounded-lg shadow hover:shadow-lg transition relative group overflow-hidden">
-              <img
-                src={himare0Image}
-                alt="blog1"
-                className="rounded-md mb-4 h-40 w-full object-cover"
-              />
-              <h3 className="font-bold mb-2">Top 5 vendet për pushime verore në Shqipëri</h3>
-              <p className="text-sm text-gray-600 transition-all duration-500 max-h-16 overflow-hidden group-[.expanded]:max-h-96">
-                Plazhet më të bukura, ushqimi dhe çmimet më të mira... Nga Dhërmi deri në Ksamil, çdo vend ofron përvoja të veçanta.
-                <span className="hidden group-[.expanded]:inline">
-                  {" "}Nëse preferoni qetësinë, Radhima dhe Himara janë ideale për relaks, ndërsa Ksamili dhe Saranda ofrojnë jetën e gjallë të natës.
-                  Mos harroni të provoni ushqimet tradicionale të zonës dhe të rezervoni akomodimin paraprakisht gjatë sezonit të verës.
-                </span>
-              </p>
-              <button
-                className="text-cyan-600 font-semibold mt-2 hover:underline focus:outline-none"
-                data-text="Lexo më pak ←"
-                onClick={(e) => {
-                  const card = e.target.closest(".group");
-                  const expanded = card.classList.toggle("expanded");
-                  e.target.textContent = expanded ? e.target.dataset.text : "Lexo më shumë →";
-                }}
-              >
-                Lexo më shumë →
-              </button>
-            </div>
+            {[himare0Image, brezovica0Image, tirana0Image].map((img, idx) => {
+              const titles = [
+                "Top 5 vendet për pushime verore në Shqipëri",
+                "Pse Brezovica është destinacion perfekt dimëror?",
+                "Udhëzues për një fundjavë në Tiranë"
+              ];
 
-            {/* Artikulli 2 */}
-            <div className="bg-white p-5 rounded-lg shadow hover:shadow-lg transition relative group overflow-hidden">
-              <img
-                src={brezovica0Image}
-                alt="blog2"
-                className="rounded-md mb-4 h-40 w-full object-cover"
-              />
-              <h3 className="font-bold mb-2">Pse Brezovica është destinacion perfekt dimëror?</h3>
-              <p className="text-sm text-gray-600 transition-all duration-500 max-h-16 overflow-hidden group-[.expanded]:max-h-96">
-                Brezovica është vendi ideal për ski, pushim dhe natyrë. Shijo ajrin e pastër malor dhe hotelet komode.
-                <span className="hidden group-[.expanded]:inline">
-                  {" "}Pista të përgatitura mirë, peizazhe të mbuluara me borë dhe restorante me ushqim tradicional bëjnë që çdo vizitë të jetë e paharrueshme.
-                  Në mbrëmje mund të relaksohesh pranë zjarrit në lodge ose të provosh spa-t lokale. Për një përvojë më të plotë, vizito edhe fshatrat përreth.
-                </span>
-              </p>
-              <button
-                className="text-cyan-600 font-semibold mt-2 hover:underline focus:outline-none"
-                data-text="Lexo më pak ←"
-                onClick={(e) => {
-                  const card = e.target.closest(".group");
-                  const expanded = card.classList.toggle("expanded");
-                  e.target.textContent = expanded ? e.target.dataset.text : "Lexo më shumë →";
-                }}
-              >
-                Lexo më shumë →
-              </button>
-            </div>
+              const texts = [
+                "Plazhet më të bukura, ushqimi dhe çmimet më të mira... Nga Dhërmi deri në Ksamil, çdo vend ofron përvoja të veçanta.",
+                "Brezovica është vendi ideal për ski, pushim dhe natyrë. Shijo ajrin e pastër malor dhe hotelet komode.",
+                "Tirana ofron muzeume, restorante moderne dhe jetën e gjallë të natës."
+              ];
 
-            {/* Artikulli 3 */}
-            <div className="bg-white p-5 rounded-lg shadow hover:shadow-lg transition relative group overflow-hidden">
-              <img
-                src={tirana0Image}
-                alt="blog-tirana"
-                className="rounded-md mb-4 h-40 w-full object-cover"
-              />
-              <h3 className="font-bold mb-2">Udhëzues për një fundjavë në Tiranë</h3>
-              <p className="text-sm text-gray-600 transition-all duration-500 max-h-16 overflow-hidden group-[.expanded]:max-h-96">
-                Tirana ofron muzeume, restorante moderne dhe jetën e gjallë të natës.
-                <span className="hidden group-[.expanded]:inline">
-                  {" "}Vizito Sheshin Skënderbej, shijo kafen në Bllok dhe eksploro artin modern dhe galeritë lokale. Perfekte për të përjetuar kulturën dhe energjinë e kryeqytetit.
-                </span>
-              </p>
-              <button
-                className="text-cyan-600 font-semibold mt-2 hover:underline focus:outline-none"
-                data-text="Lexo më pak ←"
-                onClick={(e) => {
-                  const card = e.target.closest(".group");
-                  const expanded = card.classList.toggle("expanded");
-                  e.target.textContent = expanded ? e.target.dataset.text : "Lexo më shumë →";
-                }}
-              >
-                Lexo më shumë →
-              </button>
-            </div>
+              const extraTexts = [
+                "Nëse preferoni qetësinë, Radhima dhe Himara janë ideale për relaks, ndërsa Ksamili dhe Saranda ofrojnë jetën e gjallë të natës. Mos harroni të provoni ushqimet tradicionale të zonës dhe të rezervoni akomodimin paraprakisht gjatë sezonit të verës.",
+                "Pista të përgatitura mirë, peizazhe të mbuluara me borë dhe restorante me ushqim tradicional bëjnë që çdo vizitë të jetë e paharrueshme. Në mbrëmje mund të relaksohesh pranë zjarrit në lodge ose të provosh spa-t lokale. Për një përvojë më të plotë, vizito edhe fshatrat përreth.",
+                "Vizito Sheshin Skënderbej, shijo kafen në Bllok dhe eksploro artin modern dhe galeritë lokale. Perfekte për të përjetuar kulturën dhe energjinë e kryeqytetit."
+              ];
+
+              return (
+                <div
+                  key={idx}
+                  className="bg-white p-5 rounded-xl shadow-lg relative group overflow-hidden cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:rotate-1 hover:shadow-2xl"
+                >
+                  {/* Animated Image */}
+                  <div className="overflow-hidden rounded-md">
+                    <img
+                      src={img}
+                      alt={`blog-${idx}`}
+                      className="h-40 w-full object-cover rounded-md transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-1"
+                    />
+                  </div>
+
+                  {/* Card content */}
+                  <h3 className="font-bold mb-2 mt-4 text-gray-800 group-hover:text-blue-700 transition-colors duration-500">
+                    {titles[idx]}
+                  </h3>
+                  <p className="text-sm text-gray-600 transition-all duration-500 max-h-16 overflow-hidden group-[.expanded]:max-h-96">
+                    {texts[idx]}
+                    <span className="hidden group-[.expanded]:inline">
+                      {" "}{extraTexts[idx]}
+                    </span>
+                  </p>
+
+                  {/* Button */}
+                  <button
+                    className="text-blue-600 font-semibold mt-3 hover:text-blue-400 hover:underline focus:outline-none transition-colors duration-300"
+                    data-text="Lexo më pak ←"
+                    onClick={(e) => {
+                      const card = e.target.closest(".group");
+                      const expanded = card.classList.toggle("expanded");
+                      e.target.textContent = expanded ? e.target.dataset.text : "Lexo më shumë →";
+                    }}
+                  >
+                    Lexo më shumë →
+                  </button>
+
+                  {/* Optional shimmer overlay */}
+                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-white/10 via-white/5 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none animate-pulse"></div>
+                </div>
+              );
+            })}
           </div>
         </div>
-      </section >
+      </section>
+
 
       {/* Reviews */}
-      < section className="bg-gray-100 py-12" >
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold mb-6">Përshtypjet e klientëve</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <section className="py-20 relative overflow-hidden">
+        {/* Sfondo dekorativ me linja lëvizëse, mbulon të gjithë seksionin */}
+        <div className="absolute inset-0 flex flex-wrap opacity-20 justify-between">
+          {Array.from({ length: 100 }).map((_, i) => (
+            <div
+              key={i}
+              className="w-1 h-16 bg-gradient-to-b from-black to-blue-400 rounded-full animate-wave"
+              style={{
+                margin: `${Math.random() * 10}px`,
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${3 + Math.random() * 3}s`,
+              }}
+            ></div>
+          ))}
+        </div>
+
+        <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+          <h2 className="text-3xl font-extrabold mb-16 relative inline-block">
+            💭 Përshtypjet e klientëve
+            <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-black to-blue-500 rounded-full animate-pulse"></span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {reviews.map((review, index) => (
-              <div key={index} className="p-6 bg-white rounded-lg shadow hover:shadow-xl transition-shadow">
-                <p className="italic mb-2">"{review.comment}"</p>
-                <p className="font-bold">- {review.name}</p>
+              <div
+                key={index}
+                className="relative p-10 rounded-3xl bg-white/20 backdrop-blur-md border border-white/25 shadow-2xl transform transition-all duration-500 hover:scale-105 hover:rotate-2 hover:shadow-gray-900/50"
+              >
+                {/* Dekor abstrakt */}
+                <div className="absolute -top-5 -right-5 w-14 h-14 bg-gradient-to-tr from-black via-blue-700 to-indigo-400 rounded-full opacity-40 animate-ping-slow"></div>
+                <div className="absolute -bottom-5 -left-5 w-20 h-20 bg-gradient-to-tr from-gray-900 via-gray-600 to-red-300 rounded-full opacity-30 animate-bounce-slow"></div>
+
+                {/* Quote */}
+                <p className="text-gray-900 italic text-lg mb-8 relative z-10">
+                  “{review.comment}”
+                </p>
+
+                {/* Klienti */}
+                <div className="flex items-center justify-center space-x-4 relative z-10">
+                  <div className="w-16 h-16 rounded-full bg-blue-700 flex items-center justify-center font-bold text-white text-2xl">
+                    {review.name[0]}
+                  </div>
+                  <span className="font-semibold text-gray-900 text-lg">{review.name}</span>
+                </div>
+
+                {/* Yjet */}
+                <div className="mt-6 flex justify-center space-x-2 relative z-10 text-yellow-400">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <span key={i} className="animate-spin-slow hover:animate-spin-fast">★</span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </section >
+
+        <style>
+          {`
+      @keyframes wave {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0); }
+      }
+      .animate-wave { animation: wave infinite ease-in-out; }
+
+      @keyframes ping-slow {
+        0%, 100% { transform: scale(1); opacity: 0.4; }
+        50% { transform: scale(1.2); opacity: 0.7; }
+      }
+      .animate-ping-slow { animation: ping-slow 5s ease-in-out infinite; }
+
+      @keyframes bounce-slow {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+      }
+      .animate-bounce-slow { animation: bounce-slow 6s ease-in-out infinite; }
+
+      @keyframes spin-slow {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .animate-spin-slow { animation: spin-slow 20s linear infinite; }
+      
+      @keyframes spin-fast {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .animate-spin-fast { animation: spin-fast 1s linear infinite; }
+    `}
+        </style>
+      </section>
+
 
     </div >
   );
