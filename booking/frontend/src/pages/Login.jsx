@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 function Login({ onSwitchToRegister, onClose }) {
   const [email, setEmail] = useState("");
@@ -6,34 +7,26 @@ function Login({ onSwitchToRegister, onClose }) {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  // Validimi i email-it
-  if (!email.endsWith("@gmail.com") && !email.endsWith("@hotmail.com")) {
-    alert("Please enter a valid email ending with @gmail.com or @hotmail.com");
-    return;
-  }
+    if (!email.endsWith("@gmail.com") && !email.endsWith("@hotmail.com")) {
+      alert("Please enter a valid email ending with @gmail.com or @hotmail.com");
+      return;
+    }
 
-  // Validimi i password-it
-  if (password.length < 8) {
-    alert("Password must have at least 8 characters");
-    return;
-  }
+    if (password.length < 8) {
+      alert("Password must have at least 8 characters");
+      return;
+    }
 
-  alert("You are logged in!");
-
-  // Mbyll modal-in pas alert-it
-  if (typeof onClose === "function") onClose();
-
-  // Pastro fushat
-  setEmail("");
-  setPassword("");
-  setShowPassword(false);
-};
-
+    alert("You are logged in!");
+    if (typeof onClose === "function") onClose();
+    setEmail("");
+    setPassword("");
+    setShowPassword(false);
+  };
 
   const handleOverlayClick = (e) => {
-    // Vetëm kur klikohet jashtë formës
     if (e.target === e.currentTarget && typeof onClose === "function") {
       onClose();
     }
@@ -42,64 +35,113 @@ function Login({ onSwitchToRegister, onClose }) {
   return (
     <div
       onClick={handleOverlayClick}
-      className="fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-50"
+      className="fixed inset-0 flex items-center justify-center bg-black/90 backdrop-blur-sm z-50"
     >
-      <div
-        onClick={(e) => e.stopPropagation()} // mos mbyll kur klikohet brenda formës
-        className="bg-white p-6 rounded-2xl shadow-2xl w-full max-w-md relative"
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9, y: 40 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        onClick={(e) => e.stopPropagation()}
+        className="relative p-[2px] rounded-3xl bg-gradient-to-r from-slate-400 via-gray-300 to-slate-400 shadow-[0_0_30px_rgba(255,255,255,0.15)]"
       >
-        <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-          Login
-        </h2>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <input
-            type="email"
-            placeholder="Email"
-            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600 text-black"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <div>
-            <input
-              type={showPassword ? "text" : "password"}
-              placeholder="Password"
-              className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-red-600 text-black"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            <div className="flex items-center mt-2">
-              <input
-                type="checkbox"
-                id="showPassword"
-                className="mr-2"
-                checked={showPassword}
-                onChange={() => setShowPassword(!showPassword)}
-              />
-              <label htmlFor="showPassword" className="text-sm text-gray-600">
-                Show Password
-              </label>
-            </div>
-          </div>
-          <button
-            type="submit"
-            className="bg-gradient-to-r from-gray-800 to-blue-800 hover:from-blue-800 hover:to-gray-800 text-white font-semibold px-4 py-2 rounded-xl shadow-lg transition-all duration-300"
-          >
-            Login
-          </button>
-        </form>
+        <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-10 w-full max-w-md border border-white/20 shadow-lg">
+          <h2 className="text-4xl font-extrabold text-center mb-8 tracking-wide bg-gradient-to-r from-slate-600 via-gray-500 to-slate-600 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,255,255,0.25)]">
+            Welcome Back
+          </h2>
 
-        <p className="mt-4 text-gray-600 text-sm text-center">
-          Don’t have an account?{" "}
-          <button
-            onClick={onSwitchToRegister}
-            className="text-cyan-600 hover:underline"
-          >
-            Sign up
-          </button>
-        </p>
-      </div>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+            {/* Email */}
+            <div className="relative group">
+              <label className="text-base font-medium text-slate-700 mb-1 block">
+                Email Address
+              </label>
+              <input
+                type="email"
+                placeholder="you@example.com"
+                className="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/20 
+                text-gray-700 placeholder-gray-500 focus:outline-none 
+                focus:ring-2 focus:ring-gray-300 focus:shadow-[0_0_15px_rgba(255,255,255,0.15)] 
+                transition-all duration-300 text-lg autofill:shadow-[inset_0_0_0px_1000px_rgba(255,255,255,0)] autofill:text-gray-700"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                autoComplete="email"
+              />
+            </div>
+
+            {/* Password */}
+            <div className="relative group">
+              <label className="text-base font-medium text-slate-700 mb-1 block">
+                Password
+              </label>
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="••••••••"
+                className="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/20 
+                text-gray-700 placeholder-gray-500 focus:outline-none 
+                focus:ring-2 focus:ring-gray-300 focus:shadow-[0_0_15px_rgba(255,255,255,0.15)] 
+                transition-all duration-300 text-lg autofill:shadow-[inset_0_0_0px_1000px_rgba(255,255,255,0)] autofill:text-gray-700"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                autoComplete="current-password"
+              />
+
+              <div className="flex items-center mt-3">
+                <label className="flex items-center cursor-pointer relative">
+                  <input
+                    type="checkbox"
+                    checked={showPassword}
+                    onChange={() => setShowPassword(!showPassword)}
+                    className="w-5 h-5 cursor-pointer rounded border border-gray-400 bg-gray-400 appearance-none relative"
+                  />
+                  {showPassword && (
+                    <span className="absolute left-1 top-0.5 text-gray-700 text-sm">
+                      ✔
+                    </span>
+                  )}
+                  <span className="ml-2 text-sm text-gray-700 select-none">
+                    Show Password
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            {/* Button */}
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 20px rgba(25, 2, 75, 0.2)",
+              }}
+              whileTap={{ scale: 0.98 }}
+              type="submit"
+              className="bg-gradient-to-r from-slate-600 via-gray-400 to-slate-600 text-slate-700 font-semibold py-3.5 rounded-xl shadow-lg transition-all duration-300 hover:from-slate-500 hover:via-gray-400 hover:to-slate-500 text-lg"
+            >
+              Login
+            </motion.button>
+          </form>
+
+          <p className="mt-8 text-slate-600 text-base text-center">
+            Don’t have an account?{" "}
+            <button
+              onClick={onSwitchToRegister}
+              className="text-slate-800 hover:underline hover:text-white transition"
+            >
+              Sign up
+            </button>
+          </p>
+        </div>
+      </motion.div>
+
+      {/* Custom autofill fix */}
+      <style jsx="true">{`
+        input:-webkit-autofill {
+          background-color: transparent !important;
+          -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0) inset !important;
+          -webkit-text-fill-color: #374151 !important; /* text-gray-700 */
+          transition: background-color 9999s ease-in-out 0s;
+        }
+      `}</style>
     </div>
   );
 }
