@@ -22,13 +22,13 @@ function Contact({ onClose }) {
   return (
     <div
       onClick={handleOverlayClick}
-      className="fixed inset-0 flex items-center justify-center bg-black/95 z-50 backdrop-blur-md"
+      className="fixed inset-0 flex items-center justify-center bg-black/95 z-50 backdrop-blur-sm z-50"
     >
     <div
   onClick={(e) => e.stopPropagation()}
   className="w-full max-w-md p-10 rounded-3xl relative
              bg-gradient-to-br from-gray-950 via-gray-900/90 to-gray-950/80
-             border border-gray-800 shadow-[0_0_80px_rgba(0,0,0,0.9)]
+             border border-gray-600 shadow-[0_0_20px_rgba(0,0,0,0.9)]
              backdrop-blur-md transform scale-90 animate-heavyPop"
 >
 
