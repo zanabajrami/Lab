@@ -124,7 +124,7 @@ function HomePage() {
 
       </section>
 
-      <section className="py-16 bg-gradient-to-r from-blue-50 to-green-50 text-center">
+      <section className="py-16 text-center">
         <h2 className="text-3xl font-extrabold mb-12 text-gray-800 drop-shadow-sm tracking-wide">
           <span className="border-b-[3px] border-gray-300 pb-1 px-2">
             Destinacionet më të vizituara 📍
@@ -245,7 +245,7 @@ function HomePage() {
       </section>
 
       {/* Ofertat */}
-      <section className="bg-gray-100 py-12">
+      <section className="py-12">
         <div className="max-w-8xl mx-auto px-4 text-center">
           <div className="relative mb-10 inline-block">
             <h2 className="text-3xl font-extrabold text-gray-800">Ofertat tona</h2>
@@ -424,7 +424,7 @@ function HomePage() {
 
 
       {/* Sugjerimet */}
-      <section className="bg-gray-100 py-12">
+      <section className="py-12">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-10 transition-transform duration-500 hover:scale-105">
             🌿 Sugjerime nga ne

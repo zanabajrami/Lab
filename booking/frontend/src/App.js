@@ -9,35 +9,40 @@ import Register from './pages/Register';
 import Deals from "./pages/Deals";
 import Favorites from "./pages/Favorites";
 
-function AppContent({ favorites, setFavorites }) {
-  const location = useLocation(); 
-  const isPadded = location.pathname === '/deals' || location.pathname === '/favorites';
+function MainWrapper() {
+  const location = useLocation();
+  const [favorites, setFavorites] = useState([]);
 
   return (
-    <>
+    <div className="bg-gray-100 min-h-screen flex flex-col">
       <Header />
-      <main className={`flex-grow ${isPadded ? 'pt-16' : ''}`}>
+
+      {/* Vetëm faqet që nuk janë HomePage marrin padding-top */}
+      <main className={`flex-grow ${location.pathname !== '/' ? 'pt-16' : ''}`}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/deals" element={<Deals favorites={favorites} setFavorites={setFavorites} />} />
-          <Route path="/favorites" element={<Favorites favorites={favorites} setFavorites={setFavorites} />} />
+          <Route
+            path="/deals"
+            element={<Deals favorites={favorites} setFavorites={setFavorites} />}
+          />
+          <Route
+            path="/favorites"
+            element={<Favorites favorites={favorites} setFavorites={setFavorites} />}
+          />
         </Routes>
       </main>
+
       <Footer />
-    </>
+    </div>
   );
 }
 
 function App() {
-  const [favorites, setFavorites] = useState([]);
-
   return (
     <Router>
-      <div className="bg-gray-100 min-h-screen flex flex-col">
-        <AppContent favorites={favorites} setFavorites={setFavorites} />
-      </div>
+      <MainWrapper />
     </Router>
   );
 }

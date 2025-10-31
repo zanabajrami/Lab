@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import Contact from "../pages/Contact";
 
 function IconFacebook() {
     return (
@@ -27,60 +26,60 @@ function IconTwitter() {
 }
 
 export default function Footer() {
-    const [showContact, setShowContact] = useState(false);
 
     return (
-       <footer className="bg-gradient-to-r from-indigo-300/30 via-indigo-200/30 to-indigo-400/30 backdrop-blur-md text-gray-900 py-10 mt-auto rounded-t-3xl shadow-inner">
-    <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* Logo dhe Përshkrimi */}
-        <div>
-            <h2 className="text-2xl font-bold mb-3 text-indigo-900">BookInn</h2>
-            <p className="text-sm text-gray-800">
-                Discover the best hotels, amazing deals, and exclusive offers. Stay comfortable with BookInn 🏢
-            </p>
-        </div>
+        <footer className="bg-gradient-to-r from-indigo-300/30 via-indigo-200/30 to-indigo-400/30 backdrop-blur-md text-gray-900 py-10 mt-auto rounded-t-3xl shadow-inner">
+            <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+                {/* Logo dhe Përshkrimi */}
+                <div>
+                    <h2 className="text-2xl font-bold mb-3 text-indigo-900">BookInn</h2>
+                    <p className="text-sm text-gray-800">
+                        Discover the best hotels, amazing deals, and exclusive offers. Stay comfortable with BookInn 🏢
+                    </p>
+                </div>
 
-        {/* Services */}
-        <div>
-            <h3 className="text-lg font-semibold mb-3 text-indigo-900">Services</h3>
-            <ul className="space-y-2 text-gray-700">
-                <li className="hover:text-indigo-600 cursor-pointer transition">Hotel Booking</li>
-                <li className="hover:text-indigo-600 cursor-pointer transition">Room Upgrades</li>
-                <li className="hover:text-indigo-600 cursor-pointer transition">Reservation Cancellation</li>
-                <li className="hover:text-indigo-600 cursor-pointer transition">Customer Support</li>
-            </ul>
-        </div>
+                {/* Services */}
+                <div>
+                    <h3 className="text-lg font-semibold mb-3 text-indigo-900">Services</h3>
+                    <ul className="space-y-2 text-gray-700">
+                        <li className="hover:text-indigo-600 cursor-pointer transition">Hotel Booking</li>
+                        <li className="hover:text-indigo-600 cursor-pointer transition">Room Upgrades</li>
+                        <li className="hover:text-indigo-600 cursor-pointer transition">Reservation Cancellation</li>
+                        <li className="hover:text-indigo-600 cursor-pointer transition">Customer Support</li>
+                    </ul>
+                </div>
 
-        {/* Destinations */}
-        <div>
-            <h3 className="text-lg font-semibold mb-3 text-indigo-900">Destinations</h3>
-            <ul className="space-y-2 text-gray-700">
-                {["Prishtina", "Tirana", "Brezovica", "Dhërmi", "Ksamil", "Pejë", "Sarandë", "Prizren", "Himarë", "Korçë"].map(city => (
-                    <li key={city} className="hover:text-indigo-600 cursor-pointer transition">{city}</li>
-                ))}
-            </ul>
-        </div>
+                {/* Destinations */}
+                <div>
+                    <h3 className="text-lg font-semibold mb-3 text-indigo-900">Destinations</h3>
+                    <ul className="space-y-2 text-gray-700">
+                        {["Prishtina", "Tirana", "Brezovica", "Dhërmi", "Ksamil", "Pejë", "Sarandë", "Prizren", "Himarë", "Korçë"].map(city => (
+                            <li key={city} className="hover:text-indigo-600 cursor-pointer transition">{city}</li>
+                        ))}
+                    </ul>
+                </div>
 
-        {/* Deals */}
-        <div>
-            <h3 className="text-lg font-semibold mb-3 text-indigo-900">Deals</h3>
-            <ul className="space-y-2 text-gray-700">
-                <li className="hover:text-indigo-600 cursor-pointer transition">
-                    <Link to="/deals">Last Minute Deals</Link>
-                </li>
-            </ul>
-        </div>
-    </div>
+                {/* Deals */}
+                <div>
+                    <h3 className="text-lg font-semibold mb-3 text-indigo-900">Deals</h3>
+                    <ul className="space-y-2 text-gray-700">
+                        <li className="hover:text-indigo-600 cursor-pointer transition">
+                            <Link to="/deals">Last Minute Deals</Link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-    {/* Footer Bottom */}
-    <div className="border-t border-indigo-300/50 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto px-4 text-sm text-gray-700">
-        <p>© {new Date().getFullYear()} BookInn. All rights reserved.</p>
-        <div className="flex gap-5 mt-3 md:mt-0">
-            <span className="cursor-pointer hover:text-indigo-600 transition"><IconFacebook /></span>
-            <span className="cursor-pointer hover:text-indigo-600 transition"><IconInstagram /></span>
-            <span className="cursor-pointer hover:text-indigo-600 transition"><IconTwitter /></span>
-        </div>
-    </div>
-</footer>
+            {/* Footer Bottom */}
+            <div className="border-t border-indigo-300/50 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto px-4 text-sm text-gray-700">
+                <p>© {new Date().getFullYear()} BookInn. All rights reserved.</p>
+                <div className="flex gap-5 mt-3 md:mt-0">
+                    <span className="cursor-pointer hover:text-indigo-600 transition"><IconFacebook /></span>
+                    <span className="cursor-pointer hover:text-indigo-600 transition"><IconInstagram /></span>
+                    <span className="cursor-pointer hover:text-indigo-600 transition"><IconTwitter /></span>
+                </div>
+            </div>
+        </footer>
+
     );
 }
