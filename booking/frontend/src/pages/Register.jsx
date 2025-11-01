@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 function Register({ onSwitchToLogin, onClose }) {
   const [firstName, setFirstName] = useState("");
@@ -11,7 +12,6 @@ function Register({ onSwitchToLogin, onClose }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validimi
     if (firstName.trim().length < 1) {
       alert("First Name must be at least 1 character");
       return;
@@ -33,7 +33,6 @@ function Register({ onSwitchToLogin, onClose }) {
       return;
     }
 
-    // ✅ Alert dhe pastrimi i fushave
     alert("You are signed up!");
     setFirstName("");
     setLastName("");
@@ -44,93 +43,160 @@ function Register({ onSwitchToLogin, onClose }) {
 
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget && typeof onClose === "function") {
-      onClose(); // Modal mbyllet vetëm kur përdoruesi klikon jashtë formës
+      onClose();
     }
   };
 
   return (
     <div
       onClick={handleOverlayClick}
-      className="fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-50"
+      className="fixed inset-0 flex items-center justify-center bg-black/90 backdrop-blur-sm z-50"
     >
-      <div
-        onClick={(e) => e.stopPropagation()} // Mos mbyll kur klikohet brenda formës
-        className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md relative"
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9, y: 40 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        onClick={(e) => e.stopPropagation()}
+        className="relative p-[2px] rounded-3xl bg-gradient-to-r from-slate-400 via-gray-300 to-slate-400 shadow-[0_0_20px_rgba(255,255,255,0.15)]"
       >
-        <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-          Sign up
-        </h2>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <input
-            type="text"
-            placeholder="First Name"
-            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-black"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            required
-          />
-          <input
-            type="text"
-            placeholder="Last Name"
-            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-black"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            required
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-black"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <input
-            type={showPassword ? "text" : "password"}
-            placeholder="Password"
-            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-black"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <input
-            type={showPassword ? "text" : "password"}
-            placeholder="Confirm Password"
-            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-black"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          />
-          <div className="flex items-center">
-            <input
-              type="checkbox"
-              id="showPassword"
-              className="mr-2"
-              checked={showPassword}
-              onChange={() => setShowPassword(!showPassword)}
-            />
-            <label htmlFor="showPassword" className="text-sm text-gray-600">
-              Show Password
-            </label>
-          </div>
-          <button
-            type="submit"
-            className="bg-gradient-to-r from-gray-800 to-blue-800 hover:from-blue-800 hover:to-gray-800 text-white font-semibold px-4 py-2 rounded-xl shadow-lg transition-all duration-300"
-          >
-            Sign up
-          </button>
-        </form>
+        <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 w-full max-w-2xl min-w-[420px] border border-white/20 shadow-lg">
+          <h2 className="text-3xl font-extrabold text-center mb-2 tracking-wide bg-gradient-to-r from-slate-600 via-gray-500 to-slate-600 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,255,255,0.25)]">
+            Create Account
+          </h2>
 
-        <p className="mt-4 text-gray-600 text-sm text-center">
-          Already have an account?{" "}
-          <button
-            onClick={onSwitchToLogin}
-            className="text-cyan-600 hover:underline"
-          >
-            Login
-          </button>
-        </p>
-      </div>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+            {/* First Name */}
+            <div className="relative group">
+              <label className="text-base font-medium text-slate-700 mb-1 block">
+                First Name
+              </label>
+              <input
+                type="text"
+                placeholder="John"
+                className="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/20 text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:shadow-[0_0_15px_rgba(255,255,255,0.15)] transition-all duration-300 text-lg"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+              />
+            </div>
+
+            {/* Last Name */}
+            <div className="relative group">
+              <label className="text-base font-medium text-slate-700 mb-1 block">
+                Last Name
+              </label>
+              <input
+                type="text"
+                placeholder="Smith"
+                className="w-full px-5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:shadow-[0_0_15px_rgba(255,255,255,0.15)] transition-all duration-300 text-lg"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                required
+              />
+            </div>
+
+            {/* Email */}
+            <div className="relative group">
+              <label className="text-base font-medium text-slate-700 mb-1 block">
+                Email Address
+              </label>
+              <input
+                type="email"
+                placeholder="you@example.com"
+                className="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/20 text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:shadow-[0_0_15px_rgba(255,255,255,0.15)] transition-all duration-300 text-lg"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                autoComplete="email"
+              />
+            </div>
+
+            {/* Password */}
+            <div className="relative group">
+              <label className="text-base font-medium text-slate-700 mb-1 block">
+                Password
+              </label>
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="••••••••"
+                className="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/20 text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:shadow-[0_0_15px_rgba(255,255,255,0.15)] transition-all duration-300 text-lg"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                autoComplete="new-password"
+              />
+            </div>
+
+            {/* Confirm Password */}
+            <div className="relative group">
+              <label className="text-base font-medium text-slate-700 mb-1 block">
+                Confirm Password
+              </label>
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="••••••••"
+                className="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/20 text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:shadow-[0_0_15px_rgba(255,255,255,0.15)] transition-all duration-300 text-lg"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                required
+              />
+            </div>
+
+            {/* Show Password */}
+            <div className="flex items-center mt-1">
+              <label className="flex items-center cursor-pointer relative">
+                <input
+                  type="checkbox"
+                  checked={showPassword}
+                  onChange={() => setShowPassword(!showPassword)}
+                  className="w-5 h-5 cursor-pointer rounded border border-gray-400 bg-gray-400 appearance-none relative"
+                />
+                {showPassword && (
+                  <span className="absolute left-1 top-0.5 text-gray-700 text-sm">
+                    ✔
+                  </span>
+                )}
+                <span className="ml-2 text-sm text-gray-700 select-none">
+                  Show Password
+                </span>
+              </label>
+            </div>
+
+            {/* Button */}
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 20px rgba(25, 2, 75, 0.2)",
+              }}
+              whileTap={{ scale: 0.98 }}
+              type="submit"
+              className="bg-gradient-to-r from-slate-600 via-gray-400 to-slate-600 text-slate-700 font-semibold py-2.5 rounded-xl shadow-lg transition-all duration-300 hover:from-slate-500 hover:via-gray-400 hover:to-slate-500 text-lg"
+            >
+              Sign Up
+            </motion.button>
+          </form>
+
+          <p className="mt-4 text-slate-600 text-base text-center">
+            Already have an account?{" "}
+            <button
+              onClick={onSwitchToLogin}
+              className="text-slate-800 hover:underline hover:text-white transition"
+            >
+              Login
+            </button>
+          </p>
+        </div>
+      </motion.div>
+
+      {/* Autofill fix */}
+      <style jsx="true">{`
+        input:-webkit-autofill {
+          background-color: transparent !important;
+          -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0) inset !important;
+          -webkit-text-fill-color: #374151 !important;
+          transition: background-color 9999s ease-in-out 0s;
+        }
+      `}</style>
     </div>
   );
 }
