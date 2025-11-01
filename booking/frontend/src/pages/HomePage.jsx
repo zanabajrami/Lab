@@ -422,16 +422,13 @@ function HomePage() {
         </div>
       </section>
 
-
       {/* Sugjerimet */}
       <section className="py-12">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-10 transition-transform duration-500 hover:scale-105">
             🌿 Sugjerime nga ne
           </h2>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
             {[himare0Image, brezovica0Image, tirana0Image].map((img, idx) => {
               const titles = [
                 "Top 5 vendet për pushime verore në Shqipëri",
@@ -454,7 +451,7 @@ function HomePage() {
               return (
                 <div
                   key={idx}
-                  className="bg-white p-5 rounded-xl shadow-lg relative group overflow-hidden cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:rotate-1 hover:shadow-2xl"
+                  className="bg-grey p-5 rounded-xl shadow-2xl relative group overflow-hidden cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:rotate-1 hover:shadow-2xl"
                 >
                   {/* Animated Image */}
                   <div className="overflow-hidden rounded-md">
@@ -498,7 +495,6 @@ function HomePage() {
         </div>
       </section>
 
-
       {/* Reviews */}
       <section className="py-20 relative overflow-hidden">
         {/* Sfondo dekorativ me linja lëvizëse, mbulon të gjithë seksionin */}
@@ -516,12 +512,12 @@ function HomePage() {
           ))}
         </div>
 
+        {/* Përshtypjet e klientëve */}
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
           <h2 className="text-3xl font-extrabold mb-16 relative inline-block">
             💭 Përshtypjet e klientëve
             <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-black to-blue-500 rounded-full animate-pulse"></span>
           </h2>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {reviews.map((review, index) => (
               <div
@@ -591,8 +587,6 @@ function HomePage() {
     `}
         </style>
       </section>
-
-
     </div >
   );
 }

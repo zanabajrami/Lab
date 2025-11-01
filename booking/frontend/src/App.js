@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import './index.css';
 import Header from './components/Header';
@@ -9,15 +9,27 @@ import Register from './pages/Register';
 import Deals from "./pages/Deals";
 import Favorites from "./pages/Favorites";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto", 
+    });
+  }, [pathname]);
+
+  return null;
+}
+
 function MainWrapper() {
   const location = useLocation();
   const [favorites, setFavorites] = useState([]);
 
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col">
+    <div className="bg-gray-200 min-h-screen flex flex-col">
       <Header />
-
-      {/* Vetëm faqet që nuk janë HomePage marrin padding-top */}
       <main className={`flex-grow ${location.pathname !== '/' ? 'pt-16' : ''}`}>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -33,7 +45,6 @@ function MainWrapper() {
           />
         </Routes>
       </main>
-
       <Footer />
     </div>
   );
@@ -42,6 +53,7 @@ function MainWrapper() {
 function App() {
   return (
     <Router>
+      <ScrollToTop /> 
       <MainWrapper />
     </Router>
   );
