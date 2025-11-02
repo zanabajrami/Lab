@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import { CalendarDays, User, BedDouble, ChevronDown } from "lucide-react";
+import "../components/Datepicker.css";
 
-// Custom dropdown component
-function CustomDropdown({ options, selected, setSelected, placeholder }) {
+function CustomDropdown({ options, selected, setSelected, placeholder, allowInput }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [inputValue, setInputValue] = useState(selected || "");
   const ref = useRef();
 
   useEffect(() => {
@@ -14,22 +15,42 @@ function CustomDropdown({ options, selected, setSelected, placeholder }) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const handleSelect = (option) => {
+    setSelected(option);
+    setInputValue(option);
+    setIsOpen(false);
+  };
+
   return (
     <div className="relative w-full" ref={ref}>
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center bg-transparent text-white outline-none font-medium"
-      >
-        {selected || placeholder}
-        <ChevronDown className={`ml-2 transition-transform ${isOpen ? "rotate-180" : ""}`} />
-      </button>
+      {allowInput ? (
+        <input
+          type="text"
+          value={inputValue}
+          onChange={(e) => {
+            setInputValue(e.target.value);
+            setSelected(e.target.value);
+          }}
+          onClick={() => setIsOpen(!isOpen)}
+          placeholder={placeholder}
+          className="w-full bg-transparent text-white outline-none font-medium cursor-pointer"
+        />
+      ) : (
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="w-full flex justify-between items-center bg-transparent text-white outline-none font-medium"
+        >
+          {selected || placeholder}
+          <ChevronDown className={`ml-2 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+        </button>
+      )}
 
       {isOpen && (
-        <ul className="absolute left-0 mt-1 w-max min-w-full bg-white/10 backdrop-blur-md rounded-xl text-white shadow-lg z-[1000] max-h-52 overflow-y-auto">
+        <ul className="absolute left-0 mt-1 w-max min-w-full bg-white/10 backdrop-blur-md rounded-xl text-white shadow-lg z-[1000] max-h-52 overflow-y-auto border border-white/20">
           {options.map((option, i) => (
             <li
               key={i}
-              onClick={() => { setSelected(option); setIsOpen(false); }}
+              onClick={() => handleSelect(option)}
               className="px-3 py-2 cursor-pointer hover:bg-white/20 hover:shadow-md transition-all duration-200 rounded-md"
             >
               {option}
@@ -41,41 +62,42 @@ function CustomDropdown({ options, selected, setSelected, placeholder }) {
   );
 }
 
-// SearchBar component
 function SearchBar() {
   const today = new Date().toISOString().split("T")[0];
   const [startDate, setStartDate] = useState(today);
   const [endDate, setEndDate] = useState(today);
 
   const [destination, setDestination] = useState("");
-  const [guests, setGuests] = useState("");
-  const [rooms, setRooms] = useState("");
+  const [guests, setGuests] = useState(1);
+  const [rooms, setRooms] = useState(1);
 
-  const destinations = ["Paris", "London", "New York"];
-  const guestOptions = ["1 Guest", "2 Guests", "3 Guests", "4+ Guests"];
-  const roomOptions = ["1 Room", "2 Rooms", "3 Rooms"];
+  const destinations = ["Prishtina", "Tirana", "Brezovica", "Dhërmi", "Ksamil", "Pejë", "Sarandë", "Prizren", "Himarë", "Korçë"];
+
+  const increment = (setter, value, max = 10) => setter(value < max ? value + 1 : value);
+  const decrement = (setter, value, min = 1) => setter(value > min ? value - 1 : value);
 
   return (
-    <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl flex items-center shadow-lg w-full max-w-5xl mx-auto transform hover:scale-105 transition-transform duration-300">
+    <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl flex flex-wrap md:flex-nowrap items-center shadow-lg w-full max-w-6xl mx-auto transform hover:scale-105 transition-transform duration-300">
 
       {/* Destination */}
-      <div className="flex items-center px-5 py-4 flex-1 border-r border-white/30 hover:bg-white/20 transition-colors duration-300 cursor-pointer">
-        <BedDouble className="w-6 h-6 text-white mr-3" />
+      <div className="flex items-center px-8 py-7 flex-1 border-r border-white/30 hover:bg-white/20 transition-colors duration-300 cursor-pointer rounded-2xl shadow-lg">
+        <BedDouble className="w-6 h-6 text-white mr-4" />
         <CustomDropdown
           options={destinations}
           selected={destination}
           setSelected={setDestination}
           placeholder="Where are you going?"
+          allowInput={false}
         />
       </div>
 
       {/* Date Picker */}
-      <div className="flex items-center px-5 py-4 flex-1 border-r border-white/30 hover:bg-white/20 transition-colors duration-300 cursor-pointer">
+      <div className="flex items-center px-5 py-7 flex-1 border-r border-white/30 rounded-2xl hover:bg-white/20 transition-colors duration-300 cursor-pointer">
         <CalendarDays className="w-6 h-6 text-white mr-3" />
         <div className="flex gap-2 w-full">
           <input
             type="date"
-            className="w-full outline-none text-white bg-transparent font-medium"
+            className="w-full outline-none text-white bg-transparent font-medium appearance-none focus:ring-2 focus:ring-white/40 rounded-2xl"
             value={startDate}
             onChange={(e) => setStartDate(e.target.value)}
             min={today}
@@ -83,7 +105,7 @@ function SearchBar() {
           <span className="text-white">—</span>
           <input
             type="date"
-            className="w-full outline-none text-white bg-transparent font-medium"
+            className="w-full outline-none text-white bg-transparent font-medium appearance-none focus:ring-2 focus:ring-white/40 rounded-2xl"
             value={endDate}
             onChange={(e) => setEndDate(e.target.value)}
             min={startDate}
@@ -92,42 +114,29 @@ function SearchBar() {
       </div>
 
       {/* Guests */}
-      <div className="flex items-center px-5 py-4 border-r border-white/30 hover:bg-white/20 transition-colors duration-300 cursor-pointer">
+      <div className="flex items-center px-5 py-6 border-r border-white/30 rounded-2xl hover:bg-white/20 transition-colors duration-300 cursor-pointer">
         <User className="w-6 h-6 text-white mr-3" />
-        <CustomDropdown
-          options={guestOptions}
-          selected={guests}
-          setSelected={setGuests}
-          placeholder="Guests"
-        />
+        <div className="flex items-center gap-2">
+          <button onClick={() => decrement(setGuests, guests)} className="px-2 py-1 bg-white/20 rounded-full">-</button>
+          <span className="text-white">{guests} Guests</span>
+          <button onClick={() => increment(setGuests, guests)} className="px-2 py-1 bg-white/20 rounded-full">+</button>
+        </div>
       </div>
 
       {/* Rooms */}
-      <div className="flex items-center px-5 py-4 border-r border-white/30 hover:bg-white/20 transition-colors duration-300 cursor-pointer">
+      <div className="flex items-center px-5 py-6 hover:bg-white/20 transition-colors duration-300 cursor-pointer rounded-2xl">
         <BedDouble className="w-6 h-6 text-white mr-3" />
-        <CustomDropdown
-          options={roomOptions}
-          selected={rooms}
-          setSelected={setRooms}
-          placeholder="Rooms"
-        />
+        <div className="flex items-center gap-2">
+          <button onClick={() => decrement(setRooms, rooms)} className="px-2 py-1 bg-white/20 rounded-full">-</button>
+          <span className="text-white">{rooms} Rooms</span>
+          <button onClick={() => increment(setRooms, rooms)} className="px-2 py-1 bg-white/20 rounded-full">+</button>
+        </div>
       </div>
 
       {/* Search Button */}
-      <button className="
-        px-8 py-4 
-        rounded-2xl 
-        bg-white/20 text-white 
-        font-bold 
-        shadow-lg 
-        backdrop-blur-md
-        hover:bg-white/40 
-        hover:shadow-2xl 
-        hover:scale-105 
-        transition-all duration-300
-      ">
-        Search
-      </button>
+  <button className="w-35 px-8 py-7 rounded-2xl bg-white/20 text-white font-bold text-lg shadow-lg backdrop-blur-md hover:bg-white/40 hover:shadow-2xl hover:scale-105 transition-all duration-300">
+  Search
+</button>
 
     </div>
   );
