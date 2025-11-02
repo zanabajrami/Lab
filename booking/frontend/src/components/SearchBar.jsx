@@ -70,11 +70,35 @@ function SearchBar() {
   const [destination, setDestination] = useState("");
   const [guests, setGuests] = useState(1);
   const [rooms, setRooms] = useState(1);
+  const [error, setError] = useState(""); // për mesazhin e gabimit
 
   const destinations = ["Prishtina", "Tirana", "Brezovica", "Dhërmi", "Ksamil", "Pejë", "Sarandë", "Prizren", "Himarë", "Korçë"];
 
   const increment = (setter, value, max = 10) => setter(value < max ? value + 1 : value);
   const decrement = (setter, value, min = 1) => setter(value > min ? value - 1 : value);
+
+  const handleSearch = () => {
+    if (!destination) {
+      setError("Please select a destination.");
+      return;
+    }
+    if (!startDate || !endDate) {
+      setError("Please select check-in and check-out dates.");
+      return;
+    }
+    if (guests < 1) {
+      setError("Please add at least 1 guest.");
+      return;
+    }
+    if (rooms < 1) {
+      setError("Please add at least 1 room.");
+      return;
+    }
+
+    setError(""); // gjithçka është plotësuar
+    console.log({ destination, startDate, endDate, guests, rooms });
+    // këtu mund të bësh redirect ose API call
+  };
 
   return (
     <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl flex flex-wrap md:flex-nowrap items-center shadow-lg w-full max-w-6xl mx-auto transform hover:scale-105 transition-transform duration-300">
@@ -134,9 +158,19 @@ function SearchBar() {
       </div>
 
       {/* Search Button */}
-  <button className="w-35 px-8 py-7 rounded-2xl bg-white/20 text-white font-bold text-lg shadow-lg backdrop-blur-md hover:bg-white/40 hover:shadow-2xl hover:scale-105 transition-all duration-300">
-  Search
-</button>
+      <div className="relative w-35">
+        <button
+          onClick={handleSearch}
+          className="w-full px-8 py-7 rounded-2xl bg-white/20 text-white font-bold text-lg shadow-lg backdrop-blur-md hover:bg-white/40 hover:shadow-2xl hover:scale-105 transition-all duration-300"
+        >
+          Search
+        </button>
+        {error && (
+          <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-red-400 text-xs whitespace-nowrap">
+            {error}
+          </span>
+        )}
+      </div>
 
     </div>
   );
