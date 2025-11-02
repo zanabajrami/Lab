@@ -1,73 +1,133 @@
-import React, { useState } from "react";
-import { CalendarDays, User, BedDouble } from "lucide-react";
+import React, { useState, useRef, useEffect } from "react";
+import { CalendarDays, User, BedDouble, ChevronDown } from "lucide-react";
 
+// Custom dropdown component
+function CustomDropdown({ options, selected, setSelected, placeholder }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef();
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (ref.current && !ref.current.contains(e.target)) setIsOpen(false);
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  return (
+    <div className="relative w-full" ref={ref}>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex justify-between items-center bg-transparent text-white outline-none font-medium"
+      >
+        {selected || placeholder}
+        <ChevronDown className={`ml-2 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+      </button>
+
+      {isOpen && (
+        <ul className="absolute left-0 mt-1 w-max min-w-full bg-white/10 backdrop-blur-md rounded-xl text-white shadow-lg z-[1000] max-h-52 overflow-y-auto">
+          {options.map((option, i) => (
+            <li
+              key={i}
+              onClick={() => { setSelected(option); setIsOpen(false); }}
+              className="px-3 py-2 cursor-pointer hover:bg-white/20 hover:shadow-md transition-all duration-200 rounded-md"
+            >
+              {option}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// SearchBar component
 function SearchBar() {
-  // Vendosim sot si data minimale
-  const today = new Date().toISOString().split("T")[0]; // format YYYY-MM-DD
-
+  const today = new Date().toISOString().split("T")[0];
   const [startDate, setStartDate] = useState(today);
   const [endDate, setEndDate] = useState(today);
 
+  const [destination, setDestination] = useState("");
+  const [guests, setGuests] = useState("");
+  const [rooms, setRooms] = useState("");
+
+  const destinations = ["Paris", "London", "New York"];
+  const guestOptions = ["1 Guest", "2 Guests", "3 Guests", "4+ Guests"];
+  const roomOptions = ["1 Room", "2 Rooms", "3 Rooms"];
+
   return (
-    <div className="bg-white rounded-xl border-2 border-cyan-700 flex items-center shadow-md w-full max-w-5xl mx-auto overflow-hidden">
-      
+    <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl flex items-center shadow-lg w-full max-w-5xl mx-auto transform hover:scale-105 transition-transform duration-300">
+
       {/* Destination */}
-      <div className="flex items-center px-4 py-3 flex-1 border-r border-gray-200">
-        <BedDouble className="w-5 h-5 text-gray-500 mr-3" />
-        <select className="w-full outline-none text-gray-800">
-          <option value="">Where are you going?</option>
-          <option value="paris">Paris</option>
-          <option value="london">London</option>
-          <option value="newyork">New York</option>
-        </select>
+      <div className="flex items-center px-5 py-4 flex-1 border-r border-white/30 hover:bg-white/20 transition-colors duration-300 cursor-pointer">
+        <BedDouble className="w-6 h-6 text-white mr-3" />
+        <CustomDropdown
+          options={destinations}
+          selected={destination}
+          setSelected={setDestination}
+          placeholder="Where are you going?"
+        />
       </div>
 
       {/* Date Picker */}
-      <div className="flex items-center px-4 py-3 flex-1 border-r border-gray-200">
-        <CalendarDays className="w-5 h-5 text-gray-500 mr-3" />
+      <div className="flex items-center px-5 py-4 flex-1 border-r border-white/30 hover:bg-white/20 transition-colors duration-300 cursor-pointer">
+        <CalendarDays className="w-6 h-6 text-white mr-3" />
         <div className="flex gap-2 w-full">
           <input
             type="date"
-            className="w-full outline-none text-gray-700"
+            className="w-full outline-none text-white bg-transparent font-medium"
             value={startDate}
             onChange={(e) => setStartDate(e.target.value)}
             min={today}
           />
-          <span>—</span>
+          <span className="text-white">—</span>
           <input
             type="date"
-            className="w-full outline-none text-gray-700"
+            className="w-full outline-none text-white bg-transparent font-medium"
             value={endDate}
             onChange={(e) => setEndDate(e.target.value)}
-            min={startDate} // data e fundit nuk mund të jetë para startDate
+            min={startDate}
           />
         </div>
       </div>
 
-      {/* Guests and rooms */}
-      <div className="flex items-center px-4 py-3 flex-1 border-r border-gray-200">
-        <User className="w-5 h-5 text-gray-500 mr-3" />
-        <select className="w-full outline-none text-gray-700">
-          <option value="">2 adults · 0 children · 1 room</option>
-          <option value="1adult">1 adult · 0 children · 1 room</option>
-          <option value="2adults">2 adults · 0 children · 1 room</option>
-          <option value="3adults">3 adults · 1 child · 2 rooms</option>
-        </select>
+      {/* Guests */}
+      <div className="flex items-center px-5 py-4 border-r border-white/30 hover:bg-white/20 transition-colors duration-300 cursor-pointer">
+        <User className="w-6 h-6 text-white mr-3" />
+        <CustomDropdown
+          options={guestOptions}
+          selected={guests}
+          setSelected={setGuests}
+          placeholder="Guests"
+        />
+      </div>
+
+      {/* Rooms */}
+      <div className="flex items-center px-5 py-4 border-r border-white/30 hover:bg-white/20 transition-colors duration-300 cursor-pointer">
+        <BedDouble className="w-6 h-6 text-white mr-3" />
+        <CustomDropdown
+          options={roomOptions}
+          selected={rooms}
+          setSelected={setRooms}
+          placeholder="Rooms"
+        />
       </div>
 
       {/* Search Button */}
       <button className="
-  px-6 py-3 
-  rounded-lg 
-  bg-gray-900 text-white 
-  font-semibold 
-  shadow-md 
-  hover:bg-cyan-900 
-  transition-colors duration-300
-  focus:outline-none focus:ring-2 focus:ring-cyan-400
-">
-  Search
-</button>
+        px-8 py-4 
+        rounded-2xl 
+        bg-white/20 text-white 
+        font-bold 
+        shadow-lg 
+        backdrop-blur-md
+        hover:bg-white/40 
+        hover:shadow-2xl 
+        hover:scale-105 
+        transition-all duration-300
+      ">
+        Search
+      </button>
 
     </div>
   );
