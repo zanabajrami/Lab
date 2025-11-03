@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import SearchBar from "../components/SearchBar";
+import { motion } from "framer-motion";
 
 import mainImage from "../images/main.jpg";
 import prishtina0Image from "../images/prishtina-.jpeg";
@@ -92,11 +93,38 @@ function HomePage() {
         style={{ backgroundImage: `url(${mainImage})` }}
       >
         <div className="bg-black bg-opacity-40 h-full flex flex-col justify-center items-center text-white text-center px-4">
-          <p className="mb-6 text-lg">Start your hotel search below...</p>
-          <SearchBar />
+
+          {/* Teksti kryesor me animacion */}
+          <motion.h1
+            className="mb-6 text-4xl md:text-6xl font-extrabold drop-shadow-lg"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            Start your hotel search below...
+          </motion.h1>
+
+          {/* Nënteksti me animacion pak të vonuar */}
+          <motion.p
+            className="mb-8 text-lg md:text-xl text-gray-200 max-w-xl"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+          >
+            Find the best hotels, resorts, and stays with the best prices.
+          </motion.p>
+
+          {/* Search bar me animacion edhe më vonë */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 1 }}
+          >
+            <SearchBar />
+          </motion.div>
+
         </div>
       </section>
-
 
       {/* Destinacionet */}
       <section className="max-w-8xl mx-auto px-4 py-12">
