@@ -96,41 +96,40 @@ function HomePage() {
     <div>
       {/* Hero Section */}
       <section
-      className={`relative bg-cover bg-center h-screen transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}
-      style={{ backgroundImage: `url(${mainImage})` }}
-    >
+        className={`relative bg-cover bg-center h-screen transition-opacity duration-700 w-full ${loaded ? 'opacity-100' : 'opacity-0'}`}
+        style={{ backgroundImage: `url(${mainImage})` }}
+      >
         {loaded && (
-        <div className="bg-black bg-opacity-40 h-full flex flex-col justify-center items-center text-white text-center px-4">
-          
-          <motion.h1
-            className="mb-6 text-4xl md:text-6xl font-extrabold drop-shadow-lg"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          >
-            Start your hotel search below...
-          </motion.h1>
+          <div className="bg-black bg-opacity-40 h-full flex flex-col justify-center items-center text-white text-center px-4 w-full">
+            <motion.h1
+              className="mb-6 text-4xl md:text-6xl font-extrabold drop-shadow-lg"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+              Start your hotel search below...
+            </motion.h1>
 
-          <motion.p
-            className="mb-8 text-lg md:text-xl text-gray-200 max-w-xl"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-          >
-            Find the best hotels, resorts, and stays with the best prices.
-          </motion.p>
+            <motion.p
+              className="mb-8 text-lg md:text-xl text-gray-200 max-w-xl"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+            >
+              Find the best hotels, resorts, and stays with the best prices.
+            </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 1 }}
-          >
-            <SearchBar />
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 1 }}
+            >
+              <SearchBar />
+            </motion.div>
 
-        </div>
-      )}
-    </section>
+          </div>
+        )}
+      </section>
 
       {/* Destinacionet */}
       <section className="max-w-8xl mx-auto px-4 py-12">
@@ -279,7 +278,7 @@ function HomePage() {
       </section>
 
       {/* Ofertat */}
-      <section className="py-12">
+      <section className="py-12 w-full px-4">
         <div className="max-w-8xl mx-auto px-4 text-center">
           <div className="relative mb-10 inline-block">
             <h2 className="text-3xl font-extrabold text-gray-800">Ofertat tona</h2>

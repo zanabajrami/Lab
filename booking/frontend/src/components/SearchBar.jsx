@@ -101,78 +101,73 @@ function SearchBar() {
   };
 
   return (
-    <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl flex flex-wrap md:flex-nowrap items-center shadow-lg w-full max-w-6xl mx-auto transform hover:scale-105 transition-transform duration-300">
+<div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl flex flex-col md:flex-row items-center md:items-stretch shadow-lg w-full max-w-6xl mx-auto p-2 md:p-0 gap-2 md:gap-0 transform hover:scale-105 transition-transform duration-300">
 
-      {/* Destination */}
-      <div className="flex items-center px-8 py-7 flex-1 border-r border-white/30 hover:bg-white/20 transition-colors duration-300 cursor-pointer rounded-2xl shadow-lg">
-        <BedDouble className="w-6 h-6 text-white mr-4" />
-        <CustomDropdown
-          options={destinations}
-          selected={destination}
-          setSelected={setDestination}
-          placeholder="Where are you going?"
-          allowInput={false}
-        />
-      </div>
+  {/* Destination */}
+  <div className="flex items-center px-3 md:px-8 py-3 flex-1 w-full md:w-auto border-b md:border-b-0 md:border-r border-white/30 hover:bg-white/20 transition-colors duration-300 cursor-pointer rounded-2xl shadow-lg mb-2 md:mb-0">
+    <BedDouble className="w-5 md:w-6 h-5 md:h-6 text-white mr-2 md:mr-4" />
+    <CustomDropdown
+      options={destinations}
+      selected={destination}
+      setSelected={setDestination}
+      placeholder="Where are you going?"
+      allowInput={false}
+    />
+  </div>
 
-      {/* Date Picker */}
-      <div className="flex items-center px-5 py-7 flex-1 border-r border-white/30 rounded-2xl hover:bg-white/20 transition-colors duration-300 cursor-pointer">
-        <CalendarDays className="w-6 h-6 text-white mr-3" />
-        <div className="flex gap-2 w-full">
-          <input
-            type="date"
-            className="w-full outline-none text-white bg-transparent font-medium appearance-none focus:ring-2 focus:ring-white/40 rounded-2xl"
-            value={startDate}
-            onChange={(e) => setStartDate(e.target.value)}
-            min={today}
-          />
-          <span className="text-white">—</span>
-          <input
-            type="date"
-            className="w-full outline-none text-white bg-transparent font-medium appearance-none focus:ring-2 focus:ring-white/40 rounded-2xl"
-            value={endDate}
-            onChange={(e) => setEndDate(e.target.value)}
-            min={startDate}
-          />
-        </div>
-      </div>
-
-      {/* Guests */}
-      <div className="flex items-center px-5 py-6 border-r border-white/30 rounded-2xl hover:bg-white/20 transition-colors duration-300 cursor-pointer">
-        <User className="w-6 h-6 text-white mr-3" />
-        <div className="flex items-center gap-2">
-          <button onClick={() => decrement(setGuests, guests)} className="px-2 py-1 bg-white/20 rounded-full">-</button>
-          <span className="text-white">{guests} Guests</span>
-          <button onClick={() => increment(setGuests, guests)} className="px-2 py-1 bg-white/20 rounded-full">+</button>
-        </div>
-      </div>
-
-      {/* Rooms */}
-      <div className="flex items-center px-5 py-6 hover:bg-white/20 transition-colors duration-300 cursor-pointer rounded-2xl">
-        <BedDouble className="w-6 h-6 text-white mr-3" />
-        <div className="flex items-center gap-2">
-          <button onClick={() => decrement(setRooms, rooms)} className="px-2 py-1 bg-white/20 rounded-full">-</button>
-          <span className="text-white">{rooms} Rooms</span>
-          <button onClick={() => increment(setRooms, rooms)} className="px-2 py-1 bg-white/20 rounded-full">+</button>
-        </div>
-      </div>
-
-      {/* Search Button */}
-      <div className="relative w-35">
-        <button
-          onClick={handleSearch}
-          className="w-full px-8 py-7 rounded-2xl bg-white/20 text-white font-bold text-lg shadow-lg backdrop-blur-md hover:bg-white/40 hover:shadow-2xl hover:scale-105 transition-all duration-300"
-        >
-          Search
-        </button>
-        {error && (
-          <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-red-400 text-xs whitespace-nowrap">
-            {error}
-          </span>
-        )}
-      </div>
-
+  {/* Date Picker */}
+  <div className="flex items-center px-3 md:px-5 py-3 flex-1 w-full md:w-auto border-b md:border-b-0 md:border-r border-white/30 rounded-2xl hover:bg-white/20 transition-colors duration-300 cursor-pointer mb-2 md:mb-0">
+    <CalendarDays className="w-5 md:w-6 h-5 md:h-6 text-white mr-2 md:mr-3" />
+    <div className="flex gap-1 md:gap-2 w-full flex-wrap md:flex-nowrap">
+      <input
+        type="date"
+        className="w-full md:w-auto outline-none text-white bg-transparent font-medium appearance-none focus:ring-2 focus:ring-white/40 rounded-2xl text-sm md:text-base"
+        value={startDate}
+        onChange={(e) => setStartDate(e.target.value)}
+        min={today}
+      />
+      <span className="text-white hidden md:inline">—</span>
+      <input
+        type="date"
+        className="w-full md:w-auto outline-none text-white bg-transparent font-medium appearance-none focus:ring-2 focus:ring-white/40 rounded-2xl text-sm md:text-base"
+        value={endDate}
+        onChange={(e) => setEndDate(e.target.value)}
+        min={startDate}
+      />
     </div>
+  </div>
+
+  {/* Guests */}
+  <div className="flex items-center px-3 md:px-5 py-3 border-b md:border-b-0 md:border-r border-white/30 rounded-2xl hover:bg-white/20 transition-colors duration-300 cursor-pointer justify-between w-full md:w-auto mb-2 md:mb-0">
+    <User className="w-5 md:w-6 h-5 md:h-6 text-white mr-2 md:mr-3" />
+    <div className="flex items-center gap-1 md:gap-2">
+      <button onClick={() => decrement(setGuests, guests)} className="px-2 py-1 bg-white/20 rounded-full text-sm md:text-base">-</button>
+      <span className="text-white text-sm md:text-base">{guests} Guests</span>
+      <button onClick={() => increment(setGuests, guests)} className="px-2 py-1 bg-white/20 rounded-full text-sm md:text-base">+</button>
+    </div>
+  </div>
+
+  {/* Rooms */}
+  <div className="flex items-center px-3 md:px-5 py-3 hover:bg-white/20 transition-colors duration-300 cursor-pointer rounded-2xl justify-between w-full md:w-auto mb-2 md:mb-0">
+    <BedDouble className="w-5 md:w-6 h-5 md:h-6 text-white mr-2 md:mr-3" />
+    <div className="flex items-center gap-1 md:gap-2">
+      <button onClick={() => decrement(setRooms, rooms)} className="px-2 py-1 bg-white/20 rounded-full text-sm md:text-base">-</button>
+      <span className="text-white text-sm md:text-base">{rooms} Rooms</span>
+      <button onClick={() => increment(setRooms, rooms)} className="px-2 py-1 bg-white/20 rounded-full text-sm md:text-base">+</button>
+    </div>
+  </div>
+
+  {/* Search Button */}
+<div className="w-full md:w-auto flex justify-center md:justify-end mt-2 md:mt-0 px-0">
+    <button
+      onClick={handleSearch}
+      className="min-w-[140px] md:min-w-[160px] px-6 py-4 md:px-8 md:py-7 rounded-2xl bg-white/20 text-white font-bold text-base md:text-lg shadow-lg backdrop-blur-md hover:bg-white/40 hover:shadow-2xl hover:scale-105 transition-all duration-300"
+    >
+      Search
+    </button>
+  </div>
+</div>
+
   );
 }
 

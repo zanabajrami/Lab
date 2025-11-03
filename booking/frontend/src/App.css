@@ -1,9 +1,15 @@
 .App {
   text-align: center;
+  max-width: 100%;
+  padding: 0 1rem; 
+  box-sizing: border-box;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: auto;
+  max-height: 30vh;
+  width: auto;
+  max-width: 90vw; 
   pointer-events: none;
 }
 
@@ -20,12 +26,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: clamp(1rem, 2vmin, 2rem);
   color: white;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .App-link {
   color: #61dafb;
+  word-break: break-word; /* tekste të gjata nuk thyejnë layout */
 }
 
 @keyframes App-logo-spin {

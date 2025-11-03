@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Contact from "../pages/Contact";
+import { Menu, X } from "lucide-react";
 
 function Header() {
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
   const [showContact, setShowContact] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
+
+  // Dropdown për madhësinë
+  const [headerSize, setHeaderSize] = useState("7xl");
+  const headerSizes = ["full", "6xl", "7xl", "8xl"];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -22,6 +27,12 @@ function Header() {
     ? "bg-gray-900/80 backdrop-blur-sm shadow-md"
     : "bg-gray-900/60 backdrop-blur-sm shadow-md";
 
+  const navItems = [
+    { name: "Destinations", to: "/" },
+    { name: "Hotels", to: "/" },
+    { name: "Deals", to: "/deals" },
+  ];
+
   return (
     <>
       <motion.header
@@ -30,8 +41,8 @@ function Header() {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${headerBg}`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex justify-between h-16 items-center">
+        <div className={`max-w-${headerSize} mx-auto px-4 sm:px-6 lg:px-8 relative z-10`}>
+          <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link to="/">
@@ -41,13 +52,9 @@ function Header() {
               </Link>
             </div>
 
-            {/* Navigation */}
-            <nav className="hidden md:flex space-x-6">
-              {[
-                { name: "Destinations", to: "/" },
-                { name: "Hotels", to: "/" },
-                { name: "Deals", to: "/deals" },
-              ].map((item) => (
+            {/* Desktop Nav */}
+            <nav className="hidden md:flex space-x-6 items-center">
+              {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.to}
@@ -88,7 +95,71 @@ function Header() {
                 Sign Up
               </button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden flex items-center gap-2">
+              {/* Dropdown për madhësinë */}
+              <select
+                value={headerSize}
+                onChange={(e) => setHeaderSize(e.target.value)}
+                className="bg-gray-800 text-white text-sm rounded px-2 py-1 focus:outline-none"
+              >
+                {headerSizes.map((size) => (
+                  <option key={size} value={size}>
+                    {size}
+                  </option>
+                ))}
+              </select>
+
+              <button onClick={() => setMenuOpen(!menuOpen)}>
+                {menuOpen ? <X size={28} className="text-indigo-200" /> : <Menu size={28} className="text-indigo-200" />}
+              </button>
+            </div>
+
           </div>
+
+        {/* Mobile Menu */}
+{menuOpen && (
+  <div className="md:hidden mt-2 bg-gray-900/95 backdrop-blur-sm rounded-xl p-4 space-y-3 shadow-lg">
+    {navItems.map((item) => (
+      <Link
+        key={item.name}
+        to={item.to}
+        className="block text-indigo-100 font-medium"
+        onClick={() => setMenuOpen(false)}
+      >
+        {item.name}
+      </Link>
+    ))}
+    <button
+      onClick={() => { setShowContact(true); setMenuOpen(false); }}
+      className="block text-indigo-100 font-medium"
+    >
+      Contact
+    </button>
+    <Link
+      to="/favorites"
+      className="block text-indigo-100 font-medium"
+      onClick={() => setMenuOpen(false)}
+    >
+      Favorites 𖹭
+    </Link>
+
+    {/* Login / SignUp për mobile */}
+    <button
+      onClick={() => { setShowLogin(true); setShowRegister(false); setMenuOpen(false); }}
+      className="block w-full text-left text-indigo-200 font-semibold mt-2"
+    >
+      Login
+    </button>
+    <button
+      onClick={() => { setShowRegister(true); setShowLogin(false); setMenuOpen(false); }}
+      className="block w-full text-left text-indigo-100 font-semibold mt-1"
+    >
+      Sign Up
+    </button>
+  </div>
+)}
         </div>
       </motion.header>
 
@@ -107,12 +178,7 @@ function Header() {
           onClose={() => setShowRegister(false)}
         />
       )}
-      {showContact && (
-        <Contact
-          isOpen={showContact}
-          onClose={() => setShowContact(false)}
-        />
-      )}
+      {showContact && <Contact isOpen={showContact} onClose={() => setShowContact(false)} />}
     </>
   );
 }
