@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -81,6 +80,14 @@ const sliderSettings = {
 };
 
 function HomePage() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = mainImage;
+    img.onload = () => setLoaded(true);
+  }, []);
+
   useEffect(() => {
     AOS.init({ duration: 800, once: false, mirror: true });
   }, []);
@@ -89,12 +96,12 @@ function HomePage() {
     <div>
       {/* Hero Section */}
       <section
-        className="relative bg-cover bg-center h-screen"
-        style={{ backgroundImage: `url(${mainImage})` }}
-      >
+      className={`relative bg-cover bg-center h-screen transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+      style={{ backgroundImage: `url(${mainImage})` }}
+    >
+        {loaded && (
         <div className="bg-black bg-opacity-40 h-full flex flex-col justify-center items-center text-white text-center px-4">
-
-          {/* Teksti kryesor me animacion */}
+          
           <motion.h1
             className="mb-6 text-4xl md:text-6xl font-extrabold drop-shadow-lg"
             initial={{ opacity: 0, y: 50 }}
@@ -104,7 +111,6 @@ function HomePage() {
             Start your hotel search below...
           </motion.h1>
 
-          {/* Nënteksti me animacion pak të vonuar */}
           <motion.p
             className="mb-8 text-lg md:text-xl text-gray-200 max-w-xl"
             initial={{ opacity: 0, y: 50 }}
@@ -114,7 +120,6 @@ function HomePage() {
             Find the best hotels, resorts, and stays with the best prices.
           </motion.p>
 
-          {/* Search bar me animacion edhe më vonë */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -124,7 +129,8 @@ function HomePage() {
           </motion.div>
 
         </div>
-      </section>
+      )}
+    </section>
 
       {/* Destinacionet */}
       <section className="max-w-8xl mx-auto px-4 py-12">
