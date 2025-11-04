@@ -28,7 +28,7 @@ function Header() {
     : "bg-gray-900/60 backdrop-blur-sm shadow-md";
 
   const navItems = [
-    { name: "Destinations", to: "/" },
+    { name: "Destinations", to: "/destinations" },
     { name: "Hotels", to: "/" },
     { name: "Deals", to: "/deals" },
   ];

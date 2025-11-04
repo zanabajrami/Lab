@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Deals from "./pages/Deals";
 import Favorites from "./pages/Favorites";
+import Destinations from "./pages/Destinations";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -16,7 +17,7 @@ function ScrollToTop() {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "auto", 
+      behavior: "auto",
     });
   }, [pathname]);
 
@@ -43,6 +44,8 @@ function MainWrapper() {
             path="/favorites"
             element={<Favorites favorites={favorites} setFavorites={setFavorites} />}
           />
+          <Route path="/destinations" element={<Destinations />} />
+
         </Routes>
       </main>
       <Footer />
@@ -53,7 +56,7 @@ function MainWrapper() {
 function App() {
   return (
     <Router>
-      <ScrollToTop /> 
+      <ScrollToTop />
       <MainWrapper />
     </Router>
   );
