@@ -103,15 +103,19 @@ function Favorites({ favorites, setFavorites }) {
                     </div>
                   )}
 
-                  <button className="mt-4 w-full py-2 rounded-2xl 
-                    bg-gradient-to-r from-indigo-900 via-indigo-700 to-indigo-900 
-                    text-gray-300 font-semibold 
-                    shadow-lg shadow-gray-800/50 
-                    hover:bg-gradient-to-r hover:from-indigo-600 hover:via-indigo-400 hover:to-indigo-600 
-                    hover:text-indigo-800 hover:shadow-xl hover:shadow-gray-600/50 
-                    transition-all duration-300 transform hover:-translate-y-1 active:scale-95 border border-black/20">
+                  <button
+                    onClick={(e) => e.stopPropagation()} 
+                    className="mt-4 w-full py-2 rounded-2xl 
+  bg-gradient-to-r from-indigo-900 via-indigo-700 to-indigo-900 
+  text-gray-300 font-semibold 
+  shadow-lg shadow-gray-800/50 
+  hover:bg-gradient-to-r hover:from-indigo-600 hover:via-indigo-400 hover:to-indigo-600 
+  hover:text-indigo-800 hover:shadow-xl hover:shadow-gray-600/50 
+  transition-all duration-300 transform hover:-translate-y-1 active:scale-95 border border-black/20"
+                  >
                     Book
                   </button>
+
                 </div>
               </div>
             )
