@@ -1,17 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Slider from "react-slick";
 
+import prishtina0Image from "../images/prishtina-.jpeg";
 import prishtina1 from "../images/prishtina1.png";
+import prishtina3 from "../images/prishtina3.jpg";
+
+import tirana0Image from "../images/tirana-.jpg";
 import tirana1 from "../images/tirana1.jpg";
+import tirana4 from "../images/tirana4.jpg";
+
+import brezovica0Image from "../images/brezovica-.jpg";
 import brezovica1 from "../images/brezovica1.jpg";
+import brezovica4 from "../images/brezovica4.jpg";
+
 import dhermi1 from "../images/dhermi1.jpg";
+import dhermi3 from "../images/dhermi3.webp";
+
+import ksamil0 from "../images/ksamil0.jpg";
 import ksamil1 from "../images/ksamil1.jpg";
+
 import peja1 from "../images/peja1.jpg";
+import peja2 from "../images/peja2.jpg";
+
+import sarande0Image from "../images/sarande0.jpg";
 import sarande2 from "../images/sarande2.webp";
+import sarande3 from "../images/sarande3.jpg";
+
 import prizren1 from "../images/prizren1.webp";
+import prizren2 from "../images/prizren2.jpg";
+
 import himare1 from "../images/himare1.webp";
+import himare2 from "../images/himare2.jpg";
+
 import korca1 from "../images/korca1.jpg";
+import korca2 from "../images/korca2.jpg";
 
 const destinations = [
     { name: "Prishtina", image: prishtina1 },
@@ -25,71 +48,134 @@ const destinations = [
     { name: "Himarë", image: himare1 },
     { name: "Korçë", image: korca1 },
 ];
+
 const aboutDestinations = [
     {
         name: "Prishtina",
+        image: prishtina3,
         description:
-            'Kryeqyteti i Kosovës është qendra kulturore, ekonomike dhe rinore e vendit. Vizito Sheshin “Nënë Tereza”, Katedralen, Muzeun Etnologjik dhe shijo jetën e natës plot energji.',
-        image: prishtina1,
+            "Kryeqyteti i Kosovës, një qytet modern me jetë të gjallë nate, kafene të shumta dhe histori interesante që ndërthur të vjetrën me të renë.",
+        activities: "Vizita në Newborn, Muzeun Kombëtar, shëtitje në Germi Park dhe eksplorim i jetës së natës.",
+        food: "Flija tradicionale, sarmë, dhe ëmbëlsira si trileqe.",
+        bestTime: "Pranvera dhe vjeshta për mot të butë dhe evente kulturore.",
+        stay: "Hotele moderne afër qendrës dhe apartamente me pamje panoramike.",
+        weather: " Moti:❄️ 0°C dimër,🌤️ 28°C verë"
     },
     {
         name: "Tirana",
+        image: tirana4,
         description:
-            "Një qytet plot jetë dhe ngjyra, me bulevarde të gjera, muze moderne dhe kafenetë që mbushin çdo cep. Mos e humb teleferikun e Dajtit për pamje mahnitëse të qytetit.",
-        image: tirana1,
+            "Tirana ofron energji mesdhetare, ngjyra, art urban dhe mikpritje shqiptare në çdo cep të qytetit.",
+        activities: "Teleferiku i Dajtit, shëtitje në Bllok, vizita në Pazarin e Ri dhe Muzeun Kombëtar.",
+        food: "Tavë kosi, qofte Tirane, dhe verë lokale nga zonat përreth.",
+        bestTime: "Prill - Qershor dhe Shtator - Tetor për të shmangur vapën.",
+        stay: "Resorte urbane moderne dhe bujtina me stil artistik në Bllok.",
+        weather: "Moti:❄️ 5°C dimër,🌤️ 31°C verë"
     },
     {
         name: "Brezovica",
+        image: brezovica4,
         description:
-            "Një nga destinacionet më të bukura malore në Ballkan, ideale për ski, snowboarding dhe hiking. Ofron pamje të jashtëzakonshme të Sharrit dhe ajër të pastër malor.",
-        image: brezovica1,
+            "Një ndër vendet më të bukura malore në Kosovë, ideale për ski dimërore dhe pushime në natyrë.",
+        activities: "Ski, hiking veror, ndalesa në liqenet malore dhe relaks në spa-hotele.",
+        food: "Speca të mbushura, pite të shtëpisë dhe mish lokal në zgarrë.",
+        bestTime: "Dhjetor – Mars për ski, Korrik – Shtator për natyrë.",
+        stay: "Hotele alpine me pamje nga malet dhe kabina prej druri.",
+        weather: "Moti:❄️ -5°C dimër,🌤️ 20°C verë"
     },
     {
         name: "Dhërmi",
+        image: dhermi3,
         description:
-            "Një nga plazhet më mahnitëse të Rivierës Shqiptare. Ujë i kristaltë, rërë e bardhë dhe atmosfera verore e qetë e bëjnë Dhërmin një vend perfekt për relaks total.",
-        image: dhermi1,
+            "Një perlë e Rivierës Shqiptare me ujëra të kristalta, plazhe të qeta dhe festa verore.",
+        activities: "Not, zhytje, eksplorim i shpellave detare dhe netë me muzikë live buzë detit.",
+        food: "Peshk i freskët, kallamarë, dhe verë e bardhë vendore.",
+        bestTime: "Qershor – Shtator për plazh dhe evente verore.",
+        stay: "Resorte buzë detit dhe vila luksoze me pamje panoramike.",
+        weather: "Moti:❄️ 7°C dimër,🌤️ 30°C verë"
     },
     {
         name: "Ksamil",
+        image: ksamil0,
         description:
-            "Parajsa e jugut me ujëra turkeze dhe ishuj të vegjël që mund t’i arrish me not ose varkë. Ideale për pushime romantike apo familjare buzë detit Jon.",
-        image: ksamil1,
+            "Destinacioni më i famshëm bregdetar i Shqipërisë, i njohur për ishujt e vegjël dhe ujërat turkeze.",
+        activities: "Ekskursione me varkë, snorkeling dhe vizita në Butrint.",
+        food: "Fruta deti, pastë me karkaleca, dhe sallata të freskëta mesdhetare.",
+        bestTime: "Maj – Shtator për mot perfekt dhe ujë të ngrohtë.",
+        stay: "Apartamente moderne pranë plazhit dhe hotele me pamje nga ishujt.",
+        weather: "Moti:❄️ 8°C dimër,🌤️ 32°C verë"
     },
     {
         name: "Pejë",
+        image: peja2,
         description:
-            "E rrethuar nga Bjeshkët e Nemuna, Peja ofron një natyrë madhështore, ujëvara, Grykën e Rugovës, si dhe kulturë të pasur historike. Një vend për aventurë dhe qetësi.",
-        image: peja1,
+            "Qytet historik me male madhështore përreth, i përshtatshëm për aventurë dhe kulturë.",
+        activities: "Zip-line në Rugovë, rafting, dhe vizita në Manastirin e Pejës.",
+        food: "Pasul, pite me spinaq dhe çaj mali tradicional.",
+        bestTime: "Pranverë – Vjeshtë për aktivitete në natyrë.",
+        stay: "Bujtina tradicionale dhe hotele në afërsi të Grykës së Rugovës.",
+        weather: "Moti:❄️ 1°C dimër,🌤️ 27°C verë"
     },
     {
         name: "Sarandë",
+        image: sarande3,
         description:
-            "Qytet bregdetar me pamje drejt Korfuzit, Saranda kombinon relaksin veror me historinë e Butrintit, një nga sitet arkeologjike më të njohura në rajon.",
-        image: sarande2,
+            "Një qytet bregdetar plot gjallëri, përballë Korfuzit, me ujëra të kaltra dhe netë verore plot dritë.",
+        activities: "Shëtitje buzë detit, vizita në Syri i Kaltër dhe udhëtime me varkë.",
+        food: "Fruta deti të freskëta dhe sallata greke.",
+        bestTime: "Qershor – Shtator për pushime plazhi.",
+        stay: "Hotele panoramike dhe apartamente moderne në qendër.",
+        weather: "Moti:❄️ 10°C dimër,🌤️ 33°C verë"
     },
     {
         name: "Prizren",
+        image: prizren2,
         description:
-            "Qyteti më romantik dhe historik i Kosovës. Kalaja, Ura e Gurit, Lumbardhi dhe Dokufesti e bëjnë Prizrenin një përzierje të kulturës, traditës dhe artit.",
-        image: prizren1,
+            "Qyteti më historik i Kosovës, me rrugë kalldrëmi, urën e gurit dhe festivalet e famshme të verës.",
+        activities: "Shëtitje në Kalatë e Prizrenit, DokuFest dhe eksplorim të qytetit të vjetër.",
+        food: "Qebapë, bakllava, dhe kafe tradicionale.",
+        bestTime: "Korrik – Gusht për festivalet dhe atmosferën e gjallë.",
+        stay: "Hotele të vogla në qendër dhe bujtina tradicionale pranë lumit.",
+        weather: "Moti:❄️ 1°C dimër,🌤️ 29°C verë"
     },
     {
         name: "Himarë",
+        image: himare2,
         description:
-            "Një perlë tjetër e Rivierës Shqiptare me plazhe të virgjëra, ushqim të shkëlqyer deti dhe mikpritje tradicionale. Ideale për pushime të qeta e autentike.",
-        image: himare1,
+            "Një kombinim perfekt midis maleve dhe detit, Himara ofron qetësi dhe plazhe të paprekura.",
+        activities: "Plazhe të fshehta, lundrim me kajak, eksplorim të fshatrave të vjetër.",
+        food: "Oktapod i pjekur, sallata deti dhe verë lokale.",
+        bestTime: "Qershor – Shtator për det dhe diell.",
+        stay: "Shtëpi pushimi me pamje nga deti dhe hotele boutique.",
+        weather: "Moti:❄️ 9°C dimër,🌤️ 32°C verë"
     },
     {
         name: "Korçë",
+        image: korca2,
         description:
-            "E njohur si ‘Parisi i Vogël’, Korça ofron rrugica me kalldrëm, muze kulture, serenata dhe atmosferë të ngrohtë. Një vend plot histori dhe shije të vërtetë shqiptare.",
-        image: korca1,
+            "Qyteti i serenatave dhe kulturës, me arkitekturë elegante dhe atmosferë romantike.",
+        activities: "Shëtitje në Pazarin e Vjetër, muze, dhe festivalet tradicionale.",
+        food: "Lakror, birrë Korça, dhe ëmbëlsira me mjaltë.",
+        bestTime: "Vjeshtë dhe dimër për eventet kulturore dhe atmosferë festive.",
+        stay: "Hotele elegante me stil klasik dhe bujtina me oborre të gurta.",
+        weather: "Moti:❄️ -2°C dimër,🌤️ 25°C verë"
     },
 ];
 
 export default function ZigZagCarousel() {
     const [expandedIndex, setExpandedIndex] = useState(null);
+
+    // refs për secilin destinacion
+    const sectionRefs = useRef([]);
+
+    const scrollToDestination = (index) => {
+        if (sectionRefs.current[index]) {
+            // Vetëm scroll, pa hap info
+            const yOffset = -80;
+            const elementPosition = sectionRefs.current[index].getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: elementPosition, behavior: "smooth" });
+        }
+    };
 
     const toggleExpand = (index) => {
         setExpandedIndex(expandedIndex === index ? null : index);
@@ -97,7 +183,7 @@ export default function ZigZagCarousel() {
 
     const settings = {
         dots: true,
-        infinite: true,
+        infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1,
         speed: 500,
@@ -111,24 +197,25 @@ export default function ZigZagCarousel() {
 
     return (
         <div className="min-h-screen bg-gray-100 p-8">
-            <h1 className="text-3xl font-bold mb-10 text-center text-gray-800">
-                Destinacionet
-            </h1>
+            <h2 className="text-4xl font-bold mb-10 text-gray-700 flex items-center justify-center gap-4">
+                <span className="w-16 h-[2px] bg-gray-400 rounded-full"></span>
+                <span>Destinacionet</span>
+                <span className="w-16 h-[2px] bg-gray-400 rounded-full"></span>
+            </h2>
             <Slider {...settings}>
                 {destinations.map((d, index) => {
-                    // Zig-Zag: herë lart, herë poshtë
                     const translateY = index % 2 === 0 ? "mt-0" : "mt-8";
-
                     return (
                         <div key={index} className={`p-4 ${translateY}`}>
-                            <div className="relative rounded-xl overflow-hidden transform transition duration-500 hover:scale-105">
-                                {/* Imazhi */}
+                            <div
+                                className="relative rounded-xl overflow-hidden transform transition duration-500 hover:scale-105 cursor-pointer"
+                                onClick={() => scrollToDestination(index)}
+                            >
                                 <img
                                     src={d.image}
                                     alt={d.name}
                                     className="h-64 w-full object-cover"
                                 />
-                                {/* Vetëm emri mbi imazh */}
                                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
                                     <h2 className="text-2xl font-bold text-white drop-shadow-lg">
                                         {d.name}
@@ -139,110 +226,166 @@ export default function ZigZagCarousel() {
                     );
                 })}
             </Slider>
-     (
-    <section className="py-24 bg-gradient-to-b from-gray-100 via-white to-gray-50 text-gray-800 px-6 md:px-20">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl font-extrabold mb-20 text-center bg-gradient-to-r from-blue-600 via-teal-500 to-emerald-400 text-transparent bg-clip-text">
-          Rreth Destinacioneve
-        </h2>
 
-        <div className="space-y-32">
-          {aboutDestinations.map((d, index) => (
-            <motion.div
-              key={index}
-              className={`flex flex-col md:flex-row ${
-                index % 2 !== 0 ? "md:flex-row-reverse" : ""
-              } items-center gap-12`}
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              {/* Foto me overlay */}
-              <div className="relative group w-full md:w-1/2 overflow-hidden rounded-3xl shadow-2xl">
-                <motion.img
-                  src={d.image}
-                  alt={d.name}
-                  className="w-full h-[450px] object-cover transform transition duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition duration-500"></div>
-                <h3 className="absolute bottom-6 left-8 text-3xl font-bold text-white drop-shadow-lg">
-                  {d.name}
-                </h3>
-              </div>
+            <section className="py-24 text-gray-800 px-6 md:px-20">
+                <div className="max-w-7xl mx-auto">
+                    <h2 className="text-4xl font-extrabold mb-20 text-center bg-gray-700 text-transparent bg-clip-text">
+                        Rreth Destinacioneve
+                    </h2>
 
-              {/* Teksti */}
-              <div className="md:w-1/2 space-y-4">
-                <h4 className="text-xl font-semibold text-teal-600 tracking-wide uppercase">
-                  Eksploro {d.name}
-                </h4>
-                <p className="text-lg leading-relaxed text-gray-700">{d.description}</p>
+                    <div className="space-y-32">
+                        {aboutDestinations.map((d, index) => (
+                            <motion.div
+                                key={index}
+                                ref={(el) => el && (sectionRefs.current[index] = el)}
+                                className={`flex flex-col md:flex-row ${index % 2 !== 0 ? "md:flex-row-reverse" : ""
+                                    } items-center gap-12`}
+                                initial={{ opacity: 0, y: 60 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                                viewport={{ once: true }}
+                            >
+                                {/* Foto me overlay */}
+                                <div className="relative group w-full md:w-1/2 overflow-hidden rounded-3xl shadow-2xl">
+                                    <motion.img
+                                        src={d.image}
+                                        alt={d.name}
+                                        className="w-full h-[450px] object-cover transform transition duration-700 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition duration-500"></div>
+                                    <h3 className="absolute bottom-6 left-8 text-3xl font-bold text-white drop-shadow-lg">
+                                        {d.name}
+                                    </h3>
+                                </div>
 
-                {/* Butoni */}
-                <button
-                  onClick={() => toggleExpand(index)}
-                  className="mt-4 px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-teal-500 text-white font-medium shadow-md hover:shadow-lg transition"
-                >
-                  {expandedIndex === index ? "Mbyll ↑" : "Zbulo më shumë →"}
-                </button>
+                                {/* Teksti */}
+                                <div className="md:w-1/2 space-y-4">
+                                    <h4 className="text-xl font-semibold text-indigo-800 tracking-wide uppercase">
+                                        {d.name}
+                                    </h4>
+                                    <p className="text-lg leading-relaxed text-gray-700">{d.description}</p>
 
-                {/* Info shtesë (shfaqet kur klikon) */}
-                <AnimatePresence>
-                  {expandedIndex === index && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.5, ease: "easeOut" }}
-                      className="overflow-hidden"
-                    >
-                      <div className="mt-6 bg-gray-100/70 rounded-2xl p-6 shadow-inner">
-                        <h5 className="text-lg font-semibold text-gray-900 mb-2">
-                          Më shumë rreth {d.name}:
-                        </h5>
-                        <ul className="list-disc list-inside space-y-2 text-gray-700">
-                          <li>
-                            📍 <strong>Aktivitete:</strong> {d.activities || "Hiking, kulturë, ushqim lokal"}
-                          </li>
-                          <li>
-                            🍴 <strong>Ushqim tradicional:</strong> {d.food || "Specialitete vendore me shije unike"}
-                          </li>
-                          <li>
-                            🕓 <strong>Koha më e mirë për vizitë:</strong> {d.bestTime || "Pranverë dhe verë"}
-                          </li>
-                          <li>
-                            🏨 <strong>Akomodimi:</strong> {d.stay || "Hotele komode dhe bujtina tradicionale"}
-                          </li>
-                        </ul>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
+                                    {d.weather && (<p className="mt-2 inline-block px-3 py-1 rounded-full bg-gradient-to-r from-blue-200 to-yellow-200 text-gray-900 font-medium shadow-md">
+                                        {d.weather}
+                                    </p>
+                                    )}
 
-            <section className="py-16 bg-gray-50 text-gray-800 px-6 md:px-20">
-                <h2 className="text-3xl font-bold mb-10 text-center">Aktivitete Popullore</h2>
-                <div className="grid md:grid-cols-3 gap-8 text-center">
-                    <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg">
-                        <h3 className="text-xl font-semibold mb-2">Brezovicë</h3>
-                        <p>Ski, hiking, dhe relaks në male gjatë dimrit dhe verës.</p>
+                                    {/* Butoni */}
+                                    <button
+                                        onClick={() => toggleExpand(index)}
+                                        className="ml-20 mt-4 px-6 py-2 rounded-full bg-blue-900 text-white font-medium shadow-lg hover:shadow-2xl transition"
+                                    >
+                                        {expandedIndex === index ? "Mbyll ↑" : "Zbulo më shumë →"}
+                                    </button>
+
+                                    {/* Info shtesë (shfaqet kur klikon) */}
+                                    < AnimatePresence >
+                                        {expandedIndex === index && (
+                                            <motion.div
+                                                initial={{ opacity: 0, height: 0 }}
+                                                animate={{ opacity: 1, height: "auto" }}
+                                                exit={{ opacity: 0, height: 0 }}
+                                                transition={{ duration: 0.5, ease: "easeOut" }}
+                                                className="overflow-hidden"
+                                            >
+                                                <div className="mt-2 p-6">
+                                                   
+
+                                                    <ul className="list-disc list-inside space-y-2 text-gray-700">
+                                                        <li>
+                                                            📍 <strong>Aktivitete:</strong> {d.activities}
+                                                        </li>
+                                                        <li>
+                                                            🍴 <strong>Ushqim tradicional:</strong> {d.food}
+                                                        </li>
+                                                        <li>
+                                                            ⏰ <strong>Koha më e mirë për vizitë:</strong> {d.bestTime}
+                                                        </li>
+                                                        <li>
+                                                            🛌🏻 <strong>Akomodimi:</strong> {d.stay}
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
-                    <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg">
-                        <h3 className="text-xl font-semibold mb-2">Ksamil</h3>
-                        <p>Not, zhytje, dhe plazhe kristal të detit Jon.</p>
-                    </div>
-                    <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg">
-                        <h3 className="text-xl font-semibold mb-2">Prizren</h3>
-                        <p>Festivalet kulturore dhe arkitektura historike.</p>
-                    </div>
+                </div>
+            </section >
+
+            <section className="py-20 text-gray-800 px-6 md:px-20">
+                <h2 className="text-4xl font-bold text-center mb-12 text-gray-700">
+                    Destinacionet më të Vizituara
+                </h2>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {[
+                        {
+                            name: "Tiranë",
+                            img: tirana0Image,
+                            visitors: "1.2M vizitorë/vit",
+                            desc: "Kryeqyteti plot jetë dhe kulturë moderne.",
+                        },
+                        {
+                            name: "Sarandë",
+                            img: sarande0Image,
+                            visitors: "2M vizitorë/vit",
+                            desc: "Qyteti bregdetar me ujëra të kristalta.",
+                        },
+                        {
+                            name: "Prishtinë",
+                            img: prishtina0Image,
+                            visitors: "700K vizitorë/vit",
+                            desc: "Qendër urbane me histori dhe art bashkëkohor.",
+                        },
+                        {
+                            name: "Brezovicë",
+                            img: brezovica0Image,
+                            visitors: "500K vizitorë/vit",
+                            desc: "Resort dimëror ideal për ski dhe natyrë.",
+                        },
+                    ].map((d, i) => (
+                        <div
+                            key={i}
+                            className="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden"
+                        >
+                            <img
+                                src={d.img}
+                                alt={d.name}
+                                className="w-full h-56 object-cover transform hover:scale-105 transition"
+                            />
+                            <div className="p-6 text-center">
+                                <h3 className="text-2xl font-bold text-gray-700 mb-2">{d.name}</h3>
+                                <p className="text-sm text-gray-500 mb-2">{d.visitors}</p>
+                                <p className="text-gray-600">{d.desc}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+            <section className="py-20 text-gray-800 px-6 md:px-20">
+                <h2 className="text-3xl font-bold text-center mb-12 text-gray-700">
+                    Aktivitetet më të Rekomanduara
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    {[
+                        { icon: "🏖️", title: "Plazhe", desc: "Relaksohu në bregdetet e Ksamilit dhe Himarës." },
+                        { icon: "⛰️", title: "Hiking", desc: "Shëtitje në Rugovë dhe malet e Brezovicës." },
+                        { icon: "🏰", title: "Kulturë", desc: "Zbulo historinë e Prizrenit dhe Tiranës." },
+                        { icon: "🍷", title: "Gastronomi", desc: "Provo verërat dhe ushqimin lokal." },
+                    ].map((item, i) => (
+                        <div key={i} className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+                            <div className="text-5xl mb-4">{item.icon}</div>
+                            <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                            <p className="text-gray-600">{item.desc}</p>
+                        </div>
+                    ))}
                 </div>
             </section>
 
-        </div>
+
+        </div >
     );
 }
