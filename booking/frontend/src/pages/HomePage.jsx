@@ -81,13 +81,25 @@ const sliderSettings = {
 
 function HomePage() {
   const [loaded, setLoaded] = useState(false);
+  const [showTopButton, setShowTopButton] = useState(false);
 
   useEffect(() => {
     const img = new Image();
     img.src = mainImage;
     img.onload = () => setLoaded(true);
+
+  // Scroll event për button
+    const handleScroll = () => {
+      if (window.scrollY > 300) setShowTopButton(true);
+      else setShowTopButton(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   useEffect(() => {
     AOS.init({ duration: 800, once: false, mirror: true });
   }, []);
@@ -583,6 +595,13 @@ function HomePage() {
               </div>
             ))}
           </div>
+          <button
+        onClick={scrollToTop}
+        className={`fixed bottom-8 right-8 p-4 rounded-full bg-indigo-600 text-white shadow-lg hover:bg-indigo-500 transition-opacity duration-300 z-50
+          ${showTopButton ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+      >
+        ▲
+      </button>
         </div>
 
         <style>

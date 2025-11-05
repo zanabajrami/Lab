@@ -164,9 +164,23 @@ const aboutDestinations = [
 
 export default function ZigZagCarousel() {
     const [expandedIndex, setExpandedIndex] = useState(null);
+    const [showTopButton, setShowTopButton] = useState(false);
 
     // refs për secilin destinacion
     const sectionRefs = useRef([]);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 300) setShowTopButton(true);
+            else setShowTopButton(false);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
 
     const scrollToDestination = (index) => {
         if (sectionRefs.current[index]) {
@@ -289,7 +303,7 @@ export default function ZigZagCarousel() {
                                                 className="overflow-hidden"
                                             >
                                                 <div className="mt-2 p-6">
-                                                   
+
 
                                                     <ul className="list-disc list-inside space-y-2 text-gray-700">
                                                         <li>
@@ -385,6 +399,14 @@ export default function ZigZagCarousel() {
                 </div>
             </section>
 
+            {/* SCROLL TO TOP BUTTON */}
+            <button
+                onClick={scrollToTop}
+                className={`fixed bottom-8 right-8 p-4 rounded-full bg-indigo-600 text-white shadow-lg hover:bg-indigo-500 transition-opacity duration-300 z-50
+                    ${showTopButton ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+            >
+                ▲
+            </button>
 
         </div >
     );
