@@ -178,14 +178,10 @@ function HomePage() {
       </section>
 
       <section className="py-16 text-center">
-        <h2 
-         onClick={() => navigate("/destinations")}
-        className="text-3xl font-extrabold mb-12 text-gray-800 drop-shadow-sm tracking-wide">
-          <span className="border-b-[3px] border-gray-300 pb-1 px-2">
-            Destinacionet më të vizituara 📍
-          </span>
-        </h2>
-
+        <h2 className="text-3xl font-extrabold mb-12 text-gray-800 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:text-indigo-600 hover:scale-105"
+      >
+        Destinacionet më të vizituara 📍
+      </h2>
         <div 
          onClick={() => navigate("/destinations")}
         className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">

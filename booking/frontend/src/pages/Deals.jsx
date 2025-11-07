@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Heart } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import tiranaImage from "../images/tirana.jpg";
 import prishtinaImage from "../images/prishtina.jpg";
 import brezovicaImage from "../images/brezovica.jpg";
@@ -11,14 +12,14 @@ import dhermi2Image from "../images/dhermi2.webp";
 import tirana2Image from "../images/tirana2.webp";
 
 const dealsData = [
-  { id: 1, hotelName: "Venus Hotel", location: "Prishtina, Kosovo", price: "$120 / night", image: prishtinaImage, discount: "20% Off", description: "Comfortable hotel in city center, free Wi-Fi, breakfast included." },
+  { id: 1, hotelName: "Hotel Platnium", location: "Dhermi, Albania", price: "$94 / night", image: dhermi2Image, discount: "15% Off", description: "Comfortable hotel near the beach with pool." },
   { id: 2, hotelName: "Brezovica Hotel", location: "Brezovica, Kosovo", price: "$170 / night", image: brezovicaImage, discount: "15% Off", description: "Mountain view hotel, ski access, spa & wellness." },
   { id: 3, hotelName: "Villa 16", location: "Dhermi, Albania", price: "$350 / night", image: dhermiImage, discount: "15% Off", description: "Luxury villa with private pool, beach access, full kitchen." },
   { id: 4, hotelName: "Marriott Hotel", location: "Tirana, Albania", price: "$211 / night", image: tiranaImage, discount: "20% Off", description: "Modern hotel with city center location and rooftop bar." },
   { id: 5, hotelName: "GO Villas", location: "Brezovica, Kosovo", price: "$200 / night", image: brezovica2Image, discount: "15% Off", description: "Cozy villas perfect for families and groups." },
   { id: 6, hotelName: "Liss Villas", location: "Peje, Kosovo", price: "$70 / night", image: pejaImage, discount: "10% Off", description: "Budget friendly villas with mountain view." },
-  { id: 7, hotelName: "Prishtina City Apartaments", location: "Prishtina, Kosovo", price: "$55 / night", image: prishtina2Image, discount: "30% Off", description: "City apartments close to main attractions." },
-  { id: 8, hotelName: "Hotel Platnium", location: "Dhermi, Albania", price: "$94 / night", image: dhermi2Image, discount: "15% Off", description: "Comfortable hotel near the beach with pool." },
+  { id: 7, hotelName: "Prishtina City Apartments", location: "Prishtina, Kosovo", price: "$55 / night", image: prishtina2Image, discount: "30% Off", description: "City apartments close to main attractions." },
+  { id: 8, hotelName: "Venus Hotel", location: "Prishtina, Kosovo", price: "$120 / night", image: prishtinaImage, discount: "20% Off", description: "Comfortable hotel in city center, free Wi-Fi, breakfast included." },
   { id: 9, hotelName: "Luxe Apartments", location: "Tirana, Albania", price: "$100 / night", image: tirana2Image, discount: "10% Off", description: "Modern apartments in central Tirana." },
 ];
 
@@ -44,71 +45,84 @@ function Deals({ favorites, setFavorites }) {
   return (
     <div className="min-h-screen py-10">
       <div className="max-w-7xl mx-auto px-4">
-        <h1 className="text-3xl font-extrabold mb-8 text-center 
-        bg-clip-text text-transparent 
-        bg-gradient-to-r from-gray-700 via-gray-700 to-gray-400 
-        drop-shadow-lg tracking-wide uppercase">
+        <h1 className="text-3xl font-extrabold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-700 via-gray-700 to-gray-400 drop-shadow-lg tracking-wide uppercase">
           Our Deals
         </h1>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {dealsData.map((deal) => {
             const isExpanded = expandedIds.includes(deal.id);
+
             return (
-              <div
+              <motion.div
                 key={deal.id}
                 onClick={() => toggleExpand(deal.id)}
-                className="relative backdrop-blur-2xl bg-white/10 border border-white/20 shadow-2xl rounded-3xl overflow-hidden 
-                transition-transform transform hover:scale-105 hover:shadow-[0_0_25px_rgba(100,50,200,0.5)] duration-300 cursor-pointer"
+                className="relative rounded-3xl overflow-hidden cursor-pointer bg-white/20 backdrop-blur-xl border border-gray-500 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.3 }}
               >
-                <div className="relative">
-                  <img src={deal.image} alt={deal.hotelName} className="w-full h-48 object-cover opacity-90" />
-                  <span className="absolute top-3 left-3 
-                  bg-black/30 text-white text-xs font-semibold px-3 py-1 rounded-full 
-                  border border-white/20 shadow-md">
+                {/* Image */}
+                <div className="relative h-48 w-full">
+                  <img
+                    src={deal.image}
+                    alt={deal.hotelName}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-black/10"></div>
+
+                  {/* Discount */}
+                  <span className="absolute top-3 left-3 bg-black/30 text-white text-xs font-semibold px-3 py-1 rounded-full">
                     {deal.discount}
                   </span>
+
+                  {/* Favorite */}
                   <button
                     onClick={(e) => { e.stopPropagation(); toggleFavorite(deal.id); }}
-                    className="absolute top-3 right-3 bg-white/30 backdrop-blur-md p-2 rounded-full hover:scale-110 transition"
+                    className="absolute top-3 right-3 bg-white/30 p-2 rounded-full hover:scale-110 transition"
                   >
                     <Heart
                       className={`w-5 h-5 ${favorites.includes(deal.id) ? "text-pink-600 fill-pink-500" : "text-gray-700"}`}
                     />
                   </button>
                 </div>
+
+                {/* Content */}
                 <div className="p-5 text-gray-700">
                   <h2 className="font-semibold text-xl">{deal.hotelName}</h2>
-                  <p className="flex items-center text-gray-600 text-sm mt-1">{deal.location}</p>
+                  <p className="text-sm text-gray-600 mt-1">{deal.location}</p>
                   <p className="text-gray-900 font-bold mt-2">{deal.price}</p>
 
-                  {isExpanded && (
-                    <div className="mt-3 text-gray-800 text-sm">
-                      <p>{deal.description}</p>
-                      <ul className="mt-2 list-disc list-inside text-gray-800">
-                        <li>Free Wi-Fi</li>
-                        <li>Breakfast Included</li>
-                        <li>Pool & Spa</li>
-                        <li>Parking Available</li>
-                      </ul>
-                    </div>
-                  )}
+                  <AnimatePresence>
+                    {isExpanded && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="mt-3 text-gray-800 text-sm overflow-hidden"
+                      >
+                        <p>{deal.description}</p>
+                        <ul className="mt-2 list-disc list-inside text-gray-800">
+                          <li>Free Wi-Fi</li>
+                          <li>Breakfast Included</li>
+                          <li>Pool & Spa</li>
+                          <li>Parking Available</li>
+                        </ul>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
 
+                  {/* Book button */}
                   <button
                     onClick={(e) => e.stopPropagation()}
-                    className="mt-4 w-full py-2 rounded-2xl 
-  bg-gradient-to-r from-indigo-900 via-indigo-700 to-indigo-900 
-  text-gray-300 font-semibold 
-  shadow-lg shadow-gray-800/50 
-  hover:bg-gradient-to-r hover:from-indigo-600 hover:via-indigo-400 hover:to-indigo-600 
-  hover:text-indigo-800 hover:shadow-xl hover:shadow-gray-600/50 
-  transition-all duration-300 transform hover:-translate-y-1 active:scale-95 border border-black/20"
+                    className="mt-4 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-800 font-semibold shadow-lg hover:bg-indigo-600 transition-colors"
                   >
                     Book
                   </button>
-
                 </div>
-              </div>
-            )
+              </motion.div>
+            );
           })}
         </div>
       </div>

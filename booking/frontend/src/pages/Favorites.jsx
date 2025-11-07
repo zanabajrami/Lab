@@ -64,21 +64,23 @@ function Favorites({ favorites, setFavorites }) {
               <div
                 key={deal.id}
                 onClick={() => toggleExpand(deal.id)}
-                className="relative backdrop-blur-2xl bg-white/10 border border-white/20 shadow-2xl rounded-3xl overflow-hidden 
-                  transition-transform transform hover:scale-105 hover:shadow-[0_0_25px_rgba(100,50,200,0.5)] duration-300 cursor-pointer"
+                className="relative rounded-3xl overflow-hidden cursor-pointer
+                  bg-white/20 backdrop-blur-xl border border-gray-500
+                  shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
-                <div className="relative">
-                  <img src={deal.image} alt={deal.hotelName} className="w-full h-48 object-cover opacity-90" />
+                <div className="relative h-48 w-full">
+                  <img src={deal.image} alt={deal.hotelName} className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-black/10"></div>
+
                   {deal.discount && (
-                    <span className="absolute top-3 left-3 
-                      bg-black/30 text-white text-xs font-semibold px-3 py-1 rounded-full 
-                      border border-white/20 shadow-md">
+                    <span className="absolute top-3 left-3 bg-black/30 text-white text-xs font-semibold px-3 py-1 rounded-full">
                       {deal.discount}
                     </span>
                   )}
+
                   <button
                     onClick={(e) => { e.stopPropagation(); toggleFavorite(deal.id); }}
-                    className="absolute top-3 right-3 bg-white/30 backdrop-blur-md p-2 rounded-full hover:scale-110 transition"
+                    className="absolute top-3 right-3 bg-white/30 p-2 rounded-full hover:scale-110 transition"
                   >
                     <Heart
                       className={`w-5 h-5 ${favorites.includes(deal.id) ? "text-pink-600 fill-pink-500" : "text-gray-700"}`}
@@ -88,13 +90,13 @@ function Favorites({ favorites, setFavorites }) {
 
                 <div className="p-5 text-gray-700">
                   <h2 className="font-semibold text-xl">{deal.hotelName}</h2>
-                  <p className="flex items-center text-gray-600 text-sm mt-1">{deal.location}</p>
+                  <p className="text-sm text-gray-600 mt-1">{deal.location}</p>
                   <p className="text-gray-900 font-bold mt-2">{deal.price}</p>
 
                   {isExpanded && (
-                    <div className="mt-3 text-gray-800 text-sm">
+                    <div className="mt-3 text-gray-800 text-sm overflow-hidden">
+                      <p>{deal.description}</p>
                       <ul className="mt-2 list-disc list-inside text-gray-800">
-                        <p className="mt-2 text-gray-800 text-sm">{deal.description}</p>
                         <li>Free Wi-Fi</li>
                         <li>Breakfast Included</li>
                         <li>Pool & Spa</li>
@@ -104,18 +106,11 @@ function Favorites({ favorites, setFavorites }) {
                   )}
 
                   <button
-                    onClick={(e) => e.stopPropagation()} 
-                    className="mt-4 w-full py-2 rounded-2xl 
-  bg-gradient-to-r from-indigo-900 via-indigo-700 to-indigo-900 
-  text-gray-300 font-semibold 
-  shadow-lg shadow-gray-800/50 
-  hover:bg-gradient-to-r hover:from-indigo-600 hover:via-indigo-400 hover:to-indigo-600 
-  hover:text-indigo-800 hover:shadow-xl hover:shadow-gray-600/50 
-  transition-all duration-300 transform hover:-translate-y-1 active:scale-95 border border-black/20"
+                    onClick={(e) => e.stopPropagation()}
+                    className="mt-4 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-800 font-semibold shadow-lg hover:bg-indigo-600 transition-colors"
                   >
                     Book
                   </button>
-
                 </div>
               </div>
             )
