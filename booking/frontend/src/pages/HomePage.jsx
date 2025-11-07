@@ -178,13 +178,17 @@ function HomePage() {
       </section>
 
       <section className="py-16 text-center">
-        <h2 className="text-3xl font-extrabold mb-12 text-gray-800 drop-shadow-sm tracking-wide">
+        <h2 
+         onClick={() => navigate("/destinations")}
+        className="text-3xl font-extrabold mb-12 text-gray-800 drop-shadow-sm tracking-wide">
           <span className="border-b-[3px] border-gray-300 pb-1 px-2">
             Destinacionet më të vizituara 📍
           </span>
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
+        <div 
+         onClick={() => navigate("/destinations")}
+        className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
           {[
             { img: tirana1Image, name: "Tiranë" },
             { img: sarande1Image, name: "Sarandë" },
