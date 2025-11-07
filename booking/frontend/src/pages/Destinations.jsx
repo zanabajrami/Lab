@@ -1,6 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Slider from "react-slick";
+import { useLocation } from "react-router-dom";
 
 import prishtina0Image from "../images/prishtina-.jpeg";
 import prishtina1 from "../images/prishtina1.png";
@@ -36,20 +37,20 @@ import himare2 from "../images/himare2.jpg";
 import korca1 from "../images/korca1.jpg";
 import korca2 from "../images/korca2.jpg";
 
-const destinations = [
+export const destinations = [
     { name: "Prishtina", image: prishtina1 },
     { name: "Tirana", image: tirana1 },
-    { name: "Brezovica", image: brezovica1 },
+    { name: "Brezovicë", image: brezovica1 },
     { name: "Dhërmi", image: dhermi1 },
     { name: "Ksamil", image: ksamil1 },
     { name: "Pejë", image: peja1 },
     { name: "Sarandë", image: sarande2 },
     { name: "Prizren", image: prizren1 },
-    { name: "Himarë", image: himare1 },
     { name: "Korçë", image: korca1 },
+    { name: "Himarë", image: himare1 },
 ];
 
-const aboutDestinations = [
+export const aboutDestinations = [
     {
         name: "Prishtina",
         image: prishtina3,
@@ -73,7 +74,7 @@ const aboutDestinations = [
         weather: "Moti:❄️ 5°C dimër,🌤️ 31°C verë"
     },
     {
-        name: "Brezovica",
+        name: "Brezovicë",
         image: brezovica4,
         description:
             "Një ndër vendet më të bukura malore në Kosovë, ideale për ski dimërore dhe pushime në natyrë.",
@@ -165,7 +166,7 @@ const aboutDestinations = [
 export default function ZigZagCarousel() {
     const [expandedIndex, setExpandedIndex] = useState(null);
     const [showTopButton, setShowTopButton] = useState(false);
-
+    const location = useLocation();
     // refs për secilin destinacion
     const sectionRefs = useRef([]);
 
@@ -178,6 +179,19 @@ export default function ZigZagCarousel() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const scrollTo = params.get("scroll");
+        if (scrollTo) {
+            const index = aboutDestinations.findIndex(d => d.name === scrollTo);
+            if (index !== -1 && sectionRefs.current[index]) {
+                const yOffset = -80; // opsionale offset
+                const elementPosition = sectionRefs.current[index].getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: elementPosition, behavior: "smooth" });
+            }
+        }
+    }, [location]);
+    
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
