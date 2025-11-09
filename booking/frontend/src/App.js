@@ -9,6 +9,7 @@ import Register from './pages/Register';
 import Deals from "./pages/Deals";
 import Favorites from "./pages/Favorites";
 import Destinations from "./pages/Destinations";
+import Hotels from "./pages/Hotels";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -45,6 +46,7 @@ function MainWrapper() {
             element={<Favorites favorites={favorites} setFavorites={setFavorites} />}
           />
           <Route path="/destinations" element={<Destinations />} />
+          <Route path="/hotels" element={<Hotels />} />
 
         </Routes>
       </main>
