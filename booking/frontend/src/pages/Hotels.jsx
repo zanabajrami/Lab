@@ -30,6 +30,7 @@ const hotels = [
     rooms: 1,
     capacity: 2,
     price: 130,
+    amenities: ["Spa", "Indoor Pool", "Free Wi-Fi", "Breakfast Included", "Parking", "Fitness Center"],
   },
   {
     name: "Swiss Diamond Hotel Prishtina",
@@ -40,6 +41,7 @@ const hotels = [
     rooms: 2,
     capacity: 4,
     price: 160,
+    amenities: ["Luxury Spa", "Indoor Pool", "Free Breakfast", "Parking", "Wi-Fi", "Room Service 24/7"],
   },
   {
     name: "Hotel Sirius",
@@ -50,6 +52,7 @@ const hotels = [
     rooms: 1,
     capacity: 2,
     price: 110,
+    amenities: ["Rooftop Bar", "Restaurant", "Wi-Fi", "Breakfast", "Meeting Rooms", "Parking"],
   },
   {
     name: "Hotel Garden",
@@ -60,6 +63,7 @@ const hotels = [
     rooms: 1,
     capacity: 2,
     price: 90,
+    amenities: ["Garden View", "Breakfast", "Wi-Fi", "Free Parking", "Pet Friendly"],
   },
   {
     name: "Hotel Nartel",
@@ -70,6 +74,7 @@ const hotels = [
     rooms: 1,
     capacity: 2,
     price: 85,
+    amenities: ["Business Center", "Wi-Fi", "Parking", "Breakfast", "Conference Room"],
   },
   {
     name: "Brezovicë Hotel",
@@ -80,6 +85,7 @@ const hotels = [
     rooms: 1,
     capacity: 2,
     price: 120,
+    amenities: ["Ski Access", "Spa", "Sauna", "Restaurant", "Parking", "Wi-Fi"],
   },
   {
     name: "Hotel Molika",
@@ -90,6 +96,7 @@ const hotels = [
     rooms: 1,
     capacity: 3,
     price: 115,
+    amenities: ["Mountain View", "Fireplace", "Breakfast", "Wi-Fi", "Free Parking"],
   },
   {
     name: "Snow White Chalet",
@@ -100,6 +107,7 @@ const hotels = [
     rooms: 2,
     capacity: 4,
     price: 160,
+    amenities: ["Private Chalet", "Fireplace", "Mountain View", "Parking", "Wi-Fi"],
   },
   {
     name: "Mont Chalet",
@@ -110,6 +118,7 @@ const hotels = [
     rooms: 2,
     capacity: 4,
     price: 150,
+    amenities: ["Spa", "Indoor Pool", "Sauna", "Wi-Fi", "Restaurant", "Parking"],
   },
   {
     name: "Hotel Sharri",
@@ -118,8 +127,9 @@ const hotels = [
     image: hotel8,
     description: "Një resort ekskluziv në natyrë me spa, restorante gourmet dhe suita luksoze.",
     rooms: 1,
-    capacity:2 ,
+    capacity: 2,
     price: 175,
+    amenities: ["Luxury Spa", "Gourmet Restaurant", "Indoor Pool", "Wi-Fi", "Valet Parking"],
   },
   {
     name: "Hotel Butrinti",
@@ -130,6 +140,7 @@ const hotels = [
     rooms: 1,
     capacity: 2,
     price: 140,
+    amenities: ["Beach Access", "Outdoor Pool", "Wi-Fi", "Breakfast", "Restaurant", "Parking"],
   },
   {
     name: "Bougainville Bay Hotel",
@@ -140,6 +151,7 @@ const hotels = [
     rooms: 1,
     capacity: 3,
     price: 155,
+    amenities: ["Private Beach", "Multiple Pools", "Spa", "Wi-Fi", "Parking", "Restaurant"],
   },
   {
     name: "Saranda Palace Hotel",
@@ -150,6 +162,7 @@ const hotels = [
     rooms: 1,
     capacity: 2,
     price: 135,
+    amenities: ["Private Beach", "Bar", "Sea View", "Wi-Fi", "Parking"],
   },
   {
     name: "Hotel Emblem",
@@ -160,6 +173,7 @@ const hotels = [
     rooms: 1,
     capacity: 2,
     price: 100,
+    amenities: ["Wi-Fi", "Breakfast", "Parking", "Air Conditioning"],
   },
   {
     name: "Prado Luxury Hotel",
@@ -170,6 +184,7 @@ const hotels = [
     rooms: 1,
     capacity: 2,
     price: 150,
+    amenities: ["Sea View", "Restaurant", "Wi-Fi", "Breakfast", "Private Beach", "Parking"],
   },
   {
     name: "Hotel Rea Boutique",
@@ -180,6 +195,7 @@ const hotels = [
     rooms: 1,
     capacity: 2,
     price: 120,
+    amenities: ["Wi-Fi", "Breakfast", "Sea View", "Free Parking", "Bar"],
   },
   {
     name: "Panorama Hotel",
@@ -190,6 +206,7 @@ const hotels = [
     rooms: 1,
     capacity: 2,
     price: 110,
+    amenities: ["Sea View", "Outdoor Pool", "Wi-Fi", "Breakfast", "Parking"],
   },
   {
     name: "Sea View Hotel Himara",
@@ -200,6 +217,7 @@ const hotels = [
     rooms: 1,
     capacity: 2,
     price: 100,
+    amenities: ["Balcony", "Wi-Fi", "Breakfast", "Sea View", "Air Conditioning"],
   },
   {
     name: "Dimitri Hotel",
@@ -210,6 +228,7 @@ const hotels = [
     rooms: 1,
     capacity: 2,
     price: 95,
+    amenities: ["Wi-Fi", "Local Breakfast", "Free Parking", "Family Friendly"],
   },
 ];
 
@@ -262,7 +281,6 @@ export default function HotelsPage() {
                 {hotel.description}
               </p>
 
-              {/* Info Row */}
               <div className="flex justify-between text-sm text-gray-600 mt-3">
                 <span>🛏️ {hotel.rooms} dhoma</span>
                 <span>👥 {hotel.capacity} persona</span>
@@ -291,18 +309,20 @@ export default function HotelsPage() {
       {/* Modal */}
       {selectedHotel && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-50 px-4">
-          <div className="bg-white rounded-3xl max-w-lg w-full p-6 relative shadow-2xl">
+          <div className="bg-white rounded-3xl max-w-lg w-full p-6 relative shadow-2xl animate-fadeIn">
             <button
               onClick={() => setSelectedHotel(null)}
               className="absolute top-3 right-3 text-gray-600 hover:text-black text-xl"
             >
               ✕
             </button>
+
             <img
               src={selectedHotel.image}
               alt={selectedHotel.name}
               className="w-full h-56 object-cover rounded-2xl mb-4"
             />
+
             <h2 className="text-2xl font-bold text-gray-800 mb-2">
               {selectedHotel.name}
             </h2>
@@ -314,8 +334,23 @@ export default function HotelsPage() {
               </span>
             </p>
             <p className="text-gray-700 mb-3">{selectedHotel.description}</p>
+
+            {/* Amenities */}
+            {selectedHotel.amenities && (
+              <div className="flex flex-wrap gap-2 mb-3">
+                {selectedHotel.amenities.map((a, i) => (
+                  <span
+                    key={i}
+                    className="bg-indigo-100 text-indigo-700 px-3 py-1 text-sm rounded-full"
+                  >
+                    {a}
+                  </span>
+                ))}
+              </div>
+            )}
+
             <p className="text-gray-800 font-medium">
-              {selectedHotel.rooms} dhoma — {selectedHotel.capacity} persona
+              🛏️ {selectedHotel.rooms} dhoma — 👥 {selectedHotel.capacity} persona
             </p>
             <p className="text-indigo-600 font-semibold mt-2">
               💶 {selectedHotel.price}€ / nata
