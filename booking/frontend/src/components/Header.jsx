@@ -29,7 +29,7 @@ function Header() {
 
   const navItems = [
     { name: "Destinations", to: "/destinations" },
-    { name: "Hotels", to: "/" },
+    { name: "Hotels", to: "/hotels" },
     { name: "Deals", to: "/deals" },
   ];
 

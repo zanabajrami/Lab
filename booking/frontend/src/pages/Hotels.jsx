@@ -1,35 +1,141 @@
 import React, { useState, useEffect } from "react";
 
-import hotel1 from "../images/hotel1.jpg";
-import hotel2 from "../images/hotel2.jpg";
-import hotel3 from "../images/hotel3.jpg";
-import hotel4 from "../images/hotel4.jpg";
+import hotel1 from "../images/prishtina4.jpg";
+import hotel2 from "../images/prishtina5.jpg";
+import hotel3 from "../images/prishtina6.jpg";
+import hotel4 from "../images/prishtina7.webp";
+import hotel5 from "../images/prishtina8.jpg";
+import hotel6 from "../images/brezovica5.jpg";
+import hotel7 from "../images/brezovica6.webp";
+import hotel8 from "../images/brezovica7.jpg";
+import hotel9 from "../images/brezovica8.jpg";
+import hotel10 from "../images/brezovica9.avif";
+import hotel11 from "../images/sarande4.jpg";
+import hotel12 from "../images/sarande5.jpg";
+import hotel13 from "../images/sarande6.webp";
+import hotel14 from "../images/sarande7.jpg";
+import hotel15 from "../images/himare3.jpg";
+import hotel16 from "../images/himare4.jpg";
+import hotel17 from "../images/himare5.jpg";
+import hotel18 from "../images/himare6.jpg";
+import hotel19 from "../images/himare7.webp";
 
 const hotels = [
-  {
-    name: "Hotel Grand Prishtina",
-    location: "Prishtina",
-    rating: 4.8,
-    image: hotel1,
-  },
-  {
-    name: "Brezovicë Resort",
-    location: "Brezovicë",
-    rating: 4.6,
-    image: hotel2,
-  },
-  {
-    name: "Sarandë Beach Hotel",
-    location: "Sarandë",
-    rating: 4.7,
-    image: hotel3,
-  },
-  {
-    name: "Himara Boutique Hotel",
-    location: "Himarë",
-    rating: 4.9,
-    image: hotel4,
-  },
+{
+  name: "Four Points by Sheraton Prishtina",
+  location: "Prishtina",
+  rating: 4.8,
+  image: hotel1,
+},
+{
+  name: "Swiss Diamond Hotel Prishtina",
+  location: "Prishtina",
+  rating: 4.9,
+  image: hotel2,
+},
+{
+  name: "Hotel Sirius",
+  location: "Prishtina",
+  rating: 4.7,
+  image: hotel3,
+},
+{
+  name: "Hotel Garden",
+  location: "Prishtina",
+  rating: 4.6,
+  image: hotel4,
+},
+{
+  name: "Hotel Nartel",
+  location: "Prishtina",
+  rating: 4.5,
+  image: hotel5,
+},
+{
+  name: "Brezovicë Hotel",
+  location: "Brezovicë",
+  rating: 4.6,
+  image: hotel6,
+},
+{
+  name: "Hotel Molika",
+  location: "Brezovicë",
+  rating: 4.7,
+  image: hotel7,
+},
+{
+  name: "Snow White Chalet",
+  location: "Brezovicë",
+  rating: 4.5,
+  image: hotel8,
+},
+{
+  name: "Mont Chalet",
+  location: "Brezovicë",
+  rating: 4.8,
+  image: hotel9,
+},
+{
+  name: "Hotel Sharri",
+  location: "Brezovicë",
+  rating: 4.9,
+  image: hotel10,
+},
+{
+  name: "Hotel Butrinti",
+  location: "Sarandë",
+  rating: 4.8,
+  image: hotel11,
+},
+{
+  name: "Bougainville Bay Hotel",
+  location: "Sarandë",
+  rating: 4.6,
+  image: hotel12,
+},
+{
+  name: "Saranda Palace Hotel",
+  location: "Sarandë",
+  rating: 4.9,
+  image: hotel13,
+},
+{
+  name: "Hotel Emblem ",
+  location: "Sarandë",
+  rating: 4.5,
+  image: hotel14,
+},
+{
+  name: "Prado Luxury Hotel",
+  location: "Himarë",
+  rating: 4.9,
+  image: hotel15,
+},
+{
+  name: "Hotel Rea Boutique",
+  location: "Himarë",
+  rating: 4.8,
+  image: hotel16,
+},
+{
+  name: "Panorama Hotel",
+  location: "Himarë",
+  rating: 4.7,
+  image: hotel17,
+},
+{
+  name: "Sea View Hotel Himara",
+  location: "Himarë",
+  rating: 4.6,
+  image: hotel18,
+},
+{
+  name: "Dimitri Hotel",
+  location: "Himarë",
+  rating: 4.8,
+  image: hotel19,
+},
+
 ];
 
 export default function HotelsPage() {
