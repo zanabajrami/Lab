@@ -1,10 +1,34 @@
 import React, { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
 
 import hotel1 from "../images/prishtina4.jpg";
+import hotel1_1 from "../images/hotel1_1.jpg";
+import hotel1_2 from "../images/hotel1_2.avif";
+
 import hotel2 from "../images/prishtina5.jpg";
+import hotel2_1 from "../images/hotel2_1.jpg";
+import hotel2_2 from "../images/hotel2_2.jpg";
+
 import hotel3 from "../images/prishtina6.jpg";
+import hotel3_1 from "../images/hotel3_1.jpg";
+import hotel3_2 from "../images/hotel3_2.png";
+
+
 import hotel4 from "../images/prishtina7.webp";
+import hotel4_1 from "../images/hotel4_1.webp";
+import hotel4_2 from "../images/hotel4_2.jpg";
+import hotel4_3 from "../images/hotel4_3.jpg";
+
+
 import hotel5 from "../images/prishtina8.jpg";
+import hotel5_1 from "../images/hotel5_1.jpg";
+import hotel5_2 from "../images/hotel5_2.jpg";
+import hotel5_3 from "../images/hotel5_3.jpg";
+
 import hotel6 from "../images/brezovica5.jpg";
 import hotel7 from "../images/brezovica6.webp";
 import hotel8 from "../images/brezovica7.jpg";
@@ -25,7 +49,7 @@ const hotels = [
     name: "Four Points by Sheraton Prishtina",
     location: "Prishtina",
     rating: 4.8,
-    image: hotel1,
+    images: [hotel1, hotel1_1, hotel1_2],
     description: "Hotel modern me spa, pishinë të brendshme dhe restorant luksoz me pamje panoramike të qytetit.",
     rooms: 1,
     capacity: 2,
@@ -36,7 +60,7 @@ const hotels = [
     name: "Swiss Diamond Hotel Prishtina",
     location: "Prishtina",
     rating: 4.9,
-    image: hotel2,
+    images: [hotel2, hotel2_1, hotel2_2],
     description: "Një hotel 5-yje me spa, hamam, restorante ndërkombëtare dhe dhoma elegante në qendër të qytetit.",
     rooms: 2,
     capacity: 4,
@@ -47,7 +71,7 @@ const hotels = [
     name: "Hotel Sirius",
     location: "Prishtina",
     rating: 4.7,
-    image: hotel3,
+    images: [hotel3, hotel3_1, hotel3_2],
     description: "Ofron ambiente moderne, bar rooftop me pamje të mahnitshme dhe kuzhinë bashkëkohore.",
     rooms: 1,
     capacity: 2,
@@ -58,29 +82,29 @@ const hotels = [
     name: "Hotel Garden",
     location: "Prishtina",
     rating: 4.6,
-    image: hotel4,
+    images: [hotel4, hotel4_1, hotel4_2, hotel4_3],
     description: "Hotel i qetë me kopshte të bukura, ambient relaksues dhe restorant tradicional kosovar.",
     rooms: 1,
     capacity: 2,
     price: 90,
-    amenities: ["Garden View", "Breakfast", "Wi-Fi", "Free Parking", "Pet Friendly"],
+    amenities: ["Garden View", "Pool", "Breakfast", "Wi-Fi", "Free Parking", "Pet Friendly"],
   },
   {
     name: "Hotel Nartel",
     location: "Prishtina",
     rating: 4.5,
-    image: hotel5,
+    images: [hotel5, hotel5_1, hotel5_2, hotel5_3],
     description: "Ideal për udhëtarë biznesi, me sallë takimesh moderne dhe parkim falas.",
     rooms: 1,
     capacity: 2,
     price: 85,
-    amenities: ["Business Center", "Wi-Fi", "Parking", "Breakfast", "Conference Room"],
+    amenities: ["Business Center", "Wi-Fi", "Parking", "Conference Room"],
   },
   {
     name: "Brezovicë Hotel",
     location: "Brezovicë",
     rating: 4.6,
-    image: hotel6,
+    images: [hotel6],
     description: "Hotel malor pranë pistave të skijimit me sauna, spa dhe dhoma me pamje fantastike.",
     rooms: 1,
     capacity: 2,
@@ -91,7 +115,7 @@ const hotels = [
     name: "Hotel Molika",
     location: "Brezovicë",
     rating: 4.7,
-    image: hotel7,
+    images: [hotel7],
     description: "Hotel komod me stil alpin, shumë afër teleferikut, i përshtatshëm për çifte dhe familje.",
     rooms: 1,
     capacity: 3,
@@ -102,7 +126,7 @@ const hotels = [
     name: "Snow White Chalet",
     location: "Brezovicë",
     rating: 4.5,
-    image: hotel9,
+    images: [hotel9],
     description: "Chalet prej druri në zemër të maleve, perfekt për pushime dimërore private.",
     rooms: 2,
     capacity: 4,
@@ -113,7 +137,7 @@ const hotels = [
     name: "Mont Chalet",
     location: "Brezovicë",
     rating: 4.8,
-    image: hotel10,
+    images: [hotel10],
     description: "Luks alpin me pishinë të brendshme, sauna dhe pamje të mahnitshme të Sharrit.",
     rooms: 2,
     capacity: 4,
@@ -124,7 +148,7 @@ const hotels = [
     name: "Hotel Sharri",
     location: "Brezovicë",
     rating: 4.9,
-    image: hotel8,
+    images: [hotel8],
     description: "Një resort ekskluziv në natyrë me spa, restorante gourmet dhe suita luksoze.",
     rooms: 1,
     capacity: 2,
@@ -135,7 +159,7 @@ const hotels = [
     name: "Hotel Butrinti",
     location: "Sarandë",
     rating: 4.8,
-    image: hotel11,
+    images: [hotel11],
     description: "Hotel i njohur buzë detit me pamje fantastike, pishinë dhe restorant mesdhetar.",
     rooms: 1,
     capacity: 2,
@@ -146,7 +170,7 @@ const hotels = [
     name: "Bougainville Bay Hotel",
     location: "Sarandë",
     rating: 4.6,
-    image: hotel12,
+    images: [hotel12],
     description: "Kompleks luksoz me plazh privat, 5 pishina dhe dhoma me dizajn artistik.",
     rooms: 1,
     capacity: 3,
@@ -157,7 +181,7 @@ const hotels = [
     name: "Saranda Palace Hotel",
     location: "Sarandë",
     rating: 4.9,
-    image: hotel13,
+    images: [hotel13],
     description: "Hotel i qetë me plazh privat, bar panoramik dhe dhoma me ballkon detar.",
     rooms: 1,
     capacity: 2,
@@ -168,7 +192,7 @@ const hotels = [
     name: "Hotel Emblem",
     location: "Sarandë",
     rating: 4.5,
-    image: hotel14,
+    images: [hotel14],
     description: "Ambiente elegante, afër qendrës dhe portit të Sarandës, me shërbim cilësor.",
     rooms: 1,
     capacity: 2,
@@ -179,7 +203,7 @@ const hotels = [
     name: "Prado Luxury Hotel",
     location: "Himarë",
     rating: 4.9,
-    image: hotel15,
+    images: [hotel15],
     description: "Hotel modern buzë detit me restorant gourmet dhe dhoma me pamje të Jonit.",
     rooms: 1,
     capacity: 2,
@@ -190,7 +214,7 @@ const hotels = [
     name: "Hotel Rea Boutique",
     location: "Himarë",
     rating: 4.8,
-    image: hotel16,
+    images: [hotel16],
     description: "Një butik i ngrohtë me arkitekturë elegante, për çifte që duan privatësi dhe qetësi.",
     rooms: 1,
     capacity: 2,
@@ -201,7 +225,7 @@ const hotels = [
     name: "Panorama Hotel",
     location: "Himarë",
     rating: 4.7,
-    image: hotel17,
+    images: [hotel17],
     description: "Me pamje panoramike të detit, pishinë të hapur dhe atmosferë relaksuese.",
     rooms: 1,
     capacity: 2,
@@ -212,7 +236,7 @@ const hotels = [
     name: "Sea View Hotel Himara",
     location: "Himarë",
     rating: 4.6,
-    image: hotel18,
+    images: [hotel18],
     description: "Hotel i ri me dizajn modern dhe ballkone me pamje të mrekullueshme.",
     rooms: 1,
     capacity: 2,
@@ -223,7 +247,7 @@ const hotels = [
     name: "Dimitri Hotel",
     location: "Himarë",
     rating: 4.8,
-    image: hotel19,
+    images: [hotel19],
     description: "Hotel familjar me mikpritje tradicionale dhe mëngjes vendas shumë të shijshëm.",
     rooms: 1,
     capacity: 2,
@@ -231,6 +255,7 @@ const hotels = [
     amenities: ["Wi-Fi", "Local Breakfast", "Free Parking", "Family Friendly"],
   },
 ];
+
 
 export default function HotelsPage() {
   const [showTopButton, setShowTopButton] = useState(false);
@@ -248,9 +273,7 @@ export default function HotelsPage() {
     <div className="min-h-screen bg-gray-50 px-6 md:px-20 py-12">
       {/* Hero */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-4xl font-bold text-gray-800 mb-4">
-          Hotels
-        </h1>
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">Hotels</h1>
       </div>
 
       {/* Hotels Grid */}
@@ -260,10 +283,9 @@ export default function HotelsPage() {
             key={index}
             className="relative rounded-3xl overflow-hidden bg-white/60 backdrop-blur-xl border border-gray-300 shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105"
           >
-            {/* Image */}
             <div className="relative h-48 w-full">
               <img
-                src={hotel.image}
+                src={hotel.images[0]}
                 alt={hotel.name}
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -273,24 +295,18 @@ export default function HotelsPage() {
               </span>
             </div>
 
-            {/* Content */}
             <div className="p-5 text-gray-700">
               <h2 className="font-semibold text-xl">{hotel.name}</h2>
               <p className="text-sm text-gray-600">{hotel.location}</p>
-              <p className="text-sm text-gray-700 mt-2 line-clamp-3">
-                {hotel.description}
-              </p>
+              <p className="text-sm text-gray-700 mt-2 line-clamp-3">{hotel.description}</p>
 
               <div className="flex justify-between text-sm text-gray-600 mt-3">
                 <span>🛏️ {hotel.rooms} dhoma</span>
                 <span>👥 {hotel.capacity} persona</span>
               </div>
 
-              <p className="text-indigo-600 font-bold mt-2">
-                💶 {hotel.price}€ / nata
-              </p>
+              <p className="text-indigo-600 font-bold mt-2">💶 {hotel.price}€ / nata</p>
 
-              {/* View Hotel (tekst klikues) */}
               <p
                 onClick={() => setSelectedHotel(hotel)}
                 className="mt-3 text-indigo-600 font-semibold cursor-pointer hover:underline"
@@ -308,7 +324,7 @@ export default function HotelsPage() {
 
       {/* Modal */}
       {selectedHotel && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-50 px-4">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-center z-50 px-4">
           <div className="bg-white rounded-3xl max-w-lg w-full p-6 relative shadow-2xl animate-fadeIn">
             <button
               onClick={() => setSelectedHotel(null)}
@@ -317,32 +333,37 @@ export default function HotelsPage() {
               ✕
             </button>
 
-            <img
-              src={selectedHotel.image}
-              alt={selectedHotel.name}
-              className="w-full h-56 object-cover rounded-2xl mb-4"
-            />
+            {/* Slider */}
+            <Swiper
+              spaceBetween={10}
+              slidesPerView={1}
+              navigation={true}
+              pagination={{ clickable: true }}
+              modules={[Navigation, Pagination]}
+            >
+              {selectedHotel.images.map((img, idx) => (
+                <SwiperSlide key={idx}>
+                  <img
+                    src={img}
+                    alt={`${selectedHotel.name} ${idx + 1}`}
+                    className="w-full h-56 object-cover rounded-2xl"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">
-              {selectedHotel.name}
-            </h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">{selectedHotel.name}</h2>
             <p className="text-gray-600 mb-1">{selectedHotel.location}</p>
             <p className="text-yellow-500 mb-2">
               {"★".repeat(Math.round(selectedHotel.rating))}{" "}
-              <span className="text-gray-500 text-sm">
-                ({selectedHotel.rating})
-              </span>
+              <span className="text-gray-500 text-sm">({selectedHotel.rating})</span>
             </p>
             <p className="text-gray-700 mb-3">{selectedHotel.description}</p>
 
-            {/* Amenities */}
             {selectedHotel.amenities && (
               <div className="flex flex-wrap gap-2 mb-3">
                 {selectedHotel.amenities.map((a, i) => (
-                  <span
-                    key={i}
-                    className="bg-indigo-100 text-indigo-700 px-3 py-1 text-sm rounded-full"
-                  >
+                  <span key={i} className="bg-indigo-100 text-indigo-700 px-3 py-1 text-sm rounded-full">
                     {a}
                   </span>
                 ))}
@@ -352,9 +373,7 @@ export default function HotelsPage() {
             <p className="text-gray-800 font-medium">
               🛏️ {selectedHotel.rooms} dhoma — 👥 {selectedHotel.capacity} persona
             </p>
-            <p className="text-indigo-600 font-semibold mt-2">
-              💶 {selectedHotel.price}€ / nata
-            </p>
+            <p className="text-indigo-600 font-semibold mt-2">💶 {selectedHotel.price}€ / nata</p>
           </div>
         </div>
       )}
@@ -362,9 +381,8 @@ export default function HotelsPage() {
       {/* Scroll to Top */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 p-4 rounded-full bg-gray-800 text-white shadow-lg hover:bg-gray-700 transition-opacity duration-300 z-50 ${
-          showTopButton ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed bottom-8 right-8 p-4 rounded-full bg-gray-800 text-white shadow-lg hover:bg-gray-700 transition-opacity duration-300 z-50 ${showTopButton ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
       >
         ▲
       </button>
