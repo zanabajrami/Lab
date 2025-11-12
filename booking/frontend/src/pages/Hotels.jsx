@@ -30,14 +30,59 @@ import hotel5_2 from "../images/hotel5_2.jpg";
 import hotel5_3 from "../images/hotel5_3.jpg";
 
 import hotel6 from "../images/brezovica5.jpg";
+import hotel6_1 from "../images/hotel6_1.jpg";
+import hotel6_2 from "../images/hotel6_2.jpg";
+import hotel6_3 from "../images/hotel6_3.jpg";
+
+
 import hotel7 from "../images/brezovica6.webp";
-import hotel8 from "../images/brezovica7.jpg";
-import hotel9 from "../images/brezovica8.jpg";
-import hotel10 from "../images/brezovica9.avif";
+import hotel7_1 from "../images/hotel7_1.jpg";
+import hotel7_2 from "../images/hotel7_2.jpg";
+import hotel7_3 from "../images/hotel7_3.webp";
+
+import villa8 from "../images/brezovica7.jpg";
+import villa8_1 from "../images/villa8_1.jpg";
+import villa8_2 from "../images/villa8_2.jpg";
+import villa8_3 from "../images/villa8_3.jpg";
+import villa8_4 from "../images/villa8_4.avif";
+
+
+import villa9 from "../images/brezovica8.jpg";
+import villa9_1 from "../images/villa9_1.jpg";
+import villa9_2 from "../images/villa9_2.jpg";
+import villa9_3 from "../images/villa9_3.jpg";
+
+import villa10 from "../images/brezovica9.avif";
+import villa10_1 from "../images/villa10_1.avif";
+import villa10_2 from "../images/villa10_2.avif";
+import villa10_3 from "../images/villa10_3.avif";
+import villa10_4 from "../images/villa10_4.avif";
+
 import hotel11 from "../images/sarande4.jpg";
+import hotel11_1 from "../images/hotel11_1.jpg";
+import hotel11_2 from "../images/hotel11_2.webp";
+import hotel11_3 from "../images/hotel11_3.jpg";
+
+
 import hotel12 from "../images/sarande5.jpg";
+import hotel12_1 from "../images/hotel12_1.jpg";
+import hotel12_2 from "../images/hotel12_2.jpg";
+import hotel12_3 from "../images/hotel12_3.jpg";
+import hotel12_4 from "../images/hotel12_4.jpg";
+
+
 import hotel13 from "../images/sarande6.webp";
+import hotel13_1 from "../images/hotel13_1.jpg";
+import hotel13_2 from "../images/hotel13_2.jpg";
+import hotel13_3 from "../images/hotel13_3.jpg";
+
+
 import hotel14 from "../images/sarande7.jpg";
+import hotel14_1 from "../images/hotel14_1.avif";
+import hotel14_2 from "../images/hotel14_2.jpg";
+import hotel14_3 from "../images/hotel14_3.jpg";
+
+
 import hotel15 from "../images/himare3.jpg";
 import hotel16 from "../images/himare4.jpg";
 import hotel17 from "../images/himare5.jpg";
@@ -50,7 +95,7 @@ const hotels = [
     location: "Prishtina",
     rating: 4.8,
     images: [hotel1, hotel1_1, hotel1_2],
-    description: "Hotel modern me spa, pishinë të brendshme dhe restorant luksoz me pamje panoramike të qytetit.",
+    description: "Hotel modern me spa, pishinë të brendshme dhe restorant luksoz me pamje panoramike.",
     rooms: 1,
     capacity: 2,
     price: 130,
@@ -61,7 +106,7 @@ const hotels = [
     location: "Prishtina",
     rating: 4.9,
     images: [hotel2, hotel2_1, hotel2_2],
-    description: "Një hotel 5-yje me spa, hamam, restorante ndërkombëtare dhe dhoma elegante në qendër të qytetit.",
+    description: "Një hotel 5-yje me spa, restorante ndërkombëtare dhe dhoma elegante në qendër të qytetit.",
     rooms: 2,
     capacity: 4,
     price: 160,
@@ -101,10 +146,10 @@ const hotels = [
     amenities: ["Business Center", "Wi-Fi", "Parking", "Conference Room"],
   },
   {
-    name: "Brezovicë Hotel",
+    name: "Brezovica Hotel",
     location: "Brezovicë",
     rating: 4.6,
-    images: [hotel6],
+    images: [hotel6, hotel6_1, hotel6_2, hotel6_3],
     description: "Hotel malor pranë pistave të skijimit me sauna, spa dhe dhoma me pamje fantastike.",
     rooms: 1,
     capacity: 2,
@@ -112,21 +157,32 @@ const hotels = [
     amenities: ["Ski Access", "Spa", "Sauna", "Restaurant", "Parking", "Wi-Fi"],
   },
   {
-    name: "Hotel Molika",
+    name: "Hotel Pine",
     location: "Brezovicë",
     rating: 4.7,
-    images: [hotel7],
+    images: [hotel7, hotel7_1, hotel7_2, hotel7_3],
     description: "Hotel komod me stil alpin, shumë afër teleferikut, i përshtatshëm për çifte dhe familje.",
     rooms: 1,
     capacity: 3,
     price: 115,
-    amenities: ["Mountain View", "Fireplace", "Breakfast", "Wi-Fi", "Free Parking"],
+    amenities: ["Mountain View", "Wi-Fi", "Spa", "Restaurant", "Free Parking"],
+  },
+  {
+    name: "Monte Villa",
+    location: "near Brezovicë",
+    rating: 4.9,
+    images: [villa8, villa8_1, villa8_2, villa8_3, villa8_4],
+    description: "Një villë ekskluzive në natyrë me pamje fantastike.",
+    rooms: 2,
+    capacity: 5,
+    price: 280,
+    amenities: ["Luxury Spa", "Gourmet Restaurant", "Indoor Pool", "Wi-Fi", "Valet Parking"],
   },
   {
     name: "Snow White Chalet",
-    location: "Brezovicë",
+    location: "near Brezovicë",
     rating: 4.5,
-    images: [hotel9],
+    images: [villa9, villa9_1, villa9_2, villa9_3],
     description: "Chalet prej druri në zemër të maleve, perfekt për pushime dimërore private.",
     rooms: 2,
     capacity: 4,
@@ -137,29 +193,19 @@ const hotels = [
     name: "Mont Chalet",
     location: "Brezovicë",
     rating: 4.8,
-    images: [hotel10],
-    description: "Luks alpin me pishinë të brendshme, sauna dhe pamje të mahnitshme të Sharrit.",
-    rooms: 2,
-    capacity: 4,
-    price: 150,
-    amenities: ["Spa", "Indoor Pool", "Sauna", "Wi-Fi", "Restaurant", "Parking"],
-  },
-  {
-    name: "Hotel Sharri",
-    location: "Brezovicë",
-    rating: 4.9,
-    images: [hotel8],
-    description: "Një resort ekskluziv në natyrë me spa, restorante gourmet dhe suita luksoze.",
-    rooms: 1,
-    capacity: 2,
-    price: 175,
-    amenities: ["Luxury Spa", "Gourmet Restaurant", "Indoor Pool", "Wi-Fi", "Valet Parking"],
+    images: [villa10, villa10_1, villa10_2, villa10_3, villa10_4],
+    description: "Luks alpin me pamje të mahnitshme të maleve.",
+    rooms: 3,
+    capacity: 6,
+    price: 913,
+    nights: 2,
+    amenities: ["Kitchen", "TV", "Pets allowed", "Wi-Fi", "Parking"],
   },
   {
     name: "Hotel Butrinti",
     location: "Sarandë",
     rating: 4.8,
-    images: [hotel11],
+    images: [hotel11, hotel11_1, hotel11_2, hotel11_3],
     description: "Hotel i njohur buzë detit me pamje fantastike, pishinë dhe restorant mesdhetar.",
     rooms: 1,
     capacity: 2,
@@ -170,7 +216,7 @@ const hotels = [
     name: "Bougainville Bay Hotel",
     location: "Sarandë",
     rating: 4.6,
-    images: [hotel12],
+    images: [hotel12, hotel12_1, hotel12_2, hotel12_3, hotel12_4],
     description: "Kompleks luksoz me plazh privat, 5 pishina dhe dhoma me dizajn artistik.",
     rooms: 1,
     capacity: 3,
@@ -181,7 +227,7 @@ const hotels = [
     name: "Saranda Palace Hotel",
     location: "Sarandë",
     rating: 4.9,
-    images: [hotel13],
+    images: [hotel13, hotel13_1, hotel13_2, hotel13_3],
     description: "Hotel i qetë me plazh privat, bar panoramik dhe dhoma me ballkon detar.",
     rooms: 1,
     capacity: 2,
@@ -192,7 +238,7 @@ const hotels = [
     name: "Hotel Emblem",
     location: "Sarandë",
     rating: 4.5,
-    images: [hotel14],
+    images: [hotel14, hotel14_1, hotel14_2, hotel14_3],
     description: "Ambiente elegante, afër qendrës dhe portit të Sarandës, me shërbim cilësor.",
     rooms: 1,
     capacity: 2,
@@ -260,6 +306,7 @@ const hotels = [
 export default function HotelsPage() {
   const [showTopButton, setShowTopButton] = useState(false);
   const [selectedHotel, setSelectedHotel] = useState(null);
+  const [activeTab, setActiveTab] = useState("all");
 
   useEffect(() => {
     const handleScroll = () => setShowTopButton(window.scrollY > 300);
@@ -269,16 +316,41 @@ export default function HotelsPage() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
+  // Filtro hotelet sipas butonit aktiv
+  const filteredHotels =
+    activeTab === "all"
+      ? hotels
+      : hotels.filter((h) => {
+        if (activeTab === "hotels")
+          return !h.name.toLowerCase().includes("villa") && !h.name.toLowerCase().includes("chalet");
+        if (activeTab === "villas")
+          return h.name.toLowerCase().includes("villa") || h.name.toLowerCase().includes("chalet");
+        if (activeTab === "apartments")
+          return h.name.toLowerCase().includes("apartment");
+        return true;
+      });
+
   return (
-    <div className="min-h-screen bg-gray-50 px-6 md:px-20 py-12">
-      {/* Hero */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">Hotels</h1>
+    <div className="px-6 py-8">
+      {/* Tabs */}
+      <div className="flex gap-4 mb-6 justify-center flex-wrap">
+        {["all", "hotels", "villas", "apartments"].map((tab) => (
+          <button
+            key={tab}
+            onClick={() => setActiveTab(tab)}
+            className={`px-6 py-2 rounded-xl font-semibold transition ${activeTab === tab
+                ? "bg-indigo-900 text-white"
+                : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+              }`}
+          >
+            {tab.charAt(0).toUpperCase() + tab.slice(1)}
+          </button>
+        ))}
       </div>
 
       {/* Hotels Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {hotels.map((hotel, index) => (
+        {filteredHotels.map((hotel, index) => (
           <div
             key={index}
             className="relative rounded-3xl overflow-hidden bg-white/60 backdrop-blur-xl border border-gray-300 shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105"
@@ -298,18 +370,25 @@ export default function HotelsPage() {
             <div className="p-5 text-gray-700">
               <h2 className="font-semibold text-xl">{hotel.name}</h2>
               <p className="text-sm text-gray-600">{hotel.location}</p>
-              <p className="text-sm text-gray-700 mt-2 line-clamp-3">{hotel.description}</p>
+              <p className="text-sm text-gray-700 mt-2 line-clamp-3">
+                {hotel.description}
+              </p>
 
               <div className="flex justify-between text-sm text-gray-600 mt-3">
-                <span>🛏️ {hotel.rooms} dhoma</span>
-                <span>👥 {hotel.capacity} persona</span>
+                <span>🛏️ {hotel.rooms} rooms</span>
+                <span>👥 {hotel.capacity} people</span>
               </div>
 
-              <p className="text-indigo-600 font-bold mt-2">💶 {hotel.price}€ / nata</p>
+              <p className="text-gray-600 font-bold mt-2">
+                💶 {hotel.price}€{" "}
+                <span className="text-gray-600 font-medium text-sm">
+                  / {hotel.nights ? `${hotel.nights} nights` : "night"}
+                </span>
+              </p>
 
               <p
                 onClick={() => setSelectedHotel(hotel)}
-                className="mt-3 text-indigo-600 font-semibold cursor-pointer hover:underline"
+                className="mt-3 text-blue-600 font-semibold cursor-pointer hover:underline"
               >
                 View Hotel →
               </p>
@@ -337,7 +416,7 @@ export default function HotelsPage() {
             <Swiper
               spaceBetween={10}
               slidesPerView={1}
-              navigation={true}
+              navigation
               pagination={{ clickable: true }}
               modules={[Navigation, Pagination]}
             >
@@ -352,18 +431,25 @@ export default function HotelsPage() {
               ))}
             </Swiper>
 
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">{selectedHotel.name}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">
+              {selectedHotel.name}
+            </h2>
             <p className="text-gray-600 mb-1">{selectedHotel.location}</p>
             <p className="text-yellow-500 mb-2">
               {"★".repeat(Math.round(selectedHotel.rating))}{" "}
-              <span className="text-gray-500 text-sm">({selectedHotel.rating})</span>
+              <span className="text-gray-500 text-sm">
+                ({selectedHotel.rating})
+              </span>
             </p>
             <p className="text-gray-700 mb-3">{selectedHotel.description}</p>
 
             {selectedHotel.amenities && (
               <div className="flex flex-wrap gap-2 mb-3">
                 {selectedHotel.amenities.map((a, i) => (
-                  <span key={i} className="bg-indigo-100 text-indigo-700 px-3 py-1 text-sm rounded-full">
+                  <span
+                    key={i}
+                    className="bg-indigo-100 text-indigo-700 px-3 py-1 text-sm rounded-full"
+                  >
                     {a}
                   </span>
                 ))}
@@ -371,9 +457,11 @@ export default function HotelsPage() {
             )}
 
             <p className="text-gray-800 font-medium">
-              🛏️ {selectedHotel.rooms} dhoma — 👥 {selectedHotel.capacity} persona
+              🛏️ {selectedHotel.rooms} rooms — 👥 {selectedHotel.capacity} people
             </p>
-            <p className="text-indigo-600 font-semibold mt-2">💶 {selectedHotel.price}€ / nata</p>
+            <p className="text-gray-900 font-semibold mt-2">
+              💶 {selectedHotel.price}€ / nata
+            </p>
           </div>
         </div>
       )}
