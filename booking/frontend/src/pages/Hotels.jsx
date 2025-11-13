@@ -109,6 +109,45 @@ import hotel7_1 from "../images/hotel7_1.jpg";
 import hotel7_2 from "../images/hotel7_2.jpg";
 import hotel7_3 from "../images/hotel7_3.webp";
 
+import villa1 from "../images/brezovica10.avif";
+import villa1_1 from "../images/villa1_1.avif";
+import villa1_2 from "../images/villa1_2.avif";
+import villa1_3 from "../images/villa1_3.avif";
+import villa1_4 from "../images/villa1_4.avif";
+
+import villa2 from "../images/villa2.avif";
+import villa2_1 from "../images/villa2_1.avif";
+import villa2_2 from "../images/villa2_2.avif";
+import villa2_3 from "../images/villa2_3.avif";
+import villa2_4 from "../images/villa2_4.avif";
+
+import villa3 from "../images/villa3.jpg";
+import villa3_1 from "../images/villa3_1.avif";
+import villa3_2 from "../images/villa3_2.jpg";
+import villa3_3 from "../images/villa3_3.avif";
+
+import villa4 from "../images/villa4.avif";
+import villa4_1 from "../images/villa4_1.avif";
+import villa4_2 from "../images/villa4_2.avif";
+import villa4_3 from "../images/villa4_3.avif";
+import villa4_4 from "../images/villa4_4.avif";
+
+import villa5 from "../images/villa5.avif";
+import villa5_1 from "../images/villa5_1.avif";
+import villa5_2 from "../images/villa5_2.avif";
+import villa5_3 from "../images/villa5_3.avif";
+
+import villa6 from "../images/villa6.avif";
+import villa6_1 from "../images/villa6_1.avif";
+import villa6_2 from "../images/villa6_2.avif";
+import villa6_3 from "../images/villa6_3.jpeg";
+import villa6_4 from "../images/villa6_4.jpeg";
+
+import villa7 from "../images/villa7.avif";
+import villa7_1 from "../images/villa7_1.avif";
+import villa7_2 from "../images/villa7_2.avif";
+import villa7_3 from "../images/villa7_3.avif";
+
 import villa8 from "../images/brezovica7.jpg";
 import villa8_1 from "../images/villa8_1.jpg";
 import villa8_2 from "../images/villa8_2.jpg";
@@ -125,6 +164,57 @@ import villa10_1 from "../images/villa10_1.avif";
 import villa10_2 from "../images/villa10_2.avif";
 import villa10_3 from "../images/villa10_3.avif";
 import villa10_4 from "../images/villa10_4.avif";
+
+import villa11 from "../images/villa11.avif";
+import villa11_1 from "../images/villa11_1.avif";
+import villa11_2 from "../images/villa11_2.avif";
+import villa11_3 from "../images/villa11_3.avif";
+
+import villa12 from "../images/villa12.png";
+import villa12_1 from "../images/villa12_1.avif";
+import villa12_2 from "../images/villa12_2.avif";
+import villa12_3 from "../images/villa12_3.avif";
+
+import villa13 from "../images/villa13.avif";
+import villa13_1 from "../images/villa13_1.avif";
+import villa13_2 from "../images/villa13_2.avif";
+import villa13_3 from "../images/villa13_3.avif";
+import villa13_4 from "../images/villa13_4.avif";
+
+import villa14 from "../images/villa14.avif";
+import villa14_1 from "../images/villa14_1.avif";
+import villa14_2 from "../images/villa14_2.jpeg";
+import villa14_3 from "../images/villa14_3.avif";
+
+import villa15 from "../images/villa15.avif";
+import villa15_1 from "../images/villa15_1.avif";
+import villa15_2 from "../images/villa15_2.avif";
+import villa15_3 from "../images/villa15_3.jpg";
+
+import villa16 from "../images/villa16.avif";
+import villa16_1 from "../images/villa16_1.avif";
+import villa16_2 from "../images/villa16_2.avif";
+import villa16_3 from "../images/villa16_3.avif";
+
+import villa17 from "../images/villa17.avif";
+import villa17_1 from "../images/villa17_1.avif";
+import villa17_2 from "../images/villa17_2.avif";
+
+import villa18 from "../images/villa18.avif";
+import villa18_1 from "../images/villa18_1.avif";
+import villa18_2 from "../images/villa18_2.avif";
+import villa18_3 from "../images/villa18_3.avif";
+
+import villa19 from "../images/villa19.avif";
+import villa19_1 from "../images/villa19_1.avif";
+import villa19_2 from "../images/villa19_2.avif";
+import villa19_3 from "../images/villa19_3.avif";
+
+import villa20 from "../images/villa20.avif";
+import villa20_1 from "../images/villa20_1.avif";
+import villa20_2 from "../images/villa20_2.avif";
+import villa20_3 from "../images/villa20_3.avif";
+import villa20_4 from "../images/villa20_4.avif";
 
 //Sarande
 import hotel11 from "../images/sarande4.jpg";
@@ -210,6 +300,24 @@ const hotels = [
   { name: "Courtyard by Marriott Prishtina", location: "Prishtina", rating: 4.8, images: [hotel30, hotel30_1, hotel30_2, hotel30_3, hotel30_4], description: "Hotel modern luksoz me dhoma elegante, restorant gourmet dhe qendër fitnesi, vetëm disa minuta nga qendra e Prishtinës.", rooms: 1, capacity: 2, price: 149, amenities: ["Wi-Fi", "Breakfast", "Parking", "Restaurant", "Pool", "Fitness Center", "24h Reception"] },
   { name: "Vetus Hotel", location: "Prishtina", rating: 4.5, images: [hotel31, hotel31_1, hotel31_2, hotel31_3], description: "Hotel modern dhe komod në Prishtinë, me dhoma të rehatshme, mëngjes të pasur dhe staf mikpritës.", rooms: 1, capacity: 3, price: 110, amenities: ["Free Wi-Fi", "Breakfast", "Parking", "Restaurant", "Air Conditioning", "24h Reception"] },
   { name: "Plaza Boutique Hotel", location: "Prishtina", rating: 4.6, images: [hotel32, hotel32_1, hotel32_2, hotel32_3], description: "Hotel butik elegant në qendër të Prishtinës, me dhoma moderne, restorant gourmet dhe shërbim të shkëlqyer.", rooms: 1, capacity: 2, price: 89, amenities: ["Free Wi-Fi", "Breakfast", "Parking", "Restaurant", "Air Conditioning", "24h Reception"] },
+  { name: "Villa Noari", location: "Brezovicë", rating: 4.9, images: [villa1, villa1_1, villa1_2, villa1_3, villa1_4], description: "Villë luksoze në natyrë me pamje mahnitëse, dhoma moderne dhe ambient të qetë, perfekt për pushime dimërore.", rooms: 3, capacity: 6, price: 172, amenities: ["Fireplace", "Mountain View", "Wi-Fi", "Parking", "Fully Equipped Kitchen"] },
+  { name: "Villa Brezovica", location: "Brezovicë", rating: 4.8, images: [villa2, villa2_1, villa2_2, villa2_3, villa2_4], description: "Oaz modern me dritare panoramike që ofron pamje mahnitëse të maleve dhe hapësira të bollshme për argëtim.", rooms: 4, capacity: 8, price: 317, amenities: ["Private Pool", "Mountain View", "Wi-Fi", "Parking", "Fully Equipped Kitchen", "Fireplace"] },
+  { name: "Villa Breza", location: "Brezovicë", rating: 4.7, images: [villa3, villa3_1, villa3_2, villa3_3], description: "Arkitekturë elegante me kopshte të gjelbërta dhe ambient të ndriçuar natyrshëm.", rooms: 3, capacity: 8, price: 210, amenities: ["Mountain View", "Wi-Fi", "Parking", "Fully Equipped Kitchen", "Fireplace", "Private Garden"] },
+  { name: "Villa Bora", location: "Brezovicë", rating: 4.6, images: [villa4, villa4_1, villa4_2, villa4_3, villa4_4], description: "Hapësira të ngrohta me dekor modern, ideal për relaks dhe aktivitete të ndryshme.", rooms: 3, capacity: 7, price: 172, amenities: ["Mountain View", "Wi-Fi", "Parking", "Fully Equipped Kitchen", "Fireplace", "Private Garden"] },
+  { name: "Villa Hoxha", location: "Brezovicë", rating: 4.7, images: [villa5, villa5_1, villa5_2, villa5_3], description: "Villë me dhoma të ndriçuara natyrshëm, hapësira të bollshme për aktivitet dhe qetësi.", rooms: 2, capacity: 8, price: 250, amenities: ["Mountain View", "Wi-Fi", "Parking", "Fully Equipped Kitchen", "Fireplace", "Private Garden"] },
+  { name: "Villa Premium", location: "Brezovicë", rating: 4.8, images: [villa6, villa6_1, villa6_2, villa6_3, villa6_4], description: "Ambient modern dhe stil elegant, me zona relaksuese dhe pamje nga natyra përreth.", rooms: 3, capacity: 8, price: 326, amenities: ["Mountain View", "Wi-Fi", "Parking", "Fully Equipped Kitchen", "Fireplace"] },
+  { name: "Villa Lumi 2", location: "Brezovicë", rating: 4.6, images: [villa7, villa7_1, villa7_2, villa7_3], description: "Villë komode me hapësira të ndara dhe dekor të kujdesshëm për rehati maksimale.", rooms: 2, capacity: 8, price: 195, amenities: ["Mountain View", "Wi-Fi", "Parking", "Fully Equipped Kitchen", "Fireplace", "Private Garden"] },
+  { name: "Brezovica Luxury Villa", location: "Brezovicë", rating: 4.7, images: [villa11, villa11_1, villa11_2, villa11_3], description: "Dhoma me stil modern dhe ambiente të bollshme, perfekte për pushime të qeta.", rooms: 3, capacity: 8, price: 220, amenities: ["Mountain View", "Wi-Fi", "Parking", "Fully Equipped Kitchen", "Fireplace", "Private Garden"] },
+  { name: "Baron Villas", location: "Brezovicë", rating: 4.8, images: [villa12, villa12_1, villa12_2, villa12_3], description: "Stil luksoz me dizajn të veçantë, hapësira të bollshme dhe relaks të plotë.", rooms: 3, capacity: 7, price: 263, amenities: ["Mountain View", "Wi-Fi", "Parking", "Fully Equipped Kitchen", "Fireplace"] },
+  { name: "Triplex Villa", location: "Brezovicë", rating: 4.9, images: [villa13, villa13_1, villa13_2, villa13_3, villa13_4], description: "Villë moderne me hapësira të ndara dhe dizajn inovativ, ideale për pushime të veçanta.", rooms: 4, capacity: 9, price: 297, amenities: ["Mountain View", "Wi-Fi", "Parking", "Fully Equipped Kitchen", "Fireplace"] },
+  { name: "Villa V", location: "Brezovicë", rating: 4.8, images: [villa14, villa14_1, villa14_2, villa14_3], description: "Dhoma të dizajnuara me stil dhe pajisje moderne për rehati maksimale.", rooms: 3, capacity: 6, price: 409, amenities: ["Kitchen", "Wi-Fi", "Free Parking", "TV", "Washer", "Indoor Fireplace", "Refrigerator", "Smoking Allowed"] },
+  { name: "Luxury Villa", location: "Brezovicë", rating: 4.9, images: [villa15, villa15_1, villa15_2, villa15_3], description: "Villë luksoze me dizajn unik dhe akses të lehtë në pistat e skijimit.", rooms: 2, capacity: 4, price: 304, amenities: ["Mountain View", "Garden View", "Ski-in/Ski-out", "Kitchen", "Wi-Fi", "Free Parking", "TV", "Exterior Security Cameras"] },
+  { name: "Point Villa 2", location: "Brezovicë", rating: 4.7, images: [villa16, villa16_1, villa16_2, villa16_3], description: "Villë moderne me dizajn komod, e pajisur me kuzhinë të plotë dhe pamje të bukur të maleve .", rooms: 3, capacity: 8, price: 95, amenities: ["Ski-in/Ski-out", "Kitchen", "Wi-Fi", "Free Parking", "TV", "Washer", "Indoor Fireplace", "Exterior Security Cameras"] },
+  { name: "Villa in Brezovica", location: "Brezovicë", rating: 4.8, images: [villa17, villa17_1, villa17_2], description: "Villë komode me pamje mahnitëse nga liqeni dhe ambiente të bollshme për pushime të qeta.", rooms: 3, capacity: 8, price: 257, amenities: ["Lake View", "Kitchen", "Wi-Fi", "Free Parking", "TV", "Washer", "Air Conditioning", "Indoor Fireplace"] },
+  { name: "Point Villa ", location: "Brezovicë", rating: 4.7, images: [villa18, villa18_1, villa18_2, villa18_3], description: "Villë moderne me akses direkt në pistat e skijimit dhe ambiente të rehatshme për pushime relaksuese.", rooms: 3, capacity: 9, price: 95, amenities: ["Ski-in/Ski-out", "Kitchen", "Wi-Fi", "Free Parking", "TV", "Washer", "Indoor Fireplace", "Exterior Security Cameras"] },
+  { name: "Private Villa", location: "Brezovicë", rating: 4.8, images: [villa19, villa19_1, villa19_2, villa19_3], description: "Villë me dizajn të ngrohtë dhe pajisje moderne, ideale për pushime komode në mal.", rooms: 4, capacity: 6, price: 276, amenities: ["Kitchen", "Wi-Fi", "Free Parking", "Pets Allowed", "TV", "Washer", "Air Conditioning", "Indoor Fireplace"] },
+  { name: "GO Villas", location: "Brezovicë", rating: 4.7, images: [villa20, villa20_1, villa20_2, villa20_3, villa20_4], description: "Villë moderne me ambiente të bollshme dhe pajisje të plota për një pushim të rehatshëm.", rooms: 2, capacity: 6, price: 263, amenities: ["Free Parking", "TV", "Washer"] },
+
 ];
 
 
@@ -370,7 +478,7 @@ export default function HotelsPage() {
               🛏️ {selectedHotel.rooms} rooms — 👥 {selectedHotel.capacity} people
             </p>
             <p className="text-gray-900 font-semibold mt-2">
-              💶 {selectedHotel.price}€ / nata
+              💶 {selectedHotel.price}€ / night
             </p>
           </div>
         </div>
