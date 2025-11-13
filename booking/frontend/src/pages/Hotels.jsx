@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
+import { BedDouble, Users, HandCoins } from "lucide-react";
 
 //Prishtina
 import hotel1 from "../images/prishtina4.jpg";
@@ -393,12 +394,16 @@ export default function HotelsPage() {
               </p>
 
               <div className="flex justify-between text-sm text-gray-600 mt-3">
-                <span>🛏️ {hotel.rooms} rooms</span>
-                <span>👥 {hotel.capacity} people</span>
+                <span className="flex items-center gap-1">
+                  <BedDouble className="w-4 h-4" /> {hotel.rooms} rooms
+                </span>
+                <span className="flex items-center gap-1">
+                  <Users className="w-4 h-4" /> {hotel.capacity} people
+                </span>
               </div>
 
-              <p className="text-gray-600 font-bold mt-2">
-                💶 {hotel.price}€{" "}
+              <p className="text-gray-600 font-bold mt-2 flex items-center gap-1">
+                <HandCoins className="w-4 h-4" /> {hotel.price}€{" "}
                 <span className="text-gray-600 font-medium text-sm">
                   / {hotel.nights ? `${hotel.nights} nights` : "night"}
                 </span>
@@ -406,12 +411,16 @@ export default function HotelsPage() {
 
               <p
                 onClick={() => setSelectedHotel(hotel)}
-                className="mt-3 text-blue-600 font-semibold cursor-pointer hover:underline"
+                className="mt-3 text-indigo-700 font-semibold cursor-pointer hover:underline"
               >
-                View Hotel →
+                {hotel.name.toLowerCase().includes("villa") || hotel.name.toLowerCase().includes("chalet")
+                  ? "View Villa →"
+                  : hotel.name.toLowerCase().includes("apartment")
+                    ? "View Apartment →"
+                    : "View Hotel →"}
               </p>
 
-              <button className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-800 font-semibold shadow-lg hover:bg-indigo-600 hover:text-white transition-colors">
+              <button className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 hover:transition-colors">
                 Book
               </button>
             </div>
@@ -474,11 +483,13 @@ export default function HotelsPage() {
               </div>
             )}
 
-            <p className="text-gray-800 font-medium">
-              🛏️ {selectedHotel.rooms} rooms — 👥 {selectedHotel.capacity} people
+            <p className="text-gray-800 font-medium flex items-center gap-2">
+              <BedDouble className="w-4 h-4" /> {selectedHotel.rooms} rooms —
+              <Users className="w-4 h-4" /> {selectedHotel.capacity} people
             </p>
-            <p className="text-gray-900 font-semibold mt-2">
-              💶 {selectedHotel.price}€ / night
+
+            <p className="text-gray-900 font-semibold mt-2 flex items-center gap-2">
+              <HandCoins className="w-4 h-4" /> {selectedHotel.price}€ / night
             </p>
           </div>
         </div>

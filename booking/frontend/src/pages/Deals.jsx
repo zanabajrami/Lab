@@ -116,7 +116,7 @@ function Deals({ favorites, setFavorites }) {
                   {/* Book button */}
                   <button
                     onClick={(e) => e.stopPropagation()}
-                    className="mt-4 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-800 font-semibold shadow-lg hover:bg-indigo-600 transition-colors"
+                    className="mt-4 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 transition-colors"
                   >
                     Book
                   </button>
