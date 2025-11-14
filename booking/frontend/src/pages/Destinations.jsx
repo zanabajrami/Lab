@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Slider from "react-slick";
 import { useLocation } from "react-router-dom";
+import { Clock, Bed, Hamburger, MapPinned, MapPin, Waves, Mountain, Castle, Wine } from "lucide-react";
 
 import prishtina0Image from "../images/prishtina-.jpeg";
 import prishtina1 from "../images/prishtina1.png";
@@ -191,7 +192,7 @@ export default function ZigZagCarousel() {
             }
         }
     }, [location]);
-    
+
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
@@ -225,7 +226,7 @@ export default function ZigZagCarousel() {
 
     return (
         <div className="min-h-screen bg-gray-100 p-8">
-            <h2 className="text-4xl font-bold mb-10 text-gray-700 flex items-center justify-center gap-4">
+            <h2 className="text-3xl mb-10 text-gray-700 flex items-center justify-center gap-4">
                 <span className="w-16 h-[2px] bg-gray-400 rounded-full"></span>
                 <span>Destinacionet</span>
                 <span className="w-16 h-[2px] bg-gray-400 rounded-full"></span>
@@ -257,10 +258,6 @@ export default function ZigZagCarousel() {
 
             <section className="py-24 text-gray-800 px-6 md:px-20">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-4xl font-extrabold mb-20 text-center bg-gray-700 text-transparent bg-clip-text">
-                        Rreth Destinacioneve
-                    </h2>
-
                     <div className="space-y-32">
                         {aboutDestinations.map((d, index) => (
                             <motion.div
@@ -288,7 +285,7 @@ export default function ZigZagCarousel() {
 
                                 {/* Teksti */}
                                 <div className="md:w-1/2 space-y-4">
-                                    <h4 className="text-xl font-semibold text-indigo-800 tracking-wide uppercase">
+                                    <h4 className="text-xl font-semibold text-gray-900 tracking-wide uppercase">
                                         {d.name}
                                     </h4>
                                     <p className="text-lg leading-relaxed text-gray-700">{d.description}</p>
@@ -301,7 +298,7 @@ export default function ZigZagCarousel() {
                                     {/* Butoni */}
                                     <button
                                         onClick={() => toggleExpand(index)}
-                                        className="ml-20 mt-4 px-6 py-2 rounded-full bg-blue-900 text-white font-medium shadow-lg hover:shadow-2xl transition"
+                                        className="ml-20 mt-4 px-6 py-2 rounded-full bg-gray-200 text-gray-500 font-medium shadow-lg border border-gray-400 hover:shadow-2xl transition"
                                     >
                                         {expandedIndex === index ? "Mbyll ↑" : "Zbulo më shumë →"}
                                     </button>
@@ -317,20 +314,30 @@ export default function ZigZagCarousel() {
                                                 className="overflow-hidden"
                                             >
                                                 <div className="mt-2 p-6">
-
-
                                                     <ul className="list-disc list-inside space-y-2 text-gray-700">
-                                                        <li>
-                                                            📍 <strong>Aktivitete:</strong> {d.activities}
+                                                        <li className="flex items-center gap-2">
+                                                            <MapPinned className="w-6 h-6" />
+                                                            <span>
+                                                                <strong>Aktivitete:</strong> {d.activities}
+                                                            </span>
                                                         </li>
-                                                        <li>
-                                                            🍴 <strong>Ushqim tradicional:</strong> {d.food}
+                                                        <li className="flex items-center gap-2">
+                                                            <Hamburger className="w-6 h-6" />
+                                                            <span>
+                                                                <strong>Ushqim tradicional:</strong> {d.food}
+                                                            </span>
                                                         </li>
-                                                        <li>
-                                                            ⏰ <strong>Koha më e mirë për vizitë:</strong> {d.bestTime}
+                                                        <li className="flex items-center gap-2">
+                                                            <Clock className="w-6 h-6" />
+                                                            <span>
+                                                                <strong>Koha më e mirë për vizitë:</strong> {d.bestTime}
+                                                            </span>
                                                         </li>
-                                                        <li>
-                                                            🛌🏻 <strong>Akomodimi:</strong> {d.stay}
+                                                        <li className="flex items-center gap-2">
+                                                            <Bed className="w-6 h-6" />
+                                                            <span>
+                                                                <strong>Akomodimi:</strong> {d.stay}
+                                                            </span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -345,8 +352,10 @@ export default function ZigZagCarousel() {
             </section >
 
             <section className="py-20 text-gray-800 px-6 md:px-20">
-                <h2 className="text-4xl font-bold text-center mb-12 text-gray-700">
-                    Destinacionet më të Vizituara
+                <h2
+                    className="text-3xl mb-12 text-gray-800 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                >
+                    Destinacionet më të vizituara <MapPin className="w-6 h-6 text-gray-600" />
                 </h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {[
@@ -394,18 +403,20 @@ export default function ZigZagCarousel() {
                 </div>
             </section>
             <section className="py-20 text-gray-800 px-6 md:px-20">
-                <h2 className="text-3xl font-bold text-center mb-12 text-gray-700">
+                <h2 className="text-3xl text-center mb-12 text-gray-700">
                     Aktivitetet më të Rekomanduara
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     {[
-                        { icon: "🏖️", title: "Plazhe", desc: "Relaksohu në bregdetet e Ksamilit dhe Himarës." },
-                        { icon: "⛰️", title: "Hiking", desc: "Shëtitje në Rugovë dhe malet e Brezovicës." },
-                        { icon: "🏰", title: "Kulturë", desc: "Zbulo historinë e Prizrenit dhe Tiranës." },
-                        { icon: "🍷", title: "Gastronomi", desc: "Provo verërat dhe ushqimin lokal." },
+                        { icon: <Waves className="w-6 h-6 text-blue-500" />, title: "Plazhe", desc: "Relaksohu në bregdetet e Ksamilit dhe Himarës." },
+                        { icon: <Mountain className="w-6 h-6 text-blue-500" />, title: "Hiking", desc: "Shëtitje në Rugovë dhe malet e Brezovicës." },
+                        { icon: <Castle className="w-6 h-6 text-blue-500" />, title: "Kulturë", desc: "Zbulo historinë e Prizrenit dhe Tiranës." },
+                        { icon: <Wine className="w-6 h-6 text-blue-500" />, title: "Gastronomi", desc: "Provo verërat dhe ushqimin lokal." },
                     ].map((item, i) => (
                         <div key={i} className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition">
-                            <div className="text-5xl mb-4">{item.icon}</div>
+                            <div className="flex flex-col items-center text-center mb-4">
+                                {React.cloneElement(item.icon, { className: "w-10 h-10 text-indigo-900" })}
+                            </div>
                             <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                             <p className="text-gray-600">{item.desc}</p>
                         </div>
@@ -416,7 +427,7 @@ export default function ZigZagCarousel() {
             {/* SCROLL TO TOP BUTTON */}
             <button
                 onClick={scrollToTop}
-                className={`fixed bottom-8 right-8 p-4 rounded-full bg-indigo-600 text-white shadow-lg hover:bg-indigo-500 transition-opacity duration-300 z-50
+                className={`fixed bottom-8 right-8 p-4 rounded-full bg-gray-800 text-white shadow-lg hover:bg-gray-700 transition-opacity duration-300 z-50
                     ${showTopButton ? "opacity-100" : "opacity-0 pointer-events-none"}`}
             >
                 ▲

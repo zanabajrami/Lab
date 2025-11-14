@@ -9,6 +9,7 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 import SearchBar from "../components/SearchBar";
 import { useNavigate } from "react-router-dom";
+import { MapPin, Search, Hotel, CircleCheck, Percent, Euro, Phone, LockKeyhole, Clock, MessageCircle, MessageSquareText } from "lucide-react";
 
 import mainImage from "../images/main.jpg";
 import prishtina0Image from "../images/prishtina-.jpeg";
@@ -153,38 +154,39 @@ function HomePage() {
       {/* Destinacionet */}
       <section className="max-w-8xl mx-auto px-4 py-12">
         <h2
-        onClick={() => navigate("/destinations")}
-        className="text-3xl font-bold mb-10 text-gray-800 flex items-center justify-center gap-4 cursor-pointer"
-      >
-        <span className="w-16 h-[2px] bg-gray-400 rounded-full"></span>
-        <span>Destinacionet</span>
-        <span className="w-16 h-[2px] bg-gray-400 rounded-full"></span>
-      </h2>
-      <Slider {...sliderSettings}>
-      {destinationss.map((dest) => (
-        <div key={dest.name} className="px-2">
-          <div
-            className="relative rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
-            onClick={() => goToDestination(dest.name)}
-          >
-            <img src={dest.image} alt={dest.name} className="w-full h-48 object-cover" />
-            <div className="absolute bottom-0 bg-black bg-opacity-50 w-full text-white p-2 text-center font-semibold">
-              {dest.name}
+          onClick={() => navigate("/destinations")}
+          className="text-3xl mb-10 text-gray-800 flex items-center justify-center gap-4 cursor-pointer"
+        >
+          <span className="w-16 h-[2px] bg-gray-400 rounded-full"></span>
+          <span>Destinacionet</span>
+          <span className="w-16 h-[2px] bg-gray-400 rounded-full"></span>
+        </h2>
+        <Slider {...sliderSettings}>
+          {destinationss.map((dest) => (
+            <div key={dest.name} className="px-2">
+              <div
+                className="relative rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+                onClick={() => goToDestination(dest.name)}
+              >
+                <img src={dest.image} alt={dest.name} className="w-full h-48 object-cover" />
+                <div className="absolute bottom-0 bg-black bg-opacity-50 w-full text-white p-2 text-center font-semibold">
+                  {dest.name}
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      ))}
-    </Slider>
+          ))}
+        </Slider>
       </section>
 
       <section className="py-16 text-center">
-        <h2 className="text-3xl font-extrabold mb-12 text-gray-800 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:text-indigo-600 hover:scale-105"
-      >
-        Destinacionet më të vizituara 📍
-      </h2>
-        <div 
-         onClick={() => navigate("/destinations")}
-        className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
+        <h2
+          className="text-3xl mb-12 text-gray-800 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
+        >
+          Destinacionet më të vizituara <MapPin className="w-6 h-6 text-gray-600" />
+        </h2>
+        <div
+          onClick={() => navigate("/destinations")}
+          className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
           {[
             { img: tirana1Image, name: "Tiranë" },
             { img: sarande1Image, name: "Sarandë" },
@@ -300,9 +302,12 @@ function HomePage() {
       {/* Ofertat */}
       <section className="py-12 w-full px-4">
         <div className="max-w-8xl mx-auto px-4 text-center">
-          <div className="relative mb-10 inline-block">
-            <h2 className="text-3xl font-extrabold text-gray-800">Ofertat tona</h2>
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-24 h-[3px] bg-gradient-to-r from-transparent via-gray-500 to-transparent rounded-full"></div>
+          <div className="relative inline-block text-center w-full">
+            <h2
+          className="text-3xl mb-12 text-gray-800 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
+        >
+          Ofertat tona <Percent className="w-6 h-6 text-gray-600" />
+        </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {deals.map((deal) => (
@@ -347,7 +352,7 @@ function HomePage() {
       <section className="max-w-7xl mx-auto px-4 py-16 text-center">
         {/* Section heading */}
         <h2
-          className="relative text-3xl md:text-3xl font-bold mb-12 text-gray-800 tracking-tight inline-block overflow-hidden"
+          className="relative text-3xl md:text-3xl mb-12 text-gray-800 tracking-tight inline-block overflow-hidden"
           data-aos="fade-up"
           data-aos-duration="900"
         >
@@ -363,7 +368,6 @@ function HomePage() {
   `}</style>
         </h2>
 
-
         {/* Container with cards and colored blobs */}
         <div className="relative overflow-hidden rounded-3xl p-12 bg-gray-900">
           {/* Colored blobs inside container */}
@@ -375,61 +379,68 @@ function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative z-10">
             {/* Card */}
             <div
-              className="p-6 bg-gray-900/50 backdrop-blur-md rounded-3xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer relative z-10 group"
+              className="p-6 bg-gray-900/50 backdrop-blur-md rounded-3xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer relative z-10 group flex flex-col items-center text-center"
               data-aos="zoom-in"
               data-aos-delay="100"
             >
-              <div className="text-5xl mb-4 animate-bounce">🔍</div>
-              <h3 className="font-semibold text-xl mb-2 text-white transition-colors duration-500 group-hover:text-blue-400">
+              <div className="text-5xl mb-4 animate-bounce">
+                <Search className="w-10 h-10 text-indigo-800" />
+              </div>
+              <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-blue-400">
                 Kërko
               </h3>
-              <p className="text-gray-200 text-sm">
+              <p className="text-gray-400 text-sm">
                 Gjeni hotelin ideal sipas vendndodhjes, çmimit dhe datës.
               </p>
-              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-blue-400 to-pink-400 rounded-full mx-auto transition-all duration-500 group-hover:w-full"></div>
+              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-blue-400 to-pink-400 rounded-full transition-all duration-500 group-hover:w-full"></div>
             </div>
 
             {/* Card 2 */}
             <div
-              className="p-6 bg-gray-900/50 backdrop-blur-md rounded-3xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer relative z-10 group"
+              className="p-6 bg-gray-900/50 backdrop-blur-md rounded-3xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer relative z-10 group flex flex-col items-center text-center"
               data-aos="zoom-in"
               data-aos-delay="200"
             >
-              <div className="text-5xl mb-4 animate-bounce">🏨</div>
-              <h3 className="font-semibold text-xl mb-2 text-white transition-colors duration-500 group-hover:text-blue-400">
+              <div className="text-5xl mb-4 animate-bounce">
+                <Hotel className="w-10 h-10 text-indigo-800" />
+              </div>
+              <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-blue-400">
                 Zgjedh
               </h3>
-              <p className="text-gray-200 text-sm">
+              <p className="text-gray-400 text-sm">
                 Shfletoni ofertat dhe shikoni detajet e çdo hoteli.
               </p>
-              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-blue-400 to-pink-400 rounded-full mx-auto transition-all duration-500 group-hover:w-full"></div>
+              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-blue-400 to-pink-400 rounded-full transition-all duration-500 group-hover:w-full"></div>
             </div>
 
             {/* Card 3 */}
             <div
-              className="p-6 bg-gray-900/50 backdrop-blur-md rounded-3xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer relative z-10 group"
+              className="p-6 bg-gray-900/50 backdrop-blur-md rounded-3xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer relative z-10 group flex flex-col items-center text-center"
               data-aos="zoom-in"
               data-aos-delay="300"
             >
-              <div className="text-5xl mb-4 animate-bounce">✅</div>
-              <h3 className="font-semibold text-xl mb-2 text-white transition-colors duration-500 group-hover:text-blue-400">
+              <div className="text-5xl mb-4 animate-bounce">
+                <CircleCheck className="w-10 h-10 text-indigo-800" />
+              </div>
+              <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-blue-400">
                 Rezervo
               </h3>
-              <p className="text-gray-200 text-sm">
+              <p className="text-gray-400 text-sm">
                 Rezervoni me disa klikime dhe merrni konfirmimin menjëherë.
               </p>
-              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-blue-400 to-pink-400 rounded-full mx-auto transition-all duration-500 group-hover:w-full"></div>
+              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-blue-400 to-pink-400 rounded-full transition-all duration-500 group-hover:w-full"></div>
             </div>
+
           </div>
 
         </div>
       </section>
 
       {/* Pse të zgjedhësh */}
-      <section className="max-w-7xl mx-auto px-4 py-20 text-center relative overflow-hidden">
+      <section className="max-w-7xl mx-auto px-4 py-20 -mt-5 text-center relative overflow-hidden">
         {/* Section heading */}
         <h2
-          className="text-4xl md:text-3xl font-extrabold mb-16 text-gray-800 inline-block relative bg-clip-text animate-gradient-x"
+          className="text-4xl md:text-3xl mb-16 text-gray-800 inline-block relative bg-clip-text animate-gradient-x"
           data-aos="fade-down"
           data-aos-duration="1200"
         >
@@ -446,14 +457,14 @@ function HomePage() {
 
           {/* Cards */}
           {[
-            { icon: "🕒", title: "Rezervim i shpejtë", text: "Proces i lehtë dhe i menjëhershëm.", delay: 100 },
-            { icon: "💸", title: "Çmime më të mira", text: "Krahaso dhe gjej ofertën më të volitshme.", delay: 200 },
-            { icon: "🔒", title: "Rezervim i sigurt", text: "Të dhënat dhe pagesat mbrohen maksimalisht.", delay: 300 },
-            { icon: "📞", title: "Mbështetje 24/7", text: "Ekipi ynë është gjithmonë në dispozicionin tënd.", delay: 400 },
+            { icon: <Clock className="w-10 h-10 text-indigo-800" />, title: "Rezervim i shpejtë", text: "Proces i lehtë dhe i menjëhershëm.", delay: 100 },
+            { icon: <Euro className="w-10 h-10 text-indigo-800" />, title: "Çmime më të mira", text: "Krahaso dhe gjej ofertën më të volitshme.", delay: 200 },
+            { icon: <LockKeyhole className="w-10 h-10 text-indigo-800" />, title: "Rezervim i sigurt", text: "Të dhënat dhe pagesat mbrohen maksimalisht.", delay: 300 },
+            { icon: <Phone className="w-10 h-10 text-indigo-800" />, title: "Mbështetje 24/7", text: "Ekipi ynë është gjithmonë në dispozicionin tënd.", delay: 400 },
           ].map((item, i) => (
             <div
               key={i}
-              className="flex-1 min-w-[220px] max-w-[250px] p-8 bg-gray-800/70 backdrop-blur-md rounded-3xl shadow-2xl hover:shadow-4xl transform hover:-translate-y-4 hover:scale-110 hover:rotate-1 transition-all duration-700 cursor-pointer relative overflow-hidden group"
+              className="flex-1 min-w-[220px] max-w-[250px] p-8 bg-gray-800/70 backdrop-blur-md rounded-3xl shadow-2xl hover:shadow-4xl transform hover:-translate-y-4 hover:scale-110 hover:rotate-1 transition-all duration-700 cursor-pointer relative overflow-hidden group flex flex-col items-center text-center"
               data-aos="fade-up"
               data-aos-delay={item.delay}
               data-aos-duration="800"
@@ -462,24 +473,28 @@ function HomePage() {
               <div className="absolute -top-10 -right-10 w-24 h-24 bg-white/20 rounded-full blur-2xl animate-blob animation-delay-1000"></div>
 
               {/* Card content */}
-              <div className="relative z-10 text-center">
-                <div className="text-6xl mb-4 animate-pulse">{item.icon}</div>
-                <h3 className="font-bold text-xl mb-2 text-white group-hover:text-pink-400 transition-colors duration-500">{item.title}</h3>
-                <p className="text-sm text-gray-200">{item.text}</p>
+              <div className="relative z-10 flex flex-col items-center text-center">
+                <div className="text-7xl mb-4 animate-pulse">{item.icon}</div>
+                <h3 className="font-bold text-xl mb-2 text-gray-300 group-hover:text-indigo-400 transition-colors duration-500">{item.title}</h3>
+                <p className="text-sm text-gray-400">{item.text}</p>
 
                 {/* Animated underline */}
                 <div className="mt-4 h-1 w-12 bg-gradient-to-r from-pink-400 to-blue-400 rounded-full mx-auto scale-x-75 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
               </div>
             </div>
+
           ))}
         </div>
       </section>
 
       {/* Sugjerimet */}
-      <section className="py-12">
+      <section className="py-12 mb-10 -mt-10">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-10 transition-transform duration-500 hover:scale-105">
-            🌿 Sugjerime nga ne
+          <h2 className="text-3xl text-center text-gray-800 mb-10 transition-transform duration-500 hover:scale-105">
+            <div className="flex justify-center mb-2">
+              <MessageSquareText className="w-10 h-10" />
+            </div>
+            Sugjerime nga ne
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[himare0Image, brezovica0Image, tirana0Image].map((img, idx) => {
@@ -516,7 +531,7 @@ function HomePage() {
                   </div>
 
                   {/* Card content */}
-                  <h3 className="font-bold mb-2 mt-4 text-gray-800 group-hover:text-blue-700 transition-colors duration-500">
+                  <h3 className="font-bold mb-2 mt-4 text-gray-800">
                     {titles[idx]}
                   </h3>
                   <p className="text-sm text-gray-600 transition-all duration-500 max-h-16 overflow-hidden group-[.expanded]:max-h-96">
@@ -528,7 +543,7 @@ function HomePage() {
 
                   {/* Button */}
                   <button
-                    className="text-blue-600 font-semibold mt-3 hover:text-blue-400 hover:underline focus:outline-none transition-colors duration-300"
+                    className="text-blue-900 font-semibold mt-3 hover:underline focus:outline-none transition-colors duration-300"
                     data-text="Lexo më pak ←"
                     onClick={(e) => {
                       const card = e.target.closest(".group");
@@ -567,10 +582,14 @@ function HomePage() {
 
         {/* Përshtypjet e klientëve */}
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-3xl font-extrabold mb-16 relative inline-block">
-            💭 Përshtypjet e klientëve
+          <h2 className="text-3xl mb-16 relative inline-block text-center">
+            <div className="flex justify-center mb-2">
+              <MessageCircle className="w-10 h-10" />
+            </div>
+            Përshtypjet e klientëve
             <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-black to-blue-500 rounded-full animate-pulse"></span>
           </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {reviews.map((review, index) => (
               <div
@@ -605,7 +624,7 @@ function HomePage() {
           </div>
           <button
             onClick={scrollToTop}
-            className={`fixed bottom-8 right-8 p-4 rounded-full bg-indigo-600 text-white shadow-lg hover:bg-indigo-500 transition-opacity duration-300 z-50
+            className={`fixed bottom-8 right-8 p-4 rounded-full bg-gray-800 text-white shadow-lg hover:bg-gray-700 transition-opacity duration-300 z-50
           ${showTopButton ? "opacity-100" : "opacity-0 pointer-events-none"}`}
           >
             ▲

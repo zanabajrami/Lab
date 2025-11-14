@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { CalendarDays, User, BedDouble, ChevronDown } from "lucide-react";
+import { CalendarDays, User, BedDouble, ChevronDown, MapPin } from "lucide-react";
 import "../components/Datepicker.css";
 
 function CustomDropdown({ options, selected, setSelected, placeholder, allowInput }) {
@@ -105,7 +105,7 @@ function SearchBar() {
 
   {/* Destination */}
   <div className="flex items-center px-3 md:px-8 py-3 flex-1 w-full md:w-auto border-b md:border-b-0 md:border-r border-white/30 hover:bg-white/20 transition-colors duration-300 cursor-pointer rounded-2xl shadow-lg mb-2 md:mb-0">
-    <BedDouble className="w-5 md:w-6 h-5 md:h-6 text-white mr-2 md:mr-4" />
+    <MapPin className="w-5 md:w-6 h-5 md:h-6 text-white mr-2 md:mr-4" />
     <CustomDropdown
       options={destinations}
       selected={destination}
