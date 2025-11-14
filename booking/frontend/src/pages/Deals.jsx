@@ -48,7 +48,6 @@ function Deals({ favorites, setFavorites }) {
         <h1 className="text-3xl font-extrabold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-700 via-gray-700 to-gray-400 drop-shadow-lg tracking-wide uppercase">
           Our Deals
         </h1>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {dealsData.map((deal) => {
             const isExpanded = expandedIds.includes(deal.id);
@@ -116,7 +115,7 @@ function Deals({ favorites, setFavorites }) {
                   {/* Book button */}
                   <button
                     onClick={(e) => e.stopPropagation()}
-                    className="mt-4 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 transition-colors"
+                    className="mt-4 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 hover:text-indigo-300 transition-colors"
                   >
                     Book
                   </button>

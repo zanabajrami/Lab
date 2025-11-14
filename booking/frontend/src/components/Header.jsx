@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Contact from "../pages/Contact";
-import { Menu, X } from "lucide-react";
+import { Menu, X ,Heart} from "lucide-react";
 
 function Header() {
   const [showLogin, setShowLogin] = useState(false);
@@ -73,9 +73,9 @@ function Header() {
               </button>
               <Link
                 to="/favorites"
-                className="group relative text-indigo-100 font-serif text-base tracking-wide transition-all duration-300"
+                className="group relative text-indigo-100 font-serif text-base tracking-wide transition-all duration-300 flex items-center gap-1"
               >
-                Favorites 𖹭
+                Favorites <Heart className="w-4 h-4 text-indigo-100" />
                 <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </nav>
@@ -118,48 +118,48 @@ function Header() {
 
           </div>
 
-        {/* Mobile Menu */}
-{menuOpen && (
-  <div className="md:hidden mt-2 bg-gray-900/95 backdrop-blur-sm rounded-xl p-4 space-y-3 shadow-lg">
-    {navItems.map((item) => (
-      <Link
-        key={item.name}
-        to={item.to}
-        className="block text-indigo-100 font-medium"
-        onClick={() => setMenuOpen(false)}
-      >
-        {item.name}
-      </Link>
-    ))}
-    <button
-      onClick={() => { setShowContact(true); setMenuOpen(false); }}
-      className="block text-indigo-100 font-medium"
-    >
-      Contact
-    </button>
-    <Link
-      to="/favorites"
-      className="block text-indigo-100 font-medium"
-      onClick={() => setMenuOpen(false)}
-    >
-      Favorites 𖹭
-    </Link>
+          {/* Mobile Menu */}
+          {menuOpen && (
+            <div className="md:hidden mt-2 bg-gray-900/95 backdrop-blur-sm rounded-xl p-4 space-y-3 shadow-lg">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.to}
+                  className="block text-indigo-100 font-medium"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <button
+                onClick={() => { setShowContact(true); setMenuOpen(false); }}
+                className="block text-indigo-100 font-medium"
+              >
+                Contact
+              </button>
+              <Link
+                to="/favorites"
+                className="block text-indigo-100 font-medium"
+                onClick={() => setMenuOpen(false)}
+              >
+                Favorites
+              </Link>
 
-    {/* Login / SignUp për mobile */}
-    <button
-      onClick={() => { setShowLogin(true); setShowRegister(false); setMenuOpen(false); }}
-      className="block w-full text-left text-indigo-200 font-semibold mt-2"
-    >
-      Login
-    </button>
-    <button
-      onClick={() => { setShowRegister(true); setShowLogin(false); setMenuOpen(false); }}
-      className="block w-full text-left text-indigo-100 font-semibold mt-1"
-    >
-      Sign Up
-    </button>
-  </div>
-)}
+              {/* Login / SignUp për mobile */}
+              <button
+                onClick={() => { setShowLogin(true); setShowRegister(false); setMenuOpen(false); }}
+                className="block w-full text-left text-indigo-200 font-semibold mt-2"
+              >
+                Login
+              </button>
+              <button
+                onClick={() => { setShowRegister(true); setShowLogin(false); setMenuOpen(false); }}
+                className="block w-full text-left text-indigo-100 font-semibold mt-1"
+              >
+                Sign Up
+              </button>
+            </div>
+          )}
         </div>
       </motion.header>
 

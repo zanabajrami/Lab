@@ -420,7 +420,7 @@ export default function HotelsPage() {
                     : "View Hotel →"}
               </p>
 
-              <button className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 hover:transition-colors">
+              <button className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 hover:text-indigo-300 hover:transition-colors">
                 Book
               </button>
             </div>

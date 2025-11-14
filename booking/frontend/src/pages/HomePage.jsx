@@ -214,7 +214,7 @@ function HomePage() {
 
               {/* Teksti që shfaqet kur hover */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 bg-black/40 text-white text-m font-semibold">
-                Zbulo më shumë →
+                More →
               </div>
             </div>
           ))}
@@ -244,7 +244,7 @@ function HomePage() {
              hover:from-gray-700 hover:via-gray-800 hover:to-gray-900
              ring-1 ring-gray-700 hover:ring-gray-500"
               >
-                Shiko më shumë
+                More
               </Link>
             </div>
           </div>
@@ -268,7 +268,7 @@ function HomePage() {
              hover:from-gray-700 hover:via-gray-800 hover:to-gray-900
              ring-1 ring-gray-700 hover:ring-gray-500"
               >
-                Shiko më shumë
+                More
               </Link>
             </div>
           </div>
@@ -292,7 +292,7 @@ function HomePage() {
              hover:from-gray-700 hover:via-gray-800 hover:to-gray-900
              ring-1 ring-gray-700 hover:ring-gray-500"
               >
-                Shiko më shumë
+                More
               </Link>
             </div>
           </div>
@@ -304,10 +304,10 @@ function HomePage() {
         <div className="max-w-8xl mx-auto px-4 text-center">
           <div className="relative inline-block text-center w-full">
             <h2
-          className="text-3xl mb-12 text-gray-800 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
-        >
-          Ofertat tona <Percent className="w-6 h-6 text-gray-600" />
-        </h2>
+              className="text-3xl mb-12 text-gray-800 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
+            >
+              <Percent className="w-5 h-5 text-gray-600" /> Ofertat tona <Percent className="w-5 h-5 text-gray-600" />
+            </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {deals.map((deal) => (
@@ -335,14 +335,9 @@ function HomePage() {
           <div className="text-center mt-6">
             <Link
               to="/deals"
-              className="relative inline-block px-8 py-3 rounded-md font-bold text-gray-800 
-             bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300
-             shadow-lg transition-all duration-300
-             hover:from-gray-400 hover:via-gray-200 hover:to-gray-400
-             hover:scale-105 hover:shadow-2xl
-             focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+              className="inline-block px-6 py-2 rounded-md text-gray-800 bg-gray-200 border border-gray-400 hover:bg-gray-300 transition-colors duration-200"
             >
-              Shiko të gjitha ofertat
+             Më shumë oferta
             </Link>
 
           </div>
@@ -492,7 +487,7 @@ function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl text-center text-gray-800 mb-10 transition-transform duration-500 hover:scale-105">
             <div className="flex justify-center mb-2">
-              <MessageSquareText className="w-10 h-10" />
+              <MessageSquareText className="w-8 h-8 text-gray-600" />
             </div>
             Sugjerime nga ne
           </h2>
@@ -584,7 +579,7 @@ function HomePage() {
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
           <h2 className="text-3xl mb-16 relative inline-block text-center">
             <div className="flex justify-center mb-2">
-              <MessageCircle className="w-10 h-10" />
+              <MessageCircle className="w-8 h-8 text-gray-600" />
             </div>
             Përshtypjet e klientëve
             <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-black to-blue-500 rounded-full animate-pulse"></span>

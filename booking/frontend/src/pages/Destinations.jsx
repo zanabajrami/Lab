@@ -226,10 +226,8 @@ export default function ZigZagCarousel() {
 
     return (
         <div className="min-h-screen bg-gray-100 p-8">
-            <h2 className="text-3xl mb-10 text-gray-700 flex items-center justify-center gap-4">
-                <span className="w-16 h-[2px] bg-gray-400 rounded-full"></span>
-                <span>Destinacionet</span>
-                <span className="w-16 h-[2px] bg-gray-400 rounded-full"></span>
+            <h2 className="text-3xl font-extrabold mb-10 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-700 via-gray-700 to-gray-400 drop-shadow-lg tracking-wide uppercase">
+                Destinations
             </h2>
             <Slider {...settings}>
                 {destinations.map((d, index) => {
@@ -353,7 +351,7 @@ export default function ZigZagCarousel() {
 
             <section className="py-20 text-gray-800 px-6 md:px-20">
                 <h2
-                    className="text-3xl mb-12 text-gray-800 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                    className="text-3xl mb-12 -mt-10 text-gray-800 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
                 >
                     Destinacionet më të vizituara <MapPin className="w-6 h-6 text-gray-600" />
                 </h2>
