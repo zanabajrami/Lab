@@ -6,111 +6,192 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { BedDouble, Users, HandCoins } from "lucide-react";
 
-//Prishtina
-import hotel1 from "../images/prishtina4.jpg";
+//Hotel
+import hotel1 from "../images/hotel1.jpg";
 import hotel1_1 from "../images/hotel1_1.jpg";
 import hotel1_2 from "../images/hotel1_2.avif";
 
-import hotel2 from "../images/prishtina5.jpg";
+import hotel2 from "../images/hotel2.jpg";
 import hotel2_1 from "../images/hotel2_1.jpg";
 import hotel2_2 from "../images/hotel2_2.jpg";
 
-import hotel3 from "../images/prishtina6.jpg";
+import hotel3 from "../images/hotel3.jpg";
 import hotel3_1 from "../images/hotel3_1.jpg";
 import hotel3_2 from "../images/hotel3_2.png";
 
-import hotel4 from "../images/prishtina7.webp";
+import hotel4 from "../images/hotel4.webp";
 import hotel4_1 from "../images/hotel4_1.webp";
 import hotel4_2 from "../images/hotel4_2.jpg";
 import hotel4_3 from "../images/hotel4_3.jpg";
 
-import hotel5 from "../images/prishtina8.jpg";
+import hotel5 from "../images/hotel5.jpg";
 import hotel5_1 from "../images/hotel5_1.jpg";
 import hotel5_2 from "../images/hotel5_2.jpg";
 import hotel5_3 from "../images/hotel5_3.jpg";
 
-import hotel20 from "../images/prishtina10.jpg";
+import hotel6 from "../images/hotel6.jpg";
+import hotel6_1 from "../images/hotel6_1.jpg";
+import hotel6_2 from "../images/hotel6_2.jpg";
+import hotel6_3 from "../images/hotel6_3.jpg";
+
+import hotel7 from "../images/hotel7.webp";
+import hotel7_1 from "../images/hotel7_1.jpg";
+import hotel7_2 from "../images/hotel7_2.jpg";
+import hotel7_3 from "../images/hotel7_3.webp";
+
+import hotel11 from "../images/hotel11.jpg";
+import hotel11_1 from "../images/hotel11_1.jpg";
+import hotel11_2 from "../images/hotel11_2.webp";
+import hotel11_3 from "../images/hotel11_3.jpg";
+
+import hotel12 from "../images/hotel12.jpg";
+import hotel12_1 from "../images/hotel12_1.jpg";
+import hotel12_2 from "../images/hotel12_2.jpg";
+import hotel12_3 from "../images/hotel12_3.jpg";
+import hotel12_4 from "../images/hotel12_4.jpg";
+
+import hotel13 from "../images/hotel13.webp";
+import hotel13_1 from "../images/hotel13_1.jpg";
+import hotel13_2 from "../images/hotel13_2.jpg";
+import hotel13_3 from "../images/hotel13_3.jpg";
+
+import hotel14 from "../images/hotel14.jpg";
+import hotel14_1 from "../images/hotel14_1.avif";
+import hotel14_2 from "../images/hotel14_2.jpg";
+import hotel14_3 from "../images/hotel14_3.jpg";
+
+import hotel15 from "../images/hotel15.jpg";
+import hotel15_1 from "../images/hotel15_1.jpg";
+import hotel15_2 from "../images/hotel15_2.jpg";
+import hotel15_3 from "../images/hotel15_3.jpg";
+
+import hotel16 from "../images/hotel16.jpg";
+import hotel16_1 from "../images/hotel16_1.webp";
+import hotel16_2 from "../images/hotel16_2.jpg";
+import hotel16_3 from "../images/hotel16_3.webp";
+
+import hotel17 from "../images/hotel17.jpg";
+import hotel17_1 from "../images/hotel17_1.jpg";
+import hotel17_2 from "../images/hotel17_2.jpg";
+import hotel17_3 from "../images/hotel17_3.jpg";
+
+import hotel18 from "../images/hotel18.jpg";
+import hotel18_1 from "../images/hotel18_1.jpg";
+import hotel18_2 from "../images/hotel18_2.jpg";
+import hotel18_3 from "../images/hotel18_3.jpg";
+import hotel18_4 from "../images/hotel18_4.jpg";
+
+import hotel19 from "../images/hotel19.webp";
+import hotel19_1 from "../images/hotel19_1.jpg";
+import hotel19_2 from "../images/hotel19_2.jpg";
+import hotel19_3 from "../images/hotel19_3.jpg";
+
+import hotel20 from "../images/hotel20.jpg";
 import hotel20_1 from "../images/hotel20_1.jpg";
 import hotel20_2 from "../images/hotel20_2.avif";
 import hotel20_3 from "../images/hotel20_3.jpg";
 import hotel20_4 from "../images/hotel20_4.jpg";
 
-import hotel21 from "../images/prishtina11.jpg";
+import hotel21 from "../images/hotel21.jpg";
 import hotel21_1 from "../images/hotel21_1.jpg";
 import hotel21_2 from "../images/hotel21_2.jpg";
 import hotel21_3 from "../images/hotel21_3.jpg";
 
-import hotel22 from "../images/prishtina12.jpg";
+import hotel22 from "../images/hotel22.jpg";
 import hotel22_1 from "../images/hotel22_1.jpg";
 import hotel22_2 from "../images/hotel22_2.jpg";
 import hotel22_3 from "../images/hotel22_3.jpg";
 import hotel22_4 from "../images/hotel22_4.jpg";
 
-import hotel23 from "../images/prishtina13.jpg";
+import hotel23 from "../images/hotel23.jpg";
 import hotel23_1 from "../images/hotel23_1.jpg";
 import hotel23_2 from "../images/hotel23_2.jpg";
 import hotel23_3 from "../images/hotel23_3.jpg";
 
-import hotel24 from "../images/prishtina9.webp";
+import hotel24 from "../images/hotel24.webp";
 import hotel24_1 from "../images/hotel24_1.jpg";
 import hotel24_2 from "../images/hotel24_2.webp";
 import hotel24_3 from "../images/hotel24_3.webp";
 import hotel24_4 from "../images/hotel24_4.webp";
 
-import hotel25 from "../images/prishtina14.jpg";
+import hotel25 from "../images/hotel25.jpg";
 import hotel25_1 from "../images/hotel25_1.jpg";
 import hotel25_2 from "../images/hotel25_2.jpg";
 import hotel25_3 from "../images/hotel25_3.jpg";
 
-import hotel26 from "../images/prishtina15.jpg";
+import hotel26 from "../images/hotel26.jpg";
 import hotel26_1 from "../images/hotel26_1.jpg";
 import hotel26_2 from "../images/hotel26_2.jpg";
 import hotel26_3 from "../images/hotel26_3.jpg";
 
-import hotel27 from "../images/prishtina16.jpg";
+import hotel27 from "../images/hotel27.jpg";
 import hotel27_1 from "../images/hotel27_1.jpg";
 import hotel27_2 from "../images/hotel27_2.jpg";
 import hotel27_3 from "../images/hotel27_3.jpg";
 
-import hotel28 from "../images/prishtina19.jpg";
+import hotel28 from "../images/hotel28.jpg";
 import hotel28_1 from "../images/hotel28_1.jpg";
 import hotel28_2 from "../images/hotel28_2.jpg";
 import hotel28_3 from "../images/hotel28_3.jpg";
 import hotel28_4 from "../images/hotel28_4.jpg";
 
-import hotel29 from "../images/prishtina17.jpg";
+import hotel29 from "../images/hotel29.jpg";
 import hotel29_1 from "../images/hotel29_1.jpg";
 import hotel29_2 from "../images/hotel29_2.jpg";
 import hotel29_3 from "../images/hotel29_3.jpg";
 
-import hotel30 from "../images/prishtina18.jpg";
+import hotel30 from "../images/hotel30.jpg";
 import hotel30_1 from "../images/hotel30_1.jpg";
 import hotel30_2 from "../images/hotel30_2.jpg";
 import hotel30_3 from "../images/hotel30_3.jpg";
 import hotel30_4 from "../images/hotel30_4.jpg";
 
-import hotel31 from "../images/prishtina20.jpg";
+import hotel31 from "../images/hotel31.jpg";
 import hotel31_1 from "../images/hotel31_1.jpg";
 import hotel31_2 from "../images/hotel31_2.jpg";
 import hotel31_3 from "../images/hotel31_3.jpg";
 
-import hotel32 from "../images/prishtina21.jpg";
+import hotel32 from "../images/hotel32.jpg";
 import hotel32_1 from "../images/hotel32_1.jpg";
 import hotel32_2 from "../images/hotel32_2.jpg";
 import hotel32_3 from "../images/hotel32_3.jpg";
 
-//Brezovica
-import hotel6 from "../images/brezovica5.jpg";
-import hotel6_1 from "../images/hotel6_1.jpg";
-import hotel6_2 from "../images/hotel6_2.jpg";
-import hotel6_3 from "../images/hotel6_3.jpg";
+import hotel33 from "../images/hotel33.avif";
+import hotel33_1 from "../images/hotel33_1.avif";
+import hotel33_2 from "../images/hotel33_2.avif";
+import hotel33_3 from "../images/hotel33_3.webp";
 
-import hotel7 from "../images/brezovica6.webp";
-import hotel7_1 from "../images/hotel7_1.jpg";
-import hotel7_2 from "../images/hotel7_2.jpg";
-import hotel7_3 from "../images/hotel7_3.webp";
+import hotel34 from "../images/hotel34.jpg";
+import hotel34_1 from "../images/hotel34_1.jpg";
+import hotel34_2 from "../images/hotel34_2.jpg";
+import hotel34_3 from "../images/hotel34_3.jpg";
 
-import villa1 from "../images/brezovica10.avif";
+import hotel35 from "../images/hotel35.jpg";
+import hotel35_1 from "../images/hotel35_1.jpg";
+import hotel35_2 from "../images/hotel35_2.jpg";
+import hotel35_3 from "../images/hotel35_3.jpg";
+
+import hotel36 from "../images/hotel36.jpg";
+import hotel36_1 from "../images/hotel36_1.jpg";
+import hotel36_2 from "../images/hotel36_2.jpg";
+import hotel36_3 from "../images/hotel36_3.jpg";
+
+import hotel37 from "../images/hotel37.jpg";
+import hotel37_1 from "../images/hotel37_1.jpg";
+import hotel37_2 from "../images/hotel37_2.jpg";
+
+import hotel38 from "../images/hotel38.jpg";
+import hotel38_1 from "../images/hotel38_1.jpg";
+import hotel38_2 from "../images/hotel38_2.jpg";
+import hotel38_3 from "../images/hotel38_3.jpg";
+
+import hotel39 from "../images/hotel39.jpg";
+import hotel39_1 from "../images/hotel39_1.jpg";
+import hotel39_2 from "../images/hotel39_2.jpg";
+import hotel39_3 from "../images/hotel39_3.jpg";
+
+//Villa
+import villa1 from "../images/villa1.avif";
 import villa1_1 from "../images/villa1_1.avif";
 import villa1_2 from "../images/villa1_2.avif";
 import villa1_3 from "../images/villa1_3.avif";
@@ -149,18 +230,18 @@ import villa7_1 from "../images/villa7_1.avif";
 import villa7_2 from "../images/villa7_2.avif";
 import villa7_3 from "../images/villa7_3.avif";
 
-import villa8 from "../images/brezovica7.jpg";
+import villa8 from "../images/villa8.jpg";
 import villa8_1 from "../images/villa8_1.jpg";
 import villa8_2 from "../images/villa8_2.jpg";
 import villa8_3 from "../images/villa8_3.jpg";
 import villa8_4 from "../images/villa8_4.avif";
 
-import villa9 from "../images/brezovica8.jpg";
+import villa9 from "../images/villa9.jpg";
 import villa9_1 from "../images/villa9_1.jpg";
 import villa9_2 from "../images/villa9_2.jpg";
 import villa9_3 from "../images/villa9_3.jpg";
 
-import villa10 from "../images/brezovica9.avif";
+import villa10 from "../images/villa10.avif";
 import villa10_1 from "../images/villa10_1.avif";
 import villa10_2 from "../images/villa10_2.avif";
 import villa10_3 from "../images/villa10_3.avif";
@@ -217,63 +298,81 @@ import villa20_2 from "../images/villa20_2.avif";
 import villa20_3 from "../images/villa20_3.avif";
 import villa20_4 from "../images/villa20_4.avif";
 
-//Sarande
-import hotel11 from "../images/sarande4.jpg";
-import hotel11_1 from "../images/hotel11_1.jpg";
-import hotel11_2 from "../images/hotel11_2.webp";
-import hotel11_3 from "../images/hotel11_3.jpg";
+import villa21 from "../images/villa21.jpg";
+import villa21_1 from "../images/villa21_1.jpg";
+import villa21_2 from "../images/villa21_2.jpg";
+import villa21_3 from "../images/villa21_3.jpg";
 
-import hotel12 from "../images/sarande5.jpg";
-import hotel12_1 from "../images/hotel12_1.jpg";
-import hotel12_2 from "../images/hotel12_2.jpg";
-import hotel12_3 from "../images/hotel12_3.jpg";
-import hotel12_4 from "../images/hotel12_4.jpg";
+import villa22 from "../images/villa22.avif";
+import villa22_1 from "../images/villa22_1.avif";
+import villa22_2 from "../images/villa22_2.avif";
+import villa22_3 from "../images/villa22_3.avif";
+import villa22_4 from "../images/villa22_4.avif";
 
-import hotel13 from "../images/sarande6.webp";
-import hotel13_1 from "../images/hotel13_1.jpg";
-import hotel13_2 from "../images/hotel13_2.jpg";
-import hotel13_3 from "../images/hotel13_3.jpg";
+import villa23 from "../images/villa23.avif";
+import villa23_1 from "../images/villa23_1.avif";
+import villa23_2 from "../images/villa23_2.avif";
+import villa23_3 from "../images/villa23_3.avif";
+import villa23_4 from "../images/villa23_4.avif";
 
-import hotel14 from "../images/sarande7.jpg";
-import hotel14_1 from "../images/hotel14_1.avif";
-import hotel14_2 from "../images/hotel14_2.jpg";
-import hotel14_3 from "../images/hotel14_3.jpg";
+//Apartment
+import apartment1 from "../images/apartment1.jpg";
+import apartment1_1 from "../images/apartment1_1.jpg";
+import apartment1_2 from "../images/apartment1_2.jpg";
 
-//Himare
-import hotel15 from "../images/himare3.jpg";
-import hotel15_1 from "../images/hotel15_1.jpg";
-import hotel15_2 from "../images/hotel15_2.jpg";
-import hotel15_3 from "../images/hotel15_3.jpg";
+import apartment2 from "../images/apartment2.avif";
+import apartment2_1 from "../images/apartment2_1.avif";
+import apartment2_2 from "../images/apartment2_2.avif";
+import apartment2_3 from "../images/apartment2_3.avif";
 
-import hotel16 from "../images/himare4.jpg";
-import hotel16_1 from "../images/hotel16_1.webp";
-import hotel16_2 from "../images/hotel16_2.jpg";
-import hotel16_3 from "../images/hotel16_3.webp";
+import apartment3 from "../images/apartment3.avif";
+import apartment3_1 from "../images/apartment3_1.avif";
+import apartment3_2 from "../images/apartment3_2.avif";
+import apartment3_3 from "../images/apartment3_3.avif";
 
-import hotel17 from "../images/himare5.jpg";
-import hotel17_1 from "../images/hotel17_1.jpg";
-import hotel17_2 from "../images/hotel17_2.jpg";
-import hotel17_3 from "../images/hotel17_3.jpg";
+import apartment4 from "../images/apartment4.avif";
+import apartment4_1 from "../images/apartment4_1.webp";
+import apartment4_2 from "../images/apartment4_2.jpeg";
+import apartment4_3 from "../images/apartment4_3.avif";
 
-import hotel18 from "../images/himare6.jpg";
-import hotel18_1 from "../images/hotel18_1.jpg";
-import hotel18_2 from "../images/hotel18_2.jpg";
-import hotel18_3 from "../images/hotel18_3.jpg";
-import hotel18_4 from "../images/hotel18_4.jpg";
+import apartment5 from "../images/apartment5.jpeg";
+import apartment5_1 from "../images/apartment5_1.jpeg";
+import apartment5_2 from "../images/apartment5_2.jpeg";
+import apartment5_3 from "../images/apartment5_3.jpeg";
 
-import hotel19 from "../images/himare7.webp";
-import hotel19_1 from "../images/hotel19_1.jpg";
-import hotel19_2 from "../images/hotel19_2.jpg";
-import hotel19_3 from "../images/hotel19_3.jpg";
+import apartment6 from "../images/apartment6.avif";
+import apartment6_1 from "../images/apartment6_1.avif";
+import apartment6_2 from "../images/apartment6_2.jpeg";
+import apartment6_3 from "../images/apartment6_3.jpeg";
 
+import apartment7 from "../images/apartment7.avif";
+import apartment7_1 from "../images/apartment7_1.jpeg";
+import apartment7_2 from "../images/apartment7_2.jpeg";
+import apartment7_3 from "../images/apartment7_3.jpeg";
 
+import apartment8 from "../images/apartment8.jpg";
+import apartment8_1 from "../images/apartment8_1.jpg";
+import apartment8_2 from "../images/apartment8_2.jpg";
+import apartment8_3 from "../images/apartment8_3.jpg";
+
+import apartment9 from "../images/apartment9.jpg";
+import apartment9_1 from "../images/apartment9_1.jpg";
+import apartment9_2 from "../images/apartment9_2.jpg";
+
+import apartment10 from "../images/apartment10.jpg";
+import apartment10_1 from "../images/apartment10_1.jpg";
+import apartment10_2 from "../images/apartment10_2.jpg";
+
+import apartment11 from "../images/apartment11.jpg";
+import apartment11_1 from "../images/apartment11_1.jpg";
+import apartment11_2 from "../images/apartment11_2.jpg";
 
 const hotels = [
-  { name: "Four Points by Sheraton Prishtina", location: "Prishtina", rating: 4.8, images: [hotel1, hotel1_1, hotel1_2], description: "Hotel modern me spa, pishinë të brendshme dhe restorant luksoz me pamje panoramike.", rooms: 1, capacity: 2, price: 130, amenities: ["Spa", "Indoor Pool", "Free Wi-Fi", "Breakfast Included", "Parking", "Fitness Center"] },
-  { name: "Swiss Diamond Hotel Prishtina", location: "Prishtina", rating: 4.9, images: [hotel2, hotel2_1, hotel2_2], description: "Një hotel 5-yje me spa, restorante ndërkombëtare dhe dhoma elegante në qendër të qytetit.", rooms: 2, capacity: 4, price: 160, amenities: ["Luxury Spa", "Indoor Pool", "Free Breakfast", "Parking", "Wi-Fi", "Room Service 24/7"] },
-  { name: "Hotel Sirius", location: "Prishtina", rating: 4.7, images: [hotel3, hotel3_1, hotel3_2], description: "Ofron ambiente moderne, bar rooftop me pamje të mahnitshme dhe kuzhinë bashkëkohore.", rooms: 1, capacity: 2, price: 110, amenities: ["Rooftop Bar", "Restaurant", "Wi-Fi", "Breakfast", "Meeting Rooms", "Parking"] },
-  { name: "Hotel Garden", location: "Prishtina", rating: 4.6, images: [hotel4, hotel4_1, hotel4_2, hotel4_3], description: "Hotel i qetë me kopshte të bukura, ambient relaksues dhe restorant tradicional kosovar.", rooms: 1, capacity: 2, price: 90, amenities: ["Garden View", "Pool", "Breakfast", "Wi-Fi", "Free Parking", "Pet Friendly"] },
-  { name: "Hotel Nartel", location: "Prishtina", rating: 4.5, images: [hotel5, hotel5_1, hotel5_2, hotel5_3], description: "Ideal për udhëtarë biznesi, me sallë takimesh moderne dhe parkim falas.", rooms: 1, capacity: 2, price: 85, amenities: ["Business Center", "Wi-Fi", "Parking", "Conference Room"] },
+  { name: "Four Points by Sheraton Prishtina", location: "Prishtina", rating: 4.8, images: [hotel1, hotel1_1, hotel1_2], description: "Hotel modern me spa, pishinë të brendshme dhe restorant luksoz me pamje panoramike.", rooms: 1, capacity: 2, price: 129, amenities: ["Spa", "Indoor Pool", "Free Wi-Fi", "Breakfast Included", "Parking", "Fitness Center"] },
+  { name: "Swiss Diamond Hotel Prishtina", location: "Prishtina", rating: 4.9, images: [hotel2, hotel2_1, hotel2_2], description: "Një hotel 5-yje me spa, restorante ndërkombëtare dhe dhoma elegante në qendër të qytetit.", rooms: 2, capacity: 4, price: 170, amenities: ["Luxury Spa", "Indoor Pool", "Free Breakfast", "Parking", "Wi-Fi", "Room Service 24/7"] },
+  { name: "Hotel Sirius", location: "Prishtina", rating: 4.7, images: [hotel3, hotel3_1, hotel3_2], description: "Ofron ambiente moderne, bar rooftop me pamje të mahnitshme dhe kuzhinë bashkëkohore.", rooms: 1, capacity: 2, price: 115, amenities: ["Rooftop Bar", "Restaurant", "Wi-Fi", "Breakfast", "Meeting Rooms", "Parking"] },
+  { name: "Hotel Garden", location: "Prishtina", rating: 4.6, images: [hotel4, hotel4_1, hotel4_2, hotel4_3], description: "Hotel i qetë me kopshte të bukura, ambient relaksues dhe restorant tradicional kosovar.", rooms: 1, capacity: 2, price: 127, amenities: ["Garden View", "Pool", "Breakfast", "Wi-Fi", "Free Parking", "Pet Friendly"] },
+  { name: "Hotel Nartel", location: "Prishtina", rating: 4.5, images: [hotel5, hotel5_1, hotel5_2, hotel5_3], description: "Ideal për udhëtarë biznesi, me sallë takimesh moderne dhe parkim falas.", rooms: 1, capacity: 2, price: 80, amenities: ["Business Center", "Wi-Fi", "Parking", "Conference Room"] },
   { name: "Brezovica Hotel", location: "Brezovicë", rating: 4.6, images: [hotel6, hotel6_1, hotel6_2, hotel6_3], description: "Hotel malor pranë pistave të skijimit me sauna, spa dhe dhoma me pamje fantastike.", rooms: 1, capacity: 2, price: 120, amenities: ["Ski Access", "Spa", "Sauna", "Restaurant", "Parking", "Wi-Fi"] },
   { name: "Hotel Pine", location: "Brezovicë", rating: 4.7, images: [hotel7, hotel7_1, hotel7_2, hotel7_3], description: "Hotel komod me stil alpin, shumë afër teleferikut, i përshtatshëm për çifte dhe familje.", rooms: 1, capacity: 3, price: 115, amenities: ["Mountain View", "Wi-Fi", "Spa", "Restaurant", "Free Parking"] },
   { name: "Monte Villa", location: "near Brezovicë", rating: 4.9, images: [villa8, villa8_1, villa8_2, villa8_3, villa8_4], description: "Një villë ekskluzive në natyrë me pamje fantastike.", rooms: 2, capacity: 5, price: 280, amenities: ["Luxury Spa", "Gourmet Restaurant", "Indoor Pool", "Wi-Fi", "Valet Parking"] },
@@ -288,18 +387,18 @@ const hotels = [
   { name: "Panorama Hotel", location: "Himarë", rating: 2.7, images: [hotel17, hotel17_1, hotel17_2, hotel17_3], description: "Me pamje panoramike të detit, pishinë të hapur dhe atmosferë relaksuese.", rooms: 1, capacity: 3, price: 110, amenities: ["Sea View", "Outdoor Pool", "Wi-Fi", "Breakfast", "Parking"] },
   { name: "Sea View Hotel Himara", location: "Himarë", rating: 4.6, images: [hotel18, hotel18_1, hotel18_2, hotel18_3, hotel18_4], description: "Hotel i ri me dizajn modern dhe ballkone me pamje të mrekullueshme.", rooms: 1, capacity: 2, price: 100, amenities: ["Balcony", "Wi-Fi", "Breakfast", "Sea View", "Air Conditioning"] },
   { name: "Dimitri Hotel", location: "Himarë", rating: 4.8, images: [hotel19, hotel19_1, hotel19_2, hotel19_3], description: "Hotel familjar me mikpritje tradicionale dhe mëngjes vendas shumë të shijshëm.", rooms: 1, capacity: 2, price: 95, amenities: ["Pool", "Wi-Fi", "Local Breakfast", "Free Parking", "Family Friendly"] },
-  { name: "Hotel Derand", location: "Prishtina", rating: 4.7, images: [hotel20, hotel20_1, hotel20_2, hotel20_3, hotel20_4], description: "Hotel modern dhe i qetë në Prishtinë, me dhoma elegante, mëngjes të pasur dhe staf shumë miqësor.", rooms: 2, capacity: 4, price: 120, amenities: ["Wi-Fi", "Breakfast", "Parking", "Restaurant", "Air Conditioning", "24h Reception"] },
-  { name: "Ruby Hotel Prishtina", location: "Prishtina", rating: 4.6, images: [hotel21, hotel21_1, hotel21_2, hotel21_3], description: "Hotel modern afër qendrës së Prishtinës, me dizajn elegant, mëngjes të shkëlqyer dhe ambiente të rehatshme.", rooms: 1, capacity: 2, price: 100, amenities: ["Wi-Fi", "Breakfast", "Parking", "Air Conditioning", "24h Reception"] },
-  { name: "Venus Hotel", location: "Prishtina", rating: 4.8, images: [hotel22, hotel22_1, hotel22_2, hotel22_3, hotel22_4], description: "Hotel luksoz me spa, pishinë të madhe dhe restorant elegant, ideal për pushime relaksuese pranë Prishtinës.", rooms: 2, capacity: 4, price: 150, amenities: ["Spa", "Indoor Pool", "Restaurant", "Free Wi-Fi", "Parking", "Fitness Center"] },
-  { name: "Hotel MANAMI", location: "Prishtina", rating: 4.7, images: [hotel23, hotel23_1, hotel23_2, hotel23_3], description: "Hotel butik elegant në qendër të Prishtinës me dizajn modern, restorant gourmet dhe ambiente relaksuese.", rooms: 1, capacity: 2, price: 110, amenities: ["Wi-Fi", "Breakfast", "Restaurant", "Parking", "Air Conditioning", "24h Reception"] },
+  { name: "Hotel Derand", location: "Prishtina", rating: 4.7, images: [hotel20, hotel20_1, hotel20_2, hotel20_3, hotel20_4], description: "Hotel modern dhe i qetë në Prishtinë, me dhoma elegante, mëngjes të pasur dhe staf shumë miqësor.", rooms: 1, capacity: 2, price: 127, amenities: ["Wi-Fi", "Breakfast", "Parking", "Restaurant", "Air Conditioning", "24h Reception"] },
+  { name: "Ruby Hotel Prishtina", location: "Prishtina", rating: 4.6, images: [hotel21, hotel21_1, hotel21_2, hotel21_3], description: "Hotel modern afër qendrës së Prishtinës, me dizajn elegant, mëngjes të shkëlqyer dhe ambiente të rehatshme.", rooms: 1, capacity: 2, price: 67, amenities: ["Wi-Fi", "Breakfast", "Parking", "Air Conditioning", "24h Reception"] },
+  { name: "Venus Hotel", location: "Prishtina", rating: 4.8, images: [hotel22, hotel22_1, hotel22_2, hotel22_3, hotel22_4], description: "Hotel luksoz me spa, pishinë të madhe dhe restorant elegant, ideal për pushime relaksuese pranë Prishtinës.", rooms: 2, capacity: 4, price: 140, amenities: ["Spa", "Indoor Pool", "Restaurant", "Free Wi-Fi", "Parking", "Fitness Center"] },
+  { name: "Hotel MANAMI", location: "Prishtina", rating: 4.7, images: [hotel23, hotel23_1, hotel23_2, hotel23_3], description: "Hotel butik elegant në qendër të Prishtinës me dizajn modern, restorant gourmet dhe ambiente relaksuese.", rooms: 1, capacity: 2, price: 117, amenities: ["Wi-Fi", "Breakfast", "Restaurant", "Parking", "Air Conditioning", "24h Reception"] },
   { name: "Hotel Diamond Prishtina", location: "Prishtina", rating: 4.9, images: [hotel24, hotel24_1, hotel24_2, hotel24_3, hotel24_4], description: "Hotel luksoz me spa, pishinë dhe kazino, vetëm disa minuta nga qendra e qytetit.", rooms: 1, capacity: 2, price: 180, amenities: ["Spa", "Indoor Pool", "Casino", "Restaurant", "Parking", "Wi-Fi"] },
-  { name: "Hotel Prishtina", location: "Prishtina", rating: 4.5, images: [hotel25, hotel25_1, hotel25_2, hotel25_3], description: "Hotel komod në qendër të Prishtinës me dhoma të rehatshme, mëngjes të pasur dhe staf mikpritës.", rooms: 1, capacity: 2, price: 90, amenities: ["Wi-Fi", "Pool", "Breakfast", "Parking", "Restaurant", "Air Conditioning"] },
-  { name: "Hotel Opera", location: "Prishtina", rating: 4.6, images: [hotel26, hotel26_1, hotel26_2, hotel26_3], description: "Hotel modern dhe elegant pranë qendrës së Prishtinës, me restorant, mëngjes të pasur dhe dhoma të rehatshme.", rooms: 1, capacity: 2, price: 105, amenities: ["Free Wi-Fi", "Breakfast", "Parking", "Restaurant", "Air Conditioning", "24h Reception"] },
+  { name: "Hotel Prishtina", location: "Prishtina", rating: 4.5, images: [hotel25, hotel25_1, hotel25_2, hotel25_3], description: "Hotel komod në qendër të Prishtinës me dhoma të rehatshme, mëngjes të pasur dhe staf mikpritës.", rooms: 1, capacity: 2, price: 115, amenities: ["Wi-Fi", "Pool", "Breakfast", "Parking", "Restaurant", "Air Conditioning"] },
+  { name: "Hotel Opera", location: "Prishtina", rating: 4.6, images: [hotel26, hotel26_1, hotel26_2, hotel26_3], description: "Hotel modern dhe elegant pranë qendrës së Prishtinës, me restorant, mëngjes të pasur dhe dhoma të rehatshme.", rooms: 1, capacity: 2, price: 94, amenities: ["Free Wi-Fi", "Breakfast", "Parking", "Restaurant", "Air Conditioning", "24h Reception"] },
   { name: "Golden Hotel", location: "Prishtina", rating: 4.7, images: [hotel27, hotel27_1, hotel27_2, hotel27_3], description: "Hotel luksoz me ambient modern, dhoma të rehatshme dhe restorant elegant në qendër të Prishtinës.", rooms: 2, capacity: 4, price: 64, amenities: ["Wi-Fi", "Breakfast", "Parking", "Restaurant", "Air Conditioning", "24h Reception"] },
   { name: "Mercure Prishtina City", location: "Prishtina", rating: 4.7, images: [hotel28, hotel28_1, hotel28_2, hotel28_3, hotel28_4], description: "Hotel modern dhe komod në qendër të Prishtinës, me dhoma elegante, restorant dhe shërbim të shkëlqyer.", rooms: 1, capacity: 2, price: 99, amenities: ["Free Wi-Fi", "Breakfast", "Parking", "Restaurant", "Fitness Center", "24h Reception"] },
-  { name: "Hotel Callisto", location: "Prishtina", rating: 4.6, images: [hotel29, hotel29_1, hotel29_2, hotel29_3], description: "Hotel modern dhe i qetë në Prishtinë, me dhoma të rehatshme, restorant dhe staf shumë mikpritës.", rooms: 1, capacity: 3, price: 100, amenities: ["Wi-Fi", "Breakfast", "Parking", "Restaurant", "Air Conditioning", "24h Reception"] },
+  { name: "Hotel Callisto", location: "Prishtina", rating: 4.6, images: [hotel29, hotel29_1, hotel29_2, hotel29_3], description: "Hotel modern dhe i qetë në Prishtinë, me dhoma të rehatshme, restorant dhe staf shumë mikpritës.", rooms: 1, capacity: 3, price: 72, amenities: ["Wi-Fi", "Breakfast", "Parking", "Restaurant", "Air Conditioning", "24h Reception"] },
   { name: "Courtyard by Marriott Prishtina", location: "Prishtina", rating: 4.8, images: [hotel30, hotel30_1, hotel30_2, hotel30_3, hotel30_4], description: "Hotel modern luksoz me dhoma elegante, restorant gourmet dhe qendër fitnesi, vetëm disa minuta nga qendra e Prishtinës.", rooms: 1, capacity: 2, price: 149, amenities: ["Wi-Fi", "Breakfast", "Parking", "Restaurant", "Pool", "Fitness Center", "24h Reception"] },
-  { name: "Vetus Hotel", location: "Prishtina", rating: 4.5, images: [hotel31, hotel31_1, hotel31_2, hotel31_3], description: "Hotel modern dhe komod në Prishtinë, me dhoma të rehatshme, mëngjes të pasur dhe staf mikpritës.", rooms: 1, capacity: 3, price: 110, amenities: ["Free Wi-Fi", "Breakfast", "Parking", "Restaurant", "Air Conditioning", "24h Reception"] },
+  { name: "Vetus Hotel", location: "Prishtina", rating: 4.5, images: [hotel31, hotel31_1, hotel31_2, hotel31_3], description: "Hotel modern dhe komod në Prishtinë, me dhoma të rehatshme, mëngjes të pasur dhe staf mikpritës.", rooms: 1, capacity: 3, price: 81, amenities: ["Free Wi-Fi", "Breakfast", "Parking", "Restaurant", "Air Conditioning", "24h Reception"] },
   { name: "Plaza Boutique Hotel", location: "Prishtina", rating: 4.6, images: [hotel32, hotel32_1, hotel32_2, hotel32_3], description: "Hotel butik elegant në qendër të Prishtinës, me dhoma moderne, restorant gourmet dhe shërbim të shkëlqyer.", rooms: 1, capacity: 2, price: 89, amenities: ["Free Wi-Fi", "Breakfast", "Parking", "Restaurant", "Air Conditioning", "24h Reception"] },
   { name: "Villa Noari", location: "Brezovicë", rating: 4.9, images: [villa1, villa1_1, villa1_2, villa1_3, villa1_4], description: "Villë luksoze në natyrë me pamje mahnitëse, dhoma moderne dhe ambient të qetë, perfekt për pushime dimërore.", rooms: 3, capacity: 6, price: 172, amenities: ["Fireplace", "Mountain View", "Wi-Fi", "Parking", "Fully Equipped Kitchen"] },
   { name: "Villa Brezovica", location: "Brezovicë", rating: 4.8, images: [villa2, villa2_1, villa2_2, villa2_3, villa2_4], description: "Oaz modern me dritare panoramike që ofron pamje mahnitëse të maleve dhe hapësira të bollshme për argëtim.", rooms: 4, capacity: 8, price: 317, amenities: ["Private Pool", "Mountain View", "Wi-Fi", "Parking", "Fully Equipped Kitchen", "Fireplace"] },
@@ -318,9 +417,29 @@ const hotels = [
   { name: "Point Villa ", location: "Brezovicë", rating: 4.7, images: [villa18, villa18_1, villa18_2, villa18_3], description: "Villë moderne me akses direkt në pistat e skijimit dhe ambiente të rehatshme për pushime relaksuese.", rooms: 3, capacity: 9, price: 95, amenities: ["Ski-in/Ski-out", "Kitchen", "Wi-Fi", "Free Parking", "TV", "Washer", "Indoor Fireplace", "Exterior Security Cameras"] },
   { name: "Private Villa", location: "Brezovicë", rating: 4.8, images: [villa19, villa19_1, villa19_2, villa19_3], description: "Villë me dizajn të ngrohtë dhe pajisje moderne, ideale për pushime komode në mal.", rooms: 4, capacity: 6, price: 276, amenities: ["Kitchen", "Wi-Fi", "Free Parking", "Pets Allowed", "TV", "Washer", "Air Conditioning", "Indoor Fireplace"] },
   { name: "GO Villas", location: "Brezovicë", rating: 4.7, images: [villa20, villa20_1, villa20_2, villa20_3, villa20_4], description: "Villë moderne me ambiente të bollshme dhe pajisje të plota për një pushim të rehatshëm.", rooms: 2, capacity: 6, price: 263, amenities: ["Free Parking", "TV", "Washer"] },
+  { name: "Mari Deluxe", location: "Sarandë", rating: 4.0, images: [hotel33, hotel33_1, hotel33_2, hotel33_3], description: "Dhomë moderne dhe e rehatshme, afër plazhit dhe atraksioneve kryesore të Sarandës.", rooms: 1, capacity: 2, price: 38, amenities: ["Beach access", "Wi-Fi", "TV", "Air Conditioning", "Exterior security cameras on property"] },
+  { name: "Ionian Premium Villas", location: "Sarandë", rating: 4.8, images: [villa21, villa21_1, villa21_2, villa21_3], description: "Vila premium me pishinë të jashtme, ambiente familjare dhe pamje relaksuese.", rooms: 3, capacity: 7, price: 230, amenities: ["Free on-site parking", "Outdoor swimming pool", "Free Wifi", "Private bathroom", "Family rooms", "View", "Air conditioning", "Non-smoking rooms", "Flat-screen TV"] },
+  { name: "J&M Apartment", location: "Sarandë", rating: 4.0, images: [apartment1, apartment1_1, apartment1_2], description: "Akomodim i qetë me ballkon, pamje dhe ambiente familjare, ideal për 3 persona.", rooms: 1, capacity: 3, price: 27, amenities: ["Free on-site parking", "Balcony", "Free Wifi", "Private bathroom", "Family rooms", "View", "Air conditioning"] },
+  { name: "Rayan Apartment", location: "Sarandë", rating: 4.0, images: [apartment2, apartment2_1, apartment2_2, apartment2_3], description: "Apartament i qetë dhe komod me ballkon privat, parkim falas dhe ambiente moderne për një qëndrim relaksues.", rooms: 1, capacity: 3, price: 48, amenities: ["Wifi", "Free parking on premises", "TV", "Washer", "Air Conditioning", "Private patio or balcony", "Luggage dropoff allowed"] },
+  { name: "Villa 2 - Ionian Premium Villas", location: "Sarandë", rating: 4.7, images: [villa22, villa22_1, villa22_2, villa22_3, villa22_4], description: "Vilë moderne me ambient të ndritshëm, qasje në pishinë, parkim të siguruar dhe hapësira komode për një qëndrim relaksues.", rooms: 3, capacity: 7, price: 230, amenities: ["Wifi", "Free parking on premises – 2 spaces", "TV", "Air Conditioning", "Unavailable: Carbon monoxide alarm", "Unavailable: Smoke alarm"] },
+  { name: "Navi Apartments", location: "Sarandë", rating: 4.6, images: [apartment3, apartment3_1, apartment3_2, apartment3_3], description: "Apartament modern dhe i rehatshëm në zonë të qetë, me akses të lehtë në shërbimet kryesore.", rooms: 3, capacity: 6, price: 451, nights: 2, amenities: ["Wifi", "Free parking on premises", "TV", "Washer", "Air Conditioning"] },
+  { name: "Palmera Villa 2", location: "Sarandë", rating: 4.8, images: [villa23, villa23_1, villa23_2, villa23_3, villa23_4], description: "Vilë moderne me ambient të ndritshëm, pishinë dhe parkim të siguruar.", rooms: 4, capacity: 10, price: 714, nights: 2, amenities: ["Kitchen", "Wifi", "Free parking on premises", "Pool", "Pets allowed", "TV", "Washer"] },
+  { name: "Garden Dream Apartment", location: "Sarandë", rating: 3.5, images: [apartment4, apartment4_1, apartment4_2, apartment4_3], description: "Apartament modern me akses të lehtë dhe ambiente të rehatshme.", rooms: 1, capacity: 3, price: 51, amenities: ["Self check-in", "Free parking", "Kitchen", "Wifi", "Washer"] },
+  { name: "Piro Apartment", location: "Sarandë", rating: 3.3, images: [apartment5, apartment5_1, apartment5_2, apartment5_3], description: "Apartament i thjeshtë dhe i rehatshëm me akses në të gjitha shërbimet bazë.", rooms: 1, capacity: 2, price: 47, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Washer", "Air Conditioning"] },
+  { name: "Luxury Apartment", location: "Sarandë", rating: 4.8, images: [apartment6, apartment6_1, apartment6_2, apartment6_3], description: "Apartament modern me hapësira të bollshme dhe ambiente të rehatshme.", rooms: 2, capacity: 6, price: 1096, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Washer", "Air Conditioning", "Exterior security cameras on property"] },
+  { name: "Apartment", location: "Sarandë", rating: 4.0, images: [apartment7, apartment7_1, apartment7_2, apartment7_3], description: "Apartament modern me ambient të rehatshëm dhe akses të lehtë në shërbimet bazë.", rooms: 2, capacity: 4, price: 219, amenities: ["Wifi", "Free parking on premises", "TV", "Washer", "Air Conditioning", "Exterior security cameras on property"] },
+  { name: "Day Lux Premium Apartments", location: "Sarandë", rating: 4.6, images: [apartment8, apartment8_1, apartment8_2, apartment8_3], description: "Apartament modern dhe i rehatshëm me ballkon dhe ambient të qetë.", rooms: 1, capacity: 2, price: 46, amenities: ["Free on-site parking", "Breakfast", "Balcony", "Private bathroom", "Free Wifi"] },
+  { name: "Kanes Boutique Hotel", location: "Sarandë", rating: 4.2, images: [hotel34, hotel34_1, hotel34_2, hotel34_3], description: "Hotel i vogël dhe komod me dhoma moderne dhe lehtësira të shumta.", rooms: 1, capacity: 2, price: 40, amenities: ["Private Bathroom", "Wi-Fi", "Flat-screen TV", "Free Parking", "Air Conditioning", "Non-smoking Rooms", "Shower"] },
+  { name: "Diamond Central Boutique Hotel", location: "Sarandë", rating: 4.3, images: [hotel35, hotel35_1, hotel35_2, hotel35_3], description: "Hotel modern me restorant, bar dhe terracë komode.", rooms: 1, capacity: 2, price: 35, amenities: ["Free Parking", "Restaurant", "Free Wi-Fi", "Terrace", "Bar"] },
+  { name: "Hotel Piccolino", location: "Sarandë", rating: 3.5, images: [hotel36, hotel36_1, hotel36_2, hotel36_3], description: "Hotel familjar me restorant, shërbim dhome dhe bar, pranë plazhit.", rooms: 1, capacity: 4, price: 67, amenities: ["Free Parking", "Restaurant", "Room Service", "Free Wi-Fi", "Family Rooms", "Beachfront", "Bar", "Good Breakfast"] },
+  { name: "Apartment", location: "Sarandë", rating: 3, images: [apartment9, apartment9_1, apartment9_2], description: "Apartament i qetë dhe komod për familje ose grupe të vogla.", rooms: 1, capacity: 3, price: 58, amenities: ["Free On-site Parking", "Balcony", "Private Bathroom"] },
+  { name: "Hotel JoAn", location: "Sarandë", rating: 3.0, images: [hotel37, hotel37_1, hotel37_2], description: "Hotel i thjeshtë dhe i përshtatshëm për një qëndrim të rehatshëm.", rooms: 1, capacity: 3, price: 55, amenities: ["Wi-Fi", "Parking", "Front Desk Services", "Private Check-in/Out"] },
+  { name: "SoleLuna Apartment", location: "Sarandë", rating: 3.0, images: [apartment10, apartment10_1, apartment10_2], description: "Apartament komod dhe i përshtatshëm për familje pranë plazhit.", rooms: 1, capacity: 3, price: 42, amenities: ["Free Parking", "Restaurant", "Wi-Fi", "Family Rooms", "Bar", "Private Beach Area", "Breakfast"] },
+  { name: "Litan Hotel", location: "Sarandë", rating: 4.0, images: [hotel38, hotel38_1, hotel38_2, hotel38_3], description: "Hotel modern dhe i përshtatshëm për familje.", rooms: 2, capacity: 4, price: 90, amenities: ["Non-smoking Rooms", "Airport Shuttle", "Free Parking", "Restaurant", "Room Service", "Family Rooms", "Terrace", "Bar", "Excellent Breakfast"] },
+  { name: "ALYACHT Premium Hotel", location: "Sarandë", rating: 4.5, images: [hotel39, hotel39_1, hotel39_2, hotel39_3], description: "Hotel luksoz dhe i rehatshëm pranë plazhit.", rooms: 1, capacity: 2, price: 87, amenities: ["Non-smoking Rooms", "Free Parking", "Room Service", "Free Wi-Fi", "Beachfront", "Bar", "Private Beach Area", "Excellent Breakfast"] },
+  { name: "Oceanic Luxury Apartments", location: "Sarandë", rating: 4.0, images: [apartment11, apartment11_1, apartment11_2], description: "Apartamente moderne dhe komode për një qëndrim të rehatshëm.", rooms: 1, capacity: 3, price: 49, amenities: ["Parking Garage", "Bathroom", "Cleaning Services", "Daily Housekeeping", "Smoke-free Property"] },
 
 ];
-
 
 export default function HotelsPage() {
   const [showTopButton, setShowTopButton] = useState(false);
@@ -335,19 +454,14 @@ export default function HotelsPage() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // Filtro hotelet sipas butonit aktiv
-  const filteredHotels =
-    activeTab === "all"
-      ? hotels
-      : hotels.filter((h) => {
-        if (activeTab === "hotels")
-          return !h.name.toLowerCase().includes("villa") && !h.name.toLowerCase().includes("chalet");
-        if (activeTab === "villas")
-          return h.name.toLowerCase().includes("villa") || h.name.toLowerCase().includes("chalet");
-        if (activeTab === "apartments")
-          return h.name.toLowerCase().includes("apartment");
-        return true;
-      });
+  // Filtrimi i hoteleve sipas butonit aktiv
+  const filteredHotels = hotels.filter((hotel) => {
+    if (activeTab === "all") return true;
+    if (activeTab === "hotels") return hotel.name.toLowerCase().includes("hotel");
+    if (activeTab === "villas") return hotel.name.toLowerCase().includes("villa") || hotel.name.toLowerCase().includes("chalet");
+    if (activeTab === "apartments") return hotel.name.toLowerCase().includes("apartment");
+    return true;
+  });
 
   return (
     <div className="px-6 py-8">
