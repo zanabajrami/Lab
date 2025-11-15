@@ -195,6 +195,16 @@ import hotel40_1 from "../images/hotel40_1.webp";
 import hotel40_2 from "../images/hotel40_2.avif";
 import hotel40_3 from "../images/hotel40_3.avif";
 
+import hotel41 from "../images/hotel41.avif";
+import hotel41_1 from "../images/hotel41_1.avif";
+import hotel41_2 from "../images/hotel41_2.avif";
+import hotel41_3 from "../images/hotel41_3.avif";
+
+import hotel42 from "../images/hotel42.avif";
+import hotel42_1 from "../images/hotel42_1.avif";
+import hotel42_2 from "../images/hotel42_2.avif";
+import hotel42_3 from "../images/hotel42_3.avif";
+
 //Villa
 import villa1 from "../images/villa1.avif";
 import villa1_1 from "../images/villa1_1.avif";
@@ -514,6 +524,134 @@ import apartment34 from "../images/apartment34.avif";
 import apartment34_1 from "../images/apartment34_1.jpeg";
 import apartment34_2 from "../images/apartment34_2.jpeg";
 
+import apartment35 from "../images/apartment35.avif";
+import apartment35_1 from "../images/apartment35_1.jpeg";
+import apartment35_2 from "../images/apartment35_2.jpeg";
+import apartment35_3 from "../images/apartment35_3.jpeg";
+
+import apartment36 from "../images/apartment36.avif";
+import apartment36_1 from "../images/apartment36_1.avif";
+import apartment36_2 from "../images/apartment36_2.avif";
+
+import apartment37 from "../images/apartment37.jpeg";
+import apartment37_1 from "../images/apartment37_1.jpeg";
+import apartment37_2 from "../images/apartment37_2.jpeg";
+import apartment37_3 from "../images/apartment37_3.jpeg";
+
+import apartment38 from "../images/apartment38.avif";
+import apartment38_1 from "../images/apartment38_1.avif";
+import apartment38_2 from "../images/apartment38_2.avif";
+import apartment38_3 from "../images/apartment38_3.avif";
+
+import apartment39 from "../images/apartment39.jpeg";
+import apartment39_1 from "../images/apartment39_1.avif";
+import apartment39_2 from "../images/apartment39_2.avif";
+import apartment39_3 from "../images/apartment39_3.jpeg";
+
+import apartment40 from "../images/apartment40.avif";
+import apartment40_1 from "../images/apartment40_1.jpeg";
+import apartment40_2 from "../images/apartment40_2.jpeg";
+import apartment40_3 from "../images/apartment40_3.jpeg";
+
+import apartment41 from "../images/apartment41.jpeg";
+import apartment41_1 from "../images/apartment41_1.jpeg";
+import apartment41_2 from "../images/apartment41_2.jpeg";
+
+import apartment42 from "../images/apartment42.jpeg";
+import apartment42_1 from "../images/apartment42_1.avif";
+import apartment42_2 from "../images/apartment42_2.jpeg";
+import apartment42_3 from "../images/apartment42_3.jpeg";
+
+import apartment43 from "../images/apartment43.avif";
+import apartment43_1 from "../images/apartment43_1.avif";
+import apartment43_2 from "../images/apartment43_2.avif";
+import apartment43_3 from "../images/apartment43_3.avif";
+
+import apartment44 from "../images/apartment44.avif";
+import apartment44_1 from "../images/apartment44_1.avif";
+import apartment44_2 from "../images/apartment44_2.avif";
+import apartment44_3 from "../images/apartment44_3.avif";
+
+import apartment45 from "../images/apartment45.avif";
+import apartment45_1 from "../images/apartment45_1.avif";
+import apartment45_2 from "../images/apartment45_2.avif";
+import apartment45_3 from "../images/apartment45_3.avif";
+
+import apartment46 from "../images/apartment46.avif";
+import apartment46_1 from "../images/apartment46_1.avif";
+import apartment46_2 from "../images/apartment46_2.avif";
+import apartment46_3 from "../images/apartment46_3.avif";
+
+import apartment47 from "../images/apartment47.jpeg";
+import apartment47_1 from "../images/apartment47_1.jpeg";
+import apartment47_2 from "../images/apartment47_2.jpeg";
+import apartment47_3 from "../images/apartment47_3.jpeg";
+
+import apartment48 from "../images/apartment48.avif";
+import apartment48_1 from "../images/apartment48_1.avif";
+import apartment48_2 from "../images/apartment48_2.avif";
+import apartment48_3 from "../images/apartment48_3.jpg";
+
+import apartment49 from "../images/apartment49.jpg";
+import apartment49_1 from "../images/apartment49_1.avif";
+import apartment49_2 from "../images/apartment49_2.jpg";
+import apartment49_3 from "../images/apartment49_3.jpg";
+
+import apartment50 from "../images/apartment50.avif";
+import apartment50_1 from "../images/apartment50_1.avif";
+import apartment50_2 from "../images/apartment50_2.avif";
+
+import apartment51 from "../images/apartment51.avif";
+import apartment51_1 from "../images/apartment51_1.jpeg";
+import apartment51_2 from "../images/apartment51_2.avif";
+import apartment51_3 from "../images/apartment51_3.jpeg";
+
+import apartment52 from "../images/apartment52.avif";
+import apartment52_1 from "../images/apartment52_1.avif";
+import apartment52_2 from "../images/apartment52_2.avif";
+
+import apartment53 from "../images/apartment53.avif";
+import apartment53_1 from "../images/apartment53_1.avif";
+import apartment53_2 from "../images/apartment53_2.avif";
+import apartment53_3 from "../images/apartment53_3.jpg";
+
+import apartment54 from "../images/apartment54.jpg";
+import apartment54_1 from "../images/apartment54_1.jpg";
+import apartment54_2 from "../images/apartment54_2.jpg";
+
+import apartment55 from "../images/apartment55.jpeg";
+import apartment55_1 from "../images/apartment55_1.jpeg";
+import apartment55_2 from "../images/apartment55_2.jpeg";
+import apartment55_3 from "../images/apartment55_3.jpeg";
+
+import apartment56 from "../images/apartment56.avif";
+import apartment56_1 from "../images/apartment56_1.avif";
+import apartment56_2 from "../images/apartment56_2.avif";
+
+import apartment57 from "../images/apartment57.avif";
+import apartment57_1 from "../images/apartment57_1.avif";
+import apartment57_2 from "../images/apartment57_2.avif";
+import apartment57_3 from "../images/apartment57_3.avif";
+
+import apartment58 from "../images/apartment58.avif";
+import apartment58_1 from "../images/apartment58_1.avif";
+import apartment58_2 from "../images/apartment58_2.avif";
+import apartment58_3 from "../images/apartment58_3.avif";
+
+import apartment59 from "../images/apartment59.avif";
+import apartment59_1 from "../images/apartment59_1.jpg";
+import apartment59_2 from "../images/apartment59_2.jpg";
+import apartment59_3 from "../images/apartment59_3.jpeg";
+
+import apartment60 from "../images/apartment60.avif";
+import apartment60_1 from "../images/apartment60_1.avif";
+import apartment60_2 from "../images/apartment60_2.avif";
+import apartment60_3 from "../images/apartment60_3.avif";
+
+import apartment61 from "../images/apartment61.jpeg";
+import apartment61_1 from "../images/apartment61_1.avif";
+import apartment61_2 from "../images/apartment61_2.webp";
+
 const hotels = [
   { name: "Four Points by Sheraton Prishtina", location: "Prishtina", rating: 4.8, images: [hotel1, hotel1_1, hotel1_2], description: "Hotel modern me spa, pishinë të brendshme dhe restorant luksoz me pamje panoramike.", rooms: 1, capacity: 2, price: 129, amenities: ["Spa", "Indoor Pool", "Free Wi-Fi", "Breakfast Included", "Parking", "Fitness Center"] },
   { name: "Swiss Diamond Hotel Prishtina", location: "Prishtina", rating: 4.9, images: [hotel2, hotel2_1, hotel2_2], description: "Një hotel 5-yje me spa, restorante ndërkombëtare dhe dhoma elegante në qendër të qytetit.", rooms: 2, capacity: 4, price: 170, amenities: ["Luxury Spa", "Indoor Pool", "Free Breakfast", "Parking", "Wi-Fi", "Room Service 24/7"] },
@@ -615,6 +753,35 @@ const hotels = [
   { name: "Manolo&Jolie Luxury Villa 1", location: "Himarë", rating: 4.6, images: [villa28, villa28_1, villa28_2, villa28_3], description: "Vila luksoze në bregdet me lehtësira të plota për një qëndrim relaksues.", rooms: 1, capacity: 3, price: 140, amenities: ["Beachfront", "Wi-Fi", "TV", "Air Conditioning", "Hair Dryer", "Breakfast"] },
   { name: "Manolo & Jolie Luxury Villa 4", location: "Himarë", rating: 4.5, images: [villa29, villa29_1, villa29_2, villa29_3], description: "Vila komode me akses në plazh dhe lehtësira të plota për një qëndrim të rehatshëm.", rooms: 1, capacity: 2, price: 115, amenities: ["Beach Access", "Wi-Fi", "TV", "Washer", "Air Conditioning"] },
   { name: "City 12 Apartment", location: "Himarë", rating: 4.0, images: [apartment34, apartment34_1, apartment34_2], description: "Apartament i rehatshëm me lehtësira të plota dhe i përshtatshëm për një qëndrim të këndshëm.", rooms: 1, capacity: 2, price: 35, amenities: ["Pets Allowed", "Air Conditioning", "Luggage Dropoff Allowed", "Crib", "Hair Dryer"] },
+  { name: "A1 Apartment", location: "Himarë", rating: 3.9, images: [apartment35, apartment35_1, apartment35_2, apartment35_3], description: "Apartament i thjeshtë dhe i rehatshëm, i përshtatshëm për një qëndrim të qetë.", rooms: 1, capacity: 3, price: 69, amenities: ["Wi-Fi", "Free Parking on Premises", "TV", "Air Conditioning", "Security Cameras"] },
+  { name: "Central Apartment 1", location: "Himarë", rating: 4.0, images: [apartment36, apartment36_1, apartment36_2], description: "Apartament komod dhe i pajisur mirë për një qëndrim të rehatshëm.", rooms: 1, capacity: 4, price: 59, amenities: ["Kitchen", "Wi-Fi", "TV", "Air Conditioning", "Refrigerator", "Paid Parking on Premises"] },
+  { name: "Cozy Apartment", location: "Himarë", rating: 3.8, images: [apartment37, apartment37_1, apartment37_2, apartment37_3], description: "Apartament i thjeshtë dhe i rehatshëm, i përshtatshëm për një qëndrim të qetë.", rooms: 1, capacity: 2, price: 37, amenities: ["Kitchen", "Wi-Fi", "TV", "Air Conditioning"] },
+  { name: "Alis Apartment", location: "Himarë", rating: 4.2, images: [apartment38, apartment38_1, apartment38_2, apartment38_3], description: "Apartament i gjerë dhe komod, i përshtatshëm për grupe dhe qëndrime relaksuese pranë detit.", rooms: 2, capacity: 6, price: 100, amenities: ["Beach Access", "Kitchen", "Wi-Fi", "TV", "Air Conditioning", "Smoking Allowed"] },
+  { name: "The Wave Apartment 17", location: "Himarë", rating: 4.3, images: [apartment39, apartment39_1, apartment39_2, apartment39_3], description: "Apartament modern dhe i rehatshëm me akses në plazh dhe kushte të plota për një qëndrim të këndshëm.", rooms: 1, capacity: 5, price: 173, amenities: ["Beach Access", "Kitchen", "Wi-Fi", "TV", "Elevator", "Washer", "Air Conditioning", "Hair Dryer"] },
+  { name: "The Wave Apartment 9", location: "Himarë", rating: 4.1, images: [apartment40, apartment40_1, apartment40_2, apartment40_3], description: "Apartament i rehatshëm dhe modern, i përshtatshëm për një qëndrim pranë detit.", rooms: 1, capacity: 4, price: 163, amenities: ["Wi-Fi", "TV", "Elevator", "Washer", "Air Conditioning", "Hair Dryer"] },
+  { name: "Apartment 20", location: "Himarë", rating: 3.7, images: [apartment41, apartment41_1, apartment41_2], description: "Apartament praktik dhe i përshtatshëm për një qëndrim të këndshëm pranë detit.", rooms: 1, capacity: 3, price: 41, amenities: ["Beach Access", "Kitchen", "Wi-Fi", "TV"] },
+  { name: "Coastal Hotel", location: "Himarë", rating: 4.0, images: [hotel41, hotel41_1, hotel41_2, hotel41_3], description: "Hotel i thjeshtë dhe i rehatshëm, i përshtatshëm për një qëndrim pranë bregdetit.", rooms: 1, capacity: 2, price: 35, amenities: ["Wi-Fi", "TV", "Air Conditioning"] },
+  { name: "Hotel", location: "Himarë", rating: 3.8, images: [hotel42, hotel42_1, hotel42_2, hotel42_3], description: "Hotel i thjeshtë dhe i përshtatshëm për një qëndrim komod.", rooms: 1, capacity: 2, price: 49, amenities: ["Wi-Fi", "Free Parking on Premises", "Air Conditioning"] },
+  { name: "Erika's Apartment", location: "Prishtina", rating: 4.2, images: [apartment42, apartment42_1, apartment42_2, apartment42_3], description: "Apartament modern dhe i rehatshëm, i përshtatshëm për një qëndrim të qetë në qytet.", rooms: 1, capacity: 2, price: 70, amenities: ["Wi-Fi", "Dedicated Workspace", "Free Parking on Premises", "TV", "Air Conditioning", "Hair Dryer", "Gym"] },
+  { name: "Apartment", location: "Prishtina", rating: 4.3, images: [apartment43, apartment43_1, apartment43_2, apartment43_3], description: "Apartament modern me lehtësira të plota dhe hapësirë për relaksim.", rooms: 2, capacity: 4, price: 107, nights: 2, amenities: ["Kitchen", "Wi-Fi", "Dedicated Workspace", "Free Parking on Premises", "55 inch HDTV with Netflix", "Elevator", "Washer", "Dryer"] },
+  { name: "Luxurious Apartment", location: "Prishtina", rating: 4.4, images: [apartment44, apartment44_1, apartment44_2, apartment44_3], description: "Apartament luksoz me lehtësira të plota dhe hapësira për një qëndrim komod dhe relaksues.", rooms: 3, capacity: 6, price: 146, nights: 2, amenities: ["Kitchen", "Wi-Fi", "Dedicated Workspace", "Free Residential Garage on Premises (4 spaces)", "55 inch HDTV with Netflix", "Elevator", "Free Washer (In Unit)", "Paid Dryer (In Building)"] },
+  { name: "Dadas Apartment", location: "Prishtina", rating: 4.3, images: [apartment45, apartment45_1, apartment45_2, apartment45_3], description: "Apartament komod me pamje të qytetit dhe kopështit, i përshtatshëm për një qëndrim relaksues.", rooms: 1, capacity: 2, price: 78, nights: 2, amenities: ["City Skyline View", "Garden View", "Wi-Fi", "Dedicated Workspace", "Free Parking on Premises"] },
+  { name: "Union Premium Apartments", location: "Prishtina", rating: 4.2, images: [apartment46, apartment46_1, apartment46_2, apartment46_3], description: "Apartament modern dhe komod me lehtësira bazë për një qëndrim të këndshëm.", rooms: 2, capacity: 4, price: 65, amenities: [] },
+  { name: "Deluxe Apartment", location: "Prishtina", rating: 4.1, images: [apartment47, apartment47_1, apartment47_2, apartment47_3], description: "Apartament komod me lehtësira të plota dhe hapësirë të përshtatshme për një qëndrim të rehatshëm.", rooms: 1, capacity: 2, price: 76, amenities: ["Kitchen", "Wi-Fi", "Dedicated Workspace", "Free Parking on Premises", "TV", "Air Conditioning", "Hair Dryer"] },
+  { name: "Standard Apartment 4", location: "Prishtina", rating: 4.0, images: [apartment48, apartment48_1, apartment48_2, apartment48_3], description: "Apartament i thjeshtë dhe i rehatshëm me lehtësira të plota për një qëndrim praktik.", rooms: 1, capacity: 2, price: 52, amenities: ["Wi-Fi", "Free Parking on Premises", "TV", "Washer", "Dryer", "Air Conditioning"] },
+  { name: "Superior Apartment 1", location: "Prishtina", rating: 4.1, images: [apartment49, apartment49_1, apartment49_2, apartment49_3], description: "Apartament modern dhe i rehatshëm me lehtësira të plota për një qëndrim të këndshëm.", rooms: 1, capacity: 3, price: 82, amenities: ["Kitchen", "Wi-Fi", "Free Parking on Premises", "TV", "Washer", "Dryer", "Air Conditioning"] },
+  { name: "Main Square Apartment", location: "Prishtina", rating: 4.0, images: [apartment50, apartment50_1, apartment50_2], description: "Apartament i thjeshtë dhe i rehatshëm, i përshtatshëm për një qëndrim të qetë në qytet.", rooms: 1, capacity: 2, price: 40, amenities: ["Kitchen", "Wi-Fi", "Dedicated Workspace", "TV", "Air Conditioning"] },
+  { name: "Deluxe Apartment 2", location: "Prishtina", rating: 4.2, images: [apartment51, apartment51_1, apartment51_2, apartment51_3], description: "Apartament modern dhe komod me lehtësira të plota dhe hapësirë të përshtatshme për një qëndrim të këndshëm.", rooms: 1, capacity: 2, price: 88, amenities: ["Kitchen", "Wi-Fi", "Dedicated Workspace", "Free Parking on Premises", "Pets Allowed", "TV", "Air Conditioning"] },
+  { name: "Standard Apartment 7", location: "Prishtina", rating: 4.1, images: [apartment52, apartment52_1, apartment52_2], description: "Apartament i rehatshëm dhe praktik me lehtësira të plota për një qëndrim të këndshëm.", rooms: 1, capacity: 2, price: 59, amenities: ["Kitchen", "Wi-Fi", "Free Parking on Premises", "TV", "Washer", "Dryer", "Air Conditioning", "Crib"] },
+  { name: "Royal DFA Apartment", location: "Prishtina", rating: 4.2, images: [apartment53, apartment53_1, apartment53_2, apartment53_3], description: "Apartament modern dhe komod me lehtësira të plota, i përshtatshëm për grupe të vogla.", rooms: 2, capacity: 4, price: 69, amenities: ["Kitchen", "Wi-Fi", "Free Parking on Premises", "TV", "Washer"] },
+  { name: "Apartment", location: "Prishtina", rating: 4.1, images: [apartment54, apartment54_1, apartment54_2], description: "Apartament komod me lehtësira të plota dhe i përshtatshëm për një qëndrim të rehatshëm.", rooms: 2, capacity: 4, price: 74, amenities: ["Kitchen", "Wi-Fi", "Free Parking on Premises", "TV", "Washer"] },
+  { name: "Deluxe Apartment 3", location: "Prishtina", rating: 4.2, images: [apartment55, apartment55_1, apartment55_2, apartment55_3], description: "Apartament modern dhe i rehatshëm me lehtësira të plota për një qëndrim të këndshëm.", rooms: 1, capacity: 2, price: 76, amenities: ["Kitchen", "Wi-Fi", "Dedicated Workspace", "Free Parking on Premises", "TV", "Washer", "Air Conditioning", "Hair Dryer"] },
+  { name: "Union Apartment", location: "Prishtina", rating: 4.0, images: [apartment56, apartment56_1, apartment56_2], description: "Apartament praktik dhe i rehatshëm me lehtësira bazë për një qëndrim të qetë.", rooms: 1, capacity: 2, price: 41, amenities: ["Kitchen", "Wi-Fi", "Free Parking on Premises", "TV", "Washer"] },
+  { name: "Grand Apartments", location: "Prishtina", rating: 4.1, images: [apartment57, apartment57_1, apartment57_2, apartment57_3], description: "Apartament i rehatshëm dhe modern me lehtësira bazë për një qëndrim të këndshëm.", rooms: 1, capacity: 2, price: 42, amenities: ["Wi-Fi", "Dedicated Workspace", "Free Parking on Premises", "TV", "Air Conditioning"] },
+  { name: "Apartment", location: "Prishtina", rating: 3.9, images: [apartment58, apartment58_1, apartment58_2, apartment58_3], description: "Apartament i thjeshtë dhe i rehatshëm, i përshtatshëm për një qëndrim të qetë.", rooms: 1, capacity: 2, price: 33, amenities: ["Kitchen", "Wi-Fi", "TV", "Washer"] },
+  { name: "Apartment 6", location: "Prishtina", rating: 4.2, images: [apartment59, apartment59_1, apartment59_2, apartment59_3], description: "Apartament modern dhe i rehatshëm me lehtësira të plota dhe hapësirë të jashtme për relaksim.", rooms: 2, capacity: 4, price: 116, amenities: ["Wi-Fi", "Free Parking on Premises", "HDTV with Netflix", "Washer", "Dryer", "Window AC Unit", "Backyard", "Luggage Dropoff Allowed", "Crib"] },
+  { name: "Apartment", location: "Prishtina", rating: 4.3, images: [apartment60, apartment60_1, apartment60_2, apartment60_3], description: "Apartament luksoz dhe komod me lehtësira të plota dhe hapësira relaksuese, i përshtatshëm për grupe.", rooms: 3, capacity: 8, price: 175, amenities: ["Wi-Fi", "Free Parking on Premises", "Hot Tub", "TV", "Washer"] },
+  { name: "Family Apartment", location: "Prishtina", rating: 4.3, images: [apartment61, apartment61_1, apartment61_2], description: "Apartament luksoz me lehtësira të plota, i përshtatshëm për grupe të mëdha dhe qëndrime relaksuese.", rooms: 2, capacity: 6, price: 68, amenities: ["Wi-Fi", "Free Parking on Premises", "TV", "Washer"] },
 
 ];
 
