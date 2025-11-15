@@ -190,6 +190,11 @@ import hotel39_1 from "../images/hotel39_1.jpg";
 import hotel39_2 from "../images/hotel39_2.jpg";
 import hotel39_3 from "../images/hotel39_3.jpg";
 
+import hotel40 from "../images/hotel40.webp";
+import hotel40_1 from "../images/hotel40_1.webp";
+import hotel40_2 from "../images/hotel40_2.avif";
+import hotel40_3 from "../images/hotel40_3.avif";
+
 //Villa
 import villa1 from "../images/villa1.avif";
 import villa1_1 from "../images/villa1_1.avif";
@@ -315,6 +320,36 @@ import villa23_2 from "../images/villa23_2.avif";
 import villa23_3 from "../images/villa23_3.avif";
 import villa23_4 from "../images/villa23_4.avif";
 
+import villa24 from "../images/villa24.avif";
+import villa24_1 from "../images/villa24_1.avif";
+import villa24_2 from "../images/villa24_2.avif";
+import villa24_3 from "../images/villa24_3.avif";
+
+import villa25 from "../images/villa25.avif";
+import villa25_1 from "../images/villa25_1.avif";
+import villa25_2 from "../images/villa25_2.avif";
+import villa25_3 from "../images/villa25_3.webp";
+
+import villa26 from "../images/villa26.avif";
+import villa26_1 from "../images/villa26_1.avif";
+import villa26_2 from "../images/villa26_2.avif";
+import villa26_3 from "../images/villa26_3.avif";
+
+import villa27 from "../images/villa27.jpeg";
+import villa27_1 from "../images/villa27_1.avif";
+import villa27_2 from "../images/villa27_2.jpeg";
+import villa27_3 from "../images/villa27_3.jpeg";
+
+import villa28 from "../images/villa28.jpeg";
+import villa28_1 from "../images/villa28_1.jpeg";
+import villa28_2 from "../images/villa28_2.jpeg";
+import villa28_3 from "../images/villa28_3.webp";
+
+import villa29 from "../images/villa29.jpeg";
+import villa29_1 from "../images/villa29_1.jpeg";
+import villa29_2 from "../images/villa29_2.avif";
+import villa29_3 from "../images/villa29_3.jpeg";
+
 //Apartment
 import apartment1 from "../images/apartment1.jpg";
 import apartment1_1 from "../images/apartment1_1.jpg";
@@ -366,6 +401,118 @@ import apartment10_2 from "../images/apartment10_2.jpg";
 import apartment11 from "../images/apartment11.jpg";
 import apartment11_1 from "../images/apartment11_1.jpg";
 import apartment11_2 from "../images/apartment11_2.jpg";
+
+import apartment12 from "../images/apartment12.avif";
+import apartment12_1 from "../images/apartment12_1.avif";
+import apartment12_2 from "../images/apartment12_2.avif";
+
+import apartment13 from "../images/apartment13.avif";
+import apartment13_1 from "../images/apartment13_1.avif";
+import apartment13_2 from "../images/apartment13_2.avif";
+import apartment13_3 from "../images/apartment13_3.avif";
+
+import apartment14 from "../images/apartment14.avif";
+import apartment14_1 from "../images/apartment14_1.avif";
+import apartment14_2 from "../images/apartment14_2.avif";
+import apartment14_3 from "../images/apartment14_3.avif";
+
+import apartment15 from "../images/apartment15.avif";
+import apartment15_1 from "../images/apartment15_1.avif";
+import apartment15_2 from "../images/apartment15_2.avif";
+import apartment15_3 from "../images/apartment15_3.avif";
+
+import apartment16 from "../images/apartment16.jpeg";
+import apartment16_1 from "../images/apartment16_1.avif";
+import apartment16_2 from "../images/apartment16_2.avif";
+import apartment16_3 from "../images/apartment16_3.avif";
+
+import apartment17 from "../images/apartment17.avif";
+import apartment17_1 from "../images/apartment17_1.avif";
+import apartment17_2 from "../images/apartment17_2.avif";
+import apartment17_3 from "../images/apartment17_3.avif";
+
+import apartment18 from "../images/apartment18.jpeg";
+import apartment18_1 from "../images/apartment18_1.avif";
+import apartment18_2 from "../images/apartment18_2.webp";
+import apartment18_3 from "../images/apartment18_3.jpeg";
+
+import apartment19 from "../images/apartment19.avif";
+import apartment19_1 from "../images/apartment19_1.avif";
+import apartment19_2 from "../images/apartment19_2.avif";
+import apartment19_3 from "../images/apartment19_3.avif";
+
+import apartment20 from "../images/apartment20.jpeg";
+import apartment20_1 from "../images/apartment20_1.jpeg";
+import apartment20_2 from "../images/apartment20_2.jpeg";
+import apartment20_3 from "../images/apartment20_3.jpeg";
+
+import apartment21 from "../images/apartment21.avif";
+import apartment21_1 from "../images/apartment21_1.avif";
+import apartment21_2 from "../images/apartment21_2.avif";
+import apartment21_3 from "../images/apartment21_3.avif";
+
+import apartment22 from "../images/apartment22.avif";
+import apartment22_1 from "../images/apartment22_1.avif";
+import apartment22_2 from "../images/apartment22_2.avif";
+import apartment22_3 from "../images/apartment22_3.avif";
+
+import apartment23 from "../images/apartment23.avif";
+import apartment23_1 from "../images/apartment23_1.avif";
+import apartment23_2 from "../images/apartment23_2.avif";
+import apartment23_3 from "../images/apartment23_3.avif";
+
+import apartment24 from "../images/apartment24.webp";
+import apartment24_1 from "../images/apartment24_1.avif";
+import apartment24_2 from "../images/apartment24_2.avif";
+import apartment24_3 from "../images/apartment24_3.avif";
+
+import apartment25 from "../images/apartment25.avif";
+import apartment25_1 from "../images/apartment25_1.jpeg";
+import apartment25_2 from "../images/apartment25_2.avif";
+import apartment25_3 from "../images/apartment25_3.jpeg";
+
+import apartment26 from "../images/apartment26.avif";
+import apartment26_1 from "../images/apartment26_1.avif";
+import apartment26_2 from "../images/apartment26_2.avif";
+import apartment26_3 from "../images/apartment26_3.jpeg";
+
+import apartment27 from "../images/apartment27.avif";
+import apartment27_1 from "../images/apartment27_1.jpeg";
+import apartment27_2 from "../images/apartment27_2.avif";
+import apartment27_3 from "../images/apartment27_3.avif";
+
+import apartment28 from "../images/apartment28.avif";
+import apartment28_1 from "../images/apartment28_1.avif";
+import apartment28_2 from "../images/apartment28_2.jpeg";
+import apartment28_3 from "../images/apartment28_3.avif";
+
+import apartment29 from "../images/apartment29.avif";
+import apartment29_1 from "../images/apartment29_1.avif";
+import apartment29_2 from "../images/apartment29_2.avif";
+import apartment29_3 from "../images/apartment29_3.avif";
+
+import apartment30 from "../images/apartment30.avif";
+import apartment30_1 from "../images/apartment30_1.avif";
+import apartment30_2 from "../images/apartment30_2.avif";
+import apartment30_3 from "../images/apartment30_3.avif";
+
+import apartment31 from "../images/apartment31.avif";
+import apartment31_1 from "../images/apartment31_1.avif";
+import apartment31_2 from "../images/apartment31_2.avif";
+import apartment31_3 from "../images/apartment31_3.avif";
+
+import apartment32 from "../images/apartment32.avif";
+import apartment32_1 from "../images/apartment32_1.avif";
+import apartment32_2 from "../images/apartment32_2.avif";
+
+import apartment33 from "../images/apartment33.avif";
+import apartment33_1 from "../images/apartment33_1.avif";
+import apartment33_2 from "../images/apartment33_2.avif";
+import apartment33_3 from "../images/apartment33_3.avif";
+
+import apartment34 from "../images/apartment34.avif";
+import apartment34_1 from "../images/apartment34_1.jpeg";
+import apartment34_2 from "../images/apartment34_2.jpeg";
 
 const hotels = [
   { name: "Four Points by Sheraton Prishtina", location: "Prishtina", rating: 4.8, images: [hotel1, hotel1_1, hotel1_2], description: "Hotel modern me spa, pishinë të brendshme dhe restorant luksoz me pamje panoramike.", rooms: 1, capacity: 2, price: 129, amenities: ["Spa", "Indoor Pool", "Free Wi-Fi", "Breakfast Included", "Parking", "Fitness Center"] },
@@ -438,6 +585,36 @@ const hotels = [
   { name: "Litan Hotel", location: "Sarandë", rating: 4.0, images: [hotel38, hotel38_1, hotel38_2, hotel38_3], description: "Hotel modern dhe i përshtatshëm për familje.", rooms: 2, capacity: 4, price: 90, amenities: ["Non-smoking Rooms", "Airport Shuttle", "Free Parking", "Restaurant", "Room Service", "Family Rooms", "Terrace", "Bar", "Excellent Breakfast"] },
   { name: "ALYACHT Premium Hotel", location: "Sarandë", rating: 4.5, images: [hotel39, hotel39_1, hotel39_2, hotel39_3], description: "Hotel luksoz dhe i rehatshëm pranë plazhit.", rooms: 1, capacity: 2, price: 87, amenities: ["Non-smoking Rooms", "Free Parking", "Room Service", "Free Wi-Fi", "Beachfront", "Bar", "Private Beach Area", "Excellent Breakfast"] },
   { name: "Oceanic Luxury Apartments", location: "Sarandë", rating: 4.0, images: [apartment11, apartment11_1, apartment11_2], description: "Apartamente moderne dhe komode për një qëndrim të rehatshëm.", rooms: 1, capacity: 3, price: 49, amenities: ["Parking Garage", "Bathroom", "Cleaning Services", "Daily Housekeeping", "Smoke-free Property"] },
+  { name: "Epirus Hotel", location: "Sarandë", rating: 4.94, images: [hotel40, hotel40_1, hotel40_2, hotel40_3], description: "Hotel modern me pamje kopshti, akses direkt në plazh dhe kushte të shkëlqyera për një qëndrim komod.", rooms: 1, capacity: 4, price: 94, amenities: ["Garden View", "Beachfront", "Kitchen", "Wi-Fi", "Dedicated Workspace", "Free Parking (1 space)", "Pets Allowed", "TV with Standard Cable", "Elevator"] },
+  { name: "Leons Apartment", location: "Sarandë", rating: 5.0, images: [apartment12, apartment12_1, apartment12_2], description: "Apartament i gjerë,i përshtatshëm dhe i pajisur me komoditete moderne.", rooms: 2, capacity: 5, price: 146, amenities: ["Wi-Fi", "Free Parking on Premises", "TV", "Washer", "Free Dryer (In Unit)", "Air Conditioning", "Bathtub"] },
+  { name: "Deluxe Apartment", location: "Sarandë", rating: 4.2, images: [apartment13, apartment13_1, apartment13_2, apartment13_3], description: "Apartament modern i përshtatshëm dhe me akses plazhi.", rooms: 2, capacity: 4, price: 70, amenities: ["Beach Access", "Kitchen", "Wi-Fi", "Dedicated Workspace", "Pets Allowed", "TV"] },
+  { name: "Ademi Apartment", location: "Sarandë", rating: 4.0, images: [apartment14, apartment14_1, apartment14_2, apartment14_3], description: "Apartament komod me të gjitha pajisjet esenciale për një qëndrim të rehatshëm.", rooms: 1, capacity: 4, price: 44, amenities: ["Kitchen", "Wi-Fi", "TV", "Elevator", "Washer", "Air Conditioning", "Hair Dryer"] },
+  { name: "303 Apartment", location: "Sarandë", rating: 3.8, images: [apartment15, apartment15_1, apartment15_2, apartment15_3], description: "Apartament komod me të gjitha lehtësitë e nevojshme për një qëndrim të rehatshëm.", rooms: 1, capacity: 3, price: 31, amenities: ["Wi-Fi", "Free Parking on Premises", "TV", "Washer", "Air Conditioning", "Crib", "Hair Dryer"] },
+  { name: "Lux 33 Apartment", location: "Sarandë", rating: 4.72, images: [apartment16, apartment16_1, apartment16_2, apartment16_3], description: "Apartament modern me pamje të qytetit dhe lehtësira të plota për një qëndrim të rehatshëm.", rooms: 2, capacity: 5, price: 90, amenities: ["City Skyline View", "Kitchen", "Wi-Fi", "Free Parking on Premises", "HDTV", "Elevator"] },
+  { name: "Apartment", location: "Sarandë", rating: 4.63, images: [apartment17, apartment17_1, apartment17_2, apartment17_3], description: "Apartament komod me akses të përbashkët në plazh dhe lehtësira të nevojshme për një qëndrim relaksues.", rooms: 1, capacity: 4, price: 35, amenities: ["Shared Beach Access", "Kitchen", "Wi-Fi", "Free Parking Garage (1 space)", "42 inch TV with Standard Cable", "Elevator"] },
+  { name: "Apartment", location: "Sarandë", rating: 4.58, images: [apartment18, apartment18_1, apartment18_2, apartment18_3], description: "Apartament i rehatshëm me lehtësira bazë për një qëndrim të këndshëm dhe praktik.", rooms: 1, capacity: 3, price: 47, amenities: ["Kitchen", "Wi-Fi", "Free Parking on Premises", "TV", "Washer", "Air Conditioning"] },
+  { name: "402 Apartment", location: "Sarandë", rating: 4.67, images: [apartment19, apartment19_1, apartment19_2, apartment19_3], description: "Apartament komod me lehtësira të nevojshme dhe hapësirë të jashtme për relaksim.", rooms: 1, capacity: 4, price: 53, amenities: ["Wi-Fi", "TV", "Washer", "Air Conditioning", "Patio or Balcony", "Luggage Dropoff Allowed"] },
+  { name: "Prestige Apartment", location: "Sarandë", rating: 4.71, images: [apartment20, apartment20_1, apartment20_2, apartment20_3], description: "Apartament modern me lehtësira të plota për një qëndrim të rehatshëm dhe praktik.", rooms: 1, capacity: 4, price: 70, amenities: ["Kitchen", "Wi-Fi", "Free Parking Garage (2 spaces)", "TV", "Elevator"] },
+  { name: "Bliss 36 Apartment", location: "Himarë", rating: 3.5, images: [apartment21, apartment21_1, apartment21_2, apartment21_3], description: "Apartament modern me lehtësira të plota dhe hapësirë të jashtme private për relaksim.", rooms: 1, capacity: 3, price: 41, amenities: ["Wi-Fi", "Dedicated Workspace", "Free Parking on Premises", "TV", "Air Conditioning", "Private Patio or Balcony"] },
+  { name: "1BR Apartment", location: "Himarë", rating: 4.33, images: [apartment22, apartment22_1, apartment22_2, apartment22_3], description: "Apartament modern me pamje deti dhe lehtësira të plota për një qëndrim relaksues.", rooms: 1, capacity: 4, price: 66, amenities: ["Sea View", "Shared Beach Access", "Kitchen", "Wi-Fi", "Dedicated Workspace", "Free Parking Garage (1 space)", "TV"] },
+  { name: "Deluxe Suite 3", location: "Himarë", rating: 4.68, images: [apartment23, apartment23_1, apartment23_2, apartment23_3], description: "Suitë komode me pamje malore dhe lehtësira të plota për një qëndrim relaksues.", rooms: 1, capacity: 2, price: 34, amenities: ["Mountain View", "Shared Beach Access", "Wi-Fi", "Dedicated Workspace", "Free Residential Garage on Premises", "TV"] },
+  { name: "Sophie's Apartment", location: "Himarë", rating: 4.2, images: [apartment24, apartment24_1, apartment24_2, apartment24_3], description: "Apartament komod me lehtësira bazë dhe i përshtatshëm për një qëndrim relaksues.", rooms: 1, capacity: 3, price: 48, amenities: ["Wi-Fi", "Free Parking on Premises", "Pets Allowed", "TV", "Air Conditioning", "Hair Dryer"] },
+  { name: "Dea's Villa", location: "Himarë", rating: 4.0, images: [villa24, villa24_1, villa24_2, villa24_3], description: "Vila luksoze me lehtësira të plota dhe siguri të jashtme për një qëndrim komod dhe relaksues.", rooms: 2, capacity: 5, price: 178, nights: 2, amenities: ["Kitchen", "Wi-Fi", "Free Parking on Premises", "TV", "Washer", "Air Conditioning", "Bathtub", "Exterior Security Cameras on Property"] },
+  { name: "Apartment", location: "Himarë", rating: 3.62, images: [apartment25, apartment25_1, apartment25_2, apartment25_3], description: "Apartament i rehatshëm me pamje dhe lehtësira të nevojshme për një qëndrim relaksues.", rooms: 1, capacity: 2, price: 30, amenities: ["Vineyard View", "Wi-Fi", "Free Street Parking", "Pets Allowed", "Air Conditioning", "Shared Patio or Balcony"] },
+  { name: "Vuno 2 Villa", location: "Himarë", rating: 4.78, images: [villa25, villa25_1, villa25_2, villa25_3], description: "Vila komode me pamje deti dhe lehtësira të plota për një qëndrim relaksues.", rooms: 1, capacity: 4, price: 123, amenities: ["Sea View", "Wi-Fi", "Air Conditioning", "Private Patio or Balcony", "Luggage Dropoff Allowed"] },
+  { name: "The Poet's Villa", location: "Himarë", rating: 4.81, images: [villa26, villa26_1, villa26_2, villa26_3], description: "Vila elegante me lehtësira të plota dhe siguri të jashtme për një qëndrim relaksues.", rooms: 1, capacity: 3, price: 140, amenities: ["Wi-Fi", "Free Parking on Premises", "Pool", "TV", "Washer", "Air Conditioning", "Hair Dryer", "Exterior Security Cameras on Property"] },
+  { name: "Goros' Apartment", location: "Himarë", rating: 4.65, images: [apartment26, apartment26_1, apartment26_2, apartment26_3], description: "Apartament komod me lehtësira bazë dhe i përshtatshëm për një qëndrim relaksues.", rooms: 1, capacity: 3, price: 48, nights: 2, amenities: ["Free Parking on Premises", "Pets Allowed", "TV", "Air Conditioning", "Hair Dryer"] },
+  { name: "Kian's Apartment", location: "Himarë", rating: 4.66, images: [apartment27, apartment27_1, apartment27_2, apartment27_3], description: "Apartament komod me lehtësira të plota dhe hapësirë të jashtme për relaksim.", rooms: 1, capacity: 4, price: 47, amenities: ["Beach Access", "Kitchen", "Wi-Fi", "Free Street Parking", "TV", "Washer", "Air Conditioning", "Patio or Balcony"] },
+  { name: "Serenity 6 Apartment", location: "Himarë", rating: 4.70, images: [apartment28, apartment28_1, apartment28_2, apartment28_3], description: "Apartament i rehatshëm me lehtësira të plota dhe hapësirë të jashtme për relaksim.", rooms: 1, capacity: 3, price: 65, amenities: ["Beach Access", "Kitchen", "Wi-Fi", "Dedicated Workspace", "TV", "Air Conditioning", "Patio or Balcony", "Hair Dryer"] },
+  { name: "Hill 2 Apartment", location: "Himarë", rating: 4.68, images: [apartment29, apartment29_1, apartment29_2, apartment29_3], description: "Apartament modern me pamje deti dhe lehtësira të plota për një qëndrim relaksues.", rooms: 1, capacity: 2, price: 43, amenities: ["Sea View", "Beach Access", "Kitchen", "Wi-Fi", "Dedicated Workspace", "TV", "Washer"] },
+  { name: "Apartment 103", location: "Himarë", rating: 4.67, images: [apartment30, apartment30_1, apartment30_2, apartment30_3], description: "Apartament i rehatshëm me lehtësira bazë dhe siguri të shtuar për një qëndrim komod.", rooms: 1, capacity: 3, price: 84, amenities: ["Lock on Bedroom Door", "Wi-Fi", "Free Parking on Premises", "TV", "Air Conditioning"] },
+  { name: "Hill 3 Apartment", location: "Himarë", rating: 4.6, images: [apartment31, apartment31_1, apartment31_2, apartment31_3], description: "Apartament komod me lehtësira të plota dhe hapësirë për relaksim.", rooms: 1, capacity: 3, price: 40, amenities: ["Beach Access", "Wi-Fi", "Dedicated Workspace", "TV", "Air Conditioning"] },
+  { name: "Central Apartment 2", location: "Himarë", rating: 3.4, images: [apartment32, apartment32_1, apartment32_2], description: "Apartament komod me pamje deti dhe lehtësira të plota për një qëndrim të rehatshëm.", rooms: 1, capacity: 4, price: 35, amenities: ["Sea View", "Kitchen", "Wi-Fi", "TV", "Washer", "Air Conditioning"] },
+  { name: "Comfort Apartment 3", location: "Himarë", rating: 4.0, images: [apartment33, apartment33_1, apartment33_2, apartment33_3], description: "Apartament komod me lehtësira të plota për një qëndrim relaksues.", rooms: 1, capacity: 3, price: 108, amenities: ["Wi-Fi", "Free Parking on Premises", "TV", "Air Conditioning"] },
+  { name: "Manolo&Jolie Luxury Villa 2", location: "Himarë", rating: 4.5, images: [villa27, villa27_1, villa27_2, villa27_3], description: "Vila elegante me lehtësira të plota dhe hapësirë për një qëndrim të rehatshëm.", rooms: 1, capacity: 2, price: 152, amenities: ["Wi-Fi", "TV", "Air Conditioning", "Paid Parking on Premises"] },
+  { name: "Manolo&Jolie Luxury Villa 1", location: "Himarë", rating: 4.6, images: [villa28, villa28_1, villa28_2, villa28_3], description: "Vila luksoze në bregdet me lehtësira të plota për një qëndrim relaksues.", rooms: 1, capacity: 3, price: 140, amenities: ["Beachfront", "Wi-Fi", "TV", "Air Conditioning", "Hair Dryer", "Breakfast"] },
+  { name: "Manolo & Jolie Luxury Villa 4", location: "Himarë", rating: 4.5, images: [villa29, villa29_1, villa29_2, villa29_3], description: "Vila komode me akses në plazh dhe lehtësira të plota për një qëndrim të rehatshëm.", rooms: 1, capacity: 2, price: 115, amenities: ["Beach Access", "Wi-Fi", "TV", "Washer", "Air Conditioning"] },
+  { name: "City 12 Apartment", location: "Himarë", rating: 4.0, images: [apartment34, apartment34_1, apartment34_2], description: "Apartament i rehatshëm me lehtësira të plota dhe i përshtatshëm për një qëndrim të këndshëm.", rooms: 1, capacity: 2, price: 35, amenities: ["Pets Allowed", "Air Conditioning", "Luggage Dropoff Allowed", "Crib", "Hair Dryer"] },
 
 ];
 
