@@ -37,7 +37,6 @@ import sarande1Image from "../images/sarande1.jpeg";
 
 import peja0Image from "../images/peja0.jpg";
 import prizren0Image from "../images/prizren0.jpg";
-import korca0Image from "../images/korca0.jpg";
 import himare0Image from "../images/himare0.jpg";
 
 const destinationss = [
@@ -49,7 +48,6 @@ const destinationss = [
   { name: "Pejë", image: peja0Image },
   { name: "Sarandë", image: sarande0Image },
   { name: "Prizren", image: prizren0Image },
-  { name: "Korçë", image: korca0Image },
   { name: "Himarë", image: himare0Image },
 
 ];

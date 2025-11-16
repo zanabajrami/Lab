@@ -35,9 +35,6 @@ import prizren2 from "../images/prizren2.jpg";
 import himare1 from "../images/himare1.webp";
 import himare2 from "../images/himare2.jpg";
 
-import korca1 from "../images/korca1.jpg";
-import korca2 from "../images/korca2.jpg";
-
 export const destinations = [
     { name: "Prishtina", image: prishtina1 },
     { name: "Tirana", image: tirana1 },
@@ -47,7 +44,6 @@ export const destinations = [
     { name: "Pejë", image: peja1 },
     { name: "Sarandë", image: sarande2 },
     { name: "Prizren", image: prizren1 },
-    { name: "Korçë", image: korca1 },
     { name: "Himarë", image: himare1 },
 ];
 
@@ -150,17 +146,6 @@ export const aboutDestinations = [
         bestTime: "Qershor – Shtator për det dhe diell.",
         stay: "Shtëpi pushimi me pamje nga deti dhe hotele boutique.",
         weather: "Moti:❄️ 9°C dimër,🌤️ 32°C verë"
-    },
-    {
-        name: "Korçë",
-        image: korca2,
-        description:
-            "Qyteti i serenatave dhe kulturës, me arkitekturë elegante dhe atmosferë romantike.",
-        activities: "Shëtitje në Pazarin e Vjetër, muze, dhe festivalet tradicionale.",
-        food: "Lakror, birrë Korça, dhe ëmbëlsira me mjaltë.",
-        bestTime: "Vjeshtë dhe dimër për eventet kulturore dhe atmosferë festive.",
-        stay: "Hotele elegante me stil klasik dhe bujtina me oborre të gurta.",
-        weather: "Moti:❄️ -2°C dimër,🌤️ 25°C verë"
     },
 ];
 

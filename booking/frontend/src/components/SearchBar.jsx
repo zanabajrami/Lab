@@ -97,7 +97,6 @@ function SearchBar() {
 
     setError(""); // gjithçka është plotësuar
     console.log({ destination, startDate, endDate, guests, rooms });
-    // këtu mund të bësh redirect ose API call
   };
 
   return (
