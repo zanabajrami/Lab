@@ -205,6 +205,89 @@ import hotel42_1 from "../images/hotel42_1.avif";
 import hotel42_2 from "../images/hotel42_2.avif";
 import hotel42_3 from "../images/hotel42_3.avif";
 
+import hotel43 from "../images/hotel43.avif";
+import hotel43_1 from "../images/hotel43_1.avif";
+import hotel43_2 from "../images/hotel43_2.avif";
+import hotel43_3 from "../images/hotel43_3.jpeg";
+
+import hotel44 from "../images/hotel44.avif";
+import hotel44_1 from "../images/hotel44_1.avif";
+import hotel44_2 from "../images/hotel44_2.avif";
+
+import hotel45 from "../images/hotel45.avif";
+import hotel45_1 from "../images/hotel45_1.avif";
+import hotel45_2 from "../images/hotel45_2.avif";
+
+import hotel46 from "../images/hotel46.jpeg";
+import hotel46_1 from "../images/hotel46_1.avif";
+import hotel46_2 from "../images/hotel46_2.avif";
+
+import hotel47 from "../images/hotel47.avif";
+import hotel47_1 from "../images/hotel47_1.jpeg";
+import hotel47_2 from "../images/hotel47_2.avif";
+
+import hotel48 from "../images/hotel48.avif";
+import hotel48_1 from "../images/hotel48_1.jpeg";
+import hotel48_2 from "../images/hotel48_2.jpeg";
+
+import hotel49 from "../images/hotel49.jpeg";
+import hotel49_1 from "../images/hotel49_1.avif";
+import hotel49_2 from "../images/hotel49_2.avif";
+import hotel49_3 from "../images/hotel49_3.jpeg";
+
+import hotel50 from "../images/hotel50.avif";
+import hotel50_1 from "../images/hotel50_1.avif";
+import hotel50_2 from "../images/hotel50_2.jpeg";
+
+import hotel51 from "../images/hotel51.avif";
+import hotel51_1 from "../images/hotel51_1.avif";
+import hotel51_2 from "../images/hotel51_2.avif";
+import hotel51_3 from "../images/hotel51_3.avif";
+
+import hotel52 from "../images/hotel52.avif";
+import hotel52_1 from "../images/hotel52_1.avif";
+import hotel52_2 from "../images/hotel52_2.avif";
+
+import hotel53 from "../images/hotel53.jpeg";
+import hotel53_1 from "../images/hotel53_1.jpeg";
+import hotel53_2 from "../images/hotel53_2.jpeg";
+
+import hotel54 from "../images/hotel54.avif";
+import hotel54_1 from "../images/hotel54_1.avif";
+import hotel54_2 from "../images/hotel54_2.jpeg";
+
+import hotel55 from "../images/hotel55.avif";
+import hotel55_1 from "../images/hotel55_1.avif";
+import hotel55_2 from "../images/hotel55_2.avif";
+
+import hotel56 from "../images/hotel56.avif";
+import hotel56_1 from "../images/hotel56_1.avif";
+import hotel56_2 from "../images/hotel56_2.avif";
+
+import hotel57 from "../images/hotel57.jpeg";
+import hotel57_1 from "../images/hotel57_1.avif";
+import hotel57_2 from "../images/hotel57_2.avif";
+
+import hotel58 from "../images/hotel58.avif";
+import hotel58_1 from "../images/hotel58_1.jpeg";
+import hotel58_2 from "../images/hotel58_2.avif";
+import hotel58_3 from "../images/hotel58_3.jpeg";
+
+import hotel59 from "../images/hotel59.avif";
+import hotel59_1 from "../images/hotel59_1.avif";
+import hotel59_2 from "../images/hotel59_2.avif";
+
+import hotel60 from "../images/hotel60.jpeg";
+import hotel60_1 from "../images/hotel60_1.jpeg";
+import hotel60_2 from "../images/hotel60_2.jpeg";
+
+import hotel61 from "../images/hotel61.avif";
+import hotel61_1 from "../images/hotel61_1.avif";
+
+import hotel62 from "../images/hotel62.avif";
+import hotel62_1 from "../images/hotel62_1.avif";
+import hotel62_2 from "../images/hotel62_2.jpeg";
+
 //Villa
 import villa1 from "../images/villa1.avif";
 import villa1_1 from "../images/villa1_1.avif";
@@ -359,6 +442,74 @@ import villa29 from "../images/villa29.jpeg";
 import villa29_1 from "../images/villa29_1.jpeg";
 import villa29_2 from "../images/villa29_2.avif";
 import villa29_3 from "../images/villa29_3.jpeg";
+
+import villa30 from "../images/villa30.avif";
+import villa30_1 from "../images/villa30_1.avif";
+import villa30_2 from "../images/villa30_2.avif";
+
+import villa31 from "../images/villa31.avif";
+import villa31_1 from "../images/villa31_1.avif";
+import villa31_2 from "../images/villa31_2.avif";
+
+import villa32 from "../images/villa32.jpeg";
+import villa32_1 from "../images/villa32_1.avif";
+import villa32_2 from "../images/villa32_2.jpeg";
+
+import villa33 from "../images/villa33.avif";
+import villa33_1 from "../images/villa33_1.avif";
+import villa33_2 from "../images/villa33_2.avif";
+
+import villa34 from "../images/villa34.avif";
+import villa34_1 from "../images/villa34_1.avif";
+import villa34_2 from "../images/villa34_2.avif";
+import villa34_3 from "../images/villa34_3.avif";
+
+import villa35 from "../images/villa35.avif";
+import villa35_1 from "../images/villa35_1.avif";
+import villa35_2 from "../images/villa35_2.avif";
+import villa35_3 from "../images/villa35_3.avif";
+
+import villa36 from "../images/villa36.avif";
+import villa36_1 from "../images/villa36_1.avif";
+import villa36_2 from "../images/villa36_2.avif";
+
+import villa37 from "../images/villa37.avif";
+import villa37_1 from "../images/villa37_1.avif";
+import villa37_2 from "../images/villa37_2.avif";
+import villa37_3 from "../images/villa37_3.avif";
+
+import villa38 from "../images/villa38.jpeg";
+import villa38_1 from "../images/villa38_1.jpeg";
+import villa38_2 from "../images/villa38_2.avif";
+import villa38_3 from "../images/villa38_3.avif";
+
+import villa39 from "../images/villa39.avif";
+import villa39_1 from "../images/villa39_1.avif";
+import villa39_2 from "../images/villa39_2.avif";
+import villa39_3 from "../images/villa39_3.avif";
+
+import villa40 from "../images/villa40.avif";
+import villa40_1 from "../images/villa40_1.avif";
+import villa40_2 from "../images/villa40_2.avif";
+import villa40_3 from "../images/villa40_3.avif";
+
+import villa41 from "../images/villa41.webp";
+import villa41_1 from "../images/villa41_1.avif";
+import villa41_2 from "../images/villa41_2.avif";
+
+import villa42 from "../images/villa42.avif";
+import villa42_1 from "../images/villa42_1.avif";
+import villa42_2 from "../images/villa42_2.avif";
+import villa42_3 from "../images/villa42_3.avif";
+
+import villa43 from "../images/villa43.avif";
+import villa43_1 from "../images/villa43_1.avif";
+import villa43_2 from "../images/villa43_2.avif";
+import villa43_3 from "../images/villa43_3.avif";
+
+import villa44 from "../images/villa44.avif";
+import villa44_1 from "../images/villa44_1.avif";
+import villa44_2 from "../images/villa44_2.jpeg";
 
 //Apartment
 import apartment1 from "../images/apartment1.jpg";
@@ -652,6 +803,96 @@ import apartment61 from "../images/apartment61.jpeg";
 import apartment61_1 from "../images/apartment61_1.avif";
 import apartment61_2 from "../images/apartment61_2.webp";
 
+import apartment62 from "../images/apartment62.webp";
+import apartment62_1 from "../images/apartment62_1.avif";
+import apartment62_2 from "../images/apartment62_2.avif";
+import apartment62_3 from "../images/apartment62_3.avif";
+
+import apartment63 from "../images/apartment63.avif";
+import apartment63_1 from "../images/apartment63_1.avif";
+import apartment63_2 from "../images/apartment63_2.avif";
+import apartment63_3 from "../images/apartment63_3.avif";
+
+import apartment64 from "../images/apartment64.avif";
+import apartment64_1 from "../images/apartment64_1.avif";
+import apartment64_2 from "../images/apartment64_2.avif";
+import apartment64_3 from "../images/apartment64_3.jpeg";
+
+import apartment65 from "../images/apartment65.avif";
+import apartment65_1 from "../images/apartment65_1.avif";
+import apartment65_2 from "../images/apartment65_2.jpeg";
+import apartment65_3 from "../images/apartment65_3.avif";
+
+import apartment66 from "../images/apartment66.avif";
+import apartment66_1 from "../images/apartment66_1.avif";
+import apartment66_2 from "../images/apartment66_2.webp";
+import apartment66_3 from "../images/apartment66_3.avif";
+
+import apartment67 from "../images/apartment67.avif";
+import apartment67_1 from "../images/apartment67_1.avif";
+import apartment67_2 from "../images/apartment67_2.avif";
+import apartment67_3 from "../images/apartment67_3.avif";
+
+import apartment68 from "../images/apartment68.jpeg";
+import apartment68_1 from "../images/apartment68_1.jpeg";
+
+import apartment69 from "../images/apartment69.avif";
+import apartment69_1 from "../images/apartment69_1.avif";
+import apartment69_2 from "../images/apartment69_2.avif";
+import apartment69_3 from "../images/apartment69_3.avif";
+
+import apartment70 from "../images/apartment70.avif";
+import apartment70_1 from "../images/apartment70_1.avif";
+import apartment70_2 from "../images/apartment70_2.avif";
+
+import apartment71 from "../images/apartment71.avif";
+import apartment71_1 from "../images/apartment71_1.avif";
+import apartment71_2 from "../images/apartment71_2.avif";
+import apartment71_3 from "../images/apartment71_3.avif";
+
+import apartment72 from "../images/apartment72.avif";
+import apartment72_1 from "../images/apartment72_1.avif";
+import apartment72_2 from "../images/apartment72_2.avif";
+
+import apartment73 from "../images/apartment73.avif";
+import apartment73_1 from "../images/apartment73_1.avif";
+import apartment73_2 from "../images/apartment73_2.avif";
+
+import apartment74 from "../images/apartment74.avif";
+import apartment74_1 from "../images/apartment74_1.avif";
+import apartment74_2 from "../images/apartment74_2.avif";
+
+import apartment75 from "../images/apartment75.avif";
+import apartment75_1 from "../images/apartment75_1.avif";
+import apartment75_2 from "../images/apartment75_2.avif";
+import apartment75_3 from "../images/apartment75_3.avif";
+
+import apartment76 from "../images/apartment76.avif";
+import apartment76_1 from "../images/apartment76_1.avif";
+import apartment76_2 from "../images/apartment76_2.avif";
+import apartment76_3 from "../images/apartment76_3.avif";
+
+import apartment77 from "../images/apartment77.avif";
+import apartment77_1 from "../images/apartment77_1.avif";
+import apartment77_2 from "../images/apartment77_2.avif";
+
+import apartment78 from "../images/apartment78.avif";
+import apartment78_1 from "../images/apartment78_1.avif";
+import apartment78_2 from "../images/apartment78_2.avif";
+
+import apartment79 from "../images/apartment79.avif";
+import apartment79_1 from "../images/apartment79_1.avif";
+import apartment79_2 from "../images/apartment79_2.avif";
+
+import apartment80 from "../images/apartment80.avif";
+import apartment80_1 from "../images/apartment80_1.avif";
+import apartment80_2 from "../images/apartment80_2.webp";
+
+import apartment81 from "../images/apartment81.avif";
+import apartment81_1 from "../images/apartment81_1.avif";
+import apartment81_2 from "../images/apartment81_2.avif";
+import apartment81_3 from "../images/apartment81_3.avif";
+
 const hotels = [
   { name: "Four Points by Sheraton Prishtina", location: "Prishtina", rating: 4.8, images: [hotel1, hotel1_1, hotel1_2], description: "Hotel modern me spa, pishinë të brendshme dhe restorant luksoz me pamje panoramike.", rooms: 1, capacity: 2, price: 129, amenities: ["Spa", "Indoor Pool", "Free Wi-Fi", "Breakfast Included", "Parking", "Fitness Center"] },
   { name: "Swiss Diamond Hotel Prishtina", location: "Prishtina", rating: 4.9, images: [hotel2, hotel2_1, hotel2_2], description: "Një hotel 5-yje me spa, restorante ndërkombëtare dhe dhoma elegante në qendër të qytetit.", rooms: 2, capacity: 4, price: 170, amenities: ["Luxury Spa", "Indoor Pool", "Free Breakfast", "Parking", "Wi-Fi", "Room Service 24/7"] },
@@ -782,6 +1023,61 @@ const hotels = [
   { name: "Apartment 6", location: "Prishtina", rating: 4.2, images: [apartment59, apartment59_1, apartment59_2, apartment59_3], description: "Apartament modern dhe i rehatshëm me lehtësira të plota dhe hapësirë të jashtme për relaksim.", rooms: 2, capacity: 4, price: 116, amenities: ["Wi-Fi", "Free Parking on Premises", "HDTV with Netflix", "Washer", "Dryer", "Window AC Unit", "Backyard", "Luggage Dropoff Allowed", "Crib"] },
   { name: "Apartment", location: "Prishtina", rating: 4.3, images: [apartment60, apartment60_1, apartment60_2, apartment60_3], description: "Apartament luksoz dhe komod me lehtësira të plota dhe hapësira relaksuese, i përshtatshëm për grupe.", rooms: 3, capacity: 8, price: 175, amenities: ["Wi-Fi", "Free Parking on Premises", "Hot Tub", "TV", "Washer"] },
   { name: "Family Apartment", location: "Prishtina", rating: 4.3, images: [apartment61, apartment61_1, apartment61_2], description: "Apartament luksoz me lehtësira të plota, i përshtatshëm për grupe të mëdha dhe qëndrime relaksuese.", rooms: 2, capacity: 6, price: 68, amenities: ["Wi-Fi", "Free Parking on Premises", "TV", "Washer"] },
+  { name: "Comfy Apartment", location: "Tirana", rating: 4.0, images: [apartment62, apartment62_1, apartment62_2, apartment62_3], description: "Apartament komod dhe modern për një qëndrim të këndshëm.", rooms: 1, capacity: 3, price: 35, amenities: ["Kitchen", "Fast Wifi", "Dedicated workspace", "Free street parking", "TV", "Washer", "Dryer"] },
+  { name: "The Teal Sport Apartment", location: "Tirana", rating: 4.1, images: [apartment63, apartment63_1, apartment63_2, apartment63_3], description: "Hapësirë moderne me pamje të qytetit, ideale për një qëndrim relaksues.", rooms: 1, capacity: 3, price: 60, amenities: ["Kitchen", "Wifi", "Free street parking", "TV", "Elevator", "Washer"] },
+  { name: "Deluxe Apartment", location: "Tirana", rating: 4.3, images: [apartment64, apartment64_1, apartment64_2, apartment64_3], description: "Një apartament modern dhe i rehatshëm për një qëndrim të këndshëm.", rooms: 1, capacity: 5, price: 58, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free residential garage on premises", "49 inch HDTV", "Elevator", "Free washer – In unit"], },
+  { name: "Red & White Palace Apartment", location: "Tirana", rating: 4.2, images: [apartment65, apartment65_1, apartment65_2, apartment65_3], description: "Apartament modern dhe i këndshëm për një qëndrim relaksues.", rooms: 1, capacity: 4, price: 53, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "TV", "Elevator", "Free washer – In unit"], },
+  { name: "Luxury Apartments", location: "Tirana", rating: 4.5, images: [apartment66, apartment66_1, apartment66_2, apartment66_3], description: "Apartament luksoz dhe i rehatshëm për një qëndrim të këndshëm.", rooms: 1, capacity: 3, price: 112, nights: 2, amenities: ["Kitchen", "Wifi", "Free parking on premises", "Washer"] },
+  { name: "Scandinavian Apartment", location: "Tirana", rating: 4.3, images: [apartment67, apartment67_1, apartment67_2, apartment67_3], description: "Apartament modern dhe i rehatshëm për një qëndrim të këndshëm.", rooms: 2, capacity: 5, price: 65, amenities: ["Kitchen", "Fast wifi – 50 Mbps", "Dedicated workspace", "Free residential garage on premises – 2 spaces", "Pets allowed"], },
+  { name: "Studio Nr.4 Apartment", location: "Tirana", rating: 4.0, images: [apartment68, apartment68_1], description: "Apartament i rehatshëm dhe i përshtatshëm për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 2, price: 33, amenities: ["Wifi", "Dedicated workspace", "TV", "Air conditioning", "Exterior security cameras on property"], },
+  { name: "Tirana 54. Apartment", location: "Tirana", rating: 4.2, images: [apartment69, apartment69_1, apartment69_2, apartment69_3], description: "Apartament i këndshëm dhe komod me pamje nga kopshti.", rooms: 1, capacity: 4, price: 75, amenities: ["Kitchen", "Wifi", "Free parking garage on premises", "42 inch HDTV", "Elevator"], },
+  { name: "Apartment", location: "Tirana", rating: 4.0, images: [apartment70, apartment70_1, apartment70_2], description: "Apartament i thjeshtë dhe i rehatshëm për një qëndrim relaksues.", rooms: 1, capacity: 3, price: 39, amenities: ["Wifi", "43 inch HDTV", "Elevator", "Washer", "Window AC unit", "Hair dryer"], },
+  { name: "Hotel", location: "Tirana", rating: 4.1, images: [hotel43, hotel43_1, hotel43_2, hotel43_3], description: "Hotel komod dhe i përshtatshëm për një qëndrim të rehatshëm.", rooms: 1, capacity: 3, price: 88, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "TV", "Washer"], },
+  { name: "Hotel Tier", location: "Tirana", rating: 4.0, images: [hotel44, hotel44_1, hotel44_2], description: "Hotel i këndshëm me pamje të qytetit dhe parkut, ideal për një qëndrim të rehatshëm.", rooms: 1, capacity: 3, price: 37, amenities: ["City skyline view", "Park view", "Wifi", "Free street parking", "32 inch TV", "AC - split type ductless system"], },
+  { name: "Serenitas Apartment", location: "Tirana", rating: 4.3, images: [apartment71, apartment71_1, apartment71_2, apartment71_3], description: "Apartament modern dhe i rehatshëm për një qëndrim të këndshëm.", rooms: 1, capacity: 5, price: 49, amenities: ["Wifi", "Free street parking", "TV", "Air conditioning", "Luggage dropoff allowed", "Hair dryer"], },
+  { name: "Atal Hotel", location: "Tirana", rating: 4.2, images: [hotel45, hotel45_1, hotel45_2], description: "Hotel i rehatshëm me ambient të qetë dhe pajisje moderne.", rooms: 1, capacity: 2, price: 30, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "43 inch HDTV", "AC - split type ductless system", "Shared backyard – Fully fenced", "Luggage dropoff allowed"], },
+  { name: "Tirana Apartments 3", location: "Tirana", rating: 4.1, images: [apartment72, apartment72_1, apartment72_2], description: "Apartament i rehatshëm dhe i përshtatshëm për një qëndrim të qetë dhe praktik.", rooms: 1, capacity: 3, price: 49, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "HDTV with standard cable", "Paid washer – In building"], },
+  { name: "Amel's Apartment", location: "Tirana", rating: 4.2, images: [apartment73, apartment73_1, apartment73_2], description: "Apartament i rehatshëm dhe modern për një qëndrim të këndshëm.", rooms: 1, capacity: 3, price: 60, amenities: ["Kitchen", "Wifi", "Free street parking", "TV", "Air conditioning"], },
+  { name: "4SeasonsGea Apartment", location: "Tirana", rating: 4.1, images: [apartment74, apartment74_1, apartment74_2], description: "Apartament i thjeshtë dhe komod, ideal për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 3, price: 53, amenities: ["Kitchen", "Wifi", "TV", "Washer", "Air conditioning"], },
+  { name: "Central Luxurious Apartment", location: "Tirana", rating: 4.5, images: [apartment75, apartment75_1, apartment75_2, apartment75_3], description: "Apartament modern dhe luksoz me pamje të qytetit, ideal për një qëndrim të rehatshëm.", rooms: 2, capacity: 5, price: 117, amenities: ["City skyline view", "Kitchen", "Wifi", "Dedicated workspace", "50 inch HDTV with Netflix, premium cable, standard cable", "Elevator"], },
+  { name: "Lucury 2BDR Apartment", location: "Tirana", rating: 4.6, images: [apartment76, apartment76_1, apartment76_2, apartment76_3], description: "Apartament luksoz dhe i hapur, ideal për qëndrim të gjatë ose pushime komode.", rooms: 2, capacity: 5, price: 187, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "TV", "Elevator", "Washer"], },
+  { name: "Pandora Hotel", location: "Tirana", rating: 4.2, images: [hotel46, hotel46_1, hotel46_2], description: "Hotel modern me pamje të qytetit dhe oborrit, ideal për një qëndrim të rehatshëm.", rooms: 1, capacity: 2, price: 42, amenities: ["City skyline view", "Courtyard view", "Wifi", "Free driveway parking on premises – 5 spaces", "Private hot tub", "TV", "Elevator"], },
+  { name: "Imperator Hotel", location: "Tirana", rating: 4.3, images: [hotel47, hotel47_1, hotel47_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 2, price: 76, amenities: ["Wifi", "Free residential garage on premises", "TV", "Elevator", "Air conditioning", "Bathtub"], },
+  { name: "Lakeside Hotel", location: "Tirana", rating: 4.2, images: [hotel48, hotel48_1, hotel48_2], description: "Hotel i qetë me akses në liqen dhe pajisje moderne për një qëndrim të këndshëm.", rooms: 1, capacity: 2, price: 30, amenities: ["Lake access", "Wifi", "Dedicated workspace", "Free parking on premises", "43 inch HDTV"], },
+  { name: "Terra Boutique Hotel", location: "Tirana", rating: 4.4, images: [hotel49, hotel49_1, hotel49_2, hotel49_3], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim komod në qytet.", rooms: 1, capacity: 4, price: 101, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Washer"], },
+  { name: "Metro Hotel", location: "Tirana", rating: 4.1, images: [hotel50, hotel50_1, hotel50_2], description: "Hotel i rehatshëm dhe praktik, ideal për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 2, price: 72, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "Pets allowed", "TV", "Air conditioning"], },
+  { name: "Terra Boutique 2 Hotel", location: "Tirana", rating: 4.3, images: [hotel51, hotel51_1, hotel51_2, hotel51_3], description: "Hotel modern dhe komod, ideal për një qëndrim të rehatshëm në qytet.", rooms: 1, capacity: 2, price: 85, amenities: ["Wifi", "TV", "Air conditioning"], },
+  { name: "Tirana Apartments 1", location: "Tirana", rating: 4.2, images: [apartment77, apartment77_1, apartment77_2], description: "Apartament komod dhe modern me hapësirë të këndshme për një qëndrim relaksues.", rooms: 1, capacity: 4, price: 59, amenities: ["Kitchen", "Wifi", "HDTV with standard cable, Netflix", "Paid washer – In building", "AC - split type ductless system", "Private patio or balcony"], },
+  { name: "City Center Hotel", location: "Tirana", rating: 4.4, images: [hotel52, hotel52_1, hotel52_2], description: "Hotel modern dhe i rehatshëm me pajisje të përshtatshme për një qëndrim të këndshëm.", rooms: 1, capacity: 2, price: 90, amenities: ["Private hot tub", "TV", "Air conditioning", "Hair dryer"], },
+  { name: "Cloud 5 Hotel", location: "Tirana", rating: 4.3, images: [hotel53, hotel53_1, hotel53_2], description: "Hotel i rehatshëm me hapësirë të jashtme dhe pajisje moderne për një qëndrim komod.", rooms: 1, capacity: 2, price: 91, amenities: ["Wifi", "Dedicated workspace", "TV with standard cable", "Air conditioning", "Patio or balcony", "Backyard"], },
+  { name: "Ola Apartment", location: "Tirana", rating: 4.4, images: [apartment78, apartment78_1, apartment78_2], description: "Apartament i hapur dhe i rehatshëm, ideal për një qëndrim familjar ose me miq.", rooms: 2, capacity: 4, price: 76, amenities: ["Kitchen", "Wifi", "Free street parking", "TV", "Washer", "Dryer"], },
+  { name: "Villa 101", location: "Tirana", rating: 4.7, images: [villa30, villa30_1, villa30_2], description: "Vilë moderne dhe komode, ideale për një qëndrim relaksues.", rooms: 1, capacity: 2, price: 110, amenities: ["Wifi", "Free parking on premises – 2 spaces", "TV", "Air Conditioning", "Unavailable: Carbon monoxide alarm", "Unavailable: Smoke alarm"], },
+  { name: "The Wilson Hotel", location: "Tirana", rating: 4.3, images: [hotel54, hotel54_1, hotel54_2], description: "Hotel i rehatshëm dhe modern, ideal për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 2, price: 70, amenities: ["Wifi", "Dedicated workspace", "TV", "Air conditioning"], },
+  { name: "Diart Hotel", location: "Tirana", rating: 4.2, images: [hotel55, hotel55_1, hotel55_2], description: "Hotel modern dhe i përshtatshëm për një qëndrim të rehatshëm.", rooms: 1, capacity: 2, price: 70, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning"], },
+  { name: "Hotel", location: "Tirana", rating: 4.4, images: [hotel56, hotel56_1, hotel56_2], description: "Hotel i rehatshëm me hapësirë të jashtme private dhe pajisje moderne për një qëndrim komod.", rooms: 2, capacity: 5, price: 110, amenities: ["Wifi", "Dedicated workspace", "TV", "Air conditioning", "Private patio or balcony", "Private backyard"], },
+  { name: "Meta Apartment", location: "Tirana", rating: 3.3, images: [apartment79, apartment79_1, apartment79_2], description: "Apartament modern dhe i rehatshëm për një qëndrim të këndshëm.", rooms: 1, capacity: 2, price: 30, amenities: ["Wifi", "TV", "Air conditioning", "Hair dryer"], },
+  { name: "Agate Hotel", location: "Tirana", rating: 4.3, images: [hotel57, hotel57_1, hotel57_2], description: "Hotel modern dhe komod, ideal për një qëndrim të rehatshëm.", rooms: 1, capacity: 2, price: 75, amenities: ["Wifi", "Dedicated workspace", "TV", "Air conditioning", "Hair dryer", "Refrigerator"], },
+  { name: "Amansar Deluxe Hotel", location: "Tirana", rating: 4.4, images: [hotel58, hotel58_1, hotel58_2, hotel58_3], description: "Hotel i rehatshëm dhe modern, ideal për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 3, price: 70, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Washer", "Air conditioning"], },
+  { name: "Family Apartment", location: "Tirana", rating: 4.5, images: [apartment80, apartment80_1, apartment80_2], description: "Apartament i gjerë dhe i rehatshëm, ideal për familje ose grup miqsh.", rooms: 3, capacity: 6, price: 105, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "TV", "Washer", "Air conditioning"], },
+  { name: "Prime Hotel", location: "Tirana", rating: 4.3, images: [hotel59, hotel59_1, hotel59_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 2, price: 70, amenities: ["Wifi", "Dedicated workspace", "TV", "Air conditioning"], },
+  { name: "Destiny Hotel & SPA", location: "Tirana", rating: 4.5, images: [hotel60, hotel60_1, hotel60_2], description: "Hotel modern me pajisje SPA dhe komoditet për një qëndrim relaksues.", rooms: 1, capacity: 2, price: 108, amenities: ["Wifi", "Shared sauna", "TV", "Elevator", "EV charger - level 2", "Air conditioning"], },
+  { name: "Tirana Sunny Villa", location: "Tirana", rating: 4.6, images: [villa31, villa31_1, villa31_2], description: "Vilë moderne dhe komode, ideale për grupet ose familjet që kërkojnë një qëndrim relaksues.", rooms: 3, capacity: 7, price: 70, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "Washer", "Air conditioning", "Bathtub", "Patio or balcony"], },
+  { name: "Hotel", location: "Tirana", rating: 4.0, images: [hotel61, hotel61_1], description: "Hotel i thjeshtë dhe i rehatshëm, ideal për një qëndrim të shkurtër.", rooms: 1, capacity: 1, price: 31, amenities: ["Wifi", "Dedicated workspace", "TV", "Air conditioning"], },
+  { name: "Villa 101 Nr.2", location: "Tirana", rating: 4.7, images: [villa32, villa32_1, villa32_2], description: "Vilë komode dhe moderne, ideale për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 82, amenities: ["Wifi", "Dedicated workspace", "TV", "Air conditioning", "Hair dryer"], },
+  { name: "Hotel", location: "Tirana", rating: 4.2, images: [hotel62, hotel62_1, hotel62_2], description: "Hotel modern dhe i sigurt, ideal për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 1, price: 59, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning", "Exterior security cameras on property"], },
+  { name: "Bloom Haven Apartment", location: "Tirana", rating: 4.4, images: [apartment81, apartment81_1, apartment81_2, apartment81_3], description: "Apartament modern dhe i rehatshëm me pamje të qytetit, ideal për familje ose grup miqsh.", rooms: 2, capacity: 4, price: 47, amenities: ["City skyline view", "Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Washer", "Air conditioning"], },
+  { name: "City Center Villa", location: "Tirana", rating: 4.5, images: [villa33, villa33_1, villa33_2], description: "Vilë moderne dhe komode, ideale për një qëndrim të qetë dhe relaksues.", rooms: 1, capacity: 3, price: 49, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Air conditioning", "Backyard", "Refrigerator"], },
+  { name: "Escape Villa", location: "Tirana", rating: 4.6, images: [villa34, villa34_1, villa34_2, villa34_3], description: "Vilë moderne dhe e rehatshme me hapësirë private të jashtme, ideale për një qëndrim relaksues.", rooms: 1, capacity: 3, price: 97, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Air conditioning", "Private patio or balcony", "Private backyard", "Exterior security cameras on property"], },
+  { name: "Villa Jerina", location: "near Tirana", rating: 4.8, images: [villa35, villa35_1, villa35_2, villa35_3], description: "Vilë luksoze dhe e gjerë, ideale për grupet e mëdha dhe qëndrime të rehatshme.", rooms: 6, capacity: 15, price: 494, amenities: ["Courtyard view", "Garden view", "Kitchen", "Wifi", "Dedicated workspace", "Free driveway parking on premises – 20 spaces"], },
+  { name: "Villa GreyGreen", location: "Tirana", rating: 4.5, images: [villa36, villa36_1, villa36_2], description: "Vilë moderne dhe komode, ideale për një qëndrim relaksues me miq ose familje.", rooms: 1, capacity: 3, price: 58, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "Pets allowed", "TV", "Air conditioning", "Hair dryer", "Microwave"], },
+  { name: "Luxury Villa", location: "Tirana", rating: 4.9, images: [villa37, villa37_1, villa37_2, villa37_3], description: "Vilë luksoze dhe e hapur me pishinë, ideale për familje ose grup miqsh.", rooms: 4, capacity: 8, price: 584, amenities: ["Kitchen", "Wifi", "Free parking on premises", "Pool", "TV", "Washer", "Dryer", "Exterior security cameras on property"], },
+  { name: "Villa Leon", location: "Tirana", rating: 4.6, images: [villa38, villa38_1, villa38_2, villa38_3], description: "Vilë moderne dhe komode, ideale për një qëndrim relaksues për familje ose grup miqsh.", rooms: 2, capacity: 4, price: 107, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Washer", "Air conditioning"], },
+  { name: "Villa Azalea", location: "Tirana", rating: 4.5, images: [villa39, villa39_1, villa39_2, villa39_3], description: "Vilë moderne dhe e rehatshme me pishinë sezonale, ideale për një qëndrim të këndshëm për familje ose miq.", rooms: 1, capacity: 4, price: 88, amenities: ["Wifi", "Free parking on premises", "Pool - available seasonally", "Pets allowed", "TV", "Air conditioning"], },
+  { name: "Villa Kamila", location: "Tirana", rating: 4.9, images: [villa40, villa40_1, villa40_2, villa40_3], description: "Vilë luksoze dhe e hapur me pishinë, ideale për grupet e mëdha dhe qëndrime të rehatshme.", rooms: 4, capacity: 10, price: 570, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "Pool", "TV", "Washer"], },
+  { name: "Villa Eilin", location: "near Tirana", rating: 4.7, images: [villa41, villa41_1, villa41_2], description: "Vilë moderne dhe e rehatshme me pishinë, ideale për familje ose grup miqsh.", rooms: 2, capacity: 6, price: 210, amenities: ["Wifi", "Free parking on premises", "Pool", "Pets allowed", "TV", "Air conditioning"], },
+  { name: "Villa Florence", location: "Tirana", rating: 5.0, images: [villa42, villa42_1, villa42_2, villa42_3], description: "Vilë luksoze dhe e madhe me pishinë private gjatë gjithë vitit, ideale për grupet e mëdha dhe qëndrime komode.", rooms: 6, capacity: 14, price: 1167, amenities: ["Garden view", "Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "Private pool - available all year, open 24 hours, heated, pool cover", "TV", "Washer"], },
+  { name: "Hilltop Villa", location: "Tirana", rating: 4.9, images: [villa43, villa43_1, villa43_2, villa43_3], description: "Vilë luksoze me pamje nga kodrat dhe pishinë, ideale për grupet e mëdha dhe qëndrime komode.", rooms: 4, capacity: 10, price: 711, amenities: ["Kitchen", "Wifi", "Free parking on premises", "Pool", "TV", "Washer", "Air conditioning", "Indoor fireplace"], },
+  { name: "Villa 3", location: "Tirana", rating: 3.6, images: [villa44, villa44_1, villa44_2], description: "Vilë moderne dhe e rehatshme, e pajisur për qëndrime të gjata dhe pushime komode.", rooms: 3, capacity: 4, price: 457, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "70 inch HDTV with Amazon Prime Video", "Washer"], },
 
 ];
 
