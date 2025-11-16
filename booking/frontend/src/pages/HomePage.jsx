@@ -114,13 +114,13 @@ function HomePage() {
     <div>
       {/* Hero Section */}
       <section
-        className={`relative bg-cover bg-center h-screen transition-opacity duration-700 w-full ${loaded ? 'opacity-100' : 'opacity-0'}`}
+        className={`relative bg-cover bg-center h-[650px] transition-opacity duration-700 w-full ${loaded ? 'opacity-100' : 'opacity-0'}`}
         style={{ backgroundImage: `url(${mainImage})` }}
       >
         {loaded && (
           <div className="bg-black bg-opacity-40 h-full flex flex-col justify-center items-center text-white text-center px-4 w-full">
             <motion.h1
-              className="mb-6 text-4xl md:text-6xl font-extrabold drop-shadow-lg"
+              className="mb-6 text-4xl md:text-5xl mt-10 font-extrabold drop-shadow-lg"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
@@ -129,7 +129,7 @@ function HomePage() {
             </motion.h1>
 
             <motion.p
-              className="mb-8 text-lg md:text-xl text-gray-200 max-w-xl"
+              className="mb-5 text-lg md:text-xl text-gray-200 max-w-xl"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
@@ -150,15 +150,7 @@ function HomePage() {
       </section>
 
       {/* Destinacionet */}
-      <section className="max-w-8xl mx-auto px-4 py-12">
-        <h2
-          onClick={() => navigate("/destinations")}
-          className="text-3xl mb-10 text-gray-800 flex items-center justify-center gap-4 cursor-pointer"
-        >
-          <span className="w-16 h-[2px] bg-gray-400 rounded-full"></span>
-          <span>Destinacionet</span>
-          <span className="w-16 h-[2px] bg-gray-400 rounded-full"></span>
-        </h2>
+      <section className="bg-gray-900 max-w-8xl mx-auto px-4 py-12">
         <Slider {...sliderSettings}>
           {destinationss.map((dest) => (
             <div key={dest.name} className="px-2">
@@ -176,15 +168,15 @@ function HomePage() {
         </Slider>
       </section>
 
-      <section className="py-16 text-center">
+      <section className="bg-gray-900 py-16 text-center">
         <h2
-          className="text-3xl mb-12 text-gray-800 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
+          className="text-3xl mb-12 text-gray-400 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
         >
-          Destinacionet më të vizituara <MapPin className="w-6 h-6 text-gray-600" />
+          <MapPin className="w-6 h-6 text-gray-600" /> Destinacionet më të vizituara <MapPin className="w-6 h-6 text-gray-600" />
         </h2>
         <div
           onClick={() => navigate("/destinations")}
-          className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
+          className="flex flex-wrap justify-center gap-8 max-w-8xl mx-auto">
           {[
             { img: tirana1Image, name: "Tiranë" },
             { img: sarande1Image, name: "Sarandë" },
@@ -193,9 +185,12 @@ function HomePage() {
           ].map((dest, i) => (
             <div
               key={i}
-              className="relative overflow-hidden rounded-2xl w-64 h-44 transform transition-all duration-500
-             shadow-[0_20px_60px_rgba(0,0,0,0.4)]
-             hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] group"
+              className="relative overflow-hidden rounded-2xl 
+w-full sm:w-[48%] md:w-[30%] lg:w-[22%] 
+h-52 md:h-56 lg:h-60
+transform transition-all duration-500
+shadow-[0_20px_60px_rgba(0,0,0,0.4)]
+hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] group"
             >
 
               {/* Fotoja */}
@@ -220,9 +215,8 @@ function HomePage() {
       </section>
 
       {/* Kategoritë: Hotele, Villa, Apartamente */}
-      <section className="max-w-7xl mx-auto px-4 py-12">
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
+      <section className="bg-gray-900 max-w-8xl mx-auto px-4 py-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
           {/* Hotele */}
           <div className="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
             <img
@@ -233,17 +227,15 @@ function HomePage() {
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
               <h3 className="text-2xl font-bold mb-2">Hotele</h3>
               <p className="text-sm">Zbuloni hotele të përshtatshme për çdo buxhet.</p>
-              <Link
-                to="/hotels"
-                className="mt-4 bg-gray-900 text-gray-400 px-6 py-2 rounded-md font-semibold
-             shadow-xl hover:shadow-2xl transition-all duration-300
-             transform hover:scale-105 active:scale-95
-             bg-gradient-to-r from-gray-800 via-gray-900 to-gray-900
-             hover:from-gray-700 hover:via-gray-800 hover:to-gray-900
-             ring-1 ring-gray-700 hover:ring-gray-500"
+              <button
+                className="mt-4 px-6 py-2 rounded-md font-semibold
+              text-gray-300 bg-black/40
+              border border-gray-700
+              hover:bg-black/60 hover:text-gray-400
+              transition-all duration-200"
               >
                 More
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -257,17 +249,15 @@ function HomePage() {
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
               <h3 className="text-2xl font-bold mb-2">Villa</h3>
               <p className="text-sm">Relaksohu në vilat më luksoze.</p>
-              <Link
-                to="/villas"
-                className="mt-4 bg-gray-900 text-gray-400 px-6 py-2 rounded-md font-semibold
-             shadow-xl hover:shadow-2xl transition-all duration-300
-             transform hover:scale-105 active:scale-95
-             bg-gradient-to-r from-gray-800 via-gray-900 to-gray-900
-             hover:from-gray-700 hover:via-gray-800 hover:to-gray-900
-             ring-1 ring-gray-700 hover:ring-gray-500"
+              <button
+                className="mt-4 px-6 py-2 rounded-md font-semibold
+              text-gray-300 bg-black/40
+              border border-gray-700
+              hover:bg-black/60 hover:text-gray-400
+              transition-all duration-200"
               >
                 More
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -281,30 +271,28 @@ function HomePage() {
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
               <h3 className="text-2xl font-bold mb-2">Apartamente</h3>
               <p className="text-sm">Qëndrim komod për familje ose grupe të vogla.</p>
-              <Link
-                to="/apartments"
-                className="mt-4 bg-gray-900 text-gray-400 px-6 py-2 rounded-md font-semibold
-             shadow-xl hover:shadow-2xl transition-all duration-300
-             transform hover:scale-105 active:scale-95
-             bg-gradient-to-r from-gray-800 via-gray-900 to-gray-900
-             hover:from-gray-700 hover:via-gray-800 hover:to-gray-900
-             ring-1 ring-gray-700 hover:ring-gray-500"
+              <button
+                className="mt-4 px-6 py-2 rounded-md font-semibold
+              text-gray-300 bg-black/40
+              border border-gray-700
+              hover:bg-black/60 hover:text-gray-400
+              transition-all duration-200"
               >
                 More
-              </Link>
+              </button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Ofertat */}
-      <section className="py-12 w-full px-4">
+      <section className="bg-gray-900 py-12 w-full px-4">
         <div className="max-w-8xl mx-auto px-4 text-center">
           <div className="relative inline-block text-center w-full">
             <h2
-              className="text-3xl mb-12 text-gray-800 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
+              className="text-3xl mb-12 text-gray-400 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
             >
-              <Percent className="w-5 h-5 text-gray-600" /> Ofertat tona <Percent className="w-5 h-5 text-gray-600" />
+              <Percent className="w-5 h-5 text-gray-500" /> Ofertat tona <Percent className="w-5 h-5 text-gray-500" />
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -333,19 +321,19 @@ function HomePage() {
           <div className="text-center mt-6">
             <Link
               to="/deals"
-              className="inline-block px-6 py-2 rounded-md text-gray-800 bg-gray-200 border border-gray-400 hover:bg-gray-300 transition-colors duration-200"
+              className="inline-block px-6 py-2 rounded-md text-gray-400 bg-gray-800 border border-gray-600 hover:border-gray-300 hover:text-gray-300 transition-colors duration-200"
             >
-             Më shumë oferta
+              Më shumë oferta
             </Link>
 
           </div>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 py-16 text-center">
+      <section className="bg-gray-900 max-w-8xl mx-auto px-4 py-16 text-center">
         {/* Section heading */}
         <h2
-          className="relative text-3xl md:text-3xl mb-12 text-gray-800 tracking-tight inline-block overflow-hidden"
+          className="relative text-3xl md:text-3xl mb-12 text-gray-400 tracking-tight inline-block overflow-hidden"
           data-aos="fade-up"
           data-aos-duration="900"
         >
@@ -430,10 +418,10 @@ function HomePage() {
       </section>
 
       {/* Pse të zgjedhësh */}
-      <section className="max-w-7xl mx-auto px-4 py-20 -mt-5 text-center relative overflow-hidden">
+      <section className="bg-gray-900 max-w-8xl mx-auto px-4 py-20 -mt-5 text-center relative overflow-hidden">
         {/* Section heading */}
         <h2
-          className="text-4xl md:text-3xl mb-16 text-gray-800 inline-block relative bg-clip-text animate-gradient-x"
+          className="text-4xl md:text-3xl mb-16 text-gray-400 inline-block relative bg-clip-text animate-gradient-x"
           data-aos="fade-down"
           data-aos-duration="1200"
         >
@@ -481,9 +469,9 @@ function HomePage() {
       </section>
 
       {/* Sugjerimet */}
-      <section className="py-12 mb-10 -mt-10">
+      <section className="bg-gray-900 py-12 -mt-10">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl text-center text-gray-800 mb-10 transition-transform duration-500 hover:scale-105">
+          <h2 className="text-3xl text-center text-gray-400 mb-10 transition-transform duration-500 hover:scale-105">
             <div className="flex justify-center mb-2">
               <MessageSquareText className="w-8 h-8 text-gray-600" />
             </div>
@@ -512,7 +500,7 @@ function HomePage() {
               return (
                 <div
                   key={idx}
-                  className="bg-grey p-5 rounded-xl shadow-2xl relative group overflow-hidden cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:rotate-1 hover:shadow-2xl"
+                  className="bg-grey p-5 rounded-xl shadow-2xl relative group overflow-hidden cursor-pointer transform transition-all duration-500 border border-gray-700 hover:-translate-y-2 hover:scale-105 hover:rotate-1 hover:shadow-2xl"
                 >
                   {/* Animated Image */}
                   <div className="overflow-hidden rounded-md">
@@ -524,10 +512,10 @@ function HomePage() {
                   </div>
 
                   {/* Card content */}
-                  <h3 className="font-bold mb-2 mt-4 text-gray-800">
+                  <h3 className="font-bold mb-2 mt-4 text-gray-400 ">
                     {titles[idx]}
                   </h3>
-                  <p className="text-sm text-gray-600 transition-all duration-500 max-h-16 overflow-hidden group-[.expanded]:max-h-96">
+                  <p className="text-sm text-gray-400 transition-all duration-500 max-h-16 overflow-hidden group-[.expanded]:max-h-96">
                     {texts[idx]}
                     <span className="hidden group-[.expanded]:inline">
                       {" "}{extraTexts[idx]}
@@ -557,8 +545,8 @@ function HomePage() {
       </section>
 
       {/* Reviews */}
-      <section className="py-20 relative overflow-hidden">
-        {/* Sfondo dekorativ me linja lëvizëse, mbulon të gjithë seksionin */}
+      <section className="bg-gray-900 py-20 relative overflow-hidden">
+        {/* Sfond dekorativ me linja lëvizëse, mbulon të gjithë seksionin */}
         <div className="absolute inset-0 flex flex-wrap opacity-20 justify-between">
           {Array.from({ length: 100 }).map((_, i) => (
             <div
@@ -575,7 +563,7 @@ function HomePage() {
 
         {/* Përshtypjet e klientëve */}
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-3xl mb-16 relative inline-block text-center">
+          <h2 className="text-3xl mb-16 relative inline-block text-center text-gray-400 ">
             <div className="flex justify-center mb-2">
               <MessageCircle className="w-8 h-8 text-gray-600" />
             </div>
@@ -587,14 +575,14 @@ function HomePage() {
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className="relative p-10 rounded-3xl bg-white/20 backdrop-blur-md border border-white/25 shadow-2xl transform transition-all duration-500 hover:scale-105 hover:rotate-2 hover:shadow-gray-900/50"
+                className="relative p-10 rounded-3xl bg-gray-800 backdrop-blur-md border border-white/25 shadow-2xl transform transition-all duration-500 hover:scale-105 hover:rotate-2 hover:shadow-gray-900/50"
               >
                 {/* Dekor abstrakt */}
                 <div className="absolute -top-5 -right-5 w-14 h-14 bg-gradient-to-tr from-black via-blue-700 to-indigo-400 rounded-full opacity-40 animate-ping-slow"></div>
                 <div className="absolute -bottom-5 -left-5 w-20 h-20 bg-gradient-to-tr from-gray-900 via-gray-600 to-red-300 rounded-full opacity-30 animate-bounce-slow"></div>
 
                 {/* Quote */}
-                <p className="text-gray-900 italic text-lg mb-8 relative z-10">
+                <p className="text-gray-400 italic text-lg mb-8 relative z-10">
                   “{review.comment}”
                 </p>
 
@@ -603,7 +591,7 @@ function HomePage() {
                   <div className="w-16 h-16 rounded-full bg-blue-700 flex items-center justify-center font-bold text-white text-2xl">
                     {review.name[0]}
                   </div>
-                  <span className="font-semibold text-gray-900 text-lg">{review.name}</span>
+                  <span className="font-semibold text-gray-400 text-lg">{review.name}</span>
                 </div>
 
                 {/* Yjet */}
@@ -617,7 +605,7 @@ function HomePage() {
           </div>
           <button
             onClick={scrollToTop}
-            className={`fixed bottom-8 right-8 p-4 rounded-full bg-gray-800 text-white shadow-lg hover:bg-gray-700 transition-opacity duration-300 z-50
+            className={`fixed bottom-8 right-8 p-4 rounded-full bg-gray-800 text-white shadow-lg border border-gray-500 hover:bg-gray-700 transition-opacity duration-300 z-50
           ${showTopButton ? "opacity-100" : "opacity-0 pointer-events-none"}`}
           >
             ▲

@@ -72,7 +72,7 @@ function SearchBar() {
   const [rooms, setRooms] = useState(1);
   const [error, setError] = useState(""); // për mesazhin e gabimit
 
-  const destinations = ["Prishtina", "Tirana", "Brezovica", "Dhërmi", "Ksamil", "Pejë", "Sarandë", "Prizren", "Himarë", "Korçë"];
+  const destinations = ["Prishtina", "Tirana", "Brezovica", "Dhërmi", "Ksamil", "Pejë", "Sarandë", "Prizren", "Himarë"];
 
   const increment = (setter, value, max = 10) => setter(value < max ? value + 1 : value);
   const decrement = (setter, value, min = 1) => setter(value > min ? value - 1 : value);

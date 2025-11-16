@@ -288,6 +288,53 @@ import hotel62 from "../images/hotel62.avif";
 import hotel62_1 from "../images/hotel62_1.avif";
 import hotel62_2 from "../images/hotel62_2.jpeg";
 
+import hotel63 from "../images/hotel63.avif";
+import hotel63_1 from "../images/hotel63_1.avif";
+import hotel63_2 from "../images/hotel63_2.avif";
+
+import hotel64 from "../images/hotel64.avif";
+import hotel64_1 from "../images/hotel64_1.avif";
+import hotel64_2 from "../images/hotel64_2.avif";
+
+import hotel65 from "../images/hotel65.avif";
+import hotel65_1 from "../images/hotel65_1.avif";
+import hotel65_2 from "../images/hotel65_2.avif";
+
+import hotel66 from "../images/hotel66.webp";
+import hotel66_1 from "../images/hotel66_1.avif";
+import hotel66_2 from "../images/hotel66_2.avif";
+
+import hotel67 from "../images/hotel67.avif";
+import hotel67_1 from "../images/hotel67_1.avif";
+
+import hotel68 from "../images/hotel68.avif";
+import hotel68_1 from "../images/hotel68_1.avif";
+
+import hotel69 from "../images/hotel69.avif";
+import hotel69_1 from "../images/hotel69_1.avif";
+import hotel69_2 from "../images/hotel69_2.avif";
+
+import hotel70 from "../images/hotel70.avif";
+import hotel70_1 from "../images/hotel70_1.jpg";
+import hotel70_2 from "../images/hotel70_2.avif";
+
+import hotel71 from "../images/hotel71.avif";
+import hotel71_1 from "../images/hotel71_1.avif";
+import hotel71_2 from "../images/hotel71_2.avif";
+
+import hotel72 from "../images/hotel72.avif";
+import hotel72_1 from "../images/hotel72_1.avif";
+
+import hotel73 from "../images/hotel73.jpeg";
+import hotel73_1 from "../images/hotel73_1.jpeg";
+import hotel73_2 from "../images/hotel73_2.jpeg";
+
+import hotel74 from "../images/hotel74.avif";
+import hotel74_1 from "../images/hotel74_1.avif";
+
+import hotel75 from "../images/hotel75.avif";
+import hotel75_1 from "../images/hotel75_1.jpeg";
+
 //Villa
 import villa1 from "../images/villa1.avif";
 import villa1_1 from "../images/villa1_1.avif";
@@ -510,6 +557,65 @@ import villa43_3 from "../images/villa43_3.avif";
 import villa44 from "../images/villa44.avif";
 import villa44_1 from "../images/villa44_1.avif";
 import villa44_2 from "../images/villa44_2.jpeg";
+
+import villa45 from "../images/villa45.avif";
+import villa45_1 from "../images/villa45_1.avif";
+import villa45_2 from "../images/villa45_2.avif";
+
+import villa46 from "../images/villa46.avif";
+import villa46_1 from "../images/villa46_1.avif";
+import villa46_2 from "../images/villa46_2.avif";
+
+import villa47 from "../images/villa47.jpeg";
+import villa47_1 from "../images/villa47_1.jpeg";
+import villa47_2 from "../images/villa47_2.jpeg";
+
+import villa48 from "../images/villa48.avif";
+import villa48_1 from "../images/villa48_1.avif";
+import villa48_2 from "../images/villa48_2.avif";
+
+import villa49 from "../images/villa49.avif";
+import villa49_1 from "../images/villa49_1.avif";
+import villa49_2 from "../images/villa49_2.jpeg";
+import villa49_3 from "../images/villa49_3.jpeg";
+
+import villa50 from "../images/villa50.jpeg";
+import villa50_1 from "../images/villa50_1.jpg";
+import villa50_2 from "../images/villa50_2.avif";
+
+import villa51 from "../images/villa51.avif";
+import villa51_1 from "../images/villa51_1.avif";
+import villa51_2 from "../images/villa51_2.avif";
+
+import villa52 from "../images/villa52.avif";
+import villa52_1 from "../images/villa52_1.avif";
+import villa52_2 from "../images/villa52_2.avif";
+
+import villa53 from "../images/villa53.avif";
+import villa53_1 from "../images/villa53_1.avif";
+import villa53_2 from "../images/villa53_2.avif";
+import villa53_3 from "../images/villa53_3.avif";
+
+import villa54 from "../images/villa54.avif";
+import villa54_1 from "../images/villa54_1.avif";
+import villa54_2 from "../images/villa54_2.jpeg";
+import villa54_3 from "../images/villa54_3.avif";
+
+import villa55 from "../images/villa55.avif";
+import villa55_1 from "../images/villa55_1.avif";
+import villa55_2 from "../images/villa55_2.avif";
+
+import villa56 from "../images/villa56.avif";
+import villa56_1 from "../images/villa56_1.avif";
+import villa56_2 from "../images/villa56_2.avif";
+
+import villa57 from "../images/villa57.webp";
+import villa57_1 from "../images/villa57_1.avif";
+import villa57_2 from "../images/villa57_2.avif";
+
+import villa58 from "../images/villa58.avif";
+import villa58_1 from "../images/villa58_1.avif";
+import villa58_2 from "../images/villa58_2.avif";
 
 //Apartment
 import apartment1 from "../images/apartment1.jpg";
@@ -1078,6 +1184,33 @@ const hotels = [
   { name: "Villa Florence", location: "Tirana", rating: 5.0, images: [villa42, villa42_1, villa42_2, villa42_3], description: "Vilë luksoze dhe e madhe me pishinë private gjatë gjithë vitit, ideale për grupet e mëdha dhe qëndrime komode.", rooms: 6, capacity: 14, price: 1167, amenities: ["Garden view", "Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "Private pool - available all year, open 24 hours, heated, pool cover", "TV", "Washer"], },
   { name: "Hilltop Villa", location: "Tirana", rating: 4.9, images: [villa43, villa43_1, villa43_2, villa43_3], description: "Vilë luksoze me pamje nga kodrat dhe pishinë, ideale për grupet e mëdha dhe qëndrime komode.", rooms: 4, capacity: 10, price: 711, amenities: ["Kitchen", "Wifi", "Free parking on premises", "Pool", "TV", "Washer", "Air conditioning", "Indoor fireplace"], },
   { name: "Villa 3", location: "Tirana", rating: 3.6, images: [villa44, villa44_1, villa44_2], description: "Vilë moderne dhe e rehatshme, e pajisur për qëndrime të gjata dhe pushime komode.", rooms: 3, capacity: 4, price: 457, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "70 inch HDTV with Amazon Prime Video", "Washer"], },
+  { name: "Escape Hotel Himare", location: "Himarë", rating: 4.1, images: [hotel63, hotel63_1, hotel63_2], description: "Hotel modern dhe relaksues, i pajisur me pishinë dhe jacuzzi privat për një qëndrim komod.", rooms: 1, capacity: 2, price: 934, nights: 5, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "Pool", "Private hot tub - open 24 hours", "TV"], },
+  { name: "Family Villa", location: "Himarë", rating: 4.3, images: [villa45, villa45_1, villa45_2], description: "Vilë familjare me ambiente të bollshme, akses plazhi dhe pamje relaksuese të kopshtit dhe oborrit.", rooms: 1, capacity: 4, price: 430, nights: 5, amenities: ["Garden view", "Courtyard view", "Beach access", "Kitchen", "Wifi", "Dedicated workspace", "Free driveway parking on premises – 10 spaces", "Pets allowed"], },
+  { name: "Villa Nacios", location: "Himarë", rating: 4.4, images: [villa46, villa46_1, villa46_2], description: "Vilë komode dhe moderne me hapësira të jashtme, ideale për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 432, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning", "Patio or balcony", "Backyard"], nights: 5 },
+  { name: "Hotel", location: "Himarë", rating: 4.2, images: [hotel64, hotel64_1, hotel64_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 3, price: 175, amenities: ["Wifi", "TV", "Air conditioning", "Hair dryer"], nights: 5 },
+  { name: "Hotel Mateo", location: "Himarë", rating: 4.3, images: [hotel65, hotel65_1, hotel65_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 650, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning", "Hair dryer"], nights: 5 },
+  { name: "Hibiscus Hotel", location: "Himarë", rating: 3.2, images: [hotel66, hotel66_1, hotel66_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për familje ose miq.", rooms: 1, capacity: 3, price: 371, amenities: ["Wifi", "Free parking on premises", "Pets allowed", "TV", "Air conditioning"], nights: 5 },
+  { name: "Hotel", location: "Himarë", rating: 4.2, images: [hotel67, hotel67_1], description: "Hotel modern dhe i sigurt, ideal për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 3, price: 234, amenities: ["Wifi", "TV", "Air conditioning", "Exterior security cameras on property"], nights: 5 },
+  { name: "Himara City Hotel", location: "Himarë", rating: 3.9, images: [hotel68, hotel68_1], description: "Hotel modern dhe i rehatshëm, i përshtatshëm për familje ose çiftet që kërkojnë një qëndrim të qetë.", rooms: 1, capacity: 2, price: 110, amenities: ["Wifi", "Pets allowed", "Air conditioning", "Luggage dropoff allowed", "Crib", "Hair dryer"], nights: 5 },
+  { name: "Bliss Hotel", location: "Himarë", rating: 4.4, images: [hotel69, hotel69_1, hotel69_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për familje ose grup miqsh.", rooms: 1, capacity: 4, price: 127, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Air conditioning"], nights: 5 },
+  { name: "Artis Blue Hotel", location: "Himarë", rating: 4.5, images: [hotel70, hotel70_1, hotel70_2], description: "Hotel modern dhe luksoz me jacuzzi, ideal për një qëndrim relaksues për familje ose miq.", rooms: 1, capacity: 3, price: 711, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "Hot tub", "TV", "Air conditioning"], nights: 5 },
+  { name: "Villa", location: "Himarë", rating: 4.6, images: [villa47, villa47_1, villa47_2], description: "Vilë komode dhe moderne me akses plazhi, ideale për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 1050, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning"], nights: 5 },
+  { name: "Tree Villa", location: "Himarë", rating: 4.4, images: [villa48, villa48_1, villa48_2], description: "Vilë moderne dhe e rehatshme, ideale për një qëndrim relaksues për familje ose grup miqsh.", rooms: 1, capacity: 4, price: 254, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning"], nights: 5 },
+  { name: "White Stone Villa", location: "Himarë", rating: 4.5, images: [villa49, villa49_1, villa49_2, villa49_3], description: "Vilë moderne dhe komode me hapësirë të jashtme, ideale për një qëndrim relaksues për familje ose grup miqsh.", rooms: 1, capacity: 3, price: 468, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Washer", "Air conditioning", "Backyard"], nights: 5 },
+  { name: "Cozy Villa", location: "Himarë", rating: 4.5, images: [villa50, villa50_1, villa50_2], description: "Vilë komode me pamje nga mali dhe akses të përbashkët në plazh, ideale për një qëndrim relaksues.", rooms: 1, capacity: 3, price: 296, amenities: ["Mountain view", "Garden view", "Shared beach access", "Kitchen", "Wifi", "Free parking on premises"], nights: 5 },
+  { name: "The Poet's Villa 2", location: "Himarë", rating: 4.7, images: [villa51, villa51_1, villa51_2], description: "Vilë moderne dhe e rehatshme me pishinë, ideale për një qëndrim relaksues për familje ose miq.", rooms: 1, capacity: 3, price: 700, amenities: ["Wifi", "Free parking on premises", "Pool", "TV", "Washer", "Air conditioning", "Hair dryer"], nights: 5 },
+  { name: "Orange Garden Villa", location: "Himarë", rating: 4.9, images: [villa52, villa52_1, villa52_2], description: "Vilë luksoze dhe moderne me hapësira private dhe teknologji të avancuar, ideale për grupet e mëdha dhe qëndrime komode.", rooms: 3, capacity: 7, price: 1342, amenities: ["Kitchen", "Fast wifi – 99 Mbps", "Free parking on premises", "HDTV with Netflix", "Free washer – In unit", "Air conditioning", "Private patio or balcony", "Exterior security cameras on property"], nights: 5 },
+  { name: "Olive Stone Villa", location: "Himarë", rating: 4.8, images: [villa53, villa53_1, villa53_2, villa53_3], description: "Vilë luksoze dhe e gjerë, ideale për familje ose grupe të mëdha me hapësira të bollshme dhe komoditete moderne.", rooms: 3, capacity: 10, price: 1167, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Washer", "Dryer", "Air conditioning"], nights: 5 },
+  { name: "Villa LUAR", location: "Himarë", rating: 5.0, images: [villa54, villa54_1, villa54_2, villa54_3], description: "Vilë luksoze dhe e madhe me pamje nga luginat dhe malet, ideale për grupet e mëdha dhe qëndrime komode.", rooms: 6, capacity: 12, price: 5281, amenities: ["Valley view", "Mountain view", "Kitchen", "Wifi", "Free parking on premises – 4 spaces", "Private outdoor pool - available seasonally, open specific hours", "Hot tub"], nights: 5 },
+  { name: "Kolagji Villas", location: "Himarë", rating: 4.9, images: [villa55, villa55_1, villa55_2], description: "Vilë moderne dhe e gjerë, ideale për familje ose grupe të mëdha, me hapësira të bollshme dhe komoditete të plota.", rooms: 5, capacity: 11, price: 2109, amenities: ["Wifi", "Free parking on premises", "Washer", "Air conditioning"], nights: 5 },
+  { name: "Adriatic Villa", location: "Himarë", rating: 3.5, images: [villa56, villa56_1, villa56_2], description: "Vilë luksoze dhe e rehatshme me hapësira të bollshme, ideale për familje ose grup miqsh.", rooms: 2, capacity: 6, price: 2539, amenities: ["Kitchen", "Wifi", "Free parking on premises"], nights: 5 },
+  { name: "Villa Ionian", location: "Himarë", rating: 4.9, images: [villa57, villa57_1, villa57_2], description: "Vilë luksoze dhe moderne me pishinë dhe jacuzzi, ideale për grupet e mëdha dhe qëndrime relaksuese.", rooms: 4, capacity: 8, price: 2031, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "Pool", "Hot tub", "Pets allowed"], nights: 5 },
+  { name: "Villa 1", location: "Himarë", rating: 4.7, images: [villa58, villa58_1, villa58_2], description: "Vilë komode dhe moderne, ideale për familje ose grupe të vogla me hapësira të bollshme dhe komoditete të plota.", rooms: 2, capacity: 6, price: 671, amenities: ["Kitchen", "Wifi", "Free parking on premises", "Pets allowed", "TV", "Washer", "Air conditioning"], nights: 5 },
+  { name: "New Hotel", location: "Himarë", rating: 4.3, images: [hotel71, hotel71_1, hotel71_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 3, price: 100, amenities: ["Wifi", "Free street parking", "50 inch HDTV", "AC - split type ductless system", "Luggage dropoff allowed"], nights: 5 },
+  { name: "Hotel 35", location: "Himarë", rating: 3.9, images: [hotel72, hotel72_1], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 76, amenities: ["Wifi", "Pets allowed", "Air conditioning", "Luggage dropoff allowed"], nights: 5 },
+  { name: "Sun George Hotel", location: "Himarë", rating: 4.3, images: [hotel73, hotel73_1, hotel73_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 325, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning"], nights: 5 },
+  { name: "Grand Hotel", location: "Himarë", rating: 4.4, images: [hotel74, hotel74_1], description: "Hotel modern dhe i sigurt, ideal për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 192, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Air conditioning", "Exterior security cameras on property"], nights: 5 },
+  { name: "Hotel", location: "Himarë", rating: 4.5, images: [hotel75, hotel75_1], description: "Hotel modern dhe i rehatshëm me akses plazhi, ideal për familje ose grup miqsh.", rooms: 1, capacity: 3, price: 479, amenities: ["Wifi", "Free parking on premises", "TV", "Washer"], nights: 5 },
 
 ];
 

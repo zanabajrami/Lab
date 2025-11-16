@@ -30,7 +30,7 @@ function MainWrapper() {
   const [favorites, setFavorites] = useState([]);
 
   return (
-    <div className="bg-gray-200 min-h-screen flex flex-col">
+    <div className="bg-gray-100 min-h-screen flex flex-col">
       <Header />
       <main className={`flex-grow ${location.pathname !== '/' ? 'pt-16' : ''}`}>
         <Routes>
