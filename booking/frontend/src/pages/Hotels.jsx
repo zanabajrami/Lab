@@ -7,997 +7,229 @@ import { Navigation, Pagination } from "swiper/modules";
 import { BedDouble, Users, HandCoins } from "lucide-react";
 
 //Hotel
-import hotel1 from "../images/hotel1.jpg";
-import hotel1_1 from "../images/hotel1_1.jpg";
-import hotel1_2 from "../images/hotel1_2.avif";
-
-import hotel2 from "../images/hotel2.jpg";
-import hotel2_1 from "../images/hotel2_1.jpg";
-import hotel2_2 from "../images/hotel2_2.jpg";
-
-import hotel3 from "../images/hotel3.jpg";
-import hotel3_1 from "../images/hotel3_1.jpg";
-import hotel3_2 from "../images/hotel3_2.png";
-
-import hotel4 from "../images/hotel4.webp";
-import hotel4_1 from "../images/hotel4_1.webp";
-import hotel4_2 from "../images/hotel4_2.jpg";
-import hotel4_3 from "../images/hotel4_3.jpg";
-
-import hotel5 from "../images/hotel5.jpg";
-import hotel5_1 from "../images/hotel5_1.jpg";
-import hotel5_2 from "../images/hotel5_2.jpg";
-import hotel5_3 from "../images/hotel5_3.jpg";
-
-import hotel6 from "../images/hotel6.jpg";
-import hotel6_1 from "../images/hotel6_1.jpg";
-import hotel6_2 from "../images/hotel6_2.jpg";
-import hotel6_3 from "../images/hotel6_3.jpg";
-
-import hotel7 from "../images/hotel7.webp";
-import hotel7_1 from "../images/hotel7_1.jpg";
-import hotel7_2 from "../images/hotel7_2.jpg";
-import hotel7_3 from "../images/hotel7_3.webp";
-
-import hotel11 from "../images/hotel11.jpg";
-import hotel11_1 from "../images/hotel11_1.jpg";
-import hotel11_2 from "../images/hotel11_2.webp";
-import hotel11_3 from "../images/hotel11_3.jpg";
-
-import hotel12 from "../images/hotel12.jpg";
-import hotel12_1 from "../images/hotel12_1.jpg";
-import hotel12_2 from "../images/hotel12_2.jpg";
-import hotel12_3 from "../images/hotel12_3.jpg";
-import hotel12_4 from "../images/hotel12_4.jpg";
-
-import hotel13 from "../images/hotel13.webp";
-import hotel13_1 from "../images/hotel13_1.jpg";
-import hotel13_2 from "../images/hotel13_2.jpg";
-import hotel13_3 from "../images/hotel13_3.jpg";
-
-import hotel14 from "../images/hotel14.jpg";
-import hotel14_1 from "../images/hotel14_1.avif";
-import hotel14_2 from "../images/hotel14_2.jpg";
-import hotel14_3 from "../images/hotel14_3.jpg";
-
-import hotel15 from "../images/hotel15.jpg";
-import hotel15_1 from "../images/hotel15_1.jpg";
-import hotel15_2 from "../images/hotel15_2.jpg";
-import hotel15_3 from "../images/hotel15_3.jpg";
-
-import hotel16 from "../images/hotel16.jpg";
-import hotel16_1 from "../images/hotel16_1.webp";
-import hotel16_2 from "../images/hotel16_2.jpg";
-import hotel16_3 from "../images/hotel16_3.webp";
-
-import hotel17 from "../images/hotel17.jpg";
-import hotel17_1 from "../images/hotel17_1.jpg";
-import hotel17_2 from "../images/hotel17_2.jpg";
-import hotel17_3 from "../images/hotel17_3.jpg";
-
-import hotel18 from "../images/hotel18.jpg";
-import hotel18_1 from "../images/hotel18_1.jpg";
-import hotel18_2 from "../images/hotel18_2.jpg";
-import hotel18_3 from "../images/hotel18_3.jpg";
-import hotel18_4 from "../images/hotel18_4.jpg";
-
-import hotel19 from "../images/hotel19.webp";
-import hotel19_1 from "../images/hotel19_1.jpg";
-import hotel19_2 from "../images/hotel19_2.jpg";
-import hotel19_3 from "../images/hotel19_3.jpg";
-
-import hotel20 from "../images/hotel20.jpg";
-import hotel20_1 from "../images/hotel20_1.jpg";
-import hotel20_2 from "../images/hotel20_2.avif";
-import hotel20_3 from "../images/hotel20_3.jpg";
-import hotel20_4 from "../images/hotel20_4.jpg";
-
-import hotel21 from "../images/hotel21.jpg";
-import hotel21_1 from "../images/hotel21_1.jpg";
-import hotel21_2 from "../images/hotel21_2.jpg";
-import hotel21_3 from "../images/hotel21_3.jpg";
-
-import hotel22 from "../images/hotel22.jpg";
-import hotel22_1 from "../images/hotel22_1.jpg";
-import hotel22_2 from "../images/hotel22_2.jpg";
-import hotel22_3 from "../images/hotel22_3.jpg";
-import hotel22_4 from "../images/hotel22_4.jpg";
-
-import hotel23 from "../images/hotel23.jpg";
-import hotel23_1 from "../images/hotel23_1.jpg";
-import hotel23_2 from "../images/hotel23_2.jpg";
-import hotel23_3 from "../images/hotel23_3.jpg";
-
-import hotel24 from "../images/hotel24.webp";
-import hotel24_1 from "../images/hotel24_1.jpg";
-import hotel24_2 from "../images/hotel24_2.webp";
-import hotel24_3 from "../images/hotel24_3.webp";
-import hotel24_4 from "../images/hotel24_4.webp";
-
-import hotel25 from "../images/hotel25.jpg";
-import hotel25_1 from "../images/hotel25_1.jpg";
-import hotel25_2 from "../images/hotel25_2.jpg";
-import hotel25_3 from "../images/hotel25_3.jpg";
-
-import hotel26 from "../images/hotel26.jpg";
-import hotel26_1 from "../images/hotel26_1.jpg";
-import hotel26_2 from "../images/hotel26_2.jpg";
-import hotel26_3 from "../images/hotel26_3.jpg";
-
-import hotel27 from "../images/hotel27.jpg";
-import hotel27_1 from "../images/hotel27_1.jpg";
-import hotel27_2 from "../images/hotel27_2.jpg";
-import hotel27_3 from "../images/hotel27_3.jpg";
-
-import hotel28 from "../images/hotel28.jpg";
-import hotel28_1 from "../images/hotel28_1.jpg";
-import hotel28_2 from "../images/hotel28_2.jpg";
-import hotel28_3 from "../images/hotel28_3.jpg";
-import hotel28_4 from "../images/hotel28_4.jpg";
-
-import hotel29 from "../images/hotel29.jpg";
-import hotel29_1 from "../images/hotel29_1.jpg";
-import hotel29_2 from "../images/hotel29_2.jpg";
-import hotel29_3 from "../images/hotel29_3.jpg";
-
-import hotel30 from "../images/hotel30.jpg";
-import hotel30_1 from "../images/hotel30_1.jpg";
-import hotel30_2 from "../images/hotel30_2.jpg";
-import hotel30_3 from "../images/hotel30_3.jpg";
-import hotel30_4 from "../images/hotel30_4.jpg";
-
-import hotel31 from "../images/hotel31.jpg";
-import hotel31_1 from "../images/hotel31_1.jpg";
-import hotel31_2 from "../images/hotel31_2.jpg";
-import hotel31_3 from "../images/hotel31_3.jpg";
-
-import hotel32 from "../images/hotel32.jpg";
-import hotel32_1 from "../images/hotel32_1.jpg";
-import hotel32_2 from "../images/hotel32_2.jpg";
-import hotel32_3 from "../images/hotel32_3.jpg";
-
-import hotel33 from "../images/hotel33.avif";
-import hotel33_1 from "../images/hotel33_1.avif";
-import hotel33_2 from "../images/hotel33_2.avif";
-import hotel33_3 from "../images/hotel33_3.webp";
-
-import hotel34 from "../images/hotel34.jpg";
-import hotel34_1 from "../images/hotel34_1.jpg";
-import hotel34_2 from "../images/hotel34_2.jpg";
-import hotel34_3 from "../images/hotel34_3.jpg";
-
-import hotel35 from "../images/hotel35.jpg";
-import hotel35_1 from "../images/hotel35_1.jpg";
-import hotel35_2 from "../images/hotel35_2.jpg";
-import hotel35_3 from "../images/hotel35_3.jpg";
-
-import hotel36 from "../images/hotel36.jpg";
-import hotel36_1 from "../images/hotel36_1.jpg";
-import hotel36_2 from "../images/hotel36_2.jpg";
-import hotel36_3 from "../images/hotel36_3.jpg";
-
-import hotel37 from "../images/hotel37.jpg";
-import hotel37_1 from "../images/hotel37_1.jpg";
-import hotel37_2 from "../images/hotel37_2.jpg";
-
-import hotel38 from "../images/hotel38.jpg";
-import hotel38_1 from "../images/hotel38_1.jpg";
-import hotel38_2 from "../images/hotel38_2.jpg";
-import hotel38_3 from "../images/hotel38_3.jpg";
-
-import hotel39 from "../images/hotel39.jpg";
-import hotel39_1 from "../images/hotel39_1.jpg";
-import hotel39_2 from "../images/hotel39_2.jpg";
-import hotel39_3 from "../images/hotel39_3.jpg";
-
-import hotel40 from "../images/hotel40.webp";
-import hotel40_1 from "../images/hotel40_1.webp";
-import hotel40_2 from "../images/hotel40_2.avif";
-import hotel40_3 from "../images/hotel40_3.avif";
-
-import hotel41 from "../images/hotel41.avif";
-import hotel41_1 from "../images/hotel41_1.avif";
-import hotel41_2 from "../images/hotel41_2.avif";
-import hotel41_3 from "../images/hotel41_3.avif";
-
-import hotel42 from "../images/hotel42.avif";
-import hotel42_1 from "../images/hotel42_1.avif";
-import hotel42_2 from "../images/hotel42_2.avif";
-import hotel42_3 from "../images/hotel42_3.avif";
-
-import hotel43 from "../images/hotel43.avif";
-import hotel43_1 from "../images/hotel43_1.avif";
-import hotel43_2 from "../images/hotel43_2.avif";
-import hotel43_3 from "../images/hotel43_3.jpeg";
-
-import hotel44 from "../images/hotel44.avif";
-import hotel44_1 from "../images/hotel44_1.avif";
-import hotel44_2 from "../images/hotel44_2.avif";
-
-import hotel45 from "../images/hotel45.avif";
-import hotel45_1 from "../images/hotel45_1.avif";
-import hotel45_2 from "../images/hotel45_2.avif";
-
-import hotel46 from "../images/hotel46.jpeg";
-import hotel46_1 from "../images/hotel46_1.avif";
-import hotel46_2 from "../images/hotel46_2.avif";
-
-import hotel47 from "../images/hotel47.avif";
-import hotel47_1 from "../images/hotel47_1.jpeg";
-import hotel47_2 from "../images/hotel47_2.avif";
-
-import hotel48 from "../images/hotel48.avif";
-import hotel48_1 from "../images/hotel48_1.jpeg";
-import hotel48_2 from "../images/hotel48_2.jpeg";
-
-import hotel49 from "../images/hotel49.jpeg";
-import hotel49_1 from "../images/hotel49_1.avif";
-import hotel49_2 from "../images/hotel49_2.avif";
-import hotel49_3 from "../images/hotel49_3.jpeg";
-
-import hotel50 from "../images/hotel50.avif";
-import hotel50_1 from "../images/hotel50_1.avif";
-import hotel50_2 from "../images/hotel50_2.jpeg";
-
-import hotel51 from "../images/hotel51.avif";
-import hotel51_1 from "../images/hotel51_1.avif";
-import hotel51_2 from "../images/hotel51_2.avif";
-import hotel51_3 from "../images/hotel51_3.avif";
-
-import hotel52 from "../images/hotel52.avif";
-import hotel52_1 from "../images/hotel52_1.avif";
-import hotel52_2 from "../images/hotel52_2.avif";
-
-import hotel53 from "../images/hotel53.jpeg";
-import hotel53_1 from "../images/hotel53_1.jpeg";
-import hotel53_2 from "../images/hotel53_2.jpeg";
-
-import hotel54 from "../images/hotel54.avif";
-import hotel54_1 from "../images/hotel54_1.avif";
-import hotel54_2 from "../images/hotel54_2.jpeg";
-
-import hotel55 from "../images/hotel55.avif";
-import hotel55_1 from "../images/hotel55_1.avif";
-import hotel55_2 from "../images/hotel55_2.avif";
-
-import hotel56 from "../images/hotel56.avif";
-import hotel56_1 from "../images/hotel56_1.avif";
-import hotel56_2 from "../images/hotel56_2.avif";
-
-import hotel57 from "../images/hotel57.jpeg";
-import hotel57_1 from "../images/hotel57_1.avif";
-import hotel57_2 from "../images/hotel57_2.avif";
-
-import hotel58 from "../images/hotel58.avif";
-import hotel58_1 from "../images/hotel58_1.jpeg";
-import hotel58_2 from "../images/hotel58_2.avif";
-import hotel58_3 from "../images/hotel58_3.jpeg";
-
-import hotel59 from "../images/hotel59.avif";
-import hotel59_1 from "../images/hotel59_1.avif";
-import hotel59_2 from "../images/hotel59_2.avif";
-
-import hotel60 from "../images/hotel60.jpeg";
-import hotel60_1 from "../images/hotel60_1.jpeg";
-import hotel60_2 from "../images/hotel60_2.jpeg";
-
-import hotel61 from "../images/hotel61.avif";
-import hotel61_1 from "../images/hotel61_1.avif";
-
-import hotel62 from "../images/hotel62.avif";
-import hotel62_1 from "../images/hotel62_1.avif";
-import hotel62_2 from "../images/hotel62_2.jpeg";
-
-import hotel63 from "../images/hotel63.avif";
-import hotel63_1 from "../images/hotel63_1.avif";
-import hotel63_2 from "../images/hotel63_2.avif";
-
-import hotel64 from "../images/hotel64.avif";
-import hotel64_1 from "../images/hotel64_1.avif";
-import hotel64_2 from "../images/hotel64_2.avif";
-
-import hotel65 from "../images/hotel65.avif";
-import hotel65_1 from "../images/hotel65_1.avif";
-import hotel65_2 from "../images/hotel65_2.avif";
-
-import hotel66 from "../images/hotel66.webp";
-import hotel66_1 from "../images/hotel66_1.avif";
-import hotel66_2 from "../images/hotel66_2.avif";
-
-import hotel67 from "../images/hotel67.avif";
-import hotel67_1 from "../images/hotel67_1.avif";
-
-import hotel68 from "../images/hotel68.avif";
-import hotel68_1 from "../images/hotel68_1.avif";
-
-import hotel69 from "../images/hotel69.avif";
-import hotel69_1 from "../images/hotel69_1.avif";
-import hotel69_2 from "../images/hotel69_2.avif";
-
-import hotel70 from "../images/hotel70.avif";
-import hotel70_1 from "../images/hotel70_1.jpg";
-import hotel70_2 from "../images/hotel70_2.avif";
-
-import hotel71 from "../images/hotel71.avif";
-import hotel71_1 from "../images/hotel71_1.avif";
-import hotel71_2 from "../images/hotel71_2.avif";
-
-import hotel72 from "../images/hotel72.avif";
-import hotel72_1 from "../images/hotel72_1.avif";
-
-import hotel73 from "../images/hotel73.jpeg";
-import hotel73_1 from "../images/hotel73_1.jpeg";
-import hotel73_2 from "../images/hotel73_2.jpeg";
-
-import hotel74 from "../images/hotel74.avif";
-import hotel74_1 from "../images/hotel74_1.avif";
-
-import hotel75 from "../images/hotel75.avif";
-import hotel75_1 from "../images/hotel75_1.jpeg";
-
+import hotel1 from "../images/hotel1.jpg"; import hotel1_1 from "../images/hotel1_1.jpg"; import hotel1_2 from "../images/hotel1_2.avif";
+import hotel2 from "../images/hotel2.jpg"; import hotel2_1 from "../images/hotel2_1.jpg"; import hotel2_2 from "../images/hotel2_2.jpg";
+import hotel3 from "../images/hotel3.jpg"; import hotel3_1 from "../images/hotel3_1.jpg"; import hotel3_2 from "../images/hotel3_2.png";
+import hotel4 from "../images/hotel4.webp"; import hotel4_1 from "../images/hotel4_1.webp"; import hotel4_2 from "../images/hotel4_2.jpg"; import hotel4_3 from "../images/hotel4_3.jpg";
+import hotel5 from "../images/hotel5.jpg"; import hotel5_1 from "../images/hotel5_1.jpg"; import hotel5_2 from "../images/hotel5_2.jpg"; import hotel5_3 from "../images/hotel5_3.jpg";
+import hotel6 from "../images/hotel6.jpg"; import hotel6_1 from "../images/hotel6_1.jpg"; import hotel6_2 from "../images/hotel6_2.jpg"; import hotel6_3 from "../images/hotel6_3.jpg";
+import hotel7 from "../images/hotel7.webp"; import hotel7_1 from "../images/hotel7_1.jpg"; import hotel7_2 from "../images/hotel7_2.jpg"; import hotel7_3 from "../images/hotel7_3.webp";
+import hotel11 from "../images/hotel11.jpg"; import hotel11_1 from "../images/hotel11_1.jpg"; import hotel11_2 from "../images/hotel11_2.webp"; import hotel11_3 from "../images/hotel11_3.jpg";
+import hotel12 from "../images/hotel12.jpg"; import hotel12_1 from "../images/hotel12_1.jpg"; import hotel12_2 from "../images/hotel12_2.jpg"; import hotel12_3 from "../images/hotel12_3.jpg"; import hotel12_4 from "../images/hotel12_4.jpg";
+import hotel13 from "../images/hotel13.webp"; import hotel13_1 from "../images/hotel13_1.jpg"; import hotel13_2 from "../images/hotel13_2.jpg"; import hotel13_3 from "../images/hotel13_3.jpg";
+import hotel14 from "../images/hotel14.jpg"; import hotel14_1 from "../images/hotel14_1.avif"; import hotel14_2 from "../images/hotel14_2.jpg"; import hotel14_3 from "../images/hotel14_3.jpg";
+import hotel15 from "../images/hotel15.jpg"; import hotel15_1 from "../images/hotel15_1.jpg"; import hotel15_2 from "../images/hotel15_2.jpg"; import hotel15_3 from "../images/hotel15_3.jpg";
+import hotel16 from "../images/hotel16.jpg"; import hotel16_1 from "../images/hotel16_1.webp"; import hotel16_2 from "../images/hotel16_2.jpg"; import hotel16_3 from "../images/hotel16_3.webp";
+import hotel17 from "../images/hotel17.jpg"; import hotel17_1 from "../images/hotel17_1.jpg"; import hotel17_2 from "../images/hotel17_2.jpg"; import hotel17_3 from "../images/hotel17_3.jpg";
+import hotel18 from "../images/hotel18.jpg"; import hotel18_1 from "../images/hotel18_1.jpg"; import hotel18_2 from "../images/hotel18_2.jpg"; import hotel18_3 from "../images/hotel18_3.jpg"; import hotel18_4 from "../images/hotel18_4.jpg";
+import hotel19 from "../images/hotel19.webp"; import hotel19_1 from "../images/hotel19_1.jpg"; import hotel19_2 from "../images/hotel19_2.jpg"; import hotel19_3 from "../images/hotel19_3.jpg";
+import hotel20 from "../images/hotel20.jpg"; import hotel20_1 from "../images/hotel20_1.jpg"; import hotel20_2 from "../images/hotel20_2.avif"; import hotel20_3 from "../images/hotel20_3.jpg"; import hotel20_4 from "../images/hotel20_4.jpg";
+import hotel21 from "../images/hotel21.jpg"; import hotel21_1 from "../images/hotel21_1.jpg"; import hotel21_2 from "../images/hotel21_2.jpg"; import hotel21_3 from "../images/hotel21_3.jpg";
+import hotel22 from "../images/hotel22.jpg"; import hotel22_1 from "../images/hotel22_1.jpg"; import hotel22_2 from "../images/hotel22_2.jpg"; import hotel22_3 from "../images/hotel22_3.jpg"; import hotel22_4 from "../images/hotel22_4.jpg";
+import hotel23 from "../images/hotel23.jpg"; import hotel23_1 from "../images/hotel23_1.jpg"; import hotel23_2 from "../images/hotel23_2.jpg"; import hotel23_3 from "../images/hotel23_3.jpg";
+import hotel24 from "../images/hotel24.webp"; import hotel24_1 from "../images/hotel24_1.jpg"; import hotel24_2 from "../images/hotel24_2.webp"; import hotel24_3 from "../images/hotel24_3.webp"; import hotel24_4 from "../images/hotel24_4.webp";
+import hotel25 from "../images/hotel25.jpg"; import hotel25_1 from "../images/hotel25_1.jpg"; import hotel25_2 from "../images/hotel25_2.jpg"; import hotel25_3 from "../images/hotel25_3.jpg";
+import hotel26 from "../images/hotel26.jpg"; import hotel26_1 from "../images/hotel26_1.jpg"; import hotel26_2 from "../images/hotel26_2.jpg"; import hotel26_3 from "../images/hotel26_3.jpg";
+import hotel27 from "../images/hotel27.jpg"; import hotel27_1 from "../images/hotel27_1.jpg"; import hotel27_2 from "../images/hotel27_2.jpg"; import hotel27_3 from "../images/hotel27_3.jpg";
+import hotel28 from "../images/hotel28.jpg"; import hotel28_1 from "../images/hotel28_1.jpg"; import hotel28_2 from "../images/hotel28_2.jpg"; import hotel28_3 from "../images/hotel28_3.jpg"; import hotel28_4 from "../images/hotel28_4.jpg";
+import hotel29 from "../images/hotel29.jpg"; import hotel29_1 from "../images/hotel29_1.jpg"; import hotel29_2 from "../images/hotel29_2.jpg"; import hotel29_3 from "../images/hotel29_3.jpg";
+import hotel30 from "../images/hotel30.jpg"; import hotel30_1 from "../images/hotel30_1.jpg"; import hotel30_2 from "../images/hotel30_2.jpg"; import hotel30_3 from "../images/hotel30_3.jpg"; import hotel30_4 from "../images/hotel30_4.jpg";
+import hotel31 from "../images/hotel31.jpg"; import hotel31_1 from "../images/hotel31_1.jpg"; import hotel31_2 from "../images/hotel31_2.jpg"; import hotel31_3 from "../images/hotel31_3.jpg";
+import hotel32 from "../images/hotel32.jpg"; import hotel32_1 from "../images/hotel32_1.jpg"; import hotel32_2 from "../images/hotel32_2.jpg"; import hotel32_3 from "../images/hotel32_3.jpg";
+import hotel33 from "../images/hotel33.avif"; import hotel33_1 from "../images/hotel33_1.avif"; import hotel33_2 from "../images/hotel33_2.avif"; import hotel33_3 from "../images/hotel33_3.webp";
+import hotel34 from "../images/hotel34.jpg"; import hotel34_1 from "../images/hotel34_1.jpg"; import hotel34_2 from "../images/hotel34_2.jpg"; import hotel34_3 from "../images/hotel34_3.jpg";
+import hotel35 from "../images/hotel35.jpg"; import hotel35_1 from "../images/hotel35_1.jpg"; import hotel35_2 from "../images/hotel35_2.jpg"; import hotel35_3 from "../images/hotel35_3.jpg";
+import hotel36 from "../images/hotel36.jpg"; import hotel36_1 from "../images/hotel36_1.jpg"; import hotel36_2 from "../images/hotel36_2.jpg"; import hotel36_3 from "../images/hotel36_3.jpg";
+import hotel37 from "../images/hotel37.jpg"; import hotel37_1 from "../images/hotel37_1.jpg"; import hotel37_2 from "../images/hotel37_2.jpg";
+import hotel38 from "../images/hotel38.jpg"; import hotel38_1 from "../images/hotel38_1.jpg"; import hotel38_2 from "../images/hotel38_2.jpg"; import hotel38_3 from "../images/hotel38_3.jpg";
+import hotel39 from "../images/hotel39.jpg"; import hotel39_1 from "../images/hotel39_1.jpg"; import hotel39_2 from "../images/hotel39_2.jpg"; import hotel39_3 from "../images/hotel39_3.jpg";
+import hotel40 from "../images/hotel40.webp"; import hotel40_1 from "../images/hotel40_1.webp"; import hotel40_2 from "../images/hotel40_2.avif"; import hotel40_3 from "../images/hotel40_3.avif";
+import hotel41 from "../images/hotel41.avif"; import hotel41_1 from "../images/hotel41_1.avif"; import hotel41_2 from "../images/hotel41_2.avif"; import hotel41_3 from "../images/hotel41_3.avif";
+import hotel42 from "../images/hotel42.avif"; import hotel42_1 from "../images/hotel42_1.avif"; import hotel42_2 from "../images/hotel42_2.avif"; import hotel42_3 from "../images/hotel42_3.avif";
+import hotel43 from "../images/hotel43.avif"; import hotel43_1 from "../images/hotel43_1.avif"; import hotel43_2 from "../images/hotel43_2.avif"; import hotel43_3 from "../images/hotel43_3.jpeg";
+import hotel44 from "../images/hotel44.avif"; import hotel44_1 from "../images/hotel44_1.avif"; import hotel44_2 from "../images/hotel44_2.avif";
+import hotel45 from "../images/hotel45.avif"; import hotel45_1 from "../images/hotel45_1.avif"; import hotel45_2 from "../images/hotel45_2.avif";
+import hotel46 from "../images/hotel46.jpeg"; import hotel46_1 from "../images/hotel46_1.avif"; import hotel46_2 from "../images/hotel46_2.avif";
+import hotel47 from "../images/hotel47.avif"; import hotel47_1 from "../images/hotel47_1.jpeg"; import hotel47_2 from "../images/hotel47_2.avif";
+import hotel48 from "../images/hotel48.avif"; import hotel48_1 from "../images/hotel48_1.jpeg"; import hotel48_2 from "../images/hotel48_2.jpeg";
+import hotel49 from "../images/hotel49.jpeg"; import hotel49_1 from "../images/hotel49_1.avif"; import hotel49_2 from "../images/hotel49_2.avif"; import hotel49_3 from "../images/hotel49_3.jpeg";
+import hotel50 from "../images/hotel50.avif"; import hotel50_1 from "../images/hotel50_1.avif"; import hotel50_2 from "../images/hotel50_2.jpeg";
+import hotel51 from "../images/hotel51.avif"; import hotel51_1 from "../images/hotel51_1.avif"; import hotel51_2 from "../images/hotel51_2.avif"; import hotel51_3 from "../images/hotel51_3.avif";
+import hotel52 from "../images/hotel52.avif"; import hotel52_1 from "../images/hotel52_1.avif"; import hotel52_2 from "../images/hotel52_2.avif";
+import hotel53 from "../images/hotel53.jpeg"; import hotel53_1 from "../images/hotel53_1.jpeg"; import hotel53_2 from "../images/hotel53_2.jpeg";
+import hotel54 from "../images/hotel54.avif"; import hotel54_1 from "../images/hotel54_1.avif"; import hotel54_2 from "../images/hotel54_2.jpeg";
+import hotel55 from "../images/hotel55.avif"; import hotel55_1 from "../images/hotel55_1.avif"; import hotel55_2 from "../images/hotel55_2.avif";
+import hotel56 from "../images/hotel56.avif"; import hotel56_1 from "../images/hotel56_1.avif"; import hotel56_2 from "../images/hotel56_2.avif";
+import hotel57 from "../images/hotel57.jpeg"; import hotel57_1 from "../images/hotel57_1.avif"; import hotel57_2 from "../images/hotel57_2.avif";
+import hotel58 from "../images/hotel58.avif"; import hotel58_1 from "../images/hotel58_1.jpeg"; import hotel58_2 from "../images/hotel58_2.avif"; import hotel58_3 from "../images/hotel58_3.jpeg";
+import hotel59 from "../images/hotel59.avif"; import hotel59_1 from "../images/hotel59_1.avif"; import hotel59_2 from "../images/hotel59_2.avif";
+import hotel60 from "../images/hotel60.jpeg"; import hotel60_1 from "../images/hotel60_1.jpeg"; import hotel60_2 from "../images/hotel60_2.jpeg";
+import hotel61 from "../images/hotel61.avif"; import hotel61_1 from "../images/hotel61_1.avif";
+import hotel62 from "../images/hotel62.avif"; import hotel62_1 from "../images/hotel62_1.avif"; import hotel62_2 from "../images/hotel62_2.jpeg";
+import hotel63 from "../images/hotel63.avif"; import hotel63_1 from "../images/hotel63_1.avif"; import hotel63_2 from "../images/hotel63_2.avif";
+import hotel64 from "../images/hotel64.avif"; import hotel64_1 from "../images/hotel64_1.avif"; import hotel64_2 from "../images/hotel64_2.avif";
+import hotel65 from "../images/hotel65.avif"; import hotel65_1 from "../images/hotel65_1.avif"; import hotel65_2 from "../images/hotel65_2.avif";
+import hotel66 from "../images/hotel66.webp"; import hotel66_1 from "../images/hotel66_1.avif"; import hotel66_2 from "../images/hotel66_2.avif";
+import hotel67 from "../images/hotel67.avif"; import hotel67_1 from "../images/hotel67_1.avif";
+import hotel68 from "../images/hotel68.avif"; import hotel68_1 from "../images/hotel68_1.avif";
+import hotel69 from "../images/hotel69.avif"; import hotel69_1 from "../images/hotel69_1.avif"; import hotel69_2 from "../images/hotel69_2.avif";
+import hotel70 from "../images/hotel70.avif"; import hotel70_1 from "../images/hotel70_1.jpg"; import hotel70_2 from "../images/hotel70_2.avif";
+import hotel71 from "../images/hotel71.avif"; import hotel71_1 from "../images/hotel71_1.avif"; import hotel71_2 from "../images/hotel71_2.avif";
+import hotel72 from "../images/hotel72.avif"; import hotel72_1 from "../images/hotel72_1.avif";
+import hotel73 from "../images/hotel73.jpeg"; import hotel73_1 from "../images/hotel73_1.jpeg"; import hotel73_2 from "../images/hotel73_2.jpeg";
+import hotel74 from "../images/hotel74.avif"; import hotel74_1 from "../images/hotel74_1.avif";
+import hotel75 from "../images/hotel75.avif"; import hotel75_1 from "../images/hotel75_1.jpeg";
+import hotel76 from "../images/hotel76.avif"; import hotel76_1 from "../images/hotel76_1.avif";
+import hotel77 from "../images/hotel77.avif"; import hotel77_1 from "../images/hotel77_1.avif";
+import hotel78 from "../images/hotel78.avif"; import hotel78_1 from "../images/hotel78_1.avif"; import hotel78_2 from "../images/hotel78_2.avif"; import hotel78_3 from "../images/hotel78_3.jpeg";
+import hotel79 from "../images/hotel79.avif"; import hotel79_1 from "../images/hotel79_1.jpeg";
 //Villa
-import villa1 from "../images/villa1.avif";
-import villa1_1 from "../images/villa1_1.avif";
-import villa1_2 from "../images/villa1_2.avif";
-import villa1_3 from "../images/villa1_3.avif";
-import villa1_4 from "../images/villa1_4.avif";
-
-import villa2 from "../images/villa2.avif";
-import villa2_1 from "../images/villa2_1.avif";
-import villa2_2 from "../images/villa2_2.avif";
-import villa2_3 from "../images/villa2_3.avif";
-import villa2_4 from "../images/villa2_4.avif";
-
-import villa3 from "../images/villa3.jpg";
-import villa3_1 from "../images/villa3_1.avif";
-import villa3_2 from "../images/villa3_2.jpg";
-import villa3_3 from "../images/villa3_3.avif";
-
-import villa4 from "../images/villa4.avif";
-import villa4_1 from "../images/villa4_1.avif";
-import villa4_2 from "../images/villa4_2.avif";
-import villa4_3 from "../images/villa4_3.avif";
-import villa4_4 from "../images/villa4_4.avif";
-
-import villa5 from "../images/villa5.avif";
-import villa5_1 from "../images/villa5_1.avif";
-import villa5_2 from "../images/villa5_2.avif";
-import villa5_3 from "../images/villa5_3.avif";
-
-import villa6 from "../images/villa6.avif";
-import villa6_1 from "../images/villa6_1.avif";
-import villa6_2 from "../images/villa6_2.avif";
-import villa6_3 from "../images/villa6_3.jpeg";
-import villa6_4 from "../images/villa6_4.jpeg";
-
-import villa7 from "../images/villa7.avif";
-import villa7_1 from "../images/villa7_1.avif";
-import villa7_2 from "../images/villa7_2.avif";
-import villa7_3 from "../images/villa7_3.avif";
-
-import villa8 from "../images/villa8.jpg";
-import villa8_1 from "../images/villa8_1.jpg";
-import villa8_2 from "../images/villa8_2.jpg";
-import villa8_3 from "../images/villa8_3.jpg";
-import villa8_4 from "../images/villa8_4.avif";
-
-import villa9 from "../images/villa9.jpg";
-import villa9_1 from "../images/villa9_1.jpg";
-import villa9_2 from "../images/villa9_2.jpg";
-import villa9_3 from "../images/villa9_3.jpg";
-
-import villa10 from "../images/villa10.avif";
-import villa10_1 from "../images/villa10_1.avif";
-import villa10_2 from "../images/villa10_2.avif";
-import villa10_3 from "../images/villa10_3.avif";
-import villa10_4 from "../images/villa10_4.avif";
-
-import villa11 from "../images/villa11.avif";
-import villa11_1 from "../images/villa11_1.avif";
-import villa11_2 from "../images/villa11_2.avif";
-import villa11_3 from "../images/villa11_3.avif";
-
-import villa12 from "../images/villa12.png";
-import villa12_1 from "../images/villa12_1.avif";
-import villa12_2 from "../images/villa12_2.avif";
-import villa12_3 from "../images/villa12_3.avif";
-
-import villa13 from "../images/villa13.avif";
-import villa13_1 from "../images/villa13_1.avif";
-import villa13_2 from "../images/villa13_2.avif";
-import villa13_3 from "../images/villa13_3.avif";
-import villa13_4 from "../images/villa13_4.avif";
-
-import villa14 from "../images/villa14.avif";
-import villa14_1 from "../images/villa14_1.avif";
-import villa14_2 from "../images/villa14_2.jpeg";
-import villa14_3 from "../images/villa14_3.avif";
-
-import villa15 from "../images/villa15.avif";
-import villa15_1 from "../images/villa15_1.avif";
-import villa15_2 from "../images/villa15_2.avif";
-import villa15_3 from "../images/villa15_3.jpg";
-
-import villa16 from "../images/villa16.avif";
-import villa16_1 from "../images/villa16_1.avif";
-import villa16_2 from "../images/villa16_2.avif";
-import villa16_3 from "../images/villa16_3.avif";
-
-import villa17 from "../images/villa17.avif";
-import villa17_1 from "../images/villa17_1.avif";
-import villa17_2 from "../images/villa17_2.avif";
-
-import villa18 from "../images/villa18.avif";
-import villa18_1 from "../images/villa18_1.avif";
-import villa18_2 from "../images/villa18_2.avif";
-import villa18_3 from "../images/villa18_3.avif";
-
-import villa19 from "../images/villa19.avif";
-import villa19_1 from "../images/villa19_1.avif";
-import villa19_2 from "../images/villa19_2.avif";
-import villa19_3 from "../images/villa19_3.avif";
-
-import villa20 from "../images/villa20.avif";
-import villa20_1 from "../images/villa20_1.avif";
-import villa20_2 from "../images/villa20_2.avif";
-import villa20_3 from "../images/villa20_3.avif";
-import villa20_4 from "../images/villa20_4.avif";
-
-import villa21 from "../images/villa21.jpg";
-import villa21_1 from "../images/villa21_1.jpg";
-import villa21_2 from "../images/villa21_2.jpg";
-import villa21_3 from "../images/villa21_3.jpg";
-
-import villa22 from "../images/villa22.avif";
-import villa22_1 from "../images/villa22_1.avif";
-import villa22_2 from "../images/villa22_2.avif";
-import villa22_3 from "../images/villa22_3.avif";
-import villa22_4 from "../images/villa22_4.avif";
-
-import villa23 from "../images/villa23.avif";
-import villa23_1 from "../images/villa23_1.avif";
-import villa23_2 from "../images/villa23_2.avif";
-import villa23_3 from "../images/villa23_3.avif";
-import villa23_4 from "../images/villa23_4.avif";
-
-import villa24 from "../images/villa24.avif";
-import villa24_1 from "../images/villa24_1.avif";
-import villa24_2 from "../images/villa24_2.avif";
-import villa24_3 from "../images/villa24_3.avif";
-
-import villa25 from "../images/villa25.avif";
-import villa25_1 from "../images/villa25_1.avif";
-import villa25_2 from "../images/villa25_2.avif";
-import villa25_3 from "../images/villa25_3.webp";
-
-import villa26 from "../images/villa26.avif";
-import villa26_1 from "../images/villa26_1.avif";
-import villa26_2 from "../images/villa26_2.avif";
-import villa26_3 from "../images/villa26_3.avif";
-
-import villa27 from "../images/villa27.jpeg";
-import villa27_1 from "../images/villa27_1.avif";
-import villa27_2 from "../images/villa27_2.jpeg";
-import villa27_3 from "../images/villa27_3.jpeg";
-
-import villa28 from "../images/villa28.jpeg";
-import villa28_1 from "../images/villa28_1.jpeg";
-import villa28_2 from "../images/villa28_2.jpeg";
-import villa28_3 from "../images/villa28_3.webp";
-
-import villa29 from "../images/villa29.jpeg";
-import villa29_1 from "../images/villa29_1.jpeg";
-import villa29_2 from "../images/villa29_2.avif";
-import villa29_3 from "../images/villa29_3.jpeg";
-
-import villa30 from "../images/villa30.avif";
-import villa30_1 from "../images/villa30_1.avif";
-import villa30_2 from "../images/villa30_2.avif";
-
-import villa31 from "../images/villa31.avif";
-import villa31_1 from "../images/villa31_1.avif";
-import villa31_2 from "../images/villa31_2.avif";
-
-import villa32 from "../images/villa32.jpeg";
-import villa32_1 from "../images/villa32_1.avif";
-import villa32_2 from "../images/villa32_2.jpeg";
-
-import villa33 from "../images/villa33.avif";
-import villa33_1 from "../images/villa33_1.avif";
-import villa33_2 from "../images/villa33_2.avif";
-
-import villa34 from "../images/villa34.avif";
-import villa34_1 from "../images/villa34_1.avif";
-import villa34_2 from "../images/villa34_2.avif";
-import villa34_3 from "../images/villa34_3.avif";
-
-import villa35 from "../images/villa35.avif";
-import villa35_1 from "../images/villa35_1.avif";
-import villa35_2 from "../images/villa35_2.avif";
-import villa35_3 from "../images/villa35_3.avif";
-
-import villa36 from "../images/villa36.avif";
-import villa36_1 from "../images/villa36_1.avif";
-import villa36_2 from "../images/villa36_2.avif";
-
-import villa37 from "../images/villa37.avif";
-import villa37_1 from "../images/villa37_1.avif";
-import villa37_2 from "../images/villa37_2.avif";
-import villa37_3 from "../images/villa37_3.avif";
-
-import villa38 from "../images/villa38.jpeg";
-import villa38_1 from "../images/villa38_1.jpeg";
-import villa38_2 from "../images/villa38_2.avif";
-import villa38_3 from "../images/villa38_3.avif";
-
-import villa39 from "../images/villa39.avif";
-import villa39_1 from "../images/villa39_1.avif";
-import villa39_2 from "../images/villa39_2.avif";
-import villa39_3 from "../images/villa39_3.avif";
-
-import villa40 from "../images/villa40.avif";
-import villa40_1 from "../images/villa40_1.avif";
-import villa40_2 from "../images/villa40_2.avif";
-import villa40_3 from "../images/villa40_3.avif";
-
-import villa41 from "../images/villa41.webp";
-import villa41_1 from "../images/villa41_1.avif";
-import villa41_2 from "../images/villa41_2.avif";
-
-import villa42 from "../images/villa42.avif";
-import villa42_1 from "../images/villa42_1.avif";
-import villa42_2 from "../images/villa42_2.avif";
-import villa42_3 from "../images/villa42_3.avif";
-
-import villa43 from "../images/villa43.avif";
-import villa43_1 from "../images/villa43_1.avif";
-import villa43_2 from "../images/villa43_2.avif";
-import villa43_3 from "../images/villa43_3.avif";
-
-import villa44 from "../images/villa44.avif";
-import villa44_1 from "../images/villa44_1.avif";
-import villa44_2 from "../images/villa44_2.jpeg";
-
-import villa45 from "../images/villa45.avif";
-import villa45_1 from "../images/villa45_1.avif";
-import villa45_2 from "../images/villa45_2.avif";
-
-import villa46 from "../images/villa46.avif";
-import villa46_1 from "../images/villa46_1.avif";
-import villa46_2 from "../images/villa46_2.avif";
-
-import villa47 from "../images/villa47.jpeg";
-import villa47_1 from "../images/villa47_1.jpeg";
-import villa47_2 from "../images/villa47_2.jpeg";
-
-import villa48 from "../images/villa48.avif";
-import villa48_1 from "../images/villa48_1.avif";
-import villa48_2 from "../images/villa48_2.avif";
-
-import villa49 from "../images/villa49.avif";
-import villa49_1 from "../images/villa49_1.avif";
-import villa49_2 from "../images/villa49_2.jpeg";
-import villa49_3 from "../images/villa49_3.jpeg";
-
-import villa50 from "../images/villa50.jpeg";
-import villa50_1 from "../images/villa50_1.jpg";
-import villa50_2 from "../images/villa50_2.avif";
-
-import villa51 from "../images/villa51.avif";
-import villa51_1 from "../images/villa51_1.avif";
-import villa51_2 from "../images/villa51_2.avif";
-
-import villa52 from "../images/villa52.avif";
-import villa52_1 from "../images/villa52_1.avif";
-import villa52_2 from "../images/villa52_2.avif";
-
-import villa53 from "../images/villa53.avif";
-import villa53_1 from "../images/villa53_1.avif";
-import villa53_2 from "../images/villa53_2.avif";
-import villa53_3 from "../images/villa53_3.avif";
-
-import villa54 from "../images/villa54.avif";
-import villa54_1 from "../images/villa54_1.avif";
-import villa54_2 from "../images/villa54_2.jpeg";
-import villa54_3 from "../images/villa54_3.avif";
-
-import villa55 from "../images/villa55.avif";
-import villa55_1 from "../images/villa55_1.avif";
-import villa55_2 from "../images/villa55_2.avif";
-
-import villa56 from "../images/villa56.avif";
-import villa56_1 from "../images/villa56_1.avif";
-import villa56_2 from "../images/villa56_2.avif";
-
-import villa57 from "../images/villa57.webp";
-import villa57_1 from "../images/villa57_1.avif";
-import villa57_2 from "../images/villa57_2.avif";
-
-import villa58 from "../images/villa58.avif";
-import villa58_1 from "../images/villa58_1.avif";
-import villa58_2 from "../images/villa58_2.avif";
-
+import villa1 from "../images/villa1.avif"; import villa1_1 from "../images/villa1_1.avif"; import villa1_2 from "../images/villa1_2.avif"; import villa1_3 from "../images/villa1_3.avif"; import villa1_4 from "../images/villa1_4.avif";
+import villa2 from "../images/villa2.avif"; import villa2_1 from "../images/villa2_1.avif"; import villa2_2 from "../images/villa2_2.avif"; import villa2_3 from "../images/villa2_3.avif"; import villa2_4 from "../images/villa2_4.avif";
+import villa3 from "../images/villa3.jpg"; import villa3_1 from "../images/villa3_1.avif"; import villa3_2 from "../images/villa3_2.jpg"; import villa3_3 from "../images/villa3_3.avif";
+import villa4 from "../images/villa4.avif"; import villa4_1 from "../images/villa4_1.avif"; import villa4_2 from "../images/villa4_2.avif"; import villa4_3 from "../images/villa4_3.avif"; import villa4_4 from "../images/villa4_4.avif";
+import villa5 from "../images/villa5.avif"; import villa5_1 from "../images/villa5_1.avif"; import villa5_2 from "../images/villa5_2.avif"; import villa5_3 from "../images/villa5_3.avif";
+import villa6 from "../images/villa6.avif"; import villa6_1 from "../images/villa6_1.avif"; import villa6_2 from "../images/villa6_2.avif"; import villa6_3 from "../images/villa6_3.jpeg"; import villa6_4 from "../images/villa6_4.jpeg";
+import villa7 from "../images/villa7.avif"; import villa7_1 from "../images/villa7_1.avif"; import villa7_2 from "../images/villa7_2.avif"; import villa7_3 from "../images/villa7_3.avif";
+import villa8 from "../images/villa8.jpg"; import villa8_1 from "../images/villa8_1.jpg"; import villa8_2 from "../images/villa8_2.jpg"; import villa8_3 from "../images/villa8_3.jpg"; import villa8_4 from "../images/villa8_4.avif";
+import villa9 from "../images/villa9.jpg"; import villa9_1 from "../images/villa9_1.jpg"; import villa9_2 from "../images/villa9_2.jpg"; import villa9_3 from "../images/villa9_3.jpg";
+import villa10 from "../images/villa10.avif"; import villa10_1 from "../images/villa10_1.avif"; import villa10_2 from "../images/villa10_2.avif"; import villa10_3 from "../images/villa10_3.avif"; import villa10_4 from "../images/villa10_4.avif";
+import villa11 from "../images/villa11.avif"; import villa11_1 from "../images/villa11_1.avif"; import villa11_2 from "../images/villa11_2.avif"; import villa11_3 from "../images/villa11_3.avif";
+import villa12 from "../images/villa12.png"; import villa12_1 from "../images/villa12_1.avif"; import villa12_2 from "../images/villa12_2.avif"; import villa12_3 from "../images/villa12_3.avif";
+import villa13 from "../images/villa13.avif"; import villa13_1 from "../images/villa13_1.avif"; import villa13_2 from "../images/villa13_2.avif"; import villa13_3 from "../images/villa13_3.avif"; import villa13_4 from "../images/villa13_4.avif";
+import villa14 from "../images/villa14.avif"; import villa14_1 from "../images/villa14_1.avif"; import villa14_2 from "../images/villa14_2.jpeg"; import villa14_3 from "../images/villa14_3.avif";
+import villa15 from "../images/villa15.avif"; import villa15_1 from "../images/villa15_1.avif"; import villa15_2 from "../images/villa15_2.avif"; import villa15_3 from "../images/villa15_3.jpg";
+import villa16 from "../images/villa16.avif"; import villa16_1 from "../images/villa16_1.avif"; import villa16_2 from "../images/villa16_2.avif"; import villa16_3 from "../images/villa16_3.avif";
+import villa17 from "../images/villa17.avif"; import villa17_1 from "../images/villa17_1.avif"; import villa17_2 from "../images/villa17_2.avif";
+import villa18 from "../images/villa18.avif"; import villa18_1 from "../images/villa18_1.avif"; import villa18_2 from "../images/villa18_2.avif"; import villa18_3 from "../images/villa18_3.avif";
+import villa19 from "../images/villa19.avif"; import villa19_1 from "../images/villa19_1.avif"; import villa19_2 from "../images/villa19_2.avif"; import villa19_3 from "../images/villa19_3.avif";
+import villa20 from "../images/villa20.avif"; import villa20_1 from "../images/villa20_1.avif"; import villa20_2 from "../images/villa20_2.avif"; import villa20_3 from "../images/villa20_3.avif"; import villa20_4 from "../images/villa20_4.avif";
+import villa21 from "../images/villa21.jpg"; import villa21_1 from "../images/villa21_1.jpg"; import villa21_2 from "../images/villa21_2.jpg"; import villa21_3 from "../images/villa21_3.jpg";
+import villa22 from "../images/villa22.avif"; import villa22_1 from "../images/villa22_1.avif"; import villa22_2 from "../images/villa22_2.avif"; import villa22_3 from "../images/villa22_3.avif"; import villa22_4 from "../images/villa22_4.avif";
+import villa23 from "../images/villa23.avif"; import villa23_1 from "../images/villa23_1.avif"; import villa23_2 from "../images/villa23_2.avif"; import villa23_3 from "../images/villa23_3.avif"; import villa23_4 from "../images/villa23_4.avif";
+import villa24 from "../images/villa24.avif"; import villa24_1 from "../images/villa24_1.avif"; import villa24_2 from "../images/villa24_2.avif"; import villa24_3 from "../images/villa24_3.avif";
+import villa25 from "../images/villa25.avif"; import villa25_1 from "../images/villa25_1.avif"; import villa25_2 from "../images/villa25_2.avif"; import villa25_3 from "../images/villa25_3.webp";
+import villa26 from "../images/villa26.avif"; import villa26_1 from "../images/villa26_1.avif"; import villa26_2 from "../images/villa26_2.avif"; import villa26_3 from "../images/villa26_3.avif";
+import villa27 from "../images/villa27.jpeg"; import villa27_1 from "../images/villa27_1.avif"; import villa27_2 from "../images/villa27_2.jpeg"; import villa27_3 from "../images/villa27_3.jpeg";
+import villa28 from "../images/villa28.jpeg"; import villa28_1 from "../images/villa28_1.jpeg"; import villa28_2 from "../images/villa28_2.jpeg"; import villa28_3 from "../images/villa28_3.webp";
+import villa29 from "../images/villa29.jpeg"; import villa29_1 from "../images/villa29_1.jpeg"; import villa29_2 from "../images/villa29_2.avif"; import villa29_3 from "../images/villa29_3.jpeg";
+import villa30 from "../images/villa30.avif"; import villa30_1 from "../images/villa30_1.avif"; import villa30_2 from "../images/villa30_2.avif";
+import villa31 from "../images/villa31.avif"; import villa31_1 from "../images/villa31_1.avif"; import villa31_2 from "../images/villa31_2.avif";
+import villa32 from "../images/villa32.jpeg"; import villa32_1 from "../images/villa32_1.avif"; import villa32_2 from "../images/villa32_2.jpeg";
+import villa33 from "../images/villa33.avif"; import villa33_1 from "../images/villa33_1.avif"; import villa33_2 from "../images/villa33_2.avif";
+import villa34 from "../images/villa34.avif"; import villa34_1 from "../images/villa34_1.avif"; import villa34_2 from "../images/villa34_2.avif"; import villa34_3 from "../images/villa34_3.avif";
+import villa35 from "../images/villa35.avif"; import villa35_1 from "../images/villa35_1.avif"; import villa35_2 from "../images/villa35_2.avif"; import villa35_3 from "../images/villa35_3.avif";
+import villa36 from "../images/villa36.avif"; import villa36_1 from "../images/villa36_1.avif"; import villa36_2 from "../images/villa36_2.avif";
+import villa37 from "../images/villa37.avif"; import villa37_1 from "../images/villa37_1.avif"; import villa37_2 from "../images/villa37_2.avif"; import villa37_3 from "../images/villa37_3.avif";
+import villa38 from "../images/villa38.jpeg"; import villa38_1 from "../images/villa38_1.jpeg"; import villa38_2 from "../images/villa38_2.avif"; import villa38_3 from "../images/villa38_3.avif";
+import villa39 from "../images/villa39.avif"; import villa39_1 from "../images/villa39_1.avif"; import villa39_2 from "../images/villa39_2.avif"; import villa39_3 from "../images/villa39_3.avif";
+import villa40 from "../images/villa40.avif"; import villa40_1 from "../images/villa40_1.avif"; import villa40_2 from "../images/villa40_2.avif"; import villa40_3 from "../images/villa40_3.avif";
+import villa41 from "../images/villa41.webp"; import villa41_1 from "../images/villa41_1.avif"; import villa41_2 from "../images/villa41_2.avif";
+import villa42 from "../images/villa42.avif"; import villa42_1 from "../images/villa42_1.avif"; import villa42_2 from "../images/villa42_2.avif"; import villa42_3 from "../images/villa42_3.avif";
+import villa43 from "../images/villa43.avif"; import villa43_1 from "../images/villa43_1.avif"; import villa43_2 from "../images/villa43_2.avif"; import villa43_3 from "../images/villa43_3.avif";
+import villa44 from "../images/villa44.avif"; import villa44_1 from "../images/villa44_1.avif"; import villa44_2 from "../images/villa44_2.jpeg";
+import villa45 from "../images/villa45.avif"; import villa45_1 from "../images/villa45_1.avif"; import villa45_2 from "../images/villa45_2.avif";
+import villa46 from "../images/villa46.avif"; import villa46_1 from "../images/villa46_1.avif"; import villa46_2 from "../images/villa46_2.avif";
+import villa47 from "../images/villa47.jpeg"; import villa47_1 from "../images/villa47_1.jpeg"; import villa47_2 from "../images/villa47_2.jpeg";
+import villa48 from "../images/villa48.avif"; import villa48_1 from "../images/villa48_1.avif"; import villa48_2 from "../images/villa48_2.avif";
+import villa49 from "../images/villa49.avif"; import villa49_1 from "../images/villa49_1.avif"; import villa49_2 from "../images/villa49_2.jpeg"; import villa49_3 from "../images/villa49_3.jpeg";
+import villa50 from "../images/villa50.jpeg"; import villa50_1 from "../images/villa50_1.jpg"; import villa50_2 from "../images/villa50_2.avif";
+import villa51 from "../images/villa51.avif"; import villa51_1 from "../images/villa51_1.avif"; import villa51_2 from "../images/villa51_2.avif";
+import villa52 from "../images/villa52.avif"; import villa52_1 from "../images/villa52_1.avif"; import villa52_2 from "../images/villa52_2.avif";
+import villa53 from "../images/villa53.avif"; import villa53_1 from "../images/villa53_1.avif"; import villa53_2 from "../images/villa53_2.avif"; import villa53_3 from "../images/villa53_3.avif";
+import villa54 from "../images/villa54.avif"; import villa54_1 from "../images/villa54_1.avif"; import villa54_2 from "../images/villa54_2.jpeg"; import villa54_3 from "../images/villa54_3.avif";
+import villa55 from "../images/villa55.avif"; import villa55_1 from "../images/villa55_1.avif"; import villa55_2 from "../images/villa55_2.avif";
+import villa56 from "../images/villa56.avif"; import villa56_1 from "../images/villa56_1.avif"; import villa56_2 from "../images/villa56_2.avif";
+import villa57 from "../images/villa57.webp"; import villa57_1 from "../images/villa57_1.avif"; import villa57_2 from "../images/villa57_2.avif";
+import villa58 from "../images/villa58.avif"; import villa58_1 from "../images/villa58_1.avif"; import villa58_2 from "../images/villa58_2.avif";
+import villa59 from "../images/villa59.avif"; import villa59_1 from "../images/villa59_1.avif"; import villa59_2 from "../images/villa59_2.avif";
+import villa60 from "../images/villa60.avif"; import villa60_1 from "../images/villa60_1.avif"; import villa60_2 from "../images/villa60_2.avif";
+import villa61 from "../images/villa61.avif"; import villa61_1 from "../images/villa61_1.avif"; import villa61_2 from "../images/villa61_2.avif";
+import villa62 from "../images/villa61.avif"; import villa62_1 from "../images/villa62_1.avif";
 //Apartment
-import apartment1 from "../images/apartment1.jpg";
-import apartment1_1 from "../images/apartment1_1.jpg";
-import apartment1_2 from "../images/apartment1_2.jpg";
-
-import apartment2 from "../images/apartment2.avif";
-import apartment2_1 from "../images/apartment2_1.avif";
-import apartment2_2 from "../images/apartment2_2.avif";
-import apartment2_3 from "../images/apartment2_3.avif";
-
-import apartment3 from "../images/apartment3.avif";
-import apartment3_1 from "../images/apartment3_1.avif";
-import apartment3_2 from "../images/apartment3_2.avif";
-import apartment3_3 from "../images/apartment3_3.avif";
-
-import apartment4 from "../images/apartment4.avif";
-import apartment4_1 from "../images/apartment4_1.webp";
-import apartment4_2 from "../images/apartment4_2.jpeg";
-import apartment4_3 from "../images/apartment4_3.avif";
-
-import apartment5 from "../images/apartment5.jpeg";
-import apartment5_1 from "../images/apartment5_1.jpeg";
-import apartment5_2 from "../images/apartment5_2.jpeg";
-import apartment5_3 from "../images/apartment5_3.jpeg";
-
-import apartment6 from "../images/apartment6.avif";
-import apartment6_1 from "../images/apartment6_1.avif";
-import apartment6_2 from "../images/apartment6_2.jpeg";
-import apartment6_3 from "../images/apartment6_3.jpeg";
-
-import apartment7 from "../images/apartment7.avif";
-import apartment7_1 from "../images/apartment7_1.jpeg";
-import apartment7_2 from "../images/apartment7_2.jpeg";
-import apartment7_3 from "../images/apartment7_3.jpeg";
-
-import apartment8 from "../images/apartment8.jpg";
-import apartment8_1 from "../images/apartment8_1.jpg";
-import apartment8_2 from "../images/apartment8_2.jpg";
-import apartment8_3 from "../images/apartment8_3.jpg";
-
-import apartment9 from "../images/apartment9.jpg";
-import apartment9_1 from "../images/apartment9_1.jpg";
-import apartment9_2 from "../images/apartment9_2.jpg";
-
-import apartment10 from "../images/apartment10.jpg";
-import apartment10_1 from "../images/apartment10_1.jpg";
-import apartment10_2 from "../images/apartment10_2.jpg";
-
-import apartment11 from "../images/apartment11.jpg";
-import apartment11_1 from "../images/apartment11_1.jpg";
-import apartment11_2 from "../images/apartment11_2.jpg";
-
-import apartment12 from "../images/apartment12.avif";
-import apartment12_1 from "../images/apartment12_1.avif";
-import apartment12_2 from "../images/apartment12_2.avif";
-
-import apartment13 from "../images/apartment13.avif";
-import apartment13_1 from "../images/apartment13_1.avif";
-import apartment13_2 from "../images/apartment13_2.avif";
-import apartment13_3 from "../images/apartment13_3.avif";
-
-import apartment14 from "../images/apartment14.avif";
-import apartment14_1 from "../images/apartment14_1.avif";
-import apartment14_2 from "../images/apartment14_2.avif";
-import apartment14_3 from "../images/apartment14_3.avif";
-
-import apartment15 from "../images/apartment15.avif";
-import apartment15_1 from "../images/apartment15_1.avif";
-import apartment15_2 from "../images/apartment15_2.avif";
-import apartment15_3 from "../images/apartment15_3.avif";
-
-import apartment16 from "../images/apartment16.jpeg";
-import apartment16_1 from "../images/apartment16_1.avif";
-import apartment16_2 from "../images/apartment16_2.avif";
-import apartment16_3 from "../images/apartment16_3.avif";
-
-import apartment17 from "../images/apartment17.avif";
-import apartment17_1 from "../images/apartment17_1.avif";
-import apartment17_2 from "../images/apartment17_2.avif";
-import apartment17_3 from "../images/apartment17_3.avif";
-
-import apartment18 from "../images/apartment18.jpeg";
-import apartment18_1 from "../images/apartment18_1.avif";
-import apartment18_2 from "../images/apartment18_2.webp";
-import apartment18_3 from "../images/apartment18_3.jpeg";
-
-import apartment19 from "../images/apartment19.avif";
-import apartment19_1 from "../images/apartment19_1.avif";
-import apartment19_2 from "../images/apartment19_2.avif";
-import apartment19_3 from "../images/apartment19_3.avif";
-
-import apartment20 from "../images/apartment20.jpeg";
-import apartment20_1 from "../images/apartment20_1.jpeg";
-import apartment20_2 from "../images/apartment20_2.jpeg";
-import apartment20_3 from "../images/apartment20_3.jpeg";
-
-import apartment21 from "../images/apartment21.avif";
-import apartment21_1 from "../images/apartment21_1.avif";
-import apartment21_2 from "../images/apartment21_2.avif";
-import apartment21_3 from "../images/apartment21_3.avif";
-
-import apartment22 from "../images/apartment22.avif";
-import apartment22_1 from "../images/apartment22_1.avif";
-import apartment22_2 from "../images/apartment22_2.avif";
-import apartment22_3 from "../images/apartment22_3.avif";
-
-import apartment23 from "../images/apartment23.avif";
-import apartment23_1 from "../images/apartment23_1.avif";
-import apartment23_2 from "../images/apartment23_2.avif";
-import apartment23_3 from "../images/apartment23_3.avif";
-
-import apartment24 from "../images/apartment24.webp";
-import apartment24_1 from "../images/apartment24_1.avif";
-import apartment24_2 from "../images/apartment24_2.avif";
-import apartment24_3 from "../images/apartment24_3.avif";
-
-import apartment25 from "../images/apartment25.avif";
-import apartment25_1 from "../images/apartment25_1.jpeg";
-import apartment25_2 from "../images/apartment25_2.avif";
-import apartment25_3 from "../images/apartment25_3.jpeg";
-
-import apartment26 from "../images/apartment26.avif";
-import apartment26_1 from "../images/apartment26_1.avif";
-import apartment26_2 from "../images/apartment26_2.avif";
-import apartment26_3 from "../images/apartment26_3.jpeg";
-
-import apartment27 from "../images/apartment27.avif";
-import apartment27_1 from "../images/apartment27_1.jpeg";
-import apartment27_2 from "../images/apartment27_2.avif";
-import apartment27_3 from "../images/apartment27_3.avif";
-
-import apartment28 from "../images/apartment28.avif";
-import apartment28_1 from "../images/apartment28_1.avif";
-import apartment28_2 from "../images/apartment28_2.jpeg";
-import apartment28_3 from "../images/apartment28_3.avif";
-
-import apartment29 from "../images/apartment29.avif";
-import apartment29_1 from "../images/apartment29_1.avif";
-import apartment29_2 from "../images/apartment29_2.avif";
-import apartment29_3 from "../images/apartment29_3.avif";
-
-import apartment30 from "../images/apartment30.avif";
-import apartment30_1 from "../images/apartment30_1.avif";
-import apartment30_2 from "../images/apartment30_2.avif";
-import apartment30_3 from "../images/apartment30_3.avif";
-
-import apartment31 from "../images/apartment31.avif";
-import apartment31_1 from "../images/apartment31_1.avif";
-import apartment31_2 from "../images/apartment31_2.avif";
-import apartment31_3 from "../images/apartment31_3.avif";
-
-import apartment32 from "../images/apartment32.avif";
-import apartment32_1 from "../images/apartment32_1.avif";
-import apartment32_2 from "../images/apartment32_2.avif";
-
-import apartment33 from "../images/apartment33.avif";
-import apartment33_1 from "../images/apartment33_1.avif";
-import apartment33_2 from "../images/apartment33_2.avif";
-import apartment33_3 from "../images/apartment33_3.avif";
-
-import apartment34 from "../images/apartment34.avif";
-import apartment34_1 from "../images/apartment34_1.jpeg";
-import apartment34_2 from "../images/apartment34_2.jpeg";
-
-import apartment35 from "../images/apartment35.avif";
-import apartment35_1 from "../images/apartment35_1.jpeg";
-import apartment35_2 from "../images/apartment35_2.jpeg";
-import apartment35_3 from "../images/apartment35_3.jpeg";
-
-import apartment36 from "../images/apartment36.avif";
-import apartment36_1 from "../images/apartment36_1.avif";
-import apartment36_2 from "../images/apartment36_2.avif";
-
-import apartment37 from "../images/apartment37.jpeg";
-import apartment37_1 from "../images/apartment37_1.jpeg";
-import apartment37_2 from "../images/apartment37_2.jpeg";
-import apartment37_3 from "../images/apartment37_3.jpeg";
-
-import apartment38 from "../images/apartment38.avif";
-import apartment38_1 from "../images/apartment38_1.avif";
-import apartment38_2 from "../images/apartment38_2.avif";
-import apartment38_3 from "../images/apartment38_3.avif";
-
-import apartment39 from "../images/apartment39.jpeg";
-import apartment39_1 from "../images/apartment39_1.avif";
-import apartment39_2 from "../images/apartment39_2.avif";
-import apartment39_3 from "../images/apartment39_3.jpeg";
-
-import apartment40 from "../images/apartment40.avif";
-import apartment40_1 from "../images/apartment40_1.jpeg";
-import apartment40_2 from "../images/apartment40_2.jpeg";
-import apartment40_3 from "../images/apartment40_3.jpeg";
-
-import apartment41 from "../images/apartment41.jpeg";
-import apartment41_1 from "../images/apartment41_1.jpeg";
-import apartment41_2 from "../images/apartment41_2.jpeg";
-
-import apartment42 from "../images/apartment42.jpeg";
-import apartment42_1 from "../images/apartment42_1.avif";
-import apartment42_2 from "../images/apartment42_2.jpeg";
-import apartment42_3 from "../images/apartment42_3.jpeg";
-
-import apartment43 from "../images/apartment43.avif";
-import apartment43_1 from "../images/apartment43_1.avif";
-import apartment43_2 from "../images/apartment43_2.avif";
-import apartment43_3 from "../images/apartment43_3.avif";
-
-import apartment44 from "../images/apartment44.avif";
-import apartment44_1 from "../images/apartment44_1.avif";
-import apartment44_2 from "../images/apartment44_2.avif";
-import apartment44_3 from "../images/apartment44_3.avif";
-
-import apartment45 from "../images/apartment45.avif";
-import apartment45_1 from "../images/apartment45_1.avif";
-import apartment45_2 from "../images/apartment45_2.avif";
-import apartment45_3 from "../images/apartment45_3.avif";
-
-import apartment46 from "../images/apartment46.avif";
-import apartment46_1 from "../images/apartment46_1.avif";
-import apartment46_2 from "../images/apartment46_2.avif";
-import apartment46_3 from "../images/apartment46_3.avif";
-
-import apartment47 from "../images/apartment47.jpeg";
-import apartment47_1 from "../images/apartment47_1.jpeg";
-import apartment47_2 from "../images/apartment47_2.jpeg";
-import apartment47_3 from "../images/apartment47_3.jpeg";
-
-import apartment48 from "../images/apartment48.avif";
-import apartment48_1 from "../images/apartment48_1.avif";
-import apartment48_2 from "../images/apartment48_2.avif";
-import apartment48_3 from "../images/apartment48_3.jpg";
-
-import apartment49 from "../images/apartment49.jpg";
-import apartment49_1 from "../images/apartment49_1.avif";
-import apartment49_2 from "../images/apartment49_2.jpg";
-import apartment49_3 from "../images/apartment49_3.jpg";
-
-import apartment50 from "../images/apartment50.avif";
-import apartment50_1 from "../images/apartment50_1.avif";
-import apartment50_2 from "../images/apartment50_2.avif";
-
-import apartment51 from "../images/apartment51.avif";
-import apartment51_1 from "../images/apartment51_1.jpeg";
-import apartment51_2 from "../images/apartment51_2.avif";
-import apartment51_3 from "../images/apartment51_3.jpeg";
-
-import apartment52 from "../images/apartment52.avif";
-import apartment52_1 from "../images/apartment52_1.avif";
-import apartment52_2 from "../images/apartment52_2.avif";
-
-import apartment53 from "../images/apartment53.avif";
-import apartment53_1 from "../images/apartment53_1.avif";
-import apartment53_2 from "../images/apartment53_2.avif";
-import apartment53_3 from "../images/apartment53_3.jpg";
-
-import apartment54 from "../images/apartment54.jpg";
-import apartment54_1 from "../images/apartment54_1.jpg";
-import apartment54_2 from "../images/apartment54_2.jpg";
-
-import apartment55 from "../images/apartment55.jpeg";
-import apartment55_1 from "../images/apartment55_1.jpeg";
-import apartment55_2 from "../images/apartment55_2.jpeg";
-import apartment55_3 from "../images/apartment55_3.jpeg";
-
-import apartment56 from "../images/apartment56.avif";
-import apartment56_1 from "../images/apartment56_1.avif";
-import apartment56_2 from "../images/apartment56_2.avif";
-
-import apartment57 from "../images/apartment57.avif";
-import apartment57_1 from "../images/apartment57_1.avif";
-import apartment57_2 from "../images/apartment57_2.avif";
-import apartment57_3 from "../images/apartment57_3.avif";
-
-import apartment58 from "../images/apartment58.avif";
-import apartment58_1 from "../images/apartment58_1.avif";
-import apartment58_2 from "../images/apartment58_2.avif";
-import apartment58_3 from "../images/apartment58_3.avif";
-
-import apartment59 from "../images/apartment59.avif";
-import apartment59_1 from "../images/apartment59_1.jpg";
-import apartment59_2 from "../images/apartment59_2.jpg";
-import apartment59_3 from "../images/apartment59_3.jpeg";
-
-import apartment60 from "../images/apartment60.avif";
-import apartment60_1 from "../images/apartment60_1.avif";
-import apartment60_2 from "../images/apartment60_2.avif";
-import apartment60_3 from "../images/apartment60_3.avif";
-
-import apartment61 from "../images/apartment61.jpeg";
-import apartment61_1 from "../images/apartment61_1.avif";
-import apartment61_2 from "../images/apartment61_2.webp";
-
-import apartment62 from "../images/apartment62.webp";
-import apartment62_1 from "../images/apartment62_1.avif";
-import apartment62_2 from "../images/apartment62_2.avif";
-import apartment62_3 from "../images/apartment62_3.avif";
-
-import apartment63 from "../images/apartment63.avif";
-import apartment63_1 from "../images/apartment63_1.avif";
-import apartment63_2 from "../images/apartment63_2.avif";
-import apartment63_3 from "../images/apartment63_3.avif";
-
-import apartment64 from "../images/apartment64.avif";
-import apartment64_1 from "../images/apartment64_1.avif";
-import apartment64_2 from "../images/apartment64_2.avif";
-import apartment64_3 from "../images/apartment64_3.jpeg";
-
-import apartment65 from "../images/apartment65.avif";
-import apartment65_1 from "../images/apartment65_1.avif";
-import apartment65_2 from "../images/apartment65_2.jpeg";
-import apartment65_3 from "../images/apartment65_3.avif";
-
-import apartment66 from "../images/apartment66.avif";
-import apartment66_1 from "../images/apartment66_1.avif";
-import apartment66_2 from "../images/apartment66_2.webp";
-import apartment66_3 from "../images/apartment66_3.avif";
-
-import apartment67 from "../images/apartment67.avif";
-import apartment67_1 from "../images/apartment67_1.avif";
-import apartment67_2 from "../images/apartment67_2.avif";
-import apartment67_3 from "../images/apartment67_3.avif";
-
-import apartment68 from "../images/apartment68.jpeg";
-import apartment68_1 from "../images/apartment68_1.jpeg";
-
-import apartment69 from "../images/apartment69.avif";
-import apartment69_1 from "../images/apartment69_1.avif";
-import apartment69_2 from "../images/apartment69_2.avif";
-import apartment69_3 from "../images/apartment69_3.avif";
-
-import apartment70 from "../images/apartment70.avif";
-import apartment70_1 from "../images/apartment70_1.avif";
-import apartment70_2 from "../images/apartment70_2.avif";
-
-import apartment71 from "../images/apartment71.avif";
-import apartment71_1 from "../images/apartment71_1.avif";
-import apartment71_2 from "../images/apartment71_2.avif";
-import apartment71_3 from "../images/apartment71_3.avif";
-
-import apartment72 from "../images/apartment72.avif";
-import apartment72_1 from "../images/apartment72_1.avif";
-import apartment72_2 from "../images/apartment72_2.avif";
-
-import apartment73 from "../images/apartment73.avif";
-import apartment73_1 from "../images/apartment73_1.avif";
-import apartment73_2 from "../images/apartment73_2.avif";
-
-import apartment74 from "../images/apartment74.avif";
-import apartment74_1 from "../images/apartment74_1.avif";
-import apartment74_2 from "../images/apartment74_2.avif";
-
-import apartment75 from "../images/apartment75.avif";
-import apartment75_1 from "../images/apartment75_1.avif";
-import apartment75_2 from "../images/apartment75_2.avif";
-import apartment75_3 from "../images/apartment75_3.avif";
-
-import apartment76 from "../images/apartment76.avif";
-import apartment76_1 from "../images/apartment76_1.avif";
-import apartment76_2 from "../images/apartment76_2.avif";
-import apartment76_3 from "../images/apartment76_3.avif";
-
-import apartment77 from "../images/apartment77.avif";
-import apartment77_1 from "../images/apartment77_1.avif";
-import apartment77_2 from "../images/apartment77_2.avif";
-
-import apartment78 from "../images/apartment78.avif";
-import apartment78_1 from "../images/apartment78_1.avif";
-import apartment78_2 from "../images/apartment78_2.avif";
-
-import apartment79 from "../images/apartment79.avif";
-import apartment79_1 from "../images/apartment79_1.avif";
-import apartment79_2 from "../images/apartment79_2.avif";
-
-import apartment80 from "../images/apartment80.avif";
-import apartment80_1 from "../images/apartment80_1.avif";
-import apartment80_2 from "../images/apartment80_2.webp";
-
-import apartment81 from "../images/apartment81.avif";
-import apartment81_1 from "../images/apartment81_1.avif";
-import apartment81_2 from "../images/apartment81_2.avif";
-import apartment81_3 from "../images/apartment81_3.avif";
+import apartment1 from "../images/apartment1.jpg"; import apartment1_1 from "../images/apartment1_1.jpg"; import apartment1_2 from "../images/apartment1_2.jpg";
+import apartment2 from "../images/apartment2.avif"; import apartment2_1 from "../images/apartment2_1.avif"; import apartment2_2 from "../images/apartment2_2.avif"; import apartment2_3 from "../images/apartment2_3.avif";
+import apartment3 from "../images/apartment3.avif"; import apartment3_1 from "../images/apartment3_1.avif"; import apartment3_2 from "../images/apartment3_2.avif"; import apartment3_3 from "../images/apartment3_3.avif";
+import apartment4 from "../images/apartment4.avif"; import apartment4_1 from "../images/apartment4_1.webp"; import apartment4_2 from "../images/apartment4_2.jpeg"; import apartment4_3 from "../images/apartment4_3.avif";
+import apartment5 from "../images/apartment5.jpeg"; import apartment5_1 from "../images/apartment5_1.jpeg"; import apartment5_2 from "../images/apartment5_2.jpeg"; import apartment5_3 from "../images/apartment5_3.jpeg";
+import apartment6 from "../images/apartment6.avif"; import apartment6_1 from "../images/apartment6_1.avif"; import apartment6_2 from "../images/apartment6_2.jpeg"; import apartment6_3 from "../images/apartment6_3.jpeg";
+import apartment7 from "../images/apartment7.avif"; import apartment7_1 from "../images/apartment7_1.jpeg"; import apartment7_2 from "../images/apartment7_2.jpeg"; import apartment7_3 from "../images/apartment7_3.jpeg";
+import apartment8 from "../images/apartment8.jpg"; import apartment8_1 from "../images/apartment8_1.jpg"; import apartment8_2 from "../images/apartment8_2.jpg"; import apartment8_3 from "../images/apartment8_3.jpg";
+import apartment9 from "../images/apartment9.jpg"; import apartment9_1 from "../images/apartment9_1.jpg"; import apartment9_2 from "../images/apartment9_2.jpg";
+import apartment10 from "../images/apartment10.jpg"; import apartment10_1 from "../images/apartment10_1.jpg"; import apartment10_2 from "../images/apartment10_2.jpg";
+import apartment11 from "../images/apartment11.jpg"; import apartment11_1 from "../images/apartment11_1.jpg"; import apartment11_2 from "../images/apartment11_2.jpg";
+import apartment12 from "../images/apartment12.avif"; import apartment12_1 from "../images/apartment12_1.avif"; import apartment12_2 from "../images/apartment12_2.avif";
+import apartment13 from "../images/apartment13.avif"; import apartment13_1 from "../images/apartment13_1.avif"; import apartment13_2 from "../images/apartment13_2.avif"; import apartment13_3 from "../images/apartment13_3.avif";
+import apartment14 from "../images/apartment14.avif"; import apartment14_1 from "../images/apartment14_1.avif"; import apartment14_2 from "../images/apartment14_2.avif"; import apartment14_3 from "../images/apartment14_3.avif";
+import apartment15 from "../images/apartment15.avif"; import apartment15_1 from "../images/apartment15_1.avif"; import apartment15_2 from "../images/apartment15_2.avif"; import apartment15_3 from "../images/apartment15_3.avif";
+import apartment16 from "../images/apartment16.jpeg"; import apartment16_1 from "../images/apartment16_1.avif"; import apartment16_2 from "../images/apartment16_2.avif"; import apartment16_3 from "../images/apartment16_3.avif";
+import apartment17 from "../images/apartment17.avif"; import apartment17_1 from "../images/apartment17_1.avif"; import apartment17_2 from "../images/apartment17_2.avif"; import apartment17_3 from "../images/apartment17_3.avif";
+import apartment18 from "../images/apartment18.jpeg"; import apartment18_1 from "../images/apartment18_1.avif"; import apartment18_2 from "../images/apartment18_2.webp"; import apartment18_3 from "../images/apartment18_3.jpeg";
+import apartment19 from "../images/apartment19.avif"; import apartment19_1 from "../images/apartment19_1.avif"; import apartment19_2 from "../images/apartment19_2.avif"; import apartment19_3 from "../images/apartment19_3.avif";
+import apartment20 from "../images/apartment20.jpeg"; import apartment20_1 from "../images/apartment20_1.jpeg"; import apartment20_2 from "../images/apartment20_2.jpeg"; import apartment20_3 from "../images/apartment20_3.jpeg";
+import apartment21 from "../images/apartment21.avif"; import apartment21_1 from "../images/apartment21_1.avif"; import apartment21_2 from "../images/apartment21_2.avif"; import apartment21_3 from "../images/apartment21_3.avif";
+import apartment22 from "../images/apartment22.avif"; import apartment22_1 from "../images/apartment22_1.avif"; import apartment22_2 from "../images/apartment22_2.avif"; import apartment22_3 from "../images/apartment22_3.avif";
+import apartment23 from "../images/apartment23.avif"; import apartment23_1 from "../images/apartment23_1.avif"; import apartment23_2 from "../images/apartment23_2.avif"; import apartment23_3 from "../images/apartment23_3.avif";
+import apartment24 from "../images/apartment24.webp"; import apartment24_1 from "../images/apartment24_1.avif"; import apartment24_2 from "../images/apartment24_2.avif"; import apartment24_3 from "../images/apartment24_3.avif";
+import apartment25 from "../images/apartment25.avif"; import apartment25_1 from "../images/apartment25_1.jpeg"; import apartment25_2 from "../images/apartment25_2.avif"; import apartment25_3 from "../images/apartment25_3.jpeg";
+import apartment26 from "../images/apartment26.avif"; import apartment26_1 from "../images/apartment26_1.avif"; import apartment26_2 from "../images/apartment26_2.avif"; import apartment26_3 from "../images/apartment26_3.jpeg";
+import apartment27 from "../images/apartment27.avif"; import apartment27_1 from "../images/apartment27_1.jpeg"; import apartment27_2 from "../images/apartment27_2.avif"; import apartment27_3 from "../images/apartment27_3.avif";
+import apartment28 from "../images/apartment28.avif"; import apartment28_1 from "../images/apartment28_1.avif"; import apartment28_2 from "../images/apartment28_2.jpeg"; import apartment28_3 from "../images/apartment28_3.avif";
+import apartment29 from "../images/apartment29.avif"; import apartment29_1 from "../images/apartment29_1.avif"; import apartment29_2 from "../images/apartment29_2.avif"; import apartment29_3 from "../images/apartment29_3.avif";
+import apartment30 from "../images/apartment30.avif"; import apartment30_1 from "../images/apartment30_1.avif"; import apartment30_2 from "../images/apartment30_2.avif"; import apartment30_3 from "../images/apartment30_3.avif";
+import apartment31 from "../images/apartment31.avif"; import apartment31_1 from "../images/apartment31_1.avif"; import apartment31_2 from "../images/apartment31_2.avif"; import apartment31_3 from "../images/apartment31_3.avif";
+import apartment32 from "../images/apartment32.avif"; import apartment32_1 from "../images/apartment32_1.avif"; import apartment32_2 from "../images/apartment32_2.avif";
+import apartment33 from "../images/apartment33.avif"; import apartment33_1 from "../images/apartment33_1.avif"; import apartment33_2 from "../images/apartment33_2.avif"; import apartment33_3 from "../images/apartment33_3.avif";
+import apartment34 from "../images/apartment34.avif"; import apartment34_1 from "../images/apartment34_1.jpeg"; import apartment34_2 from "../images/apartment34_2.jpeg";
+import apartment35 from "../images/apartment35.avif"; import apartment35_1 from "../images/apartment35_1.jpeg"; import apartment35_2 from "../images/apartment35_2.jpeg"; import apartment35_3 from "../images/apartment35_3.jpeg";
+import apartment36 from "../images/apartment36.avif"; import apartment36_1 from "../images/apartment36_1.avif"; import apartment36_2 from "../images/apartment36_2.avif";
+import apartment37 from "../images/apartment37.jpeg"; import apartment37_1 from "../images/apartment37_1.jpeg"; import apartment37_2 from "../images/apartment37_2.jpeg"; import apartment37_3 from "../images/apartment37_3.jpeg";
+import apartment38 from "../images/apartment38.avif"; import apartment38_1 from "../images/apartment38_1.avif"; import apartment38_2 from "../images/apartment38_2.avif"; import apartment38_3 from "../images/apartment38_3.avif";
+import apartment39 from "../images/apartment39.jpeg"; import apartment39_1 from "../images/apartment39_1.avif"; import apartment39_2 from "../images/apartment39_2.avif"; import apartment39_3 from "../images/apartment39_3.jpeg";
+import apartment40 from "../images/apartment40.avif"; import apartment40_1 from "../images/apartment40_1.jpeg"; import apartment40_2 from "../images/apartment40_2.jpeg"; import apartment40_3 from "../images/apartment40_3.jpeg";
+import apartment41 from "../images/apartment41.jpeg"; import apartment41_1 from "../images/apartment41_1.jpeg"; import apartment41_2 from "../images/apartment41_2.jpeg";
+import apartment42 from "../images/apartment42.jpeg"; import apartment42_1 from "../images/apartment42_1.avif"; import apartment42_2 from "../images/apartment42_2.jpeg"; import apartment42_3 from "../images/apartment42_3.jpeg";
+import apartment43 from "../images/apartment43.avif"; import apartment43_1 from "../images/apartment43_1.avif"; import apartment43_2 from "../images/apartment43_2.avif"; import apartment43_3 from "../images/apartment43_3.avif";
+import apartment44 from "../images/apartment44.avif"; import apartment44_1 from "../images/apartment44_1.avif"; import apartment44_2 from "../images/apartment44_2.avif"; import apartment44_3 from "../images/apartment44_3.avif";
+import apartment45 from "../images/apartment45.avif"; import apartment45_1 from "../images/apartment45_1.avif"; import apartment45_2 from "../images/apartment45_2.avif"; import apartment45_3 from "../images/apartment45_3.avif";
+import apartment46 from "../images/apartment46.avif"; import apartment46_1 from "../images/apartment46_1.avif"; import apartment46_2 from "../images/apartment46_2.avif"; import apartment46_3 from "../images/apartment46_3.avif";
+import apartment47 from "../images/apartment47.jpeg"; import apartment47_1 from "../images/apartment47_1.jpeg"; import apartment47_2 from "../images/apartment47_2.jpeg"; import apartment47_3 from "../images/apartment47_3.jpeg";
+import apartment48 from "../images/apartment48.avif"; import apartment48_1 from "../images/apartment48_1.avif"; import apartment48_2 from "../images/apartment48_2.avif"; import apartment48_3 from "../images/apartment48_3.jpg";
+import apartment49 from "../images/apartment49.jpg"; import apartment49_1 from "../images/apartment49_1.avif"; import apartment49_2 from "../images/apartment49_2.jpg"; import apartment49_3 from "../images/apartment49_3.jpg";
+import apartment50 from "../images/apartment50.avif"; import apartment50_1 from "../images/apartment50_1.avif"; import apartment50_2 from "../images/apartment50_2.avif";
+import apartment51 from "../images/apartment51.avif"; import apartment51_1 from "../images/apartment51_1.jpeg"; import apartment51_2 from "../images/apartment51_2.avif"; import apartment51_3 from "../images/apartment51_3.jpeg";
+import apartment52 from "../images/apartment52.avif"; import apartment52_1 from "../images/apartment52_1.avif"; import apartment52_2 from "../images/apartment52_2.avif";
+import apartment53 from "../images/apartment53.avif"; import apartment53_1 from "../images/apartment53_1.avif"; import apartment53_2 from "../images/apartment53_2.avif"; import apartment53_3 from "../images/apartment53_3.jpg";
+import apartment54 from "../images/apartment54.jpg"; import apartment54_1 from "../images/apartment54_1.jpg"; import apartment54_2 from "../images/apartment54_2.jpg";
+import apartment55 from "../images/apartment55.jpeg"; import apartment55_1 from "../images/apartment55_1.jpeg"; import apartment55_2 from "../images/apartment55_2.jpeg"; import apartment55_3 from "../images/apartment55_3.jpeg";
+import apartment56 from "../images/apartment56.avif"; import apartment56_1 from "../images/apartment56_1.avif"; import apartment56_2 from "../images/apartment56_2.avif";
+import apartment57 from "../images/apartment57.avif"; import apartment57_1 from "../images/apartment57_1.avif"; import apartment57_2 from "../images/apartment57_2.avif"; import apartment57_3 from "../images/apartment57_3.avif";
+import apartment58 from "../images/apartment58.avif"; import apartment58_1 from "../images/apartment58_1.avif"; import apartment58_2 from "../images/apartment58_2.avif"; import apartment58_3 from "../images/apartment58_3.avif";
+import apartment59 from "../images/apartment59.avif"; import apartment59_1 from "../images/apartment59_1.jpg"; import apartment59_2 from "../images/apartment59_2.jpg"; import apartment59_3 from "../images/apartment59_3.jpeg";
+import apartment60 from "../images/apartment60.avif"; import apartment60_1 from "../images/apartment60_1.avif"; import apartment60_2 from "../images/apartment60_2.avif"; import apartment60_3 from "../images/apartment60_3.avif";
+import apartment61 from "../images/apartment61.jpeg"; import apartment61_1 from "../images/apartment61_1.avif"; import apartment61_2 from "../images/apartment61_2.webp";
+import apartment62 from "../images/apartment62.webp"; import apartment62_1 from "../images/apartment62_1.avif"; import apartment62_2 from "../images/apartment62_2.avif"; import apartment62_3 from "../images/apartment62_3.avif";
+import apartment63 from "../images/apartment63.avif"; import apartment63_1 from "../images/apartment63_1.avif"; import apartment63_2 from "../images/apartment63_2.avif"; import apartment63_3 from "../images/apartment63_3.avif";
+import apartment64 from "../images/apartment64.avif"; import apartment64_1 from "../images/apartment64_1.avif"; import apartment64_2 from "../images/apartment64_2.avif"; import apartment64_3 from "../images/apartment64_3.jpeg";
+import apartment65 from "../images/apartment65.avif"; import apartment65_1 from "../images/apartment65_1.avif"; import apartment65_2 from "../images/apartment65_2.jpeg"; import apartment65_3 from "../images/apartment65_3.avif";
+import apartment66 from "../images/apartment66.avif"; import apartment66_1 from "../images/apartment66_1.avif"; import apartment66_2 from "../images/apartment66_2.webp"; import apartment66_3 from "../images/apartment66_3.avif";
+import apartment67 from "../images/apartment67.avif"; import apartment67_1 from "../images/apartment67_1.avif"; import apartment67_2 from "../images/apartment67_2.avif"; import apartment67_3 from "../images/apartment67_3.avif";
+import apartment68 from "../images/apartment68.jpeg"; import apartment68_1 from "../images/apartment68_1.jpeg";
+import apartment69 from "../images/apartment69.avif"; import apartment69_1 from "../images/apartment69_1.avif"; import apartment69_2 from "../images/apartment69_2.avif"; import apartment69_3 from "../images/apartment69_3.avif";
+import apartment70 from "../images/apartment70.avif"; import apartment70_1 from "../images/apartment70_1.avif"; import apartment70_2 from "../images/apartment70_2.avif";
+import apartment71 from "../images/apartment71.avif"; import apartment71_1 from "../images/apartment71_1.avif"; import apartment71_2 from "../images/apartment71_2.avif"; import apartment71_3 from "../images/apartment71_3.avif";
+import apartment72 from "../images/apartment72.avif"; import apartment72_1 from "../images/apartment72_1.avif"; import apartment72_2 from "../images/apartment72_2.avif";
+import apartment73 from "../images/apartment73.avif"; import apartment73_1 from "../images/apartment73_1.avif"; import apartment73_2 from "../images/apartment73_2.avif";
+import apartment74 from "../images/apartment74.avif"; import apartment74_1 from "../images/apartment74_1.avif"; import apartment74_2 from "../images/apartment74_2.avif";
+import apartment75 from "../images/apartment75.avif"; import apartment75_1 from "../images/apartment75_1.avif"; import apartment75_2 from "../images/apartment75_2.avif"; import apartment75_3 from "../images/apartment75_3.avif";
+import apartment76 from "../images/apartment76.avif"; import apartment76_1 from "../images/apartment76_1.avif"; import apartment76_2 from "../images/apartment76_2.avif"; import apartment76_3 from "../images/apartment76_3.avif";
+import apartment77 from "../images/apartment77.avif"; import apartment77_1 from "../images/apartment77_1.avif"; import apartment77_2 from "../images/apartment77_2.avif";
+import apartment78 from "../images/apartment78.avif"; import apartment78_1 from "../images/apartment78_1.avif"; import apartment78_2 from "../images/apartment78_2.avif";
+import apartment79 from "../images/apartment79.avif"; import apartment79_1 from "../images/apartment79_1.avif"; import apartment79_2 from "../images/apartment79_2.avif";
+import apartment80 from "../images/apartment80.avif"; import apartment80_1 from "../images/apartment80_1.avif"; import apartment80_2 from "../images/apartment80_2.webp";
+import apartment81 from "../images/apartment81.avif"; import apartment81_1 from "../images/apartment81_1.avif"; import apartment81_2 from "../images/apartment81_2.avif"; import apartment81_3 from "../images/apartment81_3.avif";
+import apartment82 from "../images/apartment82.avif"; import apartment82_1 from "../images/apartment82_1.avif";
+import apartment83 from "../images/apartment83.avif"; import apartment83_1 from "../images/apartment83_1.avif"; import apartment83_2 from "../images/apartment83_2.avif";
 
 const hotels = [
   { name: "Four Points by Sheraton Prishtina", location: "Prishtina", rating: 4.8, images: [hotel1, hotel1_1, hotel1_2], description: "Hotel modern me spa, pishinë të brendshme dhe restorant luksoz me pamje panoramike.", rooms: 1, capacity: 2, price: 129, amenities: ["Spa", "Indoor Pool", "Free Wi-Fi", "Breakfast Included", "Parking", "Fitness Center"] },
@@ -1009,7 +241,7 @@ const hotels = [
   { name: "Hotel Pine", location: "Brezovicë", rating: 4.7, images: [hotel7, hotel7_1, hotel7_2, hotel7_3], description: "Hotel komod me stil alpin, shumë afër teleferikut, i përshtatshëm për çifte dhe familje.", rooms: 1, capacity: 3, price: 115, amenities: ["Mountain View", "Wi-Fi", "Spa", "Restaurant", "Free Parking"] },
   { name: "Monte Villa", location: "near Brezovicë", rating: 4.9, images: [villa8, villa8_1, villa8_2, villa8_3, villa8_4], description: "Një villë ekskluzive në natyrë me pamje fantastike.", rooms: 2, capacity: 5, price: 280, amenities: ["Luxury Spa", "Gourmet Restaurant", "Indoor Pool", "Wi-Fi", "Valet Parking"] },
   { name: "Snow White Chalet", location: "near Brezovicë", rating: 4.5, images: [villa9, villa9_1, villa9_2, villa9_3], description: "Chalet prej druri në zemër të maleve, perfekt për pushime dimërore private.", rooms: 2, capacity: 4, price: 160, amenities: ["Private Chalet", "Fireplace", "Mountain View", "Parking", "Wi-Fi"] },
-  { name: "Mont Chalet", location: "Brezovicë", rating: 4.8, images: [villa10, villa10_1, villa10_2, villa10_3, villa10_4], description: "Luks alpin me pamje të mahnitshme të maleve.", rooms: 3, capacity: 6, price: 913, nights: 2, amenities: ["Kitchen", "TV", "Pets allowed", "Wi-Fi", "Parking"] },
+  { name: "Mont Chalet", location: "Brezovicë", rating: 4.8, images: [villa10, villa10_1, villa10_2, villa10_3, villa10_4], description: "Luks alpin me pamje të mahnitshme të maleve.", rooms: 3, capacity: 6, price: 456, amenities: ["Kitchen", "TV", "Pets allowed", "Wi-Fi", "Parking"] },
   { name: "Hotel Butrinti", location: "Sarandë", rating: 4.8, images: [hotel11, hotel11_1, hotel11_2, hotel11_3], description: "Hotel i njohur buzë detit me pamje fantastike, pishinë dhe restorant mesdhetar.", rooms: 1, capacity: 2, price: 140, amenities: ["Beach Access", "Outdoor Pool", "Wi-Fi", "Breakfast", "Restaurant", "Parking"] },
   { name: "Bougainville Bay Hotel", location: "Sarandë", rating: 4.6, images: [hotel12, hotel12_1, hotel12_2, hotel12_3, hotel12_4], description: "Kompleks luksoz me plazh privat, 5 pishina dhe dhoma me dizajn artistik.", rooms: 1, capacity: 3, price: 155, amenities: ["Private Beach", "Multiple Pools", "Spa", "Wi-Fi", "Parking", "Restaurant"] },
   { name: "Saranda Palace Hotel", location: "Sarandë", rating: 4.9, images: [hotel13, hotel13_1, hotel13_2, hotel13_3], description: "Hotel i qetë me plazh privat, bar panoramik dhe dhoma me ballkon detar.", rooms: 1, capacity: 2, price: 135, amenities: ["Private Beach", "Bar", "Sea View", "Wi-Fi", "Parking"] },
@@ -1054,8 +286,8 @@ const hotels = [
   { name: "J&M Apartment", location: "Sarandë", rating: 4.0, images: [apartment1, apartment1_1, apartment1_2], description: "Akomodim i qetë me ballkon, pamje dhe ambiente familjare, ideal për 3 persona.", rooms: 1, capacity: 3, price: 27, amenities: ["Free on-site parking", "Balcony", "Free Wifi", "Private bathroom", "Family rooms", "View", "Air conditioning"] },
   { name: "Rayan Apartment", location: "Sarandë", rating: 4.0, images: [apartment2, apartment2_1, apartment2_2, apartment2_3], description: "Apartament i qetë dhe komod me ballkon privat, parkim falas dhe ambiente moderne për një qëndrim relaksues.", rooms: 1, capacity: 3, price: 48, amenities: ["Wifi", "Free parking on premises", "TV", "Washer", "Air Conditioning", "Private patio or balcony", "Luggage dropoff allowed"] },
   { name: "Villa 2 - Ionian Premium Villas", location: "Sarandë", rating: 4.7, images: [villa22, villa22_1, villa22_2, villa22_3, villa22_4], description: "Vilë moderne me ambient të ndritshëm, qasje në pishinë, parkim të siguruar dhe hapësira komode për një qëndrim relaksues.", rooms: 3, capacity: 7, price: 230, amenities: ["Wifi", "Free parking on premises – 2 spaces", "TV", "Air Conditioning", "Unavailable: Carbon monoxide alarm", "Unavailable: Smoke alarm"] },
-  { name: "Navi Apartments", location: "Sarandë", rating: 4.6, images: [apartment3, apartment3_1, apartment3_2, apartment3_3], description: "Apartament modern dhe i rehatshëm në zonë të qetë, me akses të lehtë në shërbimet kryesore.", rooms: 3, capacity: 6, price: 451, nights: 2, amenities: ["Wifi", "Free parking on premises", "TV", "Washer", "Air Conditioning"] },
-  { name: "Palmera Villa 2", location: "Sarandë", rating: 4.8, images: [villa23, villa23_1, villa23_2, villa23_3, villa23_4], description: "Vilë moderne me ambient të ndritshëm, pishinë dhe parkim të siguruar.", rooms: 4, capacity: 10, price: 714, nights: 2, amenities: ["Kitchen", "Wifi", "Free parking on premises", "Pool", "Pets allowed", "TV", "Washer"] },
+  { name: "Navi Apartments", location: "Sarandë", rating: 4.6, images: [apartment3, apartment3_1, apartment3_2, apartment3_3], description: "Apartament modern dhe i rehatshëm në zonë të qetë, me akses të lehtë në shërbimet kryesore.", rooms: 3, capacity: 6, price: 226, amenities: ["Wifi", "Free parking on premises", "TV", "Washer", "Air Conditioning"] },
+  { name: "Palmera Villa 2", location: "Sarandë", rating: 4.8, images: [villa23, villa23_1, villa23_2, villa23_3, villa23_4], description: "Vilë moderne me ambient të ndritshëm, pishinë dhe parkim të siguruar.", rooms: 4, capacity: 10, price: 357, amenities: ["Kitchen", "Wifi", "Free parking on premises", "Pool", "Pets allowed", "TV", "Washer"] },
   { name: "Garden Dream Apartment", location: "Sarandë", rating: 3.5, images: [apartment4, apartment4_1, apartment4_2, apartment4_3], description: "Apartament modern me akses të lehtë dhe ambiente të rehatshme.", rooms: 1, capacity: 3, price: 51, amenities: ["Self check-in", "Free parking", "Kitchen", "Wifi", "Washer"] },
   { name: "Piro Apartment", location: "Sarandë", rating: 3.3, images: [apartment5, apartment5_1, apartment5_2, apartment5_3], description: "Apartament i thjeshtë dhe i rehatshëm me akses në të gjitha shërbimet bazë.", rooms: 1, capacity: 2, price: 47, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Washer", "Air Conditioning"] },
   { name: "Luxury Apartment", location: "Sarandë", rating: 4.8, images: [apartment6, apartment6_1, apartment6_2, apartment6_3], description: "Apartament modern me hapësira të bollshme dhe ambiente të rehatshme.", rooms: 2, capacity: 6, price: 1096, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Washer", "Air Conditioning", "Exterior security cameras on property"] },
@@ -1110,9 +342,9 @@ const hotels = [
   { name: "Coastal Hotel", location: "Himarë", rating: 4.0, images: [hotel41, hotel41_1, hotel41_2, hotel41_3], description: "Hotel i thjeshtë dhe i rehatshëm, i përshtatshëm për një qëndrim pranë bregdetit.", rooms: 1, capacity: 2, price: 35, amenities: ["Wi-Fi", "TV", "Air Conditioning"] },
   { name: "Hotel", location: "Himarë", rating: 3.8, images: [hotel42, hotel42_1, hotel42_2, hotel42_3], description: "Hotel i thjeshtë dhe i përshtatshëm për një qëndrim komod.", rooms: 1, capacity: 2, price: 49, amenities: ["Wi-Fi", "Free Parking on Premises", "Air Conditioning"] },
   { name: "Erika's Apartment", location: "Prishtina", rating: 4.2, images: [apartment42, apartment42_1, apartment42_2, apartment42_3], description: "Apartament modern dhe i rehatshëm, i përshtatshëm për një qëndrim të qetë në qytet.", rooms: 1, capacity: 2, price: 70, amenities: ["Wi-Fi", "Dedicated Workspace", "Free Parking on Premises", "TV", "Air Conditioning", "Hair Dryer", "Gym"] },
-  { name: "Apartment", location: "Prishtina", rating: 4.3, images: [apartment43, apartment43_1, apartment43_2, apartment43_3], description: "Apartament modern me lehtësira të plota dhe hapësirë për relaksim.", rooms: 2, capacity: 4, price: 107, nights: 2, amenities: ["Kitchen", "Wi-Fi", "Dedicated Workspace", "Free Parking on Premises", "55 inch HDTV with Netflix", "Elevator", "Washer", "Dryer"] },
-  { name: "Luxurious Apartment", location: "Prishtina", rating: 4.4, images: [apartment44, apartment44_1, apartment44_2, apartment44_3], description: "Apartament luksoz me lehtësira të plota dhe hapësira për një qëndrim komod dhe relaksues.", rooms: 3, capacity: 6, price: 146, nights: 2, amenities: ["Kitchen", "Wi-Fi", "Dedicated Workspace", "Free Residential Garage on Premises (4 spaces)", "55 inch HDTV with Netflix", "Elevator", "Free Washer (In Unit)", "Paid Dryer (In Building)"] },
-  { name: "Dadas Apartment", location: "Prishtina", rating: 4.3, images: [apartment45, apartment45_1, apartment45_2, apartment45_3], description: "Apartament komod me pamje të qytetit dhe kopështit, i përshtatshëm për një qëndrim relaksues.", rooms: 1, capacity: 2, price: 78, nights: 2, amenities: ["City Skyline View", "Garden View", "Wi-Fi", "Dedicated Workspace", "Free Parking on Premises"] },
+  { name: "Apartment", location: "Prishtina", rating: 4.3, images: [apartment43, apartment43_1, apartment43_2, apartment43_3], description: "Apartament modern me lehtësira të plota dhe hapësirë për relaksim.", rooms: 2, capacity: 4, price: 54, amenities: ["Kitchen", "Wi-Fi", "Dedicated Workspace", "Free Parking on Premises", "55 inch HDTV with Netflix", "Elevator", "Washer", "Dryer"] },
+  { name: "Luxurious Apartment", location: "Prishtina", rating: 4.4, images: [apartment44, apartment44_1, apartment44_2, apartment44_3], description: "Apartament luksoz me lehtësira të plota dhe hapësira për një qëndrim komod dhe relaksues.", rooms: 3, capacity: 6, price: 73, amenities: ["Kitchen", "Wi-Fi", "Dedicated Workspace", "Free Residential Garage on Premises (4 spaces)", "55 inch HDTV with Netflix", "Elevator", "Free Washer (In Unit)", "Paid Dryer (In Building)"] },
+  { name: "Dadas Apartment", location: "Prishtina", rating: 4.3, images: [apartment45, apartment45_1, apartment45_2, apartment45_3], description: "Apartament komod me pamje të qytetit dhe kopështit, i përshtatshëm për një qëndrim relaksues.", rooms: 1, capacity: 2, price: 39, amenities: ["City Skyline View", "Garden View", "Wi-Fi", "Dedicated Workspace", "Free Parking on Premises"] },
   { name: "Union Premium Apartments", location: "Prishtina", rating: 4.2, images: [apartment46, apartment46_1, apartment46_2, apartment46_3], description: "Apartament modern dhe komod me lehtësira bazë për një qëndrim të këndshëm.", rooms: 2, capacity: 4, price: 65, amenities: [] },
   { name: "Deluxe Apartment", location: "Prishtina", rating: 4.1, images: [apartment47, apartment47_1, apartment47_2, apartment47_3], description: "Apartament komod me lehtësira të plota dhe hapësirë të përshtatshme për një qëndrim të rehatshëm.", rooms: 1, capacity: 2, price: 76, amenities: ["Kitchen", "Wi-Fi", "Dedicated Workspace", "Free Parking on Premises", "TV", "Air Conditioning", "Hair Dryer"] },
   { name: "Standard Apartment 4", location: "Prishtina", rating: 4.0, images: [apartment48, apartment48_1, apartment48_2, apartment48_3], description: "Apartament i thjeshtë dhe i rehatshëm me lehtësira të plota për një qëndrim praktik.", rooms: 1, capacity: 2, price: 52, amenities: ["Wi-Fi", "Free Parking on Premises", "TV", "Washer", "Dryer", "Air Conditioning"] },
@@ -1133,7 +365,7 @@ const hotels = [
   { name: "The Teal Sport Apartment", location: "Tirana", rating: 4.1, images: [apartment63, apartment63_1, apartment63_2, apartment63_3], description: "Hapësirë moderne me pamje të qytetit, ideale për një qëndrim relaksues.", rooms: 1, capacity: 3, price: 60, amenities: ["Kitchen", "Wifi", "Free street parking", "TV", "Elevator", "Washer"] },
   { name: "Deluxe Apartment", location: "Tirana", rating: 4.3, images: [apartment64, apartment64_1, apartment64_2, apartment64_3], description: "Një apartament modern dhe i rehatshëm për një qëndrim të këndshëm.", rooms: 1, capacity: 5, price: 58, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free residential garage on premises", "49 inch HDTV", "Elevator", "Free washer – In unit"], },
   { name: "Red & White Palace Apartment", location: "Tirana", rating: 4.2, images: [apartment65, apartment65_1, apartment65_2, apartment65_3], description: "Apartament modern dhe i këndshëm për një qëndrim relaksues.", rooms: 1, capacity: 4, price: 53, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "TV", "Elevator", "Free washer – In unit"], },
-  { name: "Luxury Apartments", location: "Tirana", rating: 4.5, images: [apartment66, apartment66_1, apartment66_2, apartment66_3], description: "Apartament luksoz dhe i rehatshëm për një qëndrim të këndshëm.", rooms: 1, capacity: 3, price: 112, nights: 2, amenities: ["Kitchen", "Wifi", "Free parking on premises", "Washer"] },
+  { name: "Luxury Apartments", location: "Tirana", rating: 4.5, images: [apartment66, apartment66_1, apartment66_2, apartment66_3], description: "Apartament luksoz dhe i rehatshëm për një qëndrim të këndshëm.", rooms: 1, capacity: 3, price: 56, amenities: ["Kitchen", "Wifi", "Free parking on premises", "Washer"] },
   { name: "Scandinavian Apartment", location: "Tirana", rating: 4.3, images: [apartment67, apartment67_1, apartment67_2, apartment67_3], description: "Apartament modern dhe i rehatshëm për një qëndrim të këndshëm.", rooms: 2, capacity: 5, price: 65, amenities: ["Kitchen", "Fast wifi – 50 Mbps", "Dedicated workspace", "Free residential garage on premises – 2 spaces", "Pets allowed"], },
   { name: "Studio Nr.4 Apartment", location: "Tirana", rating: 4.0, images: [apartment68, apartment68_1], description: "Apartament i rehatshëm dhe i përshtatshëm për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 2, price: 33, amenities: ["Wifi", "Dedicated workspace", "TV", "Air conditioning", "Exterior security cameras on property"], },
   { name: "Tirana 54. Apartment", location: "Tirana", rating: 4.2, images: [apartment69, apartment69_1, apartment69_2, apartment69_3], description: "Apartament i këndshëm dhe komod me pamje nga kopshti.", rooms: 1, capacity: 4, price: 75, amenities: ["Kitchen", "Wifi", "Free parking garage on premises", "42 inch HDTV", "Elevator"], },
@@ -1184,33 +416,43 @@ const hotels = [
   { name: "Villa Florence", location: "Tirana", rating: 5.0, images: [villa42, villa42_1, villa42_2, villa42_3], description: "Vilë luksoze dhe e madhe me pishinë private gjatë gjithë vitit, ideale për grupet e mëdha dhe qëndrime komode.", rooms: 6, capacity: 14, price: 1167, amenities: ["Garden view", "Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "Private pool - available all year, open 24 hours, heated, pool cover", "TV", "Washer"], },
   { name: "Hilltop Villa", location: "Tirana", rating: 4.9, images: [villa43, villa43_1, villa43_2, villa43_3], description: "Vilë luksoze me pamje nga kodrat dhe pishinë, ideale për grupet e mëdha dhe qëndrime komode.", rooms: 4, capacity: 10, price: 711, amenities: ["Kitchen", "Wifi", "Free parking on premises", "Pool", "TV", "Washer", "Air conditioning", "Indoor fireplace"], },
   { name: "Villa 3", location: "Tirana", rating: 3.6, images: [villa44, villa44_1, villa44_2], description: "Vilë moderne dhe e rehatshme, e pajisur për qëndrime të gjata dhe pushime komode.", rooms: 3, capacity: 4, price: 457, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "70 inch HDTV with Amazon Prime Video", "Washer"], },
-  { name: "Escape Hotel Himare", location: "Himarë", rating: 4.1, images: [hotel63, hotel63_1, hotel63_2], description: "Hotel modern dhe relaksues, i pajisur me pishinë dhe jacuzzi privat për një qëndrim komod.", rooms: 1, capacity: 2, price: 934, nights: 5, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "Pool", "Private hot tub - open 24 hours", "TV"], },
-  { name: "Family Villa", location: "Himarë", rating: 4.3, images: [villa45, villa45_1, villa45_2], description: "Vilë familjare me ambiente të bollshme, akses plazhi dhe pamje relaksuese të kopshtit dhe oborrit.", rooms: 1, capacity: 4, price: 430, nights: 5, amenities: ["Garden view", "Courtyard view", "Beach access", "Kitchen", "Wifi", "Dedicated workspace", "Free driveway parking on premises – 10 spaces", "Pets allowed"], },
-  { name: "Villa Nacios", location: "Himarë", rating: 4.4, images: [villa46, villa46_1, villa46_2], description: "Vilë komode dhe moderne me hapësira të jashtme, ideale për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 432, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning", "Patio or balcony", "Backyard"], nights: 5 },
-  { name: "Hotel", location: "Himarë", rating: 4.2, images: [hotel64, hotel64_1, hotel64_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 3, price: 175, amenities: ["Wifi", "TV", "Air conditioning", "Hair dryer"], nights: 5 },
-  { name: "Hotel Mateo", location: "Himarë", rating: 4.3, images: [hotel65, hotel65_1, hotel65_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 650, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning", "Hair dryer"], nights: 5 },
-  { name: "Hibiscus Hotel", location: "Himarë", rating: 3.2, images: [hotel66, hotel66_1, hotel66_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për familje ose miq.", rooms: 1, capacity: 3, price: 371, amenities: ["Wifi", "Free parking on premises", "Pets allowed", "TV", "Air conditioning"], nights: 5 },
-  { name: "Hotel", location: "Himarë", rating: 4.2, images: [hotel67, hotel67_1], description: "Hotel modern dhe i sigurt, ideal për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 3, price: 234, amenities: ["Wifi", "TV", "Air conditioning", "Exterior security cameras on property"], nights: 5 },
-  { name: "Himara City Hotel", location: "Himarë", rating: 3.9, images: [hotel68, hotel68_1], description: "Hotel modern dhe i rehatshëm, i përshtatshëm për familje ose çiftet që kërkojnë një qëndrim të qetë.", rooms: 1, capacity: 2, price: 110, amenities: ["Wifi", "Pets allowed", "Air conditioning", "Luggage dropoff allowed", "Crib", "Hair dryer"], nights: 5 },
-  { name: "Bliss Hotel", location: "Himarë", rating: 4.4, images: [hotel69, hotel69_1, hotel69_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për familje ose grup miqsh.", rooms: 1, capacity: 4, price: 127, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Air conditioning"], nights: 5 },
-  { name: "Artis Blue Hotel", location: "Himarë", rating: 4.5, images: [hotel70, hotel70_1, hotel70_2], description: "Hotel modern dhe luksoz me jacuzzi, ideal për një qëndrim relaksues për familje ose miq.", rooms: 1, capacity: 3, price: 711, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "Hot tub", "TV", "Air conditioning"], nights: 5 },
-  { name: "Villa", location: "Himarë", rating: 4.6, images: [villa47, villa47_1, villa47_2], description: "Vilë komode dhe moderne me akses plazhi, ideale për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 1050, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning"], nights: 5 },
-  { name: "Tree Villa", location: "Himarë", rating: 4.4, images: [villa48, villa48_1, villa48_2], description: "Vilë moderne dhe e rehatshme, ideale për një qëndrim relaksues për familje ose grup miqsh.", rooms: 1, capacity: 4, price: 254, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning"], nights: 5 },
-  { name: "White Stone Villa", location: "Himarë", rating: 4.5, images: [villa49, villa49_1, villa49_2, villa49_3], description: "Vilë moderne dhe komode me hapësirë të jashtme, ideale për një qëndrim relaksues për familje ose grup miqsh.", rooms: 1, capacity: 3, price: 468, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Washer", "Air conditioning", "Backyard"], nights: 5 },
-  { name: "Cozy Villa", location: "Himarë", rating: 4.5, images: [villa50, villa50_1, villa50_2], description: "Vilë komode me pamje nga mali dhe akses të përbashkët në plazh, ideale për një qëndrim relaksues.", rooms: 1, capacity: 3, price: 296, amenities: ["Mountain view", "Garden view", "Shared beach access", "Kitchen", "Wifi", "Free parking on premises"], nights: 5 },
-  { name: "The Poet's Villa 2", location: "Himarë", rating: 4.7, images: [villa51, villa51_1, villa51_2], description: "Vilë moderne dhe e rehatshme me pishinë, ideale për një qëndrim relaksues për familje ose miq.", rooms: 1, capacity: 3, price: 700, amenities: ["Wifi", "Free parking on premises", "Pool", "TV", "Washer", "Air conditioning", "Hair dryer"], nights: 5 },
-  { name: "Orange Garden Villa", location: "Himarë", rating: 4.9, images: [villa52, villa52_1, villa52_2], description: "Vilë luksoze dhe moderne me hapësira private dhe teknologji të avancuar, ideale për grupet e mëdha dhe qëndrime komode.", rooms: 3, capacity: 7, price: 1342, amenities: ["Kitchen", "Fast wifi – 99 Mbps", "Free parking on premises", "HDTV with Netflix", "Free washer – In unit", "Air conditioning", "Private patio or balcony", "Exterior security cameras on property"], nights: 5 },
-  { name: "Olive Stone Villa", location: "Himarë", rating: 4.8, images: [villa53, villa53_1, villa53_2, villa53_3], description: "Vilë luksoze dhe e gjerë, ideale për familje ose grupe të mëdha me hapësira të bollshme dhe komoditete moderne.", rooms: 3, capacity: 10, price: 1167, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Washer", "Dryer", "Air conditioning"], nights: 5 },
-  { name: "Villa LUAR", location: "Himarë", rating: 5.0, images: [villa54, villa54_1, villa54_2, villa54_3], description: "Vilë luksoze dhe e madhe me pamje nga luginat dhe malet, ideale për grupet e mëdha dhe qëndrime komode.", rooms: 6, capacity: 12, price: 5281, amenities: ["Valley view", "Mountain view", "Kitchen", "Wifi", "Free parking on premises – 4 spaces", "Private outdoor pool - available seasonally, open specific hours", "Hot tub"], nights: 5 },
-  { name: "Kolagji Villas", location: "Himarë", rating: 4.9, images: [villa55, villa55_1, villa55_2], description: "Vilë moderne dhe e gjerë, ideale për familje ose grupe të mëdha, me hapësira të bollshme dhe komoditete të plota.", rooms: 5, capacity: 11, price: 2109, amenities: ["Wifi", "Free parking on premises", "Washer", "Air conditioning"], nights: 5 },
-  { name: "Adriatic Villa", location: "Himarë", rating: 3.5, images: [villa56, villa56_1, villa56_2], description: "Vilë luksoze dhe e rehatshme me hapësira të bollshme, ideale për familje ose grup miqsh.", rooms: 2, capacity: 6, price: 2539, amenities: ["Kitchen", "Wifi", "Free parking on premises"], nights: 5 },
-  { name: "Villa Ionian", location: "Himarë", rating: 4.9, images: [villa57, villa57_1, villa57_2], description: "Vilë luksoze dhe moderne me pishinë dhe jacuzzi, ideale për grupet e mëdha dhe qëndrime relaksuese.", rooms: 4, capacity: 8, price: 2031, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "Pool", "Hot tub", "Pets allowed"], nights: 5 },
-  { name: "Villa 1", location: "Himarë", rating: 4.7, images: [villa58, villa58_1, villa58_2], description: "Vilë komode dhe moderne, ideale për familje ose grupe të vogla me hapësira të bollshme dhe komoditete të plota.", rooms: 2, capacity: 6, price: 671, amenities: ["Kitchen", "Wifi", "Free parking on premises", "Pets allowed", "TV", "Washer", "Air conditioning"], nights: 5 },
-  { name: "New Hotel", location: "Himarë", rating: 4.3, images: [hotel71, hotel71_1, hotel71_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 3, price: 100, amenities: ["Wifi", "Free street parking", "50 inch HDTV", "AC - split type ductless system", "Luggage dropoff allowed"], nights: 5 },
-  { name: "Hotel 35", location: "Himarë", rating: 3.9, images: [hotel72, hotel72_1], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 76, amenities: ["Wifi", "Pets allowed", "Air conditioning", "Luggage dropoff allowed"], nights: 5 },
-  { name: "Sun George Hotel", location: "Himarë", rating: 4.3, images: [hotel73, hotel73_1, hotel73_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 325, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning"], nights: 5 },
-  { name: "Grand Hotel", location: "Himarë", rating: 4.4, images: [hotel74, hotel74_1], description: "Hotel modern dhe i sigurt, ideal për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 192, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Air conditioning", "Exterior security cameras on property"], nights: 5 },
-  { name: "Hotel", location: "Himarë", rating: 4.5, images: [hotel75, hotel75_1], description: "Hotel modern dhe i rehatshëm me akses plazhi, ideal për familje ose grup miqsh.", rooms: 1, capacity: 3, price: 479, amenities: ["Wifi", "Free parking on premises", "TV", "Washer"], nights: 5 },
+  { name: "Escape Hotel Himare", location: "Himarë", rating: 4.1, images: [hotel63, hotel63_1, hotel63_2], description: "Hotel modern dhe relaksues, i pajisur me pishinë dhe jacuzzi privat për një qëndrim komod.", rooms: 1, capacity: 2, price: 186, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "Pool", "Private hot tub - open 24 hours", "TV"], },
+  { name: "Family Villa", location: "Himarë", rating: 4.3, images: [villa45, villa45_1, villa45_2], description: "Vilë familjare me ambiente të bollshme, akses plazhi dhe pamje relaksuese të kopshtit dhe oborrit.", rooms: 1, capacity: 4, price: 86, amenities: ["Garden view", "Courtyard view", "Beach access", "Kitchen", "Wifi", "Dedicated workspace", "Free driveway parking on premises – 10 spaces", "Pets allowed"], },
+  { name: "Villa Nacios", location: "Himarë", rating: 4.4, images: [villa46, villa46_1, villa46_2], description: "Vilë komode dhe moderne me hapësira të jashtme, ideale për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 85, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning", "Patio or balcony", "Backyard"], },
+  { name: "Hotel", location: "Himarë", rating: 4.2, images: [hotel64, hotel64_1, hotel64_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 3, price: 35, amenities: ["Wifi", "TV", "Air conditioning", "Hair dryer"], },
+  { name: "Hotel Mateo", location: "Himarë", rating: 4.3, images: [hotel65, hotel65_1, hotel65_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 130, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning", "Hair dryer"], },
+  { name: "Hibiscus Hotel", location: "Himarë", rating: 3.2, images: [hotel66, hotel66_1, hotel66_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për familje ose miq.", rooms: 1, capacity: 3, price: 75, amenities: ["Wifi", "Free parking on premises", "Pets allowed", "TV", "Air conditioning"], },
+  { name: "Hotel", location: "Himarë", rating: 4.2, images: [hotel67, hotel67_1], description: "Hotel modern dhe i sigurt, ideal për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 3, price: 47, amenities: ["Wifi", "TV", "Air conditioning", "Exterior security cameras on property"], },
+  { name: "Himara City Hotel", location: "Himarë", rating: 3.9, images: [hotel68, hotel68_1], description: "Hotel modern dhe i rehatshëm, i përshtatshëm për familje ose çiftet që kërkojnë një qëndrim të qetë.", rooms: 1, capacity: 2, price: 88, amenities: ["Wifi", "Pets allowed", "Air conditioning", "Luggage dropoff allowed", "Crib", "Hair dryer"], },
+  { name: "Bliss Hotel", location: "Himarë", rating: 4.4, images: [hotel69, hotel69_1, hotel69_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për familje ose grup miqsh.", rooms: 1, capacity: 4, price: 100, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Air conditioning"], },
+  { name: "Artis Blue Hotel", location: "Himarë", rating: 4.5, images: [hotel70, hotel70_1, hotel70_2], description: "Hotel modern dhe luksoz me jacuzzi, ideal për një qëndrim relaksues për familje ose miq.", rooms: 1, capacity: 3, price: 143, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "Hot tub", "TV", "Air conditioning"], },
+  { name: "Villa", location: "Himarë", rating: 4.6, images: [villa47, villa47_1, villa47_2], description: "Vilë komode dhe moderne me akses plazhi, ideale për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 105, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning"], },
+  { name: "Tree Villa", location: "Himarë", rating: 4.4, images: [villa48, villa48_1, villa48_2], description: "Vilë moderne dhe e rehatshme, ideale për një qëndrim relaksues për familje ose grup miqsh.", rooms: 1, capacity: 4, price: 98, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning"], },
+  { name: "White Stone Villa", location: "Himarë", rating: 4.5, images: [villa49, villa49_1, villa49_2, villa49_3], description: "Vilë moderne dhe komode me hapësirë të jashtme, ideale për një qëndrim relaksues për familje ose grup miqsh.", rooms: 1, capacity: 3, price: 94, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Washer", "Air conditioning", "Backyard"], },
+  { name: "Cozy Villa", location: "Himarë", rating: 4.5, images: [villa50, villa50_1, villa50_2], description: "Vilë komode me pamje nga mali dhe akses të përbashkët në plazh, ideale për një qëndrim relaksues.", rooms: 1, capacity: 3, price: 60, amenities: ["Mountain view", "Garden view", "Shared beach access", "Kitchen", "Wifi", "Free parking on premises"], },
+  { name: "The Poet's Villa 2", location: "Himarë", rating: 4.7, images: [villa51, villa51_1, villa51_2], description: "Vilë moderne dhe e rehatshme me pishinë, ideale për një qëndrim relaksues për familje ose miq.", rooms: 1, capacity: 3, price: 140, amenities: ["Wifi", "Free parking on premises", "Pool", "TV", "Washer", "Air conditioning", "Hair dryer"], },
+  { name: "Orange Garden Villa", location: "Himarë", rating: 4.9, images: [villa52, villa52_1, villa52_2], description: "Vilë luksoze dhe moderne me hapësira private dhe teknologji të avancuar, ideale për grupet e mëdha dhe qëndrime komode.", rooms: 3, capacity: 7, price: 269, amenities: ["Kitchen", "Fast wifi – 99 Mbps", "Free parking on premises", "HDTV with Netflix", "Free washer – In unit", "Air conditioning", "Private patio or balcony", "Exterior security cameras on property"], },
+  { name: "Olive Stone Villa", location: "Himarë", rating: 4.8, images: [villa53, villa53_1, villa53_2, villa53_3], description: "Vilë luksoze dhe e gjerë, ideale për familje ose grupe të mëdha me hapësira të bollshme dhe komoditete moderne.", rooms: 3, capacity: 10, price: 233, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Washer", "Dryer", "Air conditioning"], },
+  { name: "Villa LUAR", location: "Himarë", rating: 5.0, images: [villa54, villa54_1, villa54_2, villa54_3], description: "Vilë luksoze dhe e madhe me pamje nga luginat dhe malet, ideale për grupet e mëdha dhe qëndrime komode.", rooms: 6, capacity: 12, price: 1056, amenities: ["Valley view", "Mountain view", "Kitchen", "Wifi", "Free parking on premises – 4 spaces", "Private outdoor pool - available seasonally, open specific hours", "Hot tub"], },
+  { name: "Kolagji Villas", location: "Himarë", rating: 4.9, images: [villa55, villa55_1, villa55_2], description: "Vilë moderne dhe e gjerë, ideale për familje ose grupe të mëdha, me hapësira të bollshme dhe komoditete të plota.", rooms: 5, capacity: 11, price: 422, amenities: ["Wifi", "Free parking on premises", "Washer", "Air conditioning"], },
+  { name: "Adriatic Villa", location: "Himarë", rating: 3.5, images: [villa56, villa56_1, villa56_2], description: "Vilë luksoze dhe e rehatshme me hapësira të bollshme, ideale për familje ose grup miqsh.", rooms: 2, capacity: 6, price: 508, amenities: ["Kitchen", "Wifi", "Free parking on premises"], },
+  { name: "Villa Ionian", location: "Himarë", rating: 4.9, images: [villa57, villa57_1, villa57_2], description: "Vilë luksoze dhe moderne me pishinë dhe jacuzzi, ideale për grupet e mëdha dhe qëndrime relaksuese.", rooms: 4, capacity: 8, price: 406, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "Pool", "Hot tub", "Pets allowed"], },
+  { name: "Villa 1", location: "Himarë", rating: 4.7, images: [villa58, villa58_1, villa58_2], description: "Vilë komode dhe moderne, ideale për familje ose grupe të vogla me hapësira të bollshme dhe komoditete të plota.", rooms: 2, capacity: 6, price: 134, amenities: ["Kitchen", "Wifi", "Free parking on premises", "Pets allowed", "TV", "Washer", "Air conditioning"], },
+  { name: "New Hotel", location: "Himarë", rating: 4.3, images: [hotel71, hotel71_1, hotel71_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim të shkurtër ose të gjatë.", rooms: 1, capacity: 3, price: 100, amenities: ["Wifi", "Free street parking", "50 inch HDTV", "AC - split type ductless system", "Luggage dropoff allowed"], },
+  { name: "Hotel 35", location: "Himarë", rating: 3.9, images: [hotel72, hotel72_1], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 56, amenities: ["Wifi", "Pets allowed", "Air conditioning", "Luggage dropoff allowed"], },
+  { name: "Sun George Hotel", location: "Himarë", rating: 4.3, images: [hotel73, hotel73_1, hotel73_2], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 65, amenities: ["Wifi", "Free parking on premises", "TV", "Air conditioning"], },
+  { name: "Grand Hotel", location: "Himarë", rating: 4.4, images: [hotel74, hotel74_1], description: "Hotel modern dhe i sigurt, ideal për një qëndrim relaksues për dy persona.", rooms: 1, capacity: 2, price: 38, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Air conditioning", "Exterior security cameras on property"], },
+  { name: "Hotel", location: "Himarë", rating: 4.5, images: [hotel75, hotel75_1], description: "Hotel modern dhe i rehatshëm me akses plazhi, ideal për familje ose grup miqsh.", rooms: 1, capacity: 3, price: 96, amenities: ["Wifi", "Free parking on premises", "TV", "Washer"], },
+  { name: "Sunflower Hotel", location: "Sarandë", rating: 4.5, images: [hotel76, hotel76_1], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona me hapësirë private të jashtme.", rooms: 1, capacity: 2, price: 96, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Air conditioning", "Private patio or balcony", "Luggage dropoff allowed"], },
+  { name: "Hotel", location: "Sarandë", rating: 4.5, images: [hotel77, hotel77_1], description: "Hotel modern me akses të përbashkët në plazh dhe ambiente të rehatshme, ideal për familje ose grup miqsh.", rooms: 1, capacity: 3, price: 65, amenities: ["Shared beach access", "Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises"], },
+  { name: "Sea View Hotel", location: "Sarandë", rating: 4.6, images: [hotel78, hotel78_1, hotel78_2, hotel78_3], description: "Hotel modern dhe luksoz me pishinë, jacuzzi dhe ambiente të rehatshme, ideal për familje ose grupe miqsh.", rooms: 1, capacity: 4, price: 134, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "Pool", "Hot tub", "Pets allowed", "TV", "Elevator"], },
+  { name: "Premium Hotel", location: "Sarandë", rating: 3.4, images: [hotel79, hotel79_1], description: "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për familje ose miq.", rooms: 1, capacity: 3, price: 46, amenities: ["Wifi", "Free street parking", "TV", "Elevator"], },
+  { name: "08 Villa", location: "Pejë", rating: 4.6, images: [villa59, villa59_1, villa59_2], description: "Vilë moderne dhe komode me jacuzzi dhe hapësira të bollshme, ideale për një qëndrim relaksues për familje ose miq.", rooms: 1, capacity: 4, price: 98, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "Hot tub", "Pets allowed", "TV", "Washer"], },
+  { name: "Mountain Villa", location: "Pejë", rating: 4.7, images: [villa60, villa60_1, villa60_2], description: "Vilë moderne me qasje në ski dhe ambiente të rehatshme, ideale për një qëndrim relaksues për familje ose miq.", rooms: 1, capacity: 4, price: 124, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "Backyard"], },
+  { name: "Villa 4", location: "Pejë", rating: 4.6, images: [villa61, villa61_1, villa61_2], description: "Vilë moderne dhe e gjerë me hapësira të bollshme dhe siguri të shtuar, ideale për familje ose grupe të mëdha.", rooms: 3, capacity: 8, price: 117, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Exterior security cameras on property"], },
+  { name: "Apartment River View", location: "Pejë", rating: 4.4, images: [apartment82, apartment82_1], description: "Apartament modern me pamje nga lumi dhe mali, ideal për një qëndrim relaksues për familje ose grup miqsh.", rooms: 2, capacity: 6, price: 42, amenities: ["River view", "Mountain view", "Waterfront", "Kitchen", "Wifi", "HDTV", "Air conditioning", "Exterior security cameras on property"], },
+  { name: "Apartment", location: "Pejë", rating: 4.4, images: [apartment83, apartment83_1, apartment83_2], description: "Apartament modern dhe i gjerë, ideal për familje ose grupe miqsh me komoditete të plota.", rooms: 3, capacity: 7, price: 144, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Washer"] },
+  { name: "Villa", location: "Pejë", rating: 4.5, images: [villa62, villa62_1], description: "Vilë moderne dhe komode me jacuzzi, ideale për familje ose grupe të vogla.", rooms: 2, capacity: 5, price: 140, amenities: ["Kitchen", "Wifi", "Free parking on premises", "Hot tub", "Pets allowed", "TV"] },
 
 ];
 
@@ -1253,7 +495,6 @@ export default function HotelsPage() {
           </button>
         ))}
       </div>
-
       {/* Hotels Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {filteredHotels.map((hotel, index) => (
@@ -1279,7 +520,6 @@ export default function HotelsPage() {
               <p className="text-sm text-gray-700 mt-2 line-clamp-3">
                 {hotel.description}
               </p>
-
               <div className="flex justify-between text-sm text-gray-600 mt-3">
                 <span className="flex items-center gap-1">
                   <BedDouble className="w-4 h-4" /> {hotel.rooms} rooms
@@ -1295,7 +535,6 @@ export default function HotelsPage() {
                   / {hotel.nights ? `${hotel.nights} nights` : "night"}
                 </span>
               </p>
-
               <p
                 onClick={() => setSelectedHotel(hotel)}
                 className="mt-3 text-indigo-700 font-semibold cursor-pointer hover:underline"
@@ -1306,10 +545,10 @@ export default function HotelsPage() {
                     ? "View Apartment →"
                     : "View Hotel →"}
               </p>
-
               <button className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 hover:text-indigo-300 hover:transition-colors">
                 Book
               </button>
+
             </div>
           </div>
         ))}
@@ -1325,7 +564,6 @@ export default function HotelsPage() {
             >
               ✕
             </button>
-
             {/* Slider */}
             <Swiper
               spaceBetween={10}
@@ -1381,7 +619,6 @@ export default function HotelsPage() {
           </div>
         </div>
       )}
-
       {/* Scroll to Top */}
       <button
         onClick={scrollToTop}
@@ -1390,6 +627,7 @@ export default function HotelsPage() {
       >
         ▲
       </button>
+
     </div>
   );
 }
