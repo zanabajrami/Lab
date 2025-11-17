@@ -83,6 +83,7 @@ import hotel76 from "../images/hotel76.avif"; import hotel76_1 from "../images/h
 import hotel77 from "../images/hotel77.avif"; import hotel77_1 from "../images/hotel77_1.avif";
 import hotel78 from "../images/hotel78.avif"; import hotel78_1 from "../images/hotel78_1.avif"; import hotel78_2 from "../images/hotel78_2.avif"; import hotel78_3 from "../images/hotel78_3.jpeg";
 import hotel79 from "../images/hotel79.avif"; import hotel79_1 from "../images/hotel79_1.jpeg";
+import hotel80 from "../images/hotel80.avif"; import hotel80_1 from "../images/hotel80_1.avif"; import hotel80_2 from "../images/hotel80_2.avif";
 //Villa
 import villa1 from "../images/villa1.avif"; import villa1_1 from "../images/villa1_1.avif"; import villa1_2 from "../images/villa1_2.avif"; import villa1_3 from "../images/villa1_3.avif"; import villa1_4 from "../images/villa1_4.avif";
 import villa2 from "../images/villa2.avif"; import villa2_1 from "../images/villa2_1.avif"; import villa2_2 from "../images/villa2_2.avif"; import villa2_3 from "../images/villa2_3.avif"; import villa2_4 from "../images/villa2_4.avif";
@@ -145,7 +146,11 @@ import villa58 from "../images/villa58.avif"; import villa58_1 from "../images/v
 import villa59 from "../images/villa59.avif"; import villa59_1 from "../images/villa59_1.avif"; import villa59_2 from "../images/villa59_2.avif";
 import villa60 from "../images/villa60.avif"; import villa60_1 from "../images/villa60_1.avif"; import villa60_2 from "../images/villa60_2.avif";
 import villa61 from "../images/villa61.avif"; import villa61_1 from "../images/villa61_1.avif"; import villa61_2 from "../images/villa61_2.avif";
-import villa62 from "../images/villa61.avif"; import villa62_1 from "../images/villa62_1.avif";
+import villa62 from "../images/villa62.avif"; import villa62_1 from "../images/villa62_1.avif";
+import villa63 from "../images/villa63.avif"; import villa63_1 from "../images/villa63_1.avif"; import villa63_2 from "../images/villa63_2.avif";
+import villa64 from "../images/villa64.avif"; import villa64_1 from "../images/villa64_1.avif"; import villa64_2 from "../images/villa64_2.avif";
+import villa65 from "../images/villa65.avif"; import villa65_1 from "../images/villa65_1.avif"; import villa65_2 from "../images/villa65_2.avif";
+
 //Apartment
 import apartment1 from "../images/apartment1.jpg"; import apartment1_1 from "../images/apartment1_1.jpg"; import apartment1_2 from "../images/apartment1_2.jpg";
 import apartment2 from "../images/apartment2.avif"; import apartment2_1 from "../images/apartment2_1.avif"; import apartment2_2 from "../images/apartment2_2.avif"; import apartment2_3 from "../images/apartment2_3.avif";
@@ -230,6 +235,7 @@ import apartment80 from "../images/apartment80.avif"; import apartment80_1 from 
 import apartment81 from "../images/apartment81.avif"; import apartment81_1 from "../images/apartment81_1.avif"; import apartment81_2 from "../images/apartment81_2.avif"; import apartment81_3 from "../images/apartment81_3.avif";
 import apartment82 from "../images/apartment82.avif"; import apartment82_1 from "../images/apartment82_1.avif";
 import apartment83 from "../images/apartment83.avif"; import apartment83_1 from "../images/apartment83_1.avif"; import apartment83_2 from "../images/apartment83_2.avif";
+import apartment84 from "../images/apartment84.avif"; import apartment84_1 from "../images/apartment84_1.avif"; import apartment84_2 from "../images/apartment84_2.avif";
 
 const hotels = [
   { name: "Four Points by Sheraton Prishtina", location: "Prishtina", rating: 4.8, images: [hotel1, hotel1_1, hotel1_2], description: "Hotel modern me spa, pishinë të brendshme dhe restorant luksoz me pamje panoramike.", rooms: 1, capacity: 2, price: 129, amenities: ["Spa", "Indoor Pool", "Free Wi-Fi", "Breakfast Included", "Parking", "Fitness Center"] },
@@ -453,6 +459,11 @@ const hotels = [
   { name: "Apartment River View", location: "Pejë", rating: 4.4, images: [apartment82, apartment82_1], description: "Apartament modern me pamje nga lumi dhe mali, ideal për një qëndrim relaksues për familje ose grup miqsh.", rooms: 2, capacity: 6, price: 42, amenities: ["River view", "Mountain view", "Waterfront", "Kitchen", "Wifi", "HDTV", "Air conditioning", "Exterior security cameras on property"], },
   { name: "Apartment", location: "Pejë", rating: 4.4, images: [apartment83, apartment83_1, apartment83_2], description: "Apartament modern dhe i gjerë, ideal për familje ose grupe miqsh me komoditete të plota.", rooms: 3, capacity: 7, price: 144, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Washer"] },
   { name: "Villa", location: "Pejë", rating: 4.5, images: [villa62, villa62_1], description: "Vilë moderne dhe komode me jacuzzi, ideale për familje ose grupe të vogla.", rooms: 2, capacity: 5, price: 140, amenities: ["Kitchen", "Wifi", "Free parking on premises", "Hot tub", "Pets allowed", "TV"] },
+  { name: "Mountain Villa", location: "Pejë", rating: 4.5, images: [villa63, villa63_1, villa63_2], description: "Vilë me pamje malore dhe luginore, ideale për 5 persona, me sobë druri dhe oborr privat.", rooms: 1, capacity: 5, price: 133, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "Private backyard – Not fully fenced", "Indoor fireplace: wood-burning"] },
+  { name: "Skyline Exclusive Apartment", location: "Pejë", rating: 4.5, images: [apartment84, apartment84_1, apartment84_2], description: "Apartament modern dhe i rehatshëm me kuzhinë të pajisur dhe hapësirë të dedikuar për punë, ideal për 8 persona.", rooms: 3, capacity: 8, price: 73, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Washer", "Air conditioning", "Hair dryer"], },
+  { name: "Malesia Villa 4", location: "Pejë", rating: 4.6, images: [villa64, villa64_1, villa64_2], description: "Vilë moderne me qasje direkte në ski-in/ski-out, ideale për një qëndrim relaksues për familje ose grup miqsh.", rooms: 2, capacity: 6, price: 161, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Washer", "Air conditioning"] },
+  { name: "Villa Ariu", location: "Pejë", rating: 4.6, images: [villa65, villa65_1, villa65_2], description: "Vilë moderne dhe komode, ideale për një qëndrim relaksues për familje ose grup miqsh.", rooms: 2, capacity: 5, price: 152, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Washer", "Indoor fireplace", "Exterior security cameras on property"] },
+  { name: "1863 Hotel ", location: "Pejë", rating: 4.4, images: [hotel80, hotel80_1, hotel80_2], description: "Hotel modern me pamje nga mali dhe lumi, ideal për një qëndrim relaksues për familje ose grup miqsh.", rooms: 1, capacity: 4, price: 88, amenities: ["River view", "Wifi", "Dedicated workspace", "Free parking on premises", "TV"] },
 
 ];
 
@@ -460,6 +471,8 @@ export default function HotelsPage() {
   const [showTopButton, setShowTopButton] = useState(false);
   const [selectedHotel, setSelectedHotel] = useState(null);
   const [activeTab, setActiveTab] = useState("all");
+  const [currentPage, setCurrentPage] = useState(1);
+  const hotelsPerPage = 20;
 
   useEffect(() => {
     const handleScroll = () => setShowTopButton(window.scrollY > 300);
@@ -467,16 +480,31 @@ export default function HotelsPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Kur ndryshon faqja, shko direkt në top të faqes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // Filtrimi i hoteleve sipas butonit aktiv
-  const filteredHotels = hotels.filter((hotel) => {
+  const filteredHotels = (hotels || []).filter((hotel) => {
     if (activeTab === "all") return true;
     if (activeTab === "hotels") return hotel.name.toLowerCase().includes("hotel");
     if (activeTab === "villas") return hotel.name.toLowerCase().includes("villa") || hotel.name.toLowerCase().includes("chalet");
     if (activeTab === "apartments") return hotel.name.toLowerCase().includes("apartment");
     return true;
   });
+
+  const totalPages = Math.ceil(filteredHotels.length / hotelsPerPage);
+  const currentHotels = filteredHotels.slice(
+    (currentPage - 1) * hotelsPerPage,
+    currentPage * hotelsPerPage
+  );
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+    setCurrentPage(1);
+  };
 
   return (
     <div className="px-6 py-8">
@@ -485,7 +513,7 @@ export default function HotelsPage() {
         {["all", "hotels", "villas", "apartments"].map((tab) => (
           <button
             key={tab}
-            onClick={() => setActiveTab(tab)}
+            onClick={() => handleTabClick(tab)}
             className={`px-6 py-2 rounded-xl font-semibold transition ${activeTab === tab
               ? "bg-indigo-900 text-white"
               : "bg-gray-200 text-gray-800 hover:bg-gray-300"
@@ -495,9 +523,10 @@ export default function HotelsPage() {
           </button>
         ))}
       </div>
+
       {/* Hotels Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {filteredHotels.map((hotel, index) => (
+        {currentHotels.map((hotel, index) => (
           <div
             key={index}
             className="relative rounded-3xl overflow-hidden bg-white/60 backdrop-blur-xl border border-gray-300 shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105"
@@ -517,9 +546,7 @@ export default function HotelsPage() {
             <div className="p-5 text-gray-700">
               <h2 className="font-semibold text-xl">{hotel.name}</h2>
               <p className="text-sm text-gray-600">{hotel.location}</p>
-              <p className="text-sm text-gray-700 mt-2 line-clamp-3">
-                {hotel.description}
-              </p>
+              <p className="text-sm text-gray-700 mt-2 line-clamp-3">{hotel.description}</p>
               <div className="flex justify-between text-sm text-gray-600 mt-3">
                 <span className="flex items-center gap-1">
                   <BedDouble className="w-4 h-4" /> {hotel.rooms} rooms
@@ -530,11 +557,9 @@ export default function HotelsPage() {
               </div>
 
               <p className="text-gray-600 font-bold mt-2 flex items-center gap-1">
-                <HandCoins className="w-4 h-4" /> {hotel.price}€{" "}
-                <span className="text-gray-600 font-medium text-sm">
-                  / {hotel.nights ? `${hotel.nights} nights` : "night"}
-                </span>
+                <HandCoins className="w-4 h-4" /> {hotel.price}€ / {hotel.nights ? `${hotel.nights} nights` : "night"}
               </p>
+
               <p
                 onClick={() => setSelectedHotel(hotel)}
                 className="mt-3 text-indigo-700 font-semibold cursor-pointer hover:underline"
@@ -545,12 +570,28 @@ export default function HotelsPage() {
                     ? "View Apartment →"
                     : "View Hotel →"}
               </p>
+
               <button className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 hover:text-indigo-300 hover:transition-colors">
                 Book
               </button>
-
             </div>
           </div>
+        ))}
+      </div>
+
+      {/* Pagination */}
+      <div className="flex justify-center gap-2 mt-8 flex-wrap">
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+          <button
+            key={page}
+            onClick={() => setCurrentPage(page)}
+            className={`px-4 py-2 rounded-lg font-semibold transition ${currentPage === page
+              ? "bg-indigo-900 text-white"
+              : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+              }`}
+          >
+            {page}
+          </button>
         ))}
       </div>
 
@@ -564,7 +605,7 @@ export default function HotelsPage() {
             >
               ✕
             </button>
-            {/* Slider */}
+
             <Swiper
               spaceBetween={10}
               slidesPerView={1}
@@ -583,27 +624,18 @@ export default function HotelsPage() {
               ))}
             </Swiper>
 
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">
-              {selectedHotel.name}
-            </h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">{selectedHotel.name}</h2>
             <p className="text-gray-600 mb-1">{selectedHotel.location}</p>
             <p className="text-yellow-500 mb-2">
               {"★".repeat(Math.round(selectedHotel.rating))}{" "}
-              <span className="text-gray-500 text-sm">
-                ({selectedHotel.rating})
-              </span>
+              <span className="text-gray-500 text-sm">({selectedHotel.rating})</span>
             </p>
             <p className="text-gray-700 mb-3">{selectedHotel.description}</p>
 
             {selectedHotel.amenities && (
               <div className="flex flex-wrap gap-2 mb-3">
                 {selectedHotel.amenities.map((a, i) => (
-                  <span
-                    key={i}
-                    className="bg-indigo-100 text-indigo-700 px-3 py-1 text-sm rounded-full"
-                  >
-                    {a}
-                  </span>
+                  <span key={i} className="bg-indigo-100 text-indigo-700 px-3 py-1 text-sm rounded-full">{a}</span>
                 ))}
               </div>
             )}
@@ -619,15 +651,14 @@ export default function HotelsPage() {
           </div>
         </div>
       )}
+
       {/* Scroll to Top */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 p-4 rounded-full bg-gray-800 text-white shadow-lg hover:bg-gray-700 transition-opacity duration-300 z-50 ${showTopButton ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
+        className={`fixed bottom-8 right-8 p-4 rounded-full bg-gray-800 text-white shadow-lg hover:bg-gray-700 transition-opacity duration-300 z-50 ${showTopButton ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       >
         ▲
       </button>
-
     </div>
   );
 }
