@@ -210,7 +210,7 @@ export default function ZigZagCarousel() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 p-8">
+        <div className="min-h-screen p-8">
             <h2 className="text-3xl font-extrabold mb-10 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-700 via-gray-700 to-gray-400 drop-shadow-lg tracking-wide uppercase">
                 Destinations
             </h2>
@@ -281,9 +281,9 @@ export default function ZigZagCarousel() {
                                     {/* Butoni */}
                                     <button
                                         onClick={() => toggleExpand(index)}
-                                        className="ml-20 mt-4 px-6 py-2 rounded-full bg-gray-200 text-gray-500 font-medium shadow-lg border border-gray-400 hover:shadow-2xl transition"
+                                        className="ml-20 mt-4 px-6 py-2 rounded-full bg-gray-200 text-gray-500 font-medium shadow-lg border border-gray-400 hover:shadow-2xl transition whitespace-nowrap"
                                     >
-                                        {expandedIndex === index ? "Mbyll ↑" : "Zbulo më shumë →"}
+                                        {expandedIndex === index ? "Mbyll ↑" : "Zbulo më shumë→"}
                                     </button>
 
                                     {/* Info shtesë (shfaqet kur klikon) */}
@@ -299,25 +299,25 @@ export default function ZigZagCarousel() {
                                                 <div className="mt-2 p-6">
                                                     <ul className="list-disc list-inside space-y-2 text-gray-700">
                                                         <li className="flex items-center gap-2">
-                                                            <MapPinned className="w-6 h-6" />
+                                                            <MapPinned className="w-12 h-12 sm:w-6 sm:h-6" />
                                                             <span>
                                                                 <strong>Aktivitete:</strong> {d.activities}
                                                             </span>
                                                         </li>
                                                         <li className="flex items-center gap-2">
-                                                            <Hamburger className="w-6 h-6" />
+                                                            <Hamburger className="w-12 h-12 sm:w-6 sm:h-6" />
                                                             <span>
                                                                 <strong>Ushqim tradicional:</strong> {d.food}
                                                             </span>
                                                         </li>
                                                         <li className="flex items-center gap-2">
-                                                            <Clock className="w-6 h-6" />
+                                                            <Clock className="w-12 h-12 sm:w-6 sm:h-6" />
                                                             <span>
                                                                 <strong>Koha më e mirë për vizitë:</strong> {d.bestTime}
                                                             </span>
                                                         </li>
                                                         <li className="flex items-center gap-2">
-                                                            <Bed className="w-6 h-6" />
+                                                            <Bed className="w-12 h-12 sm:w-6 sm:h-6" />
                                                             <span>
                                                                 <strong>Akomodimi:</strong> {d.stay}
                                                             </span>

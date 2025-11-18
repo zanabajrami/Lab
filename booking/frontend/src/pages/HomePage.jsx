@@ -24,7 +24,7 @@ import tirana3Image from "../images/tirana3.jpg";
 import brezovica0Image from "../images/brezovica-.jpg";
 import brezovica1Image from "../images/brezovica0.webp";
 import brezovicaImage from "../images/brezovica.jpg";
-import brezovica3Image from "../images/brezovica3.jpg";
+import brezovica3Image from "../images/villa9.jpg";
 
 import dhermi0Image from "../images/dhermi-.jpg";
 import dhermiImage from "../images/dhermi.jpg";
@@ -150,7 +150,7 @@ function HomePage() {
       </section>
 
       {/* Destinacionet */}
-      <section className="bg-gray-900 max-w-8xl mx-auto px-4 py-12">
+      <section className="max-w-7xl mx-auto px-4 py-12">
         <Slider {...sliderSettings}>
           {destinationss.map((dest) => (
             <div key={dest.name} className="px-2">
@@ -158,8 +158,12 @@ function HomePage() {
                 className="relative rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
                 onClick={() => goToDestination(dest.name)}
               >
-                <img src={dest.image} alt={dest.name} className="w-full h-48 object-cover" />
-                <div className="absolute bottom-0 bg-black bg-opacity-50 w-full text-white p-2 text-center font-semibold">
+                <img
+                  src={dest.image}
+                  alt={dest.name}
+                  className="w-full h-72 object-cover"  // <— rritja e height
+                />
+                <div className="absolute bottom-0 bg-black bg-opacity-50 w-full text-white p-3 text-center font-semibold text-lg">
                   {dest.name}
                 </div>
               </div>
@@ -168,15 +172,19 @@ function HomePage() {
         </Slider>
       </section>
 
-      <section className="bg-gray-900 py-16 text-center">
+
+      <section className="py-16 text-center items-center justify-center">
         <h2
-          className="text-3xl mb-12 text-gray-400 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
+          className="text-3xl mb-12 text-gray-600 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2 mx-auto w-[85%] text-center"
         >
-          <MapPin className="w-6 h-6 text-gray-600" /> Destinacionet më të vizituara <MapPin className="w-6 h-6 text-gray-600" />
+          <MapPin className="w-6 h-6 text-gray-600 flex-shrink-0" />
+          Destinacionet më të vizituara
+          <MapPin className="w-6 h-6 text-gray-600 flex-shrink-0" />
         </h2>
         <div
           onClick={() => navigate("/destinations")}
-          className="flex flex-wrap justify-center gap-8 max-w-8xl mx-auto">
+          className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto"
+        >
           {[
             { img: tirana1Image, name: "Tiranë" },
             { img: sarande1Image, name: "Sarandë" },
@@ -185,14 +193,22 @@ function HomePage() {
           ].map((dest, i) => (
             <div
               key={i}
-              className="relative overflow-hidden rounded-2xl 
-w-full sm:w-[48%] md:w-[30%] lg:w-[22%] 
-h-52 md:h-56 lg:h-60
-transform transition-all duration-500
-shadow-[0_20px_60px_rgba(0,0,0,0.4)]
-hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] group"
-            >
+              className="
+          relative overflow-hidden rounded-2xl
 
+          w-[85%]         
+          sm:w-[40%] 
+          md:w-[30%] 
+          lg:w-[22%]
+
+          h-56 sm:h-52 md:h-56 lg:h-60
+
+          transform transition-all duration-500
+          shadow-[0_20px_60px_rgba(0,0,0,0.4)]
+          hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)]
+          group
+        "
+            >
               {/* Fotoja */}
               <img
                 src={dest.img}
@@ -200,12 +216,12 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
                 className="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm group-hover:brightness-90"
               />
 
-              {/* Overlay gradient për emrin */}
+              {/* Gradient overlay */}
               <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent text-white text-center py-2 font-semibold text-lg">
                 {dest.name}
               </div>
 
-              {/* Teksti që shfaqet kur hover */}
+              {/* Teksti në hover */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 bg-black/40 text-white text-m font-semibold">
                 More →
               </div>
@@ -215,8 +231,8 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
       </section>
 
       {/* Kategoritë: Hotele, Villa, Apartamente */}
-      <section className="bg-gray-900 max-w-8xl mx-auto px-4 py-12">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
+      <section className="max-w-7xl mx-auto px-4 py-12">
+        <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
           {/* Hotele */}
           <div className="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
             <img
@@ -225,7 +241,7 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
               className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
-              <h3 className="text-2xl font-bold mb-2">Hotele</h3>
+              <h3 className="text-2xl font-bold mb-2">Hotels</h3>
               <p className="text-sm">Zbuloni hotele të përshtatshme për çdo buxhet.</p>
               <button
                 className="mt-4 px-6 py-2 rounded-md font-semibold
@@ -247,7 +263,7 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
               className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
-              <h3 className="text-2xl font-bold mb-2">Villa</h3>
+              <h3 className="text-2xl font-bold mb-2">Villas</h3>
               <p className="text-sm">Relaksohu në vilat më luksoze.</p>
               <button
                 className="mt-4 px-6 py-2 rounded-md font-semibold
@@ -269,7 +285,7 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
               className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
-              <h3 className="text-2xl font-bold mb-2">Apartamente</h3>
+              <h3 className="text-2xl font-bold mb-2">Apartments</h3>
               <p className="text-sm">Qëndrim komod për familje ose grupe të vogla.</p>
               <button
                 className="mt-4 px-6 py-2 rounded-md font-semibold
@@ -286,11 +302,11 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
       </section>
 
       {/* Ofertat */}
-      <section className="bg-gray-900 py-12 w-full px-4">
-        <div className="max-w-8xl mx-auto px-4 text-center">
+      <section className="py-12 w-full px-4">
+        <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="relative inline-block text-center w-full">
             <h2
-              className="text-3xl mb-12 text-gray-400 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
+              className="text-3xl mb-10 text-gray-600 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
             >
               <Percent className="w-5 h-5 text-gray-500" /> Ofertat tona <Percent className="w-5 h-5 text-gray-500" />
             </h2>
@@ -307,7 +323,7 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
                 transitionSpeed={400}
               >
                 <div className="relative">
-                  <img src={deal.image} alt={deal.hotelName} className="w-full h-48 object-cover" />
+                  <img src={deal.image} alt={deal.hotelName} className="w-full h-64 object-cover" />
                   <div className="absolute bottom-0 bg-black bg-opacity-60 w-full text-white p-3 text-center">
                     <p className="font-bold text-lg">{deal.hotelName}</p>
                     <p className="text-sm">{deal.location}</p>
@@ -321,59 +337,59 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
           <div className="text-center mt-6">
             <Link
               to="/deals"
-              className="inline-block px-6 py-2 rounded-md text-gray-400 bg-gray-800 border border-gray-600 hover:border-gray-300 hover:text-gray-300 transition-colors duration-200"
+              className="inline-block px-6 py-2 rounded-md text-gray-500 bg-black/10 border border-gray-400 hover:text-gray-600 transition-colors duration-200"
             >
               Më shumë oferta
             </Link>
-
           </div>
         </div>
       </section>
 
-      <section className="bg-gray-900 max-w-8xl mx-auto px-4 py-16 text-center">
+      <section className="max-w-7xl mx-auto px-4 py-16 -mt-5 text-center">
         {/* Section heading */}
         <h2
-          className="relative text-3xl md:text-3xl mb-12 text-gray-400 tracking-tight inline-block overflow-hidden"
+          className="relative text-3xl md:text-3xl mb-12 text-gray-600 tracking-tight inline-block overflow-hidden"
           data-aos="fade-up"
           data-aos-duration="900"
         >
           Si funksionon platforma jonë?
-          <span className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-blue-400 to-purple-400 animate-[slide_2s_ease-in-out_infinite]"></span>
+          <span className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#A7C7E7] to-[#C8B6E2] animate-[slide_2s_ease-in-out_infinite]"></span>
 
           <style>{`
-    @keyframes slide {
-      0% { transform: translateX(-100%); }
-      50% { transform: translateX(0); }
-      100% { transform: translateX(100%); }
-    }
-  `}</style>
+      @keyframes slide {
+        0% { transform: translateX(-100%); }
+        50% { transform: translateX(0); }
+        100% { transform: translateX(100%); }
+      }
+    `}</style>
         </h2>
 
         {/* Container with cards and colored blobs */}
         <div className="relative overflow-hidden rounded-3xl p-12 bg-gray-900">
-          {/* Colored blobs inside container */}
-          <div className="absolute top-0 left-1/4 w-72 h-72 bg-pink-500 opacity-30 rounded-full blur-3xl animate-blob"></div>
-          <div className="absolute top-10 right-1/4 w-80 h-80 bg-blue-500 opacity-25 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-purple-500 opacity-20 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+          {/* Soft pastel blobs */}
+          <div className="absolute top-0 left-1/4 w-72 h-72 bg-[#F2C6DE] opacity-40 rounded-full blur-3xl animate-blob"></div>
+          <div className="absolute top-10 right-1/4 w-80 h-80 bg-[#A7C7E7] opacity-35 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-[#C8B6E2] opacity-35 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
 
           {/* Cards grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative z-10">
-            {/* Card */}
+
+            {/* Card 1 */}
             <div
               className="p-6 bg-gray-900/50 backdrop-blur-md rounded-3xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer relative z-10 group flex flex-col items-center text-center"
               data-aos="zoom-in"
               data-aos-delay="100"
             >
               <div className="text-5xl mb-4 animate-bounce">
-                <Search className="w-10 h-10 text-indigo-800" />
+                <Search className="w-10 h-10 text-[#9BA3EB]" />
               </div>
-              <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-blue-400">
+              <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-[#A7C7E7]">
                 Kërko
               </h3>
               <p className="text-gray-400 text-sm">
                 Gjeni hotelin ideal sipas vendndodhjes, çmimit dhe datës.
               </p>
-              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-blue-400 to-pink-400 rounded-full transition-all duration-500 group-hover:w-full"></div>
+              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-[#F2C6DE] to-[#C8B6E2] rounded-full transition-all duration-500 group-hover:w-full"></div>
             </div>
 
             {/* Card 2 */}
@@ -383,15 +399,15 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
               data-aos-delay="200"
             >
               <div className="text-5xl mb-4 animate-bounce">
-                <Hotel className="w-10 h-10 text-indigo-800" />
+                <Hotel className="w-10 h-10 text-[#9BA3EB]" />
               </div>
-              <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-blue-400">
+              <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-[#A7C7E7]">
                 Zgjedh
               </h3>
               <p className="text-gray-400 text-sm">
                 Shfletoni ofertat dhe shikoni detajet e çdo hoteli.
               </p>
-              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-blue-400 to-pink-400 rounded-full transition-all duration-500 group-hover:w-full"></div>
+              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-[#F2C6DE] to-[#C8B6E2] rounded-full transition-all duration-500 group-hover:w-full"></div>
             </div>
 
             {/* Card 3 */}
@@ -401,27 +417,25 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
               data-aos-delay="300"
             >
               <div className="text-5xl mb-4 animate-bounce">
-                <CircleCheck className="w-10 h-10 text-indigo-800" />
+                <CircleCheck className="w-10 h-10 text-[#9BA3EB]" />
               </div>
-              <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-blue-400">
+              <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-[#A7C7E7]">
                 Rezervo
               </h3>
               <p className="text-gray-400 text-sm">
                 Rezervoni me disa klikime dhe merrni konfirmimin menjëherë.
               </p>
-              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-blue-400 to-pink-400 rounded-full transition-all duration-500 group-hover:w-full"></div>
+              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-[#F2C6DE] to-[#C8B6E2] rounded-full transition-all duration-500 group-hover:w-full"></div>
             </div>
-
           </div>
-
         </div>
       </section>
 
       {/* Pse të zgjedhësh */}
-      <section className="bg-gray-900 max-w-8xl mx-auto px-4 py-20 -mt-5 text-center relative overflow-hidden">
+      <section className="max-w-7xl mx-auto px-4 py-20 -mt-5 text-center relative overflow-hidden">
         {/* Section heading */}
         <h2
-          className="text-4xl md:text-3xl mb-16 text-gray-400 inline-block relative bg-clip-text animate-gradient-x"
+          className="text-4xl md:text-3xl mb-16 text-gray-600 inline-block relative bg-clip-text animate-gradient-x"
           data-aos="fade-down"
           data-aos-duration="1200"
         >
@@ -432,16 +446,15 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
         {/* Flex container with cards and colored blobs */}
         <div className="flex flex-wrap justify-center gap-8 relative z-10 overflow-hidden rounded-3xl p-12 bg-gray-900">
           {/* Colored blobs inside container */}
-          <div className="absolute top-0 left-1/4 w-72 h-72 bg-pink-500 opacity-30 rounded-full blur-3xl animate-blob"></div>
-          <div className="absolute top-10 right-1/4 w-80 h-80 bg-blue-500 opacity-25 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-purple-500 opacity-20 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
-
+          <div className="absolute top-0 left-1/4 w-72 h-72 bg-[#F2C6DE] opacity-40 rounded-full blur-3xl animate-blob"></div>
+          <div className="absolute top-10 right-1/4 w-80 h-80 bg-[#A7C7E7] opacity-35 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-[#C8B6E2] opacity-35 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
           {/* Cards */}
           {[
-            { icon: <Clock className="w-10 h-10 text-indigo-800" />, title: "Rezervim i shpejtë", text: "Proces i lehtë dhe i menjëhershëm.", delay: 100 },
-            { icon: <Euro className="w-10 h-10 text-indigo-800" />, title: "Çmime më të mira", text: "Krahaso dhe gjej ofertën më të volitshme.", delay: 200 },
-            { icon: <LockKeyhole className="w-10 h-10 text-indigo-800" />, title: "Rezervim i sigurt", text: "Të dhënat dhe pagesat mbrohen maksimalisht.", delay: 300 },
-            { icon: <Phone className="w-10 h-10 text-indigo-800" />, title: "Mbështetje 24/7", text: "Ekipi ynë është gjithmonë në dispozicionin tënd.", delay: 400 },
+            { icon: <Clock className="w-10 h-10 text-[#9BA3EB]" />, title: "Rezervim i shpejtë", text: "Proces i lehtë dhe i menjëhershëm.", delay: 100 },
+            { icon: <Euro className="w-10 h-10 text-[#9BA3EB]" />, title: "Çmime më të mira", text: "Krahaso dhe gjej ofertën më të volitshme.", delay: 200 },
+            { icon: <LockKeyhole className="w-10 h-10 text-[#9BA3EB]" />, title: "Rezervim i sigurt", text: "Të dhënat dhe pagesat mbrohen maksimalisht.", delay: 300 },
+            { icon: <Phone className="w-10 h-10 text-[#9BA3EB]" />, title: "Mbështetje 24/7", text: "Ekipi ynë është gjithmonë në dispozicionin tënd.", delay: 400 },
           ].map((item, i) => (
             <div
               key={i}
@@ -469,9 +482,9 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
       </section>
 
       {/* Sugjerimet */}
-      <section className="bg-gray-900 py-12 -mt-10">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl text-center text-gray-400 mb-10 transition-transform duration-500 hover:scale-105">
+      <section className="py-12 -mt-10">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl text-center text-gray-600 mb-10 transition-transform duration-500 hover:scale-105">
             <div className="flex justify-center mb-2">
               <MessageSquareText className="w-8 h-8 text-gray-600" />
             </div>
@@ -500,7 +513,7 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
               return (
                 <div
                   key={idx}
-                  className="bg-grey p-5 rounded-xl shadow-2xl relative group overflow-hidden cursor-pointer transform transition-all duration-500 border border-gray-700 hover:-translate-y-2 hover:scale-105 hover:rotate-1 hover:shadow-2xl"
+                  className="bg-grey p-5 rounded-xl shadow-2xl relative group overflow-hidden cursor-pointer transform transition-all duration-500 border border-gray-300 hover:-translate-y-2 hover:scale-105 hover:rotate-1 hover:shadow-2xl"
                 >
                   {/* Animated Image */}
                   <div className="overflow-hidden rounded-md">
@@ -512,10 +525,10 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
                   </div>
 
                   {/* Card content */}
-                  <h3 className="font-bold mb-2 mt-4 text-gray-400 ">
+                  <h3 className="font-bold mb-2 mt-4 text-gray-600 ">
                     {titles[idx]}
                   </h3>
-                  <p className="text-sm text-gray-400 transition-all duration-500 max-h-16 overflow-hidden group-[.expanded]:max-h-96">
+                  <p className="text-sm text-gray-500 transition-all duration-500 max-h-16 overflow-hidden group-[.expanded]:max-h-96">
                     {texts[idx]}
                     <span className="hidden group-[.expanded]:inline">
                       {" "}{extraTexts[idx]}
@@ -545,7 +558,7 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
       </section>
 
       {/* Reviews */}
-      <section className="bg-gray-900 py-20 relative overflow-hidden">
+      <section className="py-20 relative overflow-hidden">
         {/* Sfond dekorativ me linja lëvizëse, mbulon të gjithë seksionin */}
         <div className="absolute inset-0 flex flex-wrap opacity-20 justify-between">
           {Array.from({ length: 100 }).map((_, i) => (
@@ -563,7 +576,7 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
 
         {/* Përshtypjet e klientëve */}
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-3xl mb-16 relative inline-block text-center text-gray-400 ">
+          <h2 className="text-3xl mb-16 relative inline-block text-center text-gray-600">
             <div className="flex justify-center mb-2">
               <MessageCircle className="w-8 h-8 text-gray-600" />
             </div>
@@ -575,14 +588,14 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className="relative p-10 rounded-3xl bg-gray-800 backdrop-blur-md border border-white/25 shadow-2xl transform transition-all duration-500 hover:scale-105 hover:rotate-2 hover:shadow-gray-900/50"
+                className="relative p-10 rounded-3xl bg-gray-200 backdrop-blur-md border border-white/25 shadow-2xl transform transition-all duration-500 hover:scale-105 hover:rotate-2 hover:shadow-gray-900/50"
               >
                 {/* Dekor abstrakt */}
                 <div className="absolute -top-5 -right-5 w-14 h-14 bg-gradient-to-tr from-black via-blue-700 to-indigo-400 rounded-full opacity-40 animate-ping-slow"></div>
                 <div className="absolute -bottom-5 -left-5 w-20 h-20 bg-gradient-to-tr from-gray-900 via-gray-600 to-red-300 rounded-full opacity-30 animate-bounce-slow"></div>
 
                 {/* Quote */}
-                <p className="text-gray-400 italic text-lg mb-8 relative z-10">
+                <p className="text-gray-600 italic text-lg mb-8 relative z-10">
                   “{review.comment}”
                 </p>
 
@@ -591,7 +604,7 @@ hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] 
                   <div className="w-16 h-16 rounded-full bg-blue-700 flex items-center justify-center font-bold text-white text-2xl">
                     {review.name[0]}
                   </div>
-                  <span className="font-semibold text-gray-400 text-lg">{review.name}</span>
+                  <span className="font-semibold text-gray-600 text-lg">{review.name}</span>
                 </div>
 
                 {/* Yjet */}
