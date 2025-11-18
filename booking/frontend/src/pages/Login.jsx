@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 function Login({ onSwitchToRegister, onClose }) {
@@ -32,6 +32,13 @@ function Login({ onSwitchToRegister, onClose }) {
     }
   };
 
+  useEffect(() => {
+    document.body.style.overflow = "hidden"; // disable scroll when modal is mounted
+    return () => {
+      document.body.style.overflow = "auto"; // re-enable on unmount
+    };
+  }, []);
+
   return (
     <div
       onClick={handleOverlayClick}
@@ -44,11 +51,11 @@ function Login({ onSwitchToRegister, onClose }) {
         onClick={(e) => e.stopPropagation()}
         className="relative p-[2px] rounded-3xl bg-gradient-to-r from-slate-400 via-gray-300 to-slate-400 shadow-[0_0_20px_rgba(255,255,255,0.15)]"
       >
-        <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-12 w-full max-w-2xl min-w-[400px] border border-white/20 shadow-lg">
+        <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-10 
+               w-[100%] sm:w-full sm:min-w-[480px] max-w-2xl border border-white/20 shadow-lg">
           <h2 className="text-4xl font-extrabold text-center mb-8 tracking-wide bg-gradient-to-r from-slate-600 via-gray-500 to-slate-600 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,255,255,0.25)]">
             Welcome Back
           </h2>
-
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             {/* Email */}
             <div className="relative group">

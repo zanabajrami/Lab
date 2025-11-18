@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 function Register({ onSwitchToLogin, onClose }) {
@@ -47,6 +47,13 @@ function Register({ onSwitchToLogin, onClose }) {
     }
   };
 
+  useEffect(() => {
+      document.body.style.overflow = "hidden"; // disable scroll when modal is mounted
+      return () => {
+        document.body.style.overflow = "auto"; // re-enable on unmount
+      };
+    }, []); 
+
   return (
     <div
       onClick={handleOverlayClick}
@@ -59,8 +66,9 @@ function Register({ onSwitchToLogin, onClose }) {
         onClick={(e) => e.stopPropagation()}
         className="relative p-[2px] rounded-3xl bg-gradient-to-r from-slate-400 via-gray-300 to-slate-400 shadow-[0_0_20px_rgba(255,255,255,0.15)]"
       >
-        <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 w-full max-w-2xl min-w-[420px] border border-white/20 shadow-lg">
-          <h2 className="text-3xl font-extrabold text-center mb-2 tracking-wide bg-gradient-to-r from-slate-600 via-gray-500 to-slate-600 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,255,255,0.25)]">
+        <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 
+               w-[100%] sm:w-full sm:min-w-[480px] max-w-2xl border border-white/20 shadow-lg">
+          <h2 className="text-3xl font-extrabold text-center mb-2 -mt-3 tracking-wide bg-gradient-to-r from-slate-600 via-gray-500 to-slate-600 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,255,255,0.25)]">
             Create Account
           </h2>
 
@@ -176,7 +184,7 @@ function Register({ onSwitchToLogin, onClose }) {
             </motion.button>
           </form>
 
-          <p className="mt-4 text-slate-600 text-base text-center">
+          <p className="mt-4 -mb-2 text-slate-600 text-base text-center">
             Already have an account?{" "}
             <button
               onClick={onSwitchToLogin}

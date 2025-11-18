@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Contact({ onClose }) {
   const [name, setName] = useState("");
@@ -19,18 +19,25 @@ function Contact({ onClose }) {
     }
   };
 
+  useEffect(() => {
+    document.body.style.overflow = "hidden"; // disable scroll when modal is mounted
+    return () => {
+      document.body.style.overflow = "auto"; // re-enable on unmount
+    };
+  }, []);
+
   return (
     <div
       onClick={handleOverlayClick}
       className="fixed inset-0 flex items-center justify-center bg-black/95 z-50 backdrop-blur-sm z-50"
     >
-    <div
-  onClick={(e) => e.stopPropagation()}
-  className="w-full max-w-md p-10 rounded-3xl relative
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="w-full max-w-md p-10 rounded-3xl relative
              bg-gradient-to-br from-gray-950 via-gray-900/90 to-gray-950/80
              border border-gray-600 shadow-[0_0_20px_rgba(0,0,0,0.9)]
              backdrop-blur-md transform scale-90 animate-heavyPop"
->
+      >
 
         <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-center 
                text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 
@@ -85,7 +92,7 @@ function Contact({ onClose }) {
       </div>
 
       <style>
-  {`
+        {`
     @keyframes heavyPop {
       0% { transform: scale(0.7); opacity: 0; }
       60% { transform: scale(1.1); opacity: 1; }
@@ -107,7 +114,7 @@ function Contact({ onClose }) {
       transition: background-color 5000s ease-in-out 0s;
     }
   `}
-</style>
+      </style>
 
     </div>
   );

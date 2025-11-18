@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Heart } from "lucide-react";
 import tiranaImage from "../images/tirana.jpg";
 import prishtinaImage from "../images/prishtina.jpg";
