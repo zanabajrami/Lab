@@ -210,7 +210,7 @@ import villa98 from "../images/villa98.webp"; import villa98_1 from "../images/v
 import villa99 from "../images/villa99.avif"; import villa99_1 from "../images/villa99_1.avif"; import villa99_2 from "../images/villa99_2.avif";
 import villa100 from "../images/villa100.avif"; import villa100_1 from "../images/villa100_1.avif"; import villa100_2 from "../images/villa100_2.avif";
 
-//Apartment
+//Apartments
 import apartment1 from "../images/apartment1.jpg"; import apartment1_1 from "../images/apartment1_1.jpg"; import apartment1_2 from "../images/apartment1_2.jpg";
 import apartment2 from "../images/apartment2.avif"; import apartment2_1 from "../images/apartment2_1.avif"; import apartment2_2 from "../images/apartment2_2.avif"; import apartment2_3 from "../images/apartment2_3.avif";
 import apartment3 from "../images/apartment3.avif"; import apartment3_1 from "../images/apartment3_1.avif"; import apartment3_2 from "../images/apartment3_2.avif"; import apartment3_3 from "../images/apartment3_3.avif";
@@ -669,7 +669,6 @@ export default function HotelsPage() {
     // Location filter (flexible)
     if (selectedLocation !== "all" && !hotel.location.toLowerCase().includes(selectedLocation.toLowerCase()))
       return false;
-
     return true;
   });
 
@@ -687,14 +686,11 @@ export default function HotelsPage() {
 
     if (total >= 1) pages.push(1);
     if (current > 4) pages.push("...");
-
     for (let i = current - 1; i <= current + 1; i++) {
       if (i > 1 && i < total) pages.push(i);
     }
-
     if (current < total - 3) pages.push("...");
     if (total > 3) pages.push(total);
-
     return pages;
   };
 
@@ -715,6 +711,21 @@ export default function HotelsPage() {
     };
   }, [selectedHotel]);
 
+  useEffect(() => {
+    if (selectedHotel) {
+      // Bllokon scroll kur modal hapet
+      document.body.style.overflow = "hidden";
+    } else {
+      // Çliron scroll kur modal mbyllet
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup nëse komponenti shkatërrohet
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedHotel]);
+
   return (
     <div className="px-6 py-8">
       {/* Tabs */}
@@ -732,6 +743,7 @@ export default function HotelsPage() {
           </button>
         ))}
       </div>
+
       {/* Location Dropdown */}
       <div className="flex justify-center mb-6">
         <select
@@ -746,6 +758,7 @@ export default function HotelsPage() {
           ))}
         </select>
       </div>
+
       {/* Hotels Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {currentHotels.map((hotel, index) => (
@@ -797,6 +810,7 @@ export default function HotelsPage() {
           </div>
         ))}
       </div>
+
       {/* Pagination */}
       <div className="flex justify-center gap-2 mt-8 flex-wrap">
         {getPagesToShow().map((page, idx) => (
@@ -813,10 +827,11 @@ export default function HotelsPage() {
           </button>
         ))}
       </div>
+
       {/* Modal */}
       {selectedHotel && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-center z-50 px-4">
-          <div className="bg-white rounded-3xl max-w-lg w-full p-6 relative shadow-2xl animate-fadeIn">
+          <div className="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] p-6 relative shadow-2xl overflow-y-auto animate-fadeIn">
             <button
               onClick={() => setSelectedHotel(null)}
               className="absolute top-3 right-3 text-gray-600 hover:text-black text-xl"
@@ -866,6 +881,7 @@ export default function HotelsPage() {
           </div>
         </div>
       )}
+
       {/* Scroll to Top */}
       <button
         onClick={scrollToTop}
