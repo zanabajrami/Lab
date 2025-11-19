@@ -90,6 +90,16 @@ import hotel83 from "../images/hotel83.jpg"; import hotel83_1 from "../images/ho
 import hotel84 from "../images/hotel84.jpg"; import hotel84_1 from "../images/hotel84_1.jpg"; import hotel84_2 from "../images/hotel84_2.jpg";
 import hotel85 from "../images/hotel85.jpg"; import hotel85_1 from "../images/hotel85_1.jpg"; import hotel85_2 from "../images/hotel85_2.jpg";
 import hotel86 from "../images/hotel86.jpg"; import hotel86_1 from "../images/hotel86_1.jpg"; import hotel86_2 from "../images/hotel86_2.jpg";
+import hotel87 from "../images/hotel87.jpg"; import hotel87_1 from "../images/hotel87_1.jpg"; import hotel87_2 from "../images/hotel87_2.jpg";
+import hotel88 from "../images/hotel88.jpg"; import hotel88_1 from "../images/hotel88_1.jpg"; import hotel88_2 from "../images/hotel88_2.jpg"; import hotel88_3 from "../images/hotel88_3.jpg";
+import hotel89 from "../images/hotel89.jpg"; import hotel89_1 from "../images/hotel89_1.jpg"; import hotel89_2 from "../images/hotel89_2.jpg";
+import hotel90 from "../images/hotel90.jpg"; import hotel90_1 from "../images/hotel90_1.jpg"; import hotel90_2 from "../images/hotel90_2.jpg";
+import hotel91 from "../images/hotel91.jpg"; import hotel91_1 from "../images/hotel91_1.jpg"; import hotel91_2 from "../images/hotel91_2.jpg";
+import hotel92 from "../images/hotel92.jpg"; import hotel92_1 from "../images/hotel92_1.jpg"; import hotel92_2 from "../images/hotel92_2.jpg";
+import hotel93 from "../images/hotel93.jpg"; import hotel93_1 from "../images/hotel93_1.jpg"; import hotel93_2 from "../images/hotel93_2.jpg"; import hotel93_3 from "../images/hotel93_3.jpg";
+import hotel94 from "../images/hotel94.jpg"; import hotel94_1 from "../images/hotel94_1.jpg"; import hotel94_2 from "../images/hotel94_2.jpg"; import hotel94_3 from "../images/hotel94_3.jpg";
+import hotel95 from "../images/hotel95.jpg"; import hotel95_1 from "../images/hotel95_1.jpg"; import hotel95_2 from "../images/hotel95_2.jpg";
+import hotel96 from "../images/hotel96.jpg"; import hotel96_1 from "../images/hotel96_1.jpg"; import hotel96_2 from "../images/hotel96_2.jpg";
 
 //Villa
 import villa1 from "../images/villa1.avif"; import villa1_1 from "../images/villa1_1.avif"; import villa1_2 from "../images/villa1_2.avif"; import villa1_3 from "../images/villa1_3.avif"; import villa1_4 from "../images/villa1_4.avif";
@@ -180,6 +190,13 @@ import villa85 from "../images/villa85.avif"; import villa85_1 from "../images/v
 import villa86 from "../images/villa86.jpeg"; import villa86_1 from "../images/villa86_1.avif"; import villa86_2 from "../images/villa86_2.avif";
 import villa87 from "../images/villa87.avif"; import villa87_1 from "../images/villa87_1.avif"; import villa87_2 from "../images/villa87_2.avif";
 import villa88 from "../images/villa88.jpeg"; import villa88_1 from "../images/villa88_1.jpeg"; import villa88_2 from "../images/villa88_2.jpeg";
+import villa89 from "../images/villa89.avif"; import villa89_1 from "../images/villa89_1.avif"; import villa89_2 from "../images/villa89_2.avif"; import villa89_3 from "../images/villa89_3.avif";
+import villa90 from "../images/villa90.avif"; import villa90_1 from "../images/villa90_1.avif"; import villa90_2 from "../images/villa90_2.avif";
+import villa91 from "../images/villa91.avif"; import villa91_1 from "../images/villa91_1.avif";
+import villa92 from "../images/villa92.jpg"; import villa92_1 from "../images/villa92_1.jpg";
+import villa93 from "../images/villa93.jpg"; import villa93_1 from "../images/villa93_1.jpg"; import villa93_2 from "../images/villa93_2.jpg"; import villa93_3 from "../images/villa93_3.jpg";
+import villa94 from "../images/villa94.jpg"; import villa94_1 from "../images/villa94_1.jpg"; import villa94_2 from "../images/villa94_2.jpg";
+import villa95 from "../images/villa95.jpg"; import villa95_1 from "../images/villa95_1.jpg"; import villa95_2 from "../images/villa95_2.jpg";
 
 //Apartment
 import apartment1 from "../images/apartment1.jpg"; import apartment1_1 from "../images/apartment1_1.jpg"; import apartment1_2 from "../images/apartment1_2.jpg";
@@ -283,6 +300,11 @@ import apartment98 from "../images/apartment98.avif"; import apartment98_1 from 
 import apartment99 from "../images/apartment99.avif"; import apartment99_1 from "../images/apartment99_1.avif"; import apartment99_2 from "../images/apartment99_2.jpeg";
 import apartment100 from "../images/apartment100.avif"; import apartment100_1 from "../images/apartment100_1.avif"; import apartment100_2 from "../images/apartment100_2.avif";
 import apartment101 from "../images/apartment101.avif"; import apartment101_1 from "../images/apartment101_1.jpeg"; import apartment101_2 from "../images/apartment101_2.jpeg";
+import apartment102 from "../images/apartment102.jpg"; import apartment102_1 from "../images/apartment102_1.jpg"; import apartment102_2 from "../images/apartment102_2.jpg";
+import apartment103 from "../images/apartment103.jpg"; import apartment103_1 from "../images/apartment103_1.jpg"; import apartment103_2 from "../images/apartment103_2.jpg";
+import apartment104 from "../images/apartment104.jpg"; import apartment104_1 from "../images/apartment104_1.jpg"; import apartment104_2 from "../images/apartment104_2.jpg";
+import apartment105 from "../images/apartment105.jpg"; import apartment105_1 from "../images/apartment105_1.jpg"; import apartment105_2 from "../images/apartment105_2.jpg";
+import apartment106 from "../images/apartment106.jpg"; import apartment106_1 from "../images/apartment106_1.jpg"; import apartment106_2 from "../images/apartment106_2.jpg";
 
 const hotels = [
   { name: "Four Points by Sheraton Prishtina", location: "Prishtina", rating: 4.8, images: [hotel1, hotel1_1, hotel1_2], description: "Hotel modern me spa, pishinë të brendshme dhe restorant luksoz me pamje panoramike.", rooms: 1, capacity: 2, price: 129, amenities: ["Spa", "Indoor Pool", "Free Wi-Fi", "Breakfast Included", "Parking", "Fitness Center"] },
@@ -557,6 +579,28 @@ const hotels = [
   { name: "Luvra Apartment", location: "Dhërmi", rating: 4.6, images: [apartment99, apartment99_1, apartment99_2], description: "Apartament modern me qasje në plazh, me ambiente të rehatshme dhe pajisje për një qëndrim të këndshëm.", rooms: 1, capacity: 4, price: 153, amenities: ["Beach access", "Wifi", "Free parking on premises", "Pool", "TV", "Washer", "Air conditioning"] },
   { name: "Luvra 2 Apartment", location: "Dhërmi", rating: 4.7, images: [apartment100, apartment100_1, apartment100_2], description: "Apartament modern me ambiente të pajisura dhe hapësira komode për një qëndrim relaksues.", rooms: 1, capacity: 4, price: 245, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Washer", "Air conditioning"] },
   { name: "Dhërmi Apartments", location: "Dhërmi", rating: 4.6, images: [apartment101, apartment101_1, apartment101_2], description: "Apartament modern me ambiente të rehatshme dhe pajisje të plota për një qëndrim komod dhe të këndshëm.", rooms: 1, capacity: 4, price: 182, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Washer", "Air conditioning"] },
+  { name: "Moments Villa", location: "near Prizren", rating: 4.4, images: [villa89, villa89_1, villa89_2, villa89_3], description: "Vilë e rehatshme dhe moderne e përshtatshme për qëndrime relaksuese me hapësira komode dhe ambiente të mirëmbajtura për pushime cilësore.", rooms: 3, capacity: 8, price: 110, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "Pets allowed", "TV", "Washer", "Dryer"] },
+  { name: "Villa Prevalla", location: "near Prizren", rating: 4.5, images: [villa90, villa90_1, villa90_2], description: "Vilë komode dhe e gjerë e përshtatshme për grupet, me ambiente të rehatshme dhe hapësira të mirëmbajtura për pushime relaksuese.", rooms: 2, capacity: 14, price: 206, amenities: ["Ski-in/Ski-out", "Kitchen", "Wifi", "Free parking on premises", "Hot tub", "TV", "Washer", "Indoor fireplace"] },
+  { name: "Villa Lura", location: "near Prizren", rating: 4.3, images: [villa91, villa91_1], description: "Vilë e rehatshme dhe e përshtatshme për grup të vogël, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.", rooms: 3, capacity: 6, price: 170, amenities: ["Ski-in/Ski-out", "Kitchen", "Wifi", "Free parking on premises", "TV", "Washer"] },
+  { name: "Hotel Luna", location: "Prizren", rating: 4.1, images: [hotel87, hotel87_1, hotel87_2], description: "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të dobishme për pushuesit.", rooms: 1, capacity: 2, price: 56, amenities: ["Airport shuttle", "Non-smoking rooms", "Free parking", "Free Wifi", "Room service", "Restaurant", "Family rooms", "Bar", "Good Breakfast"] },
+  { name: "Premium Park Hotel", location: "Prizren", rating: 4.2, images: [hotel88, hotel88_1, hotel88_2, hotel88_3], description: "Hotel modern dhe i rehatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.", rooms: 1, capacity: 2, price: 70, amenities: ["Indoor swimming pool", "Spa", "Free parking", "Fitness center", "Free Wifi", "Restaurant", "Facilities for disabled guests", "Family rooms", "Bar", "Good Breakfast"] },
+  { name: "Hotel Castello", location: "Prizren", rating: 4.0, images: [hotel89, hotel89_1, hotel89_2], description: "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të nevojshme për pushuesit.", rooms: 1, capacity: 2, price: 54, amenities: ["Non-smoking rooms", "Free parking", "Free Wifi", "Room service", "Restaurant", "Bar", "Breakfast"] },
+  { name: "Nam Hotel", location: "Prizren", rating: 4.0, images: [hotel90, hotel90_1, hotel90_2], description: "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.", rooms: 1, capacity: 2, price: 45, amenities: ["Non-smoking rooms", "Free Wifi", "Room service", "Family rooms", "Tea/Coffee Maker in All Rooms", "Exceptional Breakfast"] },
+  { name: "Prior Hotel", location: "Prizren", rating: 4.1, images: [hotel91, hotel91_1, hotel91_2], description: "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.", rooms: 1, capacity: 2, price: 45, amenities: ["Airport shuttle", "Non-smoking rooms", "Free parking", "Free Wifi", "Room service", "Restaurant", "Family rooms", "Bar", "Very Good Breakfast"] },
+  { name: "Hotel Barleti", location: "Prizren", rating: 4.0, images: [hotel92, hotel92_1, hotel92_2], description: "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të dobishme për pushuesit.", rooms: 1, capacity: 2, price: 54, amenities: ["Non-smoking rooms", "Free Wifi", "Restaurant", "Bar", "Good Breakfast"] },
+  { name: "Hotel SOLO 127", location: "Prizren", rating: 4.1, images: [hotel93, hotel93_1, hotel93_2, hotel93_3], description: "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.", rooms: 1, capacity: 2, price: 55, amenities: ["Airport shuttle", "Non-smoking rooms", "Free parking", "Free Wifi", "Room service", "Restaurant", "Family rooms", "Bar", "Breakfast"] },
+  { name: "Adler Hotel", location: "Prizren", rating: 4.2, images: [hotel94, hotel94_1, hotel94_2, hotel94_3], description: "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.", rooms: 1, capacity: 2, price: 66, amenities: ["Non-smoking rooms", "Free parking", "Free Wifi", "Room service", "Restaurant", "Family rooms", "Tea/Coffee Maker in All Rooms", "Bar", "Excellent Breakfast"] },
+  { name: "Sky Hotel", location: "Prizren", rating: 4.1, images: [hotel95, hotel95_1, hotel95_2], description: "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.", rooms: 1, capacity: 2, price: 60, amenities: ["Airport shuttle", "Non-smoking rooms", "Free parking", "Free Wifi", "Room service", "Restaurant", "Family rooms", "Bar", "Breakfast"] },
+  { name: "Triumf Hotel", location: "Prizren", rating: 4.1, images: [hotel96, hotel96_1, hotel96_2], description: "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.", rooms: 1, capacity: 2, price: 55, amenities: ["Airport shuttle", "Non-smoking rooms", "Free parking", "Free Wifi", "Room service", "Family rooms", "Excellent Breakfast"] },
+  { name: "Villa ENA", location: "Prizren", rating: 3.5, images: [villa92, villa92_1], description: "Vilë komode dhe e përshtatshme për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira të rehatshme për pushuesit.", rooms: 1, capacity: 2, price: 70, amenities: ["Non-smoking rooms", "Free parking", "Free Wifi", "Family rooms"] },
+  { name: "Chez Villa", location: "Prizren", rating: 4.3, images: [villa93, villa93_1, villa93_2, villa93_3], description: "Vilë e rehatshme dhe e përshtatshme për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.", rooms: 3, capacity: 7, price: 225, amenities: ["Non-smoking rooms", "Free Wifi", "Family rooms"] },
+  { name: "Prizren City Apartment", location: "Prizren", rating: 4.2, images: [apartment102, apartment102_1, apartment102_2], description: "Apartament i rehatshëm dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira komode për pushuesit.", rooms: 1, capacity: 2, price: 60, amenities: ["Free private parking", "Balcony", "Free Wifi", "Private bathroom", "Family rooms", "View", "Shower", "Kitchen"] },
+  { name: "Apartment Prizreni", location: "Prizren", rating: 4.2, images: [apartment103, apartment103_1, apartment103_2], description: "Apartament i rehatshëm dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira komode për pushuesit.", rooms: 1, capacity: 2, price: 78, amenities: ["Non-smoking rooms", "Free parking", "Free Wifi (3 Mbps)", "Family rooms"] },
+  { name: "Studio 7 Apartments", location: "Prizren", rating: 4.0, images: [apartment104, apartment104_1, apartment104_2], description: "Apartament i rehatshëm dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira të rehatshme për pushuesit.", rooms: 1, capacity: 2, price: 32, amenities: ["Non-smoking rooms", "Free Wifi", "Facilities for disabled guests", "Family rooms"] },
+  { name: "Meli Deluxe Apartment", location: "Prizren", rating: 4.1, images: [apartment105, apartment105_1, apartment105_2], description: "Apartament i rehatshëm dhe i përshtatshëm për grupet e vogla, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.", rooms: 2, capacity: 4, price: 50, amenities: ["Free parking", "Free Wifi", "Family rooms"] },
+  { name: "Luxury Apartment", location: "Prizren", rating: 4.3, images: [apartment106, apartment106_1, apartment106_2], description: "Apartament i rehatshëm dhe modern, i përshtatshëm për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.", rooms: 2, capacity: 5, price: 70, amenities: ["Free on-site parking", "Balcony", "Hot tub", "Free Wifi", "Pet friendly", "View", "Kitchen"] },
+  { name: "Livinn Villa", location: "Prizren", rating: 4.3, images: [villa94, villa94_1, villa94_2], description: "Vilë e rehatshme dhe e përshtatshme për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.", rooms: 3, capacity: 7, price: 134, amenities: ["Free on-site parking", "Balcony", "Free Wifi", "Private bathroom", "Family rooms"] },
+  { name: "Villa Etno", location: "Prizren", rating: 4.2, images: [villa95, villa95_1, villa95_2], description: "Vilë e rehatshme dhe e përshtatshme për grupet e vogla, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.", rooms: 2, capacity: 4, price: 90, amenities: ["Free parking", "Free Wifi", "Restaurant", "Breakfast"] },
 
 ];
 
@@ -566,6 +610,7 @@ export default function HotelsPage() {
   const [activeTab, setActiveTab] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
   const hotelsPerPage = 20;
+  const [selectedLocation, setSelectedLocation] = useState("all");
 
   useEffect(() => {
     const handleScroll = () => setShowTopButton(window.scrollY > 300);
@@ -580,11 +625,27 @@ export default function HotelsPage() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
+  const locations = [
+    "all",
+    "Prishtina",
+    "Brezovicë",
+    "Sarandë",
+    "Himarë",
+    "Tirana",
+    "Pejë",
+    "Dhërmi",
+    "Prizren",
+  ];
+
   const filteredHotels = (hotels || []).filter((hotel) => {
-    if (activeTab === "all") return true;
-    if (activeTab === "hotels") return hotel.name.toLowerCase().includes("hotel");
-    if (activeTab === "villas") return hotel.name.toLowerCase().includes("villa") || hotel.name.toLowerCase().includes("chalet");
-    if (activeTab === "apartments") return hotel.name.toLowerCase().includes("apartment");
+    // Tab filters
+    if (activeTab === "hotels" && !hotel.name.toLowerCase().includes("hotel")) return false;
+    if (activeTab === "villas" && !(hotel.name.toLowerCase().includes("villa") || hotel.name.toLowerCase().includes("chalet"))) return false;
+    if (activeTab === "apartments" && !hotel.name.toLowerCase().includes("apartment")) return false;
+    // Location filter (flexible)
+    if (selectedLocation !== "all" && !hotel.location.toLowerCase().includes(selectedLocation.toLowerCase()))
+      return false;
+
     return true;
   });
 
@@ -598,6 +659,18 @@ export default function HotelsPage() {
     setActiveTab(tab);
     setCurrentPage(1);
   };
+
+  useEffect(() => {
+    if (selectedHotel) {
+      document.body.style.overflow = "hidden";   // blloko scroll-in
+    } else {
+      document.body.style.overflow = "auto";     // kthe normal
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";     // siguri kur unmount
+    };
+  }, [selectedHotel]);
 
   return (
     <div className="px-6 py-8">
@@ -616,7 +689,20 @@ export default function HotelsPage() {
           </button>
         ))}
       </div>
-
+      {/* Location Dropdown */}
+      <div className="flex justify-center mb-6">
+        <select
+          value={selectedLocation}
+          onChange={(e) => setSelectedLocation(e.target.value)}
+          className="px-4 py-2 rounded-2xl bg-gray-200 text-gray-800 font-semibold"
+        >
+          {locations.map((loc, i) => (
+            <option key={i} value={loc}>
+              {loc === "all" ? "All Locations" : loc}
+            </option>
+          ))}
+        </select>
+      </div>
       {/* Hotels Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {currentHotels.map((hotel, index) => (
@@ -635,24 +721,22 @@ export default function HotelsPage() {
                 ⭐ {hotel.rating}
               </span>
             </div>
-
             <div className="p-5 text-gray-700">
               <h2 className="font-semibold text-xl">{hotel.name}</h2>
               <p className="text-sm text-gray-600">{hotel.location}</p>
-              <p className="text-sm text-gray-700 mt-2 line-clamp-3">{hotel.description}</p>
               <div className="flex justify-between text-sm text-gray-600 mt-3">
                 <span className="flex items-center gap-1">
-                  <BedDouble className="w-4 h-4" /> {hotel.rooms} rooms
+                  <BedDouble className="w-4 h-4" />
+                  {hotel.rooms === 1 ? "1 room" : `${hotel.rooms} rooms`}
                 </span>
                 <span className="flex items-center gap-1">
-                  <Users className="w-4 h-4" /> {hotel.capacity} people
+                  <Users className="w-4 h-4" />
+                  {hotel.capacity} {hotel.capacity === 1 ? "guest" : "guests"}
                 </span>
               </div>
-
               <p className="text-gray-600 font-bold mt-2 flex items-center gap-1">
                 <HandCoins className="w-4 h-4" /> {hotel.price}€ / {hotel.nights ? `${hotel.nights} nights` : "night"}
               </p>
-
               <p
                 onClick={() => setSelectedHotel(hotel)}
                 className="mt-3 text-indigo-700 font-semibold cursor-pointer hover:underline"
@@ -663,7 +747,6 @@ export default function HotelsPage() {
                     ? "View Apartment →"
                     : "View Hotel →"}
               </p>
-
               <button className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 hover:text-indigo-300 hover:transition-colors">
                 Book
               </button>
@@ -671,7 +754,6 @@ export default function HotelsPage() {
           </div>
         ))}
       </div>
-
       {/* Pagination */}
       <div className="flex justify-center gap-2 mt-8 flex-wrap">
         {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
@@ -698,7 +780,6 @@ export default function HotelsPage() {
             >
               ✕
             </button>
-
             <Swiper
               spaceBetween={10}
               slidesPerView={1}
@@ -716,7 +797,6 @@ export default function HotelsPage() {
                 </SwiperSlide>
               ))}
             </Swiper>
-
             <h2 className="text-2xl font-bold text-gray-800 mb-2">{selectedHotel.name}</h2>
             <p className="text-gray-600 mb-1">{selectedHotel.location}</p>
             <p className="text-yellow-500 mb-2">
@@ -724,7 +804,6 @@ export default function HotelsPage() {
               <span className="text-gray-500 text-sm">({selectedHotel.rating})</span>
             </p>
             <p className="text-gray-700 mb-3">{selectedHotel.description}</p>
-
             {selectedHotel.amenities && (
               <div className="flex flex-wrap gap-2 mb-3">
                 {selectedHotel.amenities.map((a, i) => (
@@ -732,19 +811,18 @@ export default function HotelsPage() {
                 ))}
               </div>
             )}
-
             <p className="text-gray-800 font-medium flex items-center gap-2">
-              <BedDouble className="w-4 h-4" /> {selectedHotel.rooms} rooms —
-              <Users className="w-4 h-4" /> {selectedHotel.capacity} people
+              <BedDouble className="w-4 h-4" />
+              {selectedHotel.rooms} {selectedHotel.rooms === 1 ? "room" : "rooms"} —
+              <Users className="w-4 h-4" />
+              {selectedHotel.capacity} {selectedHotel.capacity === 1 ? "guest" : "guests"}
             </p>
-
             <p className="text-gray-900 font-semibold mt-2 flex items-center gap-2">
               <HandCoins className="w-4 h-4" /> {selectedHotel.price}€ / night
             </p>
           </div>
         </div>
       )}
-
       {/* Scroll to Top */}
       <button
         onClick={scrollToTop}
