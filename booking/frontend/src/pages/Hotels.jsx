@@ -100,6 +100,11 @@ import hotel93 from "../images/hotel93.jpg"; import hotel93_1 from "../images/ho
 import hotel94 from "../images/hotel94.jpg"; import hotel94_1 from "../images/hotel94_1.jpg"; import hotel94_2 from "../images/hotel94_2.jpg"; import hotel94_3 from "../images/hotel94_3.jpg";
 import hotel95 from "../images/hotel95.jpg"; import hotel95_1 from "../images/hotel95_1.jpg"; import hotel95_2 from "../images/hotel95_2.jpg";
 import hotel96 from "../images/hotel96.jpg"; import hotel96_1 from "../images/hotel96_1.jpg"; import hotel96_2 from "../images/hotel96_2.jpg";
+import hotel97 from "../images/hotel97.avif"; import hotel97_1 from "../images/hotel97_1.avif"; import hotel97_2 from "../images/hotel97_2.avif";
+import hotel98 from "../images/hotel98.jpeg"; import hotel98_1 from "../images/hotel98_1.jpeg";
+import hotel99 from "../images/hotel99.avif"; import hotel99_1 from "../images/hotel99_1.avif"; import hotel99_2 from "../images/hotel99_2.avif";
+import hotel100 from "../images/hotel100.jpg"; import hotel100_1 from "../images/hotel100_1.jpg"; import hotel100_2 from "../images/hotel100_2.jpg";
+import hotel101 from "../images/hotel101.jpg"; import hotel101_1 from "../images/hotel101_1.jpg"; import hotel101_2 from "../images/hotel101_2.jpg";
 
 //Villa
 import villa1 from "../images/villa1.avif"; import villa1_1 from "../images/villa1_1.avif"; import villa1_2 from "../images/villa1_2.avif"; import villa1_3 from "../images/villa1_3.avif"; import villa1_4 from "../images/villa1_4.avif";
@@ -197,6 +202,11 @@ import villa92 from "../images/villa92.jpg"; import villa92_1 from "../images/vi
 import villa93 from "../images/villa93.jpg"; import villa93_1 from "../images/villa93_1.jpg"; import villa93_2 from "../images/villa93_2.jpg"; import villa93_3 from "../images/villa93_3.jpg";
 import villa94 from "../images/villa94.jpg"; import villa94_1 from "../images/villa94_1.jpg"; import villa94_2 from "../images/villa94_2.jpg";
 import villa95 from "../images/villa95.jpg"; import villa95_1 from "../images/villa95_1.jpg"; import villa95_2 from "../images/villa95_2.jpg";
+import villa96 from "../images/villa96.avif"; import villa96_1 from "../images/villa96_1.avif"; import villa96_2 from "../images/villa96_2.avif";
+import villa97 from "../images/villa97.avif"; import villa97_1 from "../images/villa97_1.avif"; import villa97_2 from "../images/villa97_2.avif"; import villa97_3 from "../images/villa97_3.avif";
+import villa98 from "../images/villa98.webp"; import villa98_1 from "../images/villa98_1.jpeg"; import villa98_2 from "../images/villa98_2.avif";
+import villa99 from "../images/villa99.avif"; import villa99_1 from "../images/villa99_1.avif"; import villa99_2 from "../images/villa99_2.avif";
+import villa100 from "../images/villa100.avif"; import villa100_1 from "../images/villa100_1.avif"; import villa100_2 from "../images/villa100_2.avif";
 
 //Apartment
 import apartment1 from "../images/apartment1.jpg"; import apartment1_1 from "../images/apartment1_1.jpg"; import apartment1_2 from "../images/apartment1_2.jpg";
@@ -305,6 +315,7 @@ import apartment103 from "../images/apartment103.jpg"; import apartment103_1 fro
 import apartment104 from "../images/apartment104.jpg"; import apartment104_1 from "../images/apartment104_1.jpg"; import apartment104_2 from "../images/apartment104_2.jpg";
 import apartment105 from "../images/apartment105.jpg"; import apartment105_1 from "../images/apartment105_1.jpg"; import apartment105_2 from "../images/apartment105_2.jpg";
 import apartment106 from "../images/apartment106.jpg"; import apartment106_1 from "../images/apartment106_1.jpg"; import apartment106_2 from "../images/apartment106_2.jpg";
+import apartment107 from "../images/apartment107.jpeg"; import apartment107_1 from "../images/apartment107_1.jpeg";
 
 const hotels = [
   { name: "Four Points by Sheraton Prishtina", location: "Prishtina", rating: 4.8, images: [hotel1, hotel1_1, hotel1_2], description: "Hotel modern me spa, pishinë të brendshme dhe restorant luksoz me pamje panoramike.", rooms: 1, capacity: 2, price: 129, amenities: ["Spa", "Indoor Pool", "Free Wi-Fi", "Breakfast Included", "Parking", "Fitness Center"] },
@@ -601,6 +612,17 @@ const hotels = [
   { name: "Luxury Apartment", location: "Prizren", rating: 4.3, images: [apartment106, apartment106_1, apartment106_2], description: "Apartament i rehatshëm dhe modern, i përshtatshëm për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.", rooms: 2, capacity: 5, price: 70, amenities: ["Free on-site parking", "Balcony", "Hot tub", "Free Wifi", "Pet friendly", "View", "Kitchen"] },
   { name: "Livinn Villa", location: "Prizren", rating: 4.3, images: [villa94, villa94_1, villa94_2], description: "Vilë e rehatshme dhe e përshtatshme për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.", rooms: 3, capacity: 7, price: 134, amenities: ["Free on-site parking", "Balcony", "Free Wifi", "Private bathroom", "Family rooms"] },
   { name: "Villa Etno", location: "Prizren", rating: 4.2, images: [villa95, villa95_1, villa95_2], description: "Vilë e rehatshme dhe e përshtatshme për grupet e vogla, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.", rooms: 2, capacity: 4, price: 90, amenities: ["Free parking", "Free Wifi", "Restaurant", "Breakfast"] },
+  { name: "Prevalle Villa", location: "near Prizren", rating: 4.4, images: [villa96, villa96_1, villa96_2], description: "Vilë e rehatshme dhe e përshtatshme për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.", rooms: 2, capacity: 9, price: 210, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "Pets allowed", "TV", "Washer"] },
+  { name: "Hotel Paridi", location: "Ksamil", rating: 4.0, images: [hotel97, hotel97_1, hotel97_2], description: "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime bazë për pushuesit.", rooms: 1, capacity: 2, price: 54, amenities: ["Lock on bedroom door", "Wifi", "TV", "Air conditioning"] },
+  { name: "Luxury Villa", location: "Ksamil", rating: 4.5, images: [villa97, villa97_1, villa97_2, villa97_3], description: "Vilë luksoze dhe e rehatshme, e përshtatshme për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.", rooms: 3, capacity: 7, price: 280, amenities: ["Kitchen", "Wifi", "Free parking on premises", "Pool", "TV", "Washer", "Air conditioning", "Patio or balcony"] },
+  { name: "Koko Hotel", location: "Ksamil", rating: 4.2, images: [hotel98, hotel98_1], description: "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.", rooms: 1, capacity: 2, price: 90, amenities: ["Wifi", "Dedicated workspace", "Free parking on premises", "Pets allowed", "TV"] },
+  { name: "Villa Denis 5", location: "Ksamil", rating: 4.3, images: [villa98, villa98_1, villa98_2], description: "Vilë e rehatshme dhe e përshtatshme për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira të sigurta dhe komode.", rooms: 1, capacity: 2, price: 266, amenities: ["Kitchen", "Wifi", "Dedicated workspace", "Free parking on premises", "Pets allowed", "TV", "Exterior security cameras on property"] },
+  { name: "ABA Hotel", location: "Ksamil", rating: 4.5, images: [hotel99, hotel99_1, hotel99_2], description: "Hotel modern dhe i rehatshëm, i përshtatshëm për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.", rooms: 2, capacity: 4, price: 257, amenities: ["Beach view", "Garden view", "Wifi", "Dedicated workspace", "Free parking on premises", "TV", "Washer", "Air conditioning", "Hair dryer", "Exterior security cameras on property"] },
+  { name: "Villa", location: "Ksamil", rating: 4.5, images: [villa99, villa99_1, villa99_2], description: "Vilë e rehatshme dhe luksoze, e përshtatshme për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.", rooms: 1, capacity: 5, price: 378, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Air conditioning", "Breakfast"] },
+  { name: "Ksamil Villa", location: "Ksamil", rating: 4.3, images: [villa100, villa100_1, villa100_2], description: "Vilë e rehatshme dhe e përshtatshme për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.", rooms: 1, capacity: 3, price: 146, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Air conditioning"] },
+  { name: "Hotel Denoel", location: "Ksamil", rating: 4.1, images: [hotel100, hotel100_1, hotel100_2], description: "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.", rooms: 1, capacity: 2, price: 50, amenities: ["Free parking", "Free Wifi", "Restaurant", "Room service", "Family rooms", "Beachfront", "Bar", "Private beach area", "Breakfast"] },
+  { name: "Hotel EMAR", location: "Ksamil", rating: 4.0, images: [hotel101, hotel101_1, hotel101_2], description: "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.", rooms: 1, capacity: 2, price: 46, amenities: ["Airport shuttle", "Free parking", "Free Wifi", "Family rooms", "Beachfront", "Bar", "Good Breakfast"] },
+  { name: "Apartment Bella", location: "Ksamil", rating: 4.2, images: [apartment107, apartment107_1], description: "Apartament i rehatshëm dhe i përshtatshëm për grup të vogël, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.", rooms: 1, capacity: 3, price: 51, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Air conditioning"] },
 
 ];
 
@@ -635,6 +657,7 @@ export default function HotelsPage() {
     "Pejë",
     "Dhërmi",
     "Prizren",
+    "Ksamil",
   ];
 
   const filteredHotels = (hotels || []).filter((hotel) => {
