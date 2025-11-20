@@ -27,7 +27,14 @@ function ScrollToTop() {
 
 function MainWrapper() {
   const location = useLocation();
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState(() => {
+    return JSON.parse(localStorage.getItem("favorites")) || [];
+  });
+
+  // Ruaj favorites automatikisht në localStorage
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
 
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
@@ -37,17 +44,10 @@ function MainWrapper() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route
-            path="/deals"
-            element={<Deals favorites={favorites} setFavorites={setFavorites} />}
-          />
-          <Route
-            path="/favorites"
-            element={<Favorites favorites={favorites} setFavorites={setFavorites} />}
-          />
+          <Route path="/deals" element={<Deals favorites={favorites} setFavorites={setFavorites} />} />
+          <Route path="/favorites" element={<Favorites favorites={favorites} setFavorites={setFavorites} />} />
           <Route path="/destinations" element={<Destinations />} />
-          <Route path="/hotels" element={<Hotels />} />
-
+          <Route path="/hotels" element={<Hotels favorites={favorites} setFavorites={setFavorites} />} />
         </Routes>
       </main>
       <Footer />
