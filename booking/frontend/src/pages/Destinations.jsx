@@ -338,7 +338,8 @@ export default function ZigZagCarousel() {
                 <h2
                     className="text-3xl mb-12 -mt-10 text-gray-800 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
                 >
-                    Destinacionet më të vizituara <MapPin className="w-6 h-6 text-gray-600" />
+                  <MapPin className="w-6 h-6 text-gray-600" />  
+                  TRENDING <MapPin className="w-6 h-6 text-gray-600" />
                 </h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {[

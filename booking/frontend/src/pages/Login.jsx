@@ -52,7 +52,7 @@ function Login({ onSwitchToRegister, onClose }) {
         className="relative p-[2px] rounded-3xl bg-gradient-to-r from-slate-400 via-gray-300 to-slate-400 shadow-[0_0_20px_rgba(255,255,255,0.15)]"
       >
         <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-10 
-               w-[100%] sm:w-full sm:min-w-[480px] max-w-2xl border border-white/20 shadow-lg">
+               w-[100%] sm:w-full sm:min-w-[430px] max-w-2xl border border-white/20 shadow-lg">
           <h2 className="text-4xl font-extrabold text-center mb-8 tracking-wide bg-gradient-to-r from-slate-600 via-gray-500 to-slate-600 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,255,255,0.25)]">
             Welcome Back
           </h2>

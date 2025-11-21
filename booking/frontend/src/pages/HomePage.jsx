@@ -2,14 +2,13 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Tilt from 'react-parallax-tilt';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 import SearchBar from "../components/SearchBar";
 import { useNavigate } from "react-router-dom";
-import { MapPin, Search, Hotel, CircleCheck, Percent, Euro, Phone, LockKeyhole, Clock, MessageCircle, MessageSquareText } from "lucide-react";
+import { MapPin, Search, Hotel, CircleCheck, BedDouble, Users, HandCoins, Euro, Phone, LockKeyhole, Clock, MessageCircle, MessageSquareText } from "lucide-react";
 
 import mainImage from "../images/main.jpg";
 import prishtina0Image from "../images/prishtina-.jpeg";
@@ -39,6 +38,11 @@ import peja0Image from "../images/peja0.jpg";
 import prizren0Image from "../images/prizren0.jpg";
 import himare0Image from "../images/himare0.jpg";
 
+import villa21 from "../images/villa21.jpg";
+import hotel23 from "../images/hotel23.jpg";
+import apartment95 from "../images/apartment95.avif";
+import villa4 from "../images/villa4.avif";
+
 const destinationss = [
   { name: "Prishtina", image: prishtina0Image },
   { name: "Tirana", image: tirana0Image },
@@ -53,11 +57,11 @@ const destinationss = [
 ];
 
 const deals = [
-  { id: 2, hotelName: "Brezovica Hotel", location: "Brezovica, Kosovo", price: "$170 / night", image: brezovicaImage, discount: "15% Off" },
-  { id: 3, hotelName: "Villa 16", location: "Dhermi, Albania", price: "$350 / night", image: dhermiImage, discount: "15% Off" },
-  { id: 4, hotelName: "Marriott Hotel", location: "Tirana, Albania", price: "$211 / night", image: tiranaImage, discount: "20% Off" },
-  { id: 7, hotelName: "Prishtina City Apartaments", location: "Prishtina, Kosovo", price: "$55 / night", image: prishtina2Image, discount: "30% Off" },];
-
+  { id: 167, name: "Ionian Premium Villas", location: "Sarandë", rating: 4.8, images: [villa21], description: "Vila premium me pishinë të jashtme, ambiente familjare dhe pamje relaksuese.", rooms: 3, capacity: 7, price: 230, originalPrice: 260, discountPrice: 230, amenities: ["Free on-site parking", "Outdoor swimming pool", "Free Wifi", "Private bathroom", "Family rooms", "View", "Air conditioning", "Non-smoking rooms", "Flat-screen TV"] },
+  { id: 72, name: "Hotel MANAMI", location: "Prishtina", rating: 4.7, images: [hotel23], description: "Hotel butik elegant në qendër të Prishtinës me dizajn modern, restorant gourmet dhe ambiente relaksuese.", rooms: 1, capacity: 2, price: 117, originalPrice: 150, discountPrice: 117, amenities: ["Wi-Fi", "Breakfast", "Restaurant", "Parking", "Air Conditioning", "24h Reception"] },
+  { id: 48, name: "Cinco Apartments", location: "Pejë", rating: 4.3, images: [apartment95], description: "Apartament modern dhe i rehatshëm për 5 persona, me kuzhinë të pajisur dhe facilitete për një qëndrim të komod.", rooms: 2, capacity: 5, price: 94, originalPrice: 108, discountPrice: 94, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Washer"] },
+  { id: 82, name: "Villa Bora", location: "Brezovicë", rating: 4.6, images: [villa4], description: "Hapësira të ngrohta me dekor modern, ideal për relaks dhe aktivitete të ndryshme.", rooms: 3, capacity: 7, price: 172, originalPrice: 200, discountPrice: 172, amenities: ["Mountain View", "Wi-Fi", "Parking", "Fully Equipped Kitchen", "Fireplace", "Private Garden"] },
+]
 const reviews = [
   { name: "Arta", comment: "Eksperiencë fantastike në Brezovicë!" },
   { name: "Besnik", comment: "Shërbim perfekt dhe çmime të mira." },
@@ -83,6 +87,7 @@ function HomePage() {
   const [loaded, setLoaded] = useState(false);
   const navigate = useNavigate();
   const [showTopButton, setShowTopButton] = useState(false);
+  const [selectedHotel, setSelectedHotel] = useState(null);
 
   useEffect(() => {
     const img = new Image();
@@ -172,19 +177,14 @@ function HomePage() {
         </Slider>
       </section>
 
-
       <section className="py-16 text-center items-center justify-center">
-        <h2
-          className="text-3xl mb-12 text-gray-600 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2 mx-auto w-[85%] text-center"
-        >
+        <h1 className="text-3xl mb-5 drop-shadow-lg tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2 mx-auto w-[85%] text-center bg-clip-text text-transparent bg-gray-600 uppercase">
           <MapPin className="w-6 h-6 text-gray-600 flex-shrink-0" />
-          Destinacionet më të vizituara
+          Trending
           <MapPin className="w-6 h-6 text-gray-600 flex-shrink-0" />
-        </h2>
-        <div
-          onClick={() => navigate("/destinations")}
-          className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto"
-        >
+        </h1>
+        <div onClick={() => navigate("/destinations")}
+          className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto" >
           {[
             { img: tirana1Image, name: "Tiranë" },
             { img: sarande1Image, name: "Sarandë" },
@@ -193,22 +193,10 @@ function HomePage() {
           ].map((dest, i) => (
             <div
               key={i}
-              className="
-          relative overflow-hidden rounded-2xl
+              className="relative overflow-hidden rounded-2xl w-[85%] sm:w-[40%] md:w-[30%] lg:w-[22%]
+          h-56 sm:h-52 md:h-56 lg:h-60 transform transition-all duration-500
+          shadow-[0_20px_60px_rgba(0,0,0,0.4)] hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] group" >
 
-          w-[85%]         
-          sm:w-[40%] 
-          md:w-[30%] 
-          lg:w-[22%]
-
-          h-56 sm:h-52 md:h-56 lg:h-60
-
-          transform transition-all duration-500
-          shadow-[0_20px_60px_rgba(0,0,0,0.4)]
-          hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)]
-          group
-        "
-            >
               {/* Fotoja */}
               <img
                 src={dest.img}
@@ -302,59 +290,91 @@ function HomePage() {
       </section>
 
       {/* Ofertat */}
-      <section className="py-12 w-full px-4">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <div className="relative inline-block text-center w-full">
-            <h2
-              className="text-3xl mb-10 text-gray-600 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
-            >
-              <Percent className="w-5 h-5 text-gray-500" /> Ofertat tona <Percent className="w-5 h-5 text-gray-500" />
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="py-10">
+        <div className="max-w-7xl mx-auto px-4">
+          <h1 className="text-3xl mb-7 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-700 via-gray-700 to-gray-400 drop-shadow-lg tracking-wide uppercase">
+            Our Deals
+          </h1>
+          {/* Deals Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {deals.map((deal) => (
-              <Tilt
+              <div
                 key={deal.id}
-                className="rounded-lg shadow-lg overflow-hidden transition-transform duration-300"
-                tiltMaxAngleX={20}  // sa të rrotullohet horizontal
-                tiltMaxAngleY={20}  // sa të rrotullohet vertical
-                perspective={1000}   // sa "3D" të duket
-                scale={1.05}         // efekti i zoom kur hover
-                transitionSpeed={400}
+                className="relative rounded-3xl overflow-hidden bg-white/60 backdrop-blur-xl border border-gray-300 shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 min-h-[420px]"
               >
-                <div className="relative">
-                  <img src={deal.image} alt={deal.hotelName} className="w-full h-64 object-cover" />
-                  <div className="absolute bottom-0 bg-black bg-opacity-60 w-full text-white p-3 text-center">
-                    <p className="font-bold text-lg">{deal.hotelName}</p>
-                    <p className="text-sm">{deal.location}</p>
-                    <p className="mt-1 font-bold">{deal.discount}</p>
-                  </div>
+                {/* Image */}
+                <div className="relative h-60 w-full">
+                  <img
+                    src={deal.images[0]}
+                    alt={deal.name}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+
+                  {/* Discount */}
+                  {deal.originalPrice && deal.discountPrice && (
+                    <span className="absolute top-3 left-3 bg-black/40 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                      {Math.round(
+                        ((deal.originalPrice - deal.discountPrice) /
+                          deal.originalPrice) *
+                        100
+                      )}
+                      % OFF
+                    </span>
+                  )}
                 </div>
-              </Tilt>
+
+                {/* Content */}
+                <div className="p-5 text-gray-700">
+                  <h2 className="font-semibold text-xl">{deal.name}</h2>
+                  <p className="text-sm text-gray-600">{deal.location}</p>
+
+                  {/* Rooms & Capacity */}
+                  <div className="flex justify-between text-sm text-gray-600 mt-3">
+                    <span className="flex items-center gap-1">
+                      <BedDouble className="w-4 h-4" />
+                      {deal.rooms === 1 ? "1 room" : `${deal.rooms} rooms`}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Users className="w-4 h-4" />
+                      {deal.capacity} {deal.capacity === 1 ? "guest" : "guests"}
+                    </span>
+                  </div>
+
+                  {/* Price */}
+                  <p className="text-gray-600 font-bold mt-2 flex items-center gap-2">
+                    <HandCoins className="w-4 h-4" />
+                    <span className="line-through text-gray-400">
+                      {deal.originalPrice}€
+                    </span>
+                    <span className="text-red-700">{deal.discountPrice}€</span> / night
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
-
-          <div className="text-center mt-6">
-            <Link
-              to="/deals"
-              className="inline-block px-6 py-2 rounded-md text-gray-500 bg-black/10 border border-gray-400 hover:text-gray-600 transition-colors duration-200"
-            >
-              Më shumë oferta
-            </Link>
+          <div className="w-full flex justify-center items-center mt-10">
+            <div className="w-full flex justify-center">
+              <button
+                onClick={() => navigate("/deals")}
+                className="px-6 py-2 border border-gray-500 text-gray-700 rounded-xl 
+                 backdrop-blur-sm bg-white/20 hover:bg-white/30 transition-all"
+              >
+                View More Deals
+              </button>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <section className="max-w-7xl mx-auto px-4 py-16 -mt-5 text-center">
         {/* Section heading */}
         <h2
-          className="relative text-3xl md:text-3xl mb-12 text-gray-600 tracking-tight inline-block overflow-hidden"
+          className="relative text-2xl md:text-3xl mb-12 tracking-tight inline-block overflow-hidden bg-clip-text text-transparent bg-gray-600 uppercase drop-shadow-lg"
           data-aos="fade-up"
           data-aos-duration="900"
-        >
-          Si funksionon platforma jonë?
+        > Steps
           <span className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#A7C7E7] to-[#C8B6E2] animate-[slide_2s_ease-in-out_infinite]"></span>
-
           <style>{`
       @keyframes slide {
         0% { transform: translateX(-100%); }
@@ -434,13 +454,21 @@ function HomePage() {
       {/* Pse të zgjedhësh */}
       <section className="max-w-7xl mx-auto px-4 py-20 -mt-5 text-center relative overflow-hidden">
         {/* Section heading */}
-        <h2
-          className="text-4xl md:text-3xl mb-16 text-gray-600 inline-block relative bg-clip-text animate-gradient-x"
-          data-aos="fade-down"
-          data-aos-duration="1200"
+             <h2
+          className="relative text-2xl md:text-3xl mb-12 tracking-tight inline-block overflow-hidden bg-clip-text text-transparent bg-gray-600 uppercase drop-shadow-lg"
+          data-aos="fade-up"
+          data-aos-duration="900"
         >
-          Pse të zgjedhësh platformën tonë?
-          <span className="absolute left-1/2 transform -translate-x-1/2 -bottom-3 w-24 h-1 bg-gradient-to-r from-gray-700 to-purple-400 rounded-full animate-pulse"></span>
+          Benefits
+          <span className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#A7C7E7] to-[#C8B6E2] animate-[slide_2s_ease-in-out_infinite]"></span>
+
+          <style>{`
+      @keyframes slide {
+        0% { transform: translateX(-100%); }
+        50% { transform: translateX(0); }
+        100% { transform: translateX(100%); }
+      }
+    `}</style>
         </h2>
 
         {/* Flex container with cards and colored blobs */}
@@ -488,7 +516,7 @@ function HomePage() {
             <div className="flex justify-center mb-2">
               <MessageSquareText className="w-8 h-8 text-gray-600" />
             </div>
-            Sugjerime nga ne
+            Suggestions
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[himare0Image, brezovica0Image, tirana0Image].map((img, idx) => {
@@ -497,13 +525,11 @@ function HomePage() {
                 "Pse Brezovica është destinacion perfekt dimëror?",
                 "Udhëzues për një fundjavë në Tiranë"
               ];
-
               const texts = [
                 "Plazhet më të bukura, ushqimi dhe çmimet më të mira... Nga Dhërmi deri në Ksamil, çdo vend ofron përvoja të veçanta.",
                 "Brezovica është vendi ideal për ski, pushim dhe natyrë. Shijo ajrin e pastër malor dhe hotelet komode.",
                 "Tirana ofron muzeume, restorante moderne dhe jetën e gjallë të natës."
               ];
-
               const extraTexts = [
                 "Nëse preferoni qetësinë, Radhima dhe Himara janë ideale për relaks, ndërsa Ksamili dhe Saranda ofrojnë jetën e gjallë të natës. Mos harroni të provoni ushqimet tradicionale të zonës dhe të rezervoni akomodimin paraprakisht gjatë sezonit të verës.",
                 "Pista të përgatitura mirë, peizazhe të mbuluara me borë dhe restorante me ushqim tradicional bëjnë që çdo vizitë të jetë e paharrueshme. Në mbrëmje mund të relaksohesh pranë zjarrit në lodge ose të provosh spa-t lokale. Për një përvojë më të plotë, vizito edhe fshatrat përreth.",
@@ -580,7 +606,7 @@ function HomePage() {
             <div className="flex justify-center mb-2">
               <MessageCircle className="w-8 h-8 text-gray-600" />
             </div>
-            Përshtypjet e klientëve
+            Reviews
             <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-black to-blue-500 rounded-full animate-pulse"></span>
           </h2>
 
