@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -636,6 +637,9 @@ export default function HotelsPage({ favorites, setFavorites }) {
   const [currentPage, setCurrentPage] = useState(1);
   const hotelsPerPage = 20;
   const [selectedLocation, setSelectedLocation] = useState("all");
+  const location = useLocation();
+  const query = new URLSearchParams(location.search);
+  const initialTab = query.get("tab") || "all"; // merr tab nga URL ose "all" si default
 
   useEffect(() => {
     const handleScroll = () => setShowTopButton(window.scrollY > 300);
@@ -728,7 +732,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
     };
   }, [selectedHotel]);
 
- const toggleFavorite = (id) => {
+  const toggleFavorite = (id) => {
     setFavorites(prev => {
       const updated = prev.includes(id)
         ? prev.filter(fav => fav !== id)
@@ -736,11 +740,17 @@ export default function HotelsPage({ favorites, setFavorites }) {
       return [...new Set(updated)];
     });
   };
-  
+
+  useEffect(() => {
+    const tabFromURL = query.get("tab") || "all";
+    setActiveTab(tabFromURL);
+    setCurrentPage(1); // scroll ose refresh i faqes te page 1
+  }, [location.search]);
+
   return (
     <div className="px-6 py-8">
       {/* Tabs */}
-      <div className="flex gap-4 mb-6 justify-center flex-wrap">
+      <div className="flex gap-4 mb-6 justify-center flex-wrap" id="listings-section">
         {["all", "hotels", "villas", "apartments"].map((tab) => (
           <button
             key={tab}

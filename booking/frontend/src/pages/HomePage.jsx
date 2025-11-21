@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "slick-carousel/slick/slick.css";
@@ -52,8 +51,7 @@ const destinationss = [
   { name: "Pejë", image: peja0Image },
   { name: "Sarandë", image: sarande0Image },
   { name: "Prizren", image: prizren0Image },
-  { name: "Himarë", image: himare0Image },
-
+  { name: "Himarë", image: himare0Image }
 ];
 
 const deals = [
@@ -88,6 +86,8 @@ function HomePage() {
   const navigate = useNavigate();
   const [showTopButton, setShowTopButton] = useState(false);
   const [selectedHotel, setSelectedHotel] = useState(null);
+  const [activeTab, setActiveTab] = useState("all"); // "all" si default
+  const [selectedLocation, setSelectedLocation] = useState("all");
 
   useEffect(() => {
     const img = new Image();
@@ -115,6 +115,9 @@ function HomePage() {
     AOS.init({ duration: 800, once: false, mirror: true });
   }, []);
 
+  const handleMoreClick = (tab) => {
+    navigate(`/hotels?tab=${tab}`);
+  };
   return (
     <div>
       {/* Hero Section */}
@@ -232,6 +235,7 @@ function HomePage() {
               <h3 className="text-2xl font-bold mb-2">Hotels</h3>
               <p className="text-sm">Zbuloni hotele të përshtatshme për çdo buxhet.</p>
               <button
+                onClick={() => handleMoreClick("hotels")}
                 className="mt-4 px-6 py-2 rounded-md font-semibold
               text-gray-300 bg-black/40
               border border-gray-700
@@ -254,6 +258,7 @@ function HomePage() {
               <h3 className="text-2xl font-bold mb-2">Villas</h3>
               <p className="text-sm">Relaksohu në vilat më luksoze.</p>
               <button
+                onClick={() => handleMoreClick("villas")}
                 className="mt-4 px-6 py-2 rounded-md font-semibold
               text-gray-300 bg-black/40
               border border-gray-700
@@ -276,6 +281,7 @@ function HomePage() {
               <h3 className="text-2xl font-bold mb-2">Apartments</h3>
               <p className="text-sm">Qëndrim komod për familje ose grupe të vogla.</p>
               <button
+                onClick={() => handleMoreClick("apartments")}
                 className="mt-4 px-6 py-2 rounded-md font-semibold
               text-gray-300 bg-black/40
               border border-gray-700
@@ -454,7 +460,7 @@ function HomePage() {
       {/* Pse të zgjedhësh */}
       <section className="max-w-7xl mx-auto px-4 py-20 -mt-5 text-center relative overflow-hidden">
         {/* Section heading */}
-             <h2
+        <h2
           className="relative text-2xl md:text-3xl mb-12 tracking-tight inline-block overflow-hidden bg-clip-text text-transparent bg-gray-600 uppercase drop-shadow-lg"
           data-aos="fade-up"
           data-aos-duration="900"
