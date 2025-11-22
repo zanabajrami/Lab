@@ -38,7 +38,6 @@ function Favorites({ favorites, setFavorites }) {
         <h1 className="text-3xl font-extrabold mb-8 text-center text-gray-800 uppercase">
           Your Favorites
         </h1>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {favoriteHotels.map((hotel) => {
             const isExpanded = expandedIds.includes(hotel.id);
@@ -91,16 +90,21 @@ function Favorites({ favorites, setFavorites }) {
                     <HandCoins className="w-4 h-4" /> {hotel.price}€ / {hotel.nights ? `${hotel.nights} nights` : "night"}
                   </p>
 
-                  {isExpanded && (
-                    <div className="mt-3 text-gray-800 text-sm">
-                      <p>{hotel.description}</p>
-                      <ul className="mt-2 list-disc list-inside text-gray-800">
-                        {hotel.amenities.map((a, i) => (
-                          <li key={i}>{a}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+{isExpanded && (
+  <div className="mt-3 text-gray-800 text-sm transition-all duration-300">
+    <p className="mb-2">{hotel.description}</p>
+    {hotel.amenities.length > 0 && (
+      <p className="text-gray-700">
+        {hotel.amenities.map((a, i) => (
+          <span key={i} className="bg-indigo-100 text-indigo-700 px-3 py-1 text-sm rounded-full inline-block mr-2 mb-1 last:mr-0">
+            {a}{i < hotel.amenities.length - 1}
+          </span>
+        ))}
+      </p>
+    )}
+  </div>
+)}
+
                   <button className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 hover:text-indigo-300 hover:transition-colors">
                     Book
                   </button>
