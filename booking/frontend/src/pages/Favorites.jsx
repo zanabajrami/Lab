@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { Heart } from "lucide-react";
+import { Heart, Users, BedDouble, HandCoins } from "lucide-react";
 import { hotels } from "./Hotels";
 
 function Favorites({ favorites, setFavorites }) {
   const [expandedIds, setExpandedIds] = useState([]);
+  // Në fillim të komponentit Favorites.jsx
+  const [selectedHotel, setSelectedHotel] = useState(null);
 
   const toggleFavorite = (id) => {
     setFavorites(prev => {
@@ -37,21 +39,25 @@ function Favorites({ favorites, setFavorites }) {
           Your Favorites
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {favoriteHotels.map((hotel) => {
             const isExpanded = expandedIds.includes(hotel.id);
             return (
               <div
                 key={hotel.id}
                 onClick={() => toggleExpand(hotel.id)}
-                className="relative rounded-3xl overflow-hidden cursor-pointer bg-white/60 backdrop-blur-xl border border-gray-300 shadow-lg hover:shadow-xl transition transform hover:scale-105"
+                className="relative rounded-3xl overflow-hidden bg-white/60 backdrop-blur-xl border border-gray-300 shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 cursor-pointer"
               >
                 <div className="relative h-48 w-full">
                   <img
                     src={hotel.images[0]}
                     alt={hotel.name}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
+                  <span className="absolute top-3 left-3 bg-black/50 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    ⭐ {hotel.rating || "N/A"}
+                  </span>
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
@@ -60,9 +66,7 @@ function Favorites({ favorites, setFavorites }) {
                     className="absolute top-3 right-3 bg-white/30 p-2 rounded-full hover:scale-110 transition"
                   >
                     <Heart
-                      className={`w-5 h-5 ${favorites.includes(hotel.id)
-                          ? "text-pink-600 fill-pink-500"
-                          : "text-gray-700"
+                      className={`w-5 h-5 ${favorites.includes(hotel.id) ? "text-pink-600 fill-pink-500" : "text-gray-700"
                         }`}
                     />
                   </button>
@@ -71,8 +75,20 @@ function Favorites({ favorites, setFavorites }) {
                 <div className="p-5 text-gray-700">
                   <h2 className="font-semibold text-xl">{hotel.name}</h2>
                   <p className="text-sm text-gray-600">{hotel.location}</p>
-                  <p className="text-gray-600 font-bold mt-2">
-                    {hotel.price}€ / night
+
+                  <div className="flex justify-between text-sm text-gray-600 mt-3">
+                    <span className="flex items-center gap-1">
+                      <BedDouble className="w-4 h-4" />
+                      {hotel.rooms === 1 ? "1 room" : `${hotel.rooms} rooms`}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Users className="w-4 h-4" />
+                      {hotel.capacity} {hotel.capacity === 1 ? "guest" : "guests"}
+                    </span>
+                  </div>
+
+                  <p className="text-gray-600 font-bold mt-2 flex items-center gap-1">
+                    <HandCoins className="w-4 h-4" /> {hotel.price}€ / {hotel.nights ? `${hotel.nights} nights` : "night"}
                   </p>
 
                   {isExpanded && (
@@ -85,11 +101,7 @@ function Favorites({ favorites, setFavorites }) {
                       </ul>
                     </div>
                   )}
-
-                  <button
-                    onClick={(e) => e.stopPropagation()}
-                    className="mt-4 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 hover:text-indigo-300 transition-colors"
-                  >
+                  <button className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 hover:text-indigo-300 hover:transition-colors">
                     Book
                   </button>
                 </div>
