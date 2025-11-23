@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { Heart, BedDouble, Users, HandCoins } from "lucide-react";
+import HotelCalendar from "../components/HotelCalendar";
 
 //Hotel
 import hotel1 from "../images/hotel1.jpg"; import hotel1_1 from "../images/hotel1_1.jpg"; import hotel1_2 from "../images/hotel1_2.avif";
@@ -640,6 +641,8 @@ export default function HotelsPage({ favorites, setFavorites }) {
   const location = useLocation();
   const query = new URLSearchParams(location.search);
   const initialTab = query.get("tab") || "all"; // merr tab nga URL ose "all" si default
+  const [showCalendar, setShowCalendar] = useState(false);
+  const [dateSelected, setDateSelected] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => setShowTopButton(window.scrollY > 300);
@@ -835,13 +838,51 @@ export default function HotelsPage({ favorites, setFavorites }) {
                     ? "View Apartment →"
                     : "View Hotel →"}
               </p>
-              <button className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 hover:text-indigo-300 hover:transition-colors">
+              <button
+                onClick={() => setShowCalendar(true)}
+                className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 hover:text-indigo-300 hover:transition-colors"
+              >
                 Book
               </button>
             </div>
           </div>
         ))}
       </div>
+      {showCalendar && (
+        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center z-50">
+          <div className="bg-white p-6 rounded-3xl shadow-xl">
+
+            {/* Calendar Component */}
+            <HotelCalendar
+              selectedDate={dateSelected}
+              setSelectedDate={setDateSelected}
+              minDate={new Date()}
+              unavailableDates={[]}
+            />
+
+            <div className="flex justify-between mt-4">
+              <button
+                onClick={() => setShowCalendar(false)}
+                className="px-4 py-2 rounded-xl bg-gray-300 hover:bg-gray-400"
+              >
+                Close
+              </button>
+
+              <button
+                onClick={() => {
+                  if (!dateSelected) return alert("Please select a date.");
+                  setShowCalendar(false);
+                  alert(`You selected: ${dateSelected.toDateString()}`);
+                }}
+                className="px-4 py-2 rounded-xl bg-indigo-900 text-white hover:bg-indigo-700"
+              >
+                Confirm
+              </button>
+            </div>
+
+          </div>
+        </div>
+      )}
 
       {/* Pagination */}
       <div className="flex justify-center gap-2 mt-8 flex-wrap">
