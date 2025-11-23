@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -643,6 +643,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
   const [showCalendar, setShowCalendar] = useState(false);
   const [checkInDate, setCheckInDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
+  const navigate = useNavigate();
 
   const handleConfirmDates = () => {
     if (!checkInDate) return alert("Please choose a check-in date.");
@@ -656,42 +657,72 @@ export default function HotelsPage({ favorites, setFavorites }) {
     setShowCalendar(false);
   };
 
-  useEffect(() => {
-    const handleScroll = () => setShowTopButton(window.scrollY > 300);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Kur ndryshon faqja, shko direkt në top të faqes
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [currentPage]);
-
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
   const locations = [
-    "all",
-    "Prishtina",
-    "Brezovicë",
-    "Sarandë",
-    "Himarë",
-    "Tirana",
-    "Pejë",
-    "Dhërmi",
-    "Prizren",
-    "Ksamil",
+    "all", "Prishtina", "Brezovicë", "Sarandë", "Himarë",
+    "Tirana", "Pejë", "Dhërmi", "Prizren", "Ksamil",
   ];
 
-  const filteredHotels = (hotels || []).filter((hotel) => {
-    // Tab filters
+  // Leximi i parametrit nga SearchBar
+  const [searchParams, setSearchParams] = useState({
+    destination: "",
+    startDate: "",
+    endDate: "",
+    guests: 1,
+    rooms: 1,
+  });
+
+  useEffect(() => {
+    const destination = query.get("destination") || "";
+    const startDate = query.get("startDate") || "";
+    const endDate = query.get("endDate") || "";
+    const guests = parseInt(query.get("guests")) || 1;
+    const rooms = parseInt(query.get("rooms")) || 1;
+
+    setSearchParams({ destination, startDate, endDate, guests, rooms });
+
+    setSelectedLocation(destination || "all");
+    setCurrentPage(1);
+  }, [location.search]);
+
+  const filteredHotels = hotels.filter((hotel) => {
+    // Filtrim sipas tab
     if (activeTab === "hotels" && !hotel.name.toLowerCase().includes("hotel")) return false;
     if (activeTab === "villas" && !(hotel.name.toLowerCase().includes("villa") || hotel.name.toLowerCase().includes("chalet"))) return false;
     if (activeTab === "apartments" && !hotel.name.toLowerCase().includes("apartment")) return false;
-    // Location filter (flexible)
+
+    // Filtrim sipas location dropdown
     if (selectedLocation !== "all" && !hotel.location.toLowerCase().includes(selectedLocation.toLowerCase()))
       return false;
+
+    // Filtrim sipas search bar vetëm nëse searchParams ekziston
+    if (searchParams.destination && searchParams.destination !== "") {
+      if (hotel.location.toLowerCase() !== searchParams.destination.toLowerCase()) return false;
+      if (searchParams.guests && hotel.capacity !== Number(searchParams.guests)) return false;
+      if (searchParams.rooms && hotel.rooms !== Number(searchParams.rooms)) return false;
+    }
     return true;
   });
+
+  const handleResetFilters = () => {
+    setSelectedLocation("all");  // reset location dropdown
+    setActiveTab("all");          // reset tab
+    setCurrentPage(1);            // shko tek page 1
+    setCheckInDate(null);         // reset calendar
+    setCheckOutDate(null);
+    setShowCalendar(false);       // mbyll calendarin
+
+    // Reset search bar params
+    setSearchParams({
+      destination: "",
+      startDate: "",
+      endDate: "",
+      guests: 1,
+      rooms: 1,
+    });
+
+    // Navigo tek faqja pa query params
+    navigate("/hotels");
+  };
 
   const totalPages = Math.ceil(filteredHotels.length / hotelsPerPage);
   const currentHotels = filteredHotels.slice(
@@ -762,6 +793,19 @@ export default function HotelsPage({ favorites, setFavorites }) {
     setCurrentPage(1); // scroll ose refresh i faqes te page 1
   }, [location.search]);
 
+  useEffect(() => {
+    const handleScroll = () => setShowTopButton(window.scrollY > 300);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Kur ndryshon faqja, shko direkt në top të faqes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <div className="px-6 py-8">
       {/* Tabs */}
@@ -781,7 +825,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
       </div>
 
       {/* Location Dropdown */}
-      <div className="flex justify-center mb-6">
+      <div className="flex justify-center mb-6 gap-4 items-center">
         <select
           value={selectedLocation}
           onChange={(e) => setSelectedLocation(e.target.value)}
@@ -793,6 +837,14 @@ export default function HotelsPage({ favorites, setFavorites }) {
             </option>
           ))}
         </select>
+
+        {/* Reset Filters Button */}
+        <button
+          onClick={handleResetFilters}  // thërret funksionin e kombinuar
+          className="px-4 py-2 rounded-2xl bg-indigo-300 text-indigo-900 font-semibold border border-indigo-800 hover:bg-indigo-200 transition"
+        >
+          Reset Filters
+        </button>
       </div>
 
       {/* Hotels Grid */}
