@@ -70,7 +70,7 @@ function SearchBar() {
   const [destination, setDestination] = useState("");
   const [guests, setGuests] = useState(1);
   const [rooms, setRooms] = useState(1);
-  const [error, setError] = useState(""); // për mesazhin e gabimit
+  const [setError] = useState(""); // për mesazhin e gabimit
 
   const destinations = ["Prishtina", "Tirana", "Brezovicë", "Dhërmi", "Ksamil", "Pejë", "Sarandë", "Prizren", "Himarë"];
 

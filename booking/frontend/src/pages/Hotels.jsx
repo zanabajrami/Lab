@@ -640,9 +640,21 @@ export default function HotelsPage({ favorites, setFavorites }) {
   const [selectedLocation, setSelectedLocation] = useState("all");
   const location = useLocation();
   const query = new URLSearchParams(location.search);
-  const initialTab = query.get("tab") || "all"; // merr tab nga URL ose "all" si default
   const [showCalendar, setShowCalendar] = useState(false);
-  const [dateSelected, setDateSelected] = useState(null);
+  const [checkInDate, setCheckInDate] = useState(null);
+  const [checkOutDate, setCheckOutDate] = useState(null);
+
+  const handleConfirmDates = () => {
+    if (!checkInDate) return alert("Please choose a check-in date.");
+    if (!checkOutDate) return alert("Please choose a check-out date.");
+
+    alert(`You selected: ${checkInDate.toDateString()} → ${checkOutDate.toDateString()}`);
+
+    // Reset calendar selections
+    setCheckInDate(null);
+    setCheckOutDate(null);
+    setShowCalendar(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => setShowTopButton(window.scrollY > 300);
@@ -848,18 +860,18 @@ export default function HotelsPage({ favorites, setFavorites }) {
           </div>
         ))}
       </div>
+
       {showCalendar && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center z-50">
-          <div className="bg-white p-6 rounded-3xl shadow-xl">
-
-            {/* Calendar Component */}
+          <div className="bg-white p-6 rounded-3xl shadow-xl ">
             <HotelCalendar
-              selectedDate={dateSelected}
-              setSelectedDate={setDateSelected}
+              checkInDate={checkInDate}
+              setCheckInDate={setCheckInDate}
+              checkOutDate={checkOutDate}
+              setCheckOutDate={setCheckOutDate}
               minDate={new Date()}
               unavailableDates={[]}
             />
-
             <div className="flex justify-between mt-4">
               <button
                 onClick={() => setShowCalendar(false)}
@@ -867,19 +879,12 @@ export default function HotelsPage({ favorites, setFavorites }) {
               >
                 Close
               </button>
-
               <button
-                onClick={() => {
-                  if (!dateSelected) return alert("Please select a date.");
-                  setShowCalendar(false);
-                  alert(`You selected: ${dateSelected.toDateString()}`);
-                }}
+                onClick={handleConfirmDates}
                 className="px-4 py-2 rounded-xl bg-indigo-900 text-white hover:bg-indigo-700"
-              >
-                Confirm
+              > Confirm
               </button>
             </div>
-
           </div>
         </div>
       )}
