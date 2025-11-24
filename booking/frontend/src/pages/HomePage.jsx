@@ -12,20 +12,16 @@ import { MapPin, Search, Hotel, CircleCheck, BedDouble, Users, HandCoins, Euro, 
 import mainImage from "../images/main.jpg";
 import prishtina0Image from "../images/prishtina-.jpeg";
 import prishtina3Image from "../images/prishtina0.jpg";
-import prishtina2Image from "../images/prishtina2.webp";
 
 import tirana0Image from "../images/tirana-.jpg";
 import tirana1Image from "../images/tirana0.webp";
-import tiranaImage from "../images/tirana.jpg";
 import tirana3Image from "../images/tirana3.jpg";
 
 import brezovica0Image from "../images/brezovica-.jpg";
 import brezovica1Image from "../images/brezovica0.webp";
-import brezovicaImage from "../images/brezovica.jpg";
 import brezovica3Image from "../images/villa9.jpg";
 
 import dhermi0Image from "../images/dhermi-.jpg";
-import dhermiImage from "../images/dhermi.jpg";
 
 import radhimeImage from "../images/radhime.jpg";
 import ksamil1 from "../images/ksamil1.jpg";
@@ -85,9 +81,6 @@ function HomePage() {
   const [loaded, setLoaded] = useState(false);
   const navigate = useNavigate();
   const [showTopButton, setShowTopButton] = useState(false);
-  const [selectedHotel, setSelectedHotel] = useState(null);
-  const [activeTab, setActiveTab] = useState("all"); // "all" si default
-  const [selectedLocation, setSelectedLocation] = useState("all");
 
   useEffect(() => {
     const img = new Image();
