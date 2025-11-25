@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -639,7 +639,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
   const hotelsPerPage = 20;
   const [selectedLocation, setSelectedLocation] = useState("all");
   const location = useLocation();
-  const query = new URLSearchParams(location.search);
+  const query = useMemo(() => new URLSearchParams(location.search), [location.search]);
   const [showCalendar, setShowCalendar] = useState(false);
   const [checkInDate, setCheckInDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
@@ -682,7 +682,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
 
     setSelectedLocation(destination || "all");
     setCurrentPage(1);
-  }, [location.search]);
+  }, [query]);
 
   const filteredHotels = hotels.filter((hotel) => {
     // Filtrim sipas tab
@@ -779,7 +779,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
     const tabFromURL = query.get("tab") || "all";
     setActiveTab(tabFromURL);
     setCurrentPage(1); // scroll ose refresh i faqes te page 1
-  }, [location.search]);
+  }, [query]);
 
   useEffect(() => {
     const handleScroll = () => setShowTopButton(window.scrollY > 300);

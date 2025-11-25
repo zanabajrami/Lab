@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Heart, Users, BedDouble, HandCoins } from "lucide-react";
 import { hotels } from "./Hotels";
 import HotelCalendar from "../components/HotelCalendar";
@@ -10,7 +9,6 @@ function Favorites({ favorites, setFavorites }) {
   const [showCalendar, setShowCalendar] = useState(false);
   const [checkInDate, setCheckInDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
-  const navigate = useNavigate();
 
   const handleConfirmDates = () => {
     if (!checkInDate) return alert("Please choose a check-in date.");
@@ -149,9 +147,10 @@ function Favorites({ favorites, setFavorites }) {
           })}
         </div>
 
-        {showCalendar && (
+        {showCalendar && selectedHotel && (
           <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center z-50">
             <div className="bg-white p-6 rounded-3xl shadow-xl ">
+              <h2 className="text-xl font-bold mb-4">{selectedHotel.name}</h2>
               <HotelCalendar
                 checkInDate={checkInDate}
                 setCheckInDate={setCheckInDate}
@@ -170,7 +169,8 @@ function Favorites({ favorites, setFavorites }) {
                 <button
                   onClick={handleConfirmDates}
                   className="px-4 py-2 rounded-xl bg-indigo-900 text-white hover:bg-indigo-700"
-                > Confirm
+                >
+                  Confirm
                 </button>
               </div>
             </div>
