@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 
 const HotelCalendar = ({
   checkInDate,
@@ -51,10 +51,16 @@ const HotelCalendar = ({
     if (!day || !checkInDate || !checkOutDate) return false;
     return day > checkInDate && day < checkOutDate;
   };
+  useEffect(() => {
+    document.body.style.overflow = "hidden"; // disable scroll when modal is mounted
+    return () => {
+      document.body.style.overflow = "auto"; // re-enable on unmount
+    };
+  }, []);
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-2">
+      <div className="flex justify-between items-center mb-2 ">
         <button
           onClick={() => setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1, 1))}
           className="px-2 py-1 rounded hover:bg-gray-200"

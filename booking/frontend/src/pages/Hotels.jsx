@@ -753,18 +753,6 @@ export default function HotelsPage({ favorites, setFavorites }) {
 
   useEffect(() => {
     if (selectedHotel) {
-      document.body.style.overflow = "hidden";   // blloko scroll-in
-    } else {
-      document.body.style.overflow = "auto";     // kthe normal
-    }
-
-    return () => {
-      document.body.style.overflow = "auto";     // siguri kur unmount
-    };
-  }, [selectedHotel]);
-
-  useEffect(() => {
-    if (selectedHotel) {
       // Bllokon scroll kur modal hapet
       document.body.style.overflow = "hidden";
     } else {

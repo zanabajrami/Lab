@@ -56,7 +56,7 @@ function SearchBar() {
   const handleSearch = () => {
     if (!destination) { setError("Please select a destination."); return; }
     if (!startDate || !endDate) { setError("Please select check-in and check-out dates."); return; }
-    if (new Date(endDate) < new Date(startDate)) { setError("Check-out must be after check-in."); return; }
+    if (new Date(endDate) < new Date(startDate)) { setError("Please select a valid check-out date."); return; }
     if (guests < 1) { setError("Add at least 1 guest."); return; }
     if (rooms < 1) { setError("Add at least 1 room."); return; }
 

@@ -1,11 +1,28 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Heart, Users, BedDouble, HandCoins } from "lucide-react";
 import { hotels } from "./Hotels";
+import HotelCalendar from "../components/HotelCalendar";
 
 function Favorites({ favorites, setFavorites }) {
   const [expandedIds, setExpandedIds] = useState([]);
-  // Në fillim të komponentit Favorites.jsx
   const [selectedHotel, setSelectedHotel] = useState(null);
+  const [showCalendar, setShowCalendar] = useState(false);
+  const [checkInDate, setCheckInDate] = useState(null);
+  const [checkOutDate, setCheckOutDate] = useState(null);
+  const navigate = useNavigate();
+
+  const handleConfirmDates = () => {
+    if (!checkInDate) return alert("Please choose a check-in date.");
+    if (!checkOutDate) return alert("Please choose a check-out date.");
+
+    alert(`You selected: ${checkInDate.toDateString()} → ${checkOutDate.toDateString()}`);
+
+    // Reset calendar selections
+    setCheckInDate(null);
+    setCheckOutDate(null);
+    setShowCalendar(false);
+  };
 
   const toggleFavorite = (id) => {
     setFavorites(prev => {
@@ -33,7 +50,7 @@ function Favorites({ favorites, setFavorites }) {
   }
 
   return (
-    <div className="min-h-screen py-10">
+    <div className="min-h-screen py-10 ">
       <div className="max-w-7xl mx-auto px-4">
         <h1 className="text-3xl font-extrabold mb-8 text-center text-gray-800 uppercase">
           Your Favorites
@@ -90,22 +107,40 @@ function Favorites({ favorites, setFavorites }) {
                     <HandCoins className="w-4 h-4" /> {hotel.price}€ / {hotel.nights ? `${hotel.nights} nights` : "night"}
                   </p>
 
-{isExpanded && (
-  <div className="mt-3 text-gray-800 text-sm transition-all duration-300">
-    <p className="mb-2">{hotel.description}</p>
-    {hotel.amenities.length > 0 && (
-      <p className="text-gray-700">
-        {hotel.amenities.map((a, i) => (
-          <span key={i} className="bg-indigo-100 text-indigo-700 px-3 py-1 text-sm rounded-full inline-block mr-2 mb-1 last:mr-0">
-            {a}{i < hotel.amenities.length - 1}
-          </span>
-        ))}
-      </p>
-    )}
-  </div>
-)}
+                  {/* Butoni More info */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation(); // mos me trigger card click
+                      toggleExpand(hotel.id);
+                    }}
+                    className="mt-2 text-sm font-semibold text-indigo-700 hover:underline"
+                  >
+                    More
+                  </button>
 
-                  <button className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 hover:text-indigo-300 hover:transition-colors">
+                  {isExpanded && (
+                    <div className="mt-3 text-gray-800 text-sm transition-all duration-300">
+                      <p className="mb-2">{hotel.description}</p>
+                      {hotel.amenities.length > 0 && (
+                        <p className="text-gray-700">
+                          {hotel.amenities.map((a, i) => (
+                            <span key={i} className="bg-indigo-100 text-indigo-700 px-3 py-1 text-sm rounded-full inline-block mr-2 mb-1 last:mr-0">
+                              {a}
+                            </span>
+                          ))}
+                        </p>
+                      )}
+                    </div>
+                  )}
+
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation(); // mos me hap info
+                      setSelectedHotel(hotel);
+                      setShowCalendar(true);
+                    }}
+                    className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 hover:text-indigo-300 hover:transition-colors"
+                  >
                     Book
                   </button>
                 </div>
@@ -113,6 +148,34 @@ function Favorites({ favorites, setFavorites }) {
             );
           })}
         </div>
+
+        {showCalendar && (
+          <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center z-50">
+            <div className="bg-white p-6 rounded-3xl shadow-xl ">
+              <HotelCalendar
+                checkInDate={checkInDate}
+                setCheckInDate={setCheckInDate}
+                checkOutDate={checkOutDate}
+                setCheckOutDate={setCheckOutDate}
+                minDate={new Date()}
+                unavailableDates={[]}
+              />
+              <div className="flex justify-between mt-4">
+                <button
+                  onClick={() => setShowCalendar(false)}
+                  className="px-4 py-2 rounded-xl bg-gray-300 hover:bg-gray-400"
+                >
+                  Close
+                </button>
+                <button
+                  onClick={handleConfirmDates}
+                  className="px-4 py-2 rounded-xl bg-indigo-900 text-white hover:bg-indigo-700"
+                > Confirm
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
