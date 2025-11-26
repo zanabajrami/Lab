@@ -182,6 +182,15 @@ export default function HotelsPage({ favorites, setFavorites }) {
   const nights = calculateNights(checkInDate, checkOutDate);
   const totalPrice = calendarHotel ? calendarHotel.price * nights : 0;
 
+  const [showInfoModal, setShowInfoModal] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+
+  const [phone, setPhone] = useState("");
+  const [guests, setGuests] = useState(1);
+  const [specialRequests, setSpecialRequests] = useState("");
+
   return (
     <div className="px-6 py-8">
       {/* Tabs */}
@@ -291,7 +300,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
           </div>
         ))}
       </div>
-{/* Modal */}
+      {/* Modal */}
       {selectedHotel && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-center z-50 px-4">
           <div className="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] p-6 relative shadow-2xl overflow-y-auto animate-fadeIn">
@@ -345,29 +354,22 @@ export default function HotelsPage({ favorites, setFavorites }) {
         </div>
       )}
 
-      {calendarHotel && (
+      {/* Modal për Calendar */}
+      {calendarHotel && !showInfoModal && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center z-50 px-4">
           <div className="relative bg-white p-6 rounded-3xl shadow-xl min-w-[350px]">
-            <button
-              onClick={() => setCalendarHotel(null)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
-            >
+            <button onClick={() => setCalendarHotel(null)} className="absolute top-4 right-4 text-gray-500 hover:text-gray-800" >
               <X />
             </button>
-
             <h2 className="text-xl font-bold text-gray-800 mb-2">
               {calendarHotel?.name}
             </h2>
-
-            <HotelCalendar
-              checkInDate={checkInDate}
+            <HotelCalendar checkInDate={checkInDate}
               setCheckInDate={setCheckInDate}
               checkOutDate={checkOutDate}
               setCheckOutDate={setCheckOutDate}
-              minDate={new Date()}
-              unavailableDates={[]}
+              minDate={new Date()} unavailableDates={[]}
             />
-
             <div className="flex justify-between items-center mt-4">
               {/* Total Price */}
               <p className="text-gray-800 font-semibold mt-3">
@@ -377,11 +379,112 @@ export default function HotelsPage({ favorites, setFavorites }) {
                 </span>
               </p>
               <button
-                onClick={handleConfirmDates}
+                onClick={() => {
+                  if (!checkInDate || !checkOutDate) {
+                    alert("Please select both Check-In and Check-Out dates before continuing.");
+                    return;
+                  }
+                  setShowInfoModal(true);
+                }}
                 className="px-4 py-2 rounded-xl bg-indigo-900 text-white hover:bg-indigo-700"
               >
                 Next
               </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showInfoModal && (
+        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center z-50 px-4">
+          <div className="relative bg-white p-6 rounded-3xl shadow-xl min-w-[350px] max-w-md w-full">
+            {/* Close Button */}
+            <button
+              onClick={() => {
+                setShowInfoModal(false); // mbyll Info modal
+                setCalendarHotel(null);   // mbyll Calendar modal gjithashtu
+              }}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
+            >
+              <X />
+            </button>
+
+            {/* Title */}
+            <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+              Your Info
+            </h2>
+
+            {/* Input Fields */}
+            <div className="flex flex-col gap-4">
+              <input
+                type="text"
+                placeholder="First Name"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+                className="border p-3 rounded-lg focus:outline-indigo-500"
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                required
+                className="border p-3 rounded-lg focus:outline-indigo-500"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="border p-3 rounded-lg focus:outline-indigo-500"
+              />
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+                className="border p-3 rounded-lg focus:outline-indigo-500"
+              />
+              <textarea
+                placeholder="Special Requests (optional)"
+                value={specialRequests}
+                onChange={(e) => setSpecialRequests(e.target.value)}
+                className="border p-3 rounded-lg focus:outline-indigo-500"
+                rows={3}
+              />
+            </div>
+
+            {/* Buttons poshte */}
+            <div className="flex justify-between mt-6">
+              <button
+                onClick={() => {
+                  setShowInfoModal(false);
+                }}
+                className="px-6 py-2 rounded-xl bg-gray-300 text-gray-800 hover:bg-gray-400"
+              >
+                Back
+              </button>
+
+              <button
+                onClick={() => {
+                  if (!firstName || !lastName || !email || !phone) {
+                    alert("Please fill in all required fields before continuing.");
+                    return;
+                  }
+                  console.log({
+                    firstName,
+                    lastName,
+                    email,
+                    phone,
+                    guests,
+                  });
+                }}
+                className="px-6 py-2 rounded-xl bg-indigo-900 text-white hover:bg-indigo-700"
+              >
+                Next </button>
             </div>
           </div>
         </div>
