@@ -6,8 +6,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { Heart, BedDouble, Users, HandCoins, X } from "lucide-react";
-import HotelCalendar from "../components/HotelCalendar";
 import { hotels } from "../data/HotelsData";
+import HotelCalendar from "../components/HotelCalendar";
+import PaymentForm from "../components/PaymentForm";
 
 export default function HotelsPage({ favorites, setFavorites }) {
   const [showTopButton, setShowTopButton] = useState(false);
@@ -23,6 +24,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
   const [checkOutDate, setCheckOutDate] = useState(null);
   const navigate = useNavigate();
   const [calendarHotel, setCalendarHotel] = useState(null);
+  const [showPayment, setShowPayment] = useState(false);
 
   const handleConfirmDates = () => {
     if (!checkInDate) return alert("Please choose a check-in date.");
@@ -188,8 +190,21 @@ export default function HotelsPage({ favorites, setFavorites }) {
   const [email, setEmail] = useState("");
 
   const [phone, setPhone] = useState("");
-  const [guests, setGuests] = useState(1);
   const [specialRequests, setSpecialRequests] = useState("");
+
+  const resetAllForms = () => {
+    // Reset InfoModal
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPhone("");
+    setSpecialRequests("");
+
+    // Reset Calendar
+    setCalendarHotel(null);
+    setCheckInDate(null);
+    setCheckOutDate(null);
+  };
 
   return (
     <div className="px-6 py-8">
@@ -364,14 +379,15 @@ export default function HotelsPage({ favorites, setFavorites }) {
             <h2 className="text-xl font-bold text-gray-800 mb-2">
               {calendarHotel?.name}
             </h2>
-            <HotelCalendar checkInDate={checkInDate}
+            <HotelCalendar
+              checkInDate={checkInDate}
               setCheckInDate={setCheckInDate}
               checkOutDate={checkOutDate}
               setCheckOutDate={setCheckOutDate}
-              minDate={new Date()} unavailableDates={[]}
+              minDate={new Date()}
+              unavailableDates={[]}
             />
             <div className="flex justify-between items-center mt-4">
-              {/* Total Price */}
               <p className="text-gray-800 font-semibold mt-3">
                 Total price for {nights} night{nights > 1 ? "s" : ""}:{" "}
                 <span className="text-indigo-700 font-bold">
@@ -398,96 +414,65 @@ export default function HotelsPage({ favorites, setFavorites }) {
       {showInfoModal && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center z-50 px-4">
           <div className="relative bg-white p-6 rounded-3xl shadow-xl min-w-[350px] max-w-md w-full">
-            {/* Close Button */}
             <button
               onClick={() => {
-                setShowInfoModal(false); // mbyll Info modal
-                setCalendarHotel(null);   // mbyll Calendar modal gjithashtu
+                setShowInfoModal(false);
+                resetAllForms();
               }}
               className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
             >
               <X />
             </button>
-
-            {/* Title */}
             <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
               Your Info
             </h2>
-
-            {/* Input Fields */}
             <div className="flex flex-col gap-4">
-              <input
-                type="text"
-                placeholder="First Name"
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                required
-                className="border p-3 rounded-lg focus:outline-indigo-500"
-              />
-              <input
-                type="text"
-                placeholder="Last Name"
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-                required
-                className="border p-3 rounded-lg focus:outline-indigo-500"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="border p-3 rounded-lg focus:outline-indigo-500"
-              />
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                required
-                className="border p-3 rounded-lg focus:outline-indigo-500"
-              />
-              <textarea
-                placeholder="Special Requests (optional)"
-                value={specialRequests}
-                onChange={(e) => setSpecialRequests(e.target.value)}
-                className="border p-3 rounded-lg focus:outline-indigo-500"
-                rows={3}
-              />
+              <input type="text" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} className="border p-3 rounded-lg focus:outline-indigo-500" />
+              <input type="text" placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} className="border p-3 rounded-lg focus:outline-indigo-500" />
+              <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className="border p-3 rounded-lg focus:outline-indigo-500" />
+              <input type="tel" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} className="border p-3 rounded-lg focus:outline-indigo-500" />
+              <textarea placeholder="Special Requests (optional)" value={specialRequests} onChange={(e) => setSpecialRequests(e.target.value)} className="border p-3 rounded-lg focus:outline-indigo-500" rows={3} />
             </div>
 
-            {/* Buttons poshte */}
             <div className="flex justify-between mt-6">
               <button
-                onClick={() => {
-                  setShowInfoModal(false);
-                }}
+                onClick={() => setShowInfoModal(false)}
                 className="px-6 py-2 rounded-xl bg-gray-300 text-gray-800 hover:bg-gray-400"
               >
                 Back
               </button>
-
               <button
                 onClick={() => {
                   if (!firstName || !lastName || !email || !phone) {
                     alert("Please fill in all required fields before continuing.");
                     return;
                   }
-                  console.log({
-                    firstName,
-                    lastName,
-                    email,
-                    phone,
-                    guests,
-                  });
+                  setShowInfoModal(false);
+                  setShowPayment(true);
                 }}
                 className="px-6 py-2 rounded-xl bg-indigo-900 text-white hover:bg-indigo-700"
               >
-                Next </button>
+                Next
+              </button>
             </div>
           </div>
         </div>
+      )}
+
+      {showPayment && (
+        <PaymentForm
+          title="Complete Your Payment"
+          amount={totalPrice ? `${totalPrice}€` : "$199"}
+          onClose={() => {
+            setShowPayment(false);
+            setShowInfoModal(false);
+            resetAllForms(); // ky do të pastrojë gjithçka
+          }}
+          onSubmit={(method) => {
+            console.log("Payment method:", method);
+            resetAllForms(); // gjithashtu reset pas submit
+          }}
+        />
       )}
 
       {/* Pagination */}
