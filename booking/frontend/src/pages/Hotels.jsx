@@ -206,6 +206,10 @@ export default function HotelsPage({ favorites, setFavorites }) {
     setCheckOutDate(null);
   };
 
+const numNights = checkInDate && checkOutDate
+  ? Math.ceil((new Date(checkOutDate) - new Date(checkInDate)) / (1000 * 60 * 60 * 24))
+  : 0;
+
   return (
     <div className="px-6 py-8">
       {/* Tabs */}
@@ -371,7 +375,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
 
       {/* Modal për Calendar */}
       {calendarHotel && !showInfoModal && (
-        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center z-50 px-4">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50 px-4">
           <div className="relative bg-white p-6 rounded-3xl shadow-xl min-w-[350px]">
             <button onClick={() => setCalendarHotel(null)} className="absolute top-4 right-4 text-gray-500 hover:text-gray-800" >
               <X />
@@ -402,9 +406,9 @@ export default function HotelsPage({ favorites, setFavorites }) {
                   }
                   setShowInfoModal(true);
                 }}
-                className="px-4 py-2 rounded-xl bg-indigo-900 text-white hover:bg-indigo-700"
+                className="px-4 py-2 rounded-xl bg-gray-900 text-white hover:bg-indigo-900"
               >
-                Next
+                Next ❯
               </button>
             </div>
           </div>
@@ -412,7 +416,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
       )}
 
       {showInfoModal && (
-        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center z-50 px-4">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50 px-4">
           <div className="relative bg-white p-6 rounded-3xl shadow-xl min-w-[350px] max-w-md w-full">
             <button
               onClick={() => {
@@ -439,7 +443,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
                 onClick={() => setShowInfoModal(false)}
                 className="px-6 py-2 rounded-xl bg-gray-300 text-gray-800 hover:bg-gray-400"
               >
-                Back
+               ❮ Back
               </button>
               <button
                 onClick={() => {
@@ -450,9 +454,9 @@ export default function HotelsPage({ favorites, setFavorites }) {
                   setShowInfoModal(false);
                   setShowPayment(true);
                 }}
-                className="px-6 py-2 rounded-xl bg-indigo-900 text-white hover:bg-indigo-700"
+                className="px-6 py-2 rounded-xl bg-gray-900 text-white hover:bg-indigo-900"
               >
-                Next
+                Next ❯
               </button>
             </div>
           </div>
@@ -462,15 +466,21 @@ export default function HotelsPage({ favorites, setFavorites }) {
       {showPayment && (
         <PaymentForm
           title="Complete Your Payment"
-          amount={totalPrice ? `${totalPrice}€` : "$199"}
+          amount={`${totalPrice}€`}
+          hotelName={calendarHotel?.name}
+          numNights={numNights}
           onClose={() => {
             setShowPayment(false);
             setShowInfoModal(false);
-            resetAllForms(); // ky do të pastrojë gjithçka
+            resetAllForms();
           }}
           onSubmit={(method) => {
-            console.log("Payment method:", method);
-            resetAllForms(); // gjithashtu reset pas submit
+            console.log(method);
+            resetAllForms();
+          }}
+          onBack={() => {
+            setShowPayment(false);
+            setShowInfoModal(true);
           }}
         />
       )}
