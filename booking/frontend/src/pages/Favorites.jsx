@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Heart, Users, BedDouble, HandCoins } from "lucide-react";
-import { hotels } from "./Hotels";
+import { hotels } from "../data/HotelsData";
 import HotelCalendar from "../components/HotelCalendar";
 
 function Favorites({ favorites, setFavorites }) {
