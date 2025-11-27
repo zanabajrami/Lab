@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import Contact from "../pages/Contact";
+import Contact from "./Contact";
 import { Menu, X ,Heart} from "lucide-react";
 
 function Header() {

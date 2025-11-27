@@ -1,5 +1,6 @@
-import React ,{ useState } from "react";
 import { Link } from "react-router-dom";
+import { Hotel } from "lucide-react";
+import Contact from "./Contact";
 
 function IconFacebook() {
     return (
@@ -25,8 +26,7 @@ function IconTwitter() {
     );
 }
 
-export default function Footer() {
-const [showContact, setShowContact] = useState(false);
+export default function Footer({ onShowContact }) {
 
     return (
         <footer className="bg-gradient-to-r from-indigo-300/30 via-indigo-200/30 to-indigo-400/30 backdrop-blur-md text-gray-900 py-10 mt-auto rounded-t-3xl shadow-inner">
@@ -35,7 +35,8 @@ const [showContact, setShowContact] = useState(false);
                 <div>
                     <h2 className="text-2xl font-bold mb-3 text-indigo-900">BookInn</h2>
                     <p className="text-sm text-gray-800">
-                        Discover the best hotels, amazing deals, and exclusive offers. Stay comfortable with BookInn 🏢
+                        Discover the best hotels, amazing deals, and exclusive offers.
+                        Stay comfortable with BookInn <Hotel className="w-4 h-4 mb-2 inline-block text-indigo-600" />
                     </p>
                 </div>
 
@@ -46,14 +47,12 @@ const [showContact, setShowContact] = useState(false);
                         <li className="hover:text-indigo-600 cursor-pointer transition">
                             <Link to="/hotels">Hotel Booking</Link>
                         </li>
-                        <li className="hover:text-indigo-600 cursor-pointer transition">Room Upgrades</li>
-                        <li className="hover:text-indigo-600 cursor-pointer transition">Reservation Cancellation</li>
-                        <li
+                        <button
                             className="hover:text-indigo-600 cursor-pointer transition"
-                            onClick={() => setShowContact(true)}
+                            onClick={onShowContact}
                         >
                             Customer Support
-                        </li>
+                        </button>
                     </ul>
                 </div>
 

@@ -10,6 +10,7 @@ import Deals from "./pages/Deals";
 import Favorites from "./pages/Favorites";
 import Destinations from "./pages/Destinations";
 import Hotels from "./pages/Hotels";
+import Contact from './components/Contact';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -26,6 +27,7 @@ function ScrollToTop() {
 }
 
 function MainWrapper() {
+  const [showContact, setShowContact] = useState(false);
   const location = useLocation();
   const [favorites, setFavorites] = useState(() => {
     return JSON.parse(localStorage.getItem("favorites")) || [];
@@ -50,7 +52,8 @@ function MainWrapper() {
           <Route path="/hotels" element={<Hotels favorites={favorites} setFavorites={setFavorites} />} />
         </Routes>
       </main>
-      <Footer />
+      <Footer onShowContact={() => setShowContact(true)} />
+      {showContact && <Contact onClose={() => setShowContact(false)} />}
     </div>
   );
 }
