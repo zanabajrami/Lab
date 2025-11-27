@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{ useState } from "react";
 import { Link } from "react-router-dom";
 
 function IconFacebook() {
@@ -26,6 +26,7 @@ function IconTwitter() {
 }
 
 export default function Footer() {
+const [showContact, setShowContact] = useState(false);
 
     return (
         <footer className="bg-gradient-to-r from-indigo-300/30 via-indigo-200/30 to-indigo-400/30 backdrop-blur-md text-gray-900 py-10 mt-auto rounded-t-3xl shadow-inner">
@@ -42,10 +43,17 @@ export default function Footer() {
                 <div>
                     <h3 className="text-lg font-semibold mb-3 text-indigo-900">Services</h3>
                     <ul className="space-y-2 text-gray-700">
-                        <li className="hover:text-indigo-600 cursor-pointer transition">Hotel Booking</li>
+                        <li className="hover:text-indigo-600 cursor-pointer transition">
+                            <Link to="/hotels">Hotel Booking</Link>
+                        </li>
                         <li className="hover:text-indigo-600 cursor-pointer transition">Room Upgrades</li>
                         <li className="hover:text-indigo-600 cursor-pointer transition">Reservation Cancellation</li>
-                        <li className="hover:text-indigo-600 cursor-pointer transition">Customer Support</li>
+                        <li
+                            className="hover:text-indigo-600 cursor-pointer transition"
+                            onClick={() => setShowContact(true)}
+                        >
+                            Customer Support
+                        </li>
                     </ul>
                 </div>
 
@@ -53,9 +61,9 @@ export default function Footer() {
                 <div>
                     <h3 className="text-lg font-semibold mb-3 text-indigo-900">Destinations</h3>
                     <ul className="space-y-2 text-gray-700">
-                        {["Prishtina", "Tirana", "Brezovica", "Dhërmi", "Ksamil", "Pejë", "Sarandë", "Prizren", "Himarë", "Korçë"].map(city => (
-                            <li key={city} className="hover:text-indigo-600 cursor-pointer transition">{city}</li>
-                        ))}
+                        <li className="hover:text-indigo-600 cursor-pointer transition">
+                            <Link to="/destinations">Explore Destinations</Link>
+                        </li>
                     </ul>
                 </div>
 
