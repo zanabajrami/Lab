@@ -7,18 +7,15 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 import SearchBar from "../components/SearchBar";
 import { useNavigate } from "react-router-dom";
-import { MapPin, Search, Hotel, CircleCheck, BedDouble, Users, HandCoins, Euro, Phone, LockKeyhole, Clock, MessageCircle, MessageSquareText } from "lucide-react";
+import { Search, Hotel, CircleCheck, BedDouble, Users, HandCoins, Euro, Phone, LockKeyhole, Clock, MessageCircle, MessageSquareText } from "lucide-react";
 
 import mainImage from "../images/main.jpg";
 import prishtina0Image from "../images/prishtina-.jpeg";
-import prishtina3Image from "../images/prishtina0.jpg";
 
 import tirana0Image from "../images/tirana-.jpg";
-import tirana1Image from "../images/tirana0.webp";
 import tirana3Image from "../images/tirana3.jpg";
 
 import brezovica0Image from "../images/brezovica-.jpg";
-import brezovica1Image from "../images/brezovica0.webp";
 import brezovica3Image from "../images/villa9.jpg";
 
 import dhermi0Image from "../images/dhermi-.jpg";
@@ -27,7 +24,6 @@ import radhimeImage from "../images/radhime.jpg";
 import ksamil1 from "../images/ksamil1.jpg";
 
 import sarande0Image from "../images/sarande0.jpg";
-import sarande1Image from "../images/sarande1.jpeg";
 
 import peja0Image from "../images/peja0.jpg";
 import prizren0Image from "../images/prizren0.jpg";
@@ -171,47 +167,6 @@ function HomePage() {
             </div>
           ))}
         </Slider>
-      </section>
-
-      <section className="py-16 text-center items-center justify-center">
-        <h1 className="text-3xl mb-5 drop-shadow-lg tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2 mx-auto w-[85%] text-center bg-clip-text text-transparent bg-gray-600 uppercase">
-          <MapPin className="w-6 h-6 text-gray-600 flex-shrink-0" />
-          Trending
-          <MapPin className="w-6 h-6 text-gray-600 flex-shrink-0" />
-        </h1>
-        <div onClick={() => navigate("/destinations")}
-          className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto" >
-          {[
-            { img: tirana1Image, name: "Tiranë" },
-            { img: sarande1Image, name: "Sarandë" },
-            { img: prishtina3Image, name: "Prishtinë" },
-            { img: brezovica1Image, name: "Brezovicë" },
-          ].map((dest, i) => (
-            <div
-              key={i}
-              className="relative overflow-hidden rounded-2xl w-[85%] sm:w-[40%] md:w-[30%] lg:w-[22%]
-          h-56 sm:h-52 md:h-56 lg:h-60 transform transition-all duration-500
-          shadow-[0_20px_60px_rgba(0,0,0,0.4)] hover:scale-105 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] group" >
-
-              {/* Fotoja */}
-              <img
-                src={dest.img}
-                alt={dest.name}
-                className="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm group-hover:brightness-90"
-              />
-
-              {/* Gradient overlay */}
-              <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent text-white text-center py-2 font-semibold text-lg">
-                {dest.name}
-              </div>
-
-              {/* Teksti në hover */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 bg-black/40 text-white text-m font-semibold">
-                More →
-              </div>
-            </div>
-          ))}
-        </div>
       </section>
 
       {/* Kategoritë: Hotele, Villa, Apartamente */}
@@ -366,147 +321,6 @@ function HomePage() {
         </div>
       </div>
 
-      <section className="max-w-7xl mx-auto px-4 py-16 -mt-5 text-center">
-        {/* Section heading */}
-        <h2
-          className="relative text-2xl md:text-3xl mb-12 tracking-tight inline-block overflow-hidden bg-clip-text text-transparent bg-gray-600 uppercase drop-shadow-lg"
-          data-aos="fade-up"
-          data-aos-duration="900"
-        > Steps
-          <span className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#A7C7E7] to-[#C8B6E2] animate-[slide_2s_ease-in-out_infinite]"></span>
-          <style>{`
-      @keyframes slide {
-        0% { transform: translateX(-100%); }
-        50% { transform: translateX(0); }
-        100% { transform: translateX(100%); }
-      }
-    `}</style>
-        </h2>
-
-        {/* Container with cards and colored blobs */}
-        <div className="relative overflow-hidden rounded-3xl p-12 bg-gray-900">
-          {/* Soft pastel blobs */}
-          <div className="absolute top-0 left-1/4 w-72 h-72 bg-[#F2C6DE] opacity-40 rounded-full blur-3xl animate-blob"></div>
-          <div className="absolute top-10 right-1/4 w-80 h-80 bg-[#A7C7E7] opacity-35 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-[#C8B6E2] opacity-35 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
-
-          {/* Cards grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative z-10">
-
-            {/* Card 1 */}
-            <div
-              className="p-6 bg-gray-900/50 backdrop-blur-md rounded-3xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer relative z-10 group flex flex-col items-center text-center"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div className="text-5xl mb-4 animate-bounce">
-                <Search className="w-10 h-10 text-[#9BA3EB]" />
-              </div>
-              <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-[#A7C7E7]">
-                Kërko
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Gjeni hotelin ideal sipas vendndodhjes, çmimit dhe datës.
-              </p>
-              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-[#F2C6DE] to-[#C8B6E2] rounded-full transition-all duration-500 group-hover:w-full"></div>
-            </div>
-
-            {/* Card 2 */}
-            <div
-              className="p-6 bg-gray-900/50 backdrop-blur-md rounded-3xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer relative z-10 group flex flex-col items-center text-center"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <div className="text-5xl mb-4 animate-bounce">
-                <Hotel className="w-10 h-10 text-[#9BA3EB]" />
-              </div>
-              <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-[#A7C7E7]">
-                Zgjedh
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Shfletoni ofertat dhe shikoni detajet e çdo hoteli.
-              </p>
-              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-[#F2C6DE] to-[#C8B6E2] rounded-full transition-all duration-500 group-hover:w-full"></div>
-            </div>
-
-            {/* Card 3 */}
-            <div
-              className="p-6 bg-gray-900/50 backdrop-blur-md rounded-3xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer relative z-10 group flex flex-col items-center text-center"
-              data-aos="zoom-in"
-              data-aos-delay="300"
-            >
-              <div className="text-5xl mb-4 animate-bounce">
-                <CircleCheck className="w-10 h-10 text-[#9BA3EB]" />
-              </div>
-              <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-[#A7C7E7]">
-                Rezervo
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Rezervoni me disa klikime dhe merrni konfirmimin menjëherë.
-              </p>
-              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-[#F2C6DE] to-[#C8B6E2] rounded-full transition-all duration-500 group-hover:w-full"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pse të zgjedhësh */}
-      <section className="max-w-7xl mx-auto px-4 py-20 -mt-5 text-center relative overflow-hidden">
-        {/* Section heading */}
-        <h2
-          className="relative text-2xl md:text-3xl mb-12 tracking-tight inline-block overflow-hidden bg-clip-text text-transparent bg-gray-600 uppercase drop-shadow-lg"
-          data-aos="fade-up"
-          data-aos-duration="900"
-        >
-          Benefits
-          <span className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#A7C7E7] to-[#C8B6E2] animate-[slide_2s_ease-in-out_infinite]"></span>
-
-          <style>{`
-      @keyframes slide {
-        0% { transform: translateX(-100%); }
-        50% { transform: translateX(0); }
-        100% { transform: translateX(100%); }
-      }
-    `}</style>
-        </h2>
-
-        {/* Flex container with cards and colored blobs */}
-        <div className="flex flex-wrap justify-center gap-8 relative z-10 overflow-hidden rounded-3xl p-12 bg-gray-900">
-          {/* Colored blobs inside container */}
-          <div className="absolute top-0 left-1/4 w-72 h-72 bg-[#F2C6DE] opacity-40 rounded-full blur-3xl animate-blob"></div>
-          <div className="absolute top-10 right-1/4 w-80 h-80 bg-[#A7C7E7] opacity-35 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-[#C8B6E2] opacity-35 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
-          {/* Cards */}
-          {[
-            { icon: <Clock className="w-10 h-10 text-[#9BA3EB]" />, title: "Rezervim i shpejtë", text: "Proces i lehtë dhe i menjëhershëm.", delay: 100 },
-            { icon: <Euro className="w-10 h-10 text-[#9BA3EB]" />, title: "Çmime më të mira", text: "Krahaso dhe gjej ofertën më të volitshme.", delay: 200 },
-            { icon: <LockKeyhole className="w-10 h-10 text-[#9BA3EB]" />, title: "Rezervim i sigurt", text: "Të dhënat dhe pagesat mbrohen maksimalisht.", delay: 300 },
-            { icon: <Phone className="w-10 h-10 text-[#9BA3EB]" />, title: "Mbështetje 24/7", text: "Ekipi ynë është gjithmonë në dispozicionin tënd.", delay: 400 },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="flex-1 min-w-[220px] max-w-[250px] p-8 bg-gray-800/70 backdrop-blur-md rounded-3xl shadow-2xl hover:shadow-4xl transform hover:-translate-y-4 hover:scale-110 hover:rotate-1 transition-all duration-700 cursor-pointer relative overflow-hidden group flex flex-col items-center text-center"
-              data-aos="fade-up"
-              data-aos-delay={item.delay}
-              data-aos-duration="800"
-            >
-              {/* Subtle floating accents */}
-              <div className="absolute -top-10 -right-10 w-24 h-24 bg-white/20 rounded-full blur-2xl animate-blob animation-delay-1000"></div>
-
-              {/* Card content */}
-              <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="text-7xl mb-4 animate-pulse">{item.icon}</div>
-                <h3 className="font-bold text-xl mb-2 text-gray-300 group-hover:text-indigo-400 transition-colors duration-500">{item.title}</h3>
-                <p className="text-sm text-gray-400">{item.text}</p>
-
-                {/* Animated underline */}
-                <div className="mt-4 h-1 w-12 bg-gradient-to-r from-pink-400 to-blue-400 rounded-full mx-auto scale-x-75 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
-              </div>
-            </div>
-
-          ))}
-        </div>
-      </section>
 
       {/* Sugjerimet */}
       <section className="py-12 -mt-10">
@@ -641,50 +455,142 @@ function HomePage() {
               </div>
             ))}
           </div>
-          <button
-            onClick={scrollToTop}
-            className={`fixed bottom-8 right-8 p-4 rounded-full bg-gray-800 text-white shadow-lg border border-gray-500 hover:bg-gray-700 transition-opacity duration-300 z-50
-          ${showTopButton ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-          >
-            ▲
-          </button>
         </div>
-
-        <style>
-          {`
-      @keyframes wave {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-20px); }
-        100% { transform: translateY(0); }
-      }
-      .animate-wave { animation: wave infinite ease-in-out; }
-
-      @keyframes ping-slow {
-        0%, 100% { transform: scale(1); opacity: 0.4; }
-        50% { transform: scale(1.2); opacity: 0.7; }
-      }
-      .animate-ping-slow { animation: ping-slow 5s ease-in-out infinite; }
-
-      @keyframes bounce-slow {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-15px); }
-      }
-      .animate-bounce-slow { animation: bounce-slow 6s ease-in-out infinite; }
-
-      @keyframes spin-slow {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-      .animate-spin-slow { animation: spin-slow 20s linear infinite; }
-      
-      @keyframes spin-fast {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-      .animate-spin-fast { animation: spin-fast 1s linear infinite; }
-    `}
-        </style>
       </section>
+
+      <section className="max-w-7xl mx-auto px-4 py-16 -mt-5 text-center">
+        {/* Section heading */}
+        <h2
+          className="relative text-2xl md:text-3xl mb-12 tracking-tight inline-block overflow-hidden bg-clip-text text-transparent bg-gray-600 uppercase drop-shadow-lg"
+          data-aos="fade-up"
+          data-aos-duration="900"
+        > Steps
+          <span className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#A7C7E7] to-[#C8B6E2] animate-[slide_2s_ease-in-out_infinite]"></span>
+        </h2>
+
+        {/* Container with cards and colored blobs */}
+        <div className="relative overflow-hidden rounded-3xl p-12 bg-gray-900">
+          {/* Soft pastel blobs */}
+          <div className="absolute top-0 left-1/4 w-72 h-72 bg-[#F2C6DE] opacity-40 rounded-full blur-3xl animate-blob"></div>
+          <div className="absolute top-10 right-1/4 w-80 h-80 bg-[#A7C7E7] opacity-35 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-[#C8B6E2] opacity-35 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+
+          {/* Cards grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative z-10">
+
+            {/* Card 1 */}
+            <div
+              className="p-6 bg-gray-900/50 backdrop-blur-md rounded-3xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer relative z-10 group flex flex-col items-center text-center"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <div className="text-5xl mb-4 animate-bounce">
+                <Search className="w-10 h-10 text-[#9BA3EB]" />
+              </div>
+              <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-[#A7C7E7]">
+                Kërko
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Gjeni hotelin ideal sipas vendndodhjes, çmimit dhe datës.
+              </p>
+              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-[#F2C6DE] to-[#C8B6E2] rounded-full transition-all duration-500 group-hover:w-full"></div>
+            </div>
+
+            {/* Card 2 */}
+            <div
+              className="p-6 bg-gray-900/50 backdrop-blur-md rounded-3xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer relative z-10 group flex flex-col items-center text-center"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div className="text-5xl mb-4 animate-bounce">
+                <Hotel className="w-10 h-10 text-[#9BA3EB]" />
+              </div>
+              <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-[#A7C7E7]">
+                Zgjedh
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Shfletoni ofertat dhe shikoni detajet e çdo hoteli.
+              </p>
+              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-[#F2C6DE] to-[#C8B6E2] rounded-full transition-all duration-500 group-hover:w-full"></div>
+            </div>
+
+            {/* Card 3 */}
+            <div
+              className="p-6 bg-gray-900/50 backdrop-blur-md rounded-3xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer relative z-10 group flex flex-col items-center text-center"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <div className="text-5xl mb-4 animate-bounce">
+                <CircleCheck className="w-10 h-10 text-[#9BA3EB]" />
+              </div>
+              <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-[#A7C7E7]">
+                Rezervo
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Rezervoni me disa klikime dhe merrni konfirmimin menjëherë.
+              </p>
+              <div className="mt-4 h-1 w-16 bg-gradient-to-r from-[#F2C6DE] to-[#C8B6E2] rounded-full transition-all duration-500 group-hover:w-full"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pse të zgjedhësh */}
+      <section className="max-w-7xl mx-auto px-4 py-20 -mt-5 text-center relative overflow-hidden">
+        {/* Section heading */}
+        <h2
+          className="relative text-2xl md:text-3xl mb-12 tracking-tight inline-block overflow-hidden bg-clip-text text-transparent bg-gray-600 uppercase drop-shadow-lg"
+          data-aos="fade-up"
+          data-aos-duration="900"
+        >
+          Benefits
+          <span className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#A7C7E7] to-[#C8B6E2] animate-[slide_2s_ease-in-out_infinite]"></span>
+        </h2>
+
+        {/* Flex container with cards and colored blobs */}
+        <div className="flex flex-wrap justify-center gap-8 relative z-10 overflow-hidden rounded-3xl p-12 bg-gray-900">
+          {/* Colored blobs inside container */}
+          <div className="absolute top-0 left-1/4 w-72 h-72 bg-[#F2C6DE] opacity-40 rounded-full blur-3xl animate-blob"></div>
+          <div className="absolute top-10 right-1/4 w-80 h-80 bg-[#A7C7E7] opacity-35 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-[#C8B6E2] opacity-35 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+          {/* Cards */}
+          {[
+            { icon: <Clock className="w-10 h-10 text-[#9BA3EB]" />, title: "Rezervim i shpejtë", text: "Proces i lehtë dhe i menjëhershëm.", delay: 100 },
+            { icon: <Euro className="w-10 h-10 text-[#9BA3EB]" />, title: "Çmime më të mira", text: "Krahaso dhe gjej ofertën më të volitshme.", delay: 200 },
+            { icon: <LockKeyhole className="w-10 h-10 text-[#9BA3EB]" />, title: "Rezervim i sigurt", text: "Të dhënat dhe pagesat mbrohen maksimalisht.", delay: 300 },
+            { icon: <Phone className="w-10 h-10 text-[#9BA3EB]" />, title: "Mbështetje 24/7", text: "Ekipi ynë është gjithmonë në dispozicionin tënd.", delay: 400 },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="flex-1 min-w-[220px] max-w-[250px] p-8 bg-gray-800/70 backdrop-blur-md rounded-3xl shadow-2xl hover:shadow-4xl transform hover:-translate-y-4 hover:scale-110 hover:rotate-1 transition-all duration-700 cursor-pointer relative overflow-hidden group flex flex-col items-center text-center"
+              data-aos="fade-up"
+              data-aos-delay={item.delay}
+              data-aos-duration="800"
+            >
+              {/* Subtle floating accents */}
+              <div className="absolute -top-10 -right-10 w-24 h-24 bg-white/20 rounded-full blur-2xl animate-blob animation-delay-1000"></div>
+
+              {/* Card content */}
+              <div className="relative z-10 flex flex-col items-center text-center">
+                <div className="text-7xl mb-4 animate-pulse">{item.icon}</div>
+                <h3 className="font-bold text-xl mb-2 text-gray-300 group-hover:text-indigo-400 transition-colors duration-500">{item.title}</h3>
+                <p className="text-sm text-gray-400">{item.text}</p>
+
+                {/* Animated underline */}
+                <div className="mt-4 h-1 w-12 bg-gradient-to-r from-pink-400 to-blue-400 rounded-full mx-auto scale-x-75 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+              </div>
+            </div>
+
+          ))}
+        </div>
+      </section>
+      <button
+        onClick={scrollToTop}
+        className={`fixed bottom-8 right-8 p-4 rounded-full bg-gray-800 text-white shadow-lg border border-gray-500 hover:bg-gray-700 transition-opacity duration-300 z-50
+          ${showTopButton ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+      >
+        ▲
+      </button>
     </div >
   );
 }
