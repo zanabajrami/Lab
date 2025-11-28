@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Hotel } from "lucide-react";
-import Contact from "./Contact";
 
 function IconFacebook() {
     return (

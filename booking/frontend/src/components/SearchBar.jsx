@@ -50,7 +50,7 @@ function SearchBar() {
 
   const destinations = ["Prishtina", "Tirana", "Brezovicë", "Dhërmi", "Ksamil", "Pejë", "Sarandë", "Prizren", "Himarë"];
 
-  const increment = (setter, value, max = 10) => setter(value < max ? value + 1 : value);
+  const increment = (setter, value, max = 15) => setter(value < max ? value + 1 : value);
   const decrement = (setter, value, min = 1) => setter(value > min ? value - 1 : value);
 
   const handleSearch = () => {
@@ -114,9 +114,21 @@ function SearchBar() {
       <div className="flex items-center px-3 md:px-5 py-3 border-b md:border-b-0 md:border-r border-white/30 rounded-2xl hover:bg-white/20 transition-colors duration-300 cursor-pointer justify-between w-full md:w-auto mb-2 md:mb-0">
         <User className="w-5 md:w-6 h-5 md:h-6 text-white mr-2 md:mr-3" />
         <div className="flex items-center gap-1 md:gap-2">
-          <button onClick={() => decrement(setGuests, guests)} className="px-2 py-1 bg-white/20 rounded-full text-sm md:text-base">-</button>
-          <span className="text-white text-sm md:text-base">{guests} Guests</span>
-          <button onClick={() => increment(setGuests, guests)} className="px-2 py-1 bg-white/20 rounded-full text-sm md:text-base">+</button>
+          <button
+            onClick={() => decrement(setGuests, guests)}
+            className="px-2 py-1 bg-white/20 rounded-full text-sm md:text-base"
+          >
+            -
+          </button>
+          <span className="text-white text-sm md:text-base">
+            {guests} {guests === 1 ? "Guest" : "Guests"}
+          </span>
+          <button
+            onClick={() => increment(setGuests, guests, 15)} // MAX 15
+            className="px-2 py-1 bg-white/20 rounded-full text-sm md:text-base"
+          >
+            +
+          </button>
         </div>
       </div>
 
@@ -124,9 +136,21 @@ function SearchBar() {
       <div className="flex items-center px-3 md:px-5 py-3 hover:bg-white/20 transition-colors duration-300 cursor-pointer rounded-2xl justify-between w-full md:w-auto mb-2 md:mb-0">
         <BedDouble className="w-5 md:w-6 h-5 md:h-6 text-white mr-2 md:mr-3" />
         <div className="flex items-center gap-1 md:gap-2">
-          <button onClick={() => decrement(setRooms, rooms)} className="px-2 py-1 bg-white/20 rounded-full text-sm md:text-base">-</button>
-          <span className="text-white text-sm md:text-base">{rooms} Rooms</span>
-          <button onClick={() => increment(setRooms, rooms)} className="px-2 py-1 bg-white/20 rounded-full text-sm md:text-base">+</button>
+          <button
+            onClick={() => decrement(setRooms, rooms)}
+            className="px-2 py-1 bg-white/20 rounded-full text-sm md:text-base"
+          >
+            -
+          </button>
+          <span className="text-white text-sm md:text-base">
+            {rooms} {rooms === 1 ? "Room" : "Rooms"}
+          </span>
+          <button
+            onClick={() => increment(setRooms, rooms, 6)} // MAX 6
+            className="px-2 py-1 bg-white/20 rounded-full text-sm md:text-base"
+          >
+            +
+          </button>
         </div>
       </div>
 
