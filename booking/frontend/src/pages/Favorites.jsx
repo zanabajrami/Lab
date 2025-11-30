@@ -1,26 +1,9 @@
 import { useState } from "react";
 import { Heart, Users, BedDouble, HandCoins } from "lucide-react";
 import { hotels } from "../data/HotelsData";
-import HotelCalendar from "../components/HotelCalendar";
 
 function Favorites({ favorites, setFavorites }) {
   const [expandedIds, setExpandedIds] = useState([]);
-  const [selectedHotel, setSelectedHotel] = useState(null);
-  const [showCalendar, setShowCalendar] = useState(false);
-  const [checkInDate, setCheckInDate] = useState(null);
-  const [checkOutDate, setCheckOutDate] = useState(null);
-
-  const handleConfirmDates = () => {
-    if (!checkInDate) return alert("Please choose a check-in date.");
-    if (!checkOutDate) return alert("Please choose a check-out date.");
-
-    alert(`You selected: ${checkInDate.toDateString()} → ${checkOutDate.toDateString()}`);
-
-    // Reset calendar selections
-    setCheckInDate(null);
-    setCheckOutDate(null);
-    setShowCalendar(false);
-  };
 
   const toggleFavorite = (id) => {
     setFavorites(prev => {
