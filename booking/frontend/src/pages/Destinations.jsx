@@ -4,36 +4,23 @@ import Slider from "react-slick";
 import { useLocation } from "react-router-dom";
 import { Clock, Bed, Hamburger, MapPinned, MapPin, Waves, Mountain, Castle, Wine } from "lucide-react";
 
-import prishtina0Image from "../images/prishtina-.jpeg";
-import prishtina1 from "../images/prishtina1.png";
-import prishtina3 from "../images/prishtina3.jpg";
+import prishtina0Image from "../images/prishtina-.jpeg"; import prishtina1 from "../images/prishtina1.png"; import prishtina3 from "../images/prishtina3.jpg";
 
-import tirana0Image from "../images/tirana-.jpg";
-import tirana1 from "../images/tirana1.jpg";
-import tirana4 from "../images/tirana4.jpg";
+import tirana0Image from "../images/tirana-.jpg"; import tirana1 from "../images/tirana1.jpg"; import tirana4 from "../images/tirana4.jpg";
 
-import brezovica0Image from "../images/brezovica-.jpg";
-import brezovica1 from "../images/brezovica1.jpg";
-import brezovica4 from "../images/brezovica4.jpg";
+import brezovica0Image from "../images/brezovica-.jpg"; import brezovica1 from "../images/brezovica1.jpg"; import brezovica4 from "../images/brezovica4.jpg";
 
-import dhermi1 from "../images/dhermi1.jpg";
-import dhermi3 from "../images/dhermi3.webp";
+import dhermi1 from "../images/dhermi1.jpg"; import dhermi3 from "../images/dhermi3.webp";
 
-import ksamil0 from "../images/ksamil0.jpg";
-import ksamil1 from "../images/ksamil1.jpg";
+import ksamil0 from "../images/ksamil0.jpg"; import ksamil1 from "../images/ksamil1.jpg";
 
-import peja1 from "../images/peja1.jpg";
-import peja2 from "../images/peja2.jpg";
+import peja1 from "../images/peja1.jpg"; import peja2 from "../images/peja2.jpg";
 
-import sarande0Image from "../images/sarande0.jpg";
-import sarande2 from "../images/sarande2.webp";
-import sarande3 from "../images/sarande3.jpg";
+import sarande0Image from "../images/sarande0.jpg"; import sarande2 from "../images/sarande2.webp"; import sarande3 from "../images/sarande3.jpg";
 
-import prizren1 from "../images/prizren1.webp";
-import prizren2 from "../images/prizren2.jpg";
+import prizren1 from "../images/prizren1.webp"; import prizren2 from "../images/prizren2.jpg";
 
-import himare1 from "../images/himare1.webp";
-import himare2 from "../images/himare2.jpg";
+import himare1 from "../images/himare1.webp"; import himare2 from "../images/himare2.jpg";
 
 export const destinations = [
     { name: "Prishtina", image: prishtina1 },
@@ -338,8 +325,8 @@ export default function ZigZagCarousel() {
                 <h2
                     className="text-3xl mb-12 -mt-10 text-gray-800 drop-shadow-sm tracking-wide cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-2"
                 >
-                  <MapPin className="w-6 h-6 text-gray-600" />  
-                  TRENDING <MapPin className="w-6 h-6 text-gray-600" />
+                    <MapPin className="w-6 h-6 text-gray-600" />
+                    TRENDING <MapPin className="w-6 h-6 text-gray-600" />
                 </h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {[
