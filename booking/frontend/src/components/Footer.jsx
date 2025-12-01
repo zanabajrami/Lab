@@ -26,7 +26,6 @@ function IconTwitter() {
 }
 
 export default function Footer({ onShowContact }) {
-
     return (
         <footer className="bg-gradient-to-r from-indigo-300/30 via-indigo-200/30 to-indigo-400/30 backdrop-blur-md text-gray-900 py-10 mt-auto rounded-t-3xl shadow-inner">
             <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
