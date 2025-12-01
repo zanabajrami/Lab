@@ -11,6 +11,7 @@ import Favorites from "./pages/Favorites";
 import Destinations from "./pages/Destinations";
 import Hotels from "./pages/Hotels";
 import Contact from './components/Contact';
+import CancelBooking from './pages/CancelBooking';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -50,6 +51,8 @@ function MainWrapper() {
           <Route path="/favorites" element={<Favorites favorites={favorites} setFavorites={setFavorites} />} />
           <Route path="/destinations" element={<Destinations />} />
           <Route path="/hotels" element={<Hotels favorites={favorites} setFavorites={setFavorites} />} />
+          <Route path="/cancel-booking" element={<CancelBooking />} />
+
         </Routes>
       </main>
       <Footer onShowContact={() => setShowContact(true)} />

@@ -45,12 +45,17 @@ export default function Footer({ onShowContact }) {
                         <li className="hover:text-indigo-600 cursor-pointer transition">
                             <Link to="/hotels">Hotel Booking</Link>
                         </li>
-                        <button
-                            className="hover:text-indigo-600 cursor-pointer transition"
-                            onClick={onShowContact}
-                        >
-                            Customer Support
-                        </button>
+                        <li className="hover:text-indigo-600 cursor-pointer transition">
+                            <Link to="/cancel-booking">Cancel Booking</Link>
+                        </li>
+                        <li>
+                            <button
+                                className="hover:text-indigo-600 cursor-pointer transition"
+                                onClick={onShowContact}
+                            >
+                                Customer Support
+                            </button>
+                        </li>
                     </ul>
                 </div>
 
