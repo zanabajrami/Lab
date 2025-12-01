@@ -78,6 +78,16 @@ export default function Footer({ onShowContact }) {
                         </li>
                     </ul>
                 </div>
+
+                <div>
+                    <h3 className="text-lg font-semibold mb-3 text-indigo-900">About</h3>
+                    <ul className="space-y-2 text-gray-700">
+                        <li className="hover:text-indigo-600 cursor-pointer transition">
+                            <Link to="/about">About Us</Link>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
 
             {/* Footer Bottom */}
