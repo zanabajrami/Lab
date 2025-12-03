@@ -398,7 +398,7 @@ export default function ZigZagCarousel() {
             {/* SCROLL TO TOP BUTTON */}
             <button
                 onClick={scrollToTop}
-                className={`fixed bottom-8 right-8 p-4 rounded-full bg-gray-800 text-white shadow-lg hover:bg-gray-700 transition-opacity duration-300 z-50
+                className={`fixed bottom-8 right-8 p-3 rounded-full bg-gray-800 text-white shadow-lg hover:bg-gray-700 transition-opacity duration-300 z-50
                     ${showTopButton ? "opacity-100" : "opacity-0 pointer-events-none"}`}
             >
                 ▲

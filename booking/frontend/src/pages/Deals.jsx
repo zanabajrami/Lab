@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Heart, BedDouble, Users, HandCoins } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules"; // ✅ fixed
@@ -78,6 +78,7 @@ export const dealsData = [
 
 function Deals({ favorites, setFavorites }) {
   const [selectedHotel, setSelectedHotel] = useState(null);
+  const [showTopButton, setShowTopButton] = useState(false);
 
   const toggleFavorite = (id) => {
     setFavorites(prev => {
@@ -87,6 +88,19 @@ function Deals({ favorites, setFavorites }) {
       return [...new Set(updated)]; // siguron ID unike
     });
   };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowTopButton(window.scrollY > 300); // shfaqet kur scroll > 300px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="min-h-screen py-10">
@@ -239,6 +253,16 @@ function Deals({ favorites, setFavorites }) {
           </div>
         )}
       </div>
+
+      {/* SCROLL TO TOP BUTTON */}
+      <button
+        onClick={scrollToTop}
+        className={`fixed bottom-8 right-8 p-3 rounded-full bg-gray-800 text-white shadow-lg hover:bg-gray-700 transition-opacity duration-300 z-50
+                    ${showTopButton ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+      >
+        ▲
+      </button>
+
     </div>
   );
 }

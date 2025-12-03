@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Hotel } from "lucide-react";
+import { MdOutlineHotel } from "react-icons/md";
 
 function IconFacebook() {
     return (
@@ -34,7 +34,7 @@ export default function Footer({ onShowContact }) {
                     <h2 className="text-2xl font-bold mb-3 text-indigo-900">BookInn</h2>
                     <p className="text-sm text-gray-800">
                         Discover the best hotels, amazing deals, and exclusive offers.
-                        Stay comfortable with BookInn <Hotel className="w-4 h-4 mb-2 inline-block text-indigo-600" />
+                        Stay comfortable with BookInn <MdOutlineHotel className="w-4 h-4 mb-1 inline-block" />
                     </p>
                 </div>
 
@@ -53,7 +53,7 @@ export default function Footer({ onShowContact }) {
                                 className="hover:text-indigo-600 cursor-pointer transition"
                                 onClick={onShowContact}
                             >
-                                Customer Support
+                                Contact Us
                             </button>
                         </li>
                     </ul>

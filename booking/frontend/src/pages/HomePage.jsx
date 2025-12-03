@@ -184,11 +184,8 @@ function HomePage() {
               <p className="text-sm">Zbuloni hotele të përshtatshme për çdo buxhet.</p>
               <button
                 onClick={() => handleMoreClick("hotels")}
-                className="mt-4 px-6 py-2 rounded-md font-semibold
-              text-gray-300 bg-black/40
-              border border-gray-700
-              hover:bg-black/60 hover:text-gray-400
-              transition-all duration-200"
+                className="mt-4 px-6 py-2 rounded-md font-semibold text-gray-300 
+                bg-black/40 border border-gray-700 hover:bg-black/60 hover:text-gray-400 transition-all duration-200"
               >
                 More
               </button>
@@ -207,11 +204,8 @@ function HomePage() {
               <p className="text-sm">Relaksohu në vilat më luksoze.</p>
               <button
                 onClick={() => handleMoreClick("villas")}
-                className="mt-4 px-6 py-2 rounded-md font-semibold
-              text-gray-300 bg-black/40
-              border border-gray-700
-              hover:bg-black/60 hover:text-gray-400
-              transition-all duration-200"
+                className="mt-4 px-6 py-2 rounded-md font-semibold text-gray-300 
+                bg-black/40 border border-gray-700 hover:bg-black/60 hover:text-gray-400 transition-all duration-200"
               >
                 More
               </button>
@@ -230,11 +224,8 @@ function HomePage() {
               <p className="text-sm">Qëndrim komod për familje ose grupe të vogla.</p>
               <button
                 onClick={() => handleMoreClick("apartments")}
-                className="mt-4 px-6 py-2 rounded-md font-semibold
-              text-gray-300 bg-black/40
-              border border-gray-700
-              hover:bg-black/60 hover:text-gray-400
-              transition-all duration-200"
+                className="mt-4 px-6 py-2 rounded-md font-semibold text-gray-300 
+                bg-black/40 border border-gray-700 hover:bg-black/60 hover:text-gray-400 transition-all duration-200"
               >
                 More
               </button>
@@ -321,7 +312,6 @@ function HomePage() {
         </div>
       </div>
 
-
       {/* Sugjerimet */}
       <section className="py-12 -mt-10">
         <div className="max-w-7xl mx-auto px-4">
@@ -376,7 +366,7 @@ function HomePage() {
 
                   {/* Button */}
                   <button
-                    className="text-blue-900 font-semibold mt-3 hover:underline focus:outline-none transition-colors duration-300"
+                    className="text-gray-600 font-semibold mt-3 hover:underline focus:outline-none transition-colors duration-300"
                     data-text="Lexo më pak ←"
                     onClick={(e) => {
                       const card = e.target.closest(".group");
@@ -386,9 +376,6 @@ function HomePage() {
                   >
                     Lexo më shumë →
                   </button>
-
-                  {/* Optional shimmer overlay */}
-                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-white/10 via-white/5 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none animate-pulse"></div>
                 </div>
               );
             })}
@@ -427,7 +414,7 @@ function HomePage() {
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className="relative p-10 rounded-3xl bg-gray-200 backdrop-blur-md border border-white/25 shadow-2xl transform transition-all duration-500 hover:scale-105 hover:rotate-2 hover:shadow-gray-900/50"
+                className="relative p-4 rounded-3xl bg-gray-200 backdrop-blur-md border border-white/25 shadow-2xl transform transition-all duration-500 hover:scale-105 hover:rotate-2 hover:shadow-gray-900/50"
               >
                 {/* Dekor abstrakt */}
                 <div className="absolute -top-5 -right-5 w-14 h-14 bg-gradient-to-tr from-black via-blue-700 to-indigo-400 rounded-full opacity-40 animate-ping-slow"></div>
@@ -440,14 +427,14 @@ function HomePage() {
 
                 {/* Klienti */}
                 <div className="flex items-center justify-center space-x-4 relative z-10">
-                  <div className="w-16 h-16 rounded-full bg-blue-700 flex items-center justify-center font-bold text-white text-2xl">
+                  <div className="w-16 h-16 rounded-full bg-indigo-900 flex items-center justify-center font-bold text-white text-2xl">
                     {review.name[0]}
                   </div>
                   <span className="font-semibold text-gray-600 text-lg">{review.name}</span>
                 </div>
 
                 {/* Yjet */}
-                <div className="mt-6 flex justify-center space-x-2 relative z-10 text-yellow-400">
+                <div className="mt-6 flex justify-center space-x-2 relative z-10 text-gray-700">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <span key={i} className="animate-spin-slow hover:animate-spin-fast">★</span>
                   ))}
@@ -584,13 +571,15 @@ function HomePage() {
           ))}
         </div>
       </section>
+
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 p-4 rounded-full bg-gray-800 text-white shadow-lg border border-gray-500 hover:bg-gray-700 transition-opacity duration-300 z-50
+        className={`fixed bottom-8 right-8 p-3 rounded-full bg-gray-800 text-white shadow-lg border border-gray-500 hover:bg-gray-700 transition-opacity duration-300 z-50
           ${showTopButton ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       >
         ▲
       </button>
+
     </div >
   );
 }
