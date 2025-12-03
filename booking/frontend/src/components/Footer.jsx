@@ -59,12 +59,20 @@ export default function Footer({ onShowContact }) {
                     </ul>
                 </div>
 
-                {/* Destinations */}
                 <div>
-                    <h3 className="text-lg font-semibold mb-3 text-indigo-900">Destinations</h3>
+                    <h3 className="text-lg font-semibold mb-3 text-indigo-900">About</h3>
                     <ul className="space-y-2 text-gray-700">
                         <li className="hover:text-indigo-600 cursor-pointer transition">
-                            <Link to="/destinations">Explore Destinations</Link>
+                            <Link to="/about">About Us</Link>
+                        </li>
+                        <li className="hover:text-indigo-600 cursor-pointer transition">
+                            <Link to="/faq">FAQs</Link>
+                        </li>
+                        <li className="hover:text-indigo-600 cursor-pointer transition">
+                            <Link to="/terms">Terms & Conditions</Link>
+                        </li>
+                        <li className="hover:text-indigo-600 cursor-pointer transition">
+                            <Link to="/privacy">Privacy Policy</Link>
                         </li>
                     </ul>
                 </div>
@@ -79,14 +87,7 @@ export default function Footer({ onShowContact }) {
                     </ul>
                 </div>
 
-                <div>
-                    <h3 className="text-lg font-semibold mb-3 text-indigo-900">About</h3>
-                    <ul className="space-y-2 text-gray-700">
-                        <li className="hover:text-indigo-600 cursor-pointer transition">
-                            <Link to="/about">About Us</Link>
-                        </li>
-                    </ul>
-                </div>
+
 
             </div>
 

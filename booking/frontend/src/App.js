@@ -13,6 +13,7 @@ import Hotels from "./pages/Hotels";
 import Contact from './components/Contact';
 import CancelBooking from './pages/CancelBooking';
 import AboutUs from './pages/AboutUs';
+import Faq from './pages/Faq';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -54,6 +55,7 @@ function MainWrapper() {
           <Route path="/hotels" element={<Hotels favorites={favorites} setFavorites={setFavorites} />} />
           <Route path="/cancel-booking" element={<CancelBooking />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/faq" element={<Faq />} />
 
         </Routes>
       </main>
