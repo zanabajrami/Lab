@@ -29,7 +29,7 @@ function AboutUs() {
         <div className="max-w-6xl mx-auto p-6 space-y-16">
             {/* Header */}
             <header className="text-center">
-                <h1 className="text-4xl font-bold text-indigo-900 mb-4">About Us</h1>
+                <h1 className="text-3xl font-bold text-gray-700 mb-4">About Us</h1>
                 <p className="text-gray-700 text-lg">
                     Discover who we are, our mission, and how we make hotel booking simple and enjoyable for travelers worldwide.
                 </p>
@@ -37,7 +37,7 @@ function AboutUs() {
 
             {/* Our Story */}
             <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-indigo-900 mb-3">Our Story</h2>
+                <h2 className="text-2xl font-semibold text-gray-700 mb-3">Our Story</h2>
                 <p className="text-gray-700">
                     BookInn was founded in 2022 with a simple but powerful idea: to make travel planning easier and more enjoyable for everyone.
                     We noticed that booking hotels online could often be confusing, time-consuming, and stressful for travelers, and we wanted to change that.
@@ -58,7 +58,7 @@ function AboutUs() {
 
             {/* Our Mission */}
             <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-indigo-900 mb-3">Our Mission</h2>
+                <h2 className="text-2xl font-semibold text-gray-700 mb-3">Our Mission</h2>
                 <p className="text-gray-700">
                     Our mission at BookInn is to provide travelers with a seamless, reliable, and fully personalized booking experience.
                     We aim to make planning a trip as simple and enjoyable as the trip itself.
@@ -75,7 +75,7 @@ function AboutUs() {
 
             {/* Our Vision */}
             <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-indigo-900 mb-3">Our Vision</h2>
+                <h2 className="text-2xl font-semibold text-gray-700 mb-3">Our Vision</h2>
                 <p className="text-gray-700">
                     Our vision at BookInn is to become the most trusted online hotel booking platform in the region and beyond.
                     We strive to empower travelers to explore the world with ease, comfort, and confidence, knowing that their stay is taken care of.
@@ -89,11 +89,11 @@ function AboutUs() {
 
             {/* Our Values */}
             <section className="space-y-6">
-                <h2 className="text-2xl font-semibold text-indigo-900 mb-3">Our Values</h2>
+                <h2 className="text-2xl font-semibold text-gray-700 mb-3">Our Values</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {values.map((v) => (
-                        <div key={v.title} className="bg-indigo-50 p-6 rounded-xl shadow hover:shadow-lg transition">
-                            <h3 className="text-xl font-semibold text-indigo-800 mb-2">{v.title}</h3>
+                        <div key={v.title} className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+                            <h3 className="text-xl font-semibold text-gray-700 mb-2">{v.title}</h3>
                             <p className="text-gray-700">{v.description}</p>
                         </div>
                     ))}
@@ -102,11 +102,11 @@ function AboutUs() {
 
             {/* Our Journey / Timeline */}
             <section className="space-y-6">
-                <h2 className="text-2xl font-semibold text-indigo-900 mb-3">Our Journey</h2>
+                <h2 className="text-2xl font-semibold text-gray-700 mb-3">Our Journey</h2>
                 <ol className="border-l-2 border-indigo-200">
                     {journey.map((j) => (
                         <li key={j.year} className="mb-6 ml-6">
-                            <span className="bg-indigo-900 text-white rounded-full px-3 py-1 text-sm font-semibold">{j.year}</span>
+                            <span className="bg-gray-700 text-white rounded-full px-3 py-1 text-sm font-semibold">{j.year}</span>
                             <p className="text-gray-700 mt-2">{j.event}</p>
                         </li>
                     ))}
@@ -117,7 +117,7 @@ function AboutUs() {
             <div className="text-center mt-12">
                 <a
                     href="/hotels"
-                    className="px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-indigo-900 transition"
+                    className="px-6 py-3 bg-gray-800 text-white rounded-xl font-semibold hover:bg-gray-700 transition"
                 >
                     Browse Hotels
                 </a>
