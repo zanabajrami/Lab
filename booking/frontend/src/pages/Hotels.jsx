@@ -19,24 +19,12 @@ export default function HotelsPage({ favorites, setFavorites }) {
   const [selectedLocation, setSelectedLocation] = useState("all");
   const location = useLocation();
   const query = useMemo(() => new URLSearchParams(location.search), [location.search]);
-  const [showCalendar, setShowCalendar] = useState(false);
+  const [, setShowCalendar] = useState(false);
   const [checkInDate, setCheckInDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
   const navigate = useNavigate();
   const [calendarHotel, setCalendarHotel] = useState(null);
   const [showPayment, setShowPayment] = useState(false);
-
-  const handleConfirmDates = () => {
-    if (!checkInDate) return alert("Please choose a check-in date.");
-    if (!checkOutDate) return alert("Please choose a check-out date.");
-
-    alert(`You selected: ${checkInDate.toDateString()} → ${checkOutDate.toDateString()}`);
-
-    // Reset calendar selections
-    setCheckInDate(null);
-    setCheckOutDate(null);
-    setShowCalendar(false);
-  };
 
   const locations = [
     "all", "Prishtina", "Brezovicë", "Sarandë", "Himarë",
