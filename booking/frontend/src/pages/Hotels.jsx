@@ -266,7 +266,7 @@ const numNights = checkInDate && checkOutDate
                 loading="lazy"
               />
               <span className="absolute top-3 left-3 bg-black/50 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                ⭐ {hotel.rating}
+                ★ {hotel.rating}
               </span>
               <button
                 onClick={(e) => {
@@ -298,7 +298,7 @@ const numNights = checkInDate && checkOutDate
               </p>
               <p
                 onClick={() => setSelectedHotel(hotel)} // hap modalin e hotelit
-                className="mt-3 text-indigo-700 font-semibold cursor-pointer hover:underline"
+                className="mt-3 text-gray-700 font-semibold cursor-pointer hover:underline"
               >
                 {hotel.name.toLowerCase().includes("villa") || hotel.name.toLowerCase().includes("chalet")
                   ? "View Villa →"

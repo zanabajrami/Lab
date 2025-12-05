@@ -39,101 +39,101 @@ export const aboutDestinations = [
         name: "Prishtina",
         image: prishtina3,
         description:
-            "Kryeqyteti i Kosovës, një qytet modern me jetë të gjallë nate, kafene të shumta dhe histori interesante që ndërthur të vjetrën me të renë.",
-        activities: "Vizita në Newborn, Muzeun Kombëtar, shëtitje në Germi Park dhe eksplorim i jetës së natës.",
-        food: "Flija tradicionale, sarmë, dhe ëmbëlsira si trileqe.",
-        bestTime: "Pranvera dhe vjeshta për mot të butë dhe evente kulturore.",
-        stay: "Hotele moderne afër qendrës dhe apartamente me pamje panoramike.",
-        weather: " Moti:❄️ 0°C dimër,🌤️ 28°C verë"
+            "The capital of Kosovo, a modern city with vibrant nightlife, numerous cafes, and interesting history blending the old with the new.",
+        activities: "Visit the Newborn Monument, National Museum, stroll in Germi Park, and explore the nightlife.",
+        food: "Traditional Flija, Sarma, and desserts like Trileqe.",
+        bestTime: "Spring and autumn for mild weather and cultural events.",
+        stay: "Modern hotels near the city center and apartments with panoramic views.",
+        weather: "Weather:❄️ 0°C winter,🌤️ 28°C summer"
     },
     {
         name: "Tirana",
         image: tirana4,
         description:
-            "Tirana ofron energji mesdhetare, ngjyra, art urban dhe mikpritje shqiptare në çdo cep të qytetit.",
-        activities: "Teleferiku i Dajtit, shëtitje në Bllok, vizita në Pazarin e Ri dhe Muzeun Kombëtar.",
-        food: "Tavë kosi, qofte Tirane, dhe verë lokale nga zonat përreth.",
-        bestTime: "Prill - Qershor dhe Shtator - Tetor për të shmangur vapën.",
-        stay: "Resorte urbane moderne dhe bujtina me stil artistik në Bllok.",
-        weather: "Moti:❄️ 5°C dimër,🌤️ 31°C verë"
+            "Tirana offers Mediterranean energy, colors, urban art, and Albanian hospitality in every corner of the city.",
+        activities: "Dajti Cable Car, walk in Blloku, visit the New Bazaar, and National Museum.",
+        food: "Tavë kosi, Tirana-style meatballs, and local wine from surrounding areas.",
+        bestTime: "April - June and September - October to avoid the heat.",
+        stay: "Modern urban resorts and artistically styled guesthouses in Blloku.",
+        weather: "Weather:❄️ 5°C winter,🌤️ 31°C summer"
     },
     {
         name: "Brezovicë",
         image: brezovica4,
         description:
-            "Një ndër vendet më të bukura malore në Kosovë, ideale për ski dimërore dhe pushime në natyrë.",
-        activities: "Ski, hiking veror, ndalesa në liqenet malore dhe relaks në spa-hotele.",
-        food: "Speca të mbushura, pite të shtëpisë dhe mish lokal në zgarrë.",
-        bestTime: "Dhjetor – Mars për ski, Korrik – Shtator për natyrë.",
-        stay: "Hotele alpine me pamje nga malet dhe kabina prej druri.",
-        weather: "Moti:❄️ -5°C dimër,🌤️ 20°C verë"
+            "One of the most beautiful mountain spots in Kosovo, ideal for winter skiing and nature vacations.",
+        activities: "Skiing, summer hiking, stops at mountain lakes, and relaxing in spa-hotels.",
+        food: "Stuffed peppers, homemade pies, and local grilled meat.",
+        bestTime: "December – March for skiing, July – September for nature.",
+        stay: "Alpine hotels with mountain views and wooden cabins.",
+        weather: "Weather:❄️ -5°C winter,🌤️ 20°C summer"
     },
     {
         name: "Dhërmi",
         image: dhermi3,
         description:
-            "Një perlë e Rivierës Shqiptare me ujëra të kristalta, plazhe të qeta dhe festa verore.",
-        activities: "Not, zhytje, eksplorim i shpellave detare dhe netë me muzikë live buzë detit.",
-        food: "Peshk i freskët, kallamarë, dhe verë e bardhë vendore.",
-        bestTime: "Qershor – Shtator për plazh dhe evente verore.",
-        stay: "Resorte buzë detit dhe vila luksoze me pamje panoramike.",
-        weather: "Moti:❄️ 7°C dimër,🌤️ 30°C verë"
+            "A gem of the Albanian Riviera with crystal-clear waters, quiet beaches, and summer parties.",
+        activities: "Swimming, diving, exploring sea caves, and nights with live music by the sea.",
+        food: "Fresh fish, calamari, and local white wine.",
+        bestTime: "June – September for beach and summer events.",
+        stay: "Seaside resorts and luxury villas with panoramic views.",
+        weather: "Weather:❄️ 7°C winter,🌤️ 30°C summer"
     },
     {
         name: "Ksamil",
         image: ksamil0,
         description:
-            "Destinacioni më i famshëm bregdetar i Shqipërisë, i njohur për ishujt e vegjël dhe ujërat turkeze.",
-        activities: "Ekskursione me varkë, snorkeling dhe vizita në Butrint.",
-        food: "Fruta deti, pastë me karkaleca, dhe sallata të freskëta mesdhetare.",
-        bestTime: "Maj – Shtator për mot perfekt dhe ujë të ngrohtë.",
-        stay: "Apartamente moderne pranë plazhit dhe hotele me pamje nga ishujt.",
-        weather: "Moti:❄️ 8°C dimër,🌤️ 32°C verë"
+            "Albania's most famous coastal destination, known for its small islands and turquoise waters.",
+        activities: "Boat trips, snorkeling, and visits to Butrint.",
+        food: "Seafood, shrimp pasta, and fresh Mediterranean salads.",
+        bestTime: "May – September for perfect weather and warm water.",
+        stay: "Modern apartments near the beach and hotels with island views.",
+        weather: "Weather:❄️ 8°C winter,🌤️ 32°C summer"
     },
     {
         name: "Pejë",
         image: peja2,
         description:
-            "Qytet historik me male madhështore përreth, i përshtatshëm për aventurë dhe kulturë.",
-        activities: "Zip-line në Rugovë, rafting, dhe vizita në Manastirin e Pejës.",
-        food: "Pasul, pite me spinaq dhe çaj mali tradicional.",
-        bestTime: "Pranverë – Vjeshtë për aktivitete në natyrë.",
-        stay: "Bujtina tradicionale dhe hotele në afërsi të Grykës së Rugovës.",
-        weather: "Moti:❄️ 1°C dimër,🌤️ 27°C verë"
+            "A historic city surrounded by majestic mountains, ideal for adventure and culture.",
+        activities: "Zip-line in Rugova, rafting, and visits to Pejë Monastery.",
+        food: "Bean stew, spinach pies, and traditional mountain tea.",
+        bestTime: "Spring – Autumn for outdoor activities.",
+        stay: "Traditional guesthouses and hotels near the Rugova Gorge.",
+        weather: "Weather:❄️ 1°C winter,🌤️ 27°C summer"
     },
     {
         name: "Sarandë",
         image: sarande3,
         description:
-            "Një qytet bregdetar plot gjallëri, përballë Korfuzit, me ujëra të kaltra dhe netë verore plot dritë.",
-        activities: "Shëtitje buzë detit, vizita në Syri i Kaltër dhe udhëtime me varkë.",
-        food: "Fruta deti të freskëta dhe sallata greke.",
-        bestTime: "Qershor – Shtator për pushime plazhi.",
-        stay: "Hotele panoramike dhe apartamente moderne në qendër.",
-        weather: "Moti:❄️ 10°C dimër,🌤️ 33°C verë"
+            "A lively coastal city across from Corfu, with blue waters and summer nights full of light.",
+        activities: "Seaside walks, visit the Blue Eye, and boat trips.",
+        food: "Fresh seafood and Greek salads.",
+        bestTime: "June – September for beach holidays.",
+        stay: "Panoramic hotels and modern apartments in the center.",
+        weather: "Weather:❄️ 10°C winter,🌤️ 33°C summer"
     },
     {
         name: "Prizren",
         image: prizren2,
         description:
-            "Qyteti më historik i Kosovës, me rrugë kalldrëmi, urën e gurit dhe festivalet e famshme të verës.",
-        activities: "Shëtitje në Kalatë e Prizrenit, DokuFest dhe eksplorim të qytetit të vjetër.",
-        food: "Qebapë, bakllava, dhe kafe tradicionale.",
-        bestTime: "Korrik – Gusht për festivalet dhe atmosferën e gjallë.",
-        stay: "Hotele të vogla në qendër dhe bujtina tradicionale pranë lumit.",
-        weather: "Moti:❄️ 1°C dimër,🌤️ 29°C verë"
+            "Kosovo's most historic city, with cobblestone streets, the stone bridge, and famous summer festivals.",
+        activities: "Walks in Prizren Fortress, DokuFest, and exploring the old town.",
+        food: "Kebabs, baklava, and traditional coffee.",
+        bestTime: "July – August for festivals and lively atmosphere.",
+        stay: "Small hotels in the center and traditional guesthouses near the river.",
+        weather: "Weather:❄️ 1°C winter,🌤️ 29°C summer"
     },
     {
         name: "Himarë",
         image: himare2,
         description:
-            "Një kombinim perfekt midis maleve dhe detit, Himara ofron qetësi dhe plazhe të paprekura.",
-        activities: "Plazhe të fshehta, lundrim me kajak, eksplorim të fshatrave të vjetër.",
-        food: "Oktapod i pjekur, sallata deti dhe verë lokale.",
-        bestTime: "Qershor – Shtator për det dhe diell.",
-        stay: "Shtëpi pushimi me pamje nga deti dhe hotele boutique.",
-        weather: "Moti:❄️ 9°C dimër,🌤️ 32°C verë"
-    },
+            "A perfect combination of mountains and sea, Himara offers tranquility and untouched beaches.",
+        activities: "Hidden beaches, kayaking, and exploring old villages.",
+        food: "Grilled octopus, seafood salads, and local wine.",
+        bestTime: "June – September for sun and sea.",
+        stay: "Vacation homes with sea views and boutique hotels.",
+        weather: "Weather:❄️ 9°C winter,🌤️ 32°C summer"
+    }
 ];
 
 export default function ZigZagCarousel() {
@@ -270,7 +270,7 @@ export default function ZigZagCarousel() {
                                         onClick={() => toggleExpand(index)}
                                         className="ml-20 mt-4 px-6 py-2 rounded-full bg-gray-200 text-gray-500 font-medium shadow-lg border border-gray-400 hover:shadow-2xl transition whitespace-nowrap"
                                     >
-                                        {expandedIndex === index ? "Mbyll ↑" : "Zbulo më shumë→"}
+                                        {expandedIndex === index ? "Close ↑" : "More →"}
                                     </button>
 
                                     {/* Info shtesë (shfaqet kur klikon) */}
@@ -288,25 +288,25 @@ export default function ZigZagCarousel() {
                                                         <li className="flex items-center gap-2">
                                                             <MapPinned className="w-12 h-12 sm:w-6 sm:h-6" />
                                                             <span>
-                                                                <strong>Aktivitete:</strong> {d.activities}
+                                                                <strong>Activities:</strong> {d.activities}
                                                             </span>
                                                         </li>
                                                         <li className="flex items-center gap-2">
                                                             <Hamburger className="w-12 h-12 sm:w-6 sm:h-6" />
                                                             <span>
-                                                                <strong>Ushqim tradicional:</strong> {d.food}
+                                                                <strong>Food:</strong> {d.food}
                                                             </span>
                                                         </li>
                                                         <li className="flex items-center gap-2">
                                                             <Clock className="w-12 h-12 sm:w-6 sm:h-6" />
                                                             <span>
-                                                                <strong>Koha më e mirë për vizitë:</strong> {d.bestTime}
+                                                                <strong>The best time to visit:</strong> {d.bestTime}
                                                             </span>
                                                         </li>
                                                         <li className="flex items-center gap-2">
                                                             <Bed className="w-12 h-12 sm:w-6 sm:h-6" />
                                                             <span>
-                                                                <strong>Akomodimi:</strong> {d.stay}
+                                                                <strong>Stay:</strong> {d.stay}
                                                             </span>
                                                         </li>
                                                     </ul>
@@ -331,28 +331,28 @@ export default function ZigZagCarousel() {
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {[
                         {
-                            name: "Tiranë",
+                            name: "Tirana",
                             img: tirana0Image,
-                            visitors: "1.2M vizitorë/vit",
-                            desc: "Kryeqyteti plot jetë dhe kulturë moderne.",
+                            visitors: "1.2M visitors/year",
+                            desc: "The lively capital full of modern culture."
                         },
                         {
                             name: "Sarandë",
                             img: sarande0Image,
-                            visitors: "2M vizitorë/vit",
-                            desc: "Qyteti bregdetar me ujëra të kristalta.",
+                            visitors: "2M visitors/year",
+                            desc: "Coastal city with crystal-clear waters."
                         },
                         {
-                            name: "Prishtinë",
+                            name: "Prishtina",
                             img: prishtina0Image,
-                            visitors: "700K vizitorë/vit",
-                            desc: "Qendër urbane me histori dhe art bashkëkohor.",
+                            visitors: "700K visitors/year",
+                            desc: "Urban center with history and contemporary art."
                         },
                         {
                             name: "Brezovicë",
                             img: brezovica0Image,
-                            visitors: "500K vizitorë/vit",
-                            desc: "Resort dimëror ideal për ski dhe natyrë.",
+                            visitors: "500K visitors/year",
+                            desc: "Winter resort ideal for skiing and nature."
                         },
                     ].map((d, i) => (
                         <div
@@ -375,18 +375,18 @@ export default function ZigZagCarousel() {
             </section>
             <section className="py-20 text-gray-800 px-6 md:px-20">
                 <h2 className="text-3xl text-center mb-12 text-gray-700">
-                    Aktivitetet më të Rekomanduara
+                    Most Recommended Activities
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     {[
-                        { icon: <Waves className="w-6 h-6 text-blue-500" />, title: "Plazhe", desc: "Relaksohu në bregdetet e Ksamilit dhe Himarës." },
-                        { icon: <Mountain className="w-6 h-6 text-blue-500" />, title: "Hiking", desc: "Shëtitje në Rugovë dhe malet e Brezovicës." },
-                        { icon: <Castle className="w-6 h-6 text-blue-500" />, title: "Kulturë", desc: "Zbulo historinë e Prizrenit dhe Tiranës." },
-                        { icon: <Wine className="w-6 h-6 text-blue-500" />, title: "Gastronomi", desc: "Provo verërat dhe ushqimin lokal." },
+                        { icon: <Waves className="w-6 h-6 text-gray-500" />, title: "Beaches", desc: "Relax on the beaches of Ksamil and Himarë." },
+                        { icon: <Mountain className="w-6 h-6 text-gray-500" />, title: "Hiking", desc: "Walk through Rugova and the mountains of Brezovicë." },
+                        { icon: <Castle className="w-6 h-6 text-gray-500" />, title: "Culture", desc: "Discover the history of Prizren and Tirana." },
+                        { icon: <Wine className="w-6 h-6 text-gray-500" />, title: "Gastronomy", desc: "Try local wines and cuisine." },
                     ].map((item, i) => (
                         <div key={i} className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition">
                             <div className="flex flex-col items-center text-center mb-4">
-                                {React.cloneElement(item.icon, { className: "w-10 h-10 text-indigo-900" })}
+                                {React.cloneElement(item.icon, { className: "w-10 h-10 text-gray-700" })}
                             </div>
                             <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                             <p className="text-gray-600">{item.desc}</p>

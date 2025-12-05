@@ -5,59 +5,59 @@ import { ChevronDown } from "lucide-react";
 export default function FAQ() {
     const faqs = [
         {
-            question: "Si funksionon procesi i rezervimit në BookInn?",
+            question: "How does the booking process work on BookInn?",
             answer:
-                "Procesi i rezervimit në BookInn është shumë i thjeshtë dhe i sigurt. Ju filloni duke zgjedhur destinacionin, datat e qëndrimit dhe llojin e akomodimit që preferoni. Më pas plotësoni informacionin tuaj personal, duke përfshirë emrin, mbiemrin, email-in dhe të dhëna të tjera të nevojshme për rezervimin. Pasi të keni dhënë të gjitha informacionet e kërkuara ju merrni menjëherë një konfirmim të rezervimit.",
+                "The booking process on BookInn is very simple and secure. You start by selecting your destination, travel dates, and preferred type of accommodation. Then you fill in your personal information, including your first name, last name, email address, and other details required for the booking. Once all necessary information is provided, you immediately receive a booking confirmation.",
         },
         {
-            question: "A është i sigurt informacioni personal në BookInn?",
+            question: "Is my personal information safe on BookInn?",
             answer:
-                "Po, BookInn merr shumë seriozisht sigurinë e të dhënave tuaja personale. Të gjitha informacionet ruhen në servera të sigurta me enkriptim të avancuar dhe nuk ndahen me palë të treta pa lejen tuaj,ato përdoren vetëm për procesimin e rezervimeve ose për të ofruar informacion relevant.",
+                "Yes, BookInn takes the security of your personal data very seriously. All information is stored on secure servers with advanced encryption and is not shared with third parties without your permission. Your data is used only to process bookings or provide relevant information.",
         },
         {
-            question: "A mund ta anuloj rezervimin?",
+            question: "Can I cancel my reservation?",
             answer:
-                "Po, shumica e pronave ofrojnë anulim falas deri në një afat të caktuar. Mund të anulloni ose modifikoni rezervimin tuaj direkt nga llogaria juaj BookInn ose përmes suportit tonë.",
+                "Yes, most properties offer free cancellation within a certain timeframe. You can cancel or modify your reservation directly from your BookInn account or through our support team.",
         },
         {
-            question: "Si mund të ndryshoj datat ose informacionin e rezervimit tim?",
+            question: "How can I change my reservation dates or information?",
             answer:
-                "Mund të ndryshoni rezervimin tuaj direkt nga llogaria BookInn nëse jeni një javë para datës së rezervimit, mund të bëni ndryshime duke kontaktuar suportin tonë drejtpërdrejt për të siguruar që ndryshimet të bëhen në mënyrë të sigurt dhe të saktë.",
+                "You can modify your reservation directly from your BookInn account. If you are within one week of your check-in date, changes can be made by contacting our support team directly to ensure that modifications are handled safely and accurately.",
         },
         {
-            question: "A ofroni mbështetje 24/7?",
+            question: "Do you offer 24/7 support?",
             answer:
-                "Po, ekipi ynë i suportit është i disponueshëm çdo ditë, çdo orë, për t’ju ndihmuar me çdo problem apo pyetje. Mund të kontaktoni me ne përmes Contact Us.",
+                "Yes, our support team is available every day, at any hour, to help you with any issue or question. You can contact us through the Contact Us page.",
         },
         {
-            question: "A ka tarifa shtesë?",
+            question: "Are there any additional fees?",
             answer:
-                "Çmimet janë transparente dhe tregohen qartë gjatë procesit të rezervimit. Disa prona mund të kenë taksa lokale ose tarifa shtesë, të cilat gjithmonë shfaqen para konfirmimit të pagesës.",
+                "Prices are transparent and clearly displayed during the booking process. Some properties may have local taxes or additional fees, which are always shown before payment confirmation.",
         },
         {
-            question: "Si mund të kërkoj akomodime në vende të posaçme?",
+            question: "How can I request accommodations in specific locations?",
             answer:
-                "Ju mund të përdorni filtrat për të zgjedhur akomodime në vende të posaçme. Gjithashtu mund të shkruani nëse keni kërkesa specifike te informacionet që kërkohen për të rezervuar.",
+                "You can use filters to choose accommodations in specific locations. You can also mention special requests in the information fields required for booking.",
         },
         {
-            question: "A ofroni zbritje ose oferta speciale?",
+            question: "Do you offer discounts or special deals?",
             answer:
-                "Po, BookInn ofron një gamë të gjerë ofertash dhe zbritjesh për përdoruesit e saj. Ju mund të shikoni të gjitha ofertat aktuale në seksionin e ofertave në faqen kryesore dhe të përfitoni nga promocionet speciale për të bërë rezervimin tuaj më të përballueshëm.",
+                "Yes, BookInn offers a variety of deals and discounts. You can view all current offers in the deals section on the homepage and benefit from special promotions to make your booking more affordable.",
         },
         {
-            question: "A mund të rezervoj akomodim për një grup të madh?",
+            question: "Can I book accommodation for a large group?",
             answer:
-                "Po, ju mund të rezervoni villa, apartamente ose hotele për grupe të mëdha. Ju mund të kontaktoni suportin tonë për të siguruar oferta dhe plane të personalizuara.",
+                "Yes, you can book villas, apartments, or hotels for large groups. You may contact our support team to receive personalized offers and plans.",
         },
         {
-            question: "Çfarë shërbimesh zakonisht ofrojnë akomodimet në BookInn?",
+            question: "What services do accommodations usually offer on BookInn?",
             answer:
-                "Shumica e akomodimeve ofrojnë Wi-Fi falas, parkim, kuzhinë, lavanderi dhe në disa raste edhe pishinë ose palestër. Informacioni i plotë për shërbimet gjendet në faqen e çdo akomodimi."
+                "Most accommodations offer free Wi-Fi, parking, kitchen facilities, laundry, and in some cases, a pool or gym. Full details about available services can be found on each accommodation's page.",
         },
         {
-            question: "Çfarë ndodh nëse akomodimi nuk përputhet me përshkrimin?",
+            question: "What happens if the accommodation does not match the description?",
             answer:
-                "Nëse ka ndonjë problem me akomodimin, ju mund të kontaktoni suportin tonë brenda 24 orëve pas mbërritjes për të gjetur një zgjidhje ose për të kërkuar rimbursim.",
+                "If there is any issue with the accommodation, you can contact our support team within 24 hours of arrival to find a solution or request a refund.",
         },
     ];
 

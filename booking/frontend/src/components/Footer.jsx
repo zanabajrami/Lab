@@ -31,7 +31,7 @@ export default function Footer({ onShowContact }) {
             <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
                 {/* Logo dhe Përshkrimi */}
                 <div>
-                    <h2 className="text-2xl font-bold mb-3 text-indigo-900">BookInn</h2>
+                    <h2 className="text-2xl font-bold mb-3 text-gray-700">BookInn</h2>
                     <p className="text-sm text-gray-800">
                         Discover the best hotels, amazing deals, and exclusive offers.
                         Stay comfortable with BookInn <MdOutlineHotel className="w-4 h-4 mb-1 inline-block" />
@@ -40,17 +40,17 @@ export default function Footer({ onShowContact }) {
 
                 {/* Services */}
                 <div>
-                    <h3 className="text-lg font-semibold mb-3 text-indigo-900">Services</h3>
+                    <h3 className="text-lg font-semibold mb-3 text-gray-700">Services</h3>
                     <ul className="space-y-2 text-gray-700">
-                        <li className="hover:text-indigo-600 cursor-pointer transition">
+                        <li className="hover:font-semibold cursor-pointer transition">
                             <Link to="/hotels">Hotel Booking</Link>
                         </li>
-                        <li className="hover:text-indigo-600 cursor-pointer transition">
+                        <li className="hover:font-semibold cursor-pointer transition">
                             <Link to="/cancel-booking">Cancel Booking</Link>
                         </li>
                         <li>
                             <button
-                                className="hover:text-indigo-600 cursor-pointer transition"
+                                className="hover:font-semibold cursor-pointer transition"
                                 onClick={onShowContact}
                             >
                                 Contact Us
@@ -60,18 +60,18 @@ export default function Footer({ onShowContact }) {
                 </div>
 
                 <div>
-                    <h3 className="text-lg font-semibold mb-3 text-indigo-900">About</h3>
+                    <h3 className="text-lg font-semibold mb-3 text-gray-700">About</h3>
                     <ul className="space-y-2 text-gray-700">
-                        <li className="hover:text-indigo-600 cursor-pointer transition">
+                        <li className="hover:font-semibold cursor-pointer transition">
                             <Link to="/about">About Us</Link>
                         </li>
-                        <li className="hover:text-indigo-600 cursor-pointer transition">
+                        <li className="hover:font-semibold cursor-pointer transition">
                             <Link to="/faq">FAQs</Link>
                         </li>
-                        <li className="hover:text-indigo-600 cursor-pointer transition">
+                        <li className="hover:font-semibold cursor-pointer transition">
                             <Link to="/terms">Terms & Conditions</Link>
                         </li>
-                        <li className="hover:text-indigo-600 cursor-pointer transition">
+                        <li className="hover:font-semibold cursor-pointer transition">
                             <Link to="/privacy">Privacy Policy</Link>
                         </li>
                     </ul>
@@ -79,16 +79,13 @@ export default function Footer({ onShowContact }) {
 
                 {/* Deals */}
                 <div>
-                    <h3 className="text-lg font-semibold mb-3 text-indigo-900">Deals</h3>
+                    <h3 className="text-lg font-semibold mb-3 text-gray-700">Deals</h3>
                     <ul className="space-y-2 text-gray-700">
-                        <li className="hover:text-indigo-600 cursor-pointer transition">
+                        <li className="hover:font-semibold cursor-pointer transition">
                             <Link to="/deals">Last Minute Deals</Link>
                         </li>
                     </ul>
                 </div>
-
-
-
             </div>
 
             {/* Footer Bottom */}

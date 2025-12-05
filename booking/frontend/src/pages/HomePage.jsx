@@ -181,7 +181,7 @@ function HomePage() {
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
               <h3 className="text-2xl font-bold mb-2">Hotels</h3>
-              <p className="text-sm">Zbuloni hotele të përshtatshme për çdo buxhet.</p>
+              <p className="text-sm">Discover hotels suitable for every budget.</p>
               <button
                 onClick={() => handleMoreClick("hotels")}
                 className="mt-4 px-6 py-2 rounded-md font-semibold text-gray-300 
@@ -201,7 +201,7 @@ function HomePage() {
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
               <h3 className="text-2xl font-bold mb-2">Villas</h3>
-              <p className="text-sm">Relaksohu në vilat më luksoze.</p>
+              <p className="text-sm">Relax in the most luxurious villas.</p>
               <button
                 onClick={() => handleMoreClick("villas")}
                 className="mt-4 px-6 py-2 rounded-md font-semibold text-gray-300 
@@ -221,7 +221,7 @@ function HomePage() {
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
               <h3 className="text-2xl font-bold mb-2">Apartments</h3>
-              <p className="text-sm">Qëndrim komod për familje ose grupe të vogla.</p>
+              <p className="text-sm">Comfortable stay for families or small groups.</p>
               <button
                 onClick={() => handleMoreClick("apartments")}
                 className="mt-4 px-6 py-2 rounded-md font-semibold text-gray-300 
@@ -324,19 +324,21 @@ function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[himare0Image, brezovica0Image, tirana0Image].map((img, idx) => {
               const titles = [
-                "Top 5 vendet për pushime verore në Shqipëri",
-                "Pse Brezovica është destinacion perfekt dimëror?",
-                "Udhëzues për një fundjavë në Tiranë"
+                "Top 5 Summer Vacation Destinations in Albania",
+                "Why Brezovica is the Perfect Winter Destination",
+                "Guide for a Weekend in Tirana"
               ];
+
               const texts = [
-                "Plazhet më të bukura, ushqimi dhe çmimet më të mira... Nga Dhërmi deri në Ksamil, çdo vend ofron përvoja të veçanta.",
-                "Brezovica është vendi ideal për ski, pushim dhe natyrë. Shijo ajrin e pastër malor dhe hotelet komode.",
-                "Tirana ofron muzeume, restorante moderne dhe jetën e gjallë të natës."
+                "The most beautiful beaches, food, and best prices... From Dhërmi to Ksamil, each place offers unique experiences.",
+                "Brezovica is the ideal spot for skiing, relaxation, and nature. Enjoy the fresh mountain air and comfortable hotels.",
+                "Tirana offers museums, modern restaurants, and a lively nightlife."
               ];
+
               const extraTexts = [
-                "Nëse preferoni qetësinë, Radhima dhe Himara janë ideale për relaks, ndërsa Ksamili dhe Saranda ofrojnë jetën e gjallë të natës. Mos harroni të provoni ushqimet tradicionale të zonës dhe të rezervoni akomodimin paraprakisht gjatë sezonit të verës.",
-                "Pista të përgatitura mirë, peizazhe të mbuluara me borë dhe restorante me ushqim tradicional bëjnë që çdo vizitë të jetë e paharrueshme. Në mbrëmje mund të relaksohesh pranë zjarrit në lodge ose të provosh spa-t lokale. Për një përvojë më të plotë, vizito edhe fshatrat përreth.",
-                "Vizito Sheshin Skënderbej, shijo kafen në Bllok dhe eksploro artin modern dhe galeritë lokale. Perfekte për të përjetuar kulturën dhe energjinë e kryeqytetit."
+                "If you prefer tranquility, Radhima and Himara are perfect for relaxing, while Ksamil and Saranda offer vibrant nightlife. Don't forget to try the traditional local dishes and book your accommodation in advance during the summer season.",
+                "Well-prepared ski slopes, snow-covered landscapes, and restaurants with traditional cuisine make every visit unforgettable. In the evening, you can relax by the lodge fire or try local spas. For a fuller experience, also visit the nearby villages.",
+                "Visit Skanderbeg Square, enjoy coffee in Blloku, and explore modern art and local galleries. Perfect for experiencing the culture and energy of the capital."
               ];
 
               return (
@@ -367,14 +369,14 @@ function HomePage() {
                   {/* Button */}
                   <button
                     className="text-gray-600 font-semibold mt-3 hover:underline focus:outline-none transition-colors duration-300"
-                    data-text="Lexo më pak ←"
+                    data-text="Less ←"
                     onClick={(e) => {
                       const card = e.target.closest(".group");
                       const expanded = card.classList.toggle("expanded");
-                      e.target.textContent = expanded ? e.target.dataset.text : "Lexo më shumë →";
+                      e.target.textContent = expanded ? e.target.dataset.text : "More →";
                     }}
                   >
-                    Lexo më shumë →
+                    More →
                   </button>
                 </div>
               );
@@ -475,10 +477,10 @@ function HomePage() {
                 <Search className="w-10 h-10 text-[#9BA3EB]" />
               </div>
               <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-[#A7C7E7]">
-                Kërko
+                Search
               </h3>
               <p className="text-gray-400 text-sm">
-                Gjeni hotelin ideal sipas vendndodhjes, çmimit dhe datës.
+                Find the ideal hotel based on location, price, and date.
               </p>
               <div className="mt-4 h-1 w-16 bg-gradient-to-r from-[#F2C6DE] to-[#C8B6E2] rounded-full transition-all duration-500 group-hover:w-full"></div>
             </div>
@@ -493,10 +495,10 @@ function HomePage() {
                 <Hotel className="w-10 h-10 text-[#9BA3EB]" />
               </div>
               <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-[#A7C7E7]">
-                Zgjedh
+                Choose
               </h3>
               <p className="text-gray-400 text-sm">
-                Shfletoni ofertat dhe shikoni detajet e çdo hoteli.
+                Browse offers and view the details of each hotel.
               </p>
               <div className="mt-4 h-1 w-16 bg-gradient-to-r from-[#F2C6DE] to-[#C8B6E2] rounded-full transition-all duration-500 group-hover:w-full"></div>
             </div>
@@ -511,10 +513,10 @@ function HomePage() {
                 <CircleCheck className="w-10 h-10 text-[#9BA3EB]" />
               </div>
               <h3 className="font-semibold text-xl mb-2 text-gray-300 transition-colors duration-500 group-hover:text-[#A7C7E7]">
-                Rezervo
+                Book
               </h3>
               <p className="text-gray-400 text-sm">
-                Rezervoni me disa klikime dhe merrni konfirmimin menjëherë.
+                Book in just a few clicks and receive instant confirmation.
               </p>
               <div className="mt-4 h-1 w-16 bg-gradient-to-r from-[#F2C6DE] to-[#C8B6E2] rounded-full transition-all duration-500 group-hover:w-full"></div>
             </div>
@@ -542,10 +544,10 @@ function HomePage() {
           <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-[#C8B6E2] opacity-35 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
           {/* Cards */}
           {[
-            { icon: <Clock className="w-10 h-10 text-[#9BA3EB]" />, title: "Rezervim i shpejtë", text: "Proces i lehtë dhe i menjëhershëm.", delay: 100 },
-            { icon: <Euro className="w-10 h-10 text-[#9BA3EB]" />, title: "Çmime më të mira", text: "Krahaso dhe gjej ofertën më të volitshme.", delay: 200 },
-            { icon: <LockKeyhole className="w-10 h-10 text-[#9BA3EB]" />, title: "Rezervim i sigurt", text: "Të dhënat dhe pagesat mbrohen maksimalisht.", delay: 300 },
-            { icon: <Phone className="w-10 h-10 text-[#9BA3EB]" />, title: "Mbështetje 24/7", text: "Ekipi ynë është gjithmonë në dispozicionin tënd.", delay: 400 },
+            { icon: <Clock className="w-10 h-10 text-[#9BA3EB]" />, title: "Fast Booking", text: "Easy and instant process.", delay: 100 },
+            { icon: <Euro className="w-10 h-10 text-[#9BA3EB]" />, title: "Best Prices", text: "Compare and find the most affordable deal.", delay: 200 },
+            { icon: <LockKeyhole className="w-10 h-10 text-[#9BA3EB]" />, title: "Secure Booking", text: "Your data and payments are fully protected.", delay: 300 },
+            { icon: <Phone className="w-10 h-10 text-[#9BA3EB]" />, title: "24/7 Support", text: "Our team is always at your disposal.", delay: 400 },
           ].map((item, i) => (
             <div
               key={i}
