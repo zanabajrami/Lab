@@ -15,6 +15,7 @@ import CancelBooking from './pages/CancelBooking';
 import AboutUs from './pages/AboutUs';
 import Faq from './pages/Faq';
 import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -58,6 +59,7 @@ function MainWrapper() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
 
         </Routes>
       </main>
