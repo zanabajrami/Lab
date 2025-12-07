@@ -112,19 +112,8 @@ function AboutUs() {
                     ))}
                 </ol>
             </section>
-
-            {/* Call to Action */}
-            <div className="text-center mt-12">
-                <a
-                    href="/hotels"
-                    className="px-6 py-3 bg-gray-800 text-white rounded-xl font-semibold hover:bg-gray-700 transition"
-                >
-                    Browse Hotels
-                </a>
-            </div>
         </div>
     );
-
 }
 
 export default AboutUs;

@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Heart, BedDouble, Users, HandCoins } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules"; // ✅ fixed
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -186,10 +187,15 @@ function Deals({ favorites, setFavorites }) {
                       : "View Hotel →"}
                 </p>
 
-                {/* Book button */}
-                <button className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 hover:text-indigo-300 transition-colors">
-                  Book
-                </button>
+                {/* Button */}
+                <Link
+                  to="/hotels"
+                  className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 
+             text-gray-900 font-semibold shadow-lg text-center block
+             hover:bg-indigo-900 hover:text-indigo-300 transition-colors"
+                >
+                  Browse
+                </Link>
               </div>
             </div>
           ))}

@@ -429,7 +429,7 @@ function HomePage() {
 
                 {/* Klienti */}
                 <div className="flex items-center justify-center space-x-4 relative z-10">
-                  <div className="w-16 h-16 rounded-full bg-indigo-900 flex items-center justify-center font-bold text-white text-2xl">
+                  <div className="w-14 h-14 rounded-full bg-indigo-900 flex items-center justify-center font-bold text-indigo-200 text-2xl">
                     {review.name[0]}
                   </div>
                   <span className="font-semibold text-gray-600 text-lg">{review.name}</span>

@@ -66,6 +66,9 @@ export default function Footer({ onShowContact }) {
                             <Link to="/about">About Us</Link>
                         </li>
                         <li className="hover:font-semibold cursor-pointer transition">
+                            <Link to="/our-team">Our Team</Link>
+                        </li>
+                        <li className="hover:font-semibold cursor-pointer transition">
                             <Link to="/faq">FAQs</Link>
                         </li>
                         <li className="hover:font-semibold cursor-pointer transition">
