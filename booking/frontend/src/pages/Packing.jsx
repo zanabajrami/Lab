@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { FaUmbrellaBeach, FaCamera, FaTshirt, FaSocks } from "react-icons/fa";
-import { GiBackpack, GiFlipFlops } from "react-icons/gi";
 
 const packingItems = {
   Beach: {
