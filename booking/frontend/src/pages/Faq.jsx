@@ -82,7 +82,7 @@ function AccordionItem({ faq }) {
     const [open, setOpen] = React.useState(false);
 
     return (
-        <div className="bg-white rounded-2xl shadow p-6 border border-gray-200">
+        <div className="bg-gray-50 border border-gray-300 rounded-2xl shadow p-6">
             <button
                 onClick={() => setOpen(!open)}
                 className="w-full flex items-center justify-between text-left focus:outline-none"

@@ -19,10 +19,10 @@ const teamMembers = [
     { name: "Ariana Berisha", role: "Hotel Partnerships Manager", img: team_member2, bio: "Ariana builds strong relationships with hotels to ensure the best options for travelers." },
     { name: "Erina Gashi", role: "Customer Support Manager", img: team_member3, bio: "Erina ensures all customer queries are answered quickly and professionally." },
     { name: "Gentian Hoxha", role: "Senior Booking Coordinator", img: team_member4, bio: "Gentian manages bookings and ensures a seamless experience for travelers." },
+    { name: "Mimoza Shala", role: "Promotions & Offers Specialist", img: team_member7, bio: "Mimoza designs attractive deals and promotions for users." },
     { name: "Sara Kelmendi", role: "Marketing Lead", img: team_member5, bio: "Sara leads campaigns to make BookInn visible to travelers worldwide." },
     { name: "Art Imeri", role: "Junior Booking Coordinator", img: team_member6, bio: "Art focuses on assisting with hotel bookings, data entry, and customer queries under supervision." },
-    { name: "Mimoza Shala", role: "Promotions & Offers Specialist", img: team_member7, bio: "Mimoza designs attractive deals and promotions for users." },
-    { name: "Diana Shoshi", role: "Front-End Booking Developer", img: team_member8, bio: "Diana develops and maintains the booking platform's front-end." },
+    { name: "Diana Shoshi", role: "Front-End Developer", img: team_member8, bio: "Diana develops and maintains the booking platform's front-end." },
     { name: "Amar Rexhepi", role: "Booking Analytics Specialist", img: team_member9, bio: "Amar analyzes booking data to optimize performance and conversions." },
     { name: "Valon Leka", role: "Data Specialist", img: team_member10, bio: "Valon manages data and ensures accuracy across all hotel listings." },
     { name: "Adea Imeri", role: "Special Offers Coordinator", img: team_member11, bio: "Adea creates seasonal and special offers for travelers." },
@@ -46,7 +46,7 @@ function HotelTeamSection() {
                         key={idx}
                         whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.15)" }}
                         transition={{ type: "spring", stiffness: 300 }}
-                        className="bg-white rounded-xl shadow p-6 text-center max-w-[280px] mx-auto w-full cursor-pointer"
+                        className="bg-gray-50 border border-gray-300 rounded-xl shadow p-6 text-center max-w-[280px] mx-auto w-full cursor-pointer"
                         onClick={() => setExpandedIdx(expandedIdx === idx ? null : idx)}
                     >
                         <img
