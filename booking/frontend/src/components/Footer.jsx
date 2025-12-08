@@ -56,6 +56,12 @@ export default function Footer({ onShowContact }) {
                                 Contact Us
                             </button>
                         </li>
+                        <li className="hover:font-semibold cursor-pointer transition">
+                            <Link to="/destinations">Travel Guides</Link>
+                        </li>
+                        <li className="hover:font-semibold cursor-pointer transition">
+                            <Link to="/packing">Packing List Generator</Link>
+                        </li>
                     </ul>
                 </div>
 
