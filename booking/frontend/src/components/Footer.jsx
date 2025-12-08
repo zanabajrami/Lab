@@ -83,6 +83,10 @@ export default function Footer({ onShowContact }) {
                         <li className="hover:font-semibold cursor-pointer transition">
                             <Link to="/privacy">Privacy Policy</Link>
                         </li>
+                        <li className="hover:font-semibold cursor-pointer transition">
+                            <Link to="/property-policies">Property Policies</Link>
+                        </li>
+                        
                     </ul>
                 </div>
 

@@ -18,6 +18,7 @@ import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import OurTeam from './pages/OurTeam';
 import Packing from './pages/Packing';
+import PropertyPolicies from './pages/PropertyPolicies';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -64,6 +65,7 @@ function MainWrapper() {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/our-team" element={<OurTeam />} />
           <Route path="/packing" element={<Packing />} />
+          <Route path="/property-policies" element={<PropertyPolicies />} />
 
         </Routes>
       </main>
