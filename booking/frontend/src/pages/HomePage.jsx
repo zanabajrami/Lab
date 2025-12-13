@@ -6,8 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 import SearchBar from "../components/SearchBar";
-import { useNavigate } from "react-router-dom";
-import { Search, Hotel, CircleCheck, BedDouble, Users, HandCoins, Euro, Phone, LockKeyhole, Clock, MessageCircle, MessageSquareText } from "lucide-react";
+import { useNavigate, Link } from "react-router-dom";
+import { Search, Hotel, CircleCheck, BedDouble, Users, HandCoins, Euro, Phone, LockKeyhole, Clock } from "lucide-react";
 
 import mainImage from "../images/main.jpg";
 import prishtina0Image from "../images/prishtina-.jpeg";
@@ -316,10 +316,7 @@ function HomePage() {
       <section className="py-12 -mt-10">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl text-center text-gray-600 mb-10 transition-transform duration-500 hover:scale-105">
-            <div className="flex justify-center mb-2">
-              <MessageSquareText className="w-8 h-8 text-gray-600" />
-            </div>
-            Suggestions
+            SUGGESTIONS
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[himare0Image, brezovica0Image, tirana0Image].map((img, idx) => {
@@ -404,13 +401,14 @@ function HomePage() {
 
         {/* Përshtypjet e klientëve */}
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-3xl mb-16 relative inline-block text-center text-gray-600">
-            <div className="flex justify-center mb-2">
-              <MessageCircle className="w-8 h-8 text-gray-600" />
-            </div>
-            Reviews
+          <Link
+            to="/customer-reviews" // Kjo shërben si 'href'
+            className="text-3xl mb-16 mt-5 relative inline-block text-center text-gray-600 cursor-pointer"
+          >
+            REVIEWS
+            {/* Vija stilistike poshtë tekstit */}
             <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-black to-blue-500 rounded-full animate-pulse"></span>
-          </h2>
+          </Link>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {reviews.map((review, index) => (
