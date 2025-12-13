@@ -95,7 +95,7 @@ export default function CustomerReviewsV2() {
                     <h2 className="text-sm text-indigo-900 font-semibold tracking-widest uppercase">
                         CUSTOMER FEEDBACK
                     </h2>
-                    <p className="mt-2 text-3xl leading-tight font-extrabold text-gray-900 sm:text-4xl md:text-5xl">
+                    <p className="mt-2 text-3xl leading-tight font-extrabold text-gray-800 sm:text-3xl md:text-3xl">
                         BookInn Reviews
                     </p>
                     <p className="mt-4 text-md text-gray-500 max-w-2xl mx-auto">
