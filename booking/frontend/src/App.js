@@ -19,6 +19,7 @@ import Privacy from './pages/Privacy';
 import OurTeam from './pages/OurTeam';
 import Packing from './pages/Packing';
 import PropertyPolicies from './pages/PropertyPolicies';
+import CustomerReviews from './pages/CustomerReviews';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -66,7 +67,7 @@ function MainWrapper() {
           <Route path="/our-team" element={<OurTeam />} />
           <Route path="/packing" element={<Packing />} />
           <Route path="/property-policies" element={<PropertyPolicies />} />
-
+          <Route path="/customer-reviews" element={<CustomerReviews />} />
         </Routes>
       </main>
       <Footer onShowContact={() => setShowContact(true)} />

@@ -78,6 +78,9 @@ export default function Footer({ onShowContact }) {
                             <Link to="/faq">FAQs</Link>
                         </li>
                         <li className="hover:font-semibold cursor-pointer transition">
+                            <Link to="/customer-reviews">Customer Reviews</Link>
+                        </li>
+                        <li className="hover:font-semibold cursor-pointer transition">
                             <Link to="/terms">Terms & Conditions</Link>
                         </li>
                         <li className="hover:font-semibold cursor-pointer transition">
@@ -86,7 +89,7 @@ export default function Footer({ onShowContact }) {
                         <li className="hover:font-semibold cursor-pointer transition">
                             <Link to="/property-policies">Property Policies</Link>
                         </li>
-                        
+
                     </ul>
                 </div>
 
