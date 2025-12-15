@@ -9,9 +9,10 @@ function Register({ onSwitchToLogin, onClose }) {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Validimet e tua
     if (firstName.trim().length < 1) {
       alert("First Name must be at least 1 character");
       return;
@@ -33,12 +34,40 @@ function Register({ onSwitchToLogin, onClose }) {
       return;
     }
 
-    alert("You are signed up!");
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setPassword("");
-    setConfirmPassword("");
+    // POST request tek backend
+    try {
+      const response = await fetch("http://127.0.0.1:8000/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          first_name: firstName,
+          last_name: lastName,
+          email: email,
+          password: password,
+          password_confirmation: confirmPassword,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Signed up successfully!");
+        console.log("Response from backend:", data);
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
+      } else {
+        // Nëse ka error nga backend, e tregon
+        alert(JSON.stringify(data));
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Something went wrong. Check console.");
+    }
   };
 
   const handleOverlayClick = (e) => {
@@ -48,11 +77,11 @@ function Register({ onSwitchToLogin, onClose }) {
   };
 
   useEffect(() => {
-      document.body.style.overflow = "hidden"; // disable scroll when modal is mounted
-      return () => {
-        document.body.style.overflow = "auto"; // re-enable on unmount
-      };
-    }, []); 
+    document.body.style.overflow = "hidden"; // disable scroll when modal is mounted
+    return () => {
+      document.body.style.overflow = "auto"; // re-enable on unmount
+    };
+  }, []);
 
   return (
     <div

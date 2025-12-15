@@ -6,7 +6,7 @@ function Login({ onSwitchToRegister, onClose }) {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!email.endsWith("@gmail.com") && !email.endsWith("@hotmail.com")) {
@@ -19,24 +19,41 @@ function Login({ onSwitchToRegister, onClose }) {
       return;
     }
 
-    alert("You are logged in!");
-    if (typeof onClose === "function") onClose();
-    setEmail("");
-    setPassword("");
-    setShowPassword(false);
-  };
+    try {
+      const response = await fetch("http://127.0.0.1:8000/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
 
-  const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget && typeof onClose === "function") {
-      onClose();
+      const data = await response.json();
+
+      if (response.ok) {
+        // Ruaj token në localStorage
+        localStorage.setItem("token", data.token);
+        alert("Logged in successfully!");
+        console.log("Logged in user:", data.user);
+
+        if (typeof onClose === "function") onClose();
+        setEmail("");
+        setPassword("");
+        setShowPassword(false);
+      } else {
+        alert(JSON.stringify(data));
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      alert("Something went wrong. Check console.");
     }
   };
 
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget && typeof onClose === "function") onClose();
+  };
+
   useEffect(() => {
-    document.body.style.overflow = "hidden"; // disable scroll when modal is mounted
-    return () => {
-      document.body.style.overflow = "auto"; // re-enable on unmount
-    };
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = "auto"; };
   }, []);
 
   return (
