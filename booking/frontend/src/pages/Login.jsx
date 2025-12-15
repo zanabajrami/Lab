@@ -31,6 +31,7 @@ function Login({ onSwitchToRegister, onClose }) {
       if (response.ok) {
         // Ruaj token në localStorage
         localStorage.setItem("token", data.token);
+        localStorage.setItem("user", JSON.stringify(data.user));
         alert("Logged in successfully!");
         console.log("Logged in user:", data.user);
 

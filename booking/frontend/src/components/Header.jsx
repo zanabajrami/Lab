@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Contact from "./Contact";
-import { Menu, X ,Heart} from "lucide-react";
+import { Menu, X, Heart } from "lucide-react";
 
 function Header() {
   const [showLogin, setShowLogin] = useState(false);
@@ -12,6 +12,7 @@ function Header() {
   const [showContact, setShowContact] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const user = JSON.parse(localStorage.getItem("user"));
 
   // Dropdown për madhësinë
   const [headerSize, setHeaderSize] = useState("7xl");
@@ -79,6 +80,10 @@ function Header() {
                 <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </nav>
+
+            {user && user.role === 'admin' && (
+              <Link to="/dashboard" className="text-indigo-100 hover:underline">Dashboard</Link>
+            )}
 
             {/* Login/Register Buttons */}
             <div className="hidden md:flex space-x-4">
