@@ -3,18 +3,14 @@ import React, { useState, useEffect } from "react";
 function Dashboard() {
   const [users, setUsers] = useState([]);
   const user = JSON.parse(localStorage.getItem("user"));
-
   const token = localStorage.getItem("token");
 
   useEffect(() => {
     const fetchUsers = async () => {
       if (!token) return;
-
       try {
         const res = await fetch("http://127.0.0.1:8000/api/users", {
-          headers: {
-            "Authorization": `Bearer ${token}`,
-          },
+          headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
         setUsers(data);
@@ -22,95 +18,114 @@ function Dashboard() {
         console.error("Failed to fetch users:", err);
       }
     };
-
     fetchUsers();
   }, [token]);
 
-  // Delete user
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this user?")) return;
-
     try {
       const res = await fetch(`http://127.0.0.1:8000/api/users/${id}`, {
         method: "DELETE",
-        headers: {
-          "Authorization": `Bearer ${token}`,
-        },
+        headers: { Authorization: `Bearer ${token}` },
       });
-
       if (res.ok) {
-        setUsers(users.filter(u => u.id !== id));
+        setUsers(users.filter((u) => u.id !== id));
         alert("User deleted successfully!");
-      } else {
-        alert("Failed to delete user");
-      }
+      } else alert("Failed to delete user");
     } catch (err) {
       console.error(err);
     }
   };
 
-  // Kontrollo rolin, vetëm admin mund të shoh dashboard
   if (!user || user.role !== "admin") {
-    return <p className="p-8 text-red-600 font-bold">You are not authorized to view this page.</p>;
+    return (
+      <p className="p-8 text-red-600 font-bold">
+        You are not authorized to view this page.
+      </p>
+    );
   }
 
   return (
-    <div className="p-8">
-      <h1 className="text-3xl text-gray-700 text-center font-bold mb-6">Admin Dashboard</h1>
+    <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
+      {/* Sidebar */}
+      <aside className="w-full md:w-64 bg-white border-r">
+        <div className="p-6 text-2xl font-bold text-indigo-900">
+          Admin Panel
+        </div>
+        <nav className="px-4 space-y-2">
+          <a className="block px-4 py-2 rounded-lg bg-indigo-50 text-indigo-900 font-medium">
+            Dashboard
+          </a>
+          <a className="block px-4 py-2 rounded-lg hover:bg-gray-100">
+            Users
+          </a>
+        </nav>
+      </aside>
 
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border border-gray-200 rounded-lg">
-          <thead>
-            <tr className="bg-gray-100 text-left">
-              <th className="px-4 py-2 border-b">ID</th>
-              <th className="px-4 py-2 border-b">Role</th>
-              <th className="px-4 py-2 border-b">First Name</th>
-              <th className="px-4 py-2 border-b">Last Name</th>
-              <th className="px-4 py-2 border-b">Email</th>
-              <th className="px-4 py-2 border-b">Created At</th>
-              <th className="px-4 py-2 border-b">Updated At</th>
-              <th className="px-4 py-2 border-b">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {users.map(u => (
-              <tr key={u.id} className="bg-gray-100 hover:bg-gray-200">
-                <td className="px-4 py-2 border-b">{u.id}</td>
-                <td className="px-4 py-2 border-b">{u.role}</td>
-                <td className="px-4 py-2 border-b">{u.first_name}</td>
-                <td className="px-4 py-2 border-b">{u.last_name}</td>
-                <td className="px-4 py-2 border-b">{u.email}</td>
-                <td className="px-4 py-2 border-b">{new Date(u.created_at).toLocaleString()}</td>
-                <td className="px-4 py-2 border-b">{new Date(u.updated_at).toLocaleString()}</td>
-                <td className="px-4 py-2 border-b flex gap-2">
-                  {/* Edit button */}
-                  <button
-                    className="px-3 py-1 bg-indigo-900 text-indigo-100 rounded hover:bg-indigo-800"
-                    onClick={() => alert(`Edit user ${u.id} - duhet me implementu form`)}
-                  >
-                    Edit
-                  </button>
+      {/* Main content */}
+      <main className="flex-1 overflow-x-auto">
+        {/* Topbar */}
+        <div className="bg-white border-b px-4 py-4 flex justify-between items-center md:px-6">
+          <h1 className="text-lg md:text-xl font-semibold text-gray-700">
+            Admin Dashboard
+          </h1>
+          <span className="text-gray-600 text-sm md:text-base">{user.email}</span>
+        </div>
 
-                  {/* Delete button */}
-                  <button
-                    className="px-3 py-1 bg-indigo-300 text-indigo-900 rounded hover:bg-indigo-400"
-                    onClick={() => handleDelete(u.id)}
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-            {users.length === 0 && (
-              <tr>
-                <td colSpan="8" className="text-center py-4 text-gray-500">
-                  No users found.
-                </td>
-              </tr>
-            )}
-          </tbody>
-        </table>
-      </div>
+        {/* Content */}
+        <div className="p-4 md:p-6">
+          <div className="bg-white shadow rounded-lg overflow-x-auto">
+            <table className="min-w-full text-sm">
+              <thead className="bg-gray-50 text-gray-600">
+                <tr>
+                  <th className="px-2 md:px-4 py-2 text-left">ID</th>
+                  <th className="px-2 md:px-4 py-2 text-left">Role</th>
+                  <th className="px-2 md:px-4 py-2 text-left">First Name</th>
+                  <th className="px-2 md:px-4 py-2 text-left">Last Name</th>
+                  <th className="px-2 md:px-4 py-2 text-left">Email</th>
+                  <th className="px-2 md:px-4 py-2 text-left">Created</th>
+                  <th className="px-2 md:px-4 py-2 text-left">Updated</th>
+                  <th className="px-2 md:px-4 py-2 text-left">Actions</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y">
+                {users.map((u) => (
+                  <tr key={u.id} className="hover:bg-gray-50">
+                    <td className="px-2 md:px-4 py-2">{u.id}</td>
+                    <td className="px-2 md:px-4 py-2">{u.role}</td>
+                    <td className="px-1 md:px-2 py-2 w-20">{u.first_name}</td>
+                    <td className="px-1 md:px-2 py-2 w-20">{u.last_name}</td>
+                    <td className="px-2 md:px-4 py-2 min-w-[200px]">{u.email}</td>
+                    <td className="px-2 md:px-4 py-2">{new Date(u.created_at).toLocaleString()}</td>
+                    <td className="px-2 md:px-4 py-2">{new Date(u.updated_at).toLocaleString()}</td>
+                    <td className="px-2 md:px-4 py-2 flex gap-2 flex-wrap">
+                      <button
+                        className="px-2 md:px-3 py-1 text-xs md:text-sm bg-indigo-600 text-white rounded hover:bg-indigo-700"
+                        onClick={() => alert(`Edit user ${u.id} - implementohet form`)}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        className="px-2 md:px-3 py-1 text-xs md:text-sm bg-red-100 text-red-700 rounded hover:bg-red-200"
+                        onClick={() => handleDelete(u.id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+                {users.length === 0 && (
+                  <tr>
+                    <td colSpan="8" className="text-center py-6 text-gray-500">
+                      No users found.
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
