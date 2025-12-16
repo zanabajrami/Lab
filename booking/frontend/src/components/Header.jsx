@@ -34,6 +34,12 @@ function Header() {
     { name: "Deals", to: "/deals" },
   ];
 
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("token"); // nëse përdor token
+    window.location.reload(); // rifreskon faqen për të pasqyruar ndryshimin
+  };
+
   return (
     <>
       <motion.header
@@ -87,18 +93,33 @@ function Header() {
 
             {/* Login/Register Buttons */}
             <div className="hidden md:flex space-x-4">
-              <button
-                onClick={() => { setShowLogin(true); setShowRegister(false); }}
-                className="px-5 py-2 rounded-2xl border border-indigo-400/30 text-indigo-200 bg-transparent hover:bg-indigo-900/40 hover:shadow-[0_0_10px_2px_rgba(99,102,241,0.3)] transition duration-300 font-semibold"
-              >
-                Login
-              </button>
-              <button
-                onClick={() => { setShowRegister(true); setShowLogin(false); }}
-                className="px-5 py-2 rounded-2xl bg-indigo-300 text-gray-700 font-semibold shadow-md hover:bg-indigo-500 hover:shadow-[0_0_12px_3px_rgba(99,102,241,0.4)] transition duration-300"
-              >
-                Sign Up
-              </button>
+              {user ? (
+                <button
+                  onClick={() => {
+                    localStorage.removeItem("user");
+                    localStorage.removeItem("token"); // nëse ke token
+                    window.location.reload(); // rifreskon faqen
+                  }}
+                  className="px-5 py-2 rounded-2xl bg-transparent text-indigo-200 font-semibold border border-indigo-200 hover:bg-indigo-50 transition duration-300"
+                >
+                  Logout
+                </button>
+              ) : (
+                <>
+                  <button
+                    onClick={() => { setShowLogin(true); setShowRegister(false); }}
+                    className="px-5 py-2 rounded-2xl border border-indigo-400/30 text-indigo-200 bg-transparent hover:bg-indigo-900/40 hover:shadow-[0_0_10px_2px_rgba(99,102,241,0.3)] transition duration-300 font-semibold"
+                  >
+                    Login
+                  </button>
+                  <button
+                    onClick={() => { setShowRegister(true); setShowLogin(false); }}
+                    className="px-5 py-2 rounded-2xl bg-indigo-300 text-gray-700 font-semibold shadow-md hover:bg-indigo-500 hover:shadow-[0_0_12px_3px_rgba(99,102,241,0.4)] transition duration-300"
+                  >
+                    Sign Up
+                  </button>
+                </>
+              )}
             </div>
 
             {/* Mobile Menu Button */}
@@ -176,6 +197,7 @@ function Header() {
           onClose={() => setShowLogin(false)}
         />
       )}
+
       {showRegister && (
         <Register
           isOpen={showRegister}
@@ -183,7 +205,9 @@ function Header() {
           onClose={() => setShowRegister(false)}
         />
       )}
+
       {showContact && <Contact isOpen={showContact} onClose={() => setShowContact(false)} />}
+
     </>
   );
 }
