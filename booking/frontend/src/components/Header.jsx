@@ -88,7 +88,7 @@ function Header() {
             </nav>
 
             {user && user.role === 'admin' && (
-              <Link to="/dashboard" className="text-indigo-100 hover:underline">Dashboard</Link>
+              <Link to="/admin" className="text-indigo-100 hover:underline">Dashboard</Link>
             )}
 
             {/* Login/Register Buttons */}

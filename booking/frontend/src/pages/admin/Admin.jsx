@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "../../components/Sidebar";
 import Topbar from "../../components/Topbar";
-import DashboardStats from "./DashboardStats";
+import Dashboard from "./Dashboard";
 import Users from "./Users";
 
 function AdminLayout() {
@@ -27,7 +27,7 @@ function AdminLayout() {
 
 
                 <main className="p-6 overflow-y-auto">
-                    {activePage === "dashboard" && <DashboardStats />}
+                    {activePage === "dashboard" && <Dashboard />}
                     {activePage === "users" && <Users />}
                 </main>
             </div>
