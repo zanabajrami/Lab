@@ -20,5 +20,8 @@ Route::middleware('auth:api')->group(function () {
         Route::post('users', [UserController::class, 'store']);
         Route::put('users/{id}', [UserController::class, 'update']);
         Route::delete('users/{id}', [UserController::class, 'destroy']);
+
+        // USERS STATS (LINE CHART)
+        Route::get('users/stats/daily', [UserController::class, 'dailyStats']);
     });
 });

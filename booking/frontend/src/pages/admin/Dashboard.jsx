@@ -2,19 +2,26 @@ import React, { useEffect, useState } from "react";
 import UsersChart from "../../components/charts/UsersChart";
 
 function DashboardStats() {
-  const [usersCount, setUsersCount] = useState(0);
+  const [usersStats, setUsersStats] = useState([]);
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    const fetchUsers = async () => {
-      const res = await fetch("http://127.0.0.1:8000/api/users", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      const data = await res.json();
-      setUsersCount(data.length);
+    const fetchUsersStats = async () => {
+      try {
+        const res = await fetch(
+          "http://127.0.0.1:8000/api/users/stats/daily",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
+        const data = await res.json();
+        setUsersStats(data);
+      } catch (err) {
+        console.error(err);
+      }
     };
 
-    fetchUsers();
+    fetchUsersStats();
   }, [token]);
 
   return (
@@ -22,7 +29,7 @@ function DashboardStats() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
         <div className="bg-white p-6 rounded-xl shadow">
           <h2 className="text-gray-500">Total Users</h2>
-          <p className="text-3xl font-bold mt-2">{usersCount}</p>
+          <p className="text-3xl font-bold mt-2">{usersStats.reduce((sum, u) => sum + u.count, 0)}</p>
         </div>
 
         <div className="bg-white p-6 rounded-xl shadow">
@@ -32,12 +39,12 @@ function DashboardStats() {
 
         <div className="bg-white p-6 rounded-xl shadow">
           <h2 className="text-gray-500">New Signups</h2>
-          <p className="text-3xl font-bold mt-2">0</p>
+          <p className="text-3xl font-bold mt-2">{usersStats[usersStats.length - 1]?.count || 0}</p>
         </div>
       </div>
 
-      {/* Chart */}
-      <UsersChart usersCount={usersCount} />
+      {/* Chart ditore */}
+      <UsersChart usersData={usersStats} />
     </>
   );
 }
