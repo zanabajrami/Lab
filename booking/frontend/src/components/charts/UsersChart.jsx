@@ -29,7 +29,7 @@ function UsersChart({ usersData }) {
                 data: last15.map(u => u.count),
                 fill: true,
                 tension: 0.4,
-                borderColor: "rgb(59, 130, 246)",
+                borderColor: "rgba(45, 26, 54, 1)",
                 backgroundColor: "rgba(59, 130, 246, 0.2)",
                 pointRadius: 5,
             }
@@ -54,7 +54,7 @@ function UsersChart({ usersData }) {
 
     return (
         <div className="bg-white p-9 rounded-xl shadow w-full h-96">
-            <h2 className="text-gray-500 mb-4">New Users </h2>
+            <h2 className="text-gray-500 mb-1">New Users </h2>
             <div className="w-full h-full">
                 <Line data={data} options={options} />
             </div>
