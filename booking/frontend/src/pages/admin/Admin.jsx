@@ -11,7 +11,7 @@ function AdminLayout() {
 
     if (!user || user.role !== "admin") {
         return (
-            <p className="p-8 text-red-600 font-bold">
+            <p className="p-8 text-gray-600 text-center font-bold">
                 You are not authorized to view this page.
             </p>
         );
