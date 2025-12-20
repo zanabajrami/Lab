@@ -19,19 +19,21 @@ ChartJS.register(
 );
 
 function UsersChart({ usersData }) {
+    const last15 = usersData.slice(-15); // merr 15 itemet e fundit
+
     const data = {
-        labels: usersData.map((u) => u.date),
+        labels: last15.map(u => u.date),
         datasets: [
             {
-                label: "New Users Daily",
-                data: usersData.map((u) => u.count),
+                label: "New Users",
+                data: last15.map(u => u.count),
                 fill: true,
                 tension: 0.4,
                 borderColor: "rgb(59, 130, 246)",
                 backgroundColor: "rgba(59, 130, 246, 0.2)",
                 pointRadius: 5,
-            },
-        ],
+            }
+        ]
     };
 
     const options = {
@@ -52,7 +54,7 @@ function UsersChart({ usersData }) {
 
     return (
         <div className="bg-white p-9 rounded-xl shadow w-full h-96">
-            <h2 className="text-gray-500 mb-4">New Users Daily</h2>
+            <h2 className="text-gray-500 mb-4">New Users </h2>
             <div className="w-full h-full">
                 <Line data={data} options={options} />
             </div>

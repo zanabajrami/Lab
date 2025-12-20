@@ -88,25 +88,32 @@ class UserController extends Controller
         $user->delete();
         return response()->json(['message' => 'User deleted'], 200);
     }
-      // GET /api/users/stats/daily
+    // GET /api/users/stats/daily
         public function dailyStats()
     {
-         $stats = User::select(
+        $stats = User::select(
             DB::raw('DATE(created_at) as date'),
             DB::raw('COUNT(*) as total')
-        )
+    )
         ->groupBy('date')
         ->orderBy('date')
-        ->get();
+        ->get()
+        ->keyBy('date');
 
-        // Mapimi për JSON
-        $result = $stats->map(function ($row) {
+    // 15 ditët e fundit
+        $period = collect();
+        for ($i = 14; $i >= 0; $i--) {
+        $date = now()->subDays($i)->format('Y-m-d');
+        $period[$date] = isset($stats[$date]) ? (int)$stats[$date]->total : 0;
+    }
+
+        $result = $period->map(function($count, $date) {
         return [
-            'date' => $row->date, // p.sh. 2025-12-20
-            'count' => (int) $row->total,
+            'date' => $date,
+            'count' => $count,
         ];
-    });
+    })->values();
+
     return response()->json($result, 200);
 }
-
 }
