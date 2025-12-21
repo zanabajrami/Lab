@@ -52,7 +52,7 @@ export default function Users() {
             placeholder="Search for users"
             className="flex-1 pl-4 pr-4 py-2 border rounded-xl text-sm focus:ring-2 focus:ring-indigo-500"
           />
-          <button className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm hover:bg-indigo-700">
+          <button className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-100 text-gray-600 text-sm border border-indigo-200 hover:bg-indigo-200 hover:border-indigo-400">
             <Plus className="w-4 h-4" />
             Add user
           </button>
@@ -66,6 +66,7 @@ export default function Users() {
             <tr>
               <th className="px-4 py-3 text-left">ID</th>
               <th className="px-4 py-3 text-left">Name</th>
+              <th className="px-4 py-3 text-left">Last Name</th>
               <th className="px-4 py-3 text-left">Email</th>
               <th className="px-4 py-3 text-left">Role</th>
               <th className="px-4 py-3 text-left">Created At</th>
@@ -77,14 +78,17 @@ export default function Users() {
               <tr key={u.id} className="border-b hover:bg-gray-50">
                 <td className="px-4 py-3 font-medium text-gray-900">{u.id}</td>
                 <td className="px-4 py-3 font-medium text-gray-900">
-                  {u.first_name} {u.last_name}
+                  {u.first_name}
                 </td>
-                <td className="px-4 py-3 text-gray-600 break-words">{u.email}</td>
+                <td className="px-4 py-3 font-medium text-gray-900">
+                  {u.last_name}
+                </td>
+                <td className="px-4 py-3 text-gray-900 break-words">{u.email}</td>
                 <td className="px-4 py-3 capitalize">{u.role}</td>
-                <td className="px-4 py-3 text-gray-600">{new Date(u.created_at).toLocaleDateString()}</td>
+                <td className="px-4 py-3 text-gray-900">{new Date(u.created_at).toLocaleDateString()}</td>
                 <td className="px-4 py-3">
                   <div className="flex justify-center gap-2">
-                    <button className="p-2 rounded-lg hover:bg-indigo-100 text-indigo-600">
+                    <button className="p-2 rounded-lg hover:bg-indigo-100 text-indigo-800">
                       <Pencil className="w-4 h-4" />
                     </button>
                     <button
@@ -119,9 +123,9 @@ export default function Users() {
                 </button>
               </div>
             </div>
-            <p className="text-gray-600 text-sm">Email: {u.email}</p>
-            <p className="text-gray-600 text-sm capitalize">Role: {u.role}</p>
             <p className="text-gray-600 text-sm">ID: {u.id}</p>
+            <p className="text-gray-600 text-sm capitalize">Role: {u.role}</p>
+            <p className="text-gray-600 text-sm">Email: {u.email}</p>
             <p className="text-gray-600 text-sm">Created At: {new Date(u.created_at).toLocaleDateString()}</p>
           </div>
         ))}
