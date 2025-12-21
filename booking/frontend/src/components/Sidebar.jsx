@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { 
-  LayoutDashboard, 
-  Users, 
-  ChevronLeft, 
-  ChevronRight, 
-  Settings, 
-  LogOut 
+import {
+  LayoutDashboard,
+  Users,
+  ShieldUser,
+  Settings,
+  LogOut
 } from "lucide-react";
 
 function Sidebar({ activePage, setActivePage }) {
@@ -13,36 +12,24 @@ function Sidebar({ activePage, setActivePage }) {
 
   const navItemClass = (page) => `
     w-full flex items-center justify-center md:justify-start px-3 py-3 rounded-lg transition-all duration-200 group
-    ${activePage === page 
-      ? "bg-indigo-100 text-indigo-900 shadow-md shadow-indigo-200" 
+    ${activePage === page
+      ? "bg-indigo-100 text-gray-900 shadow-md shadow-indigo-200"
       : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"}
   `;
 
   return (
-    <aside 
+    <aside
       className={`relative flex flex-col bg-white border-r border-gray-200 transition-all duration-300 ease-in-out h-screen z-40
-      ${/* Në telefon (mobile) gjithmonë w-20, në desktop ndryshon sipas isCollapsed */ ""}
       w-20 ${isCollapsed ? "md:w-20" : "md:w-64"}`}
     >
-      
-      {/* Butoni Toggle - I fshehur në Mobile (hidden md:block) */}
-      <button
-        onClick={() => setIsCollapsed(!isCollapsed)}
-        className="hidden md:flex absolute -right-3 top-10 bg-white border border-gray-200 rounded-full p-1 shadow-sm hover:bg-indigo-50 hover:border-indigo-200 transition-colors z-50"
-      >
-        {isCollapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
-      </button>
-
       {/* Logo Section - Në mobile vetëm ikona */}
       <div className="p-4 md:p-6 mb-4 flex items-center justify-center md:justify-start gap-3">
-        <div className="bg-indigo-900 p-2 rounded-lg shrink-0">
-          <div className="w-5 h-5 border-2 border-white rounded-sm rotate-45" />
+        <div className="p-2 rounded-lg shrink-0 flex items-center justify-center">
+          <ShieldUser className="w-7 h-7 text-gray-800" />
         </div>
-        {!isCollapsed && (
-          <span className="hidden md:block text-xl font-bold tracking-tight text-gray-800 animate-fadeIn">
-            BookInn <span className="text-indigo-900">Admin</span>
-          </span>
-        )}
+        <span className="hidden md:block text-xl font-bold tracking-tight text-gray-800 animate-fadeIn">
+          BookInn <span className="text-gray-700">Admin</span>
+        </span>
       </div>
 
       {/* Navigation Links */}
@@ -76,7 +63,7 @@ function Sidebar({ activePage, setActivePage }) {
         <button className="w-full flex items-center justify-center md:justify-start px-3 py-3 text-red-500 hover:bg-red-50 rounded-lg transition-all group">
           <LogOut size={22} />
           <span className={`ml-3 font-medium ${isCollapsed ? "md:hidden" : ""} hidden md:block`}>
-            Dil
+            Logout
           </span>
         </button>
       </div>
