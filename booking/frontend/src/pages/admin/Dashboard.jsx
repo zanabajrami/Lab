@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import UsersChart from "../../components/charts/UsersChart";
 
-function DashboardStats() {
+function Dashboard() {
   const [usersStats, setUsersStats] = useState([]);
   const token = localStorage.getItem("token");
 
@@ -31,7 +31,8 @@ function DashboardStats() {
           <h2 className="text-gray-500">Total Users</h2>
           <p className="text-3xl font-bold mt-2">
             {usersStats.reduce((sum, u) => sum + u.count, 0)}
-          </p>        </div>
+          </p>
+        </div>
 
         <div className="bg-white p-6 rounded-xl shadow">
           <h2 className="text-gray-500">Revenue</h2>
@@ -52,4 +53,4 @@ function DashboardStats() {
   );
 }
 
-export default DashboardStats;
+export default Dashboard;

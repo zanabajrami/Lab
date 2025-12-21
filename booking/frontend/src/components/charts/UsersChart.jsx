@@ -79,7 +79,6 @@ function UsersChart({ usersData }) {
                 <Line data={data} options={options} />
             </div>
         </div>
-
     );
 }
 
