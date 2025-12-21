@@ -20,12 +20,8 @@ function AdminLayout() {
     return (
         <div className="flex h-screen bg-gray-100">
             <Sidebar activePage={activePage} setActivePage={setActivePage} />
-
-
             <div className="flex-1 flex flex-col">
                 <Topbar />
-
-
                 <main className="p-6 overflow-y-auto">
                     {activePage === "dashboard" && <Dashboard />}
                     {activePage === "users" && <Users />}

@@ -19,21 +19,23 @@ ChartJS.register(
 );
 
 function UsersChart({ usersData }) {
-    const last15 = usersData.slice(-15); // merr 15 itemet e fundit
+    const last5 = usersData.slice(-5); // merr 10 itemet e fundit
 
     const data = {
-        labels: last15.map(u => u.date),
+        labels: last5.map(u => u.date),
         datasets: [
             {
                 label: "New Users",
-                data: last15.map(u => u.count),
+                data: last5.map(u => u.count),
                 fill: true,
-                tension: 0.4,
+                tension: 0.35,
                 borderColor: "rgba(45, 26, 54, 1)",
-                backgroundColor: "rgba(59, 130, 246, 0.2)",
-                pointRadius: 5,
-            }
-        ]
+                backgroundColor: "rgba(59, 130, 246, 0.15)",
+                pointRadius: 3,
+                pointHoverRadius: 5,
+                borderWidth: 2,
+            },
+        ],
     };
 
     const options = {
@@ -53,12 +55,31 @@ function UsersChart({ usersData }) {
     };
 
     return (
-        <div className="bg-white p-9 rounded-xl shadow w-full h-96">
-            <h2 className="text-gray-500 mb-1">New Users </h2>
-            <div className="w-full h-full">
+        <div
+            className="
+        bg-white rounded-xl shadow w-full
+        p-4 sm:p-6 lg:p-8 xl:p-9
+        h-82 sm:h-[360px] lg:h-[400px] xl:h-[440px]
+    "
+        >
+            <h2 className="text-gray-500 mb-1 -mt-2 text-sm sm:text-base lg:text-lg">
+                New Users
+            </h2>
+
+            {/* CHART WRAPPER */}
+            <div
+                className="
+        mx-auto h-full
+        w-[94%] max-w-[320px]
+        sm:w-[95%] sm:max-w-[520px]
+        lg:w-[90%] lg:max-w-[820px]
+        xl:w-full xl:max-w-none
+    "
+            >
                 <Line data={data} options={options} />
             </div>
         </div>
+
     );
 }
 
