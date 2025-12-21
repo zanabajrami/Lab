@@ -1,12 +1,12 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, useRef } from "react";
 import { Plus, Trash2, Pencil } from "lucide-react";
 
 export default function Users() {
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
-  const perPage = 10;
-  const token = localStorage.getItem("token");
+  const [perPage, setPerPage] = useState(window.innerWidth < 768 ? 4 : 7); const token = localStorage.getItem("token");
+  const headerRef = useRef(null);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -30,6 +30,14 @@ export default function Users() {
   const totalPages = Math.ceil(filtered.length / perPage);
   const paginated = filtered.slice((page - 1) * perPage, page * perPage);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setPerPage(window.innerWidth < 768 ? 4 : 7);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure?")) return;
     const res = await fetch(`http://127.0.0.1:8000/api/users/${id}`, {
@@ -42,7 +50,10 @@ export default function Users() {
   return (
     <div className="bg-white rounded-2xl shadow">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5 border-b">
+      <div
+        ref={headerRef}
+        className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5 border-b"
+      >
         <h2 className="text-xl font-semibold text-gray-800">All users</h2>
 
         <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -139,14 +150,21 @@ export default function Users() {
         <div className="flex gap-2">
           <button
             disabled={page === 1}
-            onClick={() => setPage((p) => p - 1)}
+            onClick={() => {
+              setPage((p) => p - 1);
+              window.scrollTo({ top: 0, behavior: "smooth" }); 
+            }}
             className="px-3 py-1 border rounded-lg disabled:opacity-50"
           >
             Previous
           </button>
+
           <button
             disabled={page === totalPages}
-            onClick={() => setPage((p) => p + 1)}
+            onClick={() => {
+              setPage((p) => p + 1);
+              window.scrollTo({ top: 0, behavior: "smooth" }); 
+            }}
             className="px-3 py-1 border rounded-lg disabled:opacity-50"
           >
             Next
