@@ -1,34 +1,87 @@
+import React, { useState } from "react";
+import { 
+  LayoutDashboard, 
+  Users, 
+  ChevronLeft, 
+  ChevronRight, 
+  Settings, 
+  LogOut 
+} from "lucide-react";
+
 function Sidebar({ activePage, setActivePage }) {
-    return (
-        <aside className="w-64 bg-white border-r hidden md:block">
-            <div className="p-6 text-xl font-bold">Admin Panel</div>
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
+  const navItemClass = (page) => `
+    w-full flex items-center justify-center md:justify-start px-3 py-3 rounded-lg transition-all duration-200 group
+    ${activePage === page 
+      ? "bg-indigo-100 text-indigo-900 shadow-md shadow-indigo-200" 
+      : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"}
+  `;
 
-            <nav className="px-4 space-y-2">
-                <button
-                    onClick={() => setActivePage("dashboard")}
-                    className={`w-full text-left px-4 py-2 rounded-lg font-medium ${activePage === "dashboard"
-                            ? "bg-indigo-100 text-indigo-700"
-                            : "hover:bg-gray-100"
-                        }`}
-                >
-                    Dashboard
-                </button>
+  return (
+    <aside 
+      className={`relative flex flex-col bg-white border-r border-gray-200 transition-all duration-300 ease-in-out h-screen z-40
+      ${/* Në telefon (mobile) gjithmonë w-20, në desktop ndryshon sipas isCollapsed */ ""}
+      w-20 ${isCollapsed ? "md:w-20" : "md:w-64"}`}
+    >
+      
+      {/* Butoni Toggle - I fshehur në Mobile (hidden md:block) */}
+      <button
+        onClick={() => setIsCollapsed(!isCollapsed)}
+        className="hidden md:flex absolute -right-3 top-10 bg-white border border-gray-200 rounded-full p-1 shadow-sm hover:bg-indigo-50 hover:border-indigo-200 transition-colors z-50"
+      >
+        {isCollapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
+      </button>
 
+      {/* Logo Section - Në mobile vetëm ikona */}
+      <div className="p-4 md:p-6 mb-4 flex items-center justify-center md:justify-start gap-3">
+        <div className="bg-indigo-900 p-2 rounded-lg shrink-0">
+          <div className="w-5 h-5 border-2 border-white rounded-sm rotate-45" />
+        </div>
+        {!isCollapsed && (
+          <span className="hidden md:block text-xl font-bold tracking-tight text-gray-800 animate-fadeIn">
+            BookInn <span className="text-indigo-900">Admin</span>
+          </span>
+        )}
+      </div>
 
-                <button
-                    onClick={() => setActivePage("users")}
-                    className={`w-full text-left px-4 py-2 rounded-lg font-medium ${activePage === "users"
-                            ? "bg-indigo-100 text-indigo-700"
-                            : "hover:bg-gray-100"
-                        }`}
-                >
-                    Users
-                </button>
-            </nav>
-        </aside>
-    );
+      {/* Navigation Links */}
+      <nav className="flex-1 px-3 space-y-2">
+        <button onClick={() => setActivePage("dashboard")} className={navItemClass("dashboard")}>
+          <LayoutDashboard size={22} />
+          <span className={`ml-3 font-medium ${isCollapsed ? "md:hidden" : ""} hidden md:block`}>
+            Dashboard
+          </span>
+        </button>
+
+        <button onClick={() => setActivePage("users")} className={navItemClass("users")}>
+          <Users size={22} />
+          <span className={`ml-3 font-medium ${isCollapsed ? "md:hidden" : ""} hidden md:block`}>
+            Users
+          </span>
+        </button>
+
+        <div className="my-4 border-t border-gray-100" />
+
+        <button className="w-full flex items-center justify-center md:justify-start px-3 py-3 text-gray-500 hover:bg-gray-100 rounded-lg transition-all group">
+          <Settings size={22} />
+          <span className={`ml-3 font-medium ${isCollapsed ? "md:hidden" : ""} hidden md:block`}>
+            Settings
+          </span>
+        </button>
+      </nav>
+
+      {/* Logout - Gjithmonë i dukshëm si ikonë */}
+      <div className="p-4 border-t border-gray-100">
+        <button className="w-full flex items-center justify-center md:justify-start px-3 py-3 text-red-500 hover:bg-red-50 rounded-lg transition-all group">
+          <LogOut size={22} />
+          <span className={`ml-3 font-medium ${isCollapsed ? "md:hidden" : ""} hidden md:block`}>
+            Dil
+          </span>
+        </button>
+      </div>
+    </aside>
+  );
 }
-
 
 export default Sidebar;
