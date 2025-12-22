@@ -34,12 +34,6 @@ function Header() {
     { name: "Deals", to: "/deals" },
   ];
 
-  const handleLogout = () => {
-    localStorage.removeItem("user");
-    localStorage.removeItem("token"); // nëse përdor token
-    window.location.reload(); // rifreskon faqen për të pasqyruar ndryshimin
-  };
-
   return (
     <>
       <motion.header

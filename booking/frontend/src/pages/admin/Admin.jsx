@@ -18,8 +18,6 @@ function AdminLayout() {
             <Sidebar
                 activePage={activePage}
                 setActivePage={setActivePage}
-                isCollapsed={isSidebarCollapsed}
-                setIsCollapsed={setIsSidebarCollapsed}
             />
             <div className="flex-1 flex flex-col">
                 <Topbar />
