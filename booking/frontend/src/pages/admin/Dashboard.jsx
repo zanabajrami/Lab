@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import UserGrowthChart from "../../components/charts/UserGrowthChart";
 import UsersChart from "../../components/charts/UsersChart";
 
 function Dashboard() {
@@ -50,6 +51,9 @@ function Dashboard() {
       {/* Chart ditore */}
       <UsersChart usersData={usersStats} />
 
+      <div className="p-2 mt-5">
+        <UserGrowthChart usersData={usersStats} />
+      </div>
     </>
   );
 }
