@@ -13,6 +13,8 @@ Route::middleware('auth:api')->group(function () {
     Route::post('logout', [AuthController::class, 'logout']);
     Route::get('me', [AuthController::class, 'me']);
 
+    Route::middleware('auth:api')->get('users/stats/active', [\App\Http\Controllers\UserStatsController::class, 'activeUsers']);
+
     // Vetëm admin mund të përdor CRUD Users
     Route::middleware('admin')->group(function () {
         Route::get('users', [UserController::class, 'index']);
