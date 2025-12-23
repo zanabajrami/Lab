@@ -22,6 +22,7 @@ import PropertyPolicies from './pages/PropertyPolicies';
 import CustomerReviews from './pages/CustomerReviews';
 
 import Admin from './pages/admin/Admin';
+import ActiveUsers from "./pages/admin/ActiveUsers";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -71,6 +72,7 @@ function MainWrapper() {
           <Route path="/property-policies" element={<PropertyPolicies />} />
           <Route path="/customer-reviews" element={<CustomerReviews />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/active-users" element={<ActiveUsers />} />
         </Routes>
       </main>
       <Footer onShowContact={() => setShowContact(true)} />
