@@ -39,8 +39,8 @@ class AuthController extends Controller
         ], 201);
     }
 
-    public function login(Request $request)
-    {
+  public function login(Request $request)
+{
     $credentials = $request->only('email', 'password');
 
     try {
@@ -51,16 +51,18 @@ class AuthController extends Controller
         return response()->json(['error' => 'Could not create token'], 500);
     }
 
-        $user = JWTAuth::user(); // merr userin e loguar nga token
-        $user->update([
-        'last_login_at' => now()
-        ]);
+   $user = JWTAuth::user(); // merr userin e loguar nga token
+$user->update([
+    'last_login_at' => now()
+]);
 
     return response()->json([
         'user'  => $user,
         'token' => $token
     ]);
 }
+
+
     public function me()
     {
         return response()->json(auth()->user());

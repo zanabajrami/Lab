@@ -13,7 +13,9 @@ class UserController extends Controller
     // GET /api/users
     public function index()
     {
-        return response()->json(User::all(), 200);
+        $users = User::orderBy('id', 'asc') 
+                 ->get(['id','first_name','last_name','email','role','last_login_at']);
+        return response()->json($users, 200);
     }
 
     // GET /api/users/{id}
