@@ -36,10 +36,13 @@ function Sidebar({ activePage, setActivePage }) {
           <span className="ml-3 font-medium hidden md:block">Users</span>
         </button>
 
-        <a href="/active-users" className={navItemClass("active-users")}>
+        <button
+          onClick={() => setActivePage("active-users")}
+          className={navItemClass("active-users")}
+        >
           <LiaUserCheckSolid size={22} />
           <span className="ml-3 font-medium hidden md:block">Active Users</span>
-        </a>
+        </button>
 
         <div className="my-4 border-t border-gray-100" />
 
