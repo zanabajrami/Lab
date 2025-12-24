@@ -341,7 +341,7 @@ function HomePage() {
               return (
                 <div
                   key={idx}
-                  className="bg-grey p-5 rounded-xl shadow-2xl relative group overflow-hidden cursor-pointer transform transition-all duration-500 border border-gray-300 hover:-translate-y-2 hover:scale-105 hover:rotate-1 hover:shadow-2xl"
+                  className="bg-gray-50 p-5 rounded-xl shadow-2xl relative group overflow-hidden cursor-pointer transform transition-all duration-500 border border-gray-300 hover:-translate-y-2 hover:scale-105 hover:rotate-1 hover:shadow-2xl"
                 >
                   {/* Animated Image */}
                   <div className="overflow-hidden rounded-md">
@@ -383,30 +383,13 @@ function HomePage() {
       </section>
 
       {/* Reviews */}
-      <section className="py-20 relative overflow-hidden">
-        {/* Sfond dekorativ me linja lëvizëse, mbulon të gjithë seksionin */}
-        <div className="absolute inset-0 flex flex-wrap opacity-20 justify-between">
-          {Array.from({ length: 100 }).map((_, i) => (
-            <div
-              key={i}
-              className="w-1 h-16 bg-gradient-to-b from-black to-blue-400 rounded-full animate-wave"
-              style={{
-                margin: `${Math.random() * 10}px`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${3 + Math.random() * 3}s`,
-              }}
-            ></div>
-          ))}
-        </div>
-
-        {/* Përshtypjet e klientëve */}
+      <section className="py-20 relative overflow-hidden -mt-5">
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
           <Link
-            to="/customer-reviews" // Kjo shërben si 'href'
+            to="/customer-reviews"
             className="text-3xl mb-16 mt-5 relative inline-block text-center text-gray-600 cursor-pointer"
           >
             REVIEWS
-            {/* Vija stilistike poshtë tekstit */}
             <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-black to-blue-500 rounded-full animate-pulse"></span>
           </Link>
 
@@ -414,7 +397,7 @@ function HomePage() {
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className="relative p-4 rounded-3xl bg-gray-200 backdrop-blur-md border border-white/25 shadow-2xl transform transition-all duration-500 hover:scale-105 hover:rotate-2 hover:shadow-gray-900/50"
+                className="relative p-4 rounded-3xl bg-gray-50 backdrop-blur-md border border-white/25 shadow-2xl transform transition-all duration-500 hover:scale-105 hover:rotate-2 hover:shadow-gray-900/50"
               >
                 {/* Dekor abstrakt */}
                 <div className="absolute -top-5 -right-5 w-14 h-14 bg-gradient-to-tr from-black via-blue-700 to-indigo-400 rounded-full opacity-40 animate-ping-slow"></div>
