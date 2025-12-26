@@ -29,6 +29,7 @@ class AuthController extends Controller
             'last_name'  => $request->last_name,
             'email'      => $request->email,
             'password'   => Hash::make($request->password),
+            'last_login_at'  => now(),
         ]);
 
         $token = JWTAuth::fromUser($user);
@@ -39,7 +40,7 @@ class AuthController extends Controller
         ], 201);
     }
 
-  public function login(Request $request)
+public function login(Request $request)
 {
     $credentials = $request->only('email', 'password');
 
@@ -51,17 +52,19 @@ class AuthController extends Controller
         return response()->json(['error' => 'Could not create token'], 500);
     }
 
-   $user = JWTAuth::user(); // merr userin e loguar nga token
-$user->update([
-    'last_login_at' => now()
-]);
+    // Merr user direkt nga DB
+    $user = User::where('email', $request->email)->first();
+
+    // Përditëso last_login_at me kohën aktuale
+    $user->update([
+        'last_login_at' => now()
+    ]);
 
     return response()->json([
         'user'  => $user,
         'token' => $token
     ]);
 }
-
 
     public function me()
     {
