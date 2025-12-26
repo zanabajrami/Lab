@@ -1,13 +1,13 @@
-import React, { useEffect, useMemo, useState, useRef } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
-export default function ActiveUsers() {
+export default function LastLogin() {
     const [users, setUsers] = useState([]);
     const [search, setSearch] = useState("");
     const [page, setPage] = useState(1);
     const [perPage, setPerPage] = useState(window.innerWidth < 768 ? 4 : 7);
     const token = localStorage.getItem("token");
-    const headerRef = useRef(null);
 
+    // Fetch users
     useEffect(() => {
         const fetchUsers = async () => {
             try {
@@ -23,40 +23,45 @@ export default function ActiveUsers() {
         fetchUsers();
     }, [token]);
 
-    const filtered = useMemo(() => {
-        return users.filter((u) =>
-            `${u.first_name} ${u.last_name} ${u.email}`.toLowerCase().includes(search.toLowerCase())
-        );
-    }, [users, search]);
+    // Filter users
+    const filtered = useMemo(() => 
+        users.filter(u =>
+            `${u.first_name} ${u.last_name} ${u.email}`
+                .toLowerCase()
+                .includes(search.toLowerCase())
+        ), [users, search]);
 
     const totalPages = Math.ceil(filtered.length / perPage);
     const paginated = filtered.slice((page - 1) * perPage, page * perPage);
 
+    // Update perPage on resize
     useEffect(() => {
         const handleResize = () => setPerPage(window.innerWidth < 768 ? 4 : 7);
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const renderStatus = (user) => user.is_logged_in ? "Active" : "Not Active";
+    // Format last login
+    const renderLastLogin = (user) => {
+        return user.last_login_at
+            ? new Date(user.last_login_at).toLocaleString("en-GB", { timeZone: "Europe/Belgrade" })
+            : "Never";
+    };
 
     return (
         <div className="bg-white rounded-2xl shadow-lg">
             {/* Header */}
-            <div
-                ref={headerRef}
-                className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5 border-b border-gray-200"
-            >
-                <h2 className="text-xl font-bold text-gray-800">Active Users</h2>
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5 border-b border-gray-200">
+                <h2 className="text-xl font-bold text-gray-800">Last Login</h2>
                 <input
                     value={search}
-                    onChange={(e) => setSearch(e.target.value)}
+                    onChange={e => setSearch(e.target.value)}
                     placeholder="Search users..."
                     className="flex-1 pl-4 pr-4 py-2 border rounded-xl text-sm shadow-sm focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 transition"
                 />
             </div>
 
-            {/* Table for desktop */}
+            {/* Table desktop */}
             <div className="hidden md:block overflow-x-auto">
                 <table className="w-full text-sm min-w-[600px]">
                     <thead className="bg-gray-50 text-gray-600">
@@ -65,11 +70,11 @@ export default function ActiveUsers() {
                             <th className="px-4 py-3 text-left">Name</th>
                             <th className="px-4 py-3 text-left">Email</th>
                             <th className="px-4 py-3 text-left">Role</th>
-                            <th className="px-4 py-3 text-left">Status</th>
+                            <th className="px-4 py-3 text-left">Last Login</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {paginated.map((u) => (
+                        {paginated.map(u => (
                             <tr key={u.id} className="border-b hover:bg-indigo-50 transition">
                                 <td className="px-4 py-3 font-medium text-gray-900">{u.id}</td>
                                 <td className="px-4 py-3 font-medium text-gray-900">{u.first_name} {u.last_name}</td>
@@ -80,7 +85,7 @@ export default function ActiveUsers() {
                                         {u.role}
                                     </span>
                                 </td>
-                                <td className="px-4 py-3 text-gray-600">{renderStatus(u)}</td>
+                                <td className="px-4 py-3 text-gray-600">{renderLastLogin(u)}</td>
                             </tr>
                         ))}
                     </tbody>
@@ -89,7 +94,7 @@ export default function ActiveUsers() {
 
             {/* Mobile Cards */}
             <div className="md:hidden p-4 space-y-4">
-                {paginated.map((u) => (
+                {paginated.map(u => (
                     <div key={u.id} className="border rounded-xl p-4 shadow hover:shadow-lg transition">
                         <div className="flex justify-between items-center mb-2">
                             <span className="font-bold text-gray-900">{u.first_name} {u.last_name}</span>
@@ -99,7 +104,7 @@ export default function ActiveUsers() {
                             </span>
                         </div>
                         <p className="text-gray-600 text-sm">Email: {u.email}</p>
-                        <p className="text-gray-600 text-sm">Status: {renderStatus(u)}</p>
+                        <p className="text-gray-600 text-sm">Last Login: {renderLastLogin(u)}</p>
                     </div>
                 ))}
             </div>
@@ -112,14 +117,14 @@ export default function ActiveUsers() {
                 <div className="flex gap-2">
                     <button
                         disabled={page === 1}
-                        onClick={() => setPage((p) => p - 1)}
+                        onClick={() => setPage(p => p - 1)}
                         className="px-3 py-1 border rounded-lg disabled:opacity-50 hover:bg-gray-100 transition"
                     >
                         Previous
                     </button>
                     <button
                         disabled={page === totalPages}
-                        onClick={() => setPage((p) => p + 1)}
+                        onClick={() => setPage(p => p + 1)}
                         className="px-3 py-1 border rounded-lg disabled:opacity-50 hover:bg-gray-100 transition"
                     >
                         Next
