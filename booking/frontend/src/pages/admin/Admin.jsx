@@ -3,7 +3,7 @@ import Sidebar from "../../components/Sidebar";
 import Topbar from "../../components/Topbar";
 import Dashboard from "./Dashboard";
 import Users from "./Users";
-import ActiveUsers from "./ActiveUsers";
+import LastLogin from "./LastLogin";
 
 function AdminLayout() {
     const [activePage, setActivePage] = useState("dashboard");
@@ -26,7 +26,7 @@ function AdminLayout() {
                     <div className="max-w-[1400px] mx-auto">
                         {activePage === "dashboard" && <Dashboard isSidebarCollapsed={isSidebarCollapsed} />}
                         {activePage === "users" && <Users isSidebarCollapsed={isSidebarCollapsed} />}
-                        {activePage === "active-users" && <ActiveUsers isSidebarCollapsed={isSidebarCollapsed} />}
+                        {activePage === "last-login" && <LastLogin isSidebarCollapsed={isSidebarCollapsed} />}
                     </div>
                 </main>
             </div>
