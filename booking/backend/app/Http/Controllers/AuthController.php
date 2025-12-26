@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Models\User;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
+use Carbon\Carbon;
 
 class AuthController extends Controller
 {
@@ -25,11 +26,11 @@ class AuthController extends Controller
         }
 
         $user = User::create([
-            'first_name' => $request->first_name,
-            'last_name'  => $request->last_name,
-            'email'      => $request->email,
-            'password'   => Hash::make($request->password),
-            'last_login_at'  => now(),
+            'first_name'    => $request->first_name,
+            'last_name'     => $request->last_name,
+            'email'         => $request->email,
+            'password'      => Hash::make($request->password),
+            'last_login_at' => Carbon::now('Europe/Belgrade'), // vendos timestamp menjëherë
         ]);
 
         $token = JWTAuth::fromUser($user);
@@ -44,28 +45,20 @@ public function login(Request $request)
 {
     $credentials = $request->only('email', 'password');
 
-    try {
-        if (!$token = JWTAuth::attempt($credentials)) {
-            return response()->json(['error' => 'Invalid credentials'], 401);
-        }
-    } catch (JWTException $e) {
-        return response()->json(['error' => 'Could not create token'], 500);
+    if (!$token = JWTAuth::attempt($credentials)) {
+        return response()->json(['error' => 'Invalid credentials'], 401);
     }
 
-    // Merr user direkt nga DB
     $user = User::where('email', $request->email)->first();
 
-    // Përditëso last_login_at me kohën aktuale
-    $user->update([
-        'last_login_at' => now()
-    ]);
+    $user->last_login_at = Carbon::now();
+    $user->save(); // KJO E BËN UPDATE 
 
     return response()->json([
-        'user'  => $user,
+        'user'  => $user->fresh(), // rifresko nga DB
         'token' => $token
     ]);
 }
-
     public function me()
     {
         return response()->json(auth()->user());
