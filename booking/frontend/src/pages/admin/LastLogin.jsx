@@ -24,7 +24,7 @@ export default function LastLogin() {
     }, [token]);
 
     // Filter users
-    const filtered = useMemo(() => 
+    const filtered = useMemo(() =>
         users.filter(u =>
             `${u.first_name} ${u.last_name} ${u.email}`
                 .toLowerCase()
@@ -32,11 +32,14 @@ export default function LastLogin() {
         ), [users, search]);
 
     const totalPages = Math.ceil(filtered.length / perPage);
-    const paginated = filtered.slice((page - 1) * perPage, page * perPage);
+    const paginated = filtered.slice(
+        (page - 1) * (window.innerWidth < 768 ? 3 : perPage),
+        page * (window.innerWidth < 768 ? 3 : perPage)
+    );
 
     // Update perPage on resize
     useEffect(() => {
-        const handleResize = () => setPerPage(window.innerWidth < 768 ? 4 : 7);
+        const handleResize = () => setPerPage(window.innerWidth < 768 ? 3 : 7);
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);

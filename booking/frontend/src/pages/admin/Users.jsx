@@ -32,7 +32,7 @@ export default function Users() {
 
   useEffect(() => {
     const handleResize = () => {
-      setPerPage(window.innerWidth < 768 ? 4 : 7);
+      setPerPage(window.innerWidth < 768 ? 3 : 7);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -99,7 +99,7 @@ export default function Users() {
                 <td className="px-4 py-3 text-gray-900">{new Date(u.created_at).toLocaleDateString()}</td>
                 <td className="px-4 py-3">
                   <div className="flex justify-center gap-2">
-                    <button className="p-2 rounded-lg hover:bg-indigo-100 text-indigo-800">
+                    <button className="p-2 rounded-lg hover:bg-indigo-100 text-indigo-900">
                       <Pencil className="w-4 h-4" />
                     </button>
                     <button
