@@ -1,6 +1,6 @@
 import React from "react";
 import { LayoutDashboard, Users, ShieldUser, Settings, LogOut } from "lucide-react";
-import { LiaUserCheckSolid } from "react-icons/lia";
+import { UserLock } from "lucide-react";
 
 function Sidebar({ activePage, setActivePage }) {
   const navItemClass = (page) => `
@@ -37,11 +37,11 @@ function Sidebar({ activePage, setActivePage }) {
         </button>
 
         <button
-          onClick={() => setActivePage("active-users")}
-          className={navItemClass("active-users")}
+          onClick={() => setActivePage("last-login")}
+          className={navItemClass("last-login")}
         >
-          <LiaUserCheckSolid size={22} />
-          <span className="ml-3 font-medium hidden md:block">Active Users</span>
+          <UserLock size={22} />
+          <span className="ml-3 font-medium hidden md:block">Last Login</span>
         </button>
 
         <div className="my-4 border-t border-gray-100" />
