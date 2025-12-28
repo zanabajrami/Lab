@@ -3,7 +3,7 @@ import Sidebar from "../../components/Sidebar";
 import Topbar from "../../components/Topbar";
 import Dashboard from "./Dashboard";
 import Users from "./Users";
-import LastLogin from "./LastLogin";
+import LastLogin from "./LoginActivity";
 
 function AdminLayout() {
     const [activePage, setActivePage] = useState("dashboard");

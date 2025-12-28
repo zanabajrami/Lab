@@ -22,7 +22,7 @@ import PropertyPolicies from './pages/PropertyPolicies';
 import CustomerReviews from './pages/CustomerReviews';
 
 import Admin from './pages/admin/Admin';
-import LastLogin from "./pages/admin/LastLogin";
+import LastLogin from "./pages/admin/LoginActivity";
 
 function ScrollToTop() {
   const { pathname } = useLocation();

@@ -41,7 +41,7 @@ function Sidebar({ activePage, setActivePage }) {
           className={navItemClass("last-login")}
         >
           <UserLock size={22} />
-          <span className="ml-3 font-medium hidden md:block">Last Login</span>
+          <span className="ml-3 font-medium hidden md:block">Login Activity</span>
         </button>
 
         <div className="my-4 border-t border-gray-100" />
