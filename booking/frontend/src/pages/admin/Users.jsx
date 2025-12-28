@@ -1,11 +1,12 @@
 import React, { useEffect, useMemo, useState, useRef } from "react";
 import { Plus, Trash2, Pencil, Search, Users as UsersIcon, ChevronLeft, ChevronRight, Calendar } from "lucide-react";
+import { LiaUsersSolid } from "react-icons/lia";
 
 export default function Users() {
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
-  const [perPage, setPerPage] = useState(window.innerWidth < 768 ? 5 : 8);
+  const [perPage, setPerPage] = useState(window.innerWidth < 768 ? 5 : 6);
   const token = localStorage.getItem("token");
   const headerRef = useRef(null);
 
@@ -45,22 +46,27 @@ export default function Users() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F9FB] p-4 md:p-10 font-sans text-slate-900 antialiased">
+    <div className="min-h-screen bg-[#F8F9FB] p-4 md:p-10 text-slate-900 antialiased rounded-[2.5rem]">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* Top Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div>
-            <div className="flex items-center gap-3 mb-2">
-              <div className="bg-indigo-600 p-2 rounded-2xl shadow-lg shadow-indigo-200">
-                <UsersIcon className="w-6 h-6 text-white" />
+            <div className="flex items-center gap-3 mb-2 -mt-5">
+              <div className="p-2 rounded-2xl shadow-lg shadow-gray-200">
+                <LiaUsersSolid className="w-7 h-7 text-gray-600" />
               </div>
               <h1 className="text-3xl font-black tracking-tight text-slate-900">All Users</h1>
             </div>
-            <p className="text-slate-500 font-medium ml-1">Managing {users.length} registered accounts.</p>
+            <p className="text-sm text-slate-500 font-medium ml-12">
+              Total number of users:
+              <span className="ml-1 text-gray-900 font-semibold">
+                {users.length}
+              </span>
+            </p>
           </div>
-          
-          <div className="flex items-center gap-3">
+
+          <div className="flex items-center gap-3 ">
             <div className="relative">
               <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
               <input
@@ -76,13 +82,13 @@ export default function Users() {
           </div>
         </div>
 
-        <div className="bg-white/70 backdrop-blur-md rounded-[2.5rem] shadow-sm border border-white overflow-hidden">
+        <div className="bg-white backdrop-blur-md rounded-[2.5rem] shadow-sm border border-white overflow-hidden -mt-4">
           <div className="hidden md:block">
             <table className="w-full border-separate border-spacing-0">
               <thead>
                 <tr className="text-slate-400">
                   <th className="px-10 py-8 text-[11px] font-bold uppercase tracking-[0.2em] text-left">Member</th>
-                  <th className="px-10 py-8 text-[11px] font-bold uppercase tracking-[0.2em] text-left">Access Level</th>
+                  <th className="px-10 py-8 text-[11px] font-bold uppercase tracking-[0.2em] text-left">Role</th>
                   <th className="px-10 py-8 text-[11px] font-bold uppercase tracking-[0.2em] text-left">Join Date</th>
                   <th className="px-10 py-8 text-[11px] font-bold uppercase tracking-[0.2em] text-right">Action</th>
                 </tr>
@@ -92,7 +98,7 @@ export default function Users() {
                   <tr key={u.id} className="group hover:bg-white transition-all duration-300">
                     <td className="px-10 py-5">
                       <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-[1.2rem] bg-slate-100 flex items-center justify-center font-bold text-slate-600 group-hover:bg-indigo-600 group-hover:text-white group-hover:rotate-3 transition-all duration-500">
+                        <div className="w-12 h-12 rounded-[1.2rem] bg-slate-100 flex items-center justify-center font-bold text-slate-600 group-hover:bg-gray-900 group-hover:text-white group-hover:rotate-3 transition-all duration-500">
                           {u.first_name[0]}{u.last_name[0]}
                         </div>
                         <div>
@@ -102,40 +108,39 @@ export default function Users() {
                       </div>
                     </td>
                     <td className="px-10 py-5">
-                      <div className={`inline-flex px-3 py-1 rounded-xl text-[10px] font-black uppercase tracking-tighter ${u.role === 'admin' ? 'bg-orange-50 text-orange-600 border border-orange-100' : 'bg-slate-50 text-slate-500 border border-slate-100'}`}>
+                      <div className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border transition-all duration-300 shadow-sm ${u.role === 'admin'
+                        ? "bg-[#29232e]/10 text-[#29232e] border-[#29232e]/20 shadow-[#29232e]/10"
+                        : 'bg-gray-100/90 text-indigo-900 border-gray-300/90 shadow-gray-100/50'
+                        }`}>
+                        <span className={`relative flex h-2 w-2`}>
+                          {u.role === 'admin' && (
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                          )}
+                          <span className={`relative inline-flex rounded-full h-2 w-2 ${u.role === 'admin' ? 'bg-purple-900' : 'bg-indigo-900'
+                            }`}></span>
+                        </span>
                         {u.role}
                       </div>
                     </td>
                     <td className="px-10 py-5">
-                      <div className="flex items-center gap-2 text-sm text-slate-500 font-bold">
+                      <div className="flex items-center gap-2 text-sm text-slate-600 font-bold">
                         <Calendar className="w-4 h-4 text-slate-300" />
                         {new Date(u.created_at).toLocaleDateString('en-GB')}
                       </div>
                     </td>
                     <td className="px-8 py-4 text-right">
-
                       <div className="flex justify-end gap-2">
-
-                        <button className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 text-slate-400 hover:bg-indigo-50 hover:text-indigo-600 transition-all">
-
+                        <button className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 text-slate-400 hover:bg-indigo-50 hover:text-indigo-900 transition-all">
                           <Pencil className="w-4 h-4" />
-
                         </button>
 
-                        <button 
-
+                        <button
                           onClick={() => handleDelete(u.id)}
-
                           className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 text-slate-400 hover:bg-red-50 hover:text-red-600 transition-all"
-
                         >
-
                           <Trash2 className="w-4 h-4" />
-
                         </button>
-
                       </div>
-
                     </td>
                   </tr>
                 ))}
