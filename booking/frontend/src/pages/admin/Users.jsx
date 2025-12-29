@@ -107,18 +107,12 @@ export default function Users() {
                         </div>
                       </div>
                     </td>
-                    <td className="px-10 py-5">
-                      <div className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border transition-all duration-300 shadow-sm ${u.role === 'admin'
-                        ? "bg-[#29232e]/10 text-[#29232e] border-[#29232e]/20 shadow-[#29232e]/10"
-                        : 'bg-gray-100/90 text-indigo-900 border-gray-300/90 shadow-gray-100/50'
-                        }`}>
-                        <span className={`relative flex h-2 w-2`}>
-                          {u.role === 'admin' && (
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                          )}
-                          <span className={`relative inline-flex rounded-full h-2 w-2 ${u.role === 'admin' ? 'bg-purple-900' : 'bg-indigo-900'
-                            }`}></span>
-                        </span>
+                    <td className="px-8 py-5">
+                      <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider border
+                                            ${u.role === "admin"
+                          ? "bg-indigo-100 text-indigo-900 border-indigo-200/60"
+                          : "bg-blue-50 text-blue-700 border-blue-200/60"}`}>
+                        <span className={`w-1.5 h-1.5 rounded-full ${u.role === "admin" ? "bg-indigo-900" : "bg-blue-500"}`}></span>
                         {u.role}
                       </div>
                     </td>

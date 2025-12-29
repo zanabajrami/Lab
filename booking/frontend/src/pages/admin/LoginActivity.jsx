@@ -94,8 +94,10 @@ export default function LastLogin() {
                                     <td className="px-8 py-5 text-sm text-gray-400 font-mono">#{u.id}</td>
                                     <td className="px-8 py-5">
                                         <div className="flex items-center gap-3">
-                                            <div className="h-10 w-10 rounded-full bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center text-indigo-900 font-bold text-xs shadow-inner">
-                                                {u.first_name[0]}{u.last_name[0]}
+                                            <div className="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center border border-gray-200 shadow-[inset_0_1px_2px_rgba(0,0,0,0.05)]">
+                                                <span className="text-[11px] font-bold text-gray-600 tracking-tight uppercase">
+                                                    {u.first_name[0]}{u.last_name[0]}
+                                                </span>
                                             </div>
                                             <div className="flex flex-col">
                                                 <span className="text-sm font-bold text-gray-900 group-hover:text-indigo-900 transition-colors">
@@ -108,15 +110,17 @@ export default function LastLogin() {
                                     <td className="px-8 py-5">
                                         <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider border
                                             ${u.role === "admin"
-                                                ? "bg-pink-50 text-pink-700 border-pink-200/60"
+                                                ? "bg-indigo-100 text-indigo-900 border-indigo-200/60"
                                                 : "bg-blue-50 text-blue-700 border-blue-200/60"}`}>
-                                            <span className={`w-1.5 h-1.5 rounded-full ${u.role === "admin" ? "bg-pink-500" : "bg-blue-500"}`}></span>
+                                            <span className={`w-1.5 h-1.5 rounded-full ${u.role === "admin" ? "bg-indigo-900" : "bg-blue-500"}`}></span>
                                             {u.role}
                                         </div>
                                     </td>
                                     <td className="px-8 py-5">
                                         <div className="flex items-center gap-2 text-sm text-gray-600">
-                                            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
                                             <span className="font-medium">{renderLastLogin(u)}</span>
                                         </div>
                                     </td>
