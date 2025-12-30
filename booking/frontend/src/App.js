@@ -23,6 +23,7 @@ import CustomerReviews from './pages/CustomerReviews';
 
 import Admin from './pages/admin/Admin';
 import LastLogin from "./pages/admin/LoginActivity";
+import Settings from "./pages/admin/Settings";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -73,6 +74,8 @@ function MainWrapper() {
           <Route path="/customer-reviews" element={<CustomerReviews />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/last-login" element={<LastLogin />} />
+          <Route path="/settings" element={<Settings />} />
+
         </Routes>
       </main>
       <Footer onShowContact={() => setShowContact(true)} />

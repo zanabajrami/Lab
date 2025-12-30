@@ -46,7 +46,7 @@ function Sidebar({ activePage, setActivePage }) {
 
         <div className="my-4 border-t border-gray-100" />
 
-        <button className="w-full flex items-center justify-center md:justify-start px-3 py-3 text-gray-500 hover:bg-gray-100 rounded-lg transition-all group">
+        <button onClick={() => setActivePage("settings")} className={navItemClass("settings")}>
           <Settings size={22} />
           <span className="ml-3 font-medium hidden md:block">Settings</span>
         </button>

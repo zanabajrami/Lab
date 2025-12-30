@@ -4,10 +4,11 @@ import Topbar from "../../components/Topbar";
 import Dashboard from "./Dashboard";
 import Users from "./Users";
 import LastLogin from "./LoginActivity";
+import Settings from "./Settings";
 
 function AdminLayout() {
     const [activePage, setActivePage] = useState("dashboard");
-    const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false); // <--- state i ri
+    const [isSidebarCollapsed, ] = useState(false);
     const user = JSON.parse(localStorage.getItem("user"));
 
     if (!user || user.role !== "admin") {
@@ -27,6 +28,7 @@ function AdminLayout() {
                         {activePage === "dashboard" && <Dashboard isSidebarCollapsed={isSidebarCollapsed} />}
                         {activePage === "users" && <Users isSidebarCollapsed={isSidebarCollapsed} />}
                         {activePage === "last-login" && <LastLogin isSidebarCollapsed={isSidebarCollapsed} />}
+                        {activePage === "settings" && <Settings isSidebarCollapsed={isSidebarCollapsed} />} {/* <-- shto Settings */}
                     </div>
                 </main>
             </div>
