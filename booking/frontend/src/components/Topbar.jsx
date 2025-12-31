@@ -3,7 +3,7 @@ import { User, MessageSquare } from "lucide-react";
 
 function Topbar() {
   const [user, setUser] = useState(null);
-  const [unreadCount, setUnreadCount] = useState(3);
+  const [unreadCount, ] = useState(3);
 
   useEffect(() => {
     const savedUser = localStorage.getItem("user");
