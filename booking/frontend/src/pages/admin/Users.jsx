@@ -79,7 +79,7 @@ export default function Users() {
                 className="pl-11 pr-3 py-2.5 md:py-3 w-full sm:w-64 bg-white shadow-sm rounded-2xl focus:ring-2 focus:ring-indigo-500/20"
               />
             </div>
-            <button className="p-2.5 md:p-3 bg-slate-900 text-white rounded-2xl hover:bg-slate-800 transition-all shadow-xl active:scale-95">
+            <button className="p-2.5 md:p-3 bg-slate-800 text-white rounded-2xl hover:bg-slate-800 transition-all shadow-xl active:scale-95">
               <Plus className="w-5 h-5 md:w-6 md:h-6" />
             </button>
           </div>
@@ -101,7 +101,7 @@ export default function Users() {
                 <tr key={u.id} className="group hover:bg-white transition-all duration-300">
                   <td className="px-6 py-4">
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-[1.2rem] bg-slate-100 flex items-center justify-center font-bold text-slate-600 group-hover:bg-gray-900 group-hover:text-white group-hover:rotate-3 transition-all duration-500">
+                      <div className="w-12 h-12 rounded-[1.2rem] bg-slate-100 flex items-center justify-center font-bold text-slate-600 group-hover:bg-slate-800 group-hover:text-white group-hover:rotate-3 transition-all duration-500">
                         {u.first_name[0]}{u.last_name[0]}
                       </div>
                       <div>
@@ -144,7 +144,7 @@ export default function Users() {
           {paginated.map((u) => (
             <div key={u.id} className="p-3 sm:p-4 border-b border-slate-50 last:border-none">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-2xl bg-indigo-600 text-white flex items-center justify-center font-bold text-base">{u.first_name[0]}</div>
+                <div className="w-10 h-10 rounded-2xl bg-slate-800 text-white flex items-center justify-center font-bold text-base">{u.first_name[0]}</div>
                 <div className="flex-1 min-w-0">
                   <div className="font-bold text-sm truncate">{u.first_name} {u.last_name}</div>
                   <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider flex items-center gap-1 truncate">
