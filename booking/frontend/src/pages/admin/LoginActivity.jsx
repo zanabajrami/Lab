@@ -56,8 +56,8 @@ export default function LastLogin() {
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-8 bg-white">
                     <div>
                         <div className="flex items-center gap-2 mb-1">
-                            <div className="p-2 bg-gray-200 rounded-lg">
-                                <LockKeyholeOpen className="w-5 h-5 text-gray-600" />
+                            <div className="p-2 rounded-2xl shadow-lg shadow-gray-200">
+                                <LockKeyholeOpen className="w-5 h-5 md:w-7 md:h-6 text-gray-600" />
                             </div>
                             <h2 className="text-2xl font-extrabold text-gray-900 tracking-tight">Login Activity</h2>
                         </div>
