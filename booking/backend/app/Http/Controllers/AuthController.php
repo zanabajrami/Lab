@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use App\Models\User;
 use Tymon\JWTAuth\Facades\JWTAuth;
-use Tymon\JWTAuth\Exceptions\JWTException;
 use Carbon\Carbon;
 
 class AuthController extends Controller
 {
+    // REGISTER
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -26,47 +26,62 @@ class AuthController extends Controller
         }
 
         $user = User::create([
-            'first_name'    => $request->first_name,
-            'last_name'     => $request->last_name,
-            'email'         => $request->email,
-            'password'      => Hash::make($request->password),
-            'last_login_at' => Carbon::now('Europe/Belgrade'), // vendos timestamp menjëherë
+            'first_name' => $request->first_name,
+            'last_name'  => $request->last_name,
+            'email'      => $request->email,
+            'password'   => Hash::make($request->password),
+            'last_login_at' => Carbon::now(),
         ]);
 
         $token = JWTAuth::fromUser($user);
 
         return response()->json([
-            'user'  => $user,
+            'user' => $user,
             'token' => $token
         ], 201);
     }
 
-public function login(Request $request)
-{
-    $credentials = $request->only('email', 'password');
+    // LOGIN
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
 
-    if (!$token = JWTAuth::attempt($credentials)) {
-        return response()->json(['error' => 'Invalid credentials'], 401);
+        if (!$token = JWTAuth::attempt($credentials)) {
+            return response()->json(['error' => 'Invalid credentials'], 401);
+        }
+
+        $user = JWTAuth::user();
+        $user->last_login_at = Carbon::now();
+        $user->save();
+
+        return response()->json([
+            'user' => $user,
+            'token' => $token
+        ]);
     }
 
-    $user = User::where('email', $request->email)->first();
-
-    $user->last_login_at = Carbon::now();
-    $user->save(); // KJO E BËN UPDATE 
-
-    return response()->json([
-        'user'  => $user->fresh(), // rifresko nga DB
-        'token' => $token
-    ]);
-}
+    // ME (GET PROFILE)
     public function me()
     {
-        return response()->json(auth()->user());
+        try {
+            $user = JWTAuth::parseToken()->authenticate();
+            if (!$user) {
+                return response()->json(['error' => 'User not found'], 404);
+            }
+            return response()->json($user);
+        } catch (\Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
+            return response()->json(['error' => 'Token expired'], 401);
+        } catch (\Tymon\JWTAuth\Exceptions\TokenInvalidException $e) {
+            return response()->json(['error' => 'Token invalid'], 401);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Token not provided'], 401);
+        }
     }
 
+    // LOGOUT
     public function logout()
     {
-        auth()->logout();
+        JWTAuth::invalidate(JWTAuth::getToken());
         return response()->json(['message' => 'Successfully logged out']);
     }
 }
