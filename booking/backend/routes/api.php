@@ -4,27 +4,21 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 
-// Auth pa middleware
+// Routes pa login
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 
-// Protected routes me JWT
-Route::middleware('auth:api')->group(function () {
-Route::post('logout', [AuthController::class, 'logout']);
-Route::get('me', [AuthController::class, 'me']);
+// Routes me JWT
+Route::middleware('jwt.auth')->group(function () {
+    Route::get('me', [AuthController::class, 'me']);           // GET /api/me
+    Route::post('logout', [AuthController::class, 'logout']);  // Logout
 
-Route::middleware('auth:api')->get('users/stats/active', [\App\Http\Controllers\UserStatsController::class, 'activeUsers']);
-Route::middleware('auth:api')->get('users', [\App\Http\Controllers\UserController::class, 'index']); // për tabelën e userave
-
-// Vetëm admin mund të përdor CRUD Users
-Route::middleware('admin')->group(function () {
-Route::get('users', [UserController::class, 'index']);
-Route::get('users/{id}', [UserController::class, 'show']);        Route::post('users', [UserController::class, 'store']);
-Route::put('users/{id}', [UserController::class, 'update']);
-Route::delete('users/{id}', [UserController::class, 'destroy']);
-
-// USERS STATS (LINE CHART)
-Route::get('users/stats/daily', [UserController::class, 'dailyStats']);
-    
-});
+    // CRUD Users (vetëm admin mund t'i aksesojë)
+    Route::middleware('admin')->group(function () {
+        Route::get('users', [UserController::class, 'index']);
+        Route::get('users/{id}', [UserController::class, 'show']);
+        Route::post('users', [UserController::class, 'store']);
+        Route::put('users/{id}', [UserController::class, 'update']);
+        Route::delete('users/{id}', [UserController::class, 'destroy']);
+    });
 });
