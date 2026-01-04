@@ -35,13 +35,6 @@ function Settings() {
     fetchProfile();
   }, [token]);
 
-  const toggleNotifications = () => {
-    setProfile((prev) => ({
-      ...prev,
-      notifications: !prev.notifications,
-    }));
-  };
-
   const handleSave = async () => {
     try {
       await axios.put(
