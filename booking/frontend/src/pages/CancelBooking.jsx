@@ -19,80 +19,62 @@ function CancelBookingPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Data submitted:", formData);
     alert("Cancellation request sent! 📩");
     handleClose();
   };
 
-  // Ndalon scroll-in e faqes kur modal është i hapur
   useEffect(() => {
     document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = "auto";
-    };
+    return () => { document.body.style.overflow = "auto"; };
   }, []);
 
   return (
     <div
       onClick={(e) => e.target === e.currentTarget && handleClose()}
-      className="fixed inset-0 flex items-center justify-center bg-slate-950/80 z-50 backdrop-blur-sm p-4"
+      className="fixed inset-0 flex items-center justify-center bg-black/95 z-50 backdrop-blur-sm p-4"
     >
+      {/* Container Kryesor me Shkëlqim Anash */}
       <div
-        className="w-full max-w-sm p-6 rounded-2xl relative
-             bg-slate-900 border border-slate-700 shadow-2xl
-             transform transition-all duration-300 animate-in fade-in zoom-in-95"
+        className="w-full max-w-sm p-7 rounded-[2rem] relative
+             bg-slate-950/50 border border-slate-700/50 shadow-[0_10px_50px_rgba(0,0,0,0.5)]
+             transform transition-all duration-500 animate-in fade-in zoom-in-95"
       >
-        {/* Header */}
-        <div className="mb-6">
-          <h2 className="text-xl font-bold text-indigo-200 tracking-tight">
-            Cancel Booking
+        
+        {/* Header - I rregulluar më bukur */}
+        <div className="text-center mb-7">
+          <div className="inline-block px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-[10px] font-bold uppercase tracking-widest mb-3">
+            Service Support
+          </div>
+          <h2 className="text-2xl font-bold text-white tracking-tight">
+            Cancel <span className="text-indigo-200">Booking</span>
           </h2>
-          <p className="text-xs text-slate-400 mt-1">
-            Please fill out the form to cancel your reservation.
-          </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-3">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-3">
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2.5 text-sm rounded-lg bg-slate-900 border border-slate-700 text-slate-200 
-                         placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-indigo-400 
-                         focus:border-indigo-400 transition-all"
-            />
+            {/* Inputet me stil të ri */}
+            {[
+              { name: "name", placeholder: "Full Name", type: "text" },
+              { name: "email", placeholder: "Email Address", type: "email" },
+              { name: "hotelName", placeholder: "Hotel Name", type: "text" },
+            ].map((field) => (
+              <input
+                key={field.name}
+                type={field.type}
+                name={field.name}
+                placeholder={field.placeholder}
+                value={formData[field.name]}
+                onChange={handleChange}
+                required
+                className="w-full px-5 py-3 text-sm rounded-xl bg-slate-950/50 border border-slate-700 text-slate-200 
+                           placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 
+                           focus:border-indigo-400/50 transition-all duration-300"
+              />
+            ))}
 
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2.5 text-sm rounded-lg bg-slate-900 border border-slate-700 text-slate-200 
-                         placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-indigo-400 
-                         focus:border-indigo-400 transition-all"
-            />
-
-            <input
-              type="text"
-              name="hotelName"
-              placeholder="Hotel Name"
-              value={formData.hotelName}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2.5 text-sm rounded-lg bg-slate-900 border border-slate-700 text-slate-200 
-                         placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-indigo-400 
-                         focus:border-indigo-400 transition-all"
-            />
-
-            <div className="group">
-              <label className="text-[10px] font-bold text-indigo-300/70 ml-1 uppercase tracking-widest">
-                Booking Date
+            <div className="relative group">
+              <label className="absolute -top-2 left-4 px-2 bg-slate-900 text-[10px] font-bold text-indigo-300 uppercase">
+                Check-in Date
               </label>
               <input
                 type="date"
@@ -100,8 +82,8 @@ function CancelBookingPage() {
                 value={formData.bookingDate}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2.5 text-sm rounded-lg bg-slate-900 border border-slate-700 text-slate-200 
-                           focus:outline-none focus:ring-1 focus:ring-indigo-400 transition-all"
+                className="w-full px-5 py-3 text-sm rounded-xl bg-slate-950/50 border border-slate-700 text-slate-200 
+                           focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-400/50 transition-all"
               />
             </div>
 
@@ -112,27 +94,27 @@ function CancelBookingPage() {
               value={formData.reason}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2.5 text-sm rounded-lg bg-slate-900 border border-slate-700 text-slate-200 
-                         placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-indigo-400 
-                         resize-none transition-all"
+              className="w-full px-5 py-3 text-sm rounded-xl bg-slate-950/50 border border-slate-700 text-slate-200 
+                         placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 
+                         focus:border-indigo-400/50 resize-none transition-all duration-300"
             ></textarea>
           </div>
 
           <button
             type="submit"
-            className="w-full py-3 mt-4 rounded-lg bg-indigo-200 hover:bg-white 
-                     text-slate-900 font-bold text-sm shadow-lg
-                     transform transition-all active:scale-[0.97]"
+            className="w-full py-4 mt-2 rounded-xl bg-indigo-200 hover:bg-white 
+                     text-slate-900 font-extrabold text-sm shadow-xl shadow-indigo-500/10
+                     transform transition-all active:scale-[0.96] hover:-translate-y-0.5"
           >
-            Confirm Cancellation
+            Submit Cancellation
           </button>
         </form>
 
         <button 
           onClick={handleClose}
-          className="w-full mt-4 text-slate-500 hover:text-slate-300 transition-colors text-xs font-medium"
+          className="w-full mt-6 text-slate-500 hover:text-indigo-200 transition-colors text-xs font-semibold tracking-wide"
         >
-          Nevermind, go back
+          Nevermind, keep my stay
         </button>
       </div>
     </div>
