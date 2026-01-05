@@ -122,24 +122,23 @@ class UserController extends Controller
     // GET /api/users/stats/monthly (për User Growth Chart)
     public function monthlyStats()
     {
-    $stats = User::select(
+        $stats = User::select(
             DB::raw('MONTH(created_at) as month'),
             DB::raw('YEAR(created_at) as year'),
             DB::raw('COUNT(*) as count')
         )
-        ->whereYear('created_at', Carbon::now()->year)
         ->groupBy('year', 'month')
+        ->orderBy('year')
         ->orderBy('month')
         ->get();
 
-    // Kthe me format të lexueshëm për frontend
-    $result = $stats->map(function ($item) {
+        $result = $stats->map(function ($item) {
         return [
-            'month' => Carbon::create()->month($item->month)->format('M'),
+            'month' => $item->year . '-' . str_pad($item->month, 2, '0', STR_PAD_LEFT), // ex: 2026-01
             'count' => (int) $item->count,
         ];
     });
 
     return response()->json($result, 200);
     }
-    }
+}
