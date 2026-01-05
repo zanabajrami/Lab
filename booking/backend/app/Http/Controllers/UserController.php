@@ -7,13 +7,14 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class UserController extends Controller
 {
     // GET /api/users
     public function index()
     {
-       $users = User::orderBy('id', 'asc')->get();
+        $users = User::orderBy('id', 'asc')->get();
         return response()->json($users, 200);
     }
 
@@ -89,32 +90,56 @@ class UserController extends Controller
         $user->delete();
         return response()->json(['message' => 'User deleted'], 200);
     }
-    // GET /api/users/stats/daily
-        public function dailyStats()
+
+    // GET /api/users/stats/daily (për 15 ditët e fundit)
+    public function dailyStats()
     {
         $stats = User::select(
-            DB::raw('DATE(created_at) as date'),
-            DB::raw('COUNT(*) as total')
-    )
-        ->groupBy('date')
-        ->orderBy('date')
-        ->get()
-        ->keyBy('date');
+                DB::raw('DATE(created_at) as date'),
+                DB::raw('COUNT(*) as count')
+            )
+            ->groupBy('date')
+            ->orderBy('date')
+            ->get()
+            ->keyBy('date');
 
-    // 15 ditët e fundit
         $period = collect();
         for ($i = 14; $i >= 0; $i--) {
-        $date = now()->subDays($i)->format('Y-m-d');
-        $period[$date] = isset($stats[$date]) ? (int)$stats[$date]->total : 0;
-    }
+            $date = now()->subDays($i)->format('Y-m-d');
+            $period[$date] = isset($stats[$date]) ? (int)$stats[$date]->count : 0;
+        }
 
         $result = $period->map(function($count, $date) {
+            return [
+                'date' => $date,
+                'count' => $count,
+            ];
+        })->values();
+
+        return response()->json($result, 200);
+    }
+
+    // GET /api/users/stats/monthly (për User Growth Chart)
+    public function monthlyStats()
+    {
+    $stats = User::select(
+            DB::raw('MONTH(created_at) as month'),
+            DB::raw('YEAR(created_at) as year'),
+            DB::raw('COUNT(*) as count')
+        )
+        ->whereYear('created_at', Carbon::now()->year)
+        ->groupBy('year', 'month')
+        ->orderBy('month')
+        ->get();
+
+    // Kthe me format të lexueshëm për frontend
+    $result = $stats->map(function ($item) {
         return [
-            'date' => $date,
-            'count' => $count,
+            'month' => Carbon::create()->month($item->month)->format('M'),
+            'count' => (int) $item->count,
         ];
-    })->values();
+    });
 
     return response()->json($result, 200);
-}
-}
+    }
+    }
