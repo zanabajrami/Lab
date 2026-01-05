@@ -11,23 +11,11 @@ import {
 } from "recharts";
 
 const UserGrowthChart = ({ usersData }) => {
-  const monthlyData = usersData.reduce((acc, current) => {
-    const date = new Date(current.date);
-    const month = date.toLocaleString('default', { month: 'short' });
-    const year = date.getFullYear();
-    const label = `${month} ${year}`;
+  const monthlyData = usersData.map(item => ({
+    name: item.month,
+    count: item.count,
+  }));
 
-    const existingMonth = acc.find(item => item.name === label);
-
-    if (existingMonth) {
-      existingMonth.count += current.count;
-    } else {
-      acc.push({ name: label, count: current.count });
-    }
-    return acc;
-  }, []);
-
-  // 2. Marrja e vetëm 5 muajve të fundit
   const lastFiveMonths = monthlyData.slice(-5);
 
   return (
@@ -41,7 +29,7 @@ const UserGrowthChart = ({ usersData }) => {
   "
     >
       <h3 className="text-lg font-bold text-gray-800 mb-2">
-        Monthly User Growth
+        Monthly Users Growth
       </h3>
 
       {/* WRAPPER me HEIGHT */}
@@ -80,7 +68,7 @@ const UserGrowthChart = ({ usersData }) => {
                   fill={
                     index === lastFiveMonths.length - 1
                       ? "#29232eff"
-                      : "#60a5fa"
+                      : "#211b25ff"
                   }
                 />
               ))}
