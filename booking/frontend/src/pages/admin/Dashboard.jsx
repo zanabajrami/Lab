@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import UserGrowthChart from "../../components/charts/UserGrowthChart";
 import UsersChart from "../../components/charts/UsersChart";
+import { Users, DollarSign, UserPlus } from "lucide-react";
 
 function Dashboard() {
   const token = localStorage.getItem("token");
@@ -55,23 +56,51 @@ function Dashboard() {
     <>
       {/* CARDS */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-        <div className="bg-white p-6 rounded-xl shadow">
-          <h2 className="text-gray-500">Total Users</h2>
-          <p className="text-3xl font-bold mt-2">
-            {summary?.total_users ?? 0}
-          </p>
+
+        {/* TOTAL USERS */}
+        <div className="bg-white p-6 rounded-xl shadow flex justify-between items-center">
+          <div>
+            <h2 className="text-gray-500 text-sm">Total Users</h2>
+            <p className="text-3xl font-bold mt-1">
+              {summary?.total_users ?? 0}
+            </p>
+            <span className="text-slate-600 text-sm">
+              ▲ 12% this month
+            </span>
+          </div>
+          <div className="bg-indigo-100 p-3 rounded-full">
+            <Users className="text-blue-900 w-6 h-6" />
+          </div>
         </div>
 
-        <div className="bg-white p-6 rounded-xl shadow">
-          <h2 className="text-gray-500">Revenue</h2>
-          <p className="text-3xl font-bold mt-2">$0</p>
+        {/* REVENUE */}
+        <div className="bg-white p-6 rounded-xl shadow flex justify-between items-center">
+          <div>
+            <h2 className="text-gray-500 text-sm">Revenue</h2>
+            <p className="text-3xl font-bold mt-1">$0</p>
+            <span className="text-gray-400 text-sm">
+              No data yet
+            </span>
+          </div>
+          <div className="bg-green-100 p-3 rounded-full">
+            <DollarSign className="text-green-600 w-6 h-6" />
+          </div>
         </div>
 
-        <div className="bg-white p-6 rounded-xl shadow">
-          <h2 className="text-gray-500">New Signups Today</h2>
-          <p className="text-3xl font-bold mt-2">
-            {summary?.today ?? 0}
-          </p>
+        {/* NEW USERS TODAY */}
+        <div className="bg-white p-6 rounded-xl shadow flex justify-between items-center">
+          <div>
+            <h2 className="text-gray-500 text-sm">New Users Today</h2>
+            <p className="text-3xl font-bold mt-1">
+              {summary?.today ?? 0}
+            </p>
+            <span className="text-slate-600 text-sm">
+              + Today
+            </span>
+          </div>
+          <div className="bg-purple-100 p-3 rounded-full">
+            <UserPlus className="text-purple-600 w-6 h-6" />
+          </div>
         </div>
       </div>
 
@@ -82,6 +111,7 @@ function Dashboard() {
       <div className="p-2 mt-5">
         <UserGrowthChart usersData={monthlyStats} />
       </div>
+
     </>
   );
 }
