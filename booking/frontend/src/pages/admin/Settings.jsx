@@ -140,16 +140,6 @@ function Settings() {
               </div>
             </div>
           </div>
-
-          {/* Footer/Action Section */}
-          <div className="px-6 py-5 bg-white text-right border-t border-gray-100">
-            <button
-              onClick={handleSave}
-              className="inline-flex justify-center py-2.5 px-8 border border-transparent shadow-sm text-sm font-semibold rounded-xl text-white bg-slate-800 hover:border-slate-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all active:scale-95"
-            >
-              Save Changes
-            </button>
-          </div>
         </div>
       </div>
     </div>
