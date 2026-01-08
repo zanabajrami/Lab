@@ -29,28 +29,33 @@ class UserController extends Controller
     }
 
     // POST /api/users
-    public function store(Request $request)
-    {
-        $validator = Validator::make($request->all(), [
-            'first_name' => 'required|string|max:50',
-            'last_name'  => 'required|string|max:50',
-            'email'      => 'required|email|unique:users',
-            'password'   => 'required|string|min:8',
-        ]);
+   public function store(Request $request)
+{
+    $validator = Validator::make($request->all(), [
+        'first_name' => 'required|string|max:50',
+        'last_name'  => 'required|string|max:50',
+        'email'      => 'required|email|unique:users,email',
+        'password'   => 'required|string|min:8',
+        'role'       => 'required|in:user,admin',
+    ]);
 
-        if($validator->fails()){
-            return response()->json($validator->errors(), 422);
-        }
-
-        $user = User::create([
-            'first_name' => $request->first_name,
-            'last_name'  => $request->last_name,
-            'email'      => $request->email,
-            'password'   => Hash::make($request->password),
-        ]);
-
-        return response()->json($user, 201);
+    if ($validator->fails()) {
+        return response()->json($validator->errors(), 422);
     }
+
+    $user = User::create([
+        'first_name' => $request->first_name,
+        'last_name'  => $request->last_name,
+        'email'      => $request->email,
+        'password'   => bcrypt($request->password),
+        'role'       => $request->role,
+    ]);
+
+    return response()->json([
+        'message' => 'User created successfully',
+        'user' => $user
+    ], 201);
+}
 
     // PUT /api/users/{id}
    public function update(Request $request, $id)
