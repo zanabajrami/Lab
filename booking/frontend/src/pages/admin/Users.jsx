@@ -8,6 +8,7 @@ export default function Users() {
   const [page, setPage] = useState(1);
   const token = localStorage.getItem("token");
   const [perPage, setPerPage] = useState(window.innerWidth < 768 ? 5 : 6);
+  const [editingUser, setEditingUser] = useState(null);
 
   // Update perPage on resize
   useEffect(() => {
@@ -59,6 +60,34 @@ export default function Users() {
     }
   };
 
+  const handleUpdate = async () => {
+    const res = await fetch(
+      `http://127.0.0.1:8000/api/users/${editingUser.id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          first_name: editingUser.first_name,
+          last_name: editingUser.last_name,
+          email: editingUser.email,
+          role: editingUser.role,
+        }),
+      }
+    );
+
+    const data = await res.json();
+
+    if (res.ok) {
+      setUsers(prev =>
+        prev.map(u =>
+          u.id === data.user.id ? data.user : u
+        )
+      );
+      setEditingUser(null);
+    }
   };
 
   return (
@@ -136,7 +165,10 @@ export default function Users() {
                   </td>
                   <td className="px-6 py-4 text-right">
                     <div className="flex justify-end gap-2">
-                      <button className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 text-slate-400 hover:bg-indigo-50 hover:text-indigo-900 transition-all">
+                      <button
+                        onClick={() => setEditingUser(u)}
+                        className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 text-slate-400 hover:bg-indigo-50 hover:text-indigo-900 transition-all"
+                      >
                         <Pencil className="w-4 h-4" />
                       </button>
                       <button onClick={() => handleDelete(u.id)} className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 text-slate-400 hover:bg-red-50 hover:text-red-600 transition-all">
@@ -164,7 +196,12 @@ export default function Users() {
                   </div>
                 </div>
                 <div className="flex gap-1">
-                  <button className="p-2 bg-slate-50 rounded-xl text-slate-400"><Pencil className="w-4 h-4" /></button>
+                  <button
+                    onClick={() => setEditingUser(u)}
+                    className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 text-slate-400 hover:bg-indigo-50 hover:text-indigo-900"
+                  >
+                    <Pencil className="w-4 h-4" />
+                  </button>
                   <button onClick={() => handleDelete(u.id)} className="p-2 bg-slate-50 rounded-xl text-red-400"><Trash2 className="w-4 h-4" /></button>
                 </div>
               </div>
@@ -198,6 +235,69 @@ export default function Users() {
             </button>
           </div>
         </div>
+
+        {editingUser && (
+          <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+            <div className="bg-white rounded-3xl p-6 w-full max-w-md">
+              <h2 className="text-xl font-black mb-4">Edit User</h2>
+
+              <div className="space-y-3">
+                <input
+                  className="w-full p-3 rounded-xl border"
+                  value={editingUser.first_name}
+                  onChange={(e) =>
+                    setEditingUser({ ...editingUser, first_name: e.target.value })
+                  }
+                  placeholder="First name"
+                />
+
+                <input
+                  className="w-full p-3 rounded-xl border"
+                  value={editingUser.last_name}
+                  onChange={(e) =>
+                    setEditingUser({ ...editingUser, last_name: e.target.value })
+                  }
+                  placeholder="Last name"
+                />
+
+                <input
+                  className="w-full p-3 rounded-xl border"
+                  value={editingUser.email}
+                  onChange={(e) =>
+                    setEditingUser({ ...editingUser, email: e.target.value })
+                  }
+                  placeholder="Email"
+                />
+
+                <select
+                  className="w-full p-3 rounded-xl border"
+                  value={editingUser.role}
+                  onChange={(e) =>
+                    setEditingUser({ ...editingUser, role: e.target.value })
+                  }
+                >
+                  <option value="user">User</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </div>
+
+              <div className="flex justify-end gap-2 mt-6">
+                <button
+                  onClick={() => setEditingUser(null)}
+                  className="px-4 py-2 rounded-xl bg-slate-100"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={handleUpdate}
+                  className="px-4 py-2 rounded-xl bg-slate-800 text-white"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
 
       </div>
     </div>
