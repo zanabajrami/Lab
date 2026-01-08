@@ -53,31 +53,37 @@ class UserController extends Controller
     }
 
     // PUT /api/users/{id}
-    public function update(Request $request, $id)
+   public function update(Request $request, $id)
     {
-        $user = User::find($id);
-        if (!$user) {
-            return response()->json(['error' => 'User not found'], 404);
-        }
+    $user = User::find($id);
 
-        $validator = Validator::make($request->all(), [
-            'first_name' => 'sometimes|required|string|max:50',
-            'last_name'  => 'sometimes|required|string|max:50',
-            'email'      => 'sometimes|required|email|unique:users,email,'.$id,
-            'password'   => 'sometimes|required|string|min:8',
-        ]);
+    if (!$user) {
+        return response()->json(['error' => 'User not found'], 404);
+    }
 
-        if($validator->fails()){
-            return response()->json($validator->errors(), 422);
-        }
+    $validator = Validator::make($request->all(), [
+        'first_name' => 'sometimes|required|string|max:50',
+        'last_name'  => 'sometimes|required|string|max:50',
+        'email'      => 'sometimes|required|email|unique:users,email,' . $id,
+        'password'   => 'sometimes|required|string|min:8',
+        'role'       => 'sometimes|required|in:user,admin',
+    ]);
 
-        if($request->has('password')){
-            $request->merge(['password' => Hash::make($request->password)]);
-        }
+    if ($validator->fails()) {
+        return response()->json($validator->errors(), 422);
+    }
 
-        $user->update($request->all());
+    $user->update($request->only([
+        'first_name',
+        'last_name',
+        'email',
+        'role',
+    ]));
 
-        return response()->json($user, 200);
+    return response()->json([
+        'message' => 'User updated successfully',
+        'user' => $user->fresh(), 
+    ], 200);
     }
 
     // DELETE /api/users/{id}
