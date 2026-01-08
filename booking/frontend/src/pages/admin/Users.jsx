@@ -43,11 +43,22 @@ export default function Users() {
 
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure?")) return;
-    const res = await fetch(`http://127.0.0.1:8000/api/users/${id}`, {
-      method: "DELETE",
-      headers: { Authorization: `Bearer ${token}` },
-    });
-    if (res.ok) setUsers((prev) => prev.filter((u) => u.id !== id));
+
+    const res = await fetch(
+      `http://127.0.0.1:8000/api/users/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    if (res.ok) {
+      setUsers(prev => prev.filter(u => u.id !== id));
+    }
+  };
+
   };
 
   return (
