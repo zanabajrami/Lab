@@ -18,6 +18,11 @@ export default function Users() {
     role: "user",
   });
 
+  // Reset page kur ndryshon search
+  useEffect(() => {
+    setPage(1);
+  }, [search]);
+
   // Update perPage on resize
   useEffect(() => {
     const handleResize = () => setPerPage(window.innerWidth < 768 ? 5 : 6);
