@@ -9,6 +9,14 @@ export default function Users() {
   const token = localStorage.getItem("token");
   const [perPage, setPerPage] = useState(window.innerWidth < 768 ? 5 : 6);
   const [editingUser, setEditingUser] = useState(null);
+  const [addingUser, setAddingUser] = useState(false);
+  const [newUser, setNewUser] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    password: "",
+    role: "user",
+  });
 
   // Update perPage on resize
   useEffect(() => {
@@ -90,6 +98,32 @@ export default function Users() {
     }
   };
 
+  const handleAddUser = async () => {
+    try {
+      const res = await fetch("http://127.0.0.1:8000/api/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(newUser),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setUsers(prev => [...prev, data.user]); // shto user në fund
+        setAddingUser(false);
+        setNewUser({ first_name: "", last_name: "", email: "", password: "", role: "user" }); // reset form
+      } else {
+        alert("Failed to add user: " + JSON.stringify(data));
+      }
+    } catch (err) {
+      console.error(err);
+      alert("An error occurred while adding user");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#F8F9FB] text-slate-900 antialiased rounded-[2.5rem] p-4 sm:p-6 md:p-6 lg:p-8 xl:p-10">
       <div className="w-full max-w-full md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto">
@@ -119,7 +153,10 @@ export default function Users() {
                 className="pl-11 pr-3 py-2.5 md:py-3 w-full sm:w-64 bg-white shadow-sm rounded-2xl focus:ring-2 focus:ring-indigo-500/20"
               />
             </div>
-            <button className="p-2.5 md:p-3 bg-slate-800 text-white rounded-2xl hover:bg-slate-800 transition-all shadow-xl active:scale-95">
+            <button
+              onClick={() => setAddingUser(true)}
+              className="p-2.5 md:p-3 bg-slate-800 text-white rounded-2xl hover:bg-slate-900 transition-all shadow-xl active:scale-95"
+            >
               <Plus className="w-5 h-5 md:w-6 md:h-6" />
             </button>
           </div>
@@ -293,6 +330,75 @@ export default function Users() {
                   className="px-4 py-2 rounded-xl bg-slate-800 text-white"
                 >
                   Save
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {addingUser && (
+          <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+            <div className="bg-white rounded-3xl p-6 w-full max-w-md">
+              <h2 className="text-xl font-black mb-4">Add New User</h2>
+
+              <div className="space-y-3">
+                <input
+                  className="w-full p-3 rounded-xl border"
+                  value={newUser.first_name}
+                  onChange={(e) =>
+                    setNewUser({ ...newUser, first_name: e.target.value })
+                  }
+                  placeholder="First name"
+                />
+                <input
+                  className="w-full p-3 rounded-xl border"
+                  value={newUser.last_name}
+                  onChange={(e) =>
+                    setNewUser({ ...newUser, last_name: e.target.value })
+                  }
+                  placeholder="Last name"
+                />
+                <input
+                  className="w-full p-3 rounded-xl border"
+                  value={newUser.email}
+                  onChange={(e) =>
+                    setNewUser({ ...newUser, email: e.target.value })
+                  }
+                  placeholder="Email"
+                />
+                <input
+                  type="password"
+                  className="w-full p-3 rounded-xl border"
+                  value={newUser.password}
+                  onChange={(e) =>
+                    setNewUser({ ...newUser, password: e.target.value })
+                  }
+                  placeholder="Password"
+                />
+                <select
+                  className="w-full p-3 rounded-xl border"
+                  value={newUser.role}
+                  onChange={(e) =>
+                    setNewUser({ ...newUser, role: e.target.value })
+                  }
+                >
+                  <option value="user">User</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </div>
+
+              <div className="flex justify-end gap-2 mt-6">
+                <button
+                  onClick={() => setAddingUser(false)}
+                  className="px-4 py-2 rounded-xl bg-slate-100"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={handleAddUser}
+                  className="px-4 py-2 rounded-xl bg-slate-800 text-white"
+                >
+                  Add
                 </button>
               </div>
             </div>
