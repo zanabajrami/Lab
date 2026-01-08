@@ -193,9 +193,19 @@ export default function Users() {
                     </div>
                   </td>
                   <td className="px-6 py-4">
-                    <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider border
-                      ${u.role === "admin" ? "bg-indigo-100 text-indigo-900 border-indigo-200/60" : "bg-blue-50 text-blue-700 border-blue-200/60"}`}>
-                      <span className={`w-1.5 h-1.5 rounded-full ${u.role === "admin" ? "bg-indigo-900" : "bg-blue-500"}`}></span>
+                    <div
+                      className={`
+      inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide
+      ${u.role === "admin"
+                          ? "bg-slate-700 text-slate-200"
+                          : "bg-slate-100 text-slate-800 border border-slate-300"}
+      transition-colors duration-200
+    `}
+                    >
+                      <span
+                        className={`w-2 h-2 rounded-full 
+        ${u.role === "admin" ? "bg-slate-200" : "bg-slate-600"}`}
+                      ></span>
                       {u.role}
                     </div>
                   </td>
