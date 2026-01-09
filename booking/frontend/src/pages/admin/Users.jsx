@@ -288,138 +288,110 @@ export default function Users() {
           </div>
         </div>
 
-        {editingUser && (
-          <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-            <div className="bg-white rounded-3xl p-6 w-full max-w-md">
-              <h2 className="text-xl font-black mb-4">Edit User</h2>
+        {/* MODAL WRAPPER (Përdoret për të dyja) */}
+        {(editingUser || addingUser) && (
+          <div className="fixed inset-0 bg-slate-950/40 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-all">
+            <div className="bg-white rounded-[2.5rem] p-8 w-full max-w-md shadow-2xl border border-slate-100 animate-in fade-in zoom-in duration-300">
 
-              <div className="space-y-3">
-                <input
-                  className="w-full p-3 rounded-xl border"
-                  value={editingUser.first_name}
-                  onChange={(e) =>
-                    setEditingUser({ ...editingUser, first_name: e.target.value })
-                  }
-                  placeholder="First name"
-                />
-
-                <input
-                  className="w-full p-3 rounded-xl border"
-                  value={editingUser.last_name}
-                  onChange={(e) =>
-                    setEditingUser({ ...editingUser, last_name: e.target.value })
-                  }
-                  placeholder="Last name"
-                />
-
-                <input
-                  className="w-full p-3 rounded-xl border"
-                  value={editingUser.email}
-                  onChange={(e) =>
-                    setEditingUser({ ...editingUser, email: e.target.value })
-                  }
-                  placeholder="Email"
-                />
-
-                <select
-                  className="w-full p-3 rounded-xl border"
-                  value={editingUser.role}
-                  onChange={(e) =>
-                    setEditingUser({ ...editingUser, role: e.target.value })
-                  }
-                >
-                  <option value="user">User</option>
-                  <option value="admin">Admin</option>
-                </select>
+              {/* Header */}
+              <div className="mb-8">
+                <h2 className="text-2xl font-black text-slate-900 tracking-tight">
+                  {editingUser ? "Edit Profile" : "Create Member"}
+                </h2>
+                <p className="text-slate-500 text-sm mt-1 font-medium">
+                  {editingUser ? "Update user information and permissions." : "Register a new member to the network."}
+                </p>
               </div>
 
-              <div className="flex justify-end gap-2 mt-6">
-                <button
-                  onClick={() => setEditingUser(null)}
-                  className="px-4 py-2 rounded-xl bg-slate-100"
-                >
-                  Cancel
-                </button>
-                <button
-                  onClick={handleUpdate}
-                  className="px-4 py-2 rounded-xl bg-slate-800 text-white"
-                >
-                  Save
-                </button>
+              {/* Form Fields */}
+              <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-1.5">
+                    <label className="text-[10px] font-bold text-slate-400 uppercase ml-1 tracking-widest">First Name</label>
+                    <input
+                      className="w-full p-3.5 rounded-2xl bg-slate-50 border border-slate-200 focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-500/5 transition-all outline-none text-slate-900 font-medium placeholder:text-slate-300"
+                      value={editingUser ? editingUser.first_name : newUser.first_name}
+                      onChange={(e) => editingUser
+                        ? setEditingUser({ ...editingUser, first_name: e.target.value })
+                        : setNewUser({ ...newUser, first_name: e.target.value })
+                      }
+                      placeholder="e.g. John"
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="text-[10px] font-bold text-slate-400 uppercase ml-1 tracking-widest">Last Name</label>
+                    <input
+                      className="w-full p-3.5 rounded-2xl bg-slate-50 border border-slate-200 focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-500/5 transition-all outline-none text-slate-900 font-medium placeholder:text-slate-300"
+                      value={editingUser ? editingUser.last_name : newUser.last_name}
+                      onChange={(e) => editingUser
+                        ? setEditingUser({ ...editingUser, last_name: e.target.value })
+                        : setNewUser({ ...newUser, last_name: e.target.value })
+                      }
+                      placeholder="e.g. Doe"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-[10px] font-bold text-slate-400 uppercase ml-1 tracking-widest">Email Address</label>
+                  <input
+                    className="w-full p-3.5 rounded-2xl bg-slate-50 border border-slate-200 focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-500/5 transition-all outline-none text-slate-900 font-medium placeholder:text-slate-300"
+                    value={editingUser ? editingUser.email : newUser.email}
+                    onChange={(e) => editingUser
+                      ? setEditingUser({ ...editingUser, email: e.target.value })
+                      : setNewUser({ ...newUser, email: e.target.value })
+                    }
+                    placeholder="john@example.com"
+                  />
+                </div>
+
+                {addingUser && (
+                  <div className="space-y-1.5">
+                    <label className="text-[10px] font-bold text-slate-400 uppercase ml-1 tracking-widest">Password</label>
+                    <input
+                      type="password"
+                      className="w-full p-3.5 rounded-2xl bg-slate-50 border border-slate-200 focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-500/5 transition-all outline-none text-slate-900 font-medium placeholder:text-slate-300"
+                      value={newUser.password}
+                      onChange={(e) => setNewUser({ ...newUser, password: e.target.value })}
+                      placeholder="••••••••"
+                    />
+                  </div>
+                )}
+
+                <div className="space-y-1.5">
+                  <label className="text-[10px] font-bold text-slate-400 uppercase ml-1 tracking-widest">Access Role</label>
+                  <select
+                    className="w-full p-3.5 rounded-2xl bg-slate-50 border border-slate-200 focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-500/5 transition-all outline-none text-slate-900 font-bold appearance-none cursor-pointer"
+                    value={editingUser ? editingUser.role : newUser.role}
+                    onChange={(e) => editingUser
+                      ? setEditingUser({ ...editingUser, role: e.target.value })
+                      : setNewUser({ ...newUser, role: e.target.value })
+                    }
+                  >
+                    <option value="user">Standard User</option>
+                    <option value="admin">Administrator</option>
+                  </select>
+                </div>
               </div>
-            </div>
-          </div>
-        )}
 
-        {addingUser && (
-          <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-            <div className="bg-white rounded-3xl p-6 w-full max-w-md">
-              <h2 className="text-xl font-black mb-4">Add New User</h2>
-
-              <div className="space-y-3">
-                <input
-                  className="w-full p-3 rounded-xl border"
-                  value={newUser.first_name}
-                  onChange={(e) =>
-                    setNewUser({ ...newUser, first_name: e.target.value })
-                  }
-                  placeholder="First name"
-                />
-                <input
-                  className="w-full p-3 rounded-xl border"
-                  value={newUser.last_name}
-                  onChange={(e) =>
-                    setNewUser({ ...newUser, last_name: e.target.value })
-                  }
-                  placeholder="Last name"
-                />
-                <input
-                  className="w-full p-3 rounded-xl border"
-                  value={newUser.email}
-                  onChange={(e) =>
-                    setNewUser({ ...newUser, email: e.target.value })
-                  }
-                  placeholder="Email"
-                />
-                <input
-                  type="password"
-                  className="w-full p-3 rounded-xl border"
-                  value={newUser.password}
-                  onChange={(e) =>
-                    setNewUser({ ...newUser, password: e.target.value })
-                  }
-                  placeholder="Password"
-                />
-                <select
-                  className="w-full p-3 rounded-xl border"
-                  value={newUser.role}
-                  onChange={(e) =>
-                    setNewUser({ ...newUser, role: e.target.value })
-                  }
-                >
-                  <option value="user">User</option>
-                  <option value="admin">Admin</option>
-                </select>
-              </div>
-
-              <div className="flex justify-end gap-2 mt-6">
+              {/* Actions */}
+              <div className="flex items-center gap-3 mt-10">
                 <button
-                  onClick={() => setAddingUser(false)}
-                  className="px-4 py-2 rounded-xl bg-slate-100"
+                  onClick={() => { setEditingUser(null); setAddingUser(false); }}
+                  className="flex-1 py-4 rounded-[1.2rem] bg-slate-50 text-slate-500 font-bold hover:bg-slate-100 hover:text-slate-700 transition-all active:scale-95"
                 >
-                  Cancel
+                  Discard
                 </button>
                 <button
-                  onClick={handleAddUser}
-                  className="px-4 py-2 rounded-xl bg-slate-800 text-white"
+                  onClick={editingUser ? handleUpdate : handleAddUser}
+                  className="flex-1 py-4 rounded-[1.2rem] bg-slate-950 text-white font-bold shadow-xl shadow-slate-200 hover:bg-indigo-950 hover:shadow-indigo-200 transition-all active:scale-95"
                 >
-                  Add
+                  {editingUser ? "Save Changes" : "Create Account"}
                 </button>
               </div>
             </div>
           </div>
         )}
-
       </div>
     </div>
   );
