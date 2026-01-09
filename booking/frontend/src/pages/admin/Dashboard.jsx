@@ -1,17 +1,16 @@
 import React, { useEffect, useState, useMemo } from "react";
 import UserGrowthChart from "../../components/charts/UserGrowthChart";
 import UsersChart from "../../components/charts/UsersChart";
-import { Users, DollarSign, UserPlus, EllipsisVertical } from "lucide-react";
+import { Users, DollarSign, UserPlus, EllipsisVertical, ArrowUpRight } from "lucide-react";
 
 function Dashboard() {
   const token = localStorage.getItem("token");
-  const [users, setUsers] = useState([]); // Lista e plotë
+  const [users, setUsers] = useState([]);
   const [dailyStats, setDailyStats] = useState([]);
   const [summary, setSummary] = useState(null);
   const [monthlyStats, setMonthlyStats] = useState([]);
 
   useEffect(() => {
-    // 1. Fetch të gjithë përdoruesit për të nxjerrë "Latest Members"
     fetch("http://127.0.0.1:8000/api/users", {
       headers: { Authorization: `Bearer ${token}` },
     })
@@ -19,13 +18,11 @@ function Dashboard() {
       .then(data => setUsers(data))
       .catch(console.error);
 
-    // 2. Fetch stats tjera
     fetch("http://127.0.0.1:8000/api/users/stats/daily", { headers: { Authorization: `Bearer ${token}` } }).then(res => res.json()).then(setDailyStats);
     fetch("http://127.0.0.1:8000/api/users/stats/active", { headers: { Authorization: `Bearer ${token}` } }).then(res => res.json()).then(setSummary);
     fetch("http://127.0.0.1:8000/api/users/stats/monthly", { headers: { Authorization: `Bearer ${token}` } }).then(res => res.json()).then(setMonthlyStats);
   }, [token]);
 
-  // Nxjerrim 5 më të fundit
   const latestUsers = useMemo(() => {
     return [...users]
       .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
@@ -33,110 +30,124 @@ function Dashboard() {
   }, [users]);
 
   return (
-    <div className="p-6 bg-slate-50 min-h-screen rounded-2xl">
+    <div className="p-8 bg-[#f8fafc] min-h-screen text-slate-900 ">
+      
       {/* --- STATS CARDS --- */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        {/* TOTAL USERS */}
-        <div className="bg-white p-6 rounded-[2rem] border border-slate-200 shadow-sm flex justify-between items-center group hover:border-blue-200 transition-all">
-          <div>
-            <h2 className="text-slate-400 text-xs font-black uppercase tracking-widest">Total Users</h2>
-            <p className="text-4xl font-black text-slate-900 mt-1 tracking-tight">
-              {summary?.total_users ?? 0}
-            </p>
-            <div className="flex items-center gap-1 mt-2 text-emerald-500 font-bold text-sm">
-              <span>▲ 12%</span>
-              <span className="text-slate-400 font-medium text-xs tracking-normal">this month</span>
-            </div>
-          </div>
-          <div className="bg-slate-900 p-4 rounded-2xl group-hover:bg-blue-600 transition-colors shadow-lg shadow-slate-200">
-            <Users className="text-white w-6 h-6" />
-          </div>
-        </div>
-
-        {/* REVENUE */}
-        <div className="bg-white p-6 rounded-[2rem] border border-slate-200 shadow-sm flex justify-between items-center group hover:border-emerald-200 transition-all">
-          <div>
-            <h2 className="text-slate-400 text-xs font-black uppercase tracking-widest">Revenue</h2>
-            <p className="text-4xl font-black text-slate-900 mt-1 tracking-tight">$0</p>
-            <span className="text-slate-400 font-medium text-xs mt-2 block italic">No data yet</span>
-          </div>
-          <div className="bg-slate-100 p-4 rounded-2xl group-hover:bg-emerald-500 transition-all shadow-inner">
-            <DollarSign className="text-slate-400 group-hover:text-white w-6 h-6" />
-          </div>
-        </div>
-
-        {/* NEW USERS TODAY */}
-        <div className="bg-white p-6 rounded-[2rem] border border-slate-200 shadow-sm flex justify-between items-center group hover:border-purple-200 transition-all">
-          <div>
-            <h2 className="text-slate-400 text-xs font-black uppercase tracking-widest">New Today</h2>
-            <p className="text-4xl font-black text-slate-900 mt-1 tracking-tight">
-              {summary?.today ?? 0}
-            </p>
-            <div className="bg-purple-50 text-purple-600 text-[10px] font-black px-2 py-0.5 rounded-md mt-2 inline-block">
-              + New User
-            </div>
-          </div>
-          <div className="bg-slate-900 p-4 rounded-2xl group-hover:bg-purple-600 transition-colors shadow-lg shadow-slate-200">
-            <UserPlus className="text-white w-6 h-6" />
-          </div>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+  
+  {/* TOTAL USERS - Slate 950 me Indigo Details */}
+  <div className="bg-slate-950 p-6 rounded-[2.5rem] border border-white/5 shadow-2xl flex justify-between items-center group hover:bg-slate-900 transition-all duration-500">
+    <div>
+      <h2 className="text-indigo-300/50 text-[11px] font-bold uppercase tracking-[0.2em]">Total Users</h2>
+      <p className="text-4xl font-black text-white mt-2 tracking-tighter">
+        {summary?.total_users ?? 0}
+      </p>
+      <div className="flex items-center gap-1.5 mt-4 text-indigo-200 font-bold text-[10px] bg-indigo-500/10 border border-indigo-500/20 px-3 py-1 rounded-full w-fit uppercase tracking-wider">
+        <ArrowUpRight className="w-3 h-3 text-indigo-400" /> 12% Growth
       </div>
+    </div>
+    <div className="bg-indigo-950 p-4 rounded-2xl shadow-lg shadow-indigo-500/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+      <Users className="text-white w-6 h-6" />
+    </div>
+  </div>
 
-      {/* --- MAIN SECTION: CHART & NEW MEMBERS --- */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+  {/* REVENUE - Slate 950 me Subtle Indigo */}
+  <div className="bg-slate-950 p-6 rounded-[2.5rem] border border-white/5 shadow-2xl flex justify-between items-center group hover:bg-slate-900 transition-all duration-500">
+    <div>
+      <h2 className="text-indigo-300/50 text-[11px] font-bold uppercase tracking-[0.2em]">Net Revenue</h2>
+      <p className="text-4xl font-black text-white mt-2 tracking-tighter">$0.00</p>
+      <p className="text-slate-500 text-[11px] font-medium mt-4 flex items-center gap-2">
+        <span className="w-1.5 h-1.5 bg-slate-700 rounded-full"></span>
+        Awaiting transactions
+      </p>
+    </div>
+    <div className="bg-slate-800 border border-white/5 p-4 rounded-2xl group-hover:border-indigo-500/50 transition-colors duration-500">
+      <DollarSign className="text-indigo-300 w-6 h-6" />
+    </div>
+  </div>
+
+  {/* LIVE TODAY - Slate 950 me Accent Indigo/Emerald */}
+  <div className="bg-slate-950 p-6 rounded-[2.5rem] border border-white/5 shadow-2xl flex justify-between items-center group hover:bg-slate-900 transition-all duration-500">
+    <div>
+      <h2 className="text-indigo-300/50 text-[11px] font-bold uppercase tracking-[0.2em]">New Users</h2>
+      <p className="text-4xl font-black text-white mt-2 tracking-tighter">
+        {summary?.today ?? 0}
+      </p>
+      <div className="flex items-center gap-1.5 mt-4 text-indigo-200 font-bold text-[10px] bg-white/5 border border-white/10 px-3 py-1 rounded-full w-fit uppercase tracking-wider">
+        <span className="w-1.5 h-1.5 bg-indigo-400 rounded-full animate-pulse"></span>
+        Active Now
+      </div>
+    </div>
+    <div className="bg-gradient-to-br from-indigo-200 to-indigo-400 p-4 rounded-2xl shadow-lg shadow-indigo-900/40 group-hover:shadow-indigo-500/20 transition-all duration-500">
+      <UserPlus className="text-white w-6 h-6" />
+    </div>
+  </div>
+</div>
+
+      {/* --- MAIN SECTION --- */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
         
-        {/* CHART SEKSIONI */}
-        <div className="lg:col-span-2 bg-white p-6 rounded-[2.5rem] border border-slate-200 shadow-sm">
-          <h3 className="text-xl font-black text-slate-900 mb-6 px-2">User Activity</h3>
-          <UsersChart usersData={dailyStats} />
-        </div>
-
-        {/* NEW MEMBERS LIST (E marrë nga lista Users) */}
-        <div className="bg-white p-6 rounded-[2.5rem] border border-slate-200 shadow-sm flex flex-col">
-          <div className="flex items-center justify-between mb-6 px-1">
-            <div>
-              <h3 className="text-lg font-black text-slate-900 tracking-tight">New <span className="text-blue-600">Members</span></h3>
-              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-0.5">Latest signups</p>
+        {/* CHART ACTIVITY */}
+        <div className="lg:col-span-2 bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm">
+          <div className="flex items-center justify-between mb-8">
+            <h3 className="text-xl font-bold text-slate-900 tracking-tight">
+              Analytics <span className="text-slate-400 font-normal">Overview</span>
+            </h3>
+            <div className="flex gap-2">
+                <span className="w-3 h-3 bg-slate-700 rounded-full"></span>
+                <span className="text-[10px] font-bold text-slate-400 uppercase">Daily Traffic</span>
             </div>
           </div>
+          <div className="h-[350px]">
+            <UsersChart usersData={dailyStats} />
+          </div>
+        </div>
 
-          <div className="space-y-2 flex-1">
+        {/* NEW MEMBERS LIST */}
+        <div className="bg-white p-7 rounded-[2.5rem] border border-slate-200 shadow-sm flex flex-col">
+          <div className="mb-8">
+            <h3 className="text-xl font-bold text-slate-900 tracking-tight">Recent <span className="text-indigo-400">Activity</span></h3>
+            <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">Newest Platform Entries</p>
+          </div>
+
+          <div className="space-y-4 flex-1">
             {latestUsers.map((u) => (
-              <div key={u.id} className="flex items-center justify-between p-3 rounded-2xl hover:bg-slate-50 transition-all duration-300 group">
-                <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-2xl bg-slate-900 flex items-center justify-center font-black text-white group-hover:bg-blue-600 transition-all duration-300 shadow-md">
-                    <span className="text-sm">{u.first_name[0].toUpperCase()}</span>
+              <div key={u.id} className="flex items-center justify-between p-3 rounded-2xl hover:bg-slate-50 transition-all duration-300 group border border-transparent">
+                <div className="flex items-center gap-4">
+                  <div className="w-11 h-11 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center font-bold text-slate-700 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm text-base">
+                    {u.first_name[0].toUpperCase()}
                   </div>
                   <div className="min-w-0">
-                    <div className="flex items-center gap-2">
-                      <p className="text-[14px] font-black text-slate-900 group-hover:text-blue-600 transition-colors truncate max-w-[90px]">
-                        {u.first_name} {u.last_name}
-                      </p>
-                    </div>
-                    <p className="text-[11px] text-slate-400 font-bold truncate max-w-[120px]">{u.email}</p>
+                    <p className="text-[14px] font-bold text-slate-900 group-hover:text-blue-600 transition-colors truncate">
+                      {u.first_name} {u.last_name}
+                    </p>
+                    <p className="text-[11px] text-slate-500 font-medium truncate">{u.email}</p>
                   </div>
                 </div>
-                <button className="p-2 text-slate-300 hover:text-slate-900">
+                <button className="p-2 text-slate-400 hover:text-slate-900 transition-colors">
                   <EllipsisVertical className="w-5 h-5" />
                 </button>
               </div>
             ))}
 
             {latestUsers.length === 0 && (
-              <p className="text-center text-slate-400 text-xs font-bold py-10">No new members yet</p>
+              <div className="flex flex-col items-center justify-center py-20 text-slate-300 italic font-medium">
+                 No active data
+              </div>
             )}
           </div>
-          
-          <button className="mt-6 w-full py-3.5 bg-slate-50 hover:bg-slate-900 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-white transition-all duration-300">
-            View All Members
-          </button>
         </div>
-
       </div>
 
-      {/* GROWTH CHART */}
-      <div className="bg-white p-6 rounded-[2.5rem] border border-slate-200 shadow-sm">
-         <UserGrowthChart usersData={monthlyStats} />
+      {/* GROWTH CHART FULL WIDTH */}
+      <div className="bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm">
+          <div className="mb-6">
+            <h3 className="text-xl font-bold text-slate-900 tracking-tight">Growth <span className="text-indigo-300">Trajectory</span></h3>
+            <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">Monthly registration analytics</p>
+          </div>
+          <div className="h-[300px]">
+            <UserGrowthChart usersData={monthlyStats} />
+          </div>
       </div>
     </div>
   );
