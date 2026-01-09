@@ -61,19 +61,56 @@ function Settings() {
 
   if (error === "NOT_AUTH")
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-        <div className="max-w-md w-full bg-white p-8 rounded-2xl shadow-lg text-center">
-          <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+      <div className="min-h-screen flex items-center justify-center bg-[#f8fafc] px-4 font-sans rounded-2xl">
+        <div className="max-w-md w-full bg-white p-10 rounded-[3rem] border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.05)] text-center animate-in fade-in zoom-in duration-500 -mt-10">
+
+          {/* Icon Container */}
+          <div className="relative w-20 h-20 mx-auto mb-8">
+            <div className="absolute inset-0 bg-indigo-500/10 rounded-full animate-pulse"></div>
+            <div className="relative bg-white border border-slate-100 w-20 h-20 rounded-full flex items-center justify-center shadow-sm">
+              <svg
+                className="w-10 h-10 text-indigo-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
           </div>
-          <h2 className="text-2xl font-bold text-gray-800">Session expired</h2>
-          <p className="text-gray-500 mt-2 mb-6">Your session has timed out. Please log in again to continue.</p>
-          <button
-            onClick={() => { localStorage.removeItem("token"); window.location.href = "/login"; }}
-            className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 rounded-xl transition-colors shadow-md"
-          >
-            Go to Login
-          </button>
+
+          {/* Text Content */}
+          <h2 className="text-3xl font-black text-slate-900 tracking-tighter">
+            Session <span className="text-indigo-900">Expired</span>
+          </h2>
+          <p className="text-slate-500 mt-3 mb-10 font-medium leading-relaxed px-4">
+            For your security, sessions are timed out automatically. Please log in again to access your dashboard.
+          </p>
+
+          {/* Button Actions */}
+          <div className="space-y-3">
+            <button
+              onClick={() => {
+                localStorage.removeItem("token");
+                window.location.href = "/login";
+              }}
+              className="w-full bg-slate-950 hover:bg-indigo-950 text-white font-bold py-4 rounded-2xl transition-all duration-300 shadow-xl shadow-indigo-100 hover:shadow-indigo-200 active:scale-[0.98]"
+            >
+              Return to Login
+            </button>
+
+            <button
+              onClick={() => window.location.reload()}
+              className="text-slate-400 text-xs font-bold uppercase tracking-widest hover:text-slate-600 transition-colors"
+            >
+              Refresh Page
+            </button>
+          </div>
         </div>
       </div>
     );
