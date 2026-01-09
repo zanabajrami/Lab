@@ -30,7 +30,7 @@ function Dashboard() {
   }, [users]);
 
   return (
-    <div className="p-8 bg-[#f8fafc] min-h-screen text-slate-900 ">
+    <div className="p-8 bg-[#f8fafc] min-h-screen text-slate-900 rounded-2xl">
 
       {/* --- STATS CARDS --- */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
@@ -103,83 +103,75 @@ function Dashboard() {
           </div>
         </div>
 
-       {/* NEW MEMBERS LIST - Modern Clean Style */}
-<div className="bg-white p-6 rounded-[2.5rem] border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col h-full">
-  
-  {/* Header me stil minimalist */}
-  <div className="flex items-center justify-between mb-8 px-2">
-    <div>
-      <h3 className="text-[17px] font-extrabold text-slate-900 tracking-tight">
-        Recent Activity
-      </h3>
-      <div className="flex items-center gap-2 mt-1">
-        <span className="flex h-1.5 w-1.5 rounded-full bg-indigo-500"></span>
-        <p className="text-slate-400 text-[10px] font-bold uppercase tracking-wider">
-          New members joined
-        </p>
-      </div>
-    </div>
-    <button className="text-[10px] font-black text-indigo-600 bg-indigo-50 px-3 py-1.5 rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-300">
-      SEE ALL
-    </button>
-  </div>
+        {/* NEW MEMBERS LIST - Modern Clean Style */}
+        <div className="bg-white p-6 rounded-[2.5rem] border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col h-full">
 
-  {/* Lista e përdoruesve */}
-  <div className="space-y-1 flex-1">
-    {latestUsers.map((u) => (
-      <div
-        key={u.id}
-        className="flex items-center justify-between p-3 rounded-[1.5rem] hover:bg-slate-50/80 transition-all duration-300 group"
-      >
-        <div className="flex items-center gap-4">
-          {/* Avatar me rreth të hollë dhe shkronjë të qartë */}
-          <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center font-bold text-slate-700 group-hover:scale-105 group-hover:border-indigo-200 group-hover:bg-white transition-all duration-300 shadow-sm text-base">
-            {u.first_name[0].toUpperCase()}
+          {/* Header me stil minimalist */}
+          <div className="flex items-center justify-between mb-8 px-2">
+            <div>
+              <h3 className="text-[17px] font-extrabold text-slate-900 tracking-tight">
+                Recent Activity
+              </h3>
+              <div className="flex items-center gap-2 mt-1">
+                <span className="flex h-1.5 w-1.5 rounded-full bg-indigo-900"></span>
+                <p className="text-slate-400 text-[10px] font-bold uppercase tracking-wider">
+                  New members joined
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div className="min-w-0">
-            <p className="text-[14px] font-bold text-slate-900 truncate">
-              {u.first_name} {u.last_name}
-            </p>
-            <p className="text-[11px] text-slate-400 font-medium truncate">
-              {u.email}
-            </p>
+          {/* Lista e përdoruesve */}
+          <div className="space-y-1 flex-1">
+            {latestUsers.map((u) => (
+              <div
+                key={u.id}
+                className="flex items-center justify-between p-3 rounded-[1.5rem] hover:bg-slate-50/80 transition-all duration-300 group"
+              >
+                <div className="flex items-center gap-4">
+                  {/* Avatar me rreth të hollë dhe shkronjë të qartë */}
+                  <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center font-bold text-slate-700 group-hover:scale-105 group-hover:border-indigo-200 group-hover:bg-white transition-all duration-300 shadow-sm text-base">
+                    {u.first_name[0].toUpperCase()}
+                  </div>
+
+                  <div className="min-w-0">
+                    <p className="text-[14px] font-bold text-slate-900 truncate">
+                      {u.first_name} {u.last_name}
+                    </p>
+                    <p className="text-[11px] text-slate-400 font-medium truncate">
+                      {u.email}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Butoni i opsioneve - shfaqet vetëm në hover në mënyrë elegante */}
+                <div className="flex items-center">
+                  <button className="p-2 text-slate-300 hover:text-slate-600 hover:bg-white rounded-xl transition-all duration-300">
+                    <EllipsisVertical className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            ))}
+
+            {/* State kur s'ka data */}
+            {latestUsers.length === 0 && (
+              <div className="flex flex-col items-center justify-center py-16 text-slate-300 italic text-sm">
+                No recent activity
+              </div>
+            )}
+          </div>
+
+          {/* Bottom Info */}
+          <div className="mt-6 px-4 py-3 bg-slate-50 rounded-2xl border border-slate-100 flex items-center justify-between">
+            <span className="text-[10px] font-bold text-slate-500 uppercase tracking-tight text-center w-full">
+              Updating in real-time
+            </span>
           </div>
         </div>
-
-        {/* Butoni i opsioneve - shfaqet vetëm në hover në mënyrë elegante */}
-        <div className="flex items-center">
-             <button className="p-2 text-slate-300 hover:text-slate-600 hover:bg-white rounded-xl transition-all duration-300">
-                <EllipsisVertical className="w-5 h-5" />
-             </button>
-        </div>
       </div>
-    ))}
-
-    {/* State kur s'ka data */}
-    {latestUsers.length === 0 && (
-      <div className="flex flex-col items-center justify-center py-16 text-slate-300 italic text-sm">
-        No recent activity
-      </div>
-    )}
-  </div>
-
-  {/* Bottom Info */}
-  <div className="mt-6 px-4 py-3 bg-slate-50 rounded-2xl border border-slate-100 flex items-center justify-between">
-    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-tight text-center w-full">
-      Updating in real-time
-    </span>
-  </div>
-</div>
-      </div>
-
-      {/* GROWTH CHART FULL WIDTH */}
-      <div className="bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm">
-        <div className="mb-6">
-          <h3 className="text-xl font-bold text-slate-900 tracking-tight">Growth <span className="text-indigo-300">Trajectory</span></h3>
-          <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">Monthly registration analytics</p>
-        </div>
-        <div className="h-[300px]">
+      
+      <div className="mt-8">
+        <div className="w-full">
           <UserGrowthChart usersData={monthlyStats} />
         </div>
       </div>
