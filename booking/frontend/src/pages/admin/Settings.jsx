@@ -35,24 +35,6 @@ function Settings() {
     fetchProfile();
   }, [token]);
 
-  const handleSave = async () => {
-    try {
-      await axios.put(
-        "http://localhost:8000/api/me",
-        { notifications: profile.notifications },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            Accept: "application/json",
-          },
-        }
-      );
-      alert("Settings saved ✅");
-    } catch {
-      alert("You need to log in again ❌");
-    }
-  };
-
   if (loading) return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-indigo-600"></div>

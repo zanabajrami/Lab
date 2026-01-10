@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 import UserGrowthChart from "../../components/charts/UserGrowthChart";
 import UsersChart from "../../components/charts/UsersChart";
-import { Users, DollarSign, UserPlus, EllipsisVertical, ArrowUpRight, X } from "lucide-react";
+import { Users, DollarSign, UserPlus, EllipsisVertical, ArrowUpRight} from "lucide-react";
 
 function Dashboard() {
   const token = localStorage.getItem("token");
