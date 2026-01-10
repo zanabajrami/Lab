@@ -288,7 +288,6 @@ export default function Users() {
           </div>
         </div>
 
-        {/* MODAL WRAPPER (Përdoret për të dyja) */}
         {(editingUser || addingUser) && (
           <div className="fixed inset-0 bg-slate-950/40 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-all">
             <div className="bg-white rounded-[2.5rem] p-8 w-full max-w-md shadow-2xl border border-slate-100 animate-in fade-in zoom-in duration-300">
