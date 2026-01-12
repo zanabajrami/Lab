@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { X } from "lucide-react"; // Importojmë ikonën X
 
 function Login({ onSwitchToRegister, onClose }) {
   const [email, setEmail] = useState("");
@@ -28,12 +29,10 @@ function Login({ onSwitchToRegister, onClose }) {
       const data = await response.json();
 
       if (response.ok) {
-        // Ruaj token në localStorage
         localStorage.setItem("token", data.token);
         localStorage.setItem("user", JSON.stringify(data.user));
         alert("Logged in successfully!");
-        console.log("Logged in user:", data.user);
-
+        
         if (typeof onClose === "function") onClose();
         setEmail("");
         setPassword("");
@@ -59,22 +58,31 @@ function Login({ onSwitchToRegister, onClose }) {
   return (
     <div
       onClick={handleOverlayClick}
-      className="fixed inset-0 flex items-center justify-center bg-black/90 backdrop-blur-sm z-50"
+      className="fixed inset-0 flex items-center justify-center bg-black/90 backdrop-blur-sm z-50 p-4"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.9, y: 40 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         onClick={(e) => e.stopPropagation()}
-        className="relative p-[2px] rounded-3xl bg-gradient-to-r from-slate-400 via-gray-300 to-slate-400 shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+        className="relative p-[2px] rounded-3xl bg-gradient-to-r from-slate-400 via-gray-300 to-slate-400 shadow-[0_0_20px_rgba(255,255,255,0.15)] w-full max-w-lg"
       >
-        <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-10 
-               w-[100%] sm:w-full sm:min-w-[430px] max-w-2xl border border-white/20 shadow-lg">
+        <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 sm:p-10 border border-white/20 shadow-lg">
+          
+          {/* --- BUTONI X --- */}
+          <button
+            onClick={onClose}
+            className="absolute top-5 right-5 p-2 rounded-full hover:bg-white/10 text-slate-400 hover:text-slate-800 transition-all duration-200 z-10"
+          >
+            <X size={24} />
+          </button>
+          {/* ----------------- */}
+
           <h2 className="text-4xl font-extrabold text-center mb-8 tracking-wide bg-gradient-to-r from-slate-600 via-gray-500 to-slate-600 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,255,255,0.25)]">
             Welcome Back
           </h2>
+
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-            {/* Email */}
             <div className="relative group">
               <label className="text-base font-medium text-slate-700 mb-1 block">
                 Email Address
@@ -82,18 +90,13 @@ function Login({ onSwitchToRegister, onClose }) {
               <input
                 type="email"
                 placeholder="you@example.com"
-                className="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/20 
-                text-gray-700 placeholder-gray-500 focus:outline-none 
-                focus:ring-2 focus:ring-gray-300 focus:shadow-[0_0_15px_rgba(255,255,255,0.15)] 
-                transition-all duration-300 text-lg autofill:shadow-[inset_0_0_0px_1000px_rgba(255,255,255,0)] autofill:text-gray-700"
+                className="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/20 text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all text-lg"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                autoComplete="email"
               />
             </div>
 
-            {/* Password */}
             <div className="relative group">
               <label className="text-base font-medium text-slate-700 mb-1 block">
                 Password
@@ -101,14 +104,10 @@ function Login({ onSwitchToRegister, onClose }) {
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="••••••••"
-                className="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/20 
-                text-gray-700 placeholder-gray-500 focus:outline-none 
-                focus:ring-2 focus:ring-gray-300 focus:shadow-[0_0_15px_rgba(255,255,255,0.15)] 
-                transition-all duration-300 text-lg autofill:shadow-[inset_0_0_0px_1000px_rgba(255,255,255,0)] autofill:text-gray-700"
+                className="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/20 text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all text-lg"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                autoComplete="current-password"
               />
 
               <div className="flex items-center mt-3">
@@ -117,29 +116,21 @@ function Login({ onSwitchToRegister, onClose }) {
                     type="checkbox"
                     checked={showPassword}
                     onChange={() => setShowPassword(!showPassword)}
-                    className="w-5 h-5 cursor-pointer rounded border border-gray-400 bg-gray-400 appearance-none relative"
+                    className="w-5 h-5 cursor-pointer rounded border border-gray-400 bg-gray-400 appearance-none"
                   />
                   {showPassword && (
-                    <span className="absolute left-1 top-0.5 text-gray-700 text-sm">
-                      ✔
-                    </span>
+                    <span className="absolute left-1 top-0.5 text-gray-700 text-sm">✔</span>
                   )}
-                  <span className="ml-2 text-sm text-gray-700 select-none">
-                    Show Password
-                  </span>
+                  <span className="ml-2 text-sm text-gray-700 select-none">Show Password</span>
                 </label>
               </div>
             </div>
 
-            {/* Button */}
             <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 20px rgba(25, 2, 75, 0.2)",
-              }}
+              whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               type="submit"
-              className="bg-gradient-to-r from-slate-600 via-gray-400 to-slate-600 text-slate-700 font-semibold py-3.5 rounded-xl shadow-lg transition-all duration-300 hover:from-slate-500 hover:via-gray-400 hover:to-slate-500 text-lg"
+              className="bg-gradient-to-r from-slate-600 via-gray-400 to-slate-600 text-slate-700 font-semibold py-3.5 rounded-xl shadow-lg hover:from-slate-500 transition-all text-lg"
             >
               Login
             </motion.button>
@@ -149,7 +140,7 @@ function Login({ onSwitchToRegister, onClose }) {
             Don’t have an account?{" "}
             <button
               onClick={onSwitchToRegister}
-              className="text-slate-800 hover:underline hover:text-white transition"
+              className="text-slate-800 font-bold hover:underline transition"
             >
               Sign up
             </button>
@@ -157,12 +148,11 @@ function Login({ onSwitchToRegister, onClose }) {
         </div>
       </motion.div>
 
-      {/* Custom autofill fix */}
       <style jsx="true">{`
         input:-webkit-autofill {
           background-color: transparent !important;
           -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0) inset !important;
-          -webkit-text-fill-color: #374151 !important; /* text-gray-700 */
+          -webkit-text-fill-color: #374151 !important;
           transition: background-color 9999s ease-in-out 0s;
         }
       `}</style>
