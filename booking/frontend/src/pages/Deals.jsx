@@ -177,7 +177,7 @@ function Deals({ favorites, setFavorites }) {
                     e.stopPropagation();
                     setSelectedHotel(deal);
                   }}
-                  className="mt-3 text-indigo-900 font-semibold cursor-pointer hover:underline"
+                  className="mt-3 text-slate-900 font-semibold cursor-pointer hover:underline"
                 >
                   {deal.name.toLowerCase().includes("villa") ||
                     deal.name.toLowerCase().includes("chalet")
@@ -190,9 +190,7 @@ function Deals({ favorites, setFavorites }) {
                 {/* Button */}
                 <Link
                   to="/hotels"
-                  className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 
-             text-gray-900 font-semibold shadow-lg text-center block
-             hover:bg-indigo-900 hover:text-indigo-300 transition-colors"
+                  className="mt-1 w-full py-3.5 rounded-2xl bg-slate-100 text-slate-800 font-bold text-xs tracking-widest uppercase transition-all duration-300 hover:bg-slate-900 hover:text-slate-100 hover:shadow-[0_10px_20px_rgba(51,65,85,0.3)] hover:-translate-y-0.5 active:scale-95 shadow-md flex items-center justify-center gap-2"
                 >
                   Browse
                 </Link>
