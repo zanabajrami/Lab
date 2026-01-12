@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CalendarDays, User, BedDouble, ChevronDown, MapPin } from "lucide-react";
+import { CalendarDays, User, BedDouble, ChevronDown, MapPin, Search } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 function CustomDropdown({ options, selected, setSelected, placeholder }) {
@@ -14,24 +14,28 @@ function CustomDropdown({ options, selected, setSelected, placeholder }) {
     <div className="relative w-full">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center bg-transparent text-white outline-none font-medium"
+        className="w-full flex justify-between items-center bg-transparent text-white outline-none font-medium py-1"
       >
-        {selected || placeholder}
-        <ChevronDown className={`ml-2 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+        <span className="truncate">{selected || placeholder}</span>
+        <ChevronDown className={`ml-2 w-4 h-4 transition-transform shrink-0 ${isOpen ? "rotate-180" : ""}`} />
       </button>
 
       {isOpen && (
-        <ul className="absolute left-0 mt-1 w-full bg-white/10 backdrop-blur-md rounded-xl text-white shadow-lg z-[1000] max-h-52 overflow-y-auto border border-white/20">
-          {options.map((option, i) => (
-            <li
-              key={i}
-              onClick={() => handleSelect(option)}
-              className="px-3 py-2 cursor-pointer hover:bg-white/20 hover:shadow-md transition-all duration-200 rounded-md"
-            >
-              {option}
-            </li>
-          ))}
-        </ul>
+        <>
+          {/* Backdrop to close dropdown when clicking outside */}
+          <div className="fixed inset-0 z-[90]" onClick={() => setIsOpen(false)} />
+          <ul className="absolute left-0 mt-2 w-full bg-slate-800/95 backdrop-blur-xl rounded-2xl text-white shadow-2xl z-[100] max-h-60 overflow-y-auto border border-white/20 p-2">
+            {options.map((option, i) => (
+              <li
+                key={i}
+                onClick={() => handleSelect(option)}
+                className="px-4 py-3 cursor-pointer hover:bg-white/10 transition-colors rounded-xl text-sm"
+              >
+                {option}
+              </li>
+            ))}
+          </ul>
+        </>
       )}
     </div>
   );
@@ -47,124 +51,108 @@ function SearchBar() {
   const [error, setError] = useState("");
 
   const navigate = useNavigate();
-
-  const destinations = ["Prishtina", "Tirana", "Brezovicë", "Dhërmi", "Ksamil", "Pejë", "Sarandë", "Prizren", "Himarë"];
+  const destinations = ["Prishtina", "Tirana", "Brezovica", "Dhermi", "Ksamil", "Peja", "Saranda", "Prizren", "Himara"];
 
   const increment = (setter, value, max = 15) => setter(value < max ? value + 1 : value);
   const decrement = (setter, value, min = 1) => setter(value > min ? value - 1 : value);
 
   const handleSearch = () => {
-    if (!destination) { setError("Please select a destination."); return; }
-    if (!startDate || !endDate) { setError("Please select check-in and check-out dates."); return; }
-    if (new Date(endDate) < new Date(startDate)) { setError("Please select a valid check-out date."); return; }
-    if (guests < 1) { setError("Add at least 1 guest."); return; }
-    if (rooms < 1) { setError("Add at least 1 room."); return; }
-
+    if (!destination) { setError("Please select a destination"); return; }
+    if (new Date(endDate) < new Date(startDate)) { setError("Check-out date is invalid"); return; }
     setError("");
 
-    // Dërgo URL me query params në HotelsPage
-    const query = new URLSearchParams({
-      destination,
-      guests,
-      rooms,
-      startDate,
-      endDate,
-    }).toString();
-
+    const query = new URLSearchParams({ destination, guests, rooms, startDate, endDate }).toString();
     navigate(`/hotels?${query}`);
   };
 
   return (
-    <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl flex flex-col md:flex-row items-center md:items-stretch shadow-lg w-full max-w-6xl mx-auto p-2 md:p-0 gap-2 md:gap-0 transform hover:scale-105 transition-transform duration-300">
+    <div className="w-full max-w-6xl mx-auto px-4">
+      <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-[2rem] p-2 shadow-2xl">
+        <div className="grid grid-cols-1 md:flex md:flex-row items-stretch gap-1">
+          
+          {/* Destination Section */}
+          <div className="flex items-center gap-3 px-4 py-4 md:flex-[1.5] border-b md:border-b-0 md:border-r border-white/10 hover:bg-white/5 transition-colors rounded-2xl md:rounded-none">
+            <MapPin className="w-5 h-5 text-indigo-300 shrink-0" />
+            <CustomDropdown
+              options={destinations}
+              selected={destination}
+              setSelected={setDestination}
+              placeholder="Where are you going?"
+            />
+          </div>
 
-      {/* Destination */}
-      <div className="flex items-center px-3 md:px-8 py-3 flex-1 w-full md:w-auto border-b md:border-b-0 md:border-r border-white/30 hover:bg-white/20 transition-colors duration-300 cursor-pointer rounded-2xl shadow-lg mb-2 md:mb-0">
-        <MapPin className="w-5 md:w-6 h-5 md:h-6 text-white mr-2 md:mr-4" />
-        <CustomDropdown
-          options={destinations}
-          selected={destination}
-          setSelected={setDestination}
-          placeholder="Where are you going?"
-        />
-      </div>
+          {/* Dates Section */}
+          <div className="flex items-center gap-3 px-4 py-4 md:flex-[2] border-b md:border-b-0 md:border-r border-white/10 hover:bg-white/5 transition-colors">
+            <CalendarDays className="w-5 h-5 text-indigo-300 shrink-0" />
+            <div className="flex items-center gap-2 w-full justify-between md:justify-start">
+              <input
+                type="date"
+                className="bg-transparent text-white text-sm outline-none w-full cursor-pointer invert-calendar"
+                value={startDate}
+                onChange={(e) => setStartDate(e.target.value)}
+                min={today}
+              />
+              <span className="text-white/40 text-xs uppercase font-bold px-1">To</span>
+              <input
+                type="date"
+                className="bg-transparent text-white text-sm outline-none w-full cursor-pointer invert-calendar"
+                value={endDate}
+                onChange={(e) => setEndDate(e.target.value)}
+                min={startDate}
+              />
+            </div>
+          </div>
 
-      {/* Date Picker */}
-      <div className="flex items-center px-3 md:px-5 py-3 flex-1 w-full md:w-auto border-b md:border-b-0 md:border-r border-white/30 rounded-2xl hover:bg-white/20 transition-colors duration-300 cursor-pointer mb-2 md:mb-0">
-        <CalendarDays className="w-5 md:w-6 h-5 md:h-6 text-white mr-2 md:mr-3" />
-        <div className="flex gap-1 md:gap-2 w-full flex-wrap md:flex-nowrap">
-          <input
-            type="date"
-            className="w-full md:w-auto outline-none text-white bg-transparent font-medium appearance-none focus:ring-2 focus:ring-white/40 rounded-2xl text-sm md:text-base"
-            value={startDate}
-            onChange={(e) => setStartDate(e.target.value)}
-            min={today}
-          />
-          <span className="text-white hidden md:inline">—</span>
-          <input
-            type="date"
-            className="w-full md:w-auto outline-none text-white bg-transparent font-medium appearance-none focus:ring-2 focus:ring-white/40 rounded-2xl text-sm md:text-base"
-            value={endDate}
-            onChange={(e) => setEndDate(e.target.value)}
-            min={startDate}
-          />
+          {/* Guests & Rooms (Side-by-side on mobile) */}
+          <div className="grid grid-cols-2 md:flex md:flex-row md:flex-[1.5]">
+            {/* Guests */}
+            <div className="flex items-center gap-2 px-4 py-4 border-r border-white/10 hover:bg-white/5 transition-colors">
+              <User className="w-5 h-5 text-indigo-300 shrink-0" />
+              <div className="flex items-center justify-between w-full">
+                <button onClick={() => decrement(setGuests, guests)} className="w-6 h-6 flex items-center justify-center bg-white/10 rounded-full text-white hover:bg-white/20">-</button>
+                <span className="text-white text-sm font-medium mx-2">{guests}</span>
+                <button onClick={() => increment(setGuests, guests)} className="w-6 h-6 flex items-center justify-center bg-white/10 rounded-full text-white hover:bg-white/20">+</button>
+              </div>
+            </div>
+
+            {/* Rooms */}
+            <div className="flex items-center gap-2 px-4 py-4 hover:bg-white/5 transition-colors md:border-r border-white/10">
+              <BedDouble className="w-5 h-5 text-indigo-300 shrink-0" />
+              <div className="flex items-center justify-between w-full">
+                <button onClick={() => decrement(setRooms, rooms)} className="w-6 h-6 flex items-center justify-center bg-white/10 rounded-full text-white hover:bg-white/20">-</button>
+                <span className="text-white text-sm font-medium mx-2">{rooms}</span>
+                <button onClick={() => increment(setRooms, rooms)} className="w-6 h-6 flex items-center justify-center bg-white/10 rounded-full text-white hover:bg-white/20">+</button>
+              </div>
+            </div>
+          </div>
+
+          {/* Search Button Section */}
+          <div className="p-1 md:p-0 md:ml-2 shrink-0">
+            <button
+              onClick={handleSearch}
+              className="w-full md:h-full px-8 py-4 md:py-0 bg-indigo-200 hover:bg-indigo-500 text-slate-800 font-bold rounded-2xl md:rounded-[1.5rem] flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg shadow-indigo-500/20"
+            >
+              <Search className="w-5 h-5" />
+              <span>Search</span>
+            </button>
+          </div>
         </div>
       </div>
+      
+      {/* Error Message */}
+      {error && (
+        <p className="text-red-400 text-sm mt-3 text-center font-medium bg-red-400/10 py-2 rounded-xl border border-red-400/20">
+          {error}
+        </p>
+      )}
 
-      {/* Guests */}
-      <div className="flex items-center px-3 md:px-5 py-3 border-b md:border-b-0 md:border-r border-white/30 rounded-2xl hover:bg-white/20 transition-colors duration-300 cursor-pointer justify-between w-full md:w-auto mb-2 md:mb-0">
-        <User className="w-5 md:w-6 h-5 md:h-6 text-white mr-2 md:mr-3" />
-        <div className="flex items-center gap-1 md:gap-2">
-          <button
-            onClick={() => decrement(setGuests, guests)}
-            className="px-2 py-1 bg-white/20 rounded-full text-sm md:text-base"
-          >
-            -
-          </button>
-          <span className="text-white text-sm md:text-base">
-            {guests} {guests === 1 ? "Guest" : "Guests"}
-          </span>
-          <button
-            onClick={() => increment(setGuests, guests, 15)} // MAX 15
-            className="px-2 py-1 bg-white/20 rounded-full text-sm md:text-base"
-          >
-            +
-          </button>
-        </div>
-      </div>
-
-      {/* Rooms */}
-      <div className="flex items-center px-3 md:px-5 py-3 hover:bg-white/20 transition-colors duration-300 cursor-pointer rounded-2xl justify-between w-full md:w-auto mb-2 md:mb-0">
-        <BedDouble className="w-5 md:w-6 h-5 md:h-6 text-white mr-2 md:mr-3" />
-        <div className="flex items-center gap-1 md:gap-2">
-          <button
-            onClick={() => decrement(setRooms, rooms)}
-            className="px-2 py-1 bg-white/20 rounded-full text-sm md:text-base"
-          >
-            -
-          </button>
-          <span className="text-white text-sm md:text-base">
-            {rooms} {rooms === 1 ? "Room" : "Rooms"}
-          </span>
-          <button
-            onClick={() => increment(setRooms, rooms, 6)} // MAX 6
-            className="px-2 py-1 bg-white/20 rounded-full text-sm md:text-base"
-          >
-            +
-          </button>
-        </div>
-      </div>
-
-      {/* Search Button */}
-      <div className="w-full md:w-auto flex justify-center md:justify-end mt-2 md:mt-0 px-0">
-        <button
-          onClick={handleSearch}
-          className="min-w-[140px] md:min-w-[160px] px-6 py-4 md:px-8 md:py-7 rounded-2xl bg-white/20 text-white font-bold text-base md:text-lg shadow-lg backdrop-blur-md hover:bg-white/40 hover:shadow-2xl hover:scale-105 transition-all duration-300"
-        >
-          Search
-        </button>
-        {error && <p className="text-red-500 ml-2">{error}</p>}
-      </div>
-
+      {/* Style to ensure the native date icon is visible on dark background */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        .invert-calendar::-webkit-calendar-picker-indicator {
+          filter: invert(1);
+          cursor: pointer;
+        }
+      `}} />
     </div>
   );
 }
