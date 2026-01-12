@@ -77,16 +77,6 @@ function Settings() {
           {/* Button Actions */}
           <div className="space-y-3">
             <button
-              onClick={() => {
-                localStorage.removeItem("token");
-                window.location.href = "/login";
-              }}
-              className="w-full bg-slate-950 hover:bg-indigo-950 text-white font-bold py-4 rounded-2xl transition-all duration-300 shadow-xl shadow-indigo-100 hover:shadow-indigo-200 active:scale-[0.98]"
-            >
-              Return to Login
-            </button>
-
-            <button
               onClick={() => window.location.reload()}
               className="text-slate-400 text-xs font-bold uppercase tracking-widest hover:text-slate-600 transition-colors"
             >
@@ -98,6 +88,34 @@ function Settings() {
     );
 
   if (!profile) return <div className="p-10 text-center text-red-500 font-medium">Unable to load profile</div>;
+
+  const handleDeleteAccount = async () => {
+    const confirmDelete = window.confirm(
+      "Are you sure? This action cannot be undone."
+    );
+
+    if (!confirmDelete) return;
+
+    try {
+      await axios.delete(
+        `http://127.0.0.1:8000/api/users/${profile.id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            Accept: "application/json",
+          },
+        }
+      );
+
+      // pastro token-in
+      localStorage.removeItem("token");
+      localStorage.removeItem("user"); 
+      window.location.replace("/");
+    } catch (err) {
+      console.error("Delete error:", err.response?.data || err.message);
+      alert("Failed to delete account. Please try again.");
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[#f8fafc] py-12 px-4 sm:px-6 lg:px-8 rounded-[2.5rem]">
@@ -139,11 +157,7 @@ function Settings() {
 
               <div className="w-full md:w-auto">
                 <button
-                  onClick={() => {
-                    if (window.confirm("Are you sure? This action cannot be undone.")) {
-                      // Logjika këtu
-                    }
-                  }}
+                  onClick={handleDeleteAccount}
                   className="flex items-center justify-center w-full md:w-auto px-6 py-3 border-2 border-red-200 text-sm font-bold rounded-xl text-red-600 bg-white hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-200 shadow-sm active:scale-95"
                 >
                   <svg
