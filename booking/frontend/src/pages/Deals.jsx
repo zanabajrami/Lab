@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Heart, BedDouble, Users, HandCoins } from "lucide-react";
+import { Heart, BedDouble, Users, HandCoins, MapPin } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -201,61 +201,116 @@ function Deals({ favorites, setFavorites }) {
 
         {/* Modal */}
         {selectedHotel && (
-          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-center z-50 px-4">
-            <div className="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] p-6 relative shadow-2xl overflow-y-auto animate-fadeIn">
-              <button
-                onClick={() => setSelectedHotel(null)}
-                className="absolute top-3 right-3 text-gray-600 hover:text-black text-xl"
-              >
-                ✕
-              </button>
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+          {/* Ultra-smooth Backdrop */}
+          <div
+            className="absolute inset-0 bg-slate-950/40 backdrop-blur-md transition-opacity animate-fadeIn"
+            onClick={() => setSelectedHotel(null)}
+          />
 
+          {/* The "Floating" Card */}
+          <div className="relative w-full max-w-[440px] bg-white rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden animate-slideUp flex flex-col max-h-[85vh]">
+
+            {/* Floating Close Button */}
+            <button
+              onClick={() => setSelectedHotel(null)}
+              className="absolute z-20 top-4 right-4 w-9 h-9 flex items-center justify-center bg-white/20 backdrop-blur-xl border border-white/30 text-white rounded-full hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-xl"
+            >
+              ✕
+            </button>
+
+            {/* Image Container with Gradient Overlay */}
+            <div className="relative h-60 min-h-[240px] overflow-hidden">
+              <div className="absolute inset-0 z-10 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none" />
               <Swiper
-                spaceBetween={10}
+                spaceBetween={0}
                 slidesPerView={1}
                 navigation
-                pagination={{ clickable: true }}
+                pagination={{ clickable: true, dynamicBullets: true }}
                 modules={[Navigation, Pagination]}
+                className="h-full w-full"
               >
                 {selectedHotel.images.map((img, idx) => (
                   <SwiperSlide key={idx}>
                     <img
                       src={img}
-                      alt={`${selectedHotel.name} ${idx + 1}`}
-                      className="w-full h-56 object-cover rounded-2xl"
+                      alt={selectedHotel.name}
+                      className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700"
                     />
                   </SwiperSlide>
                 ))}
               </Swiper>
+            </div>
 
-              <h2 className="text-2xl font-bold text-gray-800 mb-2">{selectedHotel.name}</h2>
-              <p className="text-gray-600 mb-1">{selectedHotel.location}</p>
-              <p className="text-yellow-500 mb-2">
-                {"★".repeat(Math.round(selectedHotel.rating))}{" "}
-                <span className="text-gray-500 text-sm">({selectedHotel.rating})</span>
+            {/* Content Area */}
+            <div className="p-7 overflow-y-auto custom-scrollbar">
+              {/* Header: Title and Rating */}
+              <div className="flex justify-between items-start mb-4">
+                <div className="space-y-1">
+                  <h2 className="text-2xl font-extrabold text-slate-900 leading-tight tracking-tight">
+                    {selectedHotel.name}
+                  </h2>
+                  <div className="flex items-center gap-1.5 text-slate-500">
+                    <MapPin className="w-4 h-4 text-slate-500" />
+                    <span className="text-sm font-medium">{selectedHotel.location}</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1 bg-slate-50 border border-slate-100 px-2.5 py-1.5 rounded-2xl shadow-sm">
+                  <span className="text-slate-700">★</span>
+                  <span className="text-sm font-bold text-slate-700">{selectedHotel.rating}</span>
+                </div>
+              </div>
+
+              {/* Description */}
+              <p className="text-[15px] leading-relaxed text-slate-600 mb-6 font-normal italic">
+                "{selectedHotel.description}"
               </p>
-              <p className="text-gray-700 mb-3">{selectedHotel.description}</p>
+
+              {/* Features Grid */}
+              <div className="grid grid-cols-2 gap-3 mb-6">
+                <div className="flex items-center gap-3 p-3 bg-slate-50/80 rounded-2xl border border-slate-100">
+                  <div className="w-8 h-8 flex items-center justify-center bg-white rounded-xl shadow-sm">
+                    <BedDouble className="w-4 h-4 text-slate-600" />
+                  </div>
+                  <span className="text-sm font-bold text-slate-800">{selectedHotel.rooms} Rooms</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-slate-50/80 rounded-2xl border border-slate-100">
+                  <div className="w-8 h-8 flex items-center justify-center bg-white rounded-xl shadow-sm">
+                    <Users className="w-4 h-4 text-slate-600" />
+                  </div>
+                  <span className="text-sm font-bold text-slate-800">{selectedHotel.capacity} Guests</span>
+                </div>
+              </div>
+
+              {/* Amenities Pill Box */}
               {selectedHotel.amenities && (
-                <div className="flex flex-wrap gap-2 mb-3">
+                <div className="flex flex-wrap gap-2 mb-2">
                   {selectedHotel.amenities.map((a, i) => (
-                    <span key={i} className="bg-indigo-100 text-indigo-700 px-3 py-1 text-sm rounded-full">
-                      {a}
+                    <span key={i} className="px-3 py-1.5 text-[11px] font-bold text-slate-600 bg-slate-50/50 border border-indigo-100 rounded-full tracking-wide">
+                      {a.toUpperCase()}
                     </span>
                   ))}
                 </div>
               )}
-              <p className="text-gray-800 font-medium flex items-center gap-2">
-                <BedDouble className="w-4 h-4" /> {selectedHotel.rooms}{" "}
-                {selectedHotel.rooms === 1 ? "room" : "rooms"} —
-                <Users className="w-4 h-4" /> {selectedHotel.capacity}{" "}
-                {selectedHotel.capacity === 1 ? "guest" : "guests"}
-              </p>
-              <p className="text-gray-900 font-semibold mt-2 flex items-center gap-2">
-                <HandCoins className="w-4 h-4" /> {selectedHotel.price}€ / night
-              </p>
+            </div>
+
+            {/* Price Sticky Footer */}
+            <div className="p-6 bg-slate-50/50 backdrop-blur-sm border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">Total Price</span>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-2xl font-black text-slate-900">{selectedHotel.price}€</span>
+                  <span className="text-sm font-semibold text-slate-500">/ night</span>
+                </div>
+              </div>
+
+              <div className="h-10 w-10 bg-slate-900 flex items-center justify-center rounded-2xl text-white shadow-lg shadow-slate-200">
+                <HandCoins className="w-5 h-5" />
+              </div>
             </div>
           </div>
-        )}
+        </div>
+      )}
       </div>
 
       {/* SCROLL TO TOP BUTTON */}
