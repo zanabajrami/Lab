@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
-import { Heart, BedDouble, Users, HandCoins, X } from "lucide-react";
+import { Heart, BedDouble, Users, HandCoins, X, RotateCcw, MapPin, ChevronDown } from "lucide-react";
 import { hotels } from "../data/HotelsData";
 import HotelCalendar from "../components/HotelCalendar";
 import PaymentForm from "../components/PaymentForm";
@@ -194,21 +194,21 @@ export default function HotelsPage({ favorites, setFavorites }) {
     setCheckOutDate(null);
   };
 
-const numNights = checkInDate && checkOutDate
-  ? Math.ceil((new Date(checkOutDate) - new Date(checkInDate)) / (1000 * 60 * 60 * 24))
-  : 0;
+  const numNights = checkInDate && checkOutDate
+    ? Math.ceil((new Date(checkOutDate) - new Date(checkInDate)) / (1000 * 60 * 60 * 24))
+    : 0;
 
   return (
     <div className="px-6 py-8">
       {/* Tabs */}
-      <div className="flex gap-4 mb-6 justify-center flex-wrap" id="listings-section">
+      <div className="flex gap-2 sm:gap-4 mb-10 justify-center flex-wrap bg-slate-100 p-2 rounded-[2rem] w-fit mx-auto shadow-inner" id="listings-section">
         {["all", "hotels", "villas", "apartments"].map((tab) => (
           <button
             key={tab}
             onClick={() => handleTabClick(tab)}
-            className={`px-6 py-2 rounded-xl font-semibold transition ${activeTab === tab
-              ? "bg-indigo-900 text-white"
-              : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+            className={`px-6 sm:px-8 py-2.5 rounded-[1.5rem] text-sm font-bold transition-all duration-400 tracking-tight ${activeTab === tab
+              ? "bg-slate-800 text-white shadow-lg shadow-slate-400 scale-105"
+              : "text-slate-500 hover:text-slate-900 hover:bg-white/50"
               }`}
           >
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -218,145 +218,238 @@ const numNights = checkInDate && checkOutDate
 
       {/* Location Dropdown */}
       <div className="flex justify-center mb-6 gap-4 items-center">
-        <select
-          value={selectedLocation}
-          onChange={(e) => setSelectedLocation(e.target.value)}
-          className="px-4 py-2 rounded-2xl bg-gray-200 text-gray-800 font-semibold"
-        >
-          {locations.map((loc, i) => (
-            <option key={i} value={loc}>
-              {loc === "all" ? "All Locations" : loc}
-            </option>
-          ))}
-        </select>
+        <div className="relative flex items-center group">
+          {/* Ikona MapPin në fillim */}
+          <MapPin size={18} className="absolute left-4 text-slate-400 group-focus-within:text-indigo-500 transition-colors pointer-events-none" />
+
+          <select
+            value={selectedLocation}
+            onChange={(e) => setSelectedLocation(e.target.value)}
+            className="pl-11 pr-12 py-3 rounded-2xl bg-slate-100 border border-slate-200 text-slate-700 font-bold text-sm appearance-none cursor-pointer focus:bg-white focus:border-indigo-300 focus:ring-4 focus:ring-indigo-500/10 outline-none transition-all duration-300 w-full sm:w-64"
+          >
+            {locations.map((loc, i) => (
+              <option key={i} value={loc} className="bg-white text-slate-700">
+                {loc === "all" ? "All Locations" : loc}
+              </option>
+            ))}
+          </select>
+
+          {/* Ikona ChevronDown në fund */}
+          <ChevronDown size={18} className="absolute right-4 text-slate-400 pointer-events-none group-focus-within:rotate-180 transition-transform duration-300" />
+        </div>
 
         {/* Reset Filters Button */}
         <button
-          onClick={handleResetFilters}  // thërret funksionin e kombinuar
-          className="px-4 py-2 rounded-2xl bg-indigo-300 text-indigo-900 font-semibold border border-indigo-800 hover:bg-indigo-200 transition"
+          onClick={handleResetFilters}
+          className="group flex items-center gap-2 px-6 py-3 rounded-2xl bg-slate-100 text-slate-600 font-bold border border-slate-200 hover:bg-white/70 hover:border-slate-200 hover:text-indigo-950 transition-all duration-300 active:scale-95 shadow-sm"
         >
-          Reset Filters
+          <RotateCcw size={16} className="group-hover:rotate-[-180deg] transition-transform duration-500" />
+          <span>Reset Filters</span>
         </button>
       </div>
 
       {/* Hotels Grid */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
         {currentHotels.map((hotel, index) => (
           <div
             key={index}
-            className="relative rounded-3xl overflow-hidden bg-white/60 backdrop-blur-xl border border-gray-300 shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105"
+            className="group relative flex flex-col mx-auto w-full max-w-[300px] rounded-[2.5rem] bg-white border border-gray-100 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
           >
-            <div className="relative h-48 w-full">
-              <img
-                src={hotel.images[0]}
-                alt={hotel.name}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <span className="absolute top-3 left-3 bg-black/50 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                ★ {hotel.rating}
-              </span>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  toggleFavorite(hotel.id);
-                }}
-                className="absolute top-3 right-3 bg-white/30 p-2 rounded-full hover:scale-110 transition"
-              >
-                <Heart
-                  className={`w-5 h-5 ${favorites.includes(hotel.id) ? "text-pink-600 fill-pink-500" : "text-gray-700"}`}
+            {/* Image Container - Shtuar overflow-hidden dhe transform-gpu për të ndalur bug-un */}
+            <div className="relative h-64 w-full p-2 overflow-hidden">
+              <div className="relative h-full w-full overflow-hidden rounded-[2rem] transform-gpu">
+                <img
+                  src={hotel.images[0]}
+                  alt={hotel.name}
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                  style={{
+                    backfaceVisibility: "hidden",
+                    WebkitBackfaceVisibility: "hidden"
+                  }}
                 />
-              </button>
+
+                {/* Rating */}
+                <span className="absolute top-3 left-3 bg-black/40 backdrop-blur-md text-white text-[10px] font-semibold px-2.5 py-1 rounded-full">
+                  ★ {hotel.rating}
+                </span>
+
+                {/* Favorite */}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleFavorite(hotel.id);
+                  }}
+                  className="absolute top-3 right-3 bg-white/20 backdrop-blur-md p-2 rounded-full hover:bg-white/40 transition-all"
+                >
+                  <Heart
+                    className={`w-4 h-4 ${favorites.includes(hotel.id) ? "text-pink-600 fill-pink-500" : "text-white/70"
+                      }`}
+                  />
+                </button>
+              </div>
             </div>
-            <div className="p-5 text-gray-700">
-              <h2 className="font-semibold text-xl">{hotel.name}</h2>
-              <p className="text-sm text-gray-600">{hotel.location}</p>
-              <div className="flex justify-between text-sm text-gray-600 mt-3">
+
+            {/* Content Section */}
+            <div className="px-5 pb-5 pt-2 flex flex-col gap-3">
+              <div>
+                <h2 className="font-bold text-lg text-slate-900 leading-tight">
+                  {hotel.name}
+                </h2>
+                <p className="text-[14px] text-gray-500 flex items-center gap-1 mt-1">
+                  <MapPin size={14} className="text-slate-400" /> {hotel.location}
+                </p>
+              </div>
+
+              {/* Info Row */}
+              <div className="flex items-center gap-3 text-[11px] font-bold text-gray-500 uppercase tracking-tight">
                 <span className="flex items-center gap-1">
-                  <BedDouble className="w-4 h-4" />
-                  {hotel.rooms === 1 ? "1 room" : `${hotel.rooms} rooms`}
+                  <BedDouble size={14} className="text-slate-400" />
+                  {hotel.rooms} {hotel.rooms === 1 ? "Room" : "Rooms"}
                 </span>
                 <span className="flex items-center gap-1">
-                  <Users className="w-4 h-4" />
-                  {hotel.capacity} {hotel.capacity === 1 ? "guest" : "guests"}
+                  <Users size={14} className="text-slate-400" />
+                  {hotel.capacity} {hotel.capacity === 1 ? "Guest" : "Guests"}
                 </span>
               </div>
-              <p className="text-gray-600 font-bold mt-2 flex items-center gap-1">
-                <HandCoins className="w-4 h-4" /> {hotel.price}€ / {hotel.nights ? `${hotel.nights} nights` : "night"}
-              </p>
-              <p
-                onClick={() => setSelectedHotel(hotel)} // hap modalin e hotelit
-                className="mt-3 text-gray-700 font-semibold cursor-pointer hover:underline"
-              >
-                {hotel.name.toLowerCase().includes("villa") || hotel.name.toLowerCase().includes("chalet")
-                  ? "View Villa →"
-                  : hotel.name.toLowerCase().includes("apartment")
-                    ? "View Apartment →"
-                    : "View Hotel →"}
-              </p>
+
+              {/* Price & Details Row */}
+              <div className="flex items-center justify-between pt-2 border-t border-gray-50">
+                <div className="flex items-baseline gap-0.5">
+                  <span className="text-xl font-black text-slate-900">${hotel.price}</span>
+                  <span className="text-[10px] text-gray-400 font-bold uppercase">/night</span>
+                </div>
+
+                <button
+                  onClick={() => setSelectedHotel(hotel)}
+                  className="text-[13px] font-extrabold text-slate-500 hover:text-slate-800 transition-colors uppercase tracking-tighter"
+                >
+                  Details
+                </button>
+              </div>
+
               <button
                 onClick={() => {
                   setCalendarHotel(hotel);
                   setShowCalendar(true);
                 }}
-                className="mt-3 w-full py-2 rounded-2xl bg-gray-400/40 border border-gray-400 text-gray-900 font-semibold shadow-lg hover:bg-indigo-900 hover:text-indigo-300 hover:transition-colors"
+                className="mt-1 w-full py-3.5 rounded-2xl bg-slate-100 text-slate-800 font-bold text-xs tracking-widest uppercase transition-all duration-300 hover:bg-slate-900 hover:text-slate-100 hover:shadow-[0_10px_20px_rgba(51,65,85,0.3)] hover:-translate-y-0.5 active:scale-95 shadow-md flex items-center justify-center gap-2"
               >
-                Book
+                Book Now
               </button>
             </div>
           </div>
         ))}
       </div>
+
       {/* Modal */}
       {selectedHotel && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-center z-50 px-4">
-          <div className="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] p-6 relative shadow-2xl overflow-y-auto animate-fadeIn">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+          {/* Ultra-smooth Backdrop */}
+          <div
+            className="absolute inset-0 bg-slate-950/40 backdrop-blur-md transition-opacity animate-fadeIn"
+            onClick={() => setSelectedHotel(null)}
+          />
+
+          {/* The "Floating" Card */}
+          <div className="relative w-full max-w-[440px] bg-white rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden animate-slideUp flex flex-col max-h-[85vh]">
+
+            {/* Floating Close Button */}
             <button
               onClick={() => setSelectedHotel(null)}
-              className="absolute top-3 right-3 text-gray-600 hover:text-black text-xl"
+              className="absolute z-20 top-4 right-4 w-9 h-9 flex items-center justify-center bg-white/20 backdrop-blur-xl border border-white/30 text-white rounded-full hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-xl"
             >
               ✕
             </button>
-            <Swiper
-              spaceBetween={10}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
-              modules={[Navigation, Pagination]}
-            >
-              {selectedHotel.images.map((img, idx) => (
-                <SwiperSlide key={idx}>
-                  <img
-                    src={img}
-                    alt={`${selectedHotel.name} ${idx + 1}`}
-                    className="w-full h-56 object-cover rounded-2xl"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">{selectedHotel.name}</h2>
-            <p className="text-gray-600 mb-1">{selectedHotel.location}</p>
-            <p className="text-yellow-500 mb-2">
-              {"★".repeat(Math.round(selectedHotel.rating))}{" "}
-              <span className="text-gray-500 text-sm">({selectedHotel.rating})</span>
-            </p>
-            <p className="text-gray-700 mb-3">{selectedHotel.description}</p>
-            {selectedHotel.amenities && (
-              <div className="flex flex-wrap gap-2 mb-3">
-                {selectedHotel.amenities.map((a, i) => (
-                  <span key={i} className="bg-indigo-100 text-indigo-700 px-3 py-1 text-sm rounded-full">{a}</span>
+
+            {/* Image Container with Gradient Overlay */}
+            <div className="relative h-60 min-h-[240px] overflow-hidden">
+              <div className="absolute inset-0 z-10 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none" />
+              <Swiper
+                spaceBetween={0}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true, dynamicBullets: true }}
+                modules={[Navigation, Pagination]}
+                className="h-full w-full"
+              >
+                {selectedHotel.images.map((img, idx) => (
+                  <SwiperSlide key={idx}>
+                    <img
+                      src={img}
+                      alt={selectedHotel.name}
+                      className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700"
+                    />
+                  </SwiperSlide>
                 ))}
+              </Swiper>
+            </div>
+
+            {/* Content Area */}
+            <div className="p-7 overflow-y-auto custom-scrollbar">
+              {/* Header: Title and Rating */}
+              <div className="flex justify-between items-start mb-4">
+                <div className="space-y-1">
+                  <h2 className="text-2xl font-extrabold text-slate-900 leading-tight tracking-tight">
+                    {selectedHotel.name}
+                  </h2>
+                  <div className="flex items-center gap-1.5 text-slate-500">
+                    <MapPin className="w-4 h-4 text-slate-500" />
+                    <span className="text-sm font-medium">{selectedHotel.location}</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1 bg-slate-50 border border-slate-100 px-2.5 py-1.5 rounded-2xl shadow-sm">
+                  <span className="text-slate-700">★</span>
+                  <span className="text-sm font-bold text-slate-700">{selectedHotel.rating}</span>
+                </div>
               </div>
-            )}
-            <p className="text-gray-800 font-medium flex items-center gap-2">
-              <BedDouble className="w-4 h-4" />
-              {selectedHotel.rooms} {selectedHotel.rooms === 1 ? "room" : "rooms"} —
-              <Users className="w-4 h-4" />
-              {selectedHotel.capacity} {selectedHotel.capacity === 1 ? "guest" : "guests"}
-            </p>
-            <p className="text-gray-900 font-semibold mt-2 flex items-center gap-2">
-              <HandCoins className="w-4 h-4" /> {selectedHotel.price}€ / night
-            </p>
+
+              {/* Description */}
+              <p className="text-[15px] leading-relaxed text-slate-600 mb-6 font-normal italic">
+                "{selectedHotel.description}"
+              </p>
+
+              {/* Features Grid */}
+              <div className="grid grid-cols-2 gap-3 mb-6">
+                <div className="flex items-center gap-3 p-3 bg-slate-50/80 rounded-2xl border border-slate-100">
+                  <div className="w-8 h-8 flex items-center justify-center bg-white rounded-xl shadow-sm">
+                    <BedDouble className="w-4 h-4 text-slate-600" />
+                  </div>
+                  <span className="text-sm font-bold text-slate-800">{selectedHotel.rooms} Rooms</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-slate-50/80 rounded-2xl border border-slate-100">
+                  <div className="w-8 h-8 flex items-center justify-center bg-white rounded-xl shadow-sm">
+                    <Users className="w-4 h-4 text-slate-600" />
+                  </div>
+                  <span className="text-sm font-bold text-slate-800">{selectedHotel.capacity} Guests</span>
+                </div>
+              </div>
+
+              {/* Amenities Pill Box */}
+              {selectedHotel.amenities && (
+                <div className="flex flex-wrap gap-2 mb-2">
+                  {selectedHotel.amenities.map((a, i) => (
+                    <span key={i} className="px-3 py-1.5 text-[11px] font-bold text-slate-600 bg-slate-50/50 border border-indigo-100 rounded-full tracking-wide">
+                      {a.toUpperCase()}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Price Sticky Footer */}
+            <div className="p-6 bg-slate-50/50 backdrop-blur-sm border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">Total Price</span>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-2xl font-black text-slate-900">{selectedHotel.price}€</span>
+                  <span className="text-sm font-semibold text-slate-500">/ night</span>
+                </div>
+              </div>
+
+              <div className="h-10 w-10 bg-slate-900 flex items-center justify-center rounded-2xl text-white shadow-lg shadow-slate-200">
+                <HandCoins className="w-5 h-5" />
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -431,7 +524,7 @@ const numNights = checkInDate && checkOutDate
                 onClick={() => setShowInfoModal(false)}
                 className="px-6 py-2 rounded-xl bg-gray-300 text-gray-800 hover:bg-gray-400"
               >
-               ❮ Back
+                ❮ Back
               </button>
               <button
                 onClick={() => {
@@ -474,18 +567,28 @@ const numNights = checkInDate && checkOutDate
       )}
 
       {/* Pagination */}
-      <div className="flex justify-center gap-2 mt-8 flex-wrap">
+      <div className="flex items-center justify-center gap-2 mt-12 mb-8">
         {getPagesToShow().map((page, idx) => (
           <button
             key={idx}
             onClick={() => (page !== "..." ? setCurrentPage(page) : null)}
-            className={`px-4 py-2 rounded-lg font-semibold transition ${currentPage === page
-              ? "bg-indigo-900 text-white"
-              : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-              } ${page === "..." ? "cursor-default opacity-60" : ""}`}
             disabled={page === "..."}
+            className={`
+        relative min-w-[40px] h-10 flex items-center justify-center rounded-full text-sm font-bold transition-all duration-200
+        ${page === "..."
+                ? "cursor-default text-slate-400"
+                : currentPage === page
+                  ? "bg-slate-900 text-white shadow-lg shadow-slate-200 scale-110 z-10"
+                  : "bg-white text-slate-600 border border-slate-200 hover:border-slate-900 hover:text-slate-900"
+              }
+      `}
           >
             {page}
+
+            {/* Subtle indicator for active page */}
+            {currentPage === page && (
+              <span className="absolute -bottom-1 w-1 h-1 bg-white rounded-full"></span>
+            )}
           </button>
         ))}
       </div>
