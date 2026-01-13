@@ -173,7 +173,7 @@ export default function ZigZagCarousel() {
             <motion.div className="fixed top-0 left-0 right-0 h-1 bg-indigo-200 origin-left z-[100]" style={{ scaleX }} />
 
             <div className="pt-16 pb-10 text-center -mt-5">
-                <h2 className="text-3xl font-black mt-2 mb-4 tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-700 to-slate-500">
+                <h2 className="text-3xl font-extrabold mb-3 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-700 via-gray-700 to-gray-400 drop-shadow-lg tracking-wide uppercase">
                     DESTINATIONS
                 </h2>
                 <div className="w-20 h-1 bg-slate-600 mx-auto rounded-full"></div>
@@ -235,10 +235,23 @@ export default function ZigZagCarousel() {
 
                             <button
                                 onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
-                                className="flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 text-white text-sm font-semibold hover:bg-indigo-200 hover:text-slate-700 transition-all shadow-md shadow-slate-200"
+                                className="group flex items-center gap-4 px-0 py-2 text-slate-800 transition-all duration-300"
                             >
-                                {expandedIndex === index ? "View Less" : "Discover Details"}
-                                <ChevronRight className={`w-4 h-4 transition-transform ${expandedIndex === index ? "rotate-90" : ""}`} />
+                                <div className="flex flex-col items-start">
+                                    <span className="text-sm font-black tracking-widest uppercase">
+                                        {expandedIndex === index ? "View Less" : "Discover Details"}
+                                    </span>
+                                    <span className={`h-[2px] bg-slate-800 transition-all duration-300 ${expandedIndex === index ? "w-full" : "w-6 group-hover:w-full"}`}></span>
+                                </div>
+
+                                <div className={`flex items-center justify-center w-10 h-10 rounded-full border border-slate-200 transition-all duration-300 
+        ${expandedIndex === index
+                                        ? "bg-slate-800 border-slate-800 text-white rotate-90"
+                                        : "text-slate-800 group-hover:border-slate-700 group-hover:bg-slate-50"
+                                    }`}
+                                >
+                                    <ChevronRight size={18} strokeWidth={2.5} />
+                                </div>
                             </button>
 
                             <AnimatePresence>
