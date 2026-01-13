@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Menu, X, Heart } from "lucide-react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Contact from "./Contact";
-import { Menu, X, Heart } from "lucide-react";
 
 function Header() {
   const [showLogin, setShowLogin] = useState(false);
@@ -13,6 +13,7 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const user = JSON.parse(localStorage.getItem("user"));
+  const navigate = useNavigate();
 
   // Dropdown për madhësinë
   const [headerSize, setHeaderSize] = useState("7xl");
@@ -91,8 +92,8 @@ function Header() {
                 <button
                   onClick={() => {
                     localStorage.removeItem("user");
-                    localStorage.removeItem("token"); // nëse ke token
-                    window.location.reload(); // rifreskon faqen
+                    localStorage.removeItem("token");
+                    navigate("/"); 
                   }}
                   className="px-5 py-2 rounded-2xl bg-transparent text-indigo-200 font-semibold border border-indigo-200 hover:bg-indigo-50 transition duration-300"
                 >
