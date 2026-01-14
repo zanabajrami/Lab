@@ -1,13 +1,15 @@
 import React, { useEffect, useState, useMemo } from "react";
-import UserGrowthChart from "../../components/charts/UserGrowthChart";
-import UsersChart from "../../components/charts/UsersChart";
-import { Users, DollarSign, UserPlus, EllipsisVertical, ArrowUpRight} from "lucide-react";
+import { Users, DollarSign, UserPlus, EllipsisVertical } from "lucide-react";
+
+import UserGrowthChart from "../../components/dashboard/UserGrowthChart";
+import UsersChart from "../../components/dashboard/UsersChart";
+import KPICard from "../../components/dashboard/KPICard";
 
 function Dashboard() {
   const token = localStorage.getItem("token");
   const [users, setUsers] = useState([]);
   const [dailyStats, setDailyStats] = useState([]);
-  const [summary, setSummary] = useState(null);
+  const [, setSummary] = useState(null);
   const [monthlyStats, setMonthlyStats] = useState([]);
 
   // State për Editimin
@@ -48,6 +50,24 @@ function Dashboard() {
       .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
       .slice(0, 5);
   }, [users]);
+
+  const calcPercent = (current, previous) => {
+    if (!previous || previous === 0) return 0;
+    return Math.round(((current - previous) / previous) * 100);
+  };
+
+  const totalUsersNow =
+    monthlyStats?.[monthlyStats.length - 1]?.count ?? 0;
+
+  const totalUsersPrev =
+    monthlyStats?.[monthlyStats.length - 2]?.count ?? 0;
+
+  const todayUsers =
+    dailyStats?.[dailyStats.length - 1]?.count ?? 0;
+
+  const yesterdayUsers =
+    dailyStats?.[dailyStats.length - 2]?.count ?? 0;
+
 
   return (
     <div className="p-4 sm:p-8 bg-[#f8fafc] min-h-screen text-slate-900 rounded-2xl relative">
@@ -142,50 +162,36 @@ function Dashboard() {
 
       {/* --- STATS CARDS --- */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-        {/* TOTAL USERS */}
-        <div className="bg-slate-950 p-6 rounded-[2.5rem] border border-white/5 shadow-2xl flex justify-between items-center group hover:bg-slate-900 transition-all duration-500">
-          <div>
-            <h2 className="text-indigo-300/50 text-[11px] font-bold uppercase tracking-[0.2em]">Total Users</h2>
-            <p className="text-4xl font-black text-white mt-2 tracking-tighter">{summary?.total_users ?? 0}</p>
-            <div className="flex items-center gap-1.5 mt-4 text-indigo-200 font-bold text-[10px] bg-indigo-500/10 border border-indigo-500/20 px-3 py-1 rounded-full w-fit uppercase tracking-wider">
-              <ArrowUpRight className="w-3 h-3 text-indigo-400" /> 12% Growth
-            </div>
-          </div>
-          <div className="bg-indigo-950 p-4 rounded-2xl shadow-lg shadow-indigo-500/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-            <Users className="text-white w-6 h-6" />
-          </div>
-        </div>
 
-        {/* REVENUE */}
-        <div className="bg-slate-950 p-6 rounded-[2.5rem] border border-white/5 shadow-2xl flex justify-between items-center group hover:bg-slate-900 transition-all duration-500">
-          <div>
-            <h2 className="text-indigo-300/50 text-[11px] font-bold uppercase tracking-[0.2em]">Net Revenue</h2>
-            <p className="text-4xl font-black text-white mt-2 tracking-tighter">$0.00</p>
-            <p className="text-slate-500 text-[11px] font-medium mt-4 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-slate-700 rounded-full"></span>
-              Awaiting transactions
-            </p>
-          </div>
-          <div className="bg-slate-800 border border-white/5 p-4 rounded-2xl group-hover:border-indigo-500/50 transition-colors duration-500">
-            <DollarSign className="text-indigo-300 w-6 h-6" />
-          </div>
-        </div>
+        <KPICard
+          title="Total Users"
+          value={totalUsersNow}
+          percent={calcPercent(totalUsersNow, totalUsersPrev)}
+          compareLabel="last month"
+          sparkline={monthlyStats.map(m => m.count)}
+          icon={Users}
+        />
 
-        {/* LIVE TODAY */}
-        <div className="bg-slate-950 p-6 rounded-[2.5rem] border border-white/5 shadow-2xl flex justify-between items-center group hover:bg-slate-900 transition-all duration-500">
-          <div>
-            <h2 className="text-indigo-300/50 text-[11px] font-bold uppercase tracking-[0.2em]">New Users</h2>
-            <p className="text-4xl font-black text-white mt-2 tracking-tighter">{summary?.today ?? 0}</p>
-            <div className="flex items-center gap-1.5 mt-4 text-indigo-200 font-bold text-[10px] bg-white/5 border border-white/10 px-3 py-1 rounded-full w-fit uppercase tracking-wider">
-              <span className="w-1.5 h-1.5 bg-indigo-400 rounded-full animate-pulse"></span>
-              Active Now
-            </div>
-          </div>
-          <div className="bg-gradient-to-br from-indigo-200 to-indigo-400 p-4 rounded-2xl shadow-lg shadow-indigo-900/40 group-hover:shadow-indigo-500/20 transition-all duration-500">
-            <UserPlus className="text-white w-6 h-6" />
-          </div>
-        </div>
+        <KPICard
+          title="Net Revenue"
+          value="$0.00"
+          percent={0}
+          compareLabel="last month"
+          sparkline={[0, 0, 0, 0, 0, 0]}
+          icon={DollarSign}
+        />
+
+        <KPICard
+          title="New Users"
+          value={todayUsers}
+          percent={calcPercent(todayUsers, yesterdayUsers)}
+          compareLabel="yesterday"
+          sparkline={dailyStats.map(d => d.count)}
+          icon={UserPlus}
+        />
+
       </div>
+
 
       {/* --- MAIN SECTION --- */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
