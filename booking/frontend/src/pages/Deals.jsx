@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { motion, useScroll, useSpring } from "framer-motion";
 import { Heart, BedDouble, Users, HandCoins, MapPin } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -103,8 +104,19 @@ function Deals({ favorites, setFavorites }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
+
+  useEffect(() => {
+    const handleScroll = () => setShowTopButton(window.scrollY > 500);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen py-10">
+      <motion.div className="fixed top-0 left-0 right-0 h-1 bg-indigo-200 origin-left z-[100]" style={{ scaleX }} />
+      
       <div className="max-w-7xl mx-auto px-4">
         <h1 className="text-3xl font-extrabold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-700 via-gray-700 to-gray-400 drop-shadow-lg tracking-wide uppercase">
           Our Deals
@@ -201,116 +213,116 @@ function Deals({ favorites, setFavorites }) {
 
         {/* Modal */}
         {selectedHotel && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
-          {/* Ultra-smooth Backdrop */}
-          <div
-            className="absolute inset-0 bg-slate-950/40 backdrop-blur-md transition-opacity animate-fadeIn"
-            onClick={() => setSelectedHotel(null)}
-          />
-
-          {/* The "Floating" Card */}
-          <div className="relative w-full max-w-[440px] bg-white rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden animate-slideUp flex flex-col max-h-[85vh]">
-
-            {/* Floating Close Button */}
-            <button
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+            {/* Ultra-smooth Backdrop */}
+            <div
+              className="absolute inset-0 bg-slate-950/40 backdrop-blur-md transition-opacity animate-fadeIn"
               onClick={() => setSelectedHotel(null)}
-              className="absolute z-20 top-4 right-4 w-9 h-9 flex items-center justify-center bg-white/20 backdrop-blur-xl border border-white/30 text-white rounded-full hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-xl"
-            >
-              ✕
-            </button>
+            />
 
-            {/* Image Container with Gradient Overlay */}
-            <div className="relative h-60 min-h-[240px] overflow-hidden">
-              <div className="absolute inset-0 z-10 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none" />
-              <Swiper
-                spaceBetween={0}
-                slidesPerView={1}
-                navigation
-                pagination={{ clickable: true, dynamicBullets: true }}
-                modules={[Navigation, Pagination]}
-                className="h-full w-full"
+            {/* The "Floating" Card */}
+            <div className="relative w-full max-w-[440px] bg-white rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden animate-slideUp flex flex-col max-h-[85vh]">
+
+              {/* Floating Close Button */}
+              <button
+                onClick={() => setSelectedHotel(null)}
+                className="absolute z-20 top-4 right-4 w-9 h-9 flex items-center justify-center bg-white/20 backdrop-blur-xl border border-white/30 text-white rounded-full hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-xl"
               >
-                {selectedHotel.images.map((img, idx) => (
-                  <SwiperSlide key={idx}>
-                    <img
-                      src={img}
-                      alt={selectedHotel.name}
-                      className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700"
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
+                ✕
+              </button>
 
-            {/* Content Area */}
-            <div className="p-7 overflow-y-auto custom-scrollbar">
-              {/* Header: Title and Rating */}
-              <div className="flex justify-between items-start mb-4">
-                <div className="space-y-1">
-                  <h2 className="text-2xl font-extrabold text-slate-900 leading-tight tracking-tight">
-                    {selectedHotel.name}
-                  </h2>
-                  <div className="flex items-center gap-1.5 text-slate-500">
-                    <MapPin className="w-4 h-4 text-slate-500" />
-                    <span className="text-sm font-medium">{selectedHotel.location}</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-1 bg-slate-50 border border-slate-100 px-2.5 py-1.5 rounded-2xl shadow-sm">
-                  <span className="text-slate-700">★</span>
-                  <span className="text-sm font-bold text-slate-700">{selectedHotel.rating}</span>
-                </div>
-              </div>
-
-              {/* Description */}
-              <p className="text-[15px] leading-relaxed text-slate-600 mb-6 font-normal italic">
-                "{selectedHotel.description}"
-              </p>
-
-              {/* Features Grid */}
-              <div className="grid grid-cols-2 gap-3 mb-6">
-                <div className="flex items-center gap-3 p-3 bg-slate-50/80 rounded-2xl border border-slate-100">
-                  <div className="w-8 h-8 flex items-center justify-center bg-white rounded-xl shadow-sm">
-                    <BedDouble className="w-4 h-4 text-slate-600" />
-                  </div>
-                  <span className="text-sm font-bold text-slate-800">{selectedHotel.rooms} Rooms</span>
-                </div>
-                <div className="flex items-center gap-3 p-3 bg-slate-50/80 rounded-2xl border border-slate-100">
-                  <div className="w-8 h-8 flex items-center justify-center bg-white rounded-xl shadow-sm">
-                    <Users className="w-4 h-4 text-slate-600" />
-                  </div>
-                  <span className="text-sm font-bold text-slate-800">{selectedHotel.capacity} Guests</span>
-                </div>
-              </div>
-
-              {/* Amenities Pill Box */}
-              {selectedHotel.amenities && (
-                <div className="flex flex-wrap gap-2 mb-2">
-                  {selectedHotel.amenities.map((a, i) => (
-                    <span key={i} className="px-3 py-1.5 text-[11px] font-bold text-slate-600 bg-slate-50/50 border border-indigo-100 rounded-full tracking-wide">
-                      {a.toUpperCase()}
-                    </span>
+              {/* Image Container with Gradient Overlay */}
+              <div className="relative h-60 min-h-[240px] overflow-hidden">
+                <div className="absolute inset-0 z-10 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none" />
+                <Swiper
+                  spaceBetween={0}
+                  slidesPerView={1}
+                  navigation
+                  pagination={{ clickable: true, dynamicBullets: true }}
+                  modules={[Navigation, Pagination]}
+                  className="h-full w-full"
+                >
+                  {selectedHotel.images.map((img, idx) => (
+                    <SwiperSlide key={idx}>
+                      <img
+                        src={img}
+                        alt={selectedHotel.name}
+                        className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700"
+                      />
+                    </SwiperSlide>
                   ))}
-                </div>
-              )}
-            </div>
-
-            {/* Price Sticky Footer */}
-            <div className="p-6 bg-slate-50/50 backdrop-blur-sm border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">Total Price</span>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-2xl font-black text-slate-900">{selectedHotel.price}€</span>
-                  <span className="text-sm font-semibold text-slate-500">/ night</span>
-                </div>
+                </Swiper>
               </div>
 
-              <div className="h-10 w-10 bg-slate-900 flex items-center justify-center rounded-2xl text-white shadow-lg shadow-slate-200">
-                <HandCoins className="w-5 h-5" />
+              {/* Content Area */}
+              <div className="p-7 overflow-y-auto custom-scrollbar">
+                {/* Header: Title and Rating */}
+                <div className="flex justify-between items-start mb-4">
+                  <div className="space-y-1">
+                    <h2 className="text-2xl font-extrabold text-slate-900 leading-tight tracking-tight">
+                      {selectedHotel.name}
+                    </h2>
+                    <div className="flex items-center gap-1.5 text-slate-500">
+                      <MapPin className="w-4 h-4 text-slate-500" />
+                      <span className="text-sm font-medium">{selectedHotel.location}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1 bg-slate-50 border border-slate-100 px-2.5 py-1.5 rounded-2xl shadow-sm">
+                    <span className="text-slate-700">★</span>
+                    <span className="text-sm font-bold text-slate-700">{selectedHotel.rating}</span>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-[15px] leading-relaxed text-slate-600 mb-6 font-normal italic">
+                  "{selectedHotel.description}"
+                </p>
+
+                {/* Features Grid */}
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  <div className="flex items-center gap-3 p-3 bg-slate-50/80 rounded-2xl border border-slate-100">
+                    <div className="w-8 h-8 flex items-center justify-center bg-white rounded-xl shadow-sm">
+                      <BedDouble className="w-4 h-4 text-slate-600" />
+                    </div>
+                    <span className="text-sm font-bold text-slate-800">{selectedHotel.rooms} Rooms</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-slate-50/80 rounded-2xl border border-slate-100">
+                    <div className="w-8 h-8 flex items-center justify-center bg-white rounded-xl shadow-sm">
+                      <Users className="w-4 h-4 text-slate-600" />
+                    </div>
+                    <span className="text-sm font-bold text-slate-800">{selectedHotel.capacity} Guests</span>
+                  </div>
+                </div>
+
+                {/* Amenities Pill Box */}
+                {selectedHotel.amenities && (
+                  <div className="flex flex-wrap gap-2 mb-2">
+                    {selectedHotel.amenities.map((a, i) => (
+                      <span key={i} className="px-3 py-1.5 text-[11px] font-bold text-slate-600 bg-slate-50/50 border border-indigo-100 rounded-full tracking-wide">
+                        {a.toUpperCase()}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Price Sticky Footer */}
+              <div className="p-6 bg-slate-50/50 backdrop-blur-sm border-t border-slate-100 flex items-center justify-between">
+                <div>
+                  <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">Total Price</span>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-2xl font-black text-slate-900">{selectedHotel.price}€</span>
+                    <span className="text-sm font-semibold text-slate-500">/ night</span>
+                  </div>
+                </div>
+
+                <div className="h-10 w-10 bg-slate-900 flex items-center justify-center rounded-2xl text-white shadow-lg shadow-slate-200">
+                  <HandCoins className="w-5 h-5" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
       </div>
 
       {/* SCROLL TO TOP BUTTON */}

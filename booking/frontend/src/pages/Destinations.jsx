@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import Slider from "react-slick";
-import { useLocation } from "react-router-dom";
 import { Clock, Bed, Utensils, MapPinned, ChevronRight } from "lucide-react";
 
 import prishtina1 from "../images/prishtina1.png"; import prishtina3 from "../images/prishtina3.jpg";

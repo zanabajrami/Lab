@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { motion } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import SearchBar from "../components/SearchBar";
 import { useNavigate, Link } from "react-router-dom";
 import { Search, Hotel, CircleCheck, BedDouble, Users, HandCoins, Euro, Phone, LockKeyhole, Clock } from "lucide-react";
@@ -107,8 +107,19 @@ function HomePage() {
   const handleMoreClick = (tab) => {
     navigate(`/hotels?tab=${tab}`);
   };
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
+
+  useEffect(() => {
+    const handleScroll = () => setShowTopButton(window.scrollY > 500);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div>
+      <motion.div className="fixed top-0 left-0 right-0 h-1 bg-indigo-200 origin-left z-[100]" style={{ scaleX }} />
       {/* Hero Section */}
       <section
         className={`relative bg-cover bg-center h-[650px] transition-opacity duration-700 w-full ${loaded ? 'opacity-100' : 'opacity-0'}`}

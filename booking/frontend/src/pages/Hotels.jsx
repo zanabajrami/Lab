@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion, useScroll, useSpring } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -198,8 +199,19 @@ export default function HotelsPage({ favorites, setFavorites }) {
     ? Math.ceil((new Date(checkOutDate) - new Date(checkInDate)) / (1000 * 60 * 60 * 24))
     : 0;
 
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
+
+  useEffect(() => {
+    const handleScroll = () => setShowTopButton(window.scrollY > 500);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="px-6 py-8">
+      <motion.div className="fixed top-0 left-0 right-0 h-1 bg-indigo-200 origin-left z-[100]" style={{ scaleX }} />
+
       {/* Tabs */}
       <div className="flex gap-2 sm:gap-4 mb-10 justify-center flex-wrap bg-slate-100 p-2 rounded-[2rem] w-fit mx-auto shadow-inner" id="listings-section">
         {["all", "hotels", "villas", "apartments"].map((tab) => (
