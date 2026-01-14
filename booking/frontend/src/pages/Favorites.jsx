@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Heart, Users, BedDouble, MapPin, Star, ArrowUp } from "lucide-react";
+import { Heart, Users, BedDouble, MapPin, Star } from "lucide-react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { hotels } from "../data/HotelsData";
 
