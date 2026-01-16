@@ -4,13 +4,17 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserStatsController;
+use App\Http\Controllers\MessageController;
 
-    // Routes pa login
-    Route::post('register', [AuthController::class, 'register']);
-    Route::post('login', [AuthController::class, 'login']);
+// Routes pa login
+Route::post('register', [AuthController::class, 'register']);
+Route::post('login', [AuthController::class, 'login']);
 
-    // Routes me JWT
-    Route::middleware('jwt.auth')->group(function () {
+// PUBLIC: Route për mesazhet (Contact form)
+Route::post('messages', [MessageController::class, 'store']); 
+
+// Routes me JWT
+Route::middleware('jwt.auth')->group(function () {
 
     Route::get('me', [AuthController::class, 'me']);
     Route::post('logout', [AuthController::class, 'logout']);
@@ -29,5 +33,6 @@ use App\Http\Controllers\UserStatsController;
         Route::get('users/stats/daily', [UserController::class, 'dailyStats']);
         Route::get('users/stats/monthly', [UserController::class, 'monthlyStats']);
         Route::get('users/stats/active', [UserStatsController::class, 'activeUsers']);
+        
     });
 });
