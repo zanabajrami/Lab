@@ -10,7 +10,6 @@ class MessageController extends Controller
 {
     public function store(Request $request)
     {
-        // Validimi
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:100',
             'email' => 'required|email|max:150',
@@ -24,13 +23,22 @@ class MessageController extends Controller
             ], 422);
         }
 
-        // Krijo mesazhin
         $message = Message::create($request->only('name', 'email', 'message'));
 
         return response()->json([
             'status' => 'success',
             'message' => 'Message sent successfully!',
             'data' => $message
+        ]);
+    }
+
+    public function index()
+    {
+        $messages = Message::orderBy('created_at', 'desc')->get();
+
+        return response()->json([
+            'status' => 'success',
+            'data' => $messages
         ]);
     }
 }
