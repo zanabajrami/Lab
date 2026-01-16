@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Validator;
 
 class MessageController extends Controller
 {
+    // STORE MESSAGE (UNREAD)
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -23,7 +24,12 @@ class MessageController extends Controller
             ], 422);
         }
 
-        $message = Message::create($request->only('name', 'email', 'message'));
+        $message = Message::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->message,
+            'is_read' => 0 
+        ]);
 
         return response()->json([
             'status' => 'success',
@@ -32,6 +38,7 @@ class MessageController extends Controller
         ]);
     }
 
+    // GET ALL MESSAGES
     public function index()
     {
         $messages = Message::orderBy('created_at', 'desc')->get();
@@ -39,6 +46,23 @@ class MessageController extends Controller
         return response()->json([
             'status' => 'success',
             'data' => $messages
+        ]);
+    }
+
+    // MARK MESSAGE AS READ
+    public function markAsRead($id)
+    {
+        $message = Message::findOrFail($id);
+
+        if ($message->is_read == 0) {
+            $message->update([
+                'is_read' => 1
+            ]);
+        }
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Message marked as read'
         ]);
     }
 }
