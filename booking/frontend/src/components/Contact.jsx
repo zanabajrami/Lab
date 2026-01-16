@@ -5,31 +5,53 @@ function Contact({ onClose }) {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Your message has been sent!📩");
-    setName("");
-    setEmail("");
-    setMessage("");
-  };
-
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget && typeof onClose === "function") {
       onClose();
     }
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("http://127.0.0.1:8000/api/messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        alert(data.message); // mesazhi i suksesit nga Laravel
+        setName("");
+        setEmail("");
+        setMessage("");
+        if (typeof onClose === "function") onClose(); // opsional: mbyll modalin pas dërgimit
+      } else {
+        // Gabime validimi
+        alert("Error: " + JSON.stringify(data.errors));
+      }
+    } catch (error) {
+      alert("Something went wrong: " + error.message);
+    }
+  };
+
+  // Disable scroll kur modal hapet
   useEffect(() => {
-    document.body.style.overflow = "hidden"; // disable scroll when modal is mounted
+    document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = "auto"; // re-enable on unmount
+      document.body.style.overflow = "auto";
     };
   }, []);
 
   return (
     <div
       onClick={handleOverlayClick}
-      className="fixed inset-0 flex items-center justify-center bg-black/95 z-50 backdrop-blur-sm z-50"
+      className="fixed inset-0 flex items-center justify-center bg-black/95 z-50 backdrop-blur-sm"
     >
       <div
         onClick={(e) => e.stopPropagation()}
@@ -38,7 +60,6 @@ function Contact({ onClose }) {
              border border-gray-600 shadow-[0_0_20px_rgba(0,0,0,0.9)]
              backdrop-blur-md transform scale-90 animate-heavyPop"
       >
-
         <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-center 
                text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 
                drop-shadow-lg tracking-wide uppercase">
@@ -87,7 +108,6 @@ function Contact({ onClose }) {
           >
             Send Message
           </button>
-
         </form>
       </div>
 
@@ -109,13 +129,12 @@ function Contact({ onClose }) {
     textarea:-webkit-autofill,
     textarea:-webkit-autofill:hover,
     textarea:-webkit-autofill:focus {
-      -webkit-box-shadow: 0 0 0px 1000px #1f2937 inset; /* bg-gray-900 */
-      -webkit-text-fill-color: #fff; /* text-white */
+      -webkit-box-shadow: 0 0 0px 1000px #1f2937 inset;
+      -webkit-text-fill-color: #fff;
       transition: background-color 5000s ease-in-out 0s;
     }
   `}
       </style>
-
     </div>
   );
 }
