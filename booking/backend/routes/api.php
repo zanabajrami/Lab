@@ -11,8 +11,9 @@ Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 
 // PUBLIC: Route për mesazhet (Contact form)
-Route::post('messages', [MessageController::class, 'store']); 
-Route::get('messages', [MessageController::class, 'index']);
+Route::get('/messages', [MessageController::class, 'index']);
+Route::post('/messages', [MessageController::class, 'store']);
+Route::patch('/messages/{id}/read', [MessageController::class, 'markAsRead']);
 
 // Routes me JWT
 Route::middleware('jwt.auth')->group(function () {
