@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Sidebar from "../../components/Sidebar";
-import Topbar from "../../components/Topbar";
+import Sidebar from "../../components/dashboard/Sidebar";
+import Topbar from "../../components/dashboard/Topbar";
 import Dashboard from "./Dashboard";
 import Users from "./Users";
 import LastLogin from "./LoginActivity";
