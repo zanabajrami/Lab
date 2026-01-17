@@ -13,18 +13,13 @@ function Topbar() {
   const [messages, setMessages] = useState([]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const [clickedMessages, setClickedMessages] = useState([]); // array me ids
 
-  /* =============================
-     UNREAD LOGIC
-  ============================= */
   const unreadMessages = messages.filter(
     (msg) => Number(msg.is_read) === 0
   );
   const hasUnread = unreadMessages.length > 0;
 
-  /* =============================
-     LOAD USER
-  ============================= */
   useEffect(() => {
     const savedUser = localStorage.getItem("user");
     if (savedUser) {
@@ -36,9 +31,6 @@ function Topbar() {
     }
   }, []);
 
-  /* =============================
-     CLICK OUTSIDE DROPDOWN
-  ============================= */
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -50,9 +42,6 @@ function Topbar() {
       document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  /* =============================
-     FETCH MESSAGES
-  ============================= */
   const fetchMessages = async () => {
     try {
       const res = await fetch("http://127.0.0.1:8000/api/messages");
@@ -65,18 +54,12 @@ function Topbar() {
     }
   };
 
-  /* =============================
-     INITIAL + AUTO REFRESH
-  ============================= */
   useEffect(() => {
     fetchMessages();
     const interval = setInterval(fetchMessages, 10000); // 10s
     return () => clearInterval(interval);
   }, []);
 
-  /* =============================
-     MARK AS READ
-  ============================= */
   const markAsRead = async (id, status) => {
     if (Number(status) === 1) return;
 
@@ -104,16 +87,14 @@ function Topbar() {
   return (
     <header className="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-4 sm:px-8 shadow-sm">
       {/* LEFT */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 sm:gap-3">
         <div className="w-1 h-8 bg-indigo-900 rounded-full hidden sm:block" />
         <h1 className="flex items-center gap-2 font-extrabold tracking-tight">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-900 to-indigo-600 text-lg sm:text-xl font-black">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-900 to-indigo-200 text-lg sm:text-xl">
             ADMIN
           </span>
-          <span className="hidden sm:inline text-slate-300 font-light">
-            |
-          </span>
-          <span className="hidden sm:inline text-[13px] uppercase tracking-[0.2em] font-semibold text-slate-500">
+          <span className="hidden sm:inline text-slate-400 font-light">|</span>
+          <span className="hidden sm:inline text-[15px] uppercase tracking-[0.2em] font-medium text-slate-500">
             Dashboard
           </span>
         </h1>
@@ -131,7 +112,7 @@ function Topbar() {
             className={`relative p-2.5 rounded-full transition-all duration-200
               ${dropdownOpen
                 ? "bg-gray-100 text-slate-900"
-                : "text-gray-500 hover:bg-gray-100"
+                : "text-gray-500 hover:bg-gray-50"
               }
               ${hasUnread
                 ? "animate-pulse ring-1 ring-red-400 ring-offset-0.5"
@@ -179,21 +160,30 @@ function Topbar() {
                   messages.map((msg) => (
                     <div
                       key={msg.id}
-                      onClick={() =>
-                        markAsRead(msg.id, msg.is_read)
-                      }
+                      onClick={() => {
+                        if (Number(msg.is_read) === 0) {
+                          markAsRead(msg.id, msg.is_read);
+                        } else {
+                          setClickedMessages(prev =>
+                            prev.includes(msg.id)
+                              ? prev.filter(id => id !== msg.id) // remove highlight
+                              : [...prev, msg.id] // add highlight
+                          );
+                        }
+                      }}
                       className={`px-5 py-4 border-b cursor-pointer transition-all
-                        hover:bg-indigo-50 relative
-                        ${Number(msg.is_read) === 0
+                      hover:bg-indigo-50 relative
+                      ${Number(msg.is_read) === 0
                           ? "bg-indigo-50 border-l-4 border-red-900"
                           : "bg-white opacity-60"
                         }
                       `}
                     >
+
                       <div className="flex justify-between items-start mb-1">
                         <p
                           className={`text-[14px] capitalize flex items-center gap-2
-                            ${Number(msg.is_read) === 0
+                        ${Number(msg.is_read) === 0 || clickedMessages.includes(msg.id)
                               ? "font-extrabold text-gray-900"
                               : "font-medium text-gray-500"
                             }
@@ -207,7 +197,7 @@ function Topbar() {
                           )}
                         </p>
 
-                        <div className="flex items-center gap-1 text-[10px] text-gray-400">
+                        <div className="flex items-center gap-1 text-[10px] text-gray-500">
                           <Clock size={10} />
                           {formatDistanceToNow(
                             new Date(msg.created_at),
@@ -218,7 +208,7 @@ function Topbar() {
 
                       <p
                         className={`text-xs line-clamp-2
-                          ${Number(msg.is_read) === 0
+                      ${Number(msg.is_read) === 0 || clickedMessages.includes(msg.id)
                             ? "text-gray-800 font-semibold"
                             : "text-gray-400"
                           }
@@ -259,7 +249,7 @@ function Topbar() {
               {user?.email || "admin@system.com"}
             </p>
           </div>
-          <div className="h-10 w-10 rounded-xl bg-indigo-900 flex items-center justify-center text-white shadow-lg">
+          <div className="h-10 w-10 rounded-xl bg-slate-50 flex items-center justify-center text-slate-700 shadow-lg">
             <User size={20} />
           </div>
         </div>
