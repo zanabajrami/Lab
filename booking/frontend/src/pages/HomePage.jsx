@@ -154,28 +154,28 @@ function HomePage() {
       </section>
 
       {/* Destinacionet */}
-      <section className="max-w-7xl mx-auto px-4 py-16">
+      <section className="max-w-7xl mx-auto px-4 py-12 md:py-16">
         <Slider {...sliderSettings}>
           {destinationss.map((dest) => (
-            <div key={dest.name} className="px-3 py-4">
+            <div key={dest.name} className="px-2 py-4"> {/* px-2 është jetike për hapësirën mes kartave */}
               <div
-                className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer"
                 onClick={() => goToDestination(dest.name)}
               >
-                <div className="overflow-hidden">
+                <div className="overflow-hidden h-64 md:h-80">
                   <img
                     src={dest.image}
                     alt={dest.name}
-                    className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 w-full p-6 text-center">
-                  <h3 className="text-indigo-200 font-bold text-xl tracking-wide uppercase">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 w-full p-4 md:p-6 text-center">
+                  <h3 className="text-white font-bold text-lg md:text-xl tracking-wide uppercase">
                     {dest.name}
                   </h3>
-                  <span className="text-indigo-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Explore more →
+                  <span className="text-indigo-300 text-xs md:text-sm font-medium opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Explore →
                   </span>
                 </div>
               </div>
@@ -446,9 +446,7 @@ function HomePage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 py-16 -mt-5 text-center">
-        {/* Section heading */}
-        <h2
-          className="relative text-2xl md:text-3xl mb-12 tracking-tight inline-block overflow-hidden bg-clip-text text-transparent bg-gray-600 uppercase drop-shadow-lg"
+        <h2 className="relative text-2xl md:text-3xl mb-12 tracking-tight inline-block overflow-hidden bg-clip-text text-transparent bg-gray-600 uppercase drop-shadow-lg"
           data-aos="fade-up"
           data-aos-duration="900"
         > Steps
@@ -522,11 +520,8 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Pse të zgjedhësh */}
       <section className="max-w-7xl mx-auto px-4 py-20 -mt-5 text-center relative overflow-hidden">
-        {/* Section heading */}
-        <h2
-          className="relative text-2xl md:text-3xl mb-12 tracking-tight inline-block overflow-hidden bg-clip-text text-transparent bg-gray-600 uppercase drop-shadow-lg"
+        <h2 className="relative text-2xl md:text-3xl mb-12 tracking-tight inline-block overflow-hidden bg-clip-text text-transparent bg-gray-600 uppercase drop-shadow-lg"
           data-aos="fade-up"
           data-aos-duration="900"
         >
@@ -567,7 +562,6 @@ function HomePage() {
                 <div className="mt-4 h-1 w-12 bg-gradient-to-r from-pink-400 to-blue-400 rounded-full mx-auto scale-x-75 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
               </div>
             </div>
-
           ))}
         </div>
       </section>
