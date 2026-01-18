@@ -52,10 +52,6 @@ const deals = [
   { id: 48, name: "Cinco Apartments", location: "Pejë", rating: 4.3, images: [apartment95], description: "Apartament modern dhe i rehatshëm për 5 persona, me kuzhinë të pajisur dhe facilitete për një qëndrim të komod.", rooms: 2, capacity: 5, price: 94, originalPrice: 108, discountPrice: 94, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Washer"] },
   { id: 82, name: "Villa Bora", location: "Brezovicë", rating: 4.6, images: [villa4], description: "Hapësira të ngrohta me dekor modern, ideal për relaks dhe aktivitete të ndryshme.", rooms: 3, capacity: 7, price: 172, originalPrice: 200, discountPrice: 172, amenities: ["Mountain View", "Wi-Fi", "Parking", "Fully Equipped Kitchen", "Fireplace", "Private Garden"] },
 ]
-const reviews = [
-  { name: "Arta", comment: "Eksperiencë fantastike në Brezovicë!" },
-  { name: "Besnik", comment: "Shërbim perfekt dhe çmime të mira." },
-];
 
 // ✅ Slider Settings
 const sliderSettings = {
@@ -161,7 +157,7 @@ function HomePage() {
       <section className="max-w-7xl mx-auto px-4 py-16">
         <Slider {...sliderSettings}>
           {destinationss.map((dest) => (
-            <div key={dest.name} className="px-3 py-4"> 
+            <div key={dest.name} className="px-3 py-4">
               <div
                 className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
                 onClick={() => goToDestination(dest.name)}
@@ -403,7 +399,7 @@ function HomePage() {
 
       {/* Reviews */}
       <section className="py-20 relative overflow-hidden -mt-5">
-        <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
           <Link
             to="/customer-reviews"
             className="text-3xl mb-16 mt-5 relative inline-block text-center text-gray-600 cursor-pointer"
@@ -412,34 +408,36 @@ function HomePage() {
             <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-black to-blue-500 rounded-full animate-pulse"></span>
           </Link>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {reviews.map((review, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { name: "Riana", comment: "Eksperiencë fantastike në Brezovicë!" },
+              { name: "Aron", comment: "Shërbim perfekt dhe çmime të mira." },
+              { name: "Aria", comment: "Plazhet e jugut ishin përrallore." },
+            ].map((review, index) => (
               <div
                 key={index}
-                className="relative p-4 rounded-3xl bg-gray-50 backdrop-blur-md border border-white/25 shadow-2xl transform transition-all duration-500 hover:scale-105 hover:rotate-2 hover:shadow-gray-900/50"
+                className="relative p-6 rounded-3xl bg-gray-50 backdrop-blur-md border border-white/25 shadow-2xl transform transition-all duration-500 hover:scale-105 hover:rotate-2 hover:shadow-gray-900/50 flex flex-col justify-between"
               >
-                {/* Dekor abstrakt */}
                 <div className="absolute -top-5 -right-5 w-14 h-14 bg-gradient-to-tr from-black via-blue-700 to-indigo-400 rounded-full opacity-40 animate-ping-slow"></div>
                 <div className="absolute -bottom-5 -left-5 w-20 h-20 bg-gradient-to-tr from-gray-900 via-gray-600 to-red-300 rounded-full opacity-30 animate-bounce-slow"></div>
 
-                {/* Quote */}
                 <p className="text-gray-600 italic text-lg mb-8 relative z-10">
                   “{review.comment}”
                 </p>
 
-                {/* Klienti */}
-                <div className="flex items-center justify-center space-x-4 relative z-10">
-                  <div className="w-14 h-14 rounded-full bg-indigo-900 flex items-center justify-center font-bold text-indigo-200 text-2xl">
-                    {review.name[0]}
+                <div>
+                  <div className="flex items-center justify-center space-x-4 relative z-10">
+                    <div className="w-14 h-14 rounded-full shadow-lg shadow-gray-300 bg-slate-100 flex items-center justify-center font-bold text-slate-700 text-2xl">
+                      {review.name[0]}
+                    </div>
+                    <span className="font-semibold text-gray-600 text-lg">{review.name}</span>
                   </div>
-                  <span className="font-semibold text-gray-600 text-lg">{review.name}</span>
-                </div>
 
-                {/* Yjet */}
-                <div className="mt-6 flex justify-center space-x-2 relative z-10 text-gray-700">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <span key={i} className="animate-spin-slow hover:animate-spin-fast">★</span>
-                  ))}
+                  <div className="mt-6 flex justify-center space-x-2 relative z-10 text-gray-700">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <span key={i} className="animate-spin-slow hover:animate-spin-fast">★</span>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
