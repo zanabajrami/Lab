@@ -216,7 +216,7 @@ export default function ZigZagCarousel() {
                             <div className="absolute -inset-3 bg-slate-100 rounded-[2rem] -z-10 transition-transform group-hover:rotate-1"></div>
                             <div className="relative h-96 overflow-hidden rounded-[1.5rem] shadow-xl">
                                 <img src={d.image} alt={d.name} className="w-full h-full object-cover transform transition duration-1000 group-hover:scale-105" />
-                                <div className="absolute top-4 right-4 bg-black/20 backdrop-blur-md px-3 py-1 rounded-full border border-black/30">
+                                <div className="absolute top-4 right-4 backdrop-blur-md px-3 py-1 rounded-full border border-black/10">
                                     <span className="text-xs font-bold text-white uppercase">{d.weather?.split(":")[1]}</span>
                                 </div>
                             </div>
