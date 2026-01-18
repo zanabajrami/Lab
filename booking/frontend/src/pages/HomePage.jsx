@@ -158,21 +158,29 @@ function HomePage() {
       </section>
 
       {/* Destinacionet */}
-      <section className="max-w-7xl mx-auto px-4 py-12">
+      <section className="max-w-7xl mx-auto px-4 py-16">
         <Slider {...sliderSettings}>
           {destinationss.map((dest) => (
-            <div key={dest.name} className="px-2">
+            <div key={dest.name} className="px-3 py-4"> 
               <div
-                className="relative rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+                className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
                 onClick={() => goToDestination(dest.name)}
               >
-                <img
-                  src={dest.image}
-                  alt={dest.name}
-                  className="w-full h-72 object-cover"  // <— rritja e height
-                />
-                <div className="absolute bottom-0 bg-black bg-opacity-50 w-full text-white p-3 text-center font-semibold text-lg">
-                  {dest.name}
+                <div className="overflow-hidden">
+                  <img
+                    src={dest.image}
+                    alt={dest.name}
+                    className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 w-full p-6 text-center">
+                  <h3 className="text-indigo-200 font-bold text-xl tracking-wide uppercase">
+                    {dest.name}
+                  </h3>
+                  <span className="text-indigo-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Explore more →
+                  </span>
                 </div>
               </div>
             </div>
