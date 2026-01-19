@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { X } from "lucide-react"; // Importojmë ikonën X
+import { X } from "lucide-react";
 
 function Login({ onSwitchToRegister, onClose }) {
   const [email, setEmail] = useState("");
