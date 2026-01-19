@@ -9,7 +9,6 @@ import { Navigation, Pagination } from "swiper/modules";
 import { Heart, BedDouble, Users, HandCoins, X, RotateCcw, MapPin, ChevronDown } from "lucide-react";
 import { hotels } from "../data/HotelsData";
 import HotelCalendar from "../components/HotelCalendar";
-import PaymentForm from "../components/PaymentForm";
 
 export default function HotelsPage({ favorites, setFavorites }) {
   const [showTopButton, setShowTopButton] = useState(false);
@@ -25,7 +24,6 @@ export default function HotelsPage({ favorites, setFavorites }) {
   const [checkOutDate, setCheckOutDate] = useState(null);
   const navigate = useNavigate();
   const [calendarHotel, setCalendarHotel] = useState(null);
-  const [showPayment, setShowPayment] = useState(false);
 
   const locations = [
     "all", "Prishtina", "Brezovicë", "Sarandë", "Himarë",
@@ -207,6 +205,26 @@ export default function HotelsPage({ favorites, setFavorites }) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const [isBooked, setIsBooked] = useState(false); // State i ri
+
+  const handleBooking = () => {
+    if (!firstName || !lastName || !email || !phone) {
+      alert("Please fill in all required fields before continuing.");
+      return;
+    }
+
+    // Këtu mund të bësh një API call nëse është nevoja
+    setIsBooked(true);
+    setShowInfoModal(false);
+  };
+
+  const closeAllModals = () => {
+    setIsBooked(false);
+    setCalendarHotel(null);
+    setShowInfoModal(false);
+    resetAllForms();
+  };
 
   return (
     <div className="px-6 py-8">
@@ -539,43 +557,43 @@ export default function HotelsPage({ favorites, setFavorites }) {
                 ❮ Back
               </button>
               <button
-                onClick={() => {
-                  if (!firstName || !lastName || !email || !phone) {
-                    alert("Please fill in all required fields before continuing.");
-                    return;
-                  }
-                  setShowInfoModal(false);
-                  setShowPayment(true);
-                }}
+                onClick={handleBooking} // Thirr funksionin e ri
                 className="px-6 py-2 rounded-xl bg-gray-900 text-white hover:bg-indigo-900"
               >
-                Next ❯
+                Confirm Booking ❯
               </button>
             </div>
           </div>
         </div>
       )}
 
-      {showPayment && (
-        <PaymentForm
-          title="Complete Your Payment"
-          amount={`${totalPrice}€`}
-          hotelName={calendarHotel?.name}
-          numNights={numNights}
-          onClose={() => {
-            setShowPayment(false);
-            setShowInfoModal(false);
-            resetAllForms();
-          }}
-          onSubmit={(method) => {
-            console.log(method);
-            resetAllForms();
-          }}
-          onBack={() => {
-            setShowPayment(false);
-            setShowInfoModal(true);
-          }}
-        />
+      {isBooked && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-[60] px-4">
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="relative bg-white p-8 rounded-[2.5rem] shadow-2xl max-w-sm w-full text-center"
+          >
+            <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+
+            <h2 className="text-2xl font-black text-slate-900 mb-2">Success!</h2>
+            <p className="text-slate-600 font-medium leading-relaxed mb-8">
+              Your reservation has been made. <br />
+              <span className="text-slate-800 font-bold underline">You can make your payment at the property.</span>
+            </p>
+
+            <button
+              onClick={closeAllModals}
+              className="w-full py-4 rounded-2xl bg-slate-900 text-white font-bold hover:bg-slate-800 transition-all shadow-lg"
+            >
+              Excellent
+            </button>
+          </motion.div>
+        </div>
       )}
 
       {/* Pagination */}
