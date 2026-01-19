@@ -169,7 +169,6 @@ export default function HotelsPage({ favorites, setFavorites }) {
     return nights > 0 ? nights : 1;
   };
   const nights = calculateNights(checkInDate, checkOutDate);
-  const totalPrice = calendarHotel ? calendarHotel.price * nights : 0;
 
   const [showInfoModal, setShowInfoModal] = useState(false);
   const [firstName, setFirstName] = useState("");
@@ -193,10 +192,6 @@ export default function HotelsPage({ favorites, setFavorites }) {
     setCheckOutDate(null);
   };
 
-  const numNights = checkInDate && checkOutDate
-    ? Math.ceil((new Date(checkOutDate) - new Date(checkInDate)) / (1000 * 60 * 60 * 24))
-    : 0;
-
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
@@ -214,7 +209,6 @@ export default function HotelsPage({ favorites, setFavorites }) {
       return;
     }
 
-    // Këtu mund të bësh një API call nëse është nevoja
     setIsBooked(true);
     setShowInfoModal(false);
   };
@@ -249,9 +243,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
       {/* Location Dropdown */}
       <div className="flex justify-center mb-6 gap-4 items-center">
         <div className="relative flex items-center group">
-          {/* Ikona MapPin në fillim */}
           <MapPin size={18} className="absolute left-4 text-slate-400 group-focus-within:text-indigo-500 transition-colors pointer-events-none" />
-
           <select
             value={selectedLocation}
             onChange={(e) => setSelectedLocation(e.target.value)}
@@ -263,8 +255,6 @@ export default function HotelsPage({ favorites, setFavorites }) {
               </option>
             ))}
           </select>
-
-          {/* Ikona ChevronDown në fund */}
           <ChevronDown size={18} className="absolute right-4 text-slate-400 pointer-events-none group-focus-within:rotate-180 transition-transform duration-300" />
         </div>
 
@@ -281,11 +271,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
       {/* Hotels Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
         {currentHotels.map((hotel, index) => (
-          <div
-            key={index}
-            className="group relative flex flex-col mx-auto w-full max-w-[300px] rounded-[2.5rem] bg-white border border-gray-100 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
-          >
-            {/* Image Container - Shtuar overflow-hidden dhe transform-gpu për të ndalur bug-un */}
+          <div key={index} className="group relative flex flex-col mx-auto w-full max-w-[300px] rounded-[2.5rem] bg-white border border-gray-100 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" >
             <div className="relative h-64 w-full p-2 overflow-hidden">
               <div className="relative h-full w-full overflow-hidden rounded-[2rem] transform-gpu">
                 <img
@@ -505,7 +491,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
             <div className="flex justify-between items-center mt-4">
               <p className="text-gray-800 font-semibold mt-3">
                 Total price for {nights} night{nights > 1 ? "s" : ""}:{" "}
-                <span className="text-indigo-700 font-bold">
+                <span className="text-red-600 font-bold">
                   {calendarHotel ? calendarHotel.price * nights : 0}€
                 </span>
               </p>
@@ -517,7 +503,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
                   }
                   setShowInfoModal(true);
                 }}
-                className="px-4 py-2 rounded-xl bg-gray-900 text-white hover:bg-indigo-900"
+                className="px-4 py-2 rounded-xl bg-gray-900 text-white hover:bg-gray-950"
               >
                 Next ❯
               </button>
@@ -558,7 +544,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
               </button>
               <button
                 onClick={handleBooking} // Thirr funksionin e ri
-                className="px-6 py-2 rounded-xl bg-gray-900 text-white hover:bg-indigo-900"
+                className="px-6 py-2 rounded-xl bg-gray-900 text-white hover:bg-gray-950"
               >
                 Confirm Booking ❯
               </button>
@@ -588,7 +574,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
 
             <button
               onClick={closeAllModals}
-              className="w-full py-4 rounded-2xl bg-slate-900 text-white font-bold hover:bg-slate-800 transition-all shadow-lg"
+              className="w-full py-4 rounded-2xl bg-slate-900 text-white font-bold hover:bg-slate-950 transition-all shadow-lg"
             >
               Excellent
             </button>
