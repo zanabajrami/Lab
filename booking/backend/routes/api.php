@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserStatsController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\BookingController;
 
 // Routes pa login
 Route::post('register', [AuthController::class, 'register']);
@@ -14,6 +15,8 @@ Route::post('login', [AuthController::class, 'login']);
 Route::get('/messages', [MessageController::class, 'index']);
 Route::post('/messages', [MessageController::class, 'store']);
 Route::patch('/messages/{id}/read', [MessageController::class, 'markAsRead']);
+
+Route::post('/bookings', [BookingController::class, 'store']);
 
 // Routes me JWT
 Route::middleware('jwt.auth')->group(function () {
