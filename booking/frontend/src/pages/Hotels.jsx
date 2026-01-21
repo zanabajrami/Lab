@@ -24,6 +24,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
   const [checkOutDate, setCheckOutDate] = useState(null);
   const navigate = useNavigate();
   const [calendarHotel, setCalendarHotel] = useState(null);
+  const [user, setUser] = useState(null);
 
   const locations = [
     "all", "Prishtina", "Brezovicë", "Sarandë", "Himarë",
@@ -155,7 +156,6 @@ export default function HotelsPage({ favorites, setFavorites }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Kur ndryshon faqja, shko direkt në top të faqes
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentPage]);
@@ -218,6 +218,65 @@ export default function HotelsPage({ favorites, setFavorites }) {
     setCalendarHotel(null);
     setShowInfoModal(false);
     resetAllForms();
+  };
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
+
+  const handleBookingConfirm = async () => {
+    if (!calendarHotel || !checkInDate || !checkOutDate) {
+      alert("Please select a hotel and both Check-In and Check-Out dates.");
+      return;
+    }
+    if (!firstName || !lastName || !email || !phone) {
+      alert("Please fill in all required fields (name, email, phone).");
+      return;
+    }
+
+    const bookingData = {
+      hotel_id: calendarHotel.id,
+      hotel_name: calendarHotel.name,
+      location: calendarHotel.location,
+      first_name: firstName,
+      last_name: lastName,
+      email,
+      phone,
+      special_requests: specialRequests || "",
+      check_in: checkInDate.toISOString().split("T")[0], // YYYY-MM-DD
+      check_out: checkOutDate.toISOString().split("T")[0],
+      nights,
+      total_price: calendarHotel.price * nights
+    };
+
+    try {
+      const response = await fetch("http://localhost:8000/api/bookings", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(bookingData)
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        console.error("Booking failed:", data);
+        alert("Booking failed: " + (data.message || JSON.stringify(data.errors)));
+        return;
+      }
+
+      console.log("Booking success:", data);
+      setIsBooked(true);       // Modal i suksesit
+      setShowInfoModal(false); // Mbyll modalin e informacionit
+      setCalendarHotel(null);  // Reset calendar
+    } catch (err) {
+      console.error("Booking error:", err);
+      alert("Something went wrong while booking. Please try again.");
+    }
   };
 
   return (
@@ -343,15 +402,18 @@ export default function HotelsPage({ favorites, setFavorites }) {
                 </button>
               </div>
 
-              <button
-                onClick={() => {
-                  setCalendarHotel(hotel);
-                  setShowCalendar(true);
-                }}
-                className="mt-1 w-full py-3.5 rounded-2xl bg-slate-100 text-slate-800 font-bold text-xs tracking-widest uppercase transition-all duration-300 hover:bg-slate-900 hover:text-slate-100 hover:shadow-[0_10px_20px_rgba(51,65,85,0.3)] hover:-translate-y-0.5 active:scale-95 shadow-md flex items-center justify-center gap-2"
-              >
-                Book Now
-              </button>
+              {user && (
+                <button
+                  onClick={() => {
+                    setCalendarHotel(hotel);
+                    setShowCalendar(true);
+                  }}
+                  className="mt-1 w-full py-3.5 rounded-2xl bg-slate-100 text-slate-800 font-bold text-xs tracking-widest uppercase transition-all duration-300 hover:bg-slate-900 hover:text-slate-100 hover:shadow-[0_10px_20px_rgba(51,65,85,0.3)] hover:-translate-y-0.5 active:scale-95 shadow-md flex items-center justify-center gap-2"
+                >
+                  Book Now
+                </button>
+              )}
+
             </div>
           </div>
         ))}
@@ -543,7 +605,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
                 ❮ Back
               </button>
               <button
-                onClick={handleBooking} // Thirr funksionin e ri
+                onClick={handleBookingConfirm}
                 className="px-6 py-2 rounded-xl bg-gray-900 text-white hover:bg-gray-950"
               >
                 Confirm Booking ❯
