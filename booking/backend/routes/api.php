@@ -39,5 +39,6 @@ Route::middleware('jwt.auth')->group(function () {
         Route::get('users/stats/monthly', [UserController::class, 'monthlyStats']);
         Route::get('users/stats/active', [UserStatsController::class, 'activeUsers']);
         
+        Route::get('/bookings', [BookingController::class, 'index']);
     });
 });
