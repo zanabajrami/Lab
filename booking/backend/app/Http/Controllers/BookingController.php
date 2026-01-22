@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Booking;
-use Illuminate\Support\Facades\Validator;
 
 class BookingController extends Controller
 {
+    // GET ALL BOOKINGS (ADMIN)
     public function index()
     {
         return response()->json(
@@ -15,43 +15,38 @@ class BookingController extends Controller
         );
     }
 
-    public function store(Request $request)
+    // UPDATE BOOKING (EDIT)
+    public function update(Request $request, $id)
     {
-        $validator = Validator::make($request->all(), [
-            'hotel_id' => 'required|integer',
-            'hotel_name' => 'required|string',
-            'location' => 'required|string',
-            'first_name' => 'required|string',
-            'last_name' => 'required|string',
-            'email' => 'required|email',
-            'phone' => 'required|string',
-            'special_requests' => 'nullable|string',
+        $booking = Booking::findOrFail($id);
+
+        $request->validate([
             'check_in' => 'required|date',
             'check_out' => 'required|date|after_or_equal:check_in',
-            'nights' => 'required|integer|min:1',
             'total_price' => 'required|numeric|min:0',
+            'status' => 'required|in:confirmed,cancelled',
         ]);
 
-        if ($validator->fails()) {
-            return response()->json(['errors' => $validator->errors()], 422);
-        }
+        $booking->update($request->only([
+            'check_in',
+            'check_out',
+            'total_price',
+            'status'
+        ]));
 
-        $booking = Booking::create([
-            'hotel_id' => $request->hotel_id,
-            'hotel_name' => $request->hotel_name,
-            'location' => $request->location,
-            'first_name' => $request->first_name,
-            'last_name' => $request->last_name,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            'special_requests' => $request->special_requests,
-            'check_in' => $request->check_in,
-            'check_out' => $request->check_out,
-            'nights' => $request->nights,
-            'total_price' => $request->total_price,
-            'status' => 'confirmed',
+        return response()->json([
+            'message' => 'Booking updated successfully',
+            'booking' => $booking
         ]);
+    }
 
-        return response()->json($booking, 201);
+    // DELETE BOOKING
+    public function destroy($id)
+    {
+        Booking::findOrFail($id)->delete();
+
+        return response()->json([
+            'message' => 'Booking deleted successfully'
+        ]);
     }
 }
