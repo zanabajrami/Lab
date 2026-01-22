@@ -1,5 +1,5 @@
 import React from "react";
-import { LayoutDashboard, Users, ShieldUser, Settings, LogOut, UserLock, ChevronRight } from "lucide-react";
+import { LayoutDashboard, Users, ShieldUser, Settings, LogOut, UserLock, ChevronRight, CalendarCheck } from "lucide-react";
 
 function Sidebar({ activePage, setActivePage }) {
 
@@ -97,6 +97,24 @@ function Sidebar({ activePage, setActivePage }) {
             size={14}
             className={`hidden md:block ml-auto opacity-0 group-hover:opacity-100 transition-opacity
     ${activePage === "last-login" ? "opacity-100" : ""}`}
+          />
+        </button>
+
+        <button onClick={() => setActivePage("bookings")} className={navItemClass("bookings")}>
+          <CalendarCheck size={20} strokeWidth={activePage === "bookings" ? 2.5 : 2} />
+
+          <span className="hidden md:inline ml-3 font-semibold text-[15px]">
+            Bookings
+          </span>
+
+          {activePage === "bookings" && (
+            <div className="hidden md:block absolute left-0 w-1 h-6 bg-indigo-900 rounded-r-full" />
+          )}
+
+          <ChevronRight
+            size={14}
+            className={`hidden md:block ml-auto opacity-0 group-hover:opacity-100 transition-opacity
+      ${activePage === "bookings" ? "opacity-100" : ""}`}
           />
         </button>
 
