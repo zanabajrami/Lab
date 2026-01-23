@@ -49,6 +49,7 @@ export default function EditBookingModal({ booking, onClose, onUpdated }) {
             <div className="bg-white w-[520px] rounded-2xl p-6 space-y-4">
                 <h2 className="text-xl font-black">Edit Booking</h2>
 
+                {/* Në EditBookingModal */}
                 <div className="grid grid-cols-2 gap-3">
                     <input
                         name="hotel_name"
@@ -63,25 +64,28 @@ export default function EditBookingModal({ booking, onClose, onUpdated }) {
                         className="input"
                     />
 
+                    {/* Emri dhe mbiemri lexueshëm, readonly */}
                     <input
                         name="first_name"
                         value={form.first_name}
-                        onChange={handleChange}
-                        className="input"
+                        readOnly
+                        className="input bg-gray-100 cursor-not-allowed"
                     />
                     <input
                         name="last_name"
                         value={form.last_name}
-                        onChange={handleChange}
-                        className="input"
+                        readOnly
+                        className="input bg-gray-100 cursor-not-allowed"
                     />
 
+                    {/* Email gjithashtu readonly */}
                     <input
                         name="email"
                         value={form.email}
-                        onChange={handleChange}
-                        className="input"
+                        readOnly
+                        className="input bg-gray-100 cursor-not-allowed"
                     />
+
                     <input
                         name="phone"
                         value={form.phone}
