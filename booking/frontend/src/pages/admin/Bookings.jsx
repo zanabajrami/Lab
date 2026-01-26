@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import { Pencil, Trash2, CheckCircle, XCircle, Calendar, MapPin } from "lucide-react";
 import EditBooking from "../../components/dashboard/EditBooking";
-import Users from "./Users";
 
 export default function Bookings() {
     const [bookings, setBookings] = useState([]);
@@ -11,11 +10,7 @@ export default function Bookings() {
 
     const token = localStorage.getItem("token");
 
-    useEffect(() => {
-        fetchBookings();
-    }, []);
-
-    const fetchBookings = async () => {
+    const fetchBookings = useCallback(async () => {
         try {
             setLoading(true);
             const res = await axios.get("http://localhost:8000/api/bookings", {
@@ -25,9 +20,11 @@ export default function Bookings() {
         } finally {
             setLoading(false);
         }
-    };
+    }, [token]);
 
-    <Users onUserUpdated={fetchBookings} />
+    useEffect(() => {
+        fetchBookings();
+    }, [fetchBookings]);
 
     const deleteBooking = async (id) => {
         if (!window.confirm("Delete this booking?")) return;
