@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Pencil, Trash2, CheckCircle, XCircle, Calendar, User, MapPin } from "lucide-react";
+import { Pencil, Trash2, CheckCircle, XCircle, Calendar, MapPin } from "lucide-react";
 import EditBooking from "../../components/dashboard/EditBooking";
+import Users from "./Users";
 
 export default function Bookings() {
     const [bookings, setBookings] = useState([]);
@@ -25,6 +26,8 @@ export default function Bookings() {
             setLoading(false);
         }
     };
+
+    <Users onUserUpdated={fetchBookings} />
 
     const deleteBooking = async (id) => {
         if (!window.confirm("Delete this booking?")) return;
@@ -171,8 +174,8 @@ const StatusBadge = ({ status }) => (
 );
 
 const ActionButton = ({ onClick, icon, variant }) => {
-    const styles = variant === 'edit' 
-        ? "hover:bg-indigo-50 hover:text-indigo-900" 
+    const styles = variant === 'edit'
+        ? "hover:bg-indigo-50 hover:text-indigo-900"
         : "hover:bg-red-50 hover:text-red-600";
     return (
         <button

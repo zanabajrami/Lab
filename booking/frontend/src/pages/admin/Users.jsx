@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Plus, Trash2, Pencil, Search, ChevronLeft, ChevronRight, Calendar } from "lucide-react";
 import { LiaUsersSolid } from "react-icons/lia";
 
-export default function Users() {
+export default function Users({ onUserUpdated }) {
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
@@ -99,6 +99,11 @@ export default function Users() {
           u.id === data.user.id ? data.user : u
         )
       );
+
+      if (onUserUpdated) {
+        onUserUpdated();
+      }
+
       setEditingUser(null);
     }
   };
