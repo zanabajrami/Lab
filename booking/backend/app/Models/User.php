@@ -39,4 +39,20 @@ class User extends Authenticatable implements JWTSubject
     {
         return [];
     }
+    public function bookings() {
+    return $this->hasMany(\App\Models\Booking::class, 'user_id', 'id');
+}
+
+protected static function boot()
+{
+    parent::boot();
+
+    static::updated(function ($user) {
+        $user->bookings()->update([
+            'first_name' => $user->first_name,
+            'last_name'  => $user->last_name,
+            'email'      => $user->email,
+        ]);
+    });
+  }
 }
