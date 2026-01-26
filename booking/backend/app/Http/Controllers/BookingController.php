@@ -4,18 +4,60 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Booking;
+use App\Models\User;
 
 class BookingController extends Controller
 {
-    // GET ALL BOOKINGS (ADMIN)
+    // --- GET ALL BOOKINGS (ADMIN) ---
     public function index()
     {
-        return response()->json(
-            Booking::orderBy('created_at', 'desc')->get()
-        );
+        $bookings = Booking::orderBy('id', 'desc')->get();
+        return response()->json($bookings, 200);
     }
 
-    // UPDATE BOOKING (EDIT)
+    // --- CREATE BOOKING ---
+public function store(Request $request)
+{
+    // Validate input pa user_id, por me email
+    $request->validate([
+        'email' => 'required|email|exists:users,email',
+        'hotel_id' => 'required|integer',
+        'hotel_name' => 'required|string|max:255',
+        'location' => 'required|string|max:255',
+        'phone' => 'required|string|max:50',
+        'check_in' => 'required|date',
+        'check_out' => 'required|date|after_or_equal:check_in',
+        'nights' => 'required|integer|min:1',
+        'total_price' => 'required|numeric|min:0',
+    ]);
+
+    // Merr user nga email
+    $user = User::where('email', $request->email)->firstOrFail();
+
+    // Krijo booking
+    $booking = Booking::create([
+        'user_id' => $user->id,
+        'hotel_id' => $request->hotel_id,
+        'hotel_name' => $request->hotel_name,
+        'location' => $request->location,
+        'first_name' => $user->first_name,
+        'last_name' => $user->last_name,
+        'email' => $user->email,
+        'phone' => $request->phone,
+        'check_in' => $request->check_in,
+        'check_out' => $request->check_out,
+        'nights' => $request->nights,
+        'total_price' => $request->total_price,
+        'status' => 'confirmed',
+    ]);
+
+    return response()->json([
+        'message' => 'Booking created successfully',
+        'booking' => $booking
+    ], 201);
+}
+
+    // --- UPDATE BOOKING ---
     public function update(Request $request, $id)
     {
         $booking = Booking::findOrFail($id);
@@ -40,13 +82,21 @@ class BookingController extends Controller
         ]);
     }
 
-    // DELETE BOOKING
+    // --- DELETE BOOKING ---
     public function destroy($id)
     {
-        Booking::findOrFail($id)->delete();
+        $booking = Booking::findOrFail($id);
+        $booking->delete();
 
         return response()->json([
             'message' => 'Booking deleted successfully'
         ]);
+    }
+
+    // --- SHOW SINGLE BOOKING (optional) ---
+    public function show($id)
+    {
+        $booking = Booking::findOrFail($id);
+        return response()->json($booking, 200);
     }
 }
