@@ -58,14 +58,15 @@ class UserController extends Controller
 }
 
     // PUT /api/users/{id}
-   public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id)
+{
     $user = User::find($id);
 
     if (!$user) {
         return response()->json(['error' => 'User not found'], 404);
     }
 
+    // Validate input
     $validator = Validator::make($request->all(), [
         'first_name' => 'sometimes|required|string|max:50',
         'last_name'  => 'sometimes|required|string|max:50',
@@ -78,6 +79,7 @@ class UserController extends Controller
         return response()->json($validator->errors(), 422);
     }
 
+    // Update user
     $user->update($request->only([
         'first_name',
         'last_name',
@@ -85,11 +87,18 @@ class UserController extends Controller
         'role',
     ]));
 
+    // Update Bookings
+    $user->bookings()->update([
+        'first_name' => $user->first_name,
+        'last_name'  => $user->last_name,
+        'email'      => $user->email,
+    ]);
+
     return response()->json([
         'message' => 'User updated successfully',
-        'user' => $user->fresh(), 
+        'user' => $user->fresh(),
     ], 200);
-    }
+}
 
     // DELETE /api/users/{id}
     public function destroy($id)
