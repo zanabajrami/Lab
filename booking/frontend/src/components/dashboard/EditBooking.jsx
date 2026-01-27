@@ -3,13 +3,11 @@ import axios from "axios";
 
 export default function EditBookingModal({ booking, onClose, onUpdated }) {
     const token = localStorage.getItem("token");
-
     const [form, setForm] = useState({ ...booking });
-    const [pricePerNight, setPricePerNight] = useState(
+    const [pricePerNight, ] = useState(
         booking.total_price / booking.nights || 100
     );
 
-    // Llogarit nights dhe total_price çdo herë që ndryshojnë datat
     useEffect(() => {
         const checkIn = new Date(form.check_in);
         const checkOut = new Date(form.check_out);
@@ -44,114 +42,115 @@ export default function EditBookingModal({ booking, onClose, onUpdated }) {
         }
     };
 
+    const inputStyle = "w-full border border-gray-300 rounded-lg p-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none transition-all";
+    const readOnlyStyle = "bg-gray-50 text-gray-500 cursor-not-allowed border-dashed";
+    const labelStyle = "block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1 ml-1";
+
     return (
-        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-            <div className="bg-white w-[520px] rounded-2xl p-6 space-y-4">
-                <h2 className="text-xl font-black">Edit Booking</h2>
-
-                {/* Në EditBookingModal */}
-                <div className="grid grid-cols-2 gap-3">
-                    <input
-                        name="hotel_name"
-                        value={form.hotel_name}
-                        onChange={handleChange}
-                        className="input"
-                    />
-                    <input
-                        name="location"
-                        value={form.location}
-                        onChange={handleChange}
-                        className="input"
-                    />
-
-                    {/* Emri dhe mbiemri lexueshëm, readonly */}
-                    <input
-                        name="first_name"
-                        value={form.first_name}
-                        readOnly
-                        className="input bg-gray-100 cursor-not-allowed"
-                    />
-                    <input
-                        name="last_name"
-                        value={form.last_name}
-                        readOnly
-                        className="input bg-gray-100 cursor-not-allowed"
-                    />
-
-                    {/* Email gjithashtu readonly */}
-                    <input
-                        name="email"
-                        value={form.email}
-                        readOnly
-                        className="input bg-gray-100 cursor-not-allowed"
-                    />
-
-                    <input
-                        name="phone"
-                        value={form.phone}
-                        onChange={handleChange}
-                        className="input"
-                    />
-
-                    <input
-                        type="date"
-                        name="check_in"
-                        value={form.check_in}
-                        onChange={handleChange}
-                        className="input"
-                    />
-                    <input
-                        type="date"
-                        name="check_out"
-                        value={form.check_out}
-                        onChange={handleChange}
-                        className="input"
-                    />
-
-                    <input
-                        type="number"
-                        name="nights"
-                        value={form.nights}
-                        readOnly
-                        className="input bg-gray-100"
-                    />
-                    <input
-                        type="number"
-                        name="total_price"
-                        value={form.total_price}
-                        readOnly
-                        className="input bg-gray-100"
-                    />
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-end sm:items-center justify-center z-50 p-0 sm:p-4">
+            <div className="bg-white w-full max-w-lg rounded-t-2xl sm:rounded-2xl shadow-2xl flex flex-col max-h-[95vh] sm:max-h-[90vh]">
+                <div className="px-5 py-4 border-b flex justify-between items-center">
+                    <div>
+                        <h2 className="text-lg font-bold text-gray-800">Edit Booking</h2>
+                        <p className="text-xs text-gray-500">ID: {booking.id.toString().slice(-5)}</p>
+                    </div>
+                    <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-full text-gray-400">&times;</button>
                 </div>
 
-                <textarea
-                    name="special_requests"
-                    value={form.special_requests || ""}
-                    onChange={handleChange}
-                    className="w-full border rounded-lg p-2"
-                    placeholder="Special requests"
-                />
+                {/* Body - Me scroll nëse përmbajtja është e gjatë */}
+                <div className="p-5 overflow-y-auto space-y-4">
 
-                <select
-                    name="status"
-                    value={form.status}
-                    onChange={handleChange}
-                    className="w-full border rounded-lg p-2"
-                >
-                    <option value="confirmed">Confirmed</option>
-                    <option value="cancelled">Cancelled</option>
-                </select>
+                    {/* Hotel Info */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label className={labelStyle}>Hotel Name</label>
+                            <input name="hotel_name" value={form.hotel_name} onChange={handleChange} className={inputStyle} />
+                        </div>
+                        <div>
+                            <label className={labelStyle}>Location</label>
+                            <input name="location" value={form.location} onChange={handleChange} className={inputStyle} />
+                        </div>
+                    </div>
 
-                <div className="flex justify-end gap-3 pt-4">
+                    {/* Guest (ReadOnly) - 1 kolonë në mobil, 2 në desktop */}
+                    <div className="bg-gray-50 p-3 rounded-xl border border-gray-100 space-y-3">
+                        <div className="grid grid-cols-2 gap-3">
+                            <div>
+                                <label className={labelStyle}>First Name</label>
+                                <input value={form.first_name} readOnly className={`${inputStyle} ${readOnlyStyle}`} />
+                            </div>
+                            <div>
+                                <label className={labelStyle}>Last Name</label>
+                                <input value={form.last_name} readOnly className={`${inputStyle} ${readOnlyStyle}`} />
+                            </div>
+                        </div>
+                        <div>
+                            <label className={labelStyle}>Email Address</label>
+                            <input value={form.email} readOnly className={`${inputStyle} ${readOnlyStyle}`} />
+                        </div>
+                    </div>
+
+                    {/* Dates & Phone */}
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        <div className="col-span-2 sm:col-span-1">
+                            <label className={labelStyle}>Phone</label>
+                            <input name="phone" value={form.phone} onChange={handleChange} className={inputStyle} />
+                        </div>
+                        <div>
+                            <label className={labelStyle}>Check In</label>
+                            <input type="date" name="check_in" value={form.check_in} onChange={handleChange} className={inputStyle} />
+                        </div>
+                        <div>
+                            <label className={labelStyle}>Check Out</label>
+                            <input type="date" name="check_out" value={form.check_out} onChange={handleChange} className={inputStyle} />
+                        </div>
+                    </div>
+
+                    {/* Finance Summary */}
+                    <div className="grid grid-cols-2 gap-3 bg-indigo-50/50 p-3 rounded-xl border border-indigo-100">
+                        <div>
+                            <label className={labelStyle}>Total Nights</label>
+                            <div className="font-semibold text-gray-700 px-2 italic">{form.nights} nights</div>
+                        </div>
+                        <div>
+                            <label className={labelStyle}>Total Price</label>
+                            <div className="font-bold text-red-600 px-2">${form.total_price}</div>
+                        </div>
+                    </div>
+
+                    {/* Status & Requests */}
+                    <div className="space-y-3">
+                        <div>
+                            <label className={labelStyle}>Status</label>
+                            <select name="status" value={form.status} onChange={handleChange} className={`${inputStyle} bg-white`}>
+                                <option value="confirmed">Confirmed</option>
+                                <option value="cancelled">Cancelled</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label className={labelStyle}>Notes</label>
+                            <textarea
+                                name="special_requests"
+                                value={form.special_requests || ""}
+                                onChange={handleChange}
+                                className={`${inputStyle} h-20 resize-none`}
+                                placeholder="Special requests..."
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                {/* Footer - Fiks në fund */}
+                <div className="p-4 border-t bg-gray-50 flex gap-3 rounded-2xl">
                     <button
                         onClick={onClose}
-                        className="px-4 py-2 rounded-lg bg-gray-100 font-bold"
+                        className="flex-1 px-4 py-2.5 rounded-xl bg-white border border-gray-300 text-gray-700 font-bold text-sm hover:bg-gray-100 transition-all"
                     >
                         Cancel
                     </button>
                     <button
                         onClick={save}
-                        className="px-4 py-2 rounded-lg bg-indigo-600 text-white font-bold"
+                        className="flex-[2] px-4 py-2.5 rounded-xl bg-slate-950 text-white font-bold text-sm hover:bg-slate-900 shadow-lg shadow-indigo-200 transition-all"
                     >
                         Save Changes
                     </button>
