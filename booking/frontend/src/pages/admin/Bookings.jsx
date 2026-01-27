@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import { Pencil, Trash2, CheckCircle, XCircle, Calendar, MapPin } from "lucide-react";
 import EditBooking from "../../components/dashboard/EditBooking";
+import Users from "./Users";
 
 export default function Bookings() {
     const [bookings, setBookings] = useState([]);
@@ -25,6 +26,8 @@ export default function Bookings() {
     useEffect(() => {
         fetchBookings();
     }, [fetchBookings]);
+
+    <Users onUserUpdated={fetchBookings} />
 
     const deleteBooking = async (id) => {
         if (!window.confirm("Delete this booking?")) return;
@@ -157,7 +160,6 @@ export default function Bookings() {
     );
 }
 
-// Sub-komponentet për pastërti kodi
 const StatusBadge = ({ status }) => (
     status === "confirmed" ? (
         <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-700">
