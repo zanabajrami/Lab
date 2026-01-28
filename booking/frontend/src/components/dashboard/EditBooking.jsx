@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { hotels } from "../../data/HotelsData";
 
 export default function EditBookingModal({ booking, onClose, onUpdated }) {
     const token = localStorage.getItem("token");
     const [form, setForm] = useState({ ...booking });
-    const [pricePerNight, ] = useState(
+    const [pricePerNight] = useState(
         booking.total_price / booking.nights || 100
     );
 
@@ -42,39 +43,68 @@ export default function EditBookingModal({ booking, onClose, onUpdated }) {
         }
     };
 
+    // Stilet e tua origjinale
     const inputStyle = "w-full border border-gray-300 rounded-lg p-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none transition-all";
     const readOnlyStyle = "bg-gray-50 text-gray-500 cursor-not-allowed border-dashed";
     const labelStyle = "block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1 ml-1";
 
     return (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-end sm:items-center justify-center z-50 p-0 sm:p-4">
-            <div className="bg-white w-full max-w-lg rounded-t-2xl sm:rounded-2xl shadow-2xl flex flex-col max-h-[95vh] sm:max-h-[90vh]">
-                <div className="px-5 py-4 border-b flex justify-between items-center">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-2 sm:p-4">
+            {/* max-w-lg në desktop, w-full në mobile, max-h që të mos del jashtë ekranit */}
+            <div className="bg-white w-full max-w-lg rounded-2xl shadow-2xl flex flex-col max-h-[95vh] sm:max-h-[90vh]">
+                
+                {/* Header - I fiksuar */}
+                <div className="px-5 py-4 border-b flex justify-between items-center shrink-0">
                     <div>
                         <h2 className="text-lg font-bold text-gray-800">Edit Booking</h2>
                         <p className="text-xs text-gray-500">ID: {booking.id.toString().slice(-5)}</p>
                     </div>
-                    <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-full text-gray-400">&times;</button>
+                    <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-full text-gray-400 text-2xl leading-none">&times;</button>
                 </div>
 
-                {/* Body - Me scroll nëse përmbajtja është e gjatë */}
+                {/* Body - Scrollable në mobile */}
                 <div className="p-5 overflow-y-auto space-y-4">
-
-                    {/* Hotel Info */}
+                    
+                    {/* Hotel Info - 1 kolonë mobile, 2 kolona desktop */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div>
+                        <div className="w-full">
                             <label className={labelStyle}>Hotel Name</label>
-                            <input name="hotel_name" value={form.hotel_name} onChange={handleChange} className={inputStyle} />
+                            <select
+                                name="hotel_id"
+                                value={form.hotel_id}
+                                onChange={(e) => {
+                                    const hotelId = Number(e.target.value);
+                                    const hotel = hotels.find(h => h.id === hotelId);
+                                    if (!hotel) return;
+                                    setForm(prev => ({
+                                        ...prev,
+                                        hotel_id: hotel.id,
+                                        hotel_name: hotel.name,
+                                        location: hotel.location,
+                                        total_price: (hotel.price * prev.nights).toFixed(2)
+                                    }));
+                                }}
+                                className={inputStyle}
+                            >
+                                {hotels.map(h => (
+                                    <option key={h.id} value={h.id}>{h.name} — {h.location}</option>
+                                ))}
+                            </select>
                         </div>
-                        <div>
+
+                        <div className="w-full">
                             <label className={labelStyle}>Location</label>
-                            <input name="location" value={form.location} onChange={handleChange} className={inputStyle} />
+                            <input
+                                value={form.location}
+                                readOnly
+                                className={`${inputStyle} ${readOnlyStyle}`}
+                            />
                         </div>
                     </div>
 
-                    {/* Guest (ReadOnly) - 1 kolonë në mobil, 2 në desktop */}
+                    {/* Guest - Section */}
                     <div className="bg-gray-50 p-3 rounded-xl border border-gray-100 space-y-3">
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             <div>
                                 <label className={labelStyle}>First Name</label>
                                 <input value={form.first_name} readOnly className={`${inputStyle} ${readOnlyStyle}`} />
@@ -90,9 +120,9 @@ export default function EditBookingModal({ booking, onClose, onUpdated }) {
                         </div>
                     </div>
 
-                    {/* Dates & Phone */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                        <div className="col-span-2 sm:col-span-1">
+                    {/* Dates & Phone - 1 kolonë mobile, 3 kolona desktop */}
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <div className="sm:col-span-1">
                             <label className={labelStyle}>Phone</label>
                             <input name="phone" value={form.phone} onChange={handleChange} className={inputStyle} />
                         </div>
@@ -110,15 +140,15 @@ export default function EditBookingModal({ booking, onClose, onUpdated }) {
                     <div className="grid grid-cols-2 gap-3 bg-indigo-50/50 p-3 rounded-xl border border-indigo-100">
                         <div>
                             <label className={labelStyle}>Total Nights</label>
-                            <div className="font-semibold text-gray-700 px-2 italic">{form.nights} nights</div>
+                            <div className="font-semibold text-gray-700 px-2 text-sm">{form.nights} nights</div>
                         </div>
                         <div>
                             <label className={labelStyle}>Total Price</label>
-                            <div className="font-bold text-red-600 px-2">${form.total_price}</div>
+                            <div className="font-bold text-red-600 px-2 text-sm">${form.total_price}</div>
                         </div>
                     </div>
 
-                    {/* Status & Requests */}
+                    {/* Status & Notes */}
                     <div className="space-y-3">
                         <div>
                             <label className={labelStyle}>Status</label>
@@ -140,17 +170,17 @@ export default function EditBookingModal({ booking, onClose, onUpdated }) {
                     </div>
                 </div>
 
-                {/* Footer - Fiks në fund */}
-                <div className="p-4 border-t bg-gray-50 flex gap-3 rounded-2xl">
+                {/* Footer - I fiksuar në fund */}
+                <div className="p-4 border-t bg-gray-50 flex flex-col sm:flex-row gap-3 shrink-0 rounded-b-2xl">
                     <button
                         onClick={onClose}
-                        className="flex-1 px-4 py-2.5 rounded-xl bg-white border border-gray-300 text-gray-700 font-bold text-sm hover:bg-gray-100 transition-all"
+                        className="w-full sm:flex-1 px-4 py-2.5 rounded-xl bg-white border border-gray-300 text-gray-700 font-bold text-sm hover:bg-gray-100 transition-all"
                     >
                         Cancel
                     </button>
                     <button
                         onClick={save}
-                        className="flex-[2] px-4 py-2.5 rounded-xl bg-slate-950 text-white font-bold text-sm hover:bg-slate-900 shadow-lg shadow-indigo-200 transition-all"
+                        className="w-full sm:flex-[2] px-4 py-2.5 rounded-xl bg-slate-950 text-white font-bold text-sm hover:bg-slate-900 shadow-lg transition-all active:scale-95"
                     >
                         Save Changes
                     </button>
