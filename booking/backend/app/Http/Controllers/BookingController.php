@@ -65,22 +65,30 @@ class BookingController extends Controller
     $booking = Booking::findOrFail($id);
 
     $request->validate([
+        'hotel_id' => 'required|integer',
+        'hotel_name' => 'required|string|max:255',
+        'location' => 'required|string|max:255',
+        'phone' => 'required|string|max:50',
+        'special_requests' => 'nullable|string',
         'check_in' => 'required|date',
         'check_out' => 'required|date|after_or_equal:check_in',
-        'nights' => 'required|integer|min:1',           
+        'nights' => 'required|integer|min:1',
         'total_price' => 'required|numeric|min:0',
         'status' => 'required|in:confirmed,cancelled',
-        'special_requests' => 'nullable|string',
     ]);
 
-    $booking->update($request->only([
-        'check_in',
-        'check_out',
-        'nights',                                  
-        'total_price',
-        'status',
-        'special_requests', 
-    ]));
+    $booking->update([
+        'hotel_id' => $request->hotel_id,
+        'hotel_name' => $request->hotel_name,
+        'location' => $request->location,
+        'phone' => $request->phone,
+        'special_requests' => $request->special_requests,
+        'check_in' => $request->check_in,
+        'check_out' => $request->check_out,
+        'nights' => $request->nights,
+        'total_price' => $request->total_price,
+        'status' => $request->status,
+    ]);
 
     return response()->json([
         'message' => 'Booking updated successfully',
