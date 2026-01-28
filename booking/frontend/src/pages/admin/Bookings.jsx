@@ -2,11 +2,13 @@ import { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import { Pencil, Trash2, CheckCircle, XCircle, Calendar, MapPin } from "lucide-react";
 import EditBooking from "../../components/dashboard/EditBooking";
+import CreateBooking from "../../components/dashboard/CreateBooking";
 import Users from "./Users";
 
 export default function Bookings() {
     const [bookings, setBookings] = useState([]);
     const [editing, setEditing] = useState(null);
+    const [creating, setCreating] = useState(false);
     const [loading, setLoading] = useState(true);
 
     const token = localStorage.getItem("token");
@@ -43,13 +45,23 @@ export default function Bookings() {
 
     return (
         <>
+            {creating && (
+                <CreateBooking
+                    onClose={() => setCreating(false)}
+                    onCreated={(newBooking) => {
+                        setBookings(prev => [newBooking, ...prev]);
+                        setCreating(false);
+                    }}
+                />
+            )}
+
             {editing && (
                 <EditBooking
                     booking={editing}
                     onClose={() => setEditing(null)}
-                    onUpdated={(updatedBooking) => {
-                        setBookings((prev) =>
-                            prev.map((b) => (b.id === updatedBooking.id ? updatedBooking : b))
+                    onUpdated={(updated) => {
+                        setBookings(prev =>
+                            prev.map(b => b.id === updated.id ? updated : b)
                         );
                         setEditing(null);
                     }}
@@ -57,9 +69,18 @@ export default function Bookings() {
             )}
 
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                <div className="p-4 md:p-6 border-b">
-                    <h1 className="text-xl md:text-2xl font-black text-gray-800">Bookings</h1>
-                    <p className="text-sm text-gray-500 mt-1">All hotel reservations</p>
+                <div className="p-4 md:p-6 border-b flex items-center justify-between">
+                    <div>
+                        <h1 className="text-xl md:text-2xl font-black text-gray-800">Bookings</h1>
+                        <p className="text-sm text-gray-500 mt-1">All hotel reservations</p>
+                    </div>
+
+                    <button
+                        onClick={() => setCreating(true)}
+                        className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800 text-white font-bold text-sm hover:bg-slate-900 transition"
+                    >
+                        + Add Booking
+                    </button>
                 </div>
 
                 {/* --- DESKTOP VIEW (Table) --- */}
