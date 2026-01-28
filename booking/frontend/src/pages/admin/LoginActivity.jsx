@@ -61,7 +61,7 @@ export default function LastLogin() {
                             </div>
                             <h2 className="text-2xl font-extrabold text-gray-900 tracking-tight">Login Activity</h2>
                         </div>
-                        <p className="text-sm text-gray-500 ml-10">Manage and track user login sessions.</p>
+                        <p className="text-sm text-gray-500 ml-10">Track user login sessions.</p>
                     </div>
 
                     <div className="relative group md:max-w-xs w-full">
