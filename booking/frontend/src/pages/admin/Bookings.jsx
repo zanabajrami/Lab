@@ -83,8 +83,8 @@ export default function Bookings() {
             {/* --- CONTENT CONTAINER --- */}
             <div className="bg-white md:rounded-[2rem] shadow-sm border border-gray-100 overflow-hidden rounded-2xl">
 
-                {/* --- DESKTOP TABLE (Visible on Large Screens) --- */}
-                <div className="hidden lg:block overflow-x-auto">
+                {/* --- DESKTOP TABLE --- */}
+                <div className="bg-white hidden lg:block overflow-x-auto">
                     <table className="w-full border-collapse">
                         <thead>
                             <tr className="text-[11px] font-black text-gray-400 uppercase tracking-widest bg-gray-50/50">
@@ -131,7 +131,7 @@ export default function Bookings() {
                     </table>
                 </div>
 
-                {/* --- IPAD & MOBILE GRID (Visible on smaller screens) --- */}
+                {/* --- IPAD & MOBILE GRID --- */}
                 <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:gap-px bg-gray-100">
                     {filteredBookings.map((b) => (
                         <div key={b.id} className="p-5 md:p-6 bg-white flex flex-col justify-between">
