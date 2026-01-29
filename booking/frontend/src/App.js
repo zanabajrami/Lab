@@ -16,7 +16,6 @@ import AboutUs from './pages/AboutUs';
 import Faq from './pages/Faq';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
-import OurTeam from './pages/OurTeam';
 import Packing from './pages/Packing';
 import PropertyPolicies from './pages/PropertyPolicies';
 import CustomerReviews from './pages/CustomerReviews';
@@ -68,7 +67,6 @@ function MainWrapper() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
-          <Route path="/our-team" element={<OurTeam />} />
           <Route path="/packing" element={<Packing />} />
           <Route path="/property-policies" element={<PropertyPolicies />} />
           <Route path="/customer-reviews" element={<CustomerReviews />} />
