@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from "react";
-import { Users, DollarSign, UserPlus, EllipsisVertical } from "lucide-react";
+import { Users, CalendarDays, UserPlus, EllipsisVertical } from "lucide-react";
 
 import UserGrowthChart from "../../components/dashboard/UserGrowthChart";
 import UsersChart from "../../components/dashboard/UsersChart";
@@ -11,21 +11,35 @@ function Dashboard() {
   const [dailyStats, setDailyStats] = useState([]);
   const [, setSummary] = useState(null);
   const [monthlyStats, setMonthlyStats] = useState([]);
+  const [bookings, setBookings] = useState([]);
 
   // State për Editimin
   const [editingUser, setEditingUser] = useState(null);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/users", {
-      headers: { Authorization: `Bearer ${token}` },
-    })
+    // Fetch users
+    fetch("http://127.0.0.1:8000/api/users", { headers: { Authorization: `Bearer ${token}` } })
       .then(res => res.json())
       .then(data => setUsers(data))
       .catch(console.error);
 
-    fetch("http://127.0.0.1:8000/api/users/stats/daily", { headers: { Authorization: `Bearer ${token}` } }).then(res => res.json()).then(setDailyStats);
-    fetch("http://127.0.0.1:8000/api/users/stats/active", { headers: { Authorization: `Bearer ${token}` } }).then(res => res.json()).then(setSummary);
-    fetch("http://127.0.0.1:8000/api/users/stats/monthly", { headers: { Authorization: `Bearer ${token}` } }).then(res => res.json()).then(setMonthlyStats);
+    fetch("http://127.0.0.1:8000/api/users/stats/daily", { headers: { Authorization: `Bearer ${token}` } })
+      .then(res => res.json())
+      .then(setDailyStats);
+
+    fetch("http://127.0.0.1:8000/api/users/stats/active", { headers: { Authorization: `Bearer ${token}` } })
+      .then(res => res.json())
+      .then(setSummary);
+
+    fetch("http://127.0.0.1:8000/api/users/stats/monthly", { headers: { Authorization: `Bearer ${token}` } })
+      .then(res => res.json())
+      .then(setMonthlyStats);
+
+    // Fetch bookings
+    fetch("http://127.0.0.1:8000/api/bookings", { headers: { Authorization: `Bearer ${token}` } })
+      .then(res => res.json())
+      .then(data => setBookings(data))
+      .catch(console.error);
   }, [token]);
 
   const handleUpdate = () => {
@@ -56,9 +70,8 @@ function Dashboard() {
     return Math.round(((current - previous) / previous) * 100);
   };
 
-  const totalUsersNow =
-    monthlyStats?.[monthlyStats.length - 1]?.count ?? 0;
-
+ const totalUsersNow = users.length;
+ 
   const totalUsersPrev =
     monthlyStats?.[monthlyStats.length - 2]?.count ?? 0;
 
@@ -68,6 +81,8 @@ function Dashboard() {
   const yesterdayUsers =
     dailyStats?.[dailyStats.length - 2]?.count ?? 0;
 
+  const totalBookingsNow = bookings.length;
+  const totalBookingsPrev = 0;
 
   return (
     <div className="p-4 sm:p-8 bg-[#f8fafc] min-h-screen text-slate-900 rounded-2xl relative">
@@ -166,19 +181,19 @@ function Dashboard() {
         <KPICard
           title="Total Users"
           value={totalUsersNow}
-          percent={calcPercent(totalUsersNow, totalUsersPrev)}
-          compareLabel="last month"
-          sparkline={monthlyStats.map(m => m.count)}
+          percent={null} // hiq %
+          compareLabel=""
+          sparkline={[]}
           icon={Users}
         />
 
         <KPICard
-          title="Net Revenue"
-          value="$0.00"
-          percent={0}
+          title="Total Bookings"
+          value={totalBookingsNow}
+          percent={calcPercent(totalBookingsNow, totalBookingsPrev)}
           compareLabel="last month"
-          sparkline={[0, 0, 0, 0, 0, 0]}
-          icon={DollarSign}
+          sparkline={[]}
+          icon={CalendarDays}
         />
 
         <KPICard
