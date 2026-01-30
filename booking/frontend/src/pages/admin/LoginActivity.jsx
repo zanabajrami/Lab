@@ -81,11 +81,11 @@ export default function LastLogin() {
                 <div className="hidden md:block overflow-x-auto">
                     <table className="w-full text-left">
                         <thead>
-                            <tr className="bg-gray-50 border-y border-gray-100">
-                                <th className="px-8 py-4 text-[11px] font-bold text-gray-400 uppercase tracking-[0.1em]">ID</th>
-                                <th className="px-8 py-4 text-[11px] font-bold text-gray-400 uppercase tracking-[0.1em]">User Information</th>
-                                <th className="px-8 py-4 text-[11px] font-bold text-gray-400 uppercase tracking-[0.1em]">Role</th>
-                                <th className="px-8 py-4 text-[11px] font-bold text-gray-400 uppercase tracking-[0.1em]">Last Login</th>
+                            <tr className="bg-slate-900 border-y border-gray-100 text-gray-300 ">
+                                <th className="px-8 py-4 text-[11px] font-bold uppercase tracking-[0.1em]">ID</th>
+                                <th className="px-8 py-4 text-[11px] font-bold uppercase tracking-[0.1em]">User Information</th>
+                                <th className="px-8 py-4 text-[11px] font-bold uppercase tracking-[0.1em]">Role</th>
+                                <th className="px-8 py-4 text-[11px] font-bold uppercase tracking-[0.1em]">Last Login</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-50">

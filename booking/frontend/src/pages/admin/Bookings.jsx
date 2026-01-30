@@ -87,7 +87,7 @@ export default function Bookings() {
                 <div className="bg-white hidden lg:block overflow-x-auto">
                     <table className="w-full border-collapse">
                         <thead>
-                            <tr className="text-[11px] font-black text-gray-400 uppercase tracking-widest bg-gray-50/50">
+                            <tr className="bg-slate-900 text-[11px] font-black text-gray-300 uppercase tracking-widest">
                                 <th className="px-8 py-5 text-left">Hotel</th>
                                 <th className="px-8 py-5 text-left">Guest</th>
                                 <th className="px-8 py-5 text-center">Dates</th>

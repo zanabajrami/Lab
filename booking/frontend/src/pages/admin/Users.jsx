@@ -173,10 +173,10 @@ export default function Users({ onUserUpdated }) {
         </div>
 
         {/* Desktop Table */}
-        <div className="hidden md:block bg-white rounded-[2.5rem] shadow-sm border border-white -mt-2 md:-mt-4 overflow-x-auto">
+        <div className="hidden md:block bg-white rounded-[1rem] shadow-sm border border-white -mt-2 md:-mt-4 overflow-x-auto">
           <table className="w-full border-separate border-spacing-0 min-w-[600px]">
             <thead>
-              <tr className="text-slate-400">
+              <tr className="bg-slate-900 text-gray-300">
                 <th className="px-6 py-4 text-left text-[11px] font-bold uppercase tracking-[0.2em]">Member</th>
                 <th className="px-6 py-4 text-left text-[11px] font-bold uppercase tracking-[0.2em]">Role</th>
                 <th className="px-6 py-4 text-left text-[11px] font-bold uppercase tracking-[0.2em]">Join Date</th>
