@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import axios from "axios";
-import { Pencil, Trash2, CheckCircle, XCircle, Calendar, MapPin, CalendarCheck2, Search, Plus, User, Mail } from "lucide-react";
+import { Pencil, Trash2, CheckCircle, XCircle, Calendar, MapPin, CalendarCheck2, Search, Plus, User } from "lucide-react";
 import EditBooking from "../../components/dashboard/EditBooking";
 import CreateBooking from "../../components/dashboard/CreateBooking";
 

@@ -70,10 +70,7 @@ function Dashboard() {
     return Math.round(((current - previous) / previous) * 100);
   };
 
- const totalUsersNow = users.length;
- 
-  const totalUsersPrev =
-    monthlyStats?.[monthlyStats.length - 2]?.count ?? 0;
+  const totalUsersNow = users.length;
 
   const todayUsers =
     dailyStats?.[dailyStats.length - 1]?.count ?? 0;
