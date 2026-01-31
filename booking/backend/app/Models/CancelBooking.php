@@ -18,5 +18,5 @@ class CancelBooking extends Model
         'status'
     ];
 
-    public $timestamps = false;
+    public $timestamps = true;
     }

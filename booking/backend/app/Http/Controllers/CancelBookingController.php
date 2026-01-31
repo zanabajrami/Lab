@@ -2,46 +2,69 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Booking;
-use App\Models\CancelBooking;
 use Illuminate\Http\Request;
+use App\Models\CancelBooking;
 
 class CancelBookingController extends Controller
 {
-    // CREATE Cancel Request
+    // --- CREATE CANCEL BOOKING ---
     public function store(Request $request)
-{
-    try {
-        $data = $request->validate([
+    {
+        $request->validate([
             'booking_id' => 'required|integer',
-            'name' => 'required|string',
-            'email' => 'required|email',
-            'hotel_name' => 'required|string',
+            'name' => 'required|string|max:100',
+            'email' => 'required|email|max:100',
+            'hotel_name' => 'required|string|max:100',
+            'location' => 'required|string|max:255',
             'check_in' => 'required|date',
-            'check_out' => 'required|date',
-            'location' => 'required|string',
-            'reason' => 'required|string',
+            'check_out' => 'required|date|after_or_equal:check_in',
+            'reason' => 'nullable|string',
         ]);
 
-        $data['status'] = 'pending';
+        $cancel = CancelBooking::create([
+            'booking_id' => $request->booking_id,
+            'name' => $request->name,
+            'email' => $request->email,
+            'hotel_name' => $request->hotel_name,
+            'location' => $request->location,
+            'check_in' => $request->check_in,
+            'check_out' => $request->check_out,
+            'reason' => $request->reason,
+            'status' => 'pending',
+        ]);
 
-        $booking = Booking::find($data['booking_id']);
-        if (!$booking) {
-            return response()->json(['message' => 'Booking not found'], 404);
-        }
-
-        $cancel = CancelBooking::create($data);
-
-        return response()->json($cancel, 201);
-
-    } catch (\Illuminate\Validation\ValidationException $e) {
-        return response()->json(['errors' => $e->errors()], 422);
-    } catch (\Exception $e) {
         return response()->json([
-            'message' => 'Something went wrong',
-            'error' => $e->getMessage()
-        ], 500);
+            'message' => 'Cancellation request created successfully',
+            'cancel' => $cancel
+        ], 201);
     }
-}
 
+    // --- GET ALL CANCEL BOOKINGS (ADMIN) ---
+    public function index()
+    {
+        $cancellations = CancelBooking::orderBy('id', 'desc')->get();
+        return response()->json($cancellations, 200);
+    }
+
+    // --- UPDATE STATUS (OPTIONAL) ---
+    public function updateStatus(Request $request, $id)
+    {
+        $cancel = CancelBooking::findOrFail($id);
+        $request->validate([
+            'status' => 'required|in:pending,approved,rejected',
+        ]);
+        $cancel->status = $request->status;
+        $cancel->save();
+
+        return response()->json($cancel, 200);
+    }
+
+    // --- DELETE (OPTIONAL) ---
+    public function destroy($id)
+    {
+        $cancel = CancelBooking::findOrFail($id);
+        $cancel->delete();
+
+        return response()->json(['message' => 'Cancellation deleted'], 200);
+    }
 }
