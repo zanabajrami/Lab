@@ -24,7 +24,7 @@ function CancelBookings() {
         });
 
         if (!res.ok) {
-          const text = await res.text(); // merr text në rast gabimi (HTML)
+          const text = await res.text(); 
           throw new Error(`Server error: ${text}`);
         }
 

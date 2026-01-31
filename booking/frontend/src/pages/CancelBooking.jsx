@@ -24,7 +24,7 @@ function CancelBookingPage() {
   };
 
   const handleSelectBooking = (e) => {
-    const selected = hotels.find((h) => h.id == e.target.value);
+    const selected = hotels.find((h) => h.id === Number(e.target.value));
     if (!selected) return;
 
     setFormData((prev) => ({
@@ -127,7 +127,7 @@ function CancelBookingPage() {
               <select
                 name="booking_id"
                 value={formData.booking_id}
-                onChange={handleSelectBooking} 
+                onChange={handleSelectBooking}
                 required
                 className="w-full px-5 py-3 text-sm rounded-xl bg-slate-950/50 border border-slate-700 text-slate-200"
               >
@@ -148,8 +148,8 @@ function CancelBookingPage() {
                   <input
                     type="date"
                     name="check_in"
-                    value={formData.check_in || ""} 
-                    onChange={handleChange}         
+                    value={formData.check_in || ""}
+                    onChange={handleChange}
                     className="w-full px-5 py-3 text-sm rounded-xl bg-slate-950/30 border border-slate-700 text-slate-400"
                   />
                 </div>
