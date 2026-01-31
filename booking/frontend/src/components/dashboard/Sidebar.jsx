@@ -49,7 +49,7 @@ function Sidebar({ activePage, setActivePage }) {
         <button onClick={() => setActivePage("dashboard")} className={navItemClass("dashboard")}>
           <LayoutDashboard size={20} strokeWidth={activePage === "dashboard" ? 2.5 : 2} />
           <span className="hidden lg:inline ml-3 font-semibold text-[15px]">Dashboard</span>
-          
+
           {activePage === "dashboard" && (
             <div className="hidden lg:block absolute left-0 w-1 h-6 bg-indigo-900 rounded-r-full" />
           )}
@@ -64,7 +64,7 @@ function Sidebar({ activePage, setActivePage }) {
         <button onClick={() => setActivePage("users")} className={navItemClass("users")}>
           <Users size={20} strokeWidth={activePage === "users" ? 2.5 : 2} />
           <span className="hidden lg:inline ml-3 font-semibold text-[15px]">Users</span>
-          
+
           {activePage === "users" && (
             <div className="hidden lg:block absolute left-0 w-1 h-6 bg-indigo-900 rounded-r-full" />
           )}
@@ -79,7 +79,7 @@ function Sidebar({ activePage, setActivePage }) {
         <button onClick={() => setActivePage("last-login")} className={navItemClass("last-login")}>
           <UserLock size={20} strokeWidth={activePage === "last-login" ? 2.5 : 2} />
           <span className="hidden lg:inline ml-3 font-semibold text-[15px]">Login Activity</span>
-          
+
           {activePage === "last-login" && (
             <div className="hidden lg:block absolute left-0 w-1 h-6 bg-indigo-900 rounded-r-full" />
           )}
@@ -94,7 +94,7 @@ function Sidebar({ activePage, setActivePage }) {
         <button onClick={() => setActivePage("bookings")} className={navItemClass("bookings")}>
           <CalendarCheck size={20} strokeWidth={activePage === "bookings" ? 2.5 : 2} />
           <span className="hidden lg:inline ml-3 font-semibold text-[15px]">Bookings</span>
-          
+
           {activePage === "bookings" && (
             <div className="hidden lg:block absolute left-0 w-1 h-6 bg-indigo-900 rounded-r-full" />
           )}
@@ -103,6 +103,21 @@ function Sidebar({ activePage, setActivePage }) {
             size={14}
             className={`hidden lg:block ml-auto opacity-0 group-hover:opacity-100 transition-opacity
               ${activePage === "bookings" ? "opacity-100" : ""}`}
+          />
+        </button>
+
+        <button onClick={() => setActivePage("cancel-bookings")} className={navItemClass("cancel-bookings")}>
+          <CalendarCheck size={20} strokeWidth={activePage === "cancel-bookings" ? 2.5 : 2} />
+          <span className="hidden lg:inline ml-3 font-semibold text-[15px]">Cancel Requests</span>
+
+          {activePage === "cancel-bookings" && (
+            <div className="hidden lg:block absolute left-0 w-1 h-6 bg-indigo-900 rounded-r-full" />
+          )}
+
+          <ChevronRight
+            size={14}
+            className={`hidden lg:block ml-auto opacity-0 group-hover:opacity-100 transition-opacity
+      ${activePage === "cancel-bookings" ? "opacity-100" : ""}`}
           />
         </button>
 

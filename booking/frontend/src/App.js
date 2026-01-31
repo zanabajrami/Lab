@@ -23,6 +23,7 @@ import CustomerReviews from './pages/CustomerReviews';
 import Admin from './pages/admin/Admin';
 import LastLogin from "./pages/admin/LoginActivity";
 import Settings from "./pages/admin/Settings";
+import CancelBookings from "./pages/admin/CancelBookings";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -73,6 +74,7 @@ function MainWrapper() {
           <Route path="/admin" element={<Admin />} />
           <Route path="/last-login" element={<LastLogin />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/cancel-bookings" element={<CancelBookings />} />
 
         </Routes>
       </main>
