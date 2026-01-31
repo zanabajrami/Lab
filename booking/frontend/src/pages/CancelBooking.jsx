@@ -16,7 +16,6 @@ function CancelBookingPage() {
     reason: "",
   });
 
-  // Close modal
   const handleClose = () => navigate(-1);
 
   // Handle input change
@@ -24,21 +23,18 @@ function CancelBookingPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle booking selection
   const handleSelectBooking = (e) => {
     const selected = hotels.find((h) => h.id == e.target.value);
     if (!selected) return;
 
-    // Mbaj gjithçka që përdoruesi ka shkruar dhe plotëso vetëm location dhe hotel_name
     setFormData((prev) => ({
-      ...prev, // ruan emrin, emailin, reason, check_in, check_out
+      ...prev,
       booking_id: selected.id,
       hotel_name: selected.name || "",
       location: selected.location || "Unknown",
     }));
   };
 
-  // Submit cancel request
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -131,7 +127,7 @@ function CancelBookingPage() {
               <select
                 name="booking_id"
                 value={formData.booking_id}
-                onChange={handleSelectBooking} // përdor handleSelectBooking
+                onChange={handleSelectBooking} 
                 required
                 className="w-full px-5 py-3 text-sm rounded-xl bg-slate-950/50 border border-slate-700 text-slate-200"
               >
@@ -143,37 +139,34 @@ function CancelBookingPage() {
                 ))}
               </select>
 
-              {/* Readonly info nën dropdown */}
-              <div className="mt-4 space-y-3">
+              <div className="mt-4 space-y-3">=
                 {/* Check-in */}
-              {/* Check-in */}
-<div className="relative group">
-  <label className="absolute -top-2 left-4 px-2 bg-slate-900 text-[10px] font-bold text-indigo-300 uppercase">
-    Check-in Date
-  </label>
-  <input
-    type="date"
-    name="check_in"
-    value={formData.check_in || ""} // kurrë undefined
-    onChange={handleChange}          // kjo e lejon të zgjedhësh nga calendar
-    className="w-full px-5 py-3 text-sm rounded-xl bg-slate-950/30 border border-slate-700 text-slate-400"
-  />
-</div>
+                <div className="relative group">
+                  <label className="absolute -top-2 left-4 px-2 bg-slate-900 text-[10px] font-bold text-indigo-300 uppercase">
+                    Check-in Date
+                  </label>
+                  <input
+                    type="date"
+                    name="check_in"
+                    value={formData.check_in || ""} 
+                    onChange={handleChange}         
+                    className="w-full px-5 py-3 text-sm rounded-xl bg-slate-950/30 border border-slate-700 text-slate-400"
+                  />
+                </div>
 
-{/* Check-out */}
-<div className="relative group">
-  <label className="absolute -top-2 left-4 px-2 bg-slate-900 text-[10px] font-bold text-indigo-300 uppercase">
-    Check-out Date
-  </label>
-  <input
-    type="date"
-    name="check_out"
-    value={formData.check_out || ""}
-    onChange={handleChange}
-    className="w-full px-5 py-3 text-sm rounded-xl bg-slate-950/30 border border-slate-700 text-slate-400"
-  />
-</div>
-
+                {/* Check-out */}
+                <div className="relative group">
+                  <label className="absolute -top-2 left-4 px-2 bg-slate-900 text-[10px] font-bold text-indigo-300 uppercase">
+                    Check-out Date
+                  </label>
+                  <input
+                    type="date"
+                    name="check_out"
+                    value={formData.check_out || ""}
+                    onChange={handleChange}
+                    className="w-full px-5 py-3 text-sm rounded-xl bg-slate-950/30 border border-slate-700 text-slate-400"
+                  />
+                </div>
 
                 {/* Location */}
                 <div className="relative group">
