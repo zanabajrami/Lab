@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserStatsController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\CancelBookingController;
 
 // Routes pa login
 Route::post('register', [AuthController::class, 'register']);
@@ -17,6 +18,8 @@ Route::post('/messages', [MessageController::class, 'store']);
 Route::patch('/messages/{id}/read', [MessageController::class, 'markAsRead']);
 
 Route::post('/bookings', [BookingController::class, 'store']);
+
+Route::post('/cancel-bookings', [CancelBookingController::class, 'store']);
 
 // Routes me JWT
 Route::middleware('jwt.auth')->group(function () {
@@ -42,5 +45,10 @@ Route::middleware('jwt.auth')->group(function () {
     Route::get('/bookings', [BookingController::class, 'index']);
     Route::put('/bookings/{id}', [BookingController::class, 'update']);
     Route::delete('/bookings/{id}', [BookingController::class, 'destroy']);
+    
+    Route::get('/cancel-bookings', [CancelBookingController::class, 'index']);
+    Route::put('/cancel-bookings/{id}', [CancelBookingController::class, 'updateStatus']);
+    Route::delete('/cancel-bookings/{id}', [CancelBookingController::class, 'destroy']);
+    
     });
 });
