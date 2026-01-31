@@ -1,31 +1,79 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { hotels } from "../data/HotelsData";
 
 function CancelBookingPage() {
   const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
+    booking_id: "",
     name: "",
     email: "",
-    hotelName: "",
-    bookingDate: "",
+    hotel_name: "",
+    check_in: "",
+    check_out: "",
+    location: "",
     reason: "",
   });
 
+  // Close modal
   const handleClose = () => navigate(-1);
 
+  // Handle input change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Cancellation request sent! 📩");
-    handleClose();
+  // Handle booking selection
+  const handleSelectBooking = (e) => {
+    const selected = hotels.find((h) => h.id == e.target.value);
+    if (!selected) return;
+
+    // Mbaj gjithçka që përdoruesi ka shkruar dhe plotëso vetëm location dhe hotel_name
+    setFormData((prev) => ({
+      ...prev, // ruan emrin, emailin, reason, check_in, check_out
+      booking_id: selected.id,
+      hotel_name: selected.name || "",
+      location: selected.location || "Unknown",
+    }));
   };
 
+  // Submit cancel request
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!formData.booking_id) {
+      alert("Please select a booking to cancel.");
+      return;
+    }
+
+    try {
+      const res = await fetch("http://localhost:8000/api/cancel-bookings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        const err = await res.json();
+        alert(err.message || "Failed to send cancellation request.");
+        return;
+      }
+
+      alert("Your cancellation request has been sent!");
+      navigate(-1);
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Please try again.");
+    }
+  };
+
+  // Prevent body scroll when modal is open
   useEffect(() => {
     document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = "auto"; };
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, []);
 
   return (
@@ -33,15 +81,13 @@ function CancelBookingPage() {
       onClick={(e) => e.target === e.currentTarget && handleClose()}
       className="fixed inset-0 flex items-center justify-center bg-black/95 z-50 backdrop-blur-sm p-4"
     >
-      {/* Container Kryesor me Shkëlqim Anash */}
       <div
         className="w-full max-w-sm p-7 rounded-[2rem] relative
              bg-slate-950/50 border border-slate-700/50 shadow-[0_10px_50px_rgba(0,0,0,0.5)]
              transform transition-all duration-500 animate-in fade-in zoom-in-95"
       >
-        
-        {/* Header - I rregulluar më bukur */}
-        <div className="text-center mb-7">
+        {/* Header */}
+        <div className="text-center mb-4">
           <div className="inline-block px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-[10px] font-bold uppercase tracking-widest mb-3">
             Service Support
           </div>
@@ -50,16 +96,19 @@ function CancelBookingPage() {
           </h2>
         </div>
 
+        {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-3">
-            {/* Inputet me stil të ri */}
-            {[
-              { name: "name", placeholder: "Full Name", type: "text" },
-              { name: "email", placeholder: "Email Address", type: "email" },
-              { name: "hotelName", placeholder: "Hotel Name", type: "text" },
-            ].map((field) => (
+
+          {/* Inputs for name, email */}
+          {[
+            { name: "name", placeholder: "Full Name", type: "text" },
+            { name: "email", placeholder: "Email Address", type: "email" },
+          ].map((field) => (
+            <div className="relative group" key={field.name}>
+              <label className="absolute -top-2 left-4 px-2 bg-slate-900 text-[10px] font-bold text-indigo-300 uppercase">
+                {field.placeholder}
+              </label>
               <input
-                key={field.name}
                 type={field.type}
                 name={field.name}
                 placeholder={field.placeholder}
@@ -70,36 +119,97 @@ function CancelBookingPage() {
                            placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 
                            focus:border-indigo-400/50 transition-all duration-300"
               />
-            ))}
+            </div>
+          ))}
 
+          <div className="space-y-3">
+            {/* Dropdown me bookings */}
             <div className="relative group">
               <label className="absolute -top-2 left-4 px-2 bg-slate-900 text-[10px] font-bold text-indigo-300 uppercase">
-                Check-in Date
+                Select Booking
               </label>
-              <input
-                type="date"
-                name="bookingDate"
-                value={formData.bookingDate}
+              <select
+                name="booking_id"
+                value={formData.booking_id}
+                onChange={handleSelectBooking} // përdor handleSelectBooking
+                required
+                className="w-full px-5 py-3 text-sm rounded-xl bg-slate-950/50 border border-slate-700 text-slate-200"
+              >
+                <option value="">-- Select your booking --</option>
+                {hotels.map((h) => (
+                  <option key={h.id} value={h.id}>
+                    {h.name} — {h.check_in} to {h.check_out} ({h.location})
+                  </option>
+                ))}
+              </select>
+
+              {/* Readonly info nën dropdown */}
+              <div className="mt-4 space-y-3">
+                {/* Check-in */}
+              {/* Check-in */}
+<div className="relative group">
+  <label className="absolute -top-2 left-4 px-2 bg-slate-900 text-[10px] font-bold text-indigo-300 uppercase">
+    Check-in Date
+  </label>
+  <input
+    type="date"
+    name="check_in"
+    value={formData.check_in || ""} // kurrë undefined
+    onChange={handleChange}          // kjo e lejon të zgjedhësh nga calendar
+    className="w-full px-5 py-3 text-sm rounded-xl bg-slate-950/30 border border-slate-700 text-slate-400"
+  />
+</div>
+
+{/* Check-out */}
+<div className="relative group">
+  <label className="absolute -top-2 left-4 px-2 bg-slate-900 text-[10px] font-bold text-indigo-300 uppercase">
+    Check-out Date
+  </label>
+  <input
+    type="date"
+    name="check_out"
+    value={formData.check_out || ""}
+    onChange={handleChange}
+    className="w-full px-5 py-3 text-sm rounded-xl bg-slate-950/30 border border-slate-700 text-slate-400"
+  />
+</div>
+
+
+                {/* Location */}
+                <div className="relative group">
+                  <label className="absolute -top-2 left-4 px-2 bg-slate-900 text-[10px] font-bold text-indigo-300 uppercase">
+                    Location
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.location}
+                    readOnly
+                    className="w-full px-5 py-3 text-sm rounded-xl bg-slate-950/30 border border-slate-700 text-slate-400"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Reason */}
+            <div className="relative group">
+              <label className="absolute -top-2 left-4 px-2 bg-slate-900 text-[10px] font-bold text-indigo-300 uppercase">
+                Reason for cancellation
+              </label>
+              <textarea
+                name="reason"
+                rows="2"
+                placeholder="Reason for cancellation..."
+                value={formData.reason}
                 onChange={handleChange}
                 required
                 className="w-full px-5 py-3 text-sm rounded-xl bg-slate-950/50 border border-slate-700 text-slate-200 
-                           focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-400/50 transition-all"
-              />
+                           placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 
+                           focus:border-indigo-400/50 resize-none transition-all duration-300"
+              ></textarea>
             </div>
-
-            <textarea
-              name="reason"
-              rows="2"
-              placeholder="Reason for cancellation..."
-              value={formData.reason}
-              onChange={handleChange}
-              required
-              className="w-full px-5 py-3 text-sm rounded-xl bg-slate-950/50 border border-slate-700 text-slate-200 
-                         placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 
-                         focus:border-indigo-400/50 resize-none transition-all duration-300"
-            ></textarea>
           </div>
 
+          {/* Submit Button */}
           <button
             type="submit"
             className="w-full py-4 mt-2 rounded-xl bg-indigo-200 hover:bg-white 
@@ -110,7 +220,8 @@ function CancelBookingPage() {
           </button>
         </form>
 
-        <button 
+        {/* Close modal */}
+        <button
           onClick={handleClose}
           className="w-full mt-6 text-slate-500 hover:text-indigo-200 transition-colors text-xs font-semibold tracking-wide"
         >
