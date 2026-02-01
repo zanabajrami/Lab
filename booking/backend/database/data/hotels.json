@@ -1,0 +1,7217 @@
+[
+  {
+    "id": 1,
+    "name": "Four Points by Sheraton Hotel",
+    "location": "Prishtina",
+    "rating": 4.8,
+    "images": [
+      "../images/hotel1.jpg",
+      "../images/hotel1_1.jpg",
+      "../images/hotel1_2.jpg"
+    ],
+    "description": "Hotel modern me spa, pishinë të brendshme dhe restorant luksoz me pamje panoramike.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 129,
+    "amenities": [
+      "Spa",
+      "Indoor Pool",
+      "Free Wi-Fi",
+      "Breakfast Included",
+      "Parking",
+      "Fitness Center"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Hotel Rea Boutique",
+    "location": "Himarë",
+    "rating": 4.8,
+    "images": [
+      "../images/hotel16.jpg",
+      "../images/hotel16_1.jpg",
+      "../images/hotel16_2.jpg",
+      "../images/hotel16_3.jpg"
+    ],
+    "description": "Një hotel me arkitekturë elegante, për çifte që duan privatësi dhe qetësi.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 120,
+    "amenities": [
+      "Wi-Fi",
+      "Breakfast",
+      "Sea View",
+      "Free Parking",
+      "Bar"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Saranda Palace Hotel",
+    "location": "Sarandë",
+    "rating": 4.9,
+    "images": [
+      "../images/hotel13.jpg",
+      "../images/hotel13_1.jpg",
+      "../images/hotel13_2.jpg",
+      "../images/hotel13_3.jpg"
+    ],
+    "description": "Hotel i qetë me plazh privat, bar panoramik dhe dhoma me ballkon detar.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 135,
+    "amenities": [
+      "Private Beach",
+      "Bar",
+      "Sea View",
+      "Wi-Fi",
+      "Parking"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Brezovica Hotel",
+    "location": "Brezovicë",
+    "rating": 4.6,
+    "images": [
+      "../images/hotel6.jpg",
+      "../images/hotel6_1.jpg",
+      "../images/hotel6_2.jpg",
+      "../images/hotel6_3.jpg"
+    ],
+    "description": "Hotel malor pranë pistave të skijimit me sauna, spa dhe dhoma me pamje fantastike.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 120,
+    "amenities": [
+      "Ski Access",
+      "Spa",
+      "Sauna",
+      "Restaurant",
+      "Parking",
+      "Wi-Fi"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Villa Bujtina",
+    "location": "Pejë",
+    "rating": 4.7,
+    "images": [
+      "../images/villa68.jpg",
+      "../images/villa68_1.jpg",
+      "../images/villa68_2.jpg"
+    ],
+    "description": "Vilë moderne me qasje direkte në ski-in/ski-out, ideale për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 4,
+    "capacity": 7,
+    "price": 164,
+    "amenities": [
+      "Ski-in/Ski-out",
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "La Maroja View Hotel",
+    "location": "Dhërmi",
+    "rating": 4.3,
+    "images": [
+      "../images/hotel86.jpg",
+      "../images/hotel86_1.jpg",
+      "../images/hotel86_2.jpg"
+    ],
+    "description": "Hotel modern me dhoma jo-duhan, parkim falas, Wifi falas, restorant, bar dhe mëngjes të mrekullueshëm.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 50,
+    "amenities": [
+      "Non-smoking rooms",
+      "Free parking",
+      "Free Wifi",
+      "Restaurant",
+      "Bar",
+      "Wonderful Breakfast"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Luxury Villa",
+    "location": "Tirana",
+    "rating": 4.9,
+    "images": [
+      "../images/villa37.jpg",
+      "../images/villa37_1.jpg",
+      "../images/villa37_2.jpg",
+      "../images/villa37_3.jpg"
+    ],
+    "description": "Vilë luksoze dhe e hapur me pishinë, ideale për familje ose grup miqsh.",
+    "rooms": 4,
+    "capacity": 8,
+    "price": 584,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "Pool",
+      "TV",
+      "Washer",
+      "Dryer",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Cozy Apartment",
+    "location": "Himarë",
+    "rating": 3.8,
+    "images": [
+      "../images/apartment37.jpg",
+      "../images/apartment37_1.jpg",
+      "../images/apartment37_2.jpg",
+      "../images/apartment37_3.jpg"
+    ],
+    "description": "Apartament i thjeshtë dhe i rehatshëm, i përshtatshëm për një qëndrim të qetë.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 37,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "TV",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Sky Hotel",
+    "location": "Prizren",
+    "rating": 4.1,
+    "images": [
+      "../images/hotel95.jpg",
+      "../images/hotel95_1.jpg",
+      "../images/hotel95_2.jpg"
+    ],
+    "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 60,
+    "amenities": [
+      "Airport shuttle",
+      "Non-smoking rooms",
+      "Free parking",
+      "Free Wifi",
+      "Room service",
+      "Restaurant",
+      "Family rooms",
+      "Bar",
+      "Breakfast"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Swiss Diamond Hotel",
+    "location": "Prishtina",
+    "rating": 4.9,
+    "images": [
+      "../images/hotel2.jpg",
+      "../images/hotel2_1.jpg",
+      "../images/hotel2_2.jpg"
+    ],
+    "description": "Një hotel 5-yje me spa, restorante ndërkombëtare dhe dhoma elegante në qendër të qytetit.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 170,
+    "amenities": [
+      "Luxury Spa",
+      "Indoor Pool",
+      "Free Breakfast",
+      "Parking",
+      "Wi-Fi",
+      "Room Service 24/7"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Destiny Hotel & SPA",
+    "location": "Tirana",
+    "rating": 4.5,
+    "images": [
+      "../images/hotel60.jpg",
+      "../images/hotel60_1.jpg",
+      "../images/hotel60_2.jpg"
+    ],
+    "description": "Hotel modern me pajisje SPA dhe komoditet për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 108,
+    "amenities": [
+      "Wifi",
+      "Shared sauna",
+      "TV",
+      "Elevator",
+      "EV charger - level 2",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "1BR Apartment",
+    "location": "Himarë",
+    "rating": 4.33,
+    "images": [
+      "../images/apartment22.jpg",
+      "../images/apartment22_1.jpg",
+      "../images/apartment22_2.jpg",
+      "../images/apartment22_3.jpg"
+    ],
+    "description": "Apartament modern me pamje deti dhe lehtësira të plota për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 66,
+    "amenities": [
+      "Sea View",
+      "Shared Beach Access",
+      "Kitchen",
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "Free Parking Garage (1 space)",
+      "TV"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Sea View Hotel",
+    "location": "Sarandë",
+    "rating": 4.6,
+    "images": [
+      "../images/hotel78.jpg",
+      "../images/hotel78_1.jpg",
+      "../images/hotel78_2.jpg",
+      "../images/hotel78_3.jpg"
+    ],
+    "description": "Hotel modern dhe luksoz me pishinë, jacuzzi dhe ambiente të rehatshme, ideal për familje ose grupe miqsh.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 134,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Pool",
+      "Hot tub",
+      "Pets allowed",
+      "TV",
+      "Elevator"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Moments Villa",
+    "location": "near Prizren",
+    "rating": 4.4,
+    "images": [
+      "../images/villa89.jpg",
+      "../images/villa89_1.jpg",
+      "../images/villa89_2.jpg",
+      "../images/villa89_3.jpg"
+    ],
+    "description": "Vilë e rehatshme dhe moderne e përshtatshme për qëndrime relaksuese me hapësira komode dhe ambiente të mirëmbajtura për pushime cilësore.",
+    "rooms": 3,
+    "capacity": 8,
+    "price": 110,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Pets allowed",
+      "TV",
+      "Washer",
+      "Dryer"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Family Apartment",
+    "location": "Prishtina",
+    "rating": 4.3,
+    "images": [
+      "../images/apartment61.jpg",
+      "../images/apartment61_1.jpg",
+      "../images/apartment61_2.jpg"
+    ],
+    "description": "Apartament luksoz me lehtësira të plota, i përshtatshëm për grupe të mëdha dhe qëndrime relaksuese.",
+    "rooms": 2,
+    "capacity": 6,
+    "price": 68,
+    "amenities": [
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Prime Hotel",
+    "location": "Tirana",
+    "rating": 4.3,
+    "images": [
+      "../images/hotel59.jpg",
+      "../images/hotel59_1.jpg",
+      "../images/hotel59_2.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim të shkurtër ose të gjatë.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 70,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Tirana Apartments 1",
+    "location": "Tirana",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment77.jpg",
+      "../images/apartment77_1.jpg",
+      "../images/apartment77_2.jpg"
+    ],
+    "description": "Apartament komod dhe modern me hapësirë të këndshme për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 59,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "HDTV with standard cable, Netflix",
+      "Paid washer – In building",
+      "AC - split type ductless system",
+      "Private patio or balcony"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Hotel",
+    "location": "Himarë",
+    "rating": 4.5,
+    "images": [
+      "../images/hotel75.jpg",
+      "../images/hotel75_1.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm me akses plazhi, ideal për familje ose grup miqsh.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 96,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Villa Breza",
+    "location": "Brezovicë",
+    "rating": 4.7,
+    "images": [
+      "../images/villa3.jpg",
+      "../images/villa3_1.jpg",
+      "../images/villa3_2.jpg",
+      "../images/villa3_3.jpg"
+    ],
+    "description": "Arkitekturë elegante me kopshte të gjelbërta dhe ambient të ndriçuar natyrshëm.",
+    "rooms": 3,
+    "capacity": 8,
+    "price": 210,
+    "amenities": [
+      "Mountain View",
+      "Wi-Fi",
+      "Parking",
+      "Fully Equipped Kitchen",
+      "Fireplace",
+      "Private Garden"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Bujtina Apartments",
+    "location": "Pejë",
+    "rating": 4.5,
+    "images": [
+      "../images/apartment88.jpg",
+      "../images/apartment88_1.jpg",
+      "../images/apartment88_2.jpg"
+    ],
+    "description": "Apartamente moderne dhe komode, ideale për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 62,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Air conditioning",
+      "Bathtub",
+      "Private patio or balcony",
+      "Hair dryer"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Deluxe Villa",
+    "location": "Dhërmi",
+    "rating": 4.5,
+    "images": [
+      "../images/villa79.jpg",
+      "../images/villa79_1.jpg",
+      "../images/villa79_2.jpg"
+    ],
+    "description": "Villa luksoze dhe moderne për 2 persona, me Wifi, TV dhe ajër të kondicionuar për një qëndrim komod.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 150,
+    "amenities": [
+      "Wifi",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "New Hotel",
+    "location": "Himarë",
+    "rating": 4.3,
+    "images": [
+      "../images/hotel71.jpg",
+      "../images/hotel71_1.jpg",
+      "../images/hotel71_2.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim të shkurtër ose të gjatë.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 100,
+    "amenities": [
+      "Wifi",
+      "Free street parking",
+      "50 inch HDTV",
+      "AC - split type ductless system",
+      "Luggage dropoff allowed"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Hotel Paridi",
+    "location": "Ksamil",
+    "rating": 4,
+    "images": [
+      "../images/hotel97.jpg",
+      "../images/hotel97_1.jpg",
+      "../images/hotel97_2.jpg"
+    ],
+    "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime bazë për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 54,
+    "amenities": [
+      "Lock on bedroom door",
+      "Wifi",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "The Wilson Hotel",
+    "location": "Tirana",
+    "rating": 4.3,
+    "images": [
+      "../images/hotel54.jpg",
+      "../images/hotel54_1.jpg",
+      "../images/hotel54_2.jpg"
+    ],
+    "description": "Hotel i rehatshëm dhe modern, ideal për një qëndrim të shkurtër ose të gjatë.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 70,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Crystal Villa",
+    "location": "Dhërmi",
+    "rating": 4.7,
+    "images": [
+      "../images/villa83.jpg",
+      "../images/villa83_1.jpg",
+      "../images/villa83_2.jpg"
+    ],
+    "description": "Villa elegante me kuzhinë të pajisur, Wifi, parkim falas, TV, lavanderi dhe ajër të kondicionuar për një qëndrim komod.",
+    "rooms": 2,
+    "capacity": 6,
+    "price": 210,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Hill 2 Apartment",
+    "location": "Himarë",
+    "rating": 4.68,
+    "images": [
+      "../images/apartment29.jpg",
+      "../images/apartment29_1.jpg",
+      "../images/apartment29_2.jpg",
+      "../images/apartment29_3.jpg"
+    ],
+    "description": "Apartament modern me pamje deti dhe lehtësira të plota për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 43,
+    "amenities": [
+      "Sea View",
+      "Beach Access",
+      "Kitchen",
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Hotel Sirius",
+    "location": "Prishtina",
+    "rating": 4.7,
+    "images": [
+      "../images/hotel3.jpg",
+      "../images/hotel3_1.jpg",
+      "../images/hotel3_2.jpg"
+    ],
+    "description": "Ofron ambiente moderne, bar rooftop me pamje të mahnitshme dhe kuzhinë bashkëkohore.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 115,
+    "amenities": [
+      "Rooftop Bar",
+      "Restaurant",
+      "Wi-Fi",
+      "Breakfast",
+      "Meeting Rooms",
+      "Parking"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Villa Premium",
+    "location": "Brezovicë",
+    "rating": 4.8,
+    "images": [
+      "../images/villa6.jpg",
+      "../images/villa6_1.jpg",
+      "../images/villa6_2.jpg",
+      "../images/villa6_3.jpg",
+      "../images/villa6_4.jpg"
+    ],
+    "description": "Ambient modern dhe stil elegant, me zona relaksuese dhe pamje nga natyra përreth.",
+    "rooms": 3,
+    "capacity": 8,
+    "price": 326,
+    "amenities": [
+      "Mountain View",
+      "Wi-Fi",
+      "Parking",
+      "Fully Equipped Kitchen",
+      "Fireplace"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Epirus Hotel",
+    "location": "Sarandë",
+    "rating": 4.94,
+    "images": [
+      "../images/hotel40.jpg",
+      "../images/hotel40_1.jpg",
+      "../images/hotel40_2.jpg",
+      "../images/hotel40_3.jpg"
+    ],
+    "description": "Hotel modern me pamje kopshti, akses direkt në plazh dhe kushte të shkëlqyera për një qëndrim komod.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 94,
+    "amenities": [
+      "Garden View",
+      "Beachfront",
+      "Kitchen",
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "Free Parking (1 space)",
+      "Pets Allowed",
+      "TV with Standard Cable",
+      "Elevator"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Hotel Garden",
+    "location": "Prishtina",
+    "rating": 4.6,
+    "images": [
+      "../images/hotel4.jpg",
+      "../images/hotel4_1.jpg",
+      "../images/hotel4_2.jpg",
+      "../images/hotel4_3.jpg"
+    ],
+    "description": "Hotel i qetë me kopshte të bukura, ambient relaksues dhe restorant tradicional kosovar.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 127,
+    "amenities": [
+      "Garden View",
+      "Pool",
+      "Breakfast",
+      "Wi-Fi",
+      "Free Parking",
+      "Pet Friendly"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Meta Apartment",
+    "location": "Tirana",
+    "rating": 3.3,
+    "images": [
+      "../images/apartment79.jpg",
+      "../images/apartment79_1.jpg",
+      "../images/apartment79_2.jpg"
+    ],
+    "description": "Apartament modern dhe i rehatshëm për një qëndrim të këndshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 30,
+    "amenities": [
+      "Wifi",
+      "TV",
+      "Air conditioning",
+      "Hair dryer"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Hotel Nartel",
+    "location": "Prishtina",
+    "rating": 4.5,
+    "images": [
+      "../images/hotel5.jpg",
+      "../images/hotel5_1.jpg",
+      "../images/hotel5_2.jpg",
+      "../images/hotel5_3.jpg"
+    ],
+    "description": "Ideal për udhëtarë biznesi, me sallë takimesh moderne dhe parkim falas.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 80,
+    "amenities": [
+      "Business Center",
+      "Wi-Fi",
+      "Parking",
+      "Conference Room"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Hotel Pine",
+    "location": "Brezovicë",
+    "rating": 4.7,
+    "images": [
+      "../images/hotel7.jpg",
+      "../images/hotel7_1.jpg",
+      "../images/hotel7_2.jpg",
+      "../images/hotel7_3.jpg"
+    ],
+    "description": "Hotel komod me stil alpin, shumë afër teleferikut, i përshtatshëm për çifte dhe familje.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 115,
+    "amenities": [
+      "Mountain View",
+      "Wi-Fi",
+      "Spa",
+      "Restaurant",
+      "Free Parking"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Apartment 20",
+    "location": "Himarë",
+    "rating": 3.7,
+    "images": [
+      "../images/apartment41.jpg",
+      "../images/apartment41_1.jpg",
+      "../images/apartment41_2.jpg"
+    ],
+    "description": "Apartament praktik dhe i përshtatshëm për një qëndrim të këndshëm pranë detit.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 41,
+    "amenities": [
+      "Beach Access",
+      "Kitchen",
+      "Wi-Fi",
+      "TV"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Apartment Bella",
+    "location": "Ksamil",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment107.jpg",
+      "../images/apartment107_1.jpg"
+    ],
+    "description": "Apartament i rehatshëm dhe i përshtatshëm për grup të vogël, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 51,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Hotel",
+    "location": "Sarandë",
+    "rating": 4.5,
+    "images": [
+      "../images/hotel77.jpg",
+      "../images/hotel77_1.jpg"
+    ],
+    "description": "Hotel modern me akses të përbashkët në plazh dhe ambiente të rehatshme, ideal për familje ose grup miqsh.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 65,
+    "amenities": [
+      "Shared beach access",
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Tirana Apartments 3",
+    "location": "Tirana",
+    "rating": 4.1,
+    "images": [
+      "../images/apartment72.jpg",
+      "../images/apartment72_1.jpg",
+      "../images/apartment72_2.jpg"
+    ],
+    "description": "Apartament i rehatshëm dhe i përshtatshëm për një qëndrim të qetë dhe praktik.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 49,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "HDTV with standard cable",
+      "Paid washer – In building"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Orange Garden Villa",
+    "location": "Himarë",
+    "rating": 4.9,
+    "images": [
+      "../images/villa52.jpg",
+      "../images/villa52_1.jpg",
+      "../images/villa52_2.jpg"
+    ],
+    "description": "Vilë luksoze dhe moderne me hapësira private dhe teknologji të avancuar, ideale për grupet e mëdha dhe qëndrime komode.",
+    "rooms": 3,
+    "capacity": 7,
+    "price": 269,
+    "amenities": [
+      "Kitchen",
+      "Fast wifi – 99 Mbps",
+      "Free parking on premises",
+      "HDTV with Netflix",
+      "Free washer – In unit",
+      "Air conditioning",
+      "Private patio or balcony",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "MNB Apartments",
+    "location": "Pejë",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment94.jpg",
+      "../images/apartment94_1.jpg",
+      "../images/apartment94_2.jpg"
+    ],
+    "description": "Apartament modern dhe i rehatshëm për 4 persona, me kuzhinë të pajisur dhe facilitete të tjera për një qëndrim komod.",
+    "rooms": 3,
+    "capacity": 4,
+    "price": 111,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "TV",
+      "Elevator",
+      "Washer",
+      "Air conditioning",
+      "Refrigerator"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "The Ionian Villa",
+    "location": "Dhërmi",
+    "rating": 4.9,
+    "images": [
+      "../images/villa86.jpg",
+      "../images/villa86_1.jpg",
+      "../images/villa86_2.jpg"
+    ],
+    "description": "Villa luksoze me qasje në plazh dhe pamje nga kopshti, kuzhinë të pajisur, Wifi, garazh falas, HDTV, lavanderi falas dhe ajër të kondicionuar.",
+    "rooms": 2,
+    "capacity": 6,
+    "price": 382,
+    "amenities": [
+      "Garden view",
+      "Beach access",
+      "Kitchen",
+      "Wifi",
+      "Free residential garage on premises",
+      "HDTV",
+      "Free washer – In building",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Monte Villa",
+    "location": "near Brezovicë",
+    "rating": 4.9,
+    "images": [
+      "../images/villa8.jpg",
+      "../images/villa8_1.jpg",
+      "../images/villa8_2.jpg",
+      "../images/villa8_3.jpg",
+      "../images/villa8_4.jpg"
+    ],
+    "description": "Një villë ekskluzive në natyrë me pamje fantastike.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 280,
+    "amenities": [
+      "Luxury Spa",
+      "Gourmet Restaurant",
+      "Indoor Pool",
+      "Wi-Fi",
+      "Valet Parking"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Villa LUAR",
+    "location": "Himarë",
+    "rating": 5,
+    "images": [
+      "../images/villa54.jpg",
+      "../images/villa54_1.jpg",
+      "../images/villa54_2.jpg",
+      "../images/villa54_3.jpg"
+    ],
+    "description": "Vilë luksoze dhe e madhe me pamje nga luginat dhe malet, ideale për grupet e mëdha dhe qëndrime komode.",
+    "rooms": 6,
+    "capacity": 12,
+    "price": 1056,
+    "amenities": [
+      "Valley view",
+      "Mountain view",
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises – 4 spaces",
+      "Private outdoor pool - available seasonally, open specific hours",
+      "Hot tub"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Ksamil Villa",
+    "location": "Ksamil",
+    "rating": 4.3,
+    "images": [
+      "../images/villa100.jpg",
+      "../images/villa100_1.jpg",
+      "../images/villa100_2.jpg"
+    ],
+    "description": "Vilë e rehatshme dhe e përshtatshme për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 146,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Snow White Chalet",
+    "location": "near Brezovicë",
+    "rating": 4.5,
+    "images": [
+      "../images/villa9.jpg",
+      "../images/villa9_1.jpg",
+      "../images/villa9_2.jpg",
+      "../images/villa9_3.jpg"
+    ],
+    "description": "Chalet prej druri në zemër të maleve, perfekt për pushime dimërore private.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 160,
+    "amenities": [
+      "Private Chalet",
+      "Fireplace",
+      "Mountain View",
+      "Parking",
+      "Wi-Fi"
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Villa",
+    "location": "Pejë",
+    "rating": 4.5,
+    "images": [
+      "../images/villa62.jpg",
+      "../images/villa62_1.jpg"
+    ],
+    "description": "Vilë moderne dhe komode me jacuzzi, ideale për familje ose grupe të vogla.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 140,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "Hot tub",
+      "Pets allowed",
+      "TV"
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Ruby Hotel Prishtina",
+    "location": "Prishtina",
+    "rating": 4.6,
+    "images": [
+      "../images/hotel21.jpg",
+      "../images/hotel21_1.jpg",
+      "../images/hotel21_2.jpg",
+      "../images/hotel21_3.jpg"
+    ],
+    "description": "Hotel modern afër qendrës së Prishtinës, me dizajn elegant, mëngjes të shkëlqyer dhe ambiente të rehatshme.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 67,
+    "amenities": [
+      "Wi-Fi",
+      "Breakfast",
+      "Parking",
+      "Air Conditioning",
+      "24h Reception"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Hotel Butrinti",
+    "location": "Sarandë",
+    "rating": 4.8,
+    "images": [
+      "../images/hotel11.jpg",
+      "../images/hotel11_1.jpg",
+      "../images/hotel11_2.jpg",
+      "../images/hotel11_3.jpg"
+    ],
+    "description": "Hotel i njohur buzë detit me pamje fantastike, pishinë dhe restorant mesdhetar.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 140,
+    "amenities": [
+      "Beach Access",
+      "Outdoor Pool",
+      "Wi-Fi",
+      "Breakfast",
+      "Restaurant",
+      "Parking"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Cinco Apartments",
+    "location": "Pejë",
+    "rating": 4.3,
+    "images": [
+      "../images/apartment95.jpg",
+      "../images/apartment95_1.jpg",
+      "../images/apartment95_2.jpg"
+    ],
+    "description": "Apartament modern dhe i rehatshëm për 5 persona, me kuzhinë të pajisur dhe facilitete për një qëndrim të komod.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 94,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "A1 Apartment",
+    "location": "Himarë",
+    "rating": 3.9,
+    "images": [
+      "../images/apartment35.jpg",
+      "../images/apartment35_1.jpg",
+      "../images/apartment35_2.jpg",
+      "../images/apartment35_3.jpg"
+    ],
+    "description": "Apartament i thjeshtë dhe i rehatshëm, i përshtatshëm për një qëndrim të qetë.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 69,
+    "amenities": [
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "TV",
+      "Air Conditioning",
+      "Security Cameras"
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Atal Hotel",
+    "location": "Tirana",
+    "rating": 4.2,
+    "images": [
+      "../images/hotel45.jpg",
+      "../images/hotel45_1.jpg",
+      "../images/hotel45_2.jpg"
+    ],
+    "description": "Hotel i rehatshëm me ambient të qetë dhe pajisje moderne.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 30,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "43 inch HDTV",
+      "AC - split type ductless system",
+      "Shared backyard – Fully fenced",
+      "Luggage dropoff allowed"
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Beachfront Villa",
+    "location": "Dhërmi",
+    "rating": 4.8,
+    "images": [
+      "../images/villa84.jpg",
+      "../images/villa84_1.jpg",
+      "../images/villa84_2.jpg"
+    ],
+    "description": "Villa luksoze me qasje në plazh, pamje nga gjiri dhe oborri, kuzhinë të pajisur, Wifi, hapësirë për punë dhe parkim falas për 2 automjete.",
+    "rooms": 2,
+    "capacity": 10,
+    "price": 356,
+    "amenities": [
+      "Bay view",
+      "Courtyard view",
+      "Beach access",
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free driveway parking on premises – 2 spaces"
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Cozy Villa",
+    "location": "Himarë",
+    "rating": 4.5,
+    "images": [
+      "../images/villa50.jpg",
+      "../images/villa50_1.jpg",
+      "../images/villa50_2.jpg"
+    ],
+    "description": "Vilë komode me pamje nga mali dhe akses të përbashkët në plazh, ideale për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 60,
+    "amenities": [
+      "Mountain view",
+      "Garden view",
+      "Shared beach access",
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises"
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Luvra Apartment",
+    "location": "Dhërmi",
+    "rating": 4.6,
+    "images": [
+      "../images/apartment99.jpg",
+      "../images/apartment99_1.jpg",
+      "../images/apartment99_2.jpg"
+    ],
+    "description": "Apartament modern me qasje në plazh, me ambiente të rehatshme dhe pajisje për një qëndrim të këndshëm.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 153,
+    "amenities": [
+      "Beach access",
+      "Wifi",
+      "Free parking on premises",
+      "Pool",
+      "TV",
+      "Washer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Salt n Blue Villa",
+    "location": "Dhërmi",
+    "rating": 4.7,
+    "images": [
+      "../images/villa81.jpg",
+      "../images/villa81_1.jpg",
+      "../images/villa81_2.jpg"
+    ],
+    "description": "Villa luksoze me pamje nga deti dhe malet, kuzhinë të pajisur, Wifi, hapësirë për punë, parkim falas, TV 60 inch me kabllo premium dhe lavanderi falas në njësi.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 216,
+    "amenities": [
+      "Sea view",
+      "Mountain view",
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "60 inch HDTV with premium cable",
+      "Free washer – In unit"
+    ]
+  },
+  {
+    "id": 55,
+    "name": "XOXO Apartment",
+    "location": "Pejë",
+    "rating": 4.4,
+    "images": [
+      "../images/apartment85.jpg",
+      "../images/apartment85_1.jpg",
+      "../images/apartment85_2.jpg"
+    ],
+    "description": "Apartament modern dhe komod, ideal për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 58,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Studio 7 Apartments",
+    "location": "Prizren",
+    "rating": 4,
+    "images": [
+      "../images/apartment104.jpg",
+      "../images/apartment104_1.jpg",
+      "../images/apartment104_2.jpg"
+    ],
+    "description": "Apartament i rehatshëm dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira të rehatshme për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 32,
+    "amenities": [
+      "Non-smoking rooms",
+      "Free Wifi",
+      "Facilities for disabled guests",
+      "Family rooms"
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Terra Boutique Hotel",
+    "location": "Tirana",
+    "rating": 4.4,
+    "images": [
+      "../images/hotel49.jpg",
+      "../images/hotel49_1.jpg",
+      "../images/hotel49_2.jpg",
+      "../images/hotel49_3.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim komod në qytet.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 101,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Mont Chalet",
+    "location": "Brezovicë",
+    "rating": 4.8,
+    "images": [
+      "../images/villa10.jpg",
+      "../images/villa10_1.jpg",
+      "../images/villa10_2.jpg",
+      "../images/villa10_3.jpg",
+      "../images/villa10_4.jpg"
+    ],
+    "description": "Luks alpin me pamje të mahnitshme të maleve.",
+    "rooms": 3,
+    "capacity": 6,
+    "price": 456,
+    "amenities": [
+      "Kitchen",
+      "TV",
+      "Pets allowed",
+      "Wi-Fi",
+      "Parking"
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Hotel Emblem",
+    "location": "Sarandë",
+    "rating": 4.5,
+    "images": [
+      "../images/hotel14.jpg",
+      "../images/hotel14_1.jpg",
+      "../images/hotel14_2.jpg",
+      "../images/hotel14_3.jpg"
+    ],
+    "description": "Ambiente elegante, afër qendrës dhe portit të Sarandës, me shërbim cilësor.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 100,
+    "amenities": [
+      "Wi-Fi",
+      "Breakfast",
+      "Parking",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Hotel Derand",
+    "location": "Prishtina",
+    "rating": 4.7,
+    "images": [
+      "../images/hotel20.jpg",
+      "../images/hotel20_1.jpg",
+      "../images/hotel20_2.jpg",
+      "../images/hotel20_3.jpg",
+      "../images/hotel20_4.jpg"
+    ],
+    "description": "Hotel modern dhe i qetë në Prishtinë, me dhoma elegante, mëngjes të pasur dhe staf shumë miqësor.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 127,
+    "amenities": [
+      "Wi-Fi",
+      "Breakfast",
+      "Parking",
+      "Restaurant",
+      "Air Conditioning",
+      "24h Reception"
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Panorama Hotel",
+    "location": "Himarë",
+    "rating": 2.7,
+    "images": [
+      "../images/hotel17.jpg",
+      "../images/hotel17_1.jpg",
+      "../images/hotel17_2.jpg",
+      "../images/hotel17_3.jpg"
+    ],
+    "description": "Me pamje panoramike të detit, pishinë të hapur dhe atmosferë relaksuese.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 110,
+    "amenities": [
+      "Sea View",
+      "Outdoor Pool",
+      "Wi-Fi",
+      "Breakfast",
+      "Parking"
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Serenitas Apartment",
+    "location": "Tirana",
+    "rating": 4.3,
+    "images": [
+      "../images/apartment71.jpg",
+      "../images/apartment71_1.jpg",
+      "../images/apartment71_2.jpg",
+      "../images/apartment71_3.jpg"
+    ],
+    "description": "Apartament modern dhe i rehatshëm për një qëndrim të këndshëm.",
+    "rooms": 1,
+    "capacity": 5,
+    "price": 49,
+    "amenities": [
+      "Wifi",
+      "Free street parking",
+      "TV",
+      "Air conditioning",
+      "Luggage dropoff allowed",
+      "Hair dryer"
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Nam Hotel",
+    "location": "Prizren",
+    "rating": 4,
+    "images": [
+      "../images/hotel90.jpg",
+      "../images/hotel90_1.jpg",
+      "../images/hotel90_2.jpg"
+    ],
+    "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 45,
+    "amenities": [
+      "Non-smoking rooms",
+      "Free Wifi",
+      "Room service",
+      "Family rooms",
+      "Tea/Coffee Maker in All Rooms",
+      "Exceptional Breakfast"
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Villa 4",
+    "location": "Pejë",
+    "rating": 4.6,
+    "images": [
+      "../images/villa61.jpg",
+      "../images/villa61_1.jpg",
+      "../images/villa61_2.jpg"
+    ],
+    "description": "Vilë moderne dhe e gjerë me hapësira të bollshme dhe siguri të shtuar, ideale për familje ose grupe të mëdha.",
+    "rooms": 3,
+    "capacity": 8,
+    "price": 117,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Hotel Denoel",
+    "location": "Ksamil",
+    "rating": 4.1,
+    "images": [
+      "../images/hotel9.jpg",
+      "../images/hotel9_1.jpg",
+      "../images/hotel9_2.jpg",
+      "../images/hotel9_3.jpg"
+    ],
+    "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 50,
+    "amenities": [
+      "Free parking",
+      "Free Wifi",
+      "Restaurant",
+      "Room service",
+      "Family rooms",
+      "Beachfront",
+      "Bar",
+      "Private beach area",
+      "Breakfast"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Amel's Apartment",
+    "location": "Tirana",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment73.jpg",
+      "../images/apartment73_1.jpg",
+      "../images/apartment73_2.jpg"
+    ],
+    "description": "Apartament i rehatshëm dhe modern për një qëndrim të këndshëm.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 60,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free street parking",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Luxury Villa",
+    "location": "Ksamil",
+    "rating": 4.5,
+    "images": [
+      "../images/villa97.jpg",
+      "../images/villa97_1.jpg",
+      "../images/villa97_2.jpg",
+      "../images/villa97_3.jpg"
+    ],
+    "description": "Vilë luksoze dhe e rehatshme, e përshtatshme për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
+    "rooms": 3,
+    "capacity": 7,
+    "price": 280,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "Pool",
+      "TV",
+      "Washer",
+      "Air conditioning",
+      "Patio or balcony"
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Villa Jerina",
+    "location": "near Tirana",
+    "rating": 4.8,
+    "images": [
+      "../images/villa35.jpg",
+      "../images/villa35_1.jpg",
+      "../images/villa35_2.jpg",
+      "../images/villa35_3.jpg"
+    ],
+    "description": "Vilë luksoze dhe e gjerë, ideale për grupet e mëdha dhe qëndrime të rehatshme.",
+    "rooms": 6,
+    "capacity": 15,
+    "price": 494,
+    "amenities": [
+      "Courtyard view",
+      "Garden view",
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free driveway parking on premises – 20 spaces"
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Sun George Hotel",
+    "location": "Himarë",
+    "rating": 4.3,
+    "images": [
+      "../images/hotel73.jpg",
+      "../images/hotel73_1.jpg",
+      "../images/hotel73_2.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 65,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Bougainville Bay Hotel",
+    "location": "Sarandë",
+    "rating": 4.6,
+    "images": [
+      "../images/hotel12.jpg",
+      "../images/hotel12_1.jpg",
+      "../images/hotel12_2.jpg",
+      "../images/hotel12_3.jpg",
+      "../images/hotel12_4.jpg"
+    ],
+    "description": "Kompleks luksoz me plazh privat, 5 pishina dhe dhoma me dizajn artistik.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 155,
+    "amenities": [
+      "Private Beach",
+      "Multiple Pools",
+      "Spa",
+      "Wi-Fi",
+      "Parking",
+      "Restaurant"
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Prado Luxury Hotel",
+    "location": "Himarë",
+    "rating": 4.9,
+    "images": [
+      "../images/hotel15.jpg",
+      "../images/hotel15_1.jpg",
+      "../images/hotel15_2.jpg",
+      "../images/hotel15_3.jpg"
+    ],
+    "description": "Hotel modern buzë detit me restorant gourmet dhe dhoma me pamje të Jonit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 150,
+    "amenities": [
+      "Sea View",
+      "Restaurant",
+      "Wi-Fi",
+      "Breakfast",
+      "Private Beach",
+      "Pool",
+      "Parking"
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Hotel MANAMI",
+    "location": "Prishtina",
+    "rating": 4.7,
+    "images": [
+      "../images/hotel23.jpg",
+      "../images/hotel23_1.jpg",
+      "../images/hotel23_2.jpg",
+      "../images/hotel23_3.jpg"
+    ],
+    "description": "Hotel butik elegant në qendër të Prishtinës me dizajn modern, restorant gourmet dhe ambiente relaksuese.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 117,
+    "amenities": [
+      "Wi-Fi",
+      "Breakfast",
+      "Restaurant",
+      "Parking",
+      "Air Conditioning",
+      "24h Reception"
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Dhërmi Apartments",
+    "location": "Dhërmi",
+    "rating": 4.6,
+    "images": [
+      "../images/apartment101.jpg",
+      "../images/apartment101_1.jpg",
+      "../images/apartment101_2.jpg"
+    ],
+    "description": "Apartament modern me ambiente të rehatshme dhe pajisje të plota për një qëndrim komod dhe të këndshëm.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 182,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Hotel SOLO 127",
+    "location": "Prizren",
+    "rating": 4.1,
+    "images": [
+      "../images/hotel93.jpg",
+      "../images/hotel93_1.jpg",
+      "../images/hotel93_2.jpg",
+      "../images/hotel93_3.jpg"
+    ],
+    "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 55,
+    "amenities": [
+      "Airport shuttle",
+      "Non-smoking rooms",
+      "Free parking",
+      "Free Wifi",
+      "Room service",
+      "Restaurant",
+      "Family rooms",
+      "Bar",
+      "Breakfast"
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Diart Hotel",
+    "location": "Tirana",
+    "rating": 4.2,
+    "images": [
+      "../images/hotel55.jpg",
+      "../images/hotel55_1.jpg",
+      "../images/hotel55_2.jpg"
+    ],
+    "description": "Hotel modern dhe i përshtatshëm për një qëndrim të rehatshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 70,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Sunflower Hotel",
+    "location": "Sarandë",
+    "rating": 4.5,
+    "images": [
+      "../images/hotel76.jpg",
+      "../images/hotel76_1.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona me hapësirë private të jashtme.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 96,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning",
+      "Private patio or balcony",
+      "Luggage dropoff allowed"
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Villa Nr.94",
+    "location": "Dhërmi",
+    "rating": 5,
+    "images": [
+      "../images/villa87.jpg",
+      "../images/villa87_1.jpg",
+      "../images/villa87_2.jpg"
+    ],
+    "description": "Villa luksoze me pamje nga deti, qasje të përbashkët në plazh, kuzhinë të pajisur, Wifi, hapësirë për punë, parkim falas, pishinë private dhe Jacuzzi privat.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 459,
+    "amenities": [
+      "Sea view",
+      "Shared beach access – Beachfront",
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Private pool",
+      "Private hot tub"
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Sea View Hotel Himara",
+    "location": "Himarë",
+    "rating": 4.6,
+    "images": [
+      "../images/hotel18.jpg",
+      "../images/hotel18_1.jpg",
+      "../images/hotel18_2.jpg",
+      "../images/hotel18_3.jpg",
+      "../images/hotel18_4.jpg"
+    ],
+    "description": "Hotel i ri me dizajn modern dhe ballkone me pamje të mrekullueshme.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 100,
+    "amenities": [
+      "Balcony",
+      "Wi-Fi",
+      "Breakfast",
+      "Sea View",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 79,
+    "name": "Dimitri Hotel",
+    "location": "Himarë",
+    "rating": 4.8,
+    "images": [
+      "../images/hotel19.jpg",
+      "../images/hotel19_1.jpg",
+      "../images/hotel19_2.jpg",
+      "../images/hotel19_3.jpg"
+    ],
+    "description": "Hotel familjar me mikpritje tradicionale dhe mëngjes vendas shumë të shijshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 95,
+    "amenities": [
+      "Pool",
+      "Wi-Fi",
+      "Local Breakfast",
+      "Free Parking",
+      "Family Friendly"
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Venus Hotel",
+    "location": "Prishtina",
+    "rating": 4.8,
+    "images": [
+      "../images/hotel22.jpg",
+      "../images/hotel22_1.jpg",
+      "../images/hotel22_2.jpg",
+      "../images/hotel22_3.jpg",
+      "../images/hotel22_4.jpg"
+    ],
+    "description": "Hotel luksoz me spa, pishinë të madhe dhe restorant elegant, ideal për pushime relaksuese pranë Prishtinës.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 140,
+    "amenities": [
+      "Spa",
+      "Indoor Pool",
+      "Restaurant",
+      "Free Wi-Fi",
+      "Parking",
+      "Fitness Center"
+    ]
+  },
+  {
+    "id": 81,
+    "name": "Hotel 35",
+    "location": "Himarë",
+    "rating": 3.9,
+    "images": [
+      "../images/hotel72.jpg",
+      "../images/hotel72_1.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 56,
+    "amenities": [
+      "Wifi",
+      "Pets allowed",
+      "Air conditioning",
+      "Luggage dropoff allowed"
+    ]
+  },
+  {
+    "id": 82,
+    "name": "Villa Bora",
+    "location": "Brezovicë",
+    "rating": 4.6,
+    "images": [
+      "../images/villa4.jpg",
+      "../images/villa4_1.jpg",
+      "../images/villa4_2.jpg",
+      "../images/villa4_3.jpg",
+      "../images/villa4_4.jpg"
+    ],
+    "description": "Hapësira të ngrohta me dekor modern, ideal për relaks dhe aktivitete të ndryshme.",
+    "rooms": 3,
+    "capacity": 7,
+    "price": 172,
+    "amenities": [
+      "Mountain View",
+      "Wi-Fi",
+      "Parking",
+      "Fully Equipped Kitchen",
+      "Fireplace",
+      "Private Garden"
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Plaza Boutique Hotel",
+    "location": "Prishtina",
+    "rating": 4.6,
+    "images": [
+      "../images/hotel32.jpg",
+      "../images/hotel32_1.jpg",
+      "../images/hotel32_2.jpg",
+      "../images/hotel32_3.jpg"
+    ],
+    "description": "Hotel butik elegant në qendër të Prishtinës, me dhoma moderne, restorant gourmet dhe shërbim të shkëlqyer.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 89,
+    "amenities": [
+      "Free Wi-Fi",
+      "Breakfast",
+      "Parking",
+      "Restaurant",
+      "Air Conditioning",
+      "24h Reception"
+    ]
+  },
+  {
+    "id": 84,
+    "name": "Villa Lisa",
+    "location": "Pejë",
+    "rating": 4.7,
+    "images": [
+      "../images/villa73.jpg",
+      "../images/villa73_1.jpg",
+      "../images/villa73_2.jpg"
+    ],
+    "description": "Vilë moderne me pamje nga mali, ideale për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 3,
+    "capacity": 10,
+    "price": 109,
+    "amenities": [
+      "Mountain view",
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Hot tub"
+    ]
+  },
+  {
+    "id": 85,
+    "name": "Comfort Apartment 3",
+    "location": "Himarë",
+    "rating": 4,
+    "images": [
+      "../images/apartment33.jpg",
+      "../images/apartment33_1.jpg",
+      "../images/apartment33_2.jpg",
+      "../images/apartment33_3.jpg"
+    ],
+    "description": "Apartament komod me lehtësira të plota për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 108,
+    "amenities": [
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "TV",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 86,
+    "name": "Hotel Diamond Prishtina",
+    "location": "Prishtina",
+    "rating": 4.9,
+    "images": [
+      "../images/hotel24.jpg",
+      "../images/hotel24_1.jpg",
+      "../images/hotel24_2.jpg",
+      "../images/hotel24_3.jpg",
+      "../images/hotel24_4.jpg"
+    ],
+    "description": "Hotel luksoz me spa, pishinë dhe kazino, vetëm disa minuta nga qendra e qytetit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 180,
+    "amenities": [
+      "Spa",
+      "Indoor Pool",
+      "Casino",
+      "Restaurant",
+      "Parking",
+      "Wi-Fi"
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Mari Deluxe Hotel",
+    "location": "Sarandë",
+    "rating": 4,
+    "images": [
+      "../images/hotel33.jpg",
+      "../images/hotel33_1.jpg",
+      "../images/hotel33_2.jpg",
+      "../images/hotel33_3.jpg"
+    ],
+    "description": "Dhomë moderne dhe e rehatshme, afër plazhit dhe atraksioneve kryesore të Sarandës.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 38,
+    "amenities": [
+      "Beach access",
+      "Wi-Fi",
+      "TV",
+      "Air Conditioning",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Villa",
+    "location": "Pejë",
+    "rating": 4.5,
+    "images": [
+      "../images/villa72.jpg",
+      "../images/villa72_1.jpg",
+      "../images/villa72_2.jpg"
+    ],
+    "description": "Vilë moderne dhe komode, ideale për një qëndrim relaksues për 3 persona.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 84,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "Hot tub",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Hotel Castello",
+    "location": "Prizren",
+    "rating": 4,
+    "images": [
+      "../images/hotel89.jpg",
+      "../images/hotel89_1.jpg",
+      "../images/hotel89_2.jpg"
+    ],
+    "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të nevojshme për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 54,
+    "amenities": [
+      "Non-smoking rooms",
+      "Free parking",
+      "Free Wifi",
+      "Room service",
+      "Restaurant",
+      "Bar",
+      "Breakfast"
+    ]
+  },
+  {
+    "id": 90,
+    "name": "Escape Villa",
+    "location": "Tirana",
+    "rating": 4.6,
+    "images": [
+      "../images/villa34.jpg",
+      "../images/villa34_1.jpg",
+      "../images/villa34_2.jpg",
+      "../images/villa34_3.jpg"
+    ],
+    "description": "Vilë moderne dhe e rehatshme me hapësirë private të jashtme, ideale për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 97,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning",
+      "Private patio or balcony",
+      "Private backyard",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Palmera Villa 2",
+    "location": "Sarandë",
+    "rating": 4.8,
+    "images": [
+      "../images/villa23.jpg",
+      "../images/villa23_1.jpg",
+      "../images/villa23_2.jpg",
+      "../images/villa23_3.jpg",
+      "../images/villa23_4.jpg"
+    ],
+    "description": "Vilë moderne me ambient të ndritshëm, pishinë dhe parkim të siguruar.",
+    "rooms": 4,
+    "capacity": 10,
+    "price": 357,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "Pool",
+      "Pets allowed",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Villa Brezovica",
+    "location": "Brezovicë",
+    "rating": 4.8,
+    "images": [
+      "../images/villa2.jpg",
+      "../images/villa2_1.jpg",
+      "../images/villa2_2.jpg",
+      "../images/villa2_3.jpg",
+      "../images/villa2_4.jpg"
+    ],
+    "description": "Oaz modern me dritare panoramike që ofron pamje mahnitëse të maleve dhe hapësira të bollshme për argëtim.",
+    "rooms": 4,
+    "capacity": 8,
+    "price": 317,
+    "amenities": [
+      "Private Pool",
+      "Mountain View",
+      "Wi-Fi",
+      "Parking",
+      "Fully Equipped Kitchen",
+      "Fireplace"
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Pandora Hotel",
+    "location": "Tirana",
+    "rating": 4.2,
+    "images": [
+      "../images/hotel46.jpg",
+      "../images/hotel46_1.jpg",
+      "../images/hotel46_2.jpg"
+    ],
+    "description": "Hotel modern me pamje të qytetit dhe oborrit, ideal për një qëndrim të rehatshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 42,
+    "amenities": [
+      "City skyline view",
+      "Courtyard view",
+      "Wifi",
+      "Free driveway parking on premises – 5 spaces",
+      "Private hot tub",
+      "TV",
+      "Elevator"
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Hotel Prishtina",
+    "location": "Prishtina",
+    "rating": 4.5,
+    "images": [
+      "../images/hotel25.jpg",
+      "../images/hotel25_1.jpg",
+      "../images/hotel25_2.jpg",
+      "../images/hotel25_3.jpg"
+    ],
+    "description": "Hotel komod në qendër të Prishtinës me dhoma të rehatshme, mëngjes të pasur dhe staf mikpritës.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 115,
+    "amenities": [
+      "Wi-Fi",
+      "Pool",
+      "Breakfast",
+      "Parking",
+      "Restaurant",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 95,
+    "name": "Villa Lura",
+    "location": "near Prizren",
+    "rating": 4.3,
+    "images": [
+      "../images/villa91.jpg",
+      "../images/villa91_1.jpg"
+    ],
+    "description": "Vilë e rehatshme dhe e përshtatshme për grup të vogël, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
+    "rooms": 3,
+    "capacity": 6,
+    "price": 170,
+    "amenities": [
+      "Ski-in/Ski-out",
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 96,
+    "name": "Escape Hotel Himare",
+    "location": "Himarë",
+    "rating": 4.1,
+    "images": [
+      "../images/hotel63.jpg",
+      "../images/hotel63_1.jpg",
+      "../images/hotel63_2.jpg"
+    ],
+    "description": "Hotel modern dhe relaksues, i pajisur me pishinë dhe jacuzzi privat për një qëndrim komod.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 186,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Pool",
+      "Private hot tub - open 24 hours",
+      "TV"
+    ]
+  },
+  {
+    "id": 97,
+    "name": "ALYACHT Premium Hotel",
+    "location": "Sarandë",
+    "rating": 4.5,
+    "images": [
+      "../images/hotel39.jpg",
+      "../images/hotel39_1.jpg",
+      "../images/hotel39_2.jpg",
+      "../images/hotel39_3.jpg"
+    ],
+    "description": "Hotel luksoz dhe i rehatshëm pranë plazhit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 87,
+    "amenities": [
+      "Non-smoking Rooms",
+      "Free Parking",
+      "Room Service",
+      "Free Wi-Fi",
+      "Beachfront",
+      "Bar",
+      "Private Beach Area",
+      "Excellent Breakfast"
+    ]
+  },
+  {
+    "id": 98,
+    "name": "Villa Alaska",
+    "location": "Pejë",
+    "rating": 4.5,
+    "images": [
+      "../images/villa69.jpg",
+      "../images/villa69_1.jpg",
+      "../images/villa69_2.jpg"
+    ],
+    "description": "Vilë moderne me pamje nga lugina dhe mali, ideale për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 2,
+    "capacity": 8,
+    "price": 94,
+    "amenities": [
+      "Valley view",
+      "Mountain view",
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV"
+    ]
+  },
+  {
+    "id": 99,
+    "name": "Livinn Villa",
+    "location": "Prizren",
+    "rating": 4.3,
+    "images": [
+      "../images/villa94.jpg",
+      "../images/villa94_1.jpg",
+      "../images/villa94_2.jpg"
+    ],
+    "description": "Vilë e rehatshme dhe e përshtatshme për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
+    "rooms": 3,
+    "capacity": 7,
+    "price": 134,
+    "amenities": [
+      "Free on-site parking",
+      "Balcony",
+      "Free Wifi",
+      "Private bathroom",
+      "Family rooms"
+    ]
+  },
+  {
+    "id": 100,
+    "name": "Villa Azalea",
+    "location": "Tirana",
+    "rating": 4.5,
+    "images": [
+      "../images/villa39.jpg",
+      "../images/villa39_1.jpg",
+      "../images/villa39_2.jpg",
+      "../images/villa39_3.jpg"
+    ],
+    "description": "Vilë moderne dhe e rehatshme me pishinë sezonale, ideale për një qëndrim të këndshëm për familje ose miq.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 88,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "Pool - available seasonally",
+      "Pets allowed",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 101,
+    "name": "Hotel",
+    "location": "Himarë",
+    "rating": 3.8,
+    "images": [
+      "../images/hotel42.jpg",
+      "../images/hotel42_1.jpg",
+      "../images/hotel42_2.jpg",
+      "../images/hotel42_3.jpg"
+    ],
+    "description": "Hotel i thjeshtë dhe i përshtatshëm për një qëndrim komod.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 49,
+    "amenities": [
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Standard Apartment 4",
+    "location": "Prishtina",
+    "rating": 4,
+    "images": [
+      "../images/apartment48.jpg",
+      "../images/apartment48_1.jpg",
+      "../images/apartment48_2.jpg",
+      "../images/apartment48_3.jpg"
+    ],
+    "description": "Apartament i thjeshtë dhe i rehatshëm me lehtësira të plota për një qëndrim praktik.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 52,
+    "amenities": [
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "TV",
+      "Washer",
+      "Dryer",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Bloom Haven Apartment",
+    "location": "Tirana",
+    "rating": 4.4,
+    "images": [
+      "../images/apartment81.jpg",
+      "../images/apartment81_1.jpg",
+      "../images/apartment81_2.jpg",
+      "../images/apartment81_3.jpg"
+    ],
+    "description": "Apartament modern dhe i rehatshëm me pamje të qytetit, ideal për familje ose grup miqsh.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 47,
+    "amenities": [
+      "City skyline view",
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Essos Apartments",
+    "location": "Dhërmi",
+    "rating": 4.1,
+    "images": [
+      "../images/apartment97.jpg",
+      "../images/apartment97_1.jpg",
+      "../images/apartment97_2.jpg"
+    ],
+    "description": "Apartament modern me qasje në plazh dhe ambiente të rehatshme për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 40,
+    "amenities": [
+      "Beach access",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Baron Villas",
+    "location": "Brezovicë",
+    "rating": 4.8,
+    "images": [
+      "../images/villa12.jpg",
+      "../images/villa12_1.jpg",
+      "../images/villa12_2.jpg",
+      "../images/villa12_3.jpg"
+    ],
+    "description": "Stil luksoz me dizajn të veçantë, hapësira të bollshme dhe relaks të plotë.",
+    "rooms": 3,
+    "capacity": 7,
+    "price": 263,
+    "amenities": [
+      "Mountain View",
+      "Wi-Fi",
+      "Parking",
+      "Fully Equipped Kitchen",
+      "Fireplace"
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Courtyard by Marriott Hotel",
+    "location": "Prishtina",
+    "rating": 4.8,
+    "images": [
+      "../images/hotel30.jpg",
+      "../images/hotel30_1.jpg",
+      "../images/hotel30_2.jpg",
+      "../images/hotel30_3.jpg",
+      "../images/hotel30_4.jpg"
+    ],
+    "description": "Hotel modern luksoz me dhoma elegante, restorant gourmet dhe qendër fitnesi, vetëm disa minuta nga qendra e Prishtinës.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 149,
+    "amenities": [
+      "Wi-Fi",
+      "Breakfast",
+      "Parking",
+      "Restaurant",
+      "Pool",
+      "Fitness Center",
+      "24h Reception"
+    ]
+  },
+  {
+    "id": 107,
+    "name": "J&M Apartment",
+    "location": "Sarandë",
+    "rating": 4,
+    "images": [
+      "../images/apartment1.jpg",
+      "../images/apartment1_1.jpg",
+      "../images/apartment1_2.jpg"
+    ],
+    "description": "Akomodim i qetë me ballkon, pamje dhe ambiente familjare, ideal për 3 persona.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 27,
+    "amenities": [
+      "Free on-site parking",
+      "Balcony",
+      "Free Wifi",
+      "Private bathroom",
+      "Family rooms",
+      "View",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 108,
+    "name": "Alis Apartment",
+    "location": "Himarë",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment38.jpg",
+      "../images/apartment38_1.jpg",
+      "../images/apartment38_2.jpg",
+      "../images/apartment38_3.jpg"
+    ],
+    "description": "Apartament i gjerë dhe komod, i përshtatshëm për grupe dhe qëndrime relaksuese pranë detit.",
+    "rooms": 2,
+    "capacity": 6,
+    "price": 100,
+    "amenities": [
+      "Beach Access",
+      "Kitchen",
+      "Wi-Fi",
+      "TV",
+      "Air Conditioning",
+      "Smoking Allowed"
+    ]
+  },
+  {
+    "id": 109,
+    "name": "Golden Hotel",
+    "location": "Prishtina",
+    "rating": 4.7,
+    "images": [
+      "../images/hotel27.jpg",
+      "../images/hotel27_1.jpg",
+      "../images/hotel27_2.jpg",
+      "../images/hotel27_3.jpg"
+    ],
+    "description": "Hotel luksoz me ambient modern, dhoma të rehatshme dhe restorant elegant në qendër të Prishtinës.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 64,
+    "amenities": [
+      "Wi-Fi",
+      "Breakfast",
+      "Parking",
+      "Restaurant",
+      "Air Conditioning",
+      "24h Reception"
+    ]
+  },
+  {
+    "id": 110,
+    "name": "303 Apartment",
+    "location": "Sarandë",
+    "rating": 3.8,
+    "images": [
+      "../images/apartment15.jpg",
+      "../images/apartment15_1.jpg",
+      "../images/apartment15_2.jpg",
+      "../images/apartment15_3.jpg"
+    ],
+    "description": "Apartament komod me të gjitha lehtësitë e nevojshme për një qëndrim të rehatshëm.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 31,
+    "amenities": [
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "TV",
+      "Washer",
+      "Air Conditioning",
+      "Crib",
+      "Hair Dryer"
+    ]
+  },
+  {
+    "id": 111,
+    "name": "City 12 Apartment",
+    "location": "Himarë",
+    "rating": 4,
+    "images": [
+      "../images/apartment34.jpg",
+      "../images/apartment34_1.jpg",
+      "../images/apartment34_2.jpg"
+    ],
+    "description": "Apartament i rehatshëm me lehtësira të plota dhe i përshtatshëm për një qëndrim të këndshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 35,
+    "amenities": [
+      "Pets Allowed",
+      "Air Conditioning",
+      "Luggage Dropoff Allowed",
+      "Crib",
+      "Hair Dryer"
+    ]
+  },
+  {
+    "id": 112,
+    "name": "Villa Fisi",
+    "location": "Pejë",
+    "rating": 4.3,
+    "images": [
+      "../images/villa76.jpg",
+      "../images/villa76_1.jpg",
+      "../images/villa76_2.jpg"
+    ],
+    "description": "Villa moderne dhe e rehatshme, ideale për pushime familjare ose qëndrime relaksuese në Pejë.",
+    "rooms": 2,
+    "capacity": 6,
+    "price": 130,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning",
+      "Hair dryer"
+    ]
+  },
+  {
+    "id": 113,
+    "name": "Black Diamond Hotel",
+    "location": "Dhërmi",
+    "rating": 4.4,
+    "images": [
+      "../images/hotel83.jpg",
+      "../images/hotel83_1.jpg",
+      "../images/hotel83_2.jpg"
+    ],
+    "description": "Hotel modern me pishinë jashtme, spa, dhoma jo-duhan, transport nga/drejt aeroportit, parkim falas, restorant, dhoma familjare, qendër fitness dhe mëngjes të shkëlqyer.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 65,
+    "amenities": [
+      "Outdoor swimming pool",
+      "Spa",
+      "Non-smoking rooms",
+      "Airport shuttle",
+      "Free parking",
+      "Restaurant",
+      "Family rooms",
+      "Fitness center",
+      "Excellent Breakfast"
+    ]
+  },
+  {
+    "id": 114,
+    "name": "Meli Deluxe Apartment",
+    "location": "Prizren",
+    "rating": 4.1,
+    "images": [
+      "../images/apartment105.jpg",
+      "../images/apartment105_1.jpg",
+      "../images/apartment105_2.jpg"
+    ],
+    "description": "Apartament i rehatshëm dhe i përshtatshëm për grupet e vogla, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 50,
+    "amenities": [
+      "Free parking",
+      "Free Wifi",
+      "Family rooms"
+    ]
+  },
+  {
+    "id": 115,
+    "name": "Villa 2",
+    "location": "Pejë",
+    "rating": 4.6,
+    "images": [
+      "../images/villa66.jpg",
+      "../images/villa66_1.jpg",
+      "../images/villa66_2.jpg"
+    ],
+    "description": "Vilë moderne me pamje nga mali, ideale për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 5,
+    "capacity": 6,
+    "price": 117,
+    "amenities": [
+      "Mountain view",
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 116,
+    "name": "Villa Aquaterra",
+    "location": "Dhërmi",
+    "rating": 4.6,
+    "images": [
+      "../images/villa82.jpg",
+      "../images/villa82_1.jpg",
+      "../images/villa82_2.jpg"
+    ],
+    "description": "Villa moderne me kuzhinë të pajisur, Wifi, hapësirë për punë, parkim falas, TV, lavanderi, ajër të kondicionuar dhe vaskë për një qëndrim relaksues.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 175,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air conditioning",
+      "Bathtub"
+    ]
+  },
+  {
+    "id": 117,
+    "name": "Triumf Hotel",
+    "location": "Prizren",
+    "rating": 4.1,
+    "images": [
+      "../images/hotel96.jpg",
+      "../images/hotel96_1.jpg",
+      "../images/hotel96_2.jpg"
+    ],
+    "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 55,
+    "amenities": [
+      "Airport shuttle",
+      "Non-smoking rooms",
+      "Free parking",
+      "Free Wifi",
+      "Room service",
+      "Family rooms",
+      "Excellent Breakfast"
+    ]
+  },
+  {
+    "id": 118,
+    "name": "Villa 101 Nr.2",
+    "location": "Tirana",
+    "rating": 4.7,
+    "images": [
+      "../images/villa32.jpg",
+      "../images/villa32_1.jpg",
+      "../images/villa32_2.jpg"
+    ],
+    "description": "Vilë komode dhe moderne, ideale për një qëndrim relaksues për dy persona.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 82,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "TV",
+      "Air conditioning",
+      "Hair dryer"
+    ]
+  },
+  {
+    "id": 119,
+    "name": "Villa Noari",
+    "location": "Brezovicë",
+    "rating": 4.9,
+    "images": [
+      "../images/villa1.jpg",
+      "../images/villa1_1.jpg",
+      "../images/villa1_2.jpg",
+      "../images/villa1_3.jpg",
+      "../images/villa1_4.jpg"
+    ],
+    "description": "Villë luksoze në natyrë me pamje mahnitëse, dhoma moderne dhe ambient të qetë, perfekt për pushime dimërore.",
+    "rooms": 3,
+    "capacity": 6,
+    "price": 172,
+    "amenities": [
+      "Fireplace",
+      "Mountain View",
+      "Wi-Fi",
+      "Parking",
+      "Fully Equipped Kitchen"
+    ]
+  },
+  {
+    "id": 120,
+    "name": "Hotel Opera",
+    "location": "Prishtina",
+    "rating": 4.6,
+    "images": [
+      "../images/hotel26.jpg",
+      "../images/hotel26_1.jpg",
+      "../images/hotel26_2.jpg",
+      "../images/hotel26_3.jpg"
+    ],
+    "description": "Hotel modern dhe elegant pranë qendrës së Prishtinës, me restorant, mëngjes të pasur dhe dhoma të rehatshme.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 94,
+    "amenities": [
+      "Free Wi-Fi",
+      "Breakfast",
+      "Parking",
+      "Restaurant",
+      "Air Conditioning",
+      "24h Reception"
+    ]
+  },
+  {
+    "id": 121,
+    "name": "Imperator Hotel",
+    "location": "Tirana",
+    "rating": 4.3,
+    "images": [
+      "../images/hotel47.jpg",
+      "../images/hotel47_1.jpg",
+      "../images/hotel47_2.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim të shkurtër ose të gjatë.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 76,
+    "amenities": [
+      "Wifi",
+      "Free residential garage on premises",
+      "TV",
+      "Elevator",
+      "Air conditioning",
+      "Bathtub"
+    ]
+  },
+  {
+    "id": 122,
+    "name": "Luxury Apartment",
+    "location": "Sarandë",
+    "rating": 4.8,
+    "images": [
+      "../images/apartment6.jpg",
+      "../images/apartment6_1.jpg",
+      "../images/apartment6_2.jpg",
+      "../images/apartment6_3.jpg"
+    ],
+    "description": "Apartament modern me hapësira të bollshme dhe ambiente të rehatshme.",
+    "rooms": 2,
+    "capacity": 6,
+    "price": 1096,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air Conditioning",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 123,
+    "name": "Sophie's Apartment",
+    "location": "Himarë",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment24.jpg",
+      "../images/apartment24_1.jpg",
+      "../images/apartment24_2.jpg",
+      "../images/apartment24_3.jpg"
+    ],
+    "description": "Apartament komod me lehtësira bazë dhe i përshtatshëm për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 48,
+    "amenities": [
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "Pets Allowed",
+      "TV",
+      "Air Conditioning",
+      "Hair Dryer"
+    ]
+  },
+  {
+    "id": 124,
+    "name": "Brezovica Luxury Villa",
+    "location": "Brezovicë",
+    "rating": 4.7,
+    "images": [
+      "../images/villa11.jpg",
+      "../images/villa11_1.jpg",
+      "../images/villa11_2.jpg",
+      "../images/villa11_3.jpg"
+    ],
+    "description": "Dhoma me stil modern dhe ambiente të bollshme, perfekte për pushime të qeta.",
+    "rooms": 3,
+    "capacity": 8,
+    "price": 220,
+    "amenities": [
+      "Mountain View",
+      "Wi-Fi",
+      "Parking",
+      "Fully Equipped Kitchen",
+      "Fireplace",
+      "Private Garden"
+    ]
+  },
+  {
+    "id": 125,
+    "name": "Mercure Hotel",
+    "location": "Prishtina",
+    "rating": 4.7,
+    "images": [
+      "../images/hotel28.jpg",
+      "../images/hotel28_1.jpg",
+      "../images/hotel28_2.jpg",
+      "../images/hotel28_3.jpg",
+      "../images/hotel28_4.jpg"
+    ],
+    "description": "Hotel modern dhe komod në qendër të Prishtinës, me dhoma elegante, restorant dhe shërbim të shkëlqyer.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 99,
+    "amenities": [
+      "Free Wi-Fi",
+      "Breakfast",
+      "Parking",
+      "Restaurant",
+      "Fitness Center",
+      "24h Reception"
+    ]
+  },
+  {
+    "id": 126,
+    "name": "Villa Lumi 2",
+    "location": "Brezovicë",
+    "rating": 4.6,
+    "images": [
+      "../images/villa7.jpg",
+      "../images/villa7_1.jpg",
+      "../images/villa7_2.jpg",
+      "../images/villa7_3.jpg"
+    ],
+    "description": "Villë komode me hapësira të ndara dhe dekor të kujdesshëm për rehati maksimale.",
+    "rooms": 2,
+    "capacity": 8,
+    "price": 195,
+    "amenities": [
+      "Mountain View",
+      "Wi-Fi",
+      "Parking",
+      "Fully Equipped Kitchen",
+      "Fireplace",
+      "Private Garden"
+    ]
+  },
+  {
+    "id": 127,
+    "name": "ABA Hotel",
+    "location": "Ksamil",
+    "rating": 4.5,
+    "images": [
+      "../images/hotel10.jpg",
+      "../images/hotel10_1.jpg",
+      "../images/hotel10_2.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm, i përshtatshëm për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 257,
+    "amenities": [
+      "Beach view",
+      "Garden view",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air conditioning",
+      "Hair dryer",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 128,
+    "name": "Adriatic Villa",
+    "location": "Himarë",
+    "rating": 3.5,
+    "images": [
+      "../images/villa56.jpg",
+      "../images/villa56_1.jpg",
+      "../images/villa56_2.jpg"
+    ],
+    "description": "Vilë luksoze dhe e rehatshme me hapësira të bollshme, ideale për familje ose grup miqsh.",
+    "rooms": 2,
+    "capacity": 6,
+    "price": 508,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises"
+    ]
+  },
+  {
+    "id": 129,
+    "name": "Villa Eilin",
+    "location": "near Tirana",
+    "rating": 4.7,
+    "images": [
+      "../images/villa41.jpg",
+      "../images/villa41_1.jpg",
+      "../images/villa41_2.jpg"
+    ],
+    "description": "Vilë moderne dhe e rehatshme me pishinë, ideale për familje ose grup miqsh.",
+    "rooms": 2,
+    "capacity": 6,
+    "price": 210,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "Pool",
+      "Pets allowed",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 130,
+    "name": "DayLux Premium Apartments",
+    "location": "Sarandë",
+    "rating": 4.6,
+    "images": [
+      "../images/apartment8.jpg",
+      "../images/apartment8_1.jpg",
+      "../images/apartment8_2.jpg",
+      "../images/apartment8_3.jpg"
+    ],
+    "description": "Apartament modern dhe i rehatshëm me ballkon dhe ambient të qetë.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 46,
+    "amenities": [
+      "Free on-site parking",
+      "Breakfast",
+      "Balcony",
+      "Private bathroom",
+      "Free Wifi"
+    ]
+  },
+  {
+    "id": 131,
+    "name": "Metro Hotel",
+    "location": "Tirana",
+    "rating": 4.1,
+    "images": [
+      "../images/hotel50.jpg",
+      "../images/hotel50_1.jpg",
+      "../images/hotel50_2.jpg"
+    ],
+    "description": "Hotel i rehatshëm dhe praktik, ideal për një qëndrim të shkurtër ose të gjatë.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 72,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Pets allowed",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 132,
+    "name": "Peja Apartment",
+    "location": "Pejë",
+    "rating": 4.1,
+    "images": [
+      "../images/apartment93.jpg",
+      "../images/apartment93_1.jpg",
+      "../images/apartment93_2.jpg"
+    ],
+    "description": "Apartament i rehatshëm për 4 persona, me kuzhinë të pajisur dhe facilitete të tjera për një qëndrim të komod.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 65,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 133,
+    "name": "Platinium Hotel",
+    "location": "Dhërmi",
+    "rating": 4.6,
+    "images": [
+      "../images/hotel82.jpg",
+      "../images/hotel82_1.jpg",
+      "../images/hotel82_2.jpg"
+    ],
+    "description": "Hotel modern me qasje në plazh, Wifi, parkim falas, TV dhe ajër të kondicionuar për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 227,
+    "amenities": [
+      "Beach access",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 134,
+    "name": "Luxurious Apartment",
+    "location": "Prishtina",
+    "rating": 4.4,
+    "images": [
+      "../images/apartment44.jpg",
+      "../images/apartment44_1.jpg",
+      "../images/apartment44_2.jpg",
+      "../images/apartment44_3.jpg"
+    ],
+    "description": "Apartament luksoz me lehtësira të plota dhe hapësira për një qëndrim komod dhe relaksues.",
+    "rooms": 3,
+    "capacity": 6,
+    "price": 73,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "Free Residential Garage on Premises (4 spaces)",
+      "55 inch HDTV with Netflix",
+      "Elevator",
+      "Free Washer (In Unit)",
+      "Paid Dryer (In Building)"
+    ]
+  },
+  {
+    "id": 135,
+    "name": "Artis Blue Hotel",
+    "location": "Himarë",
+    "rating": 4.5,
+    "images": [
+      "../images/hotel70.jpg",
+      "../images/hotel70_1.jpg",
+      "../images/hotel70_2.jpg"
+    ],
+    "description": "Hotel modern dhe luksoz me jacuzzi, ideal për një qëndrim relaksues për familje ose miq.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 143,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Hot tub",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 136,
+    "name": "Nil's Apartment",
+    "location": "Pejë",
+    "rating": 4.4,
+    "images": [
+      "../images/apartment86.jpg",
+      "../images/apartment86_1.jpg",
+      "../images/apartment86_2.jpg"
+    ],
+    "description": "Apartament modern dhe komod, ideal për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 65,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV"
+    ]
+  },
+  {
+    "id": 137,
+    "name": "Villa Prevalla",
+    "location": "near Prizren",
+    "rating": 4.5,
+    "images": [
+      "../images/villa90.jpg",
+      "../images/villa90_1.jpg",
+      "../images/villa90_2.jpg"
+    ],
+    "description": "Vilë komode dhe e gjerë e përshtatshme për grupet, me ambiente të rehatshme dhe hapësira të mirëmbajtura për pushime relaksuese.",
+    "rooms": 2,
+    "capacity": 14,
+    "price": 206,
+    "amenities": [
+      "Ski-in/Ski-out",
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "Hot tub",
+      "TV",
+      "Washer",
+      "Indoor fireplace"
+    ]
+  },
+  {
+    "id": 138,
+    "name": "Central Apartment 1",
+    "location": "Himarë",
+    "rating": 4,
+    "images": [
+      "../images/apartment36.jpg",
+      "../images/apartment36_1.jpg",
+      "../images/apartment36_2.jpg"
+    ],
+    "description": "Apartament komod dhe i pajisur mirë për një qëndrim të rehatshëm.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 59,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "TV",
+      "Air Conditioning",
+      "Refrigerator",
+      "Paid Parking on Premises"
+    ]
+  },
+  {
+    "id": 139,
+    "name": "Deluxe Apartment",
+    "location": "Prishtina",
+    "rating": 4.1,
+    "images": [
+      "../images/apartment47.jpg",
+      "../images/apartment47_1.jpg",
+      "../images/apartment47_2.jpg",
+      "../images/apartment47_3.jpg"
+    ],
+    "description": "Apartament komod me lehtësira të plota dhe hapësirë të përshtatshme për një qëndrim të rehatshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 76,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "Free Parking on Premises",
+      "TV",
+      "Air Conditioning",
+      "Hair Dryer"
+    ]
+  },
+  {
+    "id": 140,
+    "name": "Villa V",
+    "location": "Brezovicë",
+    "rating": 4.8,
+    "images": [
+      "../images/villa14.jpg",
+      "../images/villa14_1.jpg",
+      "../images/villa14_2.jpg",
+      "../images/villa14_3.jpg"
+    ],
+    "description": "Dhoma të dizajnuara me stil dhe pajisje moderne për rehati maksimale.",
+    "rooms": 3,
+    "capacity": 6,
+    "price": 409,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "Free Parking",
+      "TV",
+      "Washer",
+      "Indoor Fireplace",
+      "Refrigerator",
+      "Smoking Allowed"
+    ]
+  },
+  {
+    "id": 141,
+    "name": "Hotel",
+    "location": "Tirana",
+    "rating": 4.4,
+    "images": [
+      "../images/hotel56.jpg",
+      "../images/hotel56_1.jpg",
+      "../images/hotel56_2.jpg"
+    ],
+    "description": "Hotel i rehatshëm me hapësirë të jashtme private dhe pajisje moderne për një qëndrim komod.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 110,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "TV",
+      "Air conditioning",
+      "Private patio or balcony",
+      "Private backyard"
+    ]
+  },
+  {
+    "id": 142,
+    "name": "08 Villa",
+    "location": "Pejë",
+    "rating": 4.6,
+    "images": [
+      "../images/villa59.jpg",
+      "../images/villa59_1.jpg",
+      "../images/villa59_2.jpg"
+    ],
+    "description": "Vilë moderne dhe komode me jacuzzi dhe hapësira të bollshme, ideale për një qëndrim relaksues për familje ose miq.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 98,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Hot tub",
+      "Pets allowed",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 143,
+    "name": "Studio Nr.4 Apartment",
+    "location": "Tirana",
+    "rating": 4,
+    "images": [
+      "../images/apartment68.jpg",
+      "../images/apartment68_1.jpg"
+    ],
+    "description": "Apartament i rehatshëm dhe i përshtatshëm për një qëndrim të shkurtër ose të gjatë.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 33,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "TV",
+      "Air conditioning",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 144,
+    "name": "Villa Kamila",
+    "location": "Tirana",
+    "rating": 4.9,
+    "images": [
+      "../images/villa40.jpg",
+      "../images/villa40_1.jpg",
+      "../images/villa40_2.jpg",
+      "../images/villa40_3.jpg"
+    ],
+    "description": "Vilë luksoze dhe e hapur me pishinë, ideale për grupet e mëdha dhe qëndrime të rehatshme.",
+    "rooms": 4,
+    "capacity": 10,
+    "price": 570,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Pool",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 145,
+    "name": "Hotel Ionian",
+    "location": "Dhërmi",
+    "rating": 4.2,
+    "images": [
+      "../images/hotel84.jpg",
+      "../images/hotel84_1.jpg",
+      "../images/hotel84_2.jpg"
+    ],
+    "description": "Hotel modern me dhoma jo-duhan, Wifi falas, restorant, dhoma familjare, qasje në plazh dhe bar.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 45,
+    "amenities": [
+      "Non-smoking rooms",
+      "Free Wifi",
+      "Restaurant",
+      "Family rooms",
+      "Beachfront",
+      "Bar"
+    ]
+  },
+  {
+    "id": 146,
+    "name": "Hotel EMAR",
+    "location": "Ksamil",
+    "rating": 4,
+    "images": [
+      "../images/hotel8.jpg",
+      "../images/hotel8_1.jpg",
+      "../images/hotel8_2.jpg"
+    ],
+    "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 46,
+    "amenities": [
+      "Airport shuttle",
+      "Free parking",
+      "Free Wifi",
+      "Family rooms",
+      "Beachfront",
+      "Bar",
+      "Good Breakfast"
+    ]
+  },
+  {
+    "id": 147,
+    "name": "Prior Hotel",
+    "location": "Prizren",
+    "rating": 4.1,
+    "images": [
+      "../images/hotel91.jpg",
+      "../images/hotel91_1.jpg",
+      "../images/hotel91_2.jpg"
+    ],
+    "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 45,
+    "amenities": [
+      "Airport shuttle",
+      "Non-smoking rooms",
+      "Free parking",
+      "Free Wifi",
+      "Room service",
+      "Restaurant",
+      "Family rooms",
+      "Bar",
+      "Very Good Breakfast"
+    ]
+  },
+  {
+    "id": 148,
+    "name": "Apartment",
+    "location": "Pejë",
+    "rating": 4.4,
+    "images": [
+      "../images/apartment83.jpg",
+      "../images/apartment83_1.jpg",
+      "../images/apartment83_2.jpg"
+    ],
+    "description": "Apartament modern dhe i gjerë, ideal për familje ose grupe miqsh me komoditete të plota.",
+    "rooms": 3,
+    "capacity": 7,
+    "price": 144,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 149,
+    "name": "Hotel",
+    "location": "Himarë",
+    "rating": 4.2,
+    "images": [
+      "../images/hotel67.jpg",
+      "../images/hotel67_1.jpg"
+    ],
+    "description": "Hotel modern dhe i sigurt, ideal për një qëndrim të shkurtër ose të gjatë.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 47,
+    "amenities": [
+      "Wifi",
+      "TV",
+      "Air conditioning",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 150,
+    "name": "4SeasonsGea Apartment",
+    "location": "Tirana",
+    "rating": 4.1,
+    "images": [
+      "../images/apartment74.jpg",
+      "../images/apartment74_1.jpg",
+      "../images/apartment74_2.jpg"
+    ],
+    "description": "Apartament i thjeshtë dhe komod, ideal për një qëndrim të shkurtër ose të gjatë.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 53,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "TV",
+      "Washer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 151,
+    "name": "Hotel Callisto",
+    "location": "Prishtina",
+    "rating": 4.6,
+    "images": [
+      "../images/hotel29.jpg",
+      "../images/hotel29_1.jpg",
+      "../images/hotel29_2.jpg",
+      "../images/hotel29_3.jpg"
+    ],
+    "description": "Hotel modern dhe i qetë në Prishtinë, me dhoma të rehatshme, restorant dhe staf shumë mikpritës.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 72,
+    "amenities": [
+      "Wi-Fi",
+      "Breakfast",
+      "Parking",
+      "Restaurant",
+      "Air Conditioning",
+      "24h Reception"
+    ]
+  },
+  {
+    "id": 152,
+    "name": "Himara City Hotel",
+    "location": "Himarë",
+    "rating": 3.9,
+    "images": [
+      "../images/hotel68.jpg",
+      "../images/hotel68_1.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm, i përshtatshëm për familje ose çiftet që kërkojnë një qëndrim të qetë.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 88,
+    "amenities": [
+      "Wifi",
+      "Pets allowed",
+      "Air conditioning",
+      "Luggage dropoff allowed",
+      "Crib",
+      "Hair dryer"
+    ]
+  },
+  {
+    "id": 153,
+    "name": "Apartment 4",
+    "location": "Pejë",
+    "rating": 4,
+    "images": [
+      "../images/apartment92.jpg",
+      "../images/apartment92_1.jpg",
+      "../images/apartment92_2.jpg"
+    ],
+    "description": "Apartament i rehatshëm për 3 persona, me kuzhinë të pajisur dhe facilitete për një qëndrim komod.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 36,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "AC - split type ductless system"
+    ]
+  },
+  {
+    "id": 154,
+    "name": "Apartment 103",
+    "location": "Himarë",
+    "rating": 4.67,
+    "images": [
+      "../images/apartment30.jpg",
+      "../images/apartment30_1.jpg",
+      "../images/apartment30_2.jpg",
+      "../images/apartment30_3.jpg"
+    ],
+    "description": "Apartament i rehatshëm me lehtësira bazë dhe siguri të shtuar për një qëndrim komod.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 84,
+    "amenities": [
+      "Lock on Bedroom Door",
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "TV",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 155,
+    "name": "Lumbardhi Apartments",
+    "location": "Pejë",
+    "rating": 4.5,
+    "images": [
+      "../images/apartment89.jpg",
+      "../images/apartment89_1.jpg",
+      "../images/apartment89_2.jpg"
+    ],
+    "description": "Apartamente moderne dhe komode, ideale për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 53,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Elevator",
+      "EV charger"
+    ]
+  },
+  {
+    "id": 156,
+    "name": "Point Villa ",
+    "location": "Brezovicë",
+    "rating": 4.7,
+    "images": [
+      "../images/villa18.jpg",
+      "../images/villa18_1.jpg",
+      "../images/villa18_2.jpg",
+      "../images/villa18_3.jpg"
+    ],
+    "description": "Villë moderne me akses direkt në pistat e skijimit dhe ambiente të rehatshme për pushime relaksuese.",
+    "rooms": 3,
+    "capacity": 9,
+    "price": 95,
+    "amenities": [
+      "Ski-in/Ski-out",
+      "Kitchen",
+      "Wi-Fi",
+      "Free Parking",
+      "TV",
+      "Washer",
+      "Indoor Fireplace",
+      "Exterior Security Cameras"
+    ]
+  },
+  {
+    "id": 157,
+    "name": "Litan Hotel",
+    "location": "Sarandë",
+    "rating": 4,
+    "images": [
+      "../images/hotel38.jpg",
+      "../images/hotel38_1.jpg",
+      "../images/hotel38_2.jpg",
+      "../images/hotel38_3.jpg"
+    ],
+    "description": "Hotel modern dhe i përshtatshëm për familje.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 90,
+    "amenities": [
+      "Non-smoking Rooms",
+      "Airport Shuttle",
+      "Free Parking",
+      "Restaurant",
+      "Room Service",
+      "Family Rooms",
+      "Terrace",
+      "Bar",
+      "Excellent Breakfast"
+    ]
+  },
+  {
+    "id": 158,
+    "name": "Coastal Hotel",
+    "location": "Himarë",
+    "rating": 4,
+    "images": [
+      "../images/hotel41.jpg",
+      "../images/hotel41_1.jpg",
+      "../images/hotel41_2.jpg",
+      "../images/hotel41_3.jpg"
+    ],
+    "description": "Hotel i thjeshtë dhe i rehatshëm, i përshtatshëm për një qëndrim pranë bregdetit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 35,
+    "amenities": [
+      "Wi-Fi",
+      "TV",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 159,
+    "name": "Hotel Luna",
+    "location": "Prizren",
+    "rating": 4.1,
+    "images": [
+      "../images/hotel87.jpg",
+      "../images/hotel87_1.jpg",
+      "../images/hotel87_2.jpg"
+    ],
+    "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të dobishme për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 56,
+    "amenities": [
+      "Airport shuttle",
+      "Non-smoking rooms",
+      "Free parking",
+      "Free Wifi",
+      "Room service",
+      "Restaurant",
+      "Family rooms",
+      "Bar",
+      "Good Breakfast"
+    ]
+  },
+  {
+    "id": 160,
+    "name": "Apartment Prizreni",
+    "location": "Prizren",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment103.jpg",
+      "../images/apartment103_1.jpg",
+      "../images/apartment103_2.jpg"
+    ],
+    "description": "Apartament i rehatshëm dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira komode për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 78,
+    "amenities": [
+      "Non-smoking rooms",
+      "Free parking",
+      "Free Wifi (3 Mbps)",
+      "Family rooms"
+    ]
+  },
+  {
+    "id": 161,
+    "name": "Comfy Apartment",
+    "location": "Tirana",
+    "rating": 4,
+    "images": [
+      "../images/apartment62.jpg",
+      "../images/apartment62_1.jpg",
+      "../images/apartment62_2.jpg",
+      "../images/apartment62_3.jpg"
+    ],
+    "description": "Apartament komod dhe modern për një qëndrim të këndshëm.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 35,
+    "amenities": [
+      "Kitchen",
+      "Fast Wifi",
+      "Dedicated workspace",
+      "Free street parking",
+      "TV",
+      "Washer",
+      "Dryer"
+    ]
+  },
+  {
+    "id": 162,
+    "name": "Union Premium Apartments",
+    "location": "Prishtina",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment46.jpg",
+      "../images/apartment46_1.jpg",
+      "../images/apartment46_2.jpg",
+      "../images/apartment46_3.jpg"
+    ],
+    "description": "Apartament modern dhe komod me lehtësira bazë për një qëndrim të këndshëm.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 65,
+    "amenities": []
+  },
+  {
+    "id": 163,
+    "name": "Vetus Hotel",
+    "location": "Prishtina",
+    "rating": 4.5,
+    "images": [
+      "../images/hotel31.jpg",
+      "../images/hotel31_1.jpg",
+      "../images/hotel31_2.jpg",
+      "../images/hotel31_3.jpg"
+    ],
+    "description": "Hotel modern dhe komod në Prishtinë, me dhoma të rehatshme, mëngjes të pasur dhe staf mikpritës.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 81,
+    "amenities": [
+      "Free Wi-Fi",
+      "Breakfast",
+      "Parking",
+      "Restaurant",
+      "Air Conditioning",
+      "24h Reception"
+    ]
+  },
+  {
+    "id": 164,
+    "name": "Private Villa",
+    "location": "Brezovicë",
+    "rating": 4.8,
+    "images": [
+      "../images/villa19.jpg",
+      "../images/villa19_1.jpg",
+      "../images/villa19_2.jpg",
+      "../images/villa19_3.jpg"
+    ],
+    "description": "Villë me dizajn të ngrohtë dhe pajisje moderne, ideale për pushime komode në mal.",
+    "rooms": 4,
+    "capacity": 6,
+    "price": 276,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "Free Parking",
+      "Pets Allowed",
+      "TV",
+      "Washer",
+      "Air Conditioning",
+      "Indoor Fireplace"
+    ]
+  },
+  {
+    "id": 165,
+    "name": "Luxury Apartments",
+    "location": "Tirana",
+    "rating": 4.5,
+    "images": [
+      "../images/apartment66.jpg",
+      "../images/apartment66_1.jpg",
+      "../images/apartment66_2.jpg",
+      "../images/apartment66_3.jpg"
+    ],
+    "description": "Apartament luksoz dhe i rehatshëm për një qëndrim të këndshëm.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 56,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "Washer"
+    ]
+  },
+  {
+    "id": 166,
+    "name": "Grand Hotel",
+    "location": "Himarë",
+    "rating": 4.4,
+    "images": [
+      "../images/hotel74.jpg",
+      "../images/hotel74_1.jpg"
+    ],
+    "description": "Hotel modern dhe i sigurt, ideal për një qëndrim relaksues për dy persona.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 38,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 167,
+    "name": "Ionian Premium Villas",
+    "location": "Sarandë",
+    "rating": 4.8,
+    "images": [
+      "../images/villa21.jpg",
+      "../images/villa21_1.jpg",
+      "../images/villa21_2.jpg",
+      "../images/villa21_3.jpg"
+    ],
+    "description": "Vila premium me pishinë të jashtme, ambiente familjare dhe pamje relaksuese.",
+    "rooms": 3,
+    "capacity": 7,
+    "price": 230,
+    "amenities": [
+      "Free on-site parking",
+      "Outdoor swimming pool",
+      "Free Wifi",
+      "Private bathroom",
+      "Family rooms",
+      "View",
+      "Air conditioning",
+      "Non-smoking rooms",
+      "Flat-screen TV"
+    ]
+  },
+  {
+    "id": 168,
+    "name": "Piro Apartment",
+    "location": "Sarandë",
+    "rating": 3.3,
+    "images": [
+      "../images/apartment5.jpg",
+      "../images/apartment5_1.jpg",
+      "../images/apartment5_2.jpg",
+      "../images/apartment5_3.jpg"
+    ],
+    "description": "Apartament i thjeshtë dhe i rehatshëm me akses në të gjitha shërbimet bazë.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 47,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 169,
+    "name": "Skyline Exclusive Apartment",
+    "location": "Pejë",
+    "rating": 4.5,
+    "images": [
+      "../images/apartment84.jpg",
+      "../images/apartment84_1.jpg",
+      "../images/apartment84_2.jpg"
+    ],
+    "description": "Apartament modern dhe i rehatshëm me kuzhinë të pajisur dhe hapësirë të dedikuar për punë, ideal për 8 persona.",
+    "rooms": 3,
+    "capacity": 8,
+    "price": 73,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air conditioning",
+      "Hair dryer"
+    ]
+  },
+  {
+    "id": 170,
+    "name": "Koko Hotel",
+    "location": "Ksamil",
+    "rating": 4.2,
+    "images": [
+      "../images/hotel98.jpg",
+      "../images/hotel98_1.jpg"
+    ],
+    "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 90,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Pets allowed",
+      "TV"
+    ]
+  },
+  {
+    "id": 171,
+    "name": "Villa in Brezovica",
+    "location": "Brezovicë",
+    "rating": 4.8,
+    "images": [
+      "../images/villa17.jpg",
+      "../images/villa17_1.jpg",
+      "../images/villa17_2.jpg"
+    ],
+    "description": "Villë komode me pamje mahnitëse nga liqeni dhe ambiente të bollshme për pushime të qeta.",
+    "rooms": 3,
+    "capacity": 8,
+    "price": 257,
+    "amenities": [
+      "Lake View",
+      "Kitchen",
+      "Wi-Fi",
+      "Free Parking",
+      "TV",
+      "Washer",
+      "Air Conditioning",
+      "Indoor Fireplace"
+    ]
+  },
+  {
+    "id": 172,
+    "name": "Olive Stone Villa",
+    "location": "Himarë",
+    "rating": 4.8,
+    "images": [
+      "../images/villa53.jpg",
+      "../images/villa53_1.jpg",
+      "../images/villa53_2.jpg",
+      "../images/villa53_3.jpg"
+    ],
+    "description": "Vilë luksoze dhe e gjerë, ideale për familje ose grupe të mëdha me hapësira të bollshme dhe komoditete moderne.",
+    "rooms": 3,
+    "capacity": 10,
+    "price": 233,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Dryer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 173,
+    "name": "Deluxe Apartment",
+    "location": "Tirana",
+    "rating": 4.3,
+    "images": [
+      "../images/apartment64.jpg",
+      "../images/apartment64_1.jpg",
+      "../images/apartment64_2.jpg",
+      "../images/apartment64_3.jpg"
+    ],
+    "description": "Një apartament modern dhe i rehatshëm për një qëndrim të këndshëm.",
+    "rooms": 1,
+    "capacity": 5,
+    "price": 58,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free residential garage on premises",
+      "49 inch HDTV",
+      "Elevator",
+      "Free washer – In unit"
+    ]
+  },
+  {
+    "id": 174,
+    "name": "Lux 33 Apartment",
+    "location": "Sarandë",
+    "rating": 4.72,
+    "images": [
+      "../images/apartment16.jpg",
+      "../images/apartment16_1.jpg",
+      "../images/apartment16_2.jpg",
+      "../images/apartment16_3.jpg"
+    ],
+    "description": "Apartament modern me pamje të qytetit dhe lehtësira të plota për një qëndrim të rehatshëm.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 90,
+    "amenities": [
+      "City Skyline View",
+      "Kitchen",
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "HDTV",
+      "Elevator"
+    ]
+  },
+  {
+    "id": 175,
+    "name": "Dea's Villa",
+    "location": "Himarë",
+    "rating": 4,
+    "images": [
+      "../images/villa24.jpg",
+      "../images/villa24_1.jpg",
+      "../images/villa24_2.jpg",
+      "../images/villa24_3.jpg"
+    ],
+    "description": "Vila luksoze me lehtësira të plota dhe siguri të jashtme për një qëndrim komod dhe relaksues.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 178,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "TV",
+      "Washer",
+      "Air Conditioning",
+      "Bathtub",
+      "Exterior Security Cameras on Property"
+    ]
+  },
+  {
+    "id": 176,
+    "name": "Superior Apartment 1",
+    "location": "Prishtina",
+    "rating": 4.1,
+    "images": [
+      "../images/apartment49.jpg",
+      "../images/apartment49_1.jpg",
+      "../images/apartment49_2.jpg",
+      "../images/apartment49_3.jpg"
+    ],
+    "description": "Apartament modern dhe i rehatshëm me lehtësira të plota për një qëndrim të këndshëm.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 82,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "TV",
+      "Washer",
+      "Dryer",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 177,
+    "name": "Central Luxurious Apartment",
+    "location": "Tirana",
+    "rating": 4.5,
+    "images": [
+      "../images/apartment75.jpg",
+      "../images/apartment75_1.jpg",
+      "../images/apartment75_2.jpg",
+      "../images/apartment75_3.jpg"
+    ],
+    "description": "Apartament modern dhe luksoz me pamje të qytetit, ideal për një qëndrim të rehatshëm.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 117,
+    "amenities": [
+      "City skyline view",
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "50 inch HDTV with Netflix, premium cable, standard cable",
+      "Elevator"
+    ]
+  },
+  {
+    "id": 178,
+    "name": "Hotel Mateo",
+    "location": "Himarë",
+    "rating": 4.3,
+    "images": [
+      "../images/hotel65.jpg",
+      "../images/hotel65_1.jpg",
+      "../images/hotel65_2.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 130,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning",
+      "Hair dryer"
+    ]
+  },
+  {
+    "id": 179,
+    "name": "Family Villa",
+    "location": "Himarë",
+    "rating": 4.3,
+    "images": [
+      "../images/villa45.jpg",
+      "../images/villa45_1.jpg",
+      "../images/villa45_2.jpg"
+    ],
+    "description": "Vilë familjare me ambiente të bollshme, akses plazhi dhe pamje relaksuese të kopshtit dhe oborrit.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 86,
+    "amenities": [
+      "Garden view",
+      "Courtyard view",
+      "Beach access",
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free driveway parking on premises – 10 spaces",
+      "Pets allowed"
+    ]
+  },
+  {
+    "id": 180,
+    "name": "Hotel Barleti",
+    "location": "Prizren",
+    "rating": 4,
+    "images": [
+      "../images/hotel92.jpg",
+      "../images/hotel92_1.jpg",
+      "../images/hotel92_2.jpg"
+    ],
+    "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të dobishme për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 54,
+    "amenities": [
+      "Non-smoking rooms",
+      "Free Wifi",
+      "Restaurant",
+      "Bar",
+      "Good Breakfast"
+    ]
+  },
+  {
+    "id": 181,
+    "name": "Form Apartment",
+    "location": "Dhërmi",
+    "rating": 4.5,
+    "images": [
+      "../images/apartment98.jpg",
+      "../images/apartment98_1.jpg",
+      "../images/apartment98_2.jpg"
+    ],
+    "description": "Apartament modern me pamje nga plazhi dhe hapësira të pajisura për rehati dhe relaks.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 123,
+    "amenities": [
+      "Beach view",
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "Pets allowed",
+      "TV",
+      "Washer",
+      "Dryer"
+    ]
+  },
+  {
+    "id": 182,
+    "name": "Villa 05",
+    "location": "Pejë",
+    "rating": 4.6,
+    "images": [
+      "../images/villa71.jpg",
+      "../images/villa71_1.jpg",
+      "../images/villa71_2.jpg"
+    ],
+    "description": "Vilë moderne dhe komode, ideale për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 1,
+    "capacity": 6,
+    "price": 109,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Pets allowed",
+      "TV",
+      "Air conditioning",
+      "Indoor fireplace"
+    ]
+  },
+  {
+    "id": 183,
+    "name": "Villa GreyGreen",
+    "location": "Tirana",
+    "rating": 4.5,
+    "images": [
+      "../images/villa36.jpg",
+      "../images/villa36_1.jpg",
+      "../images/villa36_2.jpg"
+    ],
+    "description": "Vilë moderne dhe komode, ideale për një qëndrim relaksues me miq ose familje.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 58,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Pets allowed",
+      "TV",
+      "Air conditioning",
+      "Hair dryer",
+      "Microwave"
+    ]
+  },
+  {
+    "id": 184,
+    "name": "Villa 1",
+    "location": "Himarë",
+    "rating": 4.7,
+    "images": [
+      "../images/villa58.jpg",
+      "../images/villa58_1.jpg",
+      "../images/villa58_2.jpg"
+    ],
+    "description": "Vilë komode dhe moderne, ideale për familje ose grupe të vogla me hapësira të bollshme dhe komoditete të plota.",
+    "rooms": 2,
+    "capacity": 6,
+    "price": 134,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "Pets allowed",
+      "TV",
+      "Washer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 185,
+    "name": "Rayan Apartment",
+    "location": "Sarandë",
+    "rating": 4,
+    "images": [
+      "../images/apartment2.jpg",
+      "../images/apartment2_1.jpg",
+      "../images/apartment2_2.jpg",
+      "../images/apartment2_3.jpg"
+    ],
+    "description": "Apartament i qetë dhe komod me ballkon privat, parkim falas dhe ambiente moderne për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 48,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air Conditioning",
+      "Private patio or balcony",
+      "Luggage dropoff allowed"
+    ]
+  },
+  {
+    "id": 186,
+    "name": "Triplex Villa",
+    "location": "Brezovicë",
+    "rating": 4.9,
+    "images": [
+      "../images/villa13.jpg",
+      "../images/villa13_1.jpg",
+      "../images/villa13_2.jpg",
+      "../images/villa13_3.jpg",
+      "../images/villa13_4.jpg"
+    ],
+    "description": "Villë moderne me hapësira të ndara dhe dizajn inovativ, ideale për pushime të veçanta.",
+    "rooms": 4,
+    "capacity": 9,
+    "price": 297,
+    "amenities": [
+      "Mountain View",
+      "Wi-Fi",
+      "Parking",
+      "Fully Equipped Kitchen",
+      "Fireplace"
+    ]
+  },
+  {
+    "id": 187,
+    "name": "Goros' Apartment",
+    "location": "Himarë",
+    "rating": 4.65,
+    "images": [
+      "../images/apartment26.jpg",
+      "../images/apartment26_1.jpg",
+      "../images/apartment26_2.jpg",
+      "../images/apartment26_3.jpg"
+    ],
+    "description": "Apartament komod me lehtësira bazë dhe i përshtatshëm për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 48,
+    "amenities": [
+      "Free Parking on Premises",
+      "Pets Allowed",
+      "TV",
+      "Air Conditioning",
+      "Hair Dryer"
+    ]
+  },
+  {
+    "id": 188,
+    "name": "Villa Hoxha",
+    "location": "Brezovicë",
+    "rating": 4.7,
+    "images": [
+      "../images/villa5.jpg",
+      "../images/villa5_1.jpg",
+      "../images/villa5_2.jpg",
+      "../images/villa5_3.jpg"
+    ],
+    "description": "Villë me dhoma të ndriçuara natyrshëm, hapësira të bollshme për aktivitet dhe qetësi.",
+    "rooms": 2,
+    "capacity": 8,
+    "price": 250,
+    "amenities": [
+      "Mountain View",
+      "Wi-Fi",
+      "Parking",
+      "Fully Equipped Kitchen",
+      "Fireplace",
+      "Private Garden"
+    ]
+  },
+  {
+    "id": 189,
+    "name": "Apartment",
+    "location": "Prishtina",
+    "rating": 4.3,
+    "images": [
+      "../images/apartment43.jpg",
+      "../images/apartment43_1.jpg",
+      "../images/apartment43_2.jpg",
+      "../images/apartment43_3.jpg"
+    ],
+    "description": "Apartament modern me lehtësira të plota dhe hapësirë për relaksim.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 54,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "Free Parking on Premises",
+      "55 inch HDTV with Netflix",
+      "Elevator",
+      "Washer",
+      "Dryer"
+    ]
+  },
+  {
+    "id": 190,
+    "name": "Tree Villa",
+    "location": "Himarë",
+    "rating": 4.4,
+    "images": [
+      "../images/villa48.jpg",
+      "../images/villa48_1.jpg",
+      "../images/villa48_2.jpg"
+    ],
+    "description": "Vilë moderne dhe e rehatshme, ideale për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 98,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 191,
+    "name": "City Center Villa",
+    "location": "Tirana",
+    "rating": 4.5,
+    "images": [
+      "../images/villa33.jpg",
+      "../images/villa33_1.jpg",
+      "../images/villa33_2.jpg"
+    ],
+    "description": "Vilë moderne dhe komode, ideale për një qëndrim të qetë dhe relaksues.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 49,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning",
+      "Backyard",
+      "Refrigerator"
+    ]
+  },
+  {
+    "id": 192,
+    "name": "Malesia Villa 4",
+    "location": "Pejë",
+    "rating": 4.6,
+    "images": [
+      "../images/villa64.jpg",
+      "../images/villa64_1.jpg",
+      "../images/villa64_2.jpg"
+    ],
+    "description": "Vilë moderne me qasje direkte në ski-in/ski-out, ideale për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 2,
+    "capacity": 6,
+    "price": 161,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 193,
+    "name": "Luvra 2 Apartment",
+    "location": "Dhërmi",
+    "rating": 4.7,
+    "images": [
+      "../images/apartment100.jpg",
+      "../images/apartment100_1.jpg",
+      "../images/apartment100_2.jpg"
+    ],
+    "description": "Apartament modern me ambiente të pajisura dhe hapësira komode për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 245,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 194,
+    "name": "Villa",
+    "location": "Pejë",
+    "rating": 4.1,
+    "images": [
+      "../images/villa77.jpg",
+      "../images/villa77_1.jpg",
+      "../images/villa77_2.jpg"
+    ],
+    "description": "Villa e rehatshme me pamje nga mali me facilitete të plota për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 63,
+    "amenities": [
+      "Mountain view",
+      "Ski-in/Ski-out",
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "Pets allowed",
+      "TV",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 195,
+    "name": "Apartment",
+    "location": "Sarandë",
+    "rating": 4,
+    "images": [
+      "../images/apartment7.jpg",
+      "../images/apartment7_1.jpg",
+      "../images/apartment7_2.jpg",
+      "../images/apartment7_3.jpg"
+    ],
+    "description": "Apartament modern me ambient të rehatshëm dhe akses të lehtë në shërbimet bazë.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 219,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air Conditioning",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 196,
+    "name": "Navi Apartments",
+    "location": "Sarandë",
+    "rating": 4.6,
+    "images": [
+      "../images/apartment3.jpg",
+      "../images/apartment3_1.jpg",
+      "../images/apartment3_2.jpg",
+      "../images/apartment3_3.jpg"
+    ],
+    "description": "Apartament modern dhe i rehatshëm në zonë të qetë, me akses të lehtë në shërbimet kryesore.",
+    "rooms": 3,
+    "capacity": 6,
+    "price": 226,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 197,
+    "name": "Villa ENA",
+    "location": "Prizren",
+    "rating": 3.5,
+    "images": [
+      "../images/villa92.jpg",
+      "../images/villa92_1.jpg"
+    ],
+    "description": "Vilë komode dhe e përshtatshme për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira të rehatshme për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 70,
+    "amenities": [
+      "Non-smoking rooms",
+      "Free parking",
+      "Free Wifi",
+      "Family rooms"
+    ]
+  },
+  {
+    "id": 198,
+    "name": "Manolo&Jolie Luxury Villa 1",
+    "location": "Himarë",
+    "rating": 4.6,
+    "images": [
+      "../images/villa28.jpg",
+      "../images/villa28_1.jpg",
+      "../images/villa28_2.jpg",
+      "../images/villa28_3.jpg"
+    ],
+    "description": "Vila luksoze në bregdet me lehtësira të plota për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 140,
+    "amenities": [
+      "Beachfront",
+      "Wi-Fi",
+      "TV",
+      "Air Conditioning",
+      "Hair Dryer",
+      "Breakfast"
+    ]
+  },
+  {
+    "id": 199,
+    "name": "Luxury Apartment",
+    "location": "Prizren",
+    "rating": 4.3,
+    "images": [
+      "../images/apartment106.jpg",
+      "../images/apartment106_1.jpg",
+      "../images/apartment106_2.jpg"
+    ],
+    "description": "Apartament i rehatshëm dhe modern, i përshtatshëm për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 70,
+    "amenities": [
+      "Free on-site parking",
+      "Balcony",
+      "Hot tub",
+      "Free Wifi",
+      "Pet friendly",
+      "View",
+      "Kitchen"
+    ]
+  },
+  {
+    "id": 200,
+    "name": "Dadas Apartment",
+    "location": "Prishtina",
+    "rating": 4.3,
+    "images": [
+      "../images/apartment45.jpg",
+      "../images/apartment45_1.jpg",
+      "../images/apartment45_2.jpg",
+      "../images/apartment45_3.jpg"
+    ],
+    "description": "Apartament komod me pamje të qytetit dhe kopështit, i përshtatshëm për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 39,
+    "amenities": [
+      "City Skyline View",
+      "Garden View",
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "Free Parking on Premises"
+    ]
+  },
+  {
+    "id": 201,
+    "name": "Scandinavian Apartment",
+    "location": "Tirana",
+    "rating": 4.3,
+    "images": [
+      "../images/apartment67.jpg",
+      "../images/apartment67_1.jpg",
+      "../images/apartment67_2.jpg",
+      "../images/apartment67_3.jpg"
+    ],
+    "description": "Apartament modern dhe i rehatshëm për një qëndrim të këndshëm.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 65,
+    "amenities": [
+      "Kitchen",
+      "Fast wifi – 50 Mbps",
+      "Dedicated workspace",
+      "Free residential garage on premises – 2 spaces",
+      "Pets allowed"
+    ]
+  },
+  {
+    "id": 202,
+    "name": "Euro Fly Apartments",
+    "location": "Pejë",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment91.jpg",
+      "../images/apartment91_1.jpg",
+      "../images/apartment91_2.jpg"
+    ],
+    "description": "Apartament modern dhe i rehatshëm, ideal për 4 persona, me kuzhinë të pajisur dhe facilitete të tjera për një qëndrim komod.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 77,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "TV",
+      "Washer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 203,
+    "name": "Lakeside Hotel",
+    "location": "Tirana",
+    "rating": 4.2,
+    "images": [
+      "../images/hotel48.jpg",
+      "../images/hotel48_1.jpg",
+      "../images/hotel48_2.jpg"
+    ],
+    "description": "Hotel i qetë me akses në liqen dhe pajisje moderne për një qëndrim të këndshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 30,
+    "amenities": [
+      "Lake access",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "43 inch HDTV"
+    ]
+  },
+  {
+    "id": 204,
+    "name": "Villa Ariu",
+    "location": "Pejë",
+    "rating": 4.6,
+    "images": [
+      "../images/villa65.jpg",
+      "../images/villa65_1.jpg",
+      "../images/villa65_2.jpg"
+    ],
+    "description": "Vilë moderne dhe komode, ideale për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 152,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Indoor fireplace",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 205,
+    "name": "Villa",
+    "location": "Ksamil",
+    "rating": 4.5,
+    "images": [
+      "../images/villa99.jpg",
+      "../images/villa99_1.jpg",
+      "../images/villa99_2.jpg"
+    ],
+    "description": "Vilë e rehatshme dhe luksoze, e përshtatshme për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
+    "rooms": 1,
+    "capacity": 5,
+    "price": 378,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning",
+      "Breakfast"
+    ]
+  },
+  {
+    "id": 206,
+    "name": "Hotel Tier",
+    "location": "Tirana",
+    "rating": 4,
+    "images": [
+      "../images/hotel44.jpg",
+      "../images/hotel44_1.jpg",
+      "../images/hotel44_2.jpg"
+    ],
+    "description": "Hotel i këndshëm me pamje të qytetit dhe parkut, ideal për një qëndrim të rehatshëm.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 37,
+    "amenities": [
+      "City skyline view",
+      "Park view",
+      "Wifi",
+      "Free street parking",
+      "32 inch TV",
+      "AC - split type ductless system"
+    ]
+  },
+  {
+    "id": 207,
+    "name": "Thymus Villa",
+    "location": "Dhërmi",
+    "rating": 4.7,
+    "images": [
+      "../images/villa85.jpg",
+      "../images/villa85_1.jpg",
+      "../images/villa85_2.jpg"
+    ],
+    "description": "Villa moderne me kuzhinë të pajisur, Wifi, parkim falas, TV dhe ajër të kondicionuar për një qëndrim relaksues.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 292,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 208,
+    "name": "Royal DFA Apartment",
+    "location": "Prishtina",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment53.jpg",
+      "../images/apartment53_1.jpg",
+      "../images/apartment53_2.jpg",
+      "../images/apartment53_3.jpg"
+    ],
+    "description": "Apartament modern dhe komod me lehtësira të plota, i përshtatshëm për grupe të vogla.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 69,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 209,
+    "name": "Diamond Central Boutique Hotel",
+    "location": "Sarandë",
+    "rating": 4.3,
+    "images": [
+      "../images/hotel35.jpg",
+      "../images/hotel35_1.jpg",
+      "../images/hotel35_2.jpg",
+      "../images/hotel35_3.jpg"
+    ],
+    "description": "Hotel modern me restorant, bar dhe terracë komode.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 35,
+    "amenities": [
+      "Free Parking",
+      "Restaurant",
+      "Free Wi-Fi",
+      "Terrace",
+      "Bar"
+    ]
+  },
+  {
+    "id": 210,
+    "name": "Grand Apartments",
+    "location": "Prishtina",
+    "rating": 4.1,
+    "images": [
+      "../images/apartment57.jpg",
+      "../images/apartment57_1.jpg",
+      "../images/apartment57_2.jpg",
+      "../images/apartment57_3.jpg"
+    ],
+    "description": "Apartament i rehatshëm dhe modern me lehtësira bazë për një qëndrim të këndshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 42,
+    "amenities": [
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "Free Parking on Premises",
+      "TV",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 211,
+    "name": "Tirana 54. Apartment",
+    "location": "Tirana",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment69.jpg",
+      "../images/apartment69_1.jpg",
+      "../images/apartment69_2.jpg",
+      "../images/apartment69_3.jpg"
+    ],
+    "description": "Apartament i këndshëm dhe komod me pamje nga kopshti.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 75,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking garage on premises",
+      "42 inch HDTV",
+      "Elevator"
+    ]
+  },
+  {
+    "id": 212,
+    "name": "The Poet's Villa 2",
+    "location": "Himarë",
+    "rating": 4.7,
+    "images": [
+      "../images/villa51.jpg",
+      "../images/villa51_1.jpg",
+      "../images/villa51_2.jpg"
+    ],
+    "description": "Vilë moderne dhe e rehatshme me pishinë, ideale për një qëndrim relaksues për familje ose miq.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 140,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "Pool",
+      "TV",
+      "Washer",
+      "Air conditioning",
+      "Hair dryer"
+    ]
+  },
+  {
+    "id": 213,
+    "name": "Villa Troi",
+    "location": "Pejë",
+    "rating": 4.5,
+    "images": [
+      "../images/villa67.jpg",
+      "../images/villa67_1.jpg"
+    ],
+    "description": "Vilë moderne dhe e gjerë, ideale për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 3,
+    "capacity": 8,
+    "price": 93,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 214,
+    "name": "Garden Dream Apartment",
+    "location": "Sarandë",
+    "rating": 3.5,
+    "images": [
+      "../images/apartment4.jpg",
+      "../images/apartment4_1.jpg",
+      "../images/apartment4_2.jpg",
+      "../images/apartment4_3.jpg"
+    ],
+    "description": "Apartament modern me akses të lehtë dhe ambiente të rehatshme.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 51,
+    "amenities": [
+      "Self check-in",
+      "Free parking",
+      "Kitchen",
+      "Wifi",
+      "Washer"
+    ]
+  },
+  {
+    "id": 215,
+    "name": "Hotel",
+    "location": "Tirana",
+    "rating": 4.2,
+    "images": [
+      "../images/hotel62.jpg",
+      "../images/hotel62_1.jpg",
+      "../images/hotel62_2.jpg"
+    ],
+    "description": "Hotel modern dhe i sigurt, ideal për një qëndrim të shkurtër ose të gjatë.",
+    "rooms": 1,
+    "capacity": 1,
+    "price": 59,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 216,
+    "name": "Point Villa 2",
+    "location": "Brezovicë",
+    "rating": 4.7,
+    "images": [
+      "../images/villa16.jpg",
+      "../images/villa16_1.jpg",
+      "../images/villa16_2.jpg",
+      "../images/villa16_3.jpg"
+    ],
+    "description": "Villë moderne me dizajn komod, e pajisur me kuzhinë të plotë dhe pamje të bukur të maleve .",
+    "rooms": 3,
+    "capacity": 8,
+    "price": 95,
+    "amenities": [
+      "Ski-in/Ski-out",
+      "Kitchen",
+      "Wi-Fi",
+      "Free Parking",
+      "TV",
+      "Washer",
+      "Indoor Fireplace",
+      "Exterior Security Cameras"
+    ]
+  },
+  {
+    "id": 217,
+    "name": "Deluxe Apartment 2",
+    "location": "Prishtina",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment51.jpg",
+      "../images/apartment51_1.jpg",
+      "../images/apartment51_2.jpg",
+      "../images/apartment51_3.jpg"
+    ],
+    "description": "Apartament modern dhe komod me lehtësira të plota dhe hapësirë të përshtatshme për një qëndrim të këndshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 88,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "Free Parking on Premises",
+      "Pets Allowed",
+      "TV",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 218,
+    "name": "Luxury Villa",
+    "location": "Brezovicë",
+    "rating": 4.9,
+    "images": [
+      "../images/villa15.jpg",
+      "../images/villa15_1.jpg",
+      "../images/villa15_2.jpg",
+      "../images/villa15_3.jpg"
+    ],
+    "description": "Villë luksoze me dizajn unik dhe akses të lehtë në pistat e skijimit.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 304,
+    "amenities": [
+      "Mountain View",
+      "Garden View",
+      "Ski-in/Ski-out",
+      "Kitchen",
+      "Wi-Fi",
+      "Free Parking",
+      "TV",
+      "Exterior Security Cameras"
+    ]
+  },
+  {
+    "id": 219,
+    "name": "Hotel Piccolino",
+    "location": "Sarandë",
+    "rating": 3.5,
+    "images": [
+      "../images/hotel36.jpg",
+      "../images/hotel36_1.jpg",
+      "../images/hotel36_2.jpg",
+      "../images/hotel36_3.jpg"
+    ],
+    "description": "Hotel familjar me restorant, shërbim dhome dhe bar, pranë plazhit.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 67,
+    "amenities": [
+      "Free Parking",
+      "Restaurant",
+      "Room Service",
+      "Free Wi-Fi",
+      "Family Rooms",
+      "Beachfront",
+      "Bar",
+      "Good Breakfast"
+    ]
+  },
+  {
+    "id": 220,
+    "name": "Oceanic Luxury Apartments",
+    "location": "Sarandë",
+    "rating": 4,
+    "images": [
+      "../images/apartment11.jpg",
+      "../images/apartment11_1.jpg",
+      "../images/apartment11_2.jpg"
+    ],
+    "description": "Apartamente moderne dhe komode për një qëndrim të rehatshëm.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 49,
+    "amenities": [
+      "Parking Garage",
+      "Bathroom",
+      "Cleaning Services",
+      "Daily Housekeeping",
+      "Smoke-free Property"
+    ]
+  },
+  {
+    "id": 221,
+    "name": "Ola Apartment",
+    "location": "Tirana",
+    "rating": 4.4,
+    "images": [
+      "../images/apartment78.jpg",
+      "../images/apartment78_1.jpg",
+      "../images/apartment78_2.jpg"
+    ],
+    "description": "Apartament i hapur dhe i rehatshëm, ideal për një qëndrim familjar ose me miq.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 76,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free street parking",
+      "TV",
+      "Washer",
+      "Dryer"
+    ]
+  },
+  {
+    "id": 222,
+    "name": "Adler Hotel",
+    "location": "Prizren",
+    "rating": 4.2,
+    "images": [
+      "../images/hotel94.jpg",
+      "../images/hotel94_1.jpg",
+      "../images/hotel94_2.jpg",
+      "../images/hotel94_3.jpg"
+    ],
+    "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 66,
+    "amenities": [
+      "Non-smoking rooms",
+      "Free parking",
+      "Free Wifi",
+      "Room service",
+      "Restaurant",
+      "Family rooms",
+      "Tea/Coffee Maker in All Rooms",
+      "Bar",
+      "Excellent Breakfast"
+    ]
+  },
+  {
+    "id": 223,
+    "name": "Prevalle Villa",
+    "location": "near Prizren",
+    "rating": 4.4,
+    "images": [
+      "../images/villa96.jpg",
+      "../images/villa96_1.jpg",
+      "../images/villa96_2.jpg"
+    ],
+    "description": "Vilë e rehatshme dhe e përshtatshme për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
+    "rooms": 2,
+    "capacity": 9,
+    "price": 210,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Pets allowed",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 224,
+    "name": "Hotel",
+    "location": "Himarë",
+    "rating": 4.2,
+    "images": [
+      "../images/hotel64.jpg",
+      "../images/hotel64_1.jpg",
+      "../images/hotel64_2.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim të shkurtër ose të gjatë.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 35,
+    "amenities": [
+      "Wifi",
+      "TV",
+      "Air conditioning",
+      "Hair dryer"
+    ]
+  },
+  {
+    "id": 225,
+    "name": "Family Apartment",
+    "location": "Tirana",
+    "rating": 4.5,
+    "images": [
+      "../images/apartment80.jpg",
+      "../images/apartment80_1.jpg",
+      "../images/apartment80_2.jpg"
+    ],
+    "description": "Apartament i gjerë dhe i rehatshëm, ideal për familje ose grup miqsh.",
+    "rooms": 3,
+    "capacity": 6,
+    "price": 105,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "TV",
+      "Washer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 226,
+    "name": "The Wave Apartment 9",
+    "location": "Himarë",
+    "rating": 4.1,
+    "images": [
+      "../images/apartment40.jpg",
+      "../images/apartment40_1.jpg",
+      "../images/apartment40_2.jpg",
+      "../images/apartment40_3.jpg"
+    ],
+    "description": "Apartament i rehatshëm dhe modern, i përshtatshëm për një qëndrim pranë detit.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 163,
+    "amenities": [
+      "Wi-Fi",
+      "TV",
+      "Elevator",
+      "Washer",
+      "Air Conditioning",
+      "Hair Dryer"
+    ]
+  },
+  {
+    "id": 227,
+    "name": "Mountain Villa",
+    "location": "Pejë",
+    "rating": 4.7,
+    "images": [
+      "../images/villa60.jpg",
+      "../images/villa60_1.jpg",
+      "../images/villa60_2.jpg"
+    ],
+    "description": "Vilë moderne me qasje në ski dhe ambiente të rehatshme, ideale për një qëndrim relaksues për familje ose miq.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 124,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Backyard"
+    ]
+  },
+  {
+    "id": 228,
+    "name": "Cozy Apartment",
+    "location": "Pejë",
+    "rating": 4.4,
+    "images": [
+      "../images/apartment96.jpg",
+      "../images/apartment96_1.jpg",
+      "../images/apartment96_2.jpg"
+    ],
+    "description": "Apartament i rehatshëm për 4 persona, me pamje nga kopshti dhe facilitete të plota për një qëndrim komod.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 117,
+    "amenities": [
+      "Garden view",
+      "Kitchen",
+      "Wifi",
+      "TV",
+      "Washer",
+      "Air conditioning",
+      "Paid parking on premises"
+    ]
+  },
+  {
+    "id": 229,
+    "name": "Queens Luxury Villa",
+    "location": "Dhërmi",
+    "rating": 4.9,
+    "images": [
+      "../images/villa88.jpg",
+      "../images/villa88_1.jpg",
+      "../images/villa88_2.jpg"
+    ],
+    "description": "Villa luksoze me dhoma të rehatshme, kuzhinë të pajisur, Wifi, parkim falas, TV, lavanderi, ajër të kondicionuar dhe kamera sigurie në ambientet e jashtme.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 367,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air conditioning",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 230,
+    "name": "Mountain Villa",
+    "location": "Pejë",
+    "rating": 4.5,
+    "images": [
+      "../images/villa63.jpg",
+      "../images/villa63_1.jpg",
+      "../images/villa63_2.jpg"
+    ],
+    "description": "Vilë me pamje malore dhe luginore, ideale për 5 persona, me sobë druri dhe oborr privat.",
+    "rooms": 1,
+    "capacity": 5,
+    "price": 133,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Private backyard – Not fully fenced",
+      "Indoor fireplace: wood-burning"
+    ]
+  },
+  {
+    "id": 231,
+    "name": "Central Apartment 2",
+    "location": "Himarë",
+    "rating": 3.4,
+    "images": [
+      "../images/apartment32.jpg",
+      "../images/apartment32_1.jpg",
+      "../images/apartment32_2.jpg"
+    ],
+    "description": "Apartament komod me pamje deti dhe lehtësira të plota për një qëndrim të rehatshëm.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 35,
+    "amenities": [
+      "Sea View",
+      "Kitchen",
+      "Wi-Fi",
+      "TV",
+      "Washer",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 232,
+    "name": "Apartment",
+    "location": "Sarandë",
+    "rating": 3,
+    "images": [
+      "../images/apartment9.jpg",
+      "../images/apartment9_1.jpg",
+      "../images/apartment9_2.jpg"
+    ],
+    "description": "Apartament i qetë dhe komod për familje ose grupe të vogla.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 58,
+    "amenities": [
+      "Free On-site Parking",
+      "Balcony",
+      "Private Bathroom"
+    ]
+  },
+  {
+    "id": 233,
+    "name": "Apartment",
+    "location": "Prishtina",
+    "rating": 3.9,
+    "images": [
+      "../images/apartment58.jpg",
+      "../images/apartment58_1.jpg",
+      "../images/apartment58_2.jpg",
+      "../images/apartment58_3.jpg"
+    ],
+    "description": "Apartament i thjeshtë dhe i rehatshëm, i përshtatshëm për një qëndrim të qetë.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 33,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 234,
+    "name": "Agate Hotel",
+    "location": "Tirana",
+    "rating": 4.3,
+    "images": [
+      "../images/hotel57.jpg",
+      "../images/hotel57_1.jpg",
+      "../images/hotel57_2.jpg"
+    ],
+    "description": "Hotel modern dhe komod, ideal për një qëndrim të rehatshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 75,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "TV",
+      "Air conditioning",
+      "Hair dryer",
+      "Refrigerator"
+    ]
+  },
+  {
+    "id": 235,
+    "name": "GO Villas",
+    "location": "Brezovicë",
+    "rating": 4.7,
+    "images": [
+      "../images/villa20.jpg",
+      "../images/villa20_1.jpg",
+      "../images/villa20_2.jpg",
+      "../images/villa20_3.jpg",
+      "../images/villa20_4.jpg"
+    ],
+    "description": "Villë moderne me ambiente të bollshme dhe pajisje të plota për një pushim të rehatshëm.",
+    "rooms": 2,
+    "capacity": 6,
+    "price": 263,
+    "amenities": [
+      "Free Parking",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 236,
+    "name": "Hotel JoAn",
+    "location": "Sarandë",
+    "rating": 3,
+    "images": [
+      "../images/hotel37.jpg",
+      "../images/hotel37_1.jpg",
+      "../images/hotel37_2.jpg"
+    ],
+    "description": "Hotel i thjeshtë dhe i përshtatshëm për një qëndrim të rehatshëm.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 55,
+    "amenities": [
+      "Wi-Fi",
+      "Parking",
+      "Front Desk Services",
+      "Private Check-in/Out"
+    ]
+  },
+  {
+    "id": 237,
+    "name": "Villa Nacios",
+    "location": "Himarë",
+    "rating": 4.4,
+    "images": [
+      "../images/villa46.jpg",
+      "../images/villa46_1.jpg",
+      "../images/villa46_2.jpg"
+    ],
+    "description": "Vilë komode dhe moderne me hapësira të jashtme, ideale për një qëndrim relaksues për dy persona.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 85,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning",
+      "Patio or balcony",
+      "Backyard"
+    ]
+  },
+  {
+    "id": 238,
+    "name": "Villa Dario",
+    "location": "Pejë",
+    "rating": 4.7,
+    "images": [
+      "../images/villa75.jpg",
+      "../images/villa75_1.jpg",
+      "../images/villa75_2.jpg"
+    ],
+    "description": "Vilë moderne dhe komode, ideale për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 2,
+    "capacity": 6,
+    "price": 234,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning",
+      "Indoor fireplace",
+      "Hair dryer"
+    ]
+  },
+  {
+    "id": 239,
+    "name": "Villa Sea",
+    "location": "Dhërmi",
+    "rating": 4.6,
+    "images": [
+      "../images/villa80.jpg",
+      "../images/villa80_1.jpg",
+      "../images/villa80_2.jpg"
+    ],
+    "description": "Villa moderne me kuzhinë të pajisur, Wifi, hapësirë për punë, parkim falas, TV dhe ajër të kondicionuar, ideale për një qëndrim relaksues.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 175,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 240,
+    "name": "Villa 2 - Ionian Premium Villas",
+    "location": "Sarandë",
+    "rating": 4.7,
+    "images": [
+      "../images/villa22.jpg",
+      "../images/villa22_1.jpg",
+      "../images/villa22_2.jpg",
+      "../images/villa22_3.jpg",
+      "../images/villa22_4.jpg"
+    ],
+    "description": "Vilë moderne me ambient të ndritshëm, qasje në pishinë, parkim të siguruar dhe hapësira komode për një qëndrim relaksues.",
+    "rooms": 3,
+    "capacity": 7,
+    "price": 230,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises – 2 spaces",
+      "TV",
+      "Air Conditioning",
+      "Unavailable: Carbon monoxide alarm",
+      "Unavailable: Smoke alarm"
+    ]
+  },
+  {
+    "id": 241,
+    "name": "The Wave Apartment 17",
+    "location": "Himarë",
+    "rating": 4.3,
+    "images": [
+      "../images/apartment39.jpg",
+      "../images/apartment39_1.jpg",
+      "../images/apartment39_2.jpg",
+      "../images/apartment39_3.jpg"
+    ],
+    "description": "Apartament modern dhe i rehatshëm me akses në plazh dhe kushte të plota për një qëndrim të këndshëm.",
+    "rooms": 1,
+    "capacity": 5,
+    "price": 173,
+    "amenities": [
+      "Beach Access",
+      "Kitchen",
+      "Wi-Fi",
+      "TV",
+      "Elevator",
+      "Washer",
+      "Air Conditioning",
+      "Hair Dryer"
+    ]
+  },
+  {
+    "id": 242,
+    "name": "Erika's Apartment",
+    "location": "Prishtina",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment42.jpg",
+      "../images/apartment42_1.jpg",
+      "../images/apartment42_2.jpg",
+      "../images/apartment42_3.jpg"
+    ],
+    "description": "Apartament modern dhe i rehatshëm, i përshtatshëm për një qëndrim të qetë në qytet.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 70,
+    "amenities": [
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "Free Parking on Premises",
+      "TV",
+      "Air Conditioning",
+      "Hair Dryer",
+      "Gym"
+    ]
+  },
+  {
+    "id": 243,
+    "name": "Villa 3",
+    "location": "Tirana",
+    "rating": 3.6,
+    "images": [
+      "../images/villa44.jpg",
+      "../images/villa44_1.jpg",
+      "../images/villa44_2.jpg"
+    ],
+    "description": "Vilë moderne dhe e rehatshme, e pajisur për qëndrime të gjata dhe pushime komode.",
+    "rooms": 3,
+    "capacity": 4,
+    "price": 457,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "70 inch HDTV with Amazon Prime Video",
+      "Washer"
+    ]
+  },
+  {
+    "id": 244,
+    "name": "Apartment",
+    "location": "Prishtina",
+    "rating": 4.3,
+    "images": [
+      "../images/apartment60.jpg",
+      "../images/apartment60_1.jpg",
+      "../images/apartment60_2.jpg",
+      "../images/apartment60_3.jpg"
+    ],
+    "description": "Apartament luksoz dhe komod me lehtësira të plota dhe hapësira relaksuese, i përshtatshëm për grupe.",
+    "rooms": 3,
+    "capacity": 8,
+    "price": 175,
+    "amenities": [
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "Hot Tub",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 245,
+    "name": "Chez Villa",
+    "location": "Prizren",
+    "rating": 4.3,
+    "images": [
+      "../images/villa93.jpg",
+      "../images/villa93_1.jpg",
+      "../images/villa93_2.jpg",
+      "../images/villa93_3.jpg"
+    ],
+    "description": "Vilë e rehatshme dhe e përshtatshme për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
+    "rooms": 3,
+    "capacity": 7,
+    "price": 225,
+    "amenities": [
+      "Non-smoking rooms",
+      "Free Wifi",
+      "Family rooms"
+    ]
+  },
+  {
+    "id": 246,
+    "name": "Villa Denis 5",
+    "location": "Ksamil",
+    "rating": 4.3,
+    "images": [
+      "../images/villa98.jpg",
+      "../images/villa98_1.jpg",
+      "../images/villa98_2.jpg"
+    ],
+    "description": "Vilë e rehatshme dhe e përshtatshme për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira të sigurta dhe komode.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 266,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Pets allowed",
+      "TV",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 247,
+    "name": "Hotel",
+    "location": "Tirana",
+    "rating": 4,
+    "images": [
+      "../images/hotel61.jpg",
+      "../images/hotel61_1.jpg"
+    ],
+    "description": "Hotel i thjeshtë dhe i rehatshëm, ideal për një qëndrim të shkurtër.",
+    "rooms": 1,
+    "capacity": 1,
+    "price": 31,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 248,
+    "name": "Union Apartment",
+    "location": "Prishtina",
+    "rating": 4,
+    "images": [
+      "../images/apartment56.jpg",
+      "../images/apartment56_1.jpg",
+      "../images/apartment56_2.jpg"
+    ],
+    "description": "Apartament praktik dhe i rehatshëm me lehtësira bazë për një qëndrim të qetë.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 41,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 249,
+    "name": "White Stone Villa",
+    "location": "Himarë",
+    "rating": 4.5,
+    "images": [
+      "../images/villa49.jpg",
+      "../images/villa49_1.jpg",
+      "../images/villa49_2.jpg",
+      "../images/villa49_3.jpg"
+    ],
+    "description": "Vilë moderne dhe komode me hapësirë të jashtme, ideale për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 94,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air conditioning",
+      "Backyard"
+    ]
+  },
+  {
+    "id": 250,
+    "name": "Kanes Boutique Hotel",
+    "location": "Sarandë",
+    "rating": 4.2,
+    "images": [
+      "../images/hotel34.jpg",
+      "../images/hotel34_1.jpg",
+      "../images/hotel34_2.jpg",
+      "../images/hotel34_3.jpg"
+    ],
+    "description": "Hotel i vogël dhe komod me dhoma moderne dhe lehtësira të shumta.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 40,
+    "amenities": [
+      "Private Bathroom",
+      "Wi-Fi",
+      "Flat-screen TV",
+      "Free Parking",
+      "Air Conditioning",
+      "Non-smoking Rooms",
+      "Shower"
+    ]
+  },
+  {
+    "id": 251,
+    "name": "Deluxe Apartment 3",
+    "location": "Himarë",
+    "rating": 4.68,
+    "images": [
+      "../images/apartment23.jpg",
+      "../images/apartment23_1.jpg",
+      "../images/apartment23_2.jpg",
+      "../images/apartment23_3.jpg"
+    ],
+    "description": "Suitë komode me pamje malore dhe lehtësira të plota për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 34,
+    "amenities": [
+      "Mountain View",
+      "Shared Beach Access",
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "Free Residential Garage on Premises",
+      "TV"
+    ]
+  },
+  {
+    "id": 252,
+    "name": "Deluxe Apartment 3",
+    "location": "Prishtina",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment55.jpg",
+      "../images/apartment55_1.jpg",
+      "../images/apartment55_2.jpg",
+      "../images/apartment55_3.jpg"
+    ],
+    "description": "Apartament modern dhe i rehatshëm me lehtësira të plota për një qëndrim të këndshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 76,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "Free Parking on Premises",
+      "TV",
+      "Washer",
+      "Air Conditioning",
+      "Hair Dryer"
+    ]
+  },
+  {
+    "id": 253,
+    "name": "Leons Apartment",
+    "location": "Sarandë",
+    "rating": 5,
+    "images": [
+      "../images/apartment12.jpg",
+      "../images/apartment12_1.jpg",
+      "../images/apartment12_2.jpg"
+    ],
+    "description": "Apartament i gjerë,i përshtatshëm dhe i pajisur me komoditete moderne.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 146,
+    "amenities": [
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "TV",
+      "Washer",
+      "Free Dryer (In Unit)",
+      "Air Conditioning",
+      "Bathtub"
+    ]
+  },
+  {
+    "id": 254,
+    "name": "The Teal Sport Apartment",
+    "location": "Tirana",
+    "rating": 4.1,
+    "images": [
+      "../images/apartment63.jpg",
+      "../images/apartment63_1.jpg",
+      "../images/apartment63_2.jpg",
+      "../images/apartment63_3.jpg"
+    ],
+    "description": "Hapësirë moderne me pamje të qytetit, ideale për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 60,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free street parking",
+      "TV",
+      "Elevator",
+      "Washer"
+    ]
+  },
+  {
+    "id": 255,
+    "name": "Villa Etno",
+    "location": "Prizren",
+    "rating": 4.2,
+    "images": [
+      "../images/villa95.jpg",
+      "../images/villa95_1.jpg",
+      "../images/villa95_2.jpg"
+    ],
+    "description": "Vilë e rehatshme dhe e përshtatshme për grupet e vogla, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 90,
+    "amenities": [
+      "Free parking",
+      "Free Wifi",
+      "Restaurant",
+      "Breakfast"
+    ]
+  },
+  {
+    "id": 256,
+    "name": "Apartment",
+    "location": "Tirana",
+    "rating": 4,
+    "images": [
+      "../images/apartment70.jpg",
+      "../images/apartment70_1.jpg",
+      "../images/apartment70_2.jpg"
+    ],
+    "description": "Apartament i thjeshtë dhe i rehatshëm për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 39,
+    "amenities": [
+      "Wifi",
+      "43 inch HDTV",
+      "Elevator",
+      "Washer",
+      "Window AC unit",
+      "Hair dryer"
+    ]
+  },
+  {
+    "id": 257,
+    "name": "Kolagji Villas",
+    "location": "Himarë",
+    "rating": 4.9,
+    "images": [
+      "../images/villa55.jpg",
+      "../images/villa55_1.jpg",
+      "../images/villa55_2.jpg"
+    ],
+    "description": "Vilë moderne dhe e gjerë, ideale për familje ose grupe të mëdha, me hapësira të bollshme dhe komoditete të plota.",
+    "rooms": 5,
+    "capacity": 11,
+    "price": 422,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "Washer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 258,
+    "name": "Apartment",
+    "location": "Pejë",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment90.jpg",
+      "../images/apartment90_1.jpg",
+      "../images/apartment90_2.jpg"
+    ],
+    "description": "Apartament i rehatshëm dhe praktik, i përkryer për qëndrime të shpejta ose afatshkurtra.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 59,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Hot tub",
+      "TV"
+    ]
+  },
+  {
+    "id": 259,
+    "name": "Villa Nr.8",
+    "location": "Pejë",
+    "rating": 4.4,
+    "images": [
+      "../images/villa78.jpg",
+      "../images/villa78_1.jpg",
+      "../images/villa78_2.jpg"
+    ],
+    "description": "Villa e rehatshme dhe moderne me hapësirë për relaks dhe argëtim.",
+    "rooms": 2,
+    "capacity": 7,
+    "price": 70,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning",
+      "Fire pit"
+    ]
+  },
+  {
+    "id": 260,
+    "name": "Prizren City Apartment",
+    "location": "Prizren",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment102.jpg",
+      "../images/apartment102_1.jpg",
+      "../images/apartment102_2.jpg"
+    ],
+    "description": "Apartament i rehatshëm dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira komode për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 60,
+    "amenities": [
+      "Free private parking",
+      "Balcony",
+      "Free Wifi",
+      "Private bathroom",
+      "Family rooms",
+      "View",
+      "Shower",
+      "Kitchen"
+    ]
+  },
+  {
+    "id": 261,
+    "name": "Manolo&Jolie Luxury Villa 2",
+    "location": "Himarë",
+    "rating": 4.5,
+    "images": [
+      "../images/villa27.jpg",
+      "../images/villa27_1.jpg",
+      "../images/villa27_2.jpg",
+      "../images/villa27_3.jpg"
+    ],
+    "description": "Vila elegante me lehtësira të plota dhe hapësirë për një qëndrim të rehatshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 152,
+    "amenities": [
+      "Wi-Fi",
+      "TV",
+      "Air Conditioning",
+      "Paid Parking on Premises"
+    ]
+  },
+  {
+    "id": 262,
+    "name": "Villa Leon",
+    "location": "Tirana",
+    "rating": 4.6,
+    "images": [
+      "../images/villa38.jpg",
+      "../images/villa38_1.jpg",
+      "../images/villa38_2.jpg",
+      "../images/villa38_3.jpg"
+    ],
+    "description": "Vilë moderne dhe komode, ideale për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 107,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 263,
+    "name": "Apartment",
+    "location": "Sarandë",
+    "rating": 4.63,
+    "images": [
+      "../images/apartment17.jpg",
+      "../images/apartment17_1.jpg",
+      "../images/apartment17_2.jpg",
+      "../images/apartment17_3.jpg"
+    ],
+    "description": "Apartament komod me akses të përbashkët në plazh dhe lehtësira të nevojshme për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 35,
+    "amenities": [
+      "Shared Beach Access",
+      "Kitchen",
+      "Wi-Fi",
+      "Free Parking Garage (1 space)",
+      "42 inch TV with Standard Cable",
+      "Elevator"
+    ]
+  },
+  {
+    "id": 264,
+    "name": "Villa HANA",
+    "location": "Pejë",
+    "rating": 4.6,
+    "images": [
+      "../images/villa70.jpg",
+      "../images/villa70_1.jpg",
+      "../images/villa70_2.jpg"
+    ],
+    "description": "Vilë moderne me akses në liqen, ideale për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 3,
+    "capacity": 6,
+    "price": 94,
+    "amenities": [
+      "Lake access",
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 265,
+    "name": "Apartment",
+    "location": "Himarë",
+    "rating": 3.62,
+    "images": [
+      "../images/apartment25.jpg",
+      "../images/apartment25_1.jpg",
+      "../images/apartment25_2.jpg",
+      "../images/apartment25_3.jpg"
+    ],
+    "description": "Apartament i rehatshëm me pamje dhe lehtësira të nevojshme për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 30,
+    "amenities": [
+      "Vineyard View",
+      "Wi-Fi",
+      "Free Street Parking",
+      "Pets Allowed",
+      "Air Conditioning",
+      "Shared Patio or Balcony"
+    ]
+  },
+  {
+    "id": 266,
+    "name": "Bliss 36 Apartment",
+    "location": "Himarë",
+    "rating": 3.5,
+    "images": [
+      "../images/apartment21.jpg",
+      "../images/apartment21_1.jpg",
+      "../images/apartment21_2.jpg",
+      "../images/apartment21_3.jpg"
+    ],
+    "description": "Apartament modern me lehtësira të plota dhe hapësirë të jashtme private për relaksim.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 41,
+    "amenities": [
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "Free Parking on Premises",
+      "TV",
+      "Air Conditioning",
+      "Private Patio or Balcony"
+    ]
+  },
+  {
+    "id": 267,
+    "name": "Main Square Apartment",
+    "location": "Prishtina",
+    "rating": 4,
+    "images": [
+      "../images/apartment50.jpg",
+      "../images/apartment50_1.jpg",
+      "../images/apartment50_2.jpg"
+    ],
+    "description": "Apartament i thjeshtë dhe i rehatshëm, i përshtatshëm për një qëndrim të qetë në qytet.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 40,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "TV",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 268,
+    "name": "Villa Florence",
+    "location": "Tirana",
+    "rating": 5,
+    "images": [
+      "../images/villa42.jpg",
+      "../images/villa42_1.jpg",
+      "../images/villa42_2.jpg",
+      "../images/villa42_3.jpg"
+    ],
+    "description": "Vilë luksoze dhe e madhe me pishinë private gjatë gjithë vitit, ideale për grupet e mëdha dhe qëndrime komode.",
+    "rooms": 6,
+    "capacity": 14,
+    "price": 1167,
+    "amenities": [
+      "Garden view",
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Private pool - available all year, open 24 hours, heated, pool cover",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 269,
+    "name": "Villa",
+    "location": "Pejë",
+    "rating": 4.8,
+    "images": [
+      "../images/villa74.jpg",
+      "../images/villa74_1.jpg",
+      "../images/villa74_2.jpg"
+    ],
+    "description": "Vilë moderne dhe luksoze, ideale për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 3,
+    "capacity": 11,
+    "price": 269,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "Hot tub",
+      "Pets allowed",
+      "TV"
+    ]
+  },
+  {
+    "id": 270,
+    "name": "Premium Park Hotel",
+    "location": "Prizren",
+    "rating": 4.2,
+    "images": [
+      "../images/hotel88.jpg",
+      "../images/hotel88_1.jpg",
+      "../images/hotel88_2.jpg",
+      "../images/hotel88_3.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 70,
+    "amenities": [
+      "Indoor swimming pool",
+      "Spa",
+      "Free parking",
+      "Fitness center",
+      "Free Wifi",
+      "Restaurant",
+      "Facilities for disabled guests",
+      "Family rooms",
+      "Bar",
+      "Good Breakfast"
+    ]
+  },
+  {
+    "id": 271,
+    "name": "Prestige Apartment",
+    "location": "Sarandë",
+    "rating": 4.71,
+    "images": [
+      "../images/apartment20.jpg",
+      "../images/apartment20_1.jpg",
+      "../images/apartment20_2.jpg",
+      "../images/apartment20_3.jpg"
+    ],
+    "description": "Apartament modern me lehtësira të plota për një qëndrim të rehatshëm dhe praktik.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 70,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "Free Parking Garage (2 spaces)",
+      "TV",
+      "Elevator"
+    ]
+  },
+  {
+    "id": 272,
+    "name": "Deluxe Apartment",
+    "location": "Sarandë",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment13.jpg",
+      "../images/apartment13_1.jpg",
+      "../images/apartment13_2.jpg",
+      "../images/apartment13_3.jpg"
+    ],
+    "description": "Apartament modern i përshtatshëm dhe me akses plazhi.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 70,
+    "amenities": [
+      "Beach Access",
+      "Kitchen",
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "Pets Allowed",
+      "TV"
+    ]
+  },
+  {
+    "id": 273,
+    "name": "Villa 101",
+    "location": "Tirana",
+    "rating": 4.7,
+    "images": [
+      "../images/villa30.jpg",
+      "../images/villa30_1.jpg",
+      "../images/villa30_2.jpg"
+    ],
+    "description": "Vilë moderne dhe komode, ideale për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 110,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises – 2 spaces",
+      "TV",
+      "Air Conditioning",
+      "Unavailable: Carbon monoxide alarm",
+      "Unavailable: Smoke alarm"
+    ]
+  },
+  {
+    "id": 274,
+    "name": "The Poet's Villa",
+    "location": "Himarë",
+    "rating": 4.81,
+    "images": [
+      "../images/villa26.jpg",
+      "../images/villa26_1.jpg",
+      "../images/villa26_2.jpg",
+      "../images/villa26_3.jpg"
+    ],
+    "description": "Vila elegante me lehtësira të plota dhe siguri të jashtme për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 140,
+    "amenities": [
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "Pool",
+      "TV",
+      "Washer",
+      "Air Conditioning",
+      "Hair Dryer",
+      "Exterior Security Cameras on Property"
+    ]
+  },
+  {
+    "id": 275,
+    "name": "Le Reve Boutique Hotel",
+    "location": "Dhërmi",
+    "rating": 4.3,
+    "images": [
+      "../images/hotel85.jpg",
+      "../images/hotel85_1.jpg",
+      "../images/hotel85_2.jpg"
+    ],
+    "description": "Hotel modern me pishinë jashtme, dhoma jo-duhan, transport nga/drejt aeroportit, parkim falas, Wifi falas, bar dhe mëngjes të përfshirë.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 50,
+    "amenities": [
+      "Outdoor swimming pool",
+      "Non-smoking rooms",
+      "Airport shuttle",
+      "Free parking",
+      "Free Wifi",
+      "Bar",
+      "Breakfast"
+    ]
+  },
+  {
+    "id": 276,
+    "name": "Apartment 6",
+    "location": "Prishtina",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment59.jpg",
+      "../images/apartment59_1.jpg",
+      "../images/apartment59_2.jpg",
+      "../images/apartment59_3.jpg"
+    ],
+    "description": "Apartament modern dhe i rehatshëm me lehtësira të plota dhe hapësirë të jashtme për relaksim.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 116,
+    "amenities": [
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "HDTV with Netflix",
+      "Washer",
+      "Dryer",
+      "Window AC Unit",
+      "Backyard",
+      "Luggage Dropoff Allowed",
+      "Crib"
+    ]
+  },
+  {
+    "id": 277,
+    "name": "Hilltop Villa",
+    "location": "Tirana",
+    "rating": 4.9,
+    "images": [
+      "../images/villa43.jpg",
+      "../images/villa43_1.jpg",
+      "../images/villa43_2.jpg",
+      "../images/villa43_3.jpg"
+    ],
+    "description": "Vilë luksoze me pamje nga kodrat dhe pishinë, ideale për grupet e mëdha dhe qëndrime komode.",
+    "rooms": 4,
+    "capacity": 10,
+    "price": 711,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Free parking on premises",
+      "Pool",
+      "TV",
+      "Washer",
+      "Air conditioning",
+      "Indoor fireplace"
+    ]
+  },
+  {
+    "id": 278,
+    "name": "Hibiscus Hotel",
+    "location": "Himarë",
+    "rating": 3.2,
+    "images": [
+      "../images/hotel66.jpg",
+      "../images/hotel66_1.jpg",
+      "../images/hotel66_2.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për familje ose miq.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 75,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "Pets allowed",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 279,
+    "name": "Apartment",
+    "location": "Sarandë",
+    "rating": 4.58,
+    "images": [
+      "../images/apartment18.jpg",
+      "../images/apartment18_1.jpg",
+      "../images/apartment18_2.jpg",
+      "../images/apartment18_3.jpg"
+    ],
+    "description": "Apartament i rehatshëm me lehtësira bazë për një qëndrim të këndshëm dhe praktik.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 47,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "TV",
+      "Washer",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 280,
+    "name": "Manolo & Jolie Luxury Villa 4",
+    "location": "Himarë",
+    "rating": 4.5,
+    "images": [
+      "../images/villa29.jpg",
+      "../images/villa29_1.jpg",
+      "../images/villa29_2.jpg",
+      "../images/villa29_3.jpg"
+    ],
+    "description": "Vila komode me akses në plazh dhe lehtësira të plota për një qëndrim të rehatshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 115,
+    "amenities": [
+      "Beach Access",
+      "Wi-Fi",
+      "TV",
+      "Washer",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 281,
+    "name": "Tirana Sunny Villa",
+    "location": "Tirana",
+    "rating": 4.6,
+    "images": [
+      "../images/villa31.jpg",
+      "../images/villa31_1.jpg",
+      "../images/villa31_2.jpg"
+    ],
+    "description": "Vilë moderne dhe komode, ideale për grupet ose familjet që kërkojnë një qëndrim relaksues.",
+    "rooms": 3,
+    "capacity": 7,
+    "price": 70,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Washer",
+      "Air conditioning",
+      "Bathtub",
+      "Patio or balcony"
+    ]
+  },
+  {
+    "id": 282,
+    "name": "Apartment",
+    "location": "Pejë",
+    "rating": 4.4,
+    "images": [
+      "../images/apartment82.jpg",
+      "../images/apartment82_1.jpg"
+    ],
+    "description": "Apartament modern me pamje nga lumi dhe mali, ideal për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 2,
+    "capacity": 6,
+    "price": 42,
+    "amenities": [
+      "River view",
+      "Mountain view",
+      "Waterfront",
+      "Kitchen",
+      "Wifi",
+      "HDTV",
+      "Air conditioning",
+      "Exterior security cameras on property"
+    ]
+  },
+  {
+    "id": 283,
+    "name": "Villa Ionian",
+    "location": "Himarë",
+    "rating": 4.9,
+    "images": [
+      "../images/villa57.jpg",
+      "../images/villa57_1.jpg",
+      "../images/villa57_2.jpg"
+    ],
+    "description": "Vilë luksoze dhe moderne me pishinë dhe jacuzzi, ideale për grupet e mëdha dhe qëndrime relaksuese.",
+    "rooms": 4,
+    "capacity": 8,
+    "price": 406,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "Pool",
+      "Hot tub",
+      "Pets allowed"
+    ]
+  },
+  {
+    "id": 284,
+    "name": "Ademi Apartment",
+    "location": "Sarandë",
+    "rating": 4,
+    "images": [
+      "../images/apartment14.jpg",
+      "../images/apartment14_1.jpg",
+      "../images/apartment14_2.jpg",
+      "../images/apartment14_3.jpg"
+    ],
+    "description": "Apartament komod me të gjitha pajisjet esenciale për një qëndrim të rehatshëm.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 44,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "TV",
+      "Elevator",
+      "Washer",
+      "Air Conditioning",
+      "Hair Dryer"
+    ]
+  },
+  {
+    "id": 285,
+    "name": "Apartment",
+    "location": "Prishtina",
+    "rating": 4.1,
+    "images": [
+      "../images/apartment54.jpg",
+      "../images/apartment54_1.jpg",
+      "../images/apartment54_2.jpg"
+    ],
+    "description": "Apartament komod me lehtësira të plota dhe i përshtatshëm për një qëndrim të rehatshëm.",
+    "rooms": 2,
+    "capacity": 4,
+    "price": 74,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 286,
+    "name": "City Center Hotel",
+    "location": "Tirana",
+    "rating": 4.4,
+    "images": [
+      "../images/hotel52.jpg",
+      "../images/hotel52_1.jpg",
+      "../images/hotel52_2.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm me pajisje të përshtatshme për një qëndrim të këndshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 90,
+    "amenities": [
+      "Private hot tub",
+      "TV",
+      "Air conditioning",
+      "Hair dryer"
+    ]
+  },
+  {
+    "id": 287,
+    "name": "Terra Boutique 2 Hotel",
+    "location": "Tirana",
+    "rating": 4.3,
+    "images": [
+      "../images/hotel51.jpg",
+      "../images/hotel51_1.jpg",
+      "../images/hotel51_2.jpg",
+      "../images/hotel51_3.jpg"
+    ],
+    "description": "Hotel modern dhe komod, ideal për një qëndrim të rehatshëm në qytet.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 85,
+    "amenities": [
+      "Wifi",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 288,
+    "name": "402 Apartment",
+    "location": "Sarandë",
+    "rating": 4.67,
+    "images": [
+      "../images/apartment19.jpg",
+      "../images/apartment19_1.jpg",
+      "../images/apartment19_2.jpg",
+      "../images/apartment19_3.jpg"
+    ],
+    "description": "Apartament komod me lehtësira të nevojshme dhe hapësirë të jashtme për relaksim.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 53,
+    "amenities": [
+      "Wi-Fi",
+      "TV",
+      "Washer",
+      "Air Conditioning",
+      "Patio or Balcony",
+      "Luggage Dropoff Allowed"
+    ]
+  },
+  {
+    "id": 289,
+    "name": "Serenity 6 Apartment",
+    "location": "Himarë",
+    "rating": 4.7,
+    "images": [
+      "../images/apartment28.jpg",
+      "../images/apartment28_1.jpg",
+      "../images/apartment28_2.jpg",
+      "../images/apartment28_3.jpg"
+    ],
+    "description": "Apartament i rehatshëm me lehtësira të plota dhe hapësirë të jashtme për relaksim.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 65,
+    "amenities": [
+      "Beach Access",
+      "Kitchen",
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "TV",
+      "Air Conditioning",
+      "Patio or Balcony",
+      "Hair Dryer"
+    ]
+  },
+  {
+    "id": 290,
+    "name": "Hill 3 Apartment",
+    "location": "Himarë",
+    "rating": 4.6,
+    "images": [
+      "../images/apartment31.jpg",
+      "../images/apartment31_1.jpg",
+      "../images/apartment31_2.jpg",
+      "../images/apartment31_3.jpg"
+    ],
+    "description": "Apartament komod me lehtësira të plota dhe hapësirë për relaksim.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 40,
+    "amenities": [
+      "Beach Access",
+      "Wi-Fi",
+      "Dedicated Workspace",
+      "TV",
+      "Air Conditioning"
+    ]
+  },
+  {
+    "id": 291,
+    "name": "1863 Hotel",
+    "location": "Pejë",
+    "rating": 4.4,
+    "images": [
+      "../images/hotel80.jpg",
+      "../images/hotel80_1.jpg",
+      "../images/hotel80_2.jpg"
+    ],
+    "description": "Hotel modern me pamje nga mali dhe lumi, ideal për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 88,
+    "amenities": [
+      "River view",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV"
+    ]
+  },
+  {
+    "id": 292,
+    "name": "Vuno 2 Villa",
+    "location": "Himarë",
+    "rating": 4.78,
+    "images": [
+      "../images/villa25.jpg",
+      "../images/villa25_1.jpg",
+      "../images/villa25_2.jpg",
+      "../images/villa25_3.jpg"
+    ],
+    "description": "Vila komode me pamje deti dhe lehtësira të plota për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 123,
+    "amenities": [
+      "Sea View",
+      "Wi-Fi",
+      "Air Conditioning",
+      "Private Patio or Balcony",
+      "Luggage Dropoff Allowed"
+    ]
+  },
+  {
+    "id": 293,
+    "name": "Lucury 2BDR Apartment",
+    "location": "Tirana",
+    "rating": 4.6,
+    "images": [
+      "../images/apartment76.jpg",
+      "../images/apartment76_1.jpg",
+      "../images/apartment76_2.jpg",
+      "../images/apartment76_3.jpg"
+    ],
+    "description": "Apartament luksoz dhe i hapur, ideal për qëndrim të gjatë ose pushime komode.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 187,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "TV",
+      "Elevator",
+      "Washer"
+    ]
+  },
+  {
+    "id": 294,
+    "name": "Cloud 5 Hotel",
+    "location": "Tirana",
+    "rating": 4.3,
+    "images": [
+      "../images/hotel53.jpg",
+      "../images/hotel53_1.jpg",
+      "../images/hotel53_2.jpg"
+    ],
+    "description": "Hotel i rehatshëm me hapësirë të jashtme dhe pajisje moderne për një qëndrim komod.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 91,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "TV with standard cable",
+      "Air conditioning",
+      "Patio or balcony",
+      "Backyard"
+    ]
+  },
+  {
+    "id": 295,
+    "name": "Hotel",
+    "location": "Pejë",
+    "rating": 4,
+    "images": [
+      "../images/hotel81.jpg",
+      "../images/hotel81_1.jpg"
+    ],
+    "description": "Hotel modern dhe komod, ideal për 2 persona, me hapësirë për punë dhe facilitete të tjera për një qëndrim të rehatshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 59,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "TV",
+      "Air conditioning",
+      "Luggage dropoff allowed",
+      "Hair dryer"
+    ]
+  },
+  {
+    "id": 296,
+    "name": "SoleLuna Apartment",
+    "location": "Sarandë",
+    "rating": 3,
+    "images": [
+      "../images/apartment10.jpg",
+      "../images/apartment10_1.jpg",
+      "../images/apartment10_2.jpg"
+    ],
+    "description": "Apartament komod dhe i përshtatshëm për familje pranë plazhit.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 42,
+    "amenities": [
+      "Free Parking",
+      "Restaurant",
+      "Wi-Fi",
+      "Family Rooms",
+      "Bar",
+      "Private Beach Area",
+      "Breakfast"
+    ]
+  },
+  {
+    "id": 297,
+    "name": "Standard Apartment 7",
+    "location": "Prishtina",
+    "rating": 4.1,
+    "images": [
+      "../images/apartment52.jpg",
+      "../images/apartment52_1.jpg",
+      "../images/apartment52_2.jpg"
+    ],
+    "description": "Apartament i rehatshëm dhe praktik me lehtësira të plota për një qëndrim të këndshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 59,
+    "amenities": [
+      "Kitchen",
+      "Wi-Fi",
+      "Free Parking on Premises",
+      "TV",
+      "Washer",
+      "Dryer",
+      "Air Conditioning",
+      "Crib"
+    ]
+  },
+  {
+    "id": 298,
+    "name": "Kian's Apartment",
+    "location": "Himarë",
+    "rating": 4.66,
+    "images": [
+      "../images/apartment27.jpg",
+      "../images/apartment27_1.jpg",
+      "../images/apartment27_2.jpg",
+      "../images/apartment27_3.jpg"
+    ],
+    "description": "Apartament komod me lehtësira të plota dhe hapësirë të jashtme për relaksim.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 47,
+    "amenities": [
+      "Beach Access",
+      "Kitchen",
+      "Wi-Fi",
+      "Free Street Parking",
+      "TV",
+      "Washer",
+      "Air Conditioning",
+      "Patio or Balcony"
+    ]
+  },
+  {
+    "id": 299,
+    "name": "Avenue Hotel",
+    "location": "Ksamil",
+    "rating": 4,
+    "images": [
+      "../images/hotel99.jpg",
+      "../images/hotel99_1.jpg",
+      "../images/hotel99_2.jpg"
+    ],
+    "description": "Komod dhe i përshtatshëm për një qëndrim të rehatshëm në qendër të qytetit.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 57,
+    "amenities": [
+      "Outdoor swimming pool",
+      "Non-smoking rooms",
+      "Free parking",
+      "Free Wifi",
+      "Restaurant",
+      "Room service",
+      "Facilities for disabled guests",
+      "Family rooms"
+    ]
+  },
+  {
+    "id": 300,
+    "name": "Hotel",
+    "location": "Tirana",
+    "rating": 4.1,
+    "images": [
+      "../images/hotel43.jpg",
+      "../images/hotel43_1.jpg",
+      "../images/hotel43_2.jpg",
+      "../images/hotel43_3.jpg"
+    ],
+    "description": "Hotel komod dhe i përshtatshëm për një qëndrim të rehatshëm.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 88,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 301,
+    "name": "Premium Hotel",
+    "location": "Sarandë",
+    "rating": 3.4,
+    "images": [
+      "../images/hotel79.jpg",
+      "../images/hotel79_1.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për familje ose miq.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 46,
+    "amenities": [
+      "Wifi",
+      "Free street parking",
+      "TV",
+      "Elevator"
+    ]
+  },
+  {
+    "id": 302,
+    "name": "Apartment",
+    "location": "Pejë",
+    "rating": 4.5,
+    "images": [
+      "../images/apartment87.jpg",
+      "../images/apartment87_1.jpg",
+      "../images/apartment87_2.jpg"
+    ],
+    "description": "Apartament modern dhe i gjerë, ideal për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 2,
+    "capacity": 5,
+    "price": 128,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV",
+      "Washer"
+    ]
+  },
+  {
+    "id": 303,
+    "name": "Amansar Deluxe Hotel",
+    "location": "Tirana",
+    "rating": 4.4,
+    "images": [
+      "../images/hotel58.jpg",
+      "../images/hotel58_1.jpg",
+      "../images/hotel58_2.jpg",
+      "../images/hotel58_3.jpg"
+    ],
+    "description": "Hotel i rehatshëm dhe modern, ideal për një qëndrim të shkurtër ose të gjatë.",
+    "rooms": 1,
+    "capacity": 3,
+    "price": 70,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV",
+      "Washer",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 304,
+    "name": "Villa",
+    "location": "Himarë",
+    "rating": 4.6,
+    "images": [
+      "../images/villa47.jpg",
+      "../images/villa47_1.jpg",
+      "../images/villa47_2.jpg"
+    ],
+    "description": "Vilë komode dhe moderne me akses plazhi, ideale për një qëndrim relaksues për dy persona.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 105,
+    "amenities": [
+      "Wifi",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning"
+    ]
+  },
+  {
+    "id": 305,
+    "name": "Colosseum Hotel",
+    "location": "Ksamil",
+    "rating": 4,
+    "images": [
+      "../images/hotel100.jpg",
+      "../images/hotel100_1.jpg",
+      "../images/hotel100_2.jpg",
+      "../images/hotel100_3.jpg"
+    ],
+    "description": "Komod dhe i përshtatshëm për një qëndrim të rehatshëm.",
+    "rooms": 1,
+    "capacity": 2,
+    "price": 420,
+    "amenities": [
+      "Non-smoking rooms",
+      "Free parking",
+      "Free Wifi"
+    ]
+  },
+  {
+    "id": 306,
+    "name": "Red & White Palace Apartment",
+    "location": "Tirana",
+    "rating": 4.2,
+    "images": [
+      "../images/apartment65.jpg",
+      "../images/apartment65_1.jpg",
+      "../images/apartment65_2.jpg",
+      "../images/apartment65_3.jpg"
+    ],
+    "description": "Apartament modern dhe i këndshëm për një qëndrim relaksues.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 53,
+    "amenities": [
+      "Kitchen",
+      "Wifi",
+      "Dedicated workspace",
+      "TV",
+      "Elevator",
+      "Free washer – In unit"
+    ]
+  },
+  {
+    "id": 307,
+    "name": "Bliss Hotel",
+    "location": "Himarë",
+    "rating": 4.4,
+    "images": [
+      "../images/hotel69.jpg",
+      "../images/hotel69_1.jpg",
+      "../images/hotel69_2.jpg"
+    ],
+    "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për familje ose grup miqsh.",
+    "rooms": 1,
+    "capacity": 4,
+    "price": 100,
+    "amenities": [
+      "Wifi",
+      "Dedicated workspace",
+      "Free parking on premises",
+      "TV",
+      "Air conditioning"
+    ]
+  }
+]
