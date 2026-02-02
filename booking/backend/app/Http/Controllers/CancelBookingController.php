@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CancelBooking;
+use App\Models\Booking;
 
 class CancelBookingController extends Controller
 {
@@ -67,4 +68,36 @@ class CancelBookingController extends Controller
 
         return response()->json(['message' => 'Cancellation deleted'], 200);
     }
-}
+
+    public function update(Request $request, $id)
+{
+    $cancel = CancelBooking::findOrFail($id);
+
+    $request->validate([
+        'status' => 'required|in:pending,approved,rejected',
+        'admin_note' => 'nullable|string'
+    ]);
+
+    $cancel->status = $request->status;
+    $cancel->admin_note = $request->admin_note;
+    $cancel->save();
+
+    // SINKRONIZIMI ME BOOKINGS
+    if ($cancel->booking_id) {
+        $booking = Booking::find($cancel->booking_id);
+
+        if ($booking) {
+            if ($request->status === 'approved') {
+                $booking->status = 'cancelled';
+            } else {
+                $booking->status = 'confirmed';
+            }
+            $booking->save();
+        }
+    }
+
+    return response()->json([
+        'message' => 'Cancellation updated successfully',
+        'cancel' => $cancel
+    ], 200);
+}}

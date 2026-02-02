@@ -15,6 +15,7 @@ class CancelBooking extends Model
         'check_out',
         'location',
         'reason',
+        'admin_note',
         'status'
     ];
 
