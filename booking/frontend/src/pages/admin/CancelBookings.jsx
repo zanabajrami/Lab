@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { Check, X, Trash2, Edit3, Plus, RefreshCw, User, MapPin, Calendar } from "lucide-react";
 import EditCanceledBooking from "../../components/dashboard/EditCanceledBooking";
 
@@ -11,15 +11,11 @@ function CancelBookings() {
 
     const token = localStorage.getItem("token");
 
-    useEffect(() => {
-        fetchCancellations();
-    }, []);
-
-    const fetchCancellations = async () => {
+    const fetchCancellations = useCallback(async () => {
         try {
             setLoading(true);
             const res = await fetch("http://localhost:8000/api/cancel-bookings", {
-                headers: { "Authorization": `Bearer ${token}` },
+                headers: { Authorization: `Bearer ${token}` },
             });
             if (!res.ok) throw new Error("Failed to fetch data");
             const data = await res.json();
@@ -29,8 +25,12 @@ function CancelBookings() {
         } finally {
             setLoading(false);
         }
-    };
+    }, [token]);
 
+    useEffect(() => {
+        fetchCancellations();
+    }, [fetchCancellations]);
+    
     const handleUpdateStatus = async (id, newStatus) => {
         try {
             const res = await fetch(`http://localhost:8000/api/cancel-bookings/${id}`, {
@@ -185,8 +185,8 @@ function CancelBookings() {
                                     </div>
                                 </div>
                                 <span className={`shrink-0 px-2 py-0.5 rounded text-[9px] font-black uppercase border ${c.status === "approved" ? "bg-green-500/10 text-green-400 border-green-500/20" :
-                                        c.status === "rejected" ? "bg-red-500/10 text-red-400 border-red-500/20" :
-                                            "bg-amber-500/10 text-amber-400 border-amber-500/20"
+                                    c.status === "rejected" ? "bg-red-500/10 text-red-400 border-red-500/20" :
+                                        "bg-amber-500/10 text-amber-400 border-amber-500/20"
                                     }`}>
                                     {c.status}
                                 </span>
