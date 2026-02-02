@@ -17,47 +17,50 @@ class BookingController extends Controller
 
     // --- CREATE BOOKING ---
     public function store(Request $request)
-    {
-        $request->validate([
-            'email' => 'required|email|exists:users,email',
-            'hotel_id' => 'required|integer',
-            'hotel_name' => 'required|string|max:255',
-            'location' => 'required|string|max:255',
-            'phone' => 'required|string|max:50',
-            'check_in' => 'required|date',
-            'check_out' => 'required|date|after_or_equal:check_in',
-            'nights' => 'required|integer|min:1',
-            'total_price' => 'required|numeric|min:0',
-            'status' => 'nullable|in:confirmed,cancelled',
-            'special_requests' => 'nullable|string', // <-- ky rregull bën diferencën
-        ]);
+{
+    $request->validate([
+        'email' => 'required|email|exists:users,email',
+        'hotel_id' => 'required|integer',
+        'hotel_name' => 'required|string|max:255',
+        'location' => 'required|string|max:255',
+        'phone' => 'required|string|max:50',
+        'check_in' => 'required|date',
+        'check_out' => 'required|date|after_or_equal:check_in',
+        'nights' => 'required|integer|min:1',
+        'total_price' => 'required|numeric|min:0',
+        'special_requests' => 'nullable|string',
+    ]);
 
-        // Merr user nga email
-        $user = User::where('email', $request->email)->firstOrFail();
+    $user = User::where('email', $request->email)->first();
 
-        // Krijo booking
-        $booking = Booking::create([
-            'user_id' => $user->id,
-            'hotel_id' => $request->hotel_id,
-            'hotel_name' => $request->hotel_name,
-            'location' => $request->location,
-            'first_name' => $user->first_name,
-            'last_name' => $user->last_name,
-            'email' => $user->email,
-            'phone' => $request->phone,
-            'special_requests' => $request->special_requests ?? '', // <-- e merr nga request ose "" nëse bosh
-            'check_in' => $request->check_in,
-            'check_out' => $request->check_out,
-            'nights' => $request->nights,
-            'total_price' => $request->total_price,
-            'status' => $request->status ?? 'confirmed',
-        ]);
-
+    if (!$user) {
         return response()->json([
-            'message' => 'Booking created successfully',
-            'booking' => $booking
-        ], 201);
+            'message' => 'User not found'
+        ], 404);
     }
+
+    $booking = Booking::create([
+        'user_id' => $user->id,
+        'hotel_id' => $request->hotel_id,
+        'hotel_name' => $request->hotel_name,
+        'location' => $request->location,
+        'first_name' => $user->first_name,
+        'last_name' => $user->last_name,
+        'email' => $user->email,
+        'phone' => $request->phone,
+        'special_requests' => $request->special_requests ?? null,
+        'check_in' => $request->check_in,
+        'check_out' => $request->check_out,
+        'nights' => $request->nights,
+        'total_price' => $request->total_price,
+        'status' => 'confirmed',
+    ]);
+
+    return response()->json([
+        'message' => 'Booking created successfully',
+        'booking' => $booking
+    ], 201);
+}
 
     // --- UPDATE BOOKING ---
     public function update(Request $request, $id)
@@ -74,7 +77,6 @@ class BookingController extends Controller
         'check_out' => 'required|date|after_or_equal:check_in',
         'nights' => 'required|integer|min:1',
         'total_price' => 'required|numeric|min:0',
-        'status' => 'required|in:confirmed,cancelled',
     ]);
 
     $booking->update([
@@ -87,7 +89,6 @@ class BookingController extends Controller
         'check_out' => $request->check_out,
         'nights' => $request->nights,
         'total_price' => $request->total_price,
-        'status' => $request->status,
     ]);
 
     return response()->json([
