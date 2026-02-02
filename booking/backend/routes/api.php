@@ -51,7 +51,7 @@ Route::middleware('jwt.auth')->group(function () {
     
     //Cancel Bookings
     Route::get('/cancel-bookings', [CancelBookingController::class, 'index']);
-    Route::put('/cancel-bookings/{id}', [CancelBookingController::class, 'updateStatus']);
+    Route::put('/cancel-bookings/{id}', [CancelBookingController::class, 'update']);
     Route::delete('/cancel-bookings/{id}', [CancelBookingController::class, 'destroy']);
 
     //Hotels
