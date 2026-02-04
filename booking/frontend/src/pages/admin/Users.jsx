@@ -328,7 +328,7 @@ export default function Users({ onUserUpdated }) {
                         ? setEditingUser({ ...editingUser, first_name: e.target.value })
                         : setNewUser({ ...newUser, first_name: e.target.value })
                       }
-                      placeholder="e.g. John"
+                      placeholder="e.g. James"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -340,7 +340,7 @@ export default function Users({ onUserUpdated }) {
                         ? setEditingUser({ ...editingUser, last_name: e.target.value })
                         : setNewUser({ ...newUser, last_name: e.target.value })
                       }
-                      placeholder="e.g. Doe"
+                      placeholder="e.g. Brown"
                     />
                   </div>
                 </div>
@@ -354,7 +354,7 @@ export default function Users({ onUserUpdated }) {
                       ? setEditingUser({ ...editingUser, email: e.target.value })
                       : setNewUser({ ...newUser, email: e.target.value })
                     }
-                    placeholder="john@example.com"
+                    placeholder="james@gmail.com"
                   />
                 </div>
 

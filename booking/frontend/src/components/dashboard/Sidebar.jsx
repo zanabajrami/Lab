@@ -25,8 +25,6 @@ function Sidebar({ activePage, setActivePage }) {
           <div className="flex items-center justify-center w-10 h-10 lg:w-12 lg:h-12 rounded-xl shrink-0">
             <ShieldUser className="w-6 h-6 lg:w-7 lg:h-7 text-indigo-300" />
           </div>
-
-          {/* HIDE TEXT ON MOBILE & IPAD (only show on LG) */}
           <div className="hidden lg:flex flex-col">
             <h1 className="text-xl font-black tracking-tighter text-white uppercase leading-none">
               Book<span className="text-indigo-300 italic">Inn</span>

@@ -110,7 +110,7 @@ function Dashboard() {
                     className="w-full p-3.5 rounded-2xl bg-slate-50 border border-slate-200 focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-500/5 transition-all outline-none text-slate-900 font-medium placeholder:text-slate-300"
                     value={editingUser.first_name}
                     onChange={(e) => setEditingUser({ ...editingUser, first_name: e.target.value })}
-                    placeholder="e.g. John"
+                    placeholder="e.g. James"
                   />
                 </div>
                 <div className="space-y-1.5">
@@ -119,7 +119,7 @@ function Dashboard() {
                     className="w-full p-3.5 rounded-2xl bg-slate-50 border border-slate-200 focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-500/5 transition-all outline-none text-slate-900 font-medium placeholder:text-slate-300"
                     value={editingUser.last_name}
                     onChange={(e) => setEditingUser({ ...editingUser, last_name: e.target.value })}
-                    placeholder="e.g. Doe"
+                    placeholder="e.g. Brown"
                   />
                 </div>
               </div>
@@ -130,7 +130,7 @@ function Dashboard() {
                   className="w-full p-3.5 rounded-2xl bg-slate-50 border border-slate-200 focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-500/5 transition-all outline-none text-slate-900 font-medium placeholder:text-slate-300"
                   value={editingUser.email}
                   onChange={(e) => setEditingUser({ ...editingUser, email: e.target.value })}
-                  placeholder="john@example.com"
+                  placeholder="james@gmail.com"
                 />
               </div>
 
