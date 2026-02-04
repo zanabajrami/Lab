@@ -9,6 +9,10 @@ function Settings() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const fetchProfile = async () => {
       if (!token) {
         setError("NOT_AUTH");
@@ -109,7 +113,7 @@ function Settings() {
 
       // pastro token-in
       localStorage.removeItem("token");
-      localStorage.removeItem("user"); 
+      localStorage.removeItem("user");
       window.location.replace("/");
     } catch (err) {
       console.error("Delete error:", err.response?.data || err.message);

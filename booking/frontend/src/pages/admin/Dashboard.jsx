@@ -12,9 +12,11 @@ function Dashboard() {
   const [, setSummary] = useState(null);
   const [monthlyStats, setMonthlyStats] = useState([]);
   const [bookings, setBookings] = useState([]);
-
-  // State për Editimin
   const [editingUser, setEditingUser] = useState(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     // Fetch users

@@ -107,6 +107,11 @@ export default function CreateBooking({ onClose, onCreated }) {
     const inputStyle = "w-full px-3 py-1.5 text-sm rounded-lg border border-gray-300 focus:ring-2 focus:ring-slate-200 outline-none transition-all";
     const labelStyle = "block text-[10px] font-bold text-gray-400 uppercase mb-0.5 ml-1";
 
+       useEffect(() => {
+        document.body.style.overflow = "hidden";
+        return () => { document.body.style.overflow = "unset"; };
+    }, []);
+    
     return (
         <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center z-50 p-4">
             <div className="bg-white w-full max-w-xl rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">

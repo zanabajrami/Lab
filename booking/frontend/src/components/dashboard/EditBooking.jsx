@@ -48,12 +48,14 @@ export default function EditBookingModal({ booking, onClose, onUpdated }) {
     const readOnlyStyle = "bg-gray-50 text-gray-500 cursor-not-allowed border-dashed";
     const labelStyle = "block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1 ml-1";
 
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+        return () => { document.body.style.overflow = "unset"; };
+    }, []);
+
     return (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-2 sm:p-4">
-            {/* max-w-lg në desktop, w-full në mobile, max-h që të mos del jashtë ekranit */}
             <div className="bg-white w-full max-w-lg rounded-2xl shadow-2xl flex flex-col max-h-[95vh] sm:max-h-[90vh]">
-                
-                {/* Header - I fiksuar */}
                 <div className="px-5 py-4 border-b flex justify-between items-center shrink-0">
                     <div>
                         <h2 className="text-lg font-bold text-gray-800">Edit Booking</h2>
@@ -61,11 +63,9 @@ export default function EditBookingModal({ booking, onClose, onUpdated }) {
                     </div>
                     <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-full text-gray-400 text-2xl leading-none">&times;</button>
                 </div>
-
-                {/* Body - Scrollable në mobile */}
                 <div className="p-5 overflow-y-auto space-y-4">
-                    
-                    {/* Hotel Info - 1 kolonë mobile, 2 kolona desktop */}
+
+                    {/* Hotel Info */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div className="w-full">
                             <label className={labelStyle}>Hotel Name</label>
@@ -102,7 +102,7 @@ export default function EditBookingModal({ booking, onClose, onUpdated }) {
                         </div>
                     </div>
 
-                    {/* Guest - Section */}
+                    {/* Guest */}
                     <div className="bg-gray-50 p-3 rounded-xl border border-gray-100 space-y-3">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             <div>
@@ -120,7 +120,7 @@ export default function EditBookingModal({ booking, onClose, onUpdated }) {
                         </div>
                     </div>
 
-                    {/* Dates & Phone - 1 kolonë mobile, 3 kolona desktop */}
+                    {/* Dates & Phone */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                         <div className="sm:col-span-1">
                             <label className={labelStyle}>Phone</label>
@@ -136,7 +136,7 @@ export default function EditBookingModal({ booking, onClose, onUpdated }) {
                         </div>
                     </div>
 
-                    {/* Finance Summary */}
+                    {/* Total */}
                     <div className="grid grid-cols-2 gap-3 bg-indigo-50/50 p-3 rounded-xl border border-indigo-100">
                         <div>
                             <label className={labelStyle}>Total Nights</label>
@@ -170,7 +170,7 @@ export default function EditBookingModal({ booking, onClose, onUpdated }) {
                     </div>
                 </div>
 
-                {/* Footer - I fiksuar në fund */}
+                {/* Footer */}
                 <div className="p-4 border-t bg-gray-50 flex flex-col sm:flex-row gap-3 shrink-0 rounded-b-2xl">
                     <button
                         onClick={onClose}

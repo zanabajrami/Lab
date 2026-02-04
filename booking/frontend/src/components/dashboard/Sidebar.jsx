@@ -1,5 +1,6 @@
 import React from "react";
 import { LayoutDashboard, Users, ShieldUser, Settings, LogOut, UserLock, ChevronRight, CalendarCheck } from "lucide-react";
+import { TbCalendarCancel } from "react-icons/tb";
 
 function Sidebar({ activePage, setActivePage }) {
 
@@ -107,7 +108,7 @@ function Sidebar({ activePage, setActivePage }) {
         </button>
 
         <button onClick={() => setActivePage("cancel-bookings")} className={navItemClass("cancel-bookings")}>
-          <CalendarCheck size={20} strokeWidth={activePage === "cancel-bookings" ? 2.5 : 2} />
+          <TbCalendarCancel size={20} strokeWidth={activePage === "cancel-bookings" ? 2.5 : 2} />
           <span className="hidden lg:inline ml-3 font-semibold text-[15px]">Cancel Requests</span>
 
           {activePage === "cancel-bookings" && (

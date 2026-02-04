@@ -9,6 +9,10 @@ export default function LastLogin() {
     const token = localStorage.getItem("token");
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
         const fetchUsers = async () => {
             try {
                 const res = await fetch("http://127.0.0.1:8000/api/users", {

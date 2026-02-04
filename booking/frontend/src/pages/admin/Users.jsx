@@ -18,6 +18,10 @@ export default function Users({ onUserUpdated }) {
     role: "user",
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Reset page kur ndryshon search
   useEffect(() => {
     setPage(1);
@@ -103,7 +107,6 @@ export default function Users({ onUserUpdated }) {
       if (onUserUpdated) {
         onUserUpdated();
       }
-
       setEditingUser(null);
     }
   };

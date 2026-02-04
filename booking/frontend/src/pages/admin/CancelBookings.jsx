@@ -10,7 +10,7 @@ function CancelBookings() {
     const [selectedCancel, setSelectedCancel] = useState(null);
 
     const token = localStorage.getItem("token");
-
+    
     const fetchCancellations = useCallback(async () => {
         try {
             setLoading(true);
@@ -30,7 +30,7 @@ function CancelBookings() {
     useEffect(() => {
         fetchCancellations();
     }, [fetchCancellations]);
-    
+
     const handleUpdateStatus = async (id, newStatus) => {
         try {
             const res = await fetch(`http://localhost:8000/api/cancel-bookings/${id}`, {
