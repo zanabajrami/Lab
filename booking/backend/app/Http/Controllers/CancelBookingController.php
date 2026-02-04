@@ -12,7 +12,7 @@ class CancelBookingController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'booking_id' => 'required|integer',
+            'booking_id' => 'required|numeric|exists:bookings,id',
             'name' => 'required|string|max:100',
             'email' => 'required|email|max:100',
             'hotel_name' => 'required|string|max:100',

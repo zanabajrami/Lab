@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CancelBooking extends Model
 {
+    protected $table = 'cancel_bookings';
     protected $fillable = [
         'booking_id',
         'name',
@@ -17,6 +18,12 @@ class CancelBooking extends Model
         'reason',
         'admin_note',
         'status'
+    ];
+
+    protected $casts = [
+        'booking_id' => 'integer',
+        'check_in' => 'date',
+        'check_out' => 'date',
     ];
 
     public $timestamps = true;

@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { Check, X, Trash2, Edit3, Plus, RefreshCw, User, MapPin, Calendar } from "lucide-react";
+import { LuCalendarMinus } from "react-icons/lu";
 import EditCanceledBooking from "../../components/dashboard/EditCanceledBooking";
+import AddCancellation from "../../components/dashboard/AddCancellation";
 
 function CancelBookings() {
     const [cancellations, setCancellations] = useState([]);
@@ -8,9 +10,10 @@ function CancelBookings() {
     const [error, setError] = useState("");
     const [editOpen, setEditOpen] = useState(false);
     const [selectedCancel, setSelectedCancel] = useState(null);
+    const [addOpen, setAddOpen] = useState(false);
 
     const token = localStorage.getItem("token");
-    
+
     const fetchCancellations = useCallback(async () => {
         try {
             setLoading(true);
@@ -84,10 +87,10 @@ function CancelBookings() {
 
                     <div className="flex gap-2 w-full md:w-auto">
                         <button
-                            onClick={() => alert("Open Add Modal")}
+                            onClick={() => setAddOpen(true)}
                             className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-3 rounded-xl font-bold transition-all shadow-lg active:scale-95 text-sm"
                         >
-                            <Plus size={18} strokeWidth={3} /> ADD RECORD
+                            <LuCalendarMinus size={18} strokeWidth={3} />
                         </button>
                         <button
                             onClick={fetchCancellations}
@@ -159,8 +162,8 @@ function CancelBookings() {
                                         </td>
                                         <td className="px-6 py-6 text-right">
                                             <div className="flex justify-end gap-3">
-                                                <button onClick={() => { setSelectedCancel(c); setEditOpen(true); }} className="flex items-center gap-1 text-slate-400 hover:text-indigo-400 font-bold text-sm"><Edit3 size={18} /> Edit</button>
-                                                <button onClick={() => handleDelete(c.id)} className="flex items-center gap-1 text-slate-400 hover:text-red-500 font-bold text-sm"><Trash2 size={18} /> Delete</button>
+                                                <button onClick={() => { setSelectedCancel(c); setEditOpen(true); }} className="p-2 hover:bg-slate-700 rounded-lg text-indigo-300 transition-all"><Edit3 size={18} /></button>
+                                                <button onClick={() => handleDelete(c.id)} className="p-2 hover:bg-rose-500/10 rounded-lg text-slate-400 hover:text-rose-400 transition-all"><Trash2 size={18} /></button>
                                             </div>
                                         </td>
                                     </tr>
@@ -222,8 +225,16 @@ function CancelBookings() {
                 token={token}
                 onSaved={fetchCancellations}
             />
+
+            <AddCancellation
+                open={addOpen}
+                onClose={() => setAddOpen(false)}
+                token={token}
+                onSaved={fetchCancellations}
+            />
+
         </div>
     );
 }
 
-export default CancelBookings;
+export default CancelBookings; 
