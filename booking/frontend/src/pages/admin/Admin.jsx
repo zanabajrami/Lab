@@ -18,21 +18,21 @@ function AdminLayout() {
     }
 
     return (
-        <div className="flex h-screen bg-gray-100">
+        <div className="flex h-screen bg-gray-100 overflow-hidden">
             <Sidebar
                 activePage={activePage}
                 setActivePage={setActivePage}
             />
-            <div className="flex-1 flex flex-col">
+            <div className="flex-1 flex flex-col min-h-0">
                 <Topbar />
-                <main className="p-6 overflow-y-auto">
+                <main className="flex-1 p-6 overflow-y-auto min-h-0">
                     <div className="max-w-[1400px] mx-auto">
                         {activePage === "dashboard" && <Dashboard isSidebarCollapsed={isSidebarCollapsed} />}
                         {activePage === "users" && <Users isSidebarCollapsed={isSidebarCollapsed} />}
                         {activePage === "last-login" && <LastLogin isSidebarCollapsed={isSidebarCollapsed} />}
                         {activePage === "bookings" && <Bookings />}
                         {activePage === "cancel-bookings" && <CancelBookings />}
-                        {activePage === "settings" && <Settings isSidebarCollapsed={isSidebarCollapsed} />} 
+                        {activePage === "settings" && <Settings isSidebarCollapsed={isSidebarCollapsed} />}
                     </div>
                 </main>
             </div>

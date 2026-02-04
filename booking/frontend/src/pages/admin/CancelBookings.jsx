@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { Check, X, Trash2, Edit3, Plus, RefreshCw, User, MapPin, Calendar } from "lucide-react";
+import { Check, X, Trash2, Edit3, RefreshCw, User, MapPin, Calendar } from "lucide-react";
 import { LuCalendarMinus } from "react-icons/lu";
 import EditCanceledBooking from "../../components/dashboard/EditCanceledBooking";
 import AddCancellation from "../../components/dashboard/AddCancellation";
