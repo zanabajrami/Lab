@@ -114,7 +114,7 @@ function Register({ onSwitchToLogin, onClose }) {
                 <label className="text-sm font-medium text-slate-700 mb-1 block">First Name</label>
                 <input
                   type="text"
-                  placeholder="John"
+                  placeholder="James"
                   className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}

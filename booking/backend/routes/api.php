@@ -23,6 +23,7 @@ Route::post('/bookings', [BookingController::class, 'store']);
 Route::post('/cancel-bookings', [CancelBookingController::class, 'store']);
 
 Route::get('/hotels', [HotelController::class, 'index']);
+Route::get('/hotels/{id}', [HotelController::class, 'show']);
 
 // Routes me JWT
 Route::middleware('jwt.auth')->group(function () {
@@ -56,5 +57,8 @@ Route::middleware('jwt.auth')->group(function () {
 
     //Hotels
     Route::post('/hotels', [HotelController::class, 'store']);
+    Route::put('/hotels/{id}', [HotelController::class, 'update']);
+    Route::delete('/hotels/{id}', [HotelController::class, 'destroy']);
+    
     });
 });
