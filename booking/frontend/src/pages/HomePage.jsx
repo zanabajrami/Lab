@@ -9,48 +9,35 @@ import SearchBar from "../components/SearchBar";
 import { useNavigate, Link } from "react-router-dom";
 import { Search, Hotel, CircleCheck, BedDouble, Users, HandCoins, Euro, Phone, LockKeyhole, Clock } from "lucide-react";
 
-import mainImage from "../images/main.jpg";
-import prishtina0Image from "../images/prishtina-.jpeg";
+const BASE_URL = "http://localhost:8000"; // backend path
 
-import tirana0Image from "../images/tirana-.jpg";
-import tirana3Image from "../images/tirana3.jpg";
-
-import brezovica0Image from "../images/brezovica-.jpg";
-import brezovica3Image from "../images/villa9.jpg";
-
-import dhermi0Image from "../images/dhermi-.jpg";
-
-import radhimeImage from "../images/radhime.jpg";
-import ksamil1 from "../images/ksamil1.jpg";
-
-import sarande0Image from "../images/sarande0.jpg";
-
-import peja0Image from "../images/peja0.jpg";
-import prizren0Image from "../images/prizren0.jpg";
-import himare0Image from "../images/himare0.jpg";
-
-import villa21 from "../images/villa21.jpg";
-import hotel23 from "../images/hotel23.jpg";
-import apartment95 from "../images/apartment95.avif";
-import villa4 from "../images/villa4.avif";
+const mainImage = `${BASE_URL}/images/main.jpg`;
 
 const destinationss = [
-  { name: "Prishtina", image: prishtina0Image },
-  { name: "Tirana", image: tirana0Image },
-  { name: "Brezovicë", image: brezovica0Image },
-  { name: "Dhërmi", image: dhermi0Image },
-  { name: "Ksamil", image: ksamil1 },
-  { name: "Pejë", image: peja0Image },
-  { name: "Sarandë", image: sarande0Image },
-  { name: "Prizren", image: prizren0Image },
-  { name: "Himarë", image: himare0Image }
+  { name: "Prishtina", image: `${BASE_URL}/images/prishtina1.png` },
+  { name: "Tirana", image: `${BASE_URL}/images/tirana1.jpg` },
+  { name: "Brezovicë", image: `${BASE_URL}/images/brezovica1.jpg` },
+  { name: "Dhërmi", image: `${BASE_URL}/images/dhermi1.jpg` },
+  { name: "Ksamil", image: `${BASE_URL}/images/ksamil1.jpg` },
+  { name: "Pejë", image: `${BASE_URL}/images/peja1.jpg` },
+  { name: "Sarandë", image: `${BASE_URL}/images/sarande2.webp` },
+  { name: "Prizren", image: `${BASE_URL}/images/prizren1.webp` },
+  { name: "Himarë", image: `${BASE_URL}/images/himare1.webp` },
 ];
 
+const radhimeImage = `${BASE_URL}/images/radhime.jpg`;
+const brezovica3Image = `${BASE_URL}/images/brezovica3.jpg`;
+const tirana3Image = `${BASE_URL}/images/tirana3.jpg`;
+
+const himare0Image = `${BASE_URL}/images/himare0.jpg`;
+const brezovica0Image = `${BASE_URL}/images/brezovica-.jpg`;
+const tirana0Image = `${BASE_URL}/images/tirana-.jpg`;
+
 const deals = [
-  { id: 167, name: "Ionian Premium Villas", location: "Sarandë", rating: 4.8, images: [villa21], description: "Vila premium me pishinë të jashtme, ambiente familjare dhe pamje relaksuese.", rooms: 3, capacity: 7, price: 230, originalPrice: 260, discountPrice: 230, amenities: ["Free on-site parking", "Outdoor swimming pool", "Free Wifi", "Private bathroom", "Family rooms", "View", "Air conditioning", "Non-smoking rooms", "Flat-screen TV"] },
-  { id: 72, name: "Hotel MANAMI", location: "Prishtina", rating: 4.7, images: [hotel23], description: "Hotel butik elegant në qendër të Prishtinës me dizajn modern, restorant gourmet dhe ambiente relaksuese.", rooms: 1, capacity: 2, price: 117, originalPrice: 150, discountPrice: 117, amenities: ["Wi-Fi", "Breakfast", "Restaurant", "Parking", "Air Conditioning", "24h Reception"] },
-  { id: 48, name: "Cinco Apartments", location: "Pejë", rating: 4.3, images: [apartment95], description: "Apartament modern dhe i rehatshëm për 5 persona, me kuzhinë të pajisur dhe facilitete për një qëndrim të komod.", rooms: 2, capacity: 5, price: 94, originalPrice: 108, discountPrice: 94, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Washer"] },
-  { id: 82, name: "Villa Bora", location: "Brezovicë", rating: 4.6, images: [villa4], description: "Hapësira të ngrohta me dekor modern, ideal për relaks dhe aktivitete të ndryshme.", rooms: 3, capacity: 7, price: 172, originalPrice: 200, discountPrice: 172, amenities: ["Mountain View", "Wi-Fi", "Parking", "Fully Equipped Kitchen", "Fireplace", "Private Garden"] },
+  { id: 167, name: "Ionian Premium Villas", location: "Sarandë", rating: 4.8, images: [`${BASE_URL}/images/villa21.jpg`], description: "Vila premium me pishinë të jashtme, ambiente familjare dhe pamje relaksuese.", rooms: 3, capacity: 7, price: 230, originalPrice: 260, discountPrice: 230, amenities: ["Free on-site parking", "Outdoor swimming pool", "Free Wifi", "Private bathroom", "Family rooms", "View", "Air conditioning", "Non-smoking rooms", "Flat-screen TV"] },
+  { id: 72, name: "Hotel MANAMI", location: "Prishtina", rating: 4.7, images: [`${BASE_URL}/images/hotel23.jpg`], description: "Hotel butik elegant në qendër të Prishtinës me dizajn modern, restorant gourmet dhe ambiente relaksuese.", rooms: 1, capacity: 2, price: 117, originalPrice: 150, discountPrice: 117, amenities: ["Wi-Fi", "Breakfast", "Restaurant", "Parking", "Air Conditioning", "24h Reception"] },
+  { id: 48, name: "Cinco Apartments", location: "Pejë", rating: 4.3, images: [`${BASE_URL}/images/apartment95.avif`], description: "Apartament modern dhe i rehatshëm për 5 persona, me kuzhinë të pajisur dhe facilitete për një qëndrim të komod.", rooms: 2, capacity: 5, price: 94, originalPrice: 108, discountPrice: 94, amenities: ["Kitchen", "Wifi", "Free parking on premises", "TV", "Washer"] },
+  { id: 82, name: "Villa Bora", location: "Brezovicë", rating: 4.6, images: [`${BASE_URL}/images/villa4.avif`], description: "Hapësira të ngrohta me dekor modern, ideal për relaks dhe aktivitete të ndryshme.", rooms: 3, capacity: 7, price: 172, originalPrice: 200, discountPrice: 172, amenities: ["Mountain View", "Wi-Fi", "Parking", "Fully Equipped Kitchen", "Fireplace", "Private Garden"] },
 ]
 
 // ✅ Slider Settings
@@ -106,12 +93,6 @@ function HomePage() {
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
-
-  useEffect(() => {
-    const handleScroll = () => setShowTopButton(window.scrollY > 500);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <div>

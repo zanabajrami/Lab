@@ -1,9 +1,16 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { hotels } from "../data/HotelsData";
 
 function CancelBookingPage() {
   const navigate = useNavigate();
+  const [hotels, setHotels] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/api/hotels")
+      .then(res => res.json())
+      .then(data => setHotels(data))
+      .catch(err => console.error("Failed to fetch hotels:", err));
+  }, []);
 
   const [formData, setFormData] = useState({
     booking_id: "",

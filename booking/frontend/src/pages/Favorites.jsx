@@ -1,17 +1,48 @@
 import { useState, useEffect } from "react";
 import { Heart, Users, BedDouble, MapPin, Star } from "lucide-react";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { hotels } from "../data/HotelsData";
 
 function Favorites({ favorites, setFavorites }) {
   const [expandedIds, setExpandedIds] = useState([]);
   const [showTopButton, setShowTopButton] = useState(false);
+  const [hotels, setHotels] = useState([]);
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
   });
+
+  const favoriteHotels = hotels
+    .map(hotel => {
+      let images = Array.isArray(hotel.images)
+        ? hotel.images
+        : JSON.parse(hotel.images || "[]");
+
+      images = images
+        .filter(Boolean)
+        .map(img => {
+          if (img.startsWith("http")) return img;
+          if (img.startsWith("/")) return `http://localhost:8000${img}`;
+          return `http://localhost:8000/images/${img}`;
+        });
+
+      return { ...hotel, images };
+    })
+    .filter(h => favorites.includes(h.id));
+
+  useEffect(() => {
+    const fetchHotels = async () => {
+      try {
+        const res = await fetch("http://localhost:8000/api/hotels");
+        const data = await res.json();
+        setHotels(data);
+      } catch (err) {
+        console.error("Error fetching hotels:", err);
+      }
+    };
+    fetchHotels();
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,8 +52,6 @@ function Favorites({ favorites, setFavorites }) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const favoriteHotels = hotels.filter((h) => favorites.includes(h.id));
 
   const toggleFavorite = (id) => {
     setFavorites((prev) => prev.filter((fav) => fav !== id));
@@ -63,13 +92,13 @@ function Favorites({ favorites, setFavorites }) {
 
       {/* Scroll To Top Button */}
       {showTopButton && (
-       <button
-        onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 p-3 rounded-full bg-gray-800 text-white shadow-lg hover:bg-gray-700 transition-opacity duration-300 z-50
+        <button
+          onClick={scrollToTop}
+          className={`fixed bottom-8 right-8 p-3 rounded-full bg-gray-800 text-white shadow-lg hover:bg-gray-700 transition-opacity duration-300 z-50
                     ${showTopButton ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-      >
-        ▲
-      </button>
+        >
+          ▲
+        </button>
       )}
 
       <div className="max-w-7xl mx-auto">
@@ -90,7 +119,7 @@ function Favorites({ favorites, setFavorites }) {
                 <div className="relative h-64 w-full p-2 overflow-hidden">
                   <div className="relative h-full w-full overflow-hidden rounded-[2rem]">
                     <img
-                      src={hotel.images[0]}
+                      src={hotel.images.length > 0 ? hotel.images[0] : "http://localhost:8000/images/placeholder.jpg"}
                       alt={hotel.name}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
@@ -167,10 +196,9 @@ function Favorites({ favorites, setFavorites }) {
                   <button
                     onClick={() => toggleExpand(hotel.id)}
                     className={`mt-2 w-full py-4 rounded-2xl font-black text-xs uppercase tracking-widest transition
-                      ${
-                        isExpanded
-                          ? "bg-slate-900 text-white"
-                          : "bg-slate-100 hover:bg-slate-900 hover:text-white"
+                      ${isExpanded
+                        ? "bg-slate-900 text-white"
+                        : "bg-slate-100 hover:bg-slate-900 hover:text-white"
                       }`}
                   >
                     {isExpanded ? "Show Less" : "Show More"}

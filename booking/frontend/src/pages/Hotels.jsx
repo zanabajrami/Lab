@@ -7,7 +7,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { Heart, BedDouble, Users, HandCoins, X, RotateCcw, MapPin, ChevronDown } from "lucide-react";
-import { hotels } from "../data/HotelsData";
 import HotelCalendar from "../components/HotelCalendar";
 
 export default function HotelsPage({ favorites, setFavorites }) {
@@ -25,6 +24,36 @@ export default function HotelsPage({ favorites, setFavorites }) {
   const navigate = useNavigate();
   const [calendarHotel, setCalendarHotel] = useState(null);
   const [user, setUser] = useState(null);
+  const [hotels, setHotels] = useState([]);
+  const [, setLoading] = useState(true);
+
+  const BASE_URL = "http://localhost:8000";
+
+  useEffect(() => {
+    fetch("http://localhost:8000/api/hotels")
+      .then(res => res.json())
+      .then(data => {
+        const hotelsWithFullImages = data.map(hotel => {
+          let images = Array.isArray(hotel.images) ? hotel.images : [];
+
+          images = images
+            .filter(Boolean)
+            .map(img => {
+              if (img.startsWith("http")) return img;
+              if (img.startsWith("/")) return `${BASE_URL}${img}`;
+              return `${BASE_URL}/images/${img}`;
+            });
+
+          return {
+            ...hotel,
+            images
+          };
+        });
+
+        setHotels(hotelsWithFullImages);
+        setLoading(false);
+      });
+  }, []);
 
   const locations = [
     "all", "Prishtina", "Brezovicë", "Sarandë", "Himarë",
@@ -54,7 +83,6 @@ export default function HotelsPage({ favorites, setFavorites }) {
   }, [query]);
 
   const filteredHotels = hotels.filter((hotel) => {
-    // Filtrim sipas tab
     if (activeTab === "hotels" && !hotel.name.toLowerCase().includes("hotel")) return false;
     if (activeTab === "villas" && !(hotel.name.toLowerCase().includes("villa") || hotel.name.toLowerCase().includes("chalet"))) return false;
     if (activeTab === "apartments" && !hotel.name.toLowerCase().includes("apartment")) return false;
@@ -122,14 +150,11 @@ export default function HotelsPage({ favorites, setFavorites }) {
 
   useEffect(() => {
     if (selectedHotel) {
-      // Bllokon scroll kur modal hapet
+      // Bllock scroll
       document.body.style.overflow = "hidden";
     } else {
-      // Çliron scroll kur modal mbyllet
       document.body.style.overflow = "auto";
     }
-
-    // Cleanup nëse komponenti shkatërrohet
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -195,23 +220,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
-  useEffect(() => {
-    const handleScroll = () => setShowTopButton(window.scrollY > 500);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const [isBooked, setIsBooked] = useState(false); // State i ri
-
-  const handleBooking = () => {
-    if (!firstName || !lastName || !email || !phone) {
-      alert("Please fill in all required fields before continuing.");
-      return;
-    }
-
-    setIsBooked(true);
-    setShowInfoModal(false);
-  };
 
   const closeAllModals = () => {
     setIsBooked(false);
@@ -334,7 +343,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
             <div className="relative h-64 w-full p-2 overflow-hidden">
               <div className="relative h-full w-full overflow-hidden rounded-[2rem] transform-gpu">
                 <img
-                  src={hotel.images[0]}
+                  src={hotel.images?.[0] || `${BASE_URL}/images/placeholder.jpg`}
                   alt={hotel.name}
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                   style={{
@@ -453,6 +462,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
                 {selectedHotel.images.map((img, idx) => (
                   <SwiperSlide key={idx}>
                     <img
+                      key={idx}
                       src={img}
                       alt={selectedHotel.name}
                       className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700"

@@ -3,32 +3,24 @@ import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import Slider from "react-slick";
 import { Clock, Bed, Utensils, MapPinned, ChevronRight } from "lucide-react";
 
-import prishtina1 from "../images/prishtina1.png"; import prishtina3 from "../images/prishtina3.jpg";
-import tirana1 from "../images/tirana1.jpg"; import tirana4 from "../images/tirana4.jpg";
-import brezovica1 from "../images/brezovica1.jpg"; import brezovica4 from "../images/brezovica4.jpg";
-import dhermi1 from "../images/dhermi1.jpg"; import dhermi3 from "../images/dhermi3.webp";
-import ksamil0 from "../images/ksamil0.jpg"; import ksamil1 from "../images/ksamil1.jpg";
-import peja1 from "../images/peja1.jpg"; import peja2 from "../images/peja2.jpg";
-import sarande2 from "../images/sarande2.webp"; import sarande3 from "../images/sarande3.jpg";
-import prizren1 from "../images/prizren1.webp"; import prizren2 from "../images/prizren2.jpg";
-import himare1 from "../images/himare1.webp"; import himare2 from "../images/himare2.jpg";
+const BASE_URL = "http://localhost:8000"; // backend path
 
 export const destinations = [
-    { name: "Prishtina", image: prishtina1 },
-    { name: "Tirana", image: tirana1 },
-    { name: "Brezovicë", image: brezovica1 },
-    { name: "Dhërmi", image: dhermi1 },
-    { name: "Ksamil", image: ksamil1 },
-    { name: "Pejë", image: peja1 },
-    { name: "Sarandë", image: sarande2 },
-    { name: "Prizren", image: prizren1 },
-    { name: "Himarë", image: himare1 },
+    { name: "Prishtina", image: `${BASE_URL}/images/prishtina1.png` },
+    { name: "Tirana", image: `${BASE_URL}/images/tirana1.jpg` },
+    { name: "Brezovicë", image: `${BASE_URL}/images/brezovica1.jpg` },
+    { name: "Dhërmi", image: `${BASE_URL}/images/dhermi1.jpg` },
+    { name: "Ksamil", image: `${BASE_URL}/images/ksamil1.jpg` },
+    { name: "Pejë", image: `${BASE_URL}/images/peja1.jpg` },
+    { name: "Sarandë", image: `${BASE_URL}/images/sarande2.webp` },
+    { name: "Prizren", image: `${BASE_URL}/images/prizren1.webp` },
+    { name: "Himarë", image: `${BASE_URL}/images/himare1.webp` },
 ];
 
 export const aboutDestinations = [
     {
         name: "Prishtina",
-        image: prishtina3,
+        image: `${BASE_URL}/images/prishtina1.png`,
         description:
             "The capital of Kosovo, a modern city with vibrant nightlife, numerous cafes, and interesting history blending the old with the new.",
         activities: "Visit the Newborn Monument, National Museum, stroll in Germi Park, and explore the nightlife.",
@@ -39,7 +31,7 @@ export const aboutDestinations = [
     },
     {
         name: "Tirana",
-        image: tirana4,
+        image: `${BASE_URL}/images/tirana1.jpg`,
         description:
             "Tirana offers Mediterranean energy, colors, urban art, and Albanian hospitality in every corner of the city.",
         activities: "Dajti Cable Car, walk in Blloku, visit the New Bazaar, and National Museum.",
@@ -50,7 +42,7 @@ export const aboutDestinations = [
     },
     {
         name: "Brezovicë",
-        image: brezovica4,
+        image: `${BASE_URL}/images/brezovica1.jpg`,
         description:
             "One of the most beautiful mountain spots in Kosovo, ideal for winter skiing and nature vacations.",
         activities: "Skiing, summer hiking, stops at mountain lakes, and relaxing in spa-hotels.",
@@ -61,7 +53,7 @@ export const aboutDestinations = [
     },
     {
         name: "Dhërmi",
-        image: dhermi3,
+        image: `${BASE_URL}/images/dhermi1.jpg`,
         description:
             "A gem of the Albanian Riviera with crystal-clear waters, quiet beaches, and summer parties.",
         activities: "Swimming, diving, exploring sea caves, and nights with live music by the sea.",
@@ -72,7 +64,7 @@ export const aboutDestinations = [
     },
     {
         name: "Ksamil",
-        image: ksamil0,
+        image: `${BASE_URL}/images/ksamil1.jpg`,
         description:
             "Albania's most famous coastal destination, known for its small islands and turquoise waters.",
         activities: "Boat trips, snorkeling, and visits to Butrint.",
@@ -83,7 +75,7 @@ export const aboutDestinations = [
     },
     {
         name: "Pejë",
-        image: peja2,
+        image: `${BASE_URL}/images/peja1.jpg`,
         description:
             "A historic city surrounded by majestic mountains, ideal for adventure and culture.",
         activities: "Zip-line in Rugova, rafting, and visits to Pejë Monastery.",
@@ -94,7 +86,7 @@ export const aboutDestinations = [
     },
     {
         name: "Sarandë",
-        image: sarande3,
+        image: `${BASE_URL}/images/sarande2.webp`,
         description:
             "A lively coastal city across from Corfu, with blue waters and summer nights full of light.",
         activities: "Seaside walks, visit the Blue Eye, and boat trips.",
@@ -105,7 +97,7 @@ export const aboutDestinations = [
     },
     {
         name: "Prizren",
-        image: prizren2,
+        image: `${BASE_URL}/images/prizren1.webp`,
         description:
             "Kosovo's most historic city, with cobblestone streets, the stone bridge, and famous summer festivals.",
         activities: "Walks in Prizren Fortress, DokuFest, and exploring the old town.",
@@ -116,7 +108,7 @@ export const aboutDestinations = [
     },
     {
         name: "Himarë",
-        image: himare2,
+        image: `${BASE_URL}/images/himare1.webp`,
         description:
             "A perfect combination of mountains and sea, Himara offers tranquility and untouched beaches.",
         activities: "Hidden beaches, kayaking, and exploring old villages.",
