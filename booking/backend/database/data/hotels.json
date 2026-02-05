@@ -5,9 +5,9 @@
     "location": "Prishtina",
     "rating": 4.8,
     "images": [
-      "../images/hotel1.jpg",
-      "../images/hotel1_1.jpg",
-      "../images/hotel1_2.jpg"
+      "/images/hotel1.jpg",
+      "/images/hotel1_1.jpg",
+      "/images/hotel1_2.jpg"
     ],
     "description": "Hotel modern me spa, pishinë të brendshme dhe restorant luksoz me pamje panoramike.",
     "rooms": 1,
@@ -28,10 +28,10 @@
     "location": "Himarë",
     "rating": 4.8,
     "images": [
-      "../images/hotel16.jpg",
-      "../images/hotel16_1.jpg",
-      "../images/hotel16_2.jpg",
-      "../images/hotel16_3.jpg"
+      "/images/hotel16.jpg",
+      "/images/hotel16_1.jpg",
+      "/images/hotel16_2.jpg",
+      "/images/hotel16_3.jpg"
     ],
     "description": "Një hotel me arkitekturë elegante, për çifte që duan privatësi dhe qetësi.",
     "rooms": 1,
@@ -51,10 +51,10 @@
     "location": "Sarandë",
     "rating": 4.9,
     "images": [
-      "../images/hotel13.jpg",
-      "../images/hotel13_1.jpg",
-      "../images/hotel13_2.jpg",
-      "../images/hotel13_3.jpg"
+      "/images/hotel13.jpg",
+      "/images/hotel13_1.jpg",
+      "/images/hotel13_2.jpg",
+      "/images/hotel13_3.jpg"
     ],
     "description": "Hotel i qetë me plazh privat, bar panoramik dhe dhoma me ballkon detar.",
     "rooms": 1,
@@ -74,10 +74,10 @@
     "location": "Brezovicë",
     "rating": 4.6,
     "images": [
-      "../images/hotel6.jpg",
-      "../images/hotel6_1.jpg",
-      "../images/hotel6_2.jpg",
-      "../images/hotel6_3.jpg"
+      "/images/hotel6.jpg",
+      "/images/hotel6_1.jpg",
+      "/images/hotel6_2.jpg",
+      "/images/hotel6_3.jpg"
     ],
     "description": "Hotel malor pranë pistave të skijimit me sauna, spa dhe dhoma me pamje fantastike.",
     "rooms": 1,
@@ -98,9 +98,9 @@
     "location": "Pejë",
     "rating": 4.7,
     "images": [
-      "../images/villa68.jpg",
-      "../images/villa68_1.jpg",
-      "../images/villa68_2.jpg"
+      "/images/villa68.jpg",
+      "/images/villa68_1.jpg",
+      "/images/villa68_2.jpg"
     ],
     "description": "Vilë moderne me qasje direkte në ski-in/ski-out, ideale për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 4,
@@ -121,9 +121,9 @@
     "location": "Dhërmi",
     "rating": 4.3,
     "images": [
-      "../images/hotel86.jpg",
-      "../images/hotel86_1.jpg",
-      "../images/hotel86_2.jpg"
+      "/images/hotel86.jpg",
+      "/images/hotel86_1.jpg",
+      "/images/hotel86_2.jpg"
     ],
     "description": "Hotel modern me dhoma jo-duhan, parkim falas, Wifi falas, restorant, bar dhe mëngjes të mrekullueshëm.",
     "rooms": 1,
@@ -144,10 +144,10 @@
     "location": "Tirana",
     "rating": 4.9,
     "images": [
-      "../images/villa37.jpg",
-      "../images/villa37_1.jpg",
-      "../images/villa37_2.jpg",
-      "../images/villa37_3.jpg"
+      "/images/villa37.jpg",
+      "/images/villa37_1.jpg",
+      "/images/villa37_2.jpg",
+      "/images/villa37_3.jpg"
     ],
     "description": "Vilë luksoze dhe e hapur me pishinë, ideale për familje ose grup miqsh.",
     "rooms": 4,
@@ -170,10 +170,10 @@
     "location": "Himarë",
     "rating": 3.8,
     "images": [
-      "../images/apartment37.jpg",
-      "../images/apartment37_1.jpg",
-      "../images/apartment37_2.jpg",
-      "../images/apartment37_3.jpg"
+      "/images/apartment37.jpg",
+      "/images/apartment37_1.jpg",
+      "/images/apartment37_2.jpg",
+      "/images/apartment37_3.jpg"
     ],
     "description": "Apartament i thjeshtë dhe i rehatshëm, i përshtatshëm për një qëndrim të qetë.",
     "rooms": 1,
@@ -192,9 +192,9 @@
     "location": "Prizren",
     "rating": 4.1,
     "images": [
-      "../images/hotel95.jpg",
-      "../images/hotel95_1.jpg",
-      "../images/hotel95_2.jpg"
+      "/images/hotel95.jpg",
+      "/images/hotel95_1.jpg",
+      "/images/hotel95_2.jpg"
     ],
     "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
     "rooms": 1,
@@ -218,9 +218,9 @@
     "location": "Prishtina",
     "rating": 4.9,
     "images": [
-      "../images/hotel2.jpg",
-      "../images/hotel2_1.jpg",
-      "../images/hotel2_2.jpg"
+      "/images/hotel2.jpg",
+      "/images/hotel2_1.jpg",
+      "/images/hotel2_2.jpg"
     ],
     "description": "Një hotel 5-yje me spa, restorante ndërkombëtare dhe dhoma elegante në qendër të qytetit.",
     "rooms": 2,
@@ -241,9 +241,9 @@
     "location": "Tirana",
     "rating": 4.5,
     "images": [
-      "../images/hotel60.jpg",
-      "../images/hotel60_1.jpg",
-      "../images/hotel60_2.jpg"
+      "/images/hotel60.jpg",
+      "/images/hotel60_1.jpg",
+      "/images/hotel60_2.jpg"
     ],
     "description": "Hotel modern me pajisje SPA dhe komoditet për një qëndrim relaksues.",
     "rooms": 1,
@@ -264,10 +264,10 @@
     "location": "Himarë",
     "rating": 4.33,
     "images": [
-      "../images/apartment22.jpg",
-      "../images/apartment22_1.jpg",
-      "../images/apartment22_2.jpg",
-      "../images/apartment22_3.jpg"
+      "/images/apartment22.jpg",
+      "/images/apartment22_1.jpg",
+      "/images/apartment22_2.jpg",
+      "/images/apartment22_3.jpg"
     ],
     "description": "Apartament modern me pamje deti dhe lehtësira të plota për një qëndrim relaksues.",
     "rooms": 1,
@@ -289,10 +289,10 @@
     "location": "Sarandë",
     "rating": 4.6,
     "images": [
-      "../images/hotel78.jpg",
-      "../images/hotel78_1.jpg",
-      "../images/hotel78_2.jpg",
-      "../images/hotel78_3.jpg"
+      "/images/hotel78.jpg",
+      "/images/hotel78_1.jpg",
+      "/images/hotel78_2.jpg",
+      "/images/hotel78_3.jpg"
     ],
     "description": "Hotel modern dhe luksoz me pishinë, jacuzzi dhe ambiente të rehatshme, ideal për familje ose grupe miqsh.",
     "rooms": 1,
@@ -315,10 +315,10 @@
     "location": "near Prizren",
     "rating": 4.4,
     "images": [
-      "../images/villa89.jpg",
-      "../images/villa89_1.jpg",
-      "../images/villa89_2.jpg",
-      "../images/villa89_3.jpg"
+      "/images/villa89.jpg",
+      "/images/villa89_1.jpg",
+      "/images/villa89_2.jpg",
+      "/images/villa89_3.jpg"
     ],
     "description": "Vilë e rehatshme dhe moderne e përshtatshme për qëndrime relaksuese me hapësira komode dhe ambiente të mirëmbajtura për pushime cilësore.",
     "rooms": 3,
@@ -341,9 +341,9 @@
     "location": "Prishtina",
     "rating": 4.3,
     "images": [
-      "../images/apartment61.jpg",
-      "../images/apartment61_1.jpg",
-      "../images/apartment61_2.jpg"
+      "/images/apartment61.jpg",
+      "/images/apartment61_1.jpg",
+      "/images/apartment61_2.jpg"
     ],
     "description": "Apartament luksoz me lehtësira të plota, i përshtatshëm për grupe të mëdha dhe qëndrime relaksuese.",
     "rooms": 2,
@@ -362,9 +362,9 @@
     "location": "Tirana",
     "rating": 4.3,
     "images": [
-      "../images/hotel59.jpg",
-      "../images/hotel59_1.jpg",
-      "../images/hotel59_2.jpg"
+      "/images/hotel59.jpg",
+      "/images/hotel59_1.jpg",
+      "/images/hotel59_2.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim të shkurtër ose të gjatë.",
     "rooms": 1,
@@ -383,9 +383,9 @@
     "location": "Tirana",
     "rating": 4.2,
     "images": [
-      "../images/apartment77.jpg",
-      "../images/apartment77_1.jpg",
-      "../images/apartment77_2.jpg"
+      "/images/apartment77.jpg",
+      "/images/apartment77_1.jpg",
+      "/images/apartment77_2.jpg"
     ],
     "description": "Apartament komod dhe modern me hapësirë të këndshme për një qëndrim relaksues.",
     "rooms": 1,
@@ -406,8 +406,8 @@
     "location": "Himarë",
     "rating": 4.5,
     "images": [
-      "../images/hotel75.jpg",
-      "../images/hotel75_1.jpg"
+      "/images/hotel75.jpg",
+      "/images/hotel75_1.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm me akses plazhi, ideal për familje ose grup miqsh.",
     "rooms": 1,
@@ -426,10 +426,10 @@
     "location": "Brezovicë",
     "rating": 4.7,
     "images": [
-      "../images/villa3.jpg",
-      "../images/villa3_1.jpg",
-      "../images/villa3_2.jpg",
-      "../images/villa3_3.jpg"
+      "/images/villa3.jpg",
+      "/images/villa3_1.jpg",
+      "/images/villa3_2.jpg",
+      "/images/villa3_3.jpg"
     ],
     "description": "Arkitekturë elegante me kopshte të gjelbërta dhe ambient të ndriçuar natyrshëm.",
     "rooms": 3,
@@ -450,9 +450,9 @@
     "location": "Pejë",
     "rating": 4.5,
     "images": [
-      "../images/apartment88.jpg",
-      "../images/apartment88_1.jpg",
-      "../images/apartment88_2.jpg"
+      "/images/apartment88.jpg",
+      "/images/apartment88_1.jpg",
+      "/images/apartment88_2.jpg"
     ],
     "description": "Apartamente moderne dhe komode, ideale për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 2,
@@ -473,9 +473,9 @@
     "location": "Dhërmi",
     "rating": 4.5,
     "images": [
-      "../images/villa79.jpg",
-      "../images/villa79_1.jpg",
-      "../images/villa79_2.jpg"
+      "/images/villa79.jpg",
+      "/images/villa79_1.jpg",
+      "/images/villa79_2.jpg"
     ],
     "description": "Villa luksoze dhe moderne për 2 persona, me Wifi, TV dhe ajër të kondicionuar për një qëndrim komod.",
     "rooms": 1,
@@ -493,9 +493,9 @@
     "location": "Himarë",
     "rating": 4.3,
     "images": [
-      "../images/hotel71.jpg",
-      "../images/hotel71_1.jpg",
-      "../images/hotel71_2.jpg"
+      "/images/hotel71.jpg",
+      "/images/hotel71_1.jpg",
+      "/images/hotel71_2.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim të shkurtër ose të gjatë.",
     "rooms": 1,
@@ -515,9 +515,9 @@
     "location": "Ksamil",
     "rating": 4,
     "images": [
-      "../images/hotel97.jpg",
-      "../images/hotel97_1.jpg",
-      "../images/hotel97_2.jpg"
+      "/images/hotel97.jpg",
+      "/images/hotel97_1.jpg",
+      "/images/hotel97_2.jpg"
     ],
     "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime bazë për pushuesit.",
     "rooms": 1,
@@ -536,9 +536,9 @@
     "location": "Tirana",
     "rating": 4.3,
     "images": [
-      "../images/hotel54.jpg",
-      "../images/hotel54_1.jpg",
-      "../images/hotel54_2.jpg"
+      "/images/hotel54.jpg",
+      "/images/hotel54_1.jpg",
+      "/images/hotel54_2.jpg"
     ],
     "description": "Hotel i rehatshëm dhe modern, ideal për një qëndrim të shkurtër ose të gjatë.",
     "rooms": 1,
@@ -557,9 +557,9 @@
     "location": "Dhërmi",
     "rating": 4.7,
     "images": [
-      "../images/villa83.jpg",
-      "../images/villa83_1.jpg",
-      "../images/villa83_2.jpg"
+      "/images/villa83.jpg",
+      "/images/villa83_1.jpg",
+      "/images/villa83_2.jpg"
     ],
     "description": "Villa elegante me kuzhinë të pajisur, Wifi, parkim falas, TV, lavanderi dhe ajër të kondicionuar për një qëndrim komod.",
     "rooms": 2,
@@ -580,10 +580,10 @@
     "location": "Himarë",
     "rating": 4.68,
     "images": [
-      "../images/apartment29.jpg",
-      "../images/apartment29_1.jpg",
-      "../images/apartment29_2.jpg",
-      "../images/apartment29_3.jpg"
+      "/images/apartment29.jpg",
+      "/images/apartment29_1.jpg",
+      "/images/apartment29_2.jpg",
+      "/images/apartment29_3.jpg"
     ],
     "description": "Apartament modern me pamje deti dhe lehtësira të plota për një qëndrim relaksues.",
     "rooms": 1,
@@ -605,9 +605,9 @@
     "location": "Prishtina",
     "rating": 4.7,
     "images": [
-      "../images/hotel3.jpg",
-      "../images/hotel3_1.jpg",
-      "../images/hotel3_2.jpg"
+      "/images/hotel3.jpg",
+      "/images/hotel3_1.jpg",
+      "/images/hotel3_2.jpg"
     ],
     "description": "Ofron ambiente moderne, bar rooftop me pamje të mahnitshme dhe kuzhinë bashkëkohore.",
     "rooms": 1,
@@ -628,11 +628,11 @@
     "location": "Brezovicë",
     "rating": 4.8,
     "images": [
-      "../images/villa6.jpg",
-      "../images/villa6_1.jpg",
-      "../images/villa6_2.jpg",
-      "../images/villa6_3.jpg",
-      "../images/villa6_4.jpg"
+      "/images/villa6.jpg",
+      "/images/villa6_1.jpg",
+      "/images/villa6_2.jpg",
+      "/images/villa6_3.jpg",
+      "/images/villa6_4.jpg"
     ],
     "description": "Ambient modern dhe stil elegant, me zona relaksuese dhe pamje nga natyra përreth.",
     "rooms": 3,
@@ -652,10 +652,10 @@
     "location": "Sarandë",
     "rating": 4.94,
     "images": [
-      "../images/hotel40.jpg",
-      "../images/hotel40_1.jpg",
-      "../images/hotel40_2.jpg",
-      "../images/hotel40_3.jpg"
+      "/images/hotel40.jpg",
+      "/images/hotel40_1.jpg",
+      "/images/hotel40_2.jpg",
+      "/images/hotel40_3.jpg"
     ],
     "description": "Hotel modern me pamje kopshti, akses direkt në plazh dhe kushte të shkëlqyera për një qëndrim komod.",
     "rooms": 1,
@@ -679,10 +679,10 @@
     "location": "Prishtina",
     "rating": 4.6,
     "images": [
-      "../images/hotel4.jpg",
-      "../images/hotel4_1.jpg",
-      "../images/hotel4_2.jpg",
-      "../images/hotel4_3.jpg"
+      "/images/hotel4.jpg",
+      "/images/hotel4_1.jpg",
+      "/images/hotel4_2.jpg",
+      "/images/hotel4_3.jpg"
     ],
     "description": "Hotel i qetë me kopshte të bukura, ambient relaksues dhe restorant tradicional kosovar.",
     "rooms": 1,
@@ -703,9 +703,9 @@
     "location": "Tirana",
     "rating": 3.3,
     "images": [
-      "../images/apartment79.jpg",
-      "../images/apartment79_1.jpg",
-      "../images/apartment79_2.jpg"
+      "/images/apartment79.jpg",
+      "/images/apartment79_1.jpg",
+      "/images/apartment79_2.jpg"
     ],
     "description": "Apartament modern dhe i rehatshëm për një qëndrim të këndshëm.",
     "rooms": 1,
@@ -724,10 +724,10 @@
     "location": "Prishtina",
     "rating": 4.5,
     "images": [
-      "../images/hotel5.jpg",
-      "../images/hotel5_1.jpg",
-      "../images/hotel5_2.jpg",
-      "../images/hotel5_3.jpg"
+      "/images/hotel5.jpg",
+      "/images/hotel5_1.jpg",
+      "/images/hotel5_2.jpg",
+      "/images/hotel5_3.jpg"
     ],
     "description": "Ideal për udhëtarë biznesi, me sallë takimesh moderne dhe parkim falas.",
     "rooms": 1,
@@ -746,10 +746,10 @@
     "location": "Brezovicë",
     "rating": 4.7,
     "images": [
-      "../images/hotel7.jpg",
-      "../images/hotel7_1.jpg",
-      "../images/hotel7_2.jpg",
-      "../images/hotel7_3.jpg"
+      "/images/hotel7.jpg",
+      "/images/hotel7_1.jpg",
+      "/images/hotel7_2.jpg",
+      "/images/hotel7_3.jpg"
     ],
     "description": "Hotel komod me stil alpin, shumë afër teleferikut, i përshtatshëm për çifte dhe familje.",
     "rooms": 1,
@@ -769,9 +769,9 @@
     "location": "Himarë",
     "rating": 3.7,
     "images": [
-      "../images/apartment41.jpg",
-      "../images/apartment41_1.jpg",
-      "../images/apartment41_2.jpg"
+      "/images/apartment41.jpg",
+      "/images/apartment41_1.jpg",
+      "/images/apartment41_2.jpg"
     ],
     "description": "Apartament praktik dhe i përshtatshëm për një qëndrim të këndshëm pranë detit.",
     "rooms": 1,
@@ -790,8 +790,8 @@
     "location": "Ksamil",
     "rating": 4.2,
     "images": [
-      "../images/apartment107.jpg",
-      "../images/apartment107_1.jpg"
+      "/images/apartment107.jpg",
+      "/images/apartment107_1.jpg"
     ],
     "description": "Apartament i rehatshëm dhe i përshtatshëm për grup të vogël, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
     "rooms": 1,
@@ -811,8 +811,8 @@
     "location": "Sarandë",
     "rating": 4.5,
     "images": [
-      "../images/hotel77.jpg",
-      "../images/hotel77_1.jpg"
+      "/images/hotel77.jpg",
+      "/images/hotel77_1.jpg"
     ],
     "description": "Hotel modern me akses të përbashkët në plazh dhe ambiente të rehatshme, ideal për familje ose grup miqsh.",
     "rooms": 1,
@@ -832,9 +832,9 @@
     "location": "Tirana",
     "rating": 4.1,
     "images": [
-      "../images/apartment72.jpg",
-      "../images/apartment72_1.jpg",
-      "../images/apartment72_2.jpg"
+      "/images/apartment72.jpg",
+      "/images/apartment72_1.jpg",
+      "/images/apartment72_2.jpg"
     ],
     "description": "Apartament i rehatshëm dhe i përshtatshëm për një qëndrim të qetë dhe praktik.",
     "rooms": 1,
@@ -854,9 +854,9 @@
     "location": "Himarë",
     "rating": 4.9,
     "images": [
-      "../images/villa52.jpg",
-      "../images/villa52_1.jpg",
-      "../images/villa52_2.jpg"
+      "/images/villa52.jpg",
+      "/images/villa52_1.jpg",
+      "/images/villa52_2.jpg"
     ],
     "description": "Vilë luksoze dhe moderne me hapësira private dhe teknologji të avancuar, ideale për grupet e mëdha dhe qëndrime komode.",
     "rooms": 3,
@@ -879,9 +879,9 @@
     "location": "Pejë",
     "rating": 4.2,
     "images": [
-      "../images/apartment94.jpg",
-      "../images/apartment94_1.jpg",
-      "../images/apartment94_2.jpg"
+      "/images/apartment94.jpg",
+      "/images/apartment94_1.jpg",
+      "/images/apartment94_2.jpg"
     ],
     "description": "Apartament modern dhe i rehatshëm për 4 persona, me kuzhinë të pajisur dhe facilitete të tjera për një qëndrim komod.",
     "rooms": 3,
@@ -903,9 +903,9 @@
     "location": "Dhërmi",
     "rating": 4.9,
     "images": [
-      "../images/villa86.jpg",
-      "../images/villa86_1.jpg",
-      "../images/villa86_2.jpg"
+      "/images/villa86.jpg",
+      "/images/villa86_1.jpg",
+      "/images/villa86_2.jpg"
     ],
     "description": "Villa luksoze me qasje në plazh dhe pamje nga kopshti, kuzhinë të pajisur, Wifi, garazh falas, HDTV, lavanderi falas dhe ajër të kondicionuar.",
     "rooms": 2,
@@ -928,11 +928,11 @@
     "location": "near Brezovicë",
     "rating": 4.9,
     "images": [
-      "../images/villa8.jpg",
-      "../images/villa8_1.jpg",
-      "../images/villa8_2.jpg",
-      "../images/villa8_3.jpg",
-      "../images/villa8_4.jpg"
+      "/images/villa8.jpg",
+      "/images/villa8_1.jpg",
+      "/images/villa8_2.jpg",
+      "/images/villa8_3.jpg",
+      "/images/villa8_4.jpg"
     ],
     "description": "Një villë ekskluzive në natyrë me pamje fantastike.",
     "rooms": 2,
@@ -952,10 +952,10 @@
     "location": "Himarë",
     "rating": 5,
     "images": [
-      "../images/villa54.jpg",
-      "../images/villa54_1.jpg",
-      "../images/villa54_2.jpg",
-      "../images/villa54_3.jpg"
+      "/images/villa54.jpg",
+      "/images/villa54_1.jpg",
+      "/images/villa54_2.jpg",
+      "/images/villa54_3.jpg"
     ],
     "description": "Vilë luksoze dhe e madhe me pamje nga luginat dhe malet, ideale për grupet e mëdha dhe qëndrime komode.",
     "rooms": 6,
@@ -977,9 +977,9 @@
     "location": "Ksamil",
     "rating": 4.3,
     "images": [
-      "../images/villa100.jpg",
-      "../images/villa100_1.jpg",
-      "../images/villa100_2.jpg"
+      "/images/villa100.jpg",
+      "/images/villa100_1.jpg",
+      "/images/villa100_2.jpg"
     ],
     "description": "Vilë e rehatshme dhe e përshtatshme për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
     "rooms": 1,
@@ -999,10 +999,10 @@
     "location": "near Brezovicë",
     "rating": 4.5,
     "images": [
-      "../images/villa9.jpg",
-      "../images/villa9_1.jpg",
-      "../images/villa9_2.jpg",
-      "../images/villa9_3.jpg"
+      "/images/villa9.jpg",
+      "/images/villa9_1.jpg",
+      "/images/villa9_2.jpg",
+      "/images/villa9_3.jpg"
     ],
     "description": "Chalet prej druri në zemër të maleve, perfekt për pushime dimërore private.",
     "rooms": 2,
@@ -1022,8 +1022,8 @@
     "location": "Pejë",
     "rating": 4.5,
     "images": [
-      "../images/villa62.jpg",
-      "../images/villa62_1.jpg"
+      "/images/villa62.jpg",
+      "/images/villa62_1.jpg"
     ],
     "description": "Vilë moderne dhe komode me jacuzzi, ideale për familje ose grupe të vogla.",
     "rooms": 2,
@@ -1044,10 +1044,10 @@
     "location": "Prishtina",
     "rating": 4.6,
     "images": [
-      "../images/hotel21.jpg",
-      "../images/hotel21_1.jpg",
-      "../images/hotel21_2.jpg",
-      "../images/hotel21_3.jpg"
+      "/images/hotel21.jpg",
+      "/images/hotel21_1.jpg",
+      "/images/hotel21_2.jpg",
+      "/images/hotel21_3.jpg"
     ],
     "description": "Hotel modern afër qendrës së Prishtinës, me dizajn elegant, mëngjes të shkëlqyer dhe ambiente të rehatshme.",
     "rooms": 1,
@@ -1067,10 +1067,10 @@
     "location": "Sarandë",
     "rating": 4.8,
     "images": [
-      "../images/hotel11.jpg",
-      "../images/hotel11_1.jpg",
-      "../images/hotel11_2.jpg",
-      "../images/hotel11_3.jpg"
+      "/images/hotel11.jpg",
+      "/images/hotel11_1.jpg",
+      "/images/hotel11_2.jpg",
+      "/images/hotel11_3.jpg"
     ],
     "description": "Hotel i njohur buzë detit me pamje fantastike, pishinë dhe restorant mesdhetar.",
     "rooms": 1,
@@ -1091,9 +1091,9 @@
     "location": "Pejë",
     "rating": 4.3,
     "images": [
-      "../images/apartment95.jpg",
-      "../images/apartment95_1.jpg",
-      "../images/apartment95_2.jpg"
+      "/images/apartment95.jpg",
+      "/images/apartment95_1.jpg",
+      "/images/apartment95_2.jpg"
     ],
     "description": "Apartament modern dhe i rehatshëm për 5 persona, me kuzhinë të pajisur dhe facilitete për një qëndrim të komod.",
     "rooms": 2,
@@ -1113,10 +1113,10 @@
     "location": "Himarë",
     "rating": 3.9,
     "images": [
-      "../images/apartment35.jpg",
-      "../images/apartment35_1.jpg",
-      "../images/apartment35_2.jpg",
-      "../images/apartment35_3.jpg"
+      "/images/apartment35.jpg",
+      "/images/apartment35_1.jpg",
+      "/images/apartment35_2.jpg",
+      "/images/apartment35_3.jpg"
     ],
     "description": "Apartament i thjeshtë dhe i rehatshëm, i përshtatshëm për një qëndrim të qetë.",
     "rooms": 1,
@@ -1136,9 +1136,9 @@
     "location": "Tirana",
     "rating": 4.2,
     "images": [
-      "../images/hotel45.jpg",
-      "../images/hotel45_1.jpg",
-      "../images/hotel45_2.jpg"
+      "/images/hotel45.jpg",
+      "/images/hotel45_1.jpg",
+      "/images/hotel45_2.jpg"
     ],
     "description": "Hotel i rehatshëm me ambient të qetë dhe pajisje moderne.",
     "rooms": 1,
@@ -1160,9 +1160,9 @@
     "location": "Dhërmi",
     "rating": 4.8,
     "images": [
-      "../images/villa84.jpg",
-      "../images/villa84_1.jpg",
-      "../images/villa84_2.jpg"
+      "/images/villa84.jpg",
+      "/images/villa84_1.jpg",
+      "/images/villa84_2.jpg"
     ],
     "description": "Villa luksoze me qasje në plazh, pamje nga gjiri dhe oborri, kuzhinë të pajisur, Wifi, hapësirë për punë dhe parkim falas për 2 automjete.",
     "rooms": 2,
@@ -1184,9 +1184,9 @@
     "location": "Himarë",
     "rating": 4.5,
     "images": [
-      "../images/villa50.jpg",
-      "../images/villa50_1.jpg",
-      "../images/villa50_2.jpg"
+      "/images/villa50.jpg",
+      "/images/villa50_1.jpg",
+      "/images/villa50_2.jpg"
     ],
     "description": "Vilë komode me pamje nga mali dhe akses të përbashkët në plazh, ideale për një qëndrim relaksues.",
     "rooms": 1,
@@ -1207,9 +1207,9 @@
     "location": "Dhërmi",
     "rating": 4.6,
     "images": [
-      "../images/apartment99.jpg",
-      "../images/apartment99_1.jpg",
-      "../images/apartment99_2.jpg"
+      "/images/apartment99.jpg",
+      "/images/apartment99_1.jpg",
+      "/images/apartment99_2.jpg"
     ],
     "description": "Apartament modern me qasje në plazh, me ambiente të rehatshme dhe pajisje për një qëndrim të këndshëm.",
     "rooms": 1,
@@ -1231,9 +1231,9 @@
     "location": "Dhërmi",
     "rating": 4.7,
     "images": [
-      "../images/villa81.jpg",
-      "../images/villa81_1.jpg",
-      "../images/villa81_2.jpg"
+      "/images/villa81.jpg",
+      "/images/villa81_1.jpg",
+      "/images/villa81_2.jpg"
     ],
     "description": "Villa luksoze me pamje nga deti dhe malet, kuzhinë të pajisur, Wifi, hapësirë për punë, parkim falas, TV 60 inch me kabllo premium dhe lavanderi falas në njësi.",
     "rooms": 2,
@@ -1256,9 +1256,9 @@
     "location": "Pejë",
     "rating": 4.4,
     "images": [
-      "../images/apartment85.jpg",
-      "../images/apartment85_1.jpg",
-      "../images/apartment85_2.jpg"
+      "/images/apartment85.jpg",
+      "/images/apartment85_1.jpg",
+      "/images/apartment85_2.jpg"
     ],
     "description": "Apartament modern dhe komod, ideal për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 1,
@@ -1279,9 +1279,9 @@
     "location": "Prizren",
     "rating": 4,
     "images": [
-      "../images/apartment104.jpg",
-      "../images/apartment104_1.jpg",
-      "../images/apartment104_2.jpg"
+      "/images/apartment104.jpg",
+      "/images/apartment104_1.jpg",
+      "/images/apartment104_2.jpg"
     ],
     "description": "Apartament i rehatshëm dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira të rehatshme për pushuesit.",
     "rooms": 1,
@@ -1300,10 +1300,10 @@
     "location": "Tirana",
     "rating": 4.4,
     "images": [
-      "../images/hotel49.jpg",
-      "../images/hotel49_1.jpg",
-      "../images/hotel49_2.jpg",
-      "../images/hotel49_3.jpg"
+      "/images/hotel49.jpg",
+      "/images/hotel49_1.jpg",
+      "/images/hotel49_2.jpg",
+      "/images/hotel49_3.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim komod në qytet.",
     "rooms": 1,
@@ -1323,11 +1323,11 @@
     "location": "Brezovicë",
     "rating": 4.8,
     "images": [
-      "../images/villa10.jpg",
-      "../images/villa10_1.jpg",
-      "../images/villa10_2.jpg",
-      "../images/villa10_3.jpg",
-      "../images/villa10_4.jpg"
+      "/images/villa10.jpg",
+      "/images/villa10_1.jpg",
+      "/images/villa10_2.jpg",
+      "/images/villa10_3.jpg",
+      "/images/villa10_4.jpg"
     ],
     "description": "Luks alpin me pamje të mahnitshme të maleve.",
     "rooms": 3,
@@ -1347,10 +1347,10 @@
     "location": "Sarandë",
     "rating": 4.5,
     "images": [
-      "../images/hotel14.jpg",
-      "../images/hotel14_1.jpg",
-      "../images/hotel14_2.jpg",
-      "../images/hotel14_3.jpg"
+      "/images/hotel14.jpg",
+      "/images/hotel14_1.jpg",
+      "/images/hotel14_2.jpg",
+      "/images/hotel14_3.jpg"
     ],
     "description": "Ambiente elegante, afër qendrës dhe portit të Sarandës, me shërbim cilësor.",
     "rooms": 1,
@@ -1369,11 +1369,11 @@
     "location": "Prishtina",
     "rating": 4.7,
     "images": [
-      "../images/hotel20.jpg",
-      "../images/hotel20_1.jpg",
-      "../images/hotel20_2.jpg",
-      "../images/hotel20_3.jpg",
-      "../images/hotel20_4.jpg"
+      "/images/hotel20.jpg",
+      "/images/hotel20_1.jpg",
+      "/images/hotel20_2.jpg",
+      "/images/hotel20_3.jpg",
+      "/images/hotel20_4.jpg"
     ],
     "description": "Hotel modern dhe i qetë në Prishtinë, me dhoma elegante, mëngjes të pasur dhe staf shumë miqësor.",
     "rooms": 1,
@@ -1394,10 +1394,10 @@
     "location": "Himarë",
     "rating": 2.7,
     "images": [
-      "../images/hotel17.jpg",
-      "../images/hotel17_1.jpg",
-      "../images/hotel17_2.jpg",
-      "../images/hotel17_3.jpg"
+      "/images/hotel17.jpg",
+      "/images/hotel17_1.jpg",
+      "/images/hotel17_2.jpg",
+      "/images/hotel17_3.jpg"
     ],
     "description": "Me pamje panoramike të detit, pishinë të hapur dhe atmosferë relaksuese.",
     "rooms": 1,
@@ -1417,10 +1417,10 @@
     "location": "Tirana",
     "rating": 4.3,
     "images": [
-      "../images/apartment71.jpg",
-      "../images/apartment71_1.jpg",
-      "../images/apartment71_2.jpg",
-      "../images/apartment71_3.jpg"
+      "/images/apartment71.jpg",
+      "/images/apartment71_1.jpg",
+      "/images/apartment71_2.jpg",
+      "/images/apartment71_3.jpg"
     ],
     "description": "Apartament modern dhe i rehatshëm për një qëndrim të këndshëm.",
     "rooms": 1,
@@ -1441,9 +1441,9 @@
     "location": "Prizren",
     "rating": 4,
     "images": [
-      "../images/hotel90.jpg",
-      "../images/hotel90_1.jpg",
-      "../images/hotel90_2.jpg"
+      "/images/hotel90.jpg",
+      "/images/hotel90_1.jpg",
+      "/images/hotel90_2.jpg"
     ],
     "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
     "rooms": 1,
@@ -1464,9 +1464,9 @@
     "location": "Pejë",
     "rating": 4.6,
     "images": [
-      "../images/villa61.jpg",
-      "../images/villa61_1.jpg",
-      "../images/villa61_2.jpg"
+      "/images/villa61.jpg",
+      "/images/villa61_1.jpg",
+      "/images/villa61_2.jpg"
     ],
     "description": "Vilë moderne dhe e gjerë me hapësira të bollshme dhe siguri të shtuar, ideale për familje ose grupe të mëdha.",
     "rooms": 3,
@@ -1486,10 +1486,10 @@
     "location": "Ksamil",
     "rating": 4.1,
     "images": [
-      "../images/hotel9.jpg",
-      "../images/hotel9_1.jpg",
-      "../images/hotel9_2.jpg",
-      "../images/hotel9_3.jpg"
+      "/images/hotel9.jpg",
+      "/images/hotel9_1.jpg",
+      "/images/hotel9_2.jpg",
+      "/images/hotel9_3.jpg"
     ],
     "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
     "rooms": 1,
@@ -1513,9 +1513,9 @@
     "location": "Tirana",
     "rating": 4.2,
     "images": [
-      "../images/apartment73.jpg",
-      "../images/apartment73_1.jpg",
-      "../images/apartment73_2.jpg"
+      "/images/apartment73.jpg",
+      "/images/apartment73_1.jpg",
+      "/images/apartment73_2.jpg"
     ],
     "description": "Apartament i rehatshëm dhe modern për një qëndrim të këndshëm.",
     "rooms": 1,
@@ -1535,10 +1535,10 @@
     "location": "Ksamil",
     "rating": 4.5,
     "images": [
-      "../images/villa97.jpg",
-      "../images/villa97_1.jpg",
-      "../images/villa97_2.jpg",
-      "../images/villa97_3.jpg"
+      "/images/villa97.jpg",
+      "/images/villa97_1.jpg",
+      "/images/villa97_2.jpg",
+      "/images/villa97_3.jpg"
     ],
     "description": "Vilë luksoze dhe e rehatshme, e përshtatshme për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
     "rooms": 3,
@@ -1561,10 +1561,10 @@
     "location": "near Tirana",
     "rating": 4.8,
     "images": [
-      "../images/villa35.jpg",
-      "../images/villa35_1.jpg",
-      "../images/villa35_2.jpg",
-      "../images/villa35_3.jpg"
+      "/images/villa35.jpg",
+      "/images/villa35_1.jpg",
+      "/images/villa35_2.jpg",
+      "/images/villa35_3.jpg"
     ],
     "description": "Vilë luksoze dhe e gjerë, ideale për grupet e mëdha dhe qëndrime të rehatshme.",
     "rooms": 6,
@@ -1585,9 +1585,9 @@
     "location": "Himarë",
     "rating": 4.3,
     "images": [
-      "../images/hotel73.jpg",
-      "../images/hotel73_1.jpg",
-      "../images/hotel73_2.jpg"
+      "/images/hotel73.jpg",
+      "/images/hotel73_1.jpg",
+      "/images/hotel73_2.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona.",
     "rooms": 1,
@@ -1606,11 +1606,11 @@
     "location": "Sarandë",
     "rating": 4.6,
     "images": [
-      "../images/hotel12.jpg",
-      "../images/hotel12_1.jpg",
-      "../images/hotel12_2.jpg",
-      "../images/hotel12_3.jpg",
-      "../images/hotel12_4.jpg"
+      "/images/hotel12.jpg",
+      "/images/hotel12_1.jpg",
+      "/images/hotel12_2.jpg",
+      "/images/hotel12_3.jpg",
+      "/images/hotel12_4.jpg"
     ],
     "description": "Kompleks luksoz me plazh privat, 5 pishina dhe dhoma me dizajn artistik.",
     "rooms": 1,
@@ -1631,10 +1631,10 @@
     "location": "Himarë",
     "rating": 4.9,
     "images": [
-      "../images/hotel15.jpg",
-      "../images/hotel15_1.jpg",
-      "../images/hotel15_2.jpg",
-      "../images/hotel15_3.jpg"
+      "/images/hotel15.jpg",
+      "/images/hotel15_1.jpg",
+      "/images/hotel15_2.jpg",
+      "/images/hotel15_3.jpg"
     ],
     "description": "Hotel modern buzë detit me restorant gourmet dhe dhoma me pamje të Jonit.",
     "rooms": 1,
@@ -1656,10 +1656,10 @@
     "location": "Prishtina",
     "rating": 4.7,
     "images": [
-      "../images/hotel23.jpg",
-      "../images/hotel23_1.jpg",
-      "../images/hotel23_2.jpg",
-      "../images/hotel23_3.jpg"
+      "/images/hotel23.jpg",
+      "/images/hotel23_1.jpg",
+      "/images/hotel23_2.jpg",
+      "/images/hotel23_3.jpg"
     ],
     "description": "Hotel butik elegant në qendër të Prishtinës me dizajn modern, restorant gourmet dhe ambiente relaksuese.",
     "rooms": 1,
@@ -1680,9 +1680,9 @@
     "location": "Dhërmi",
     "rating": 4.6,
     "images": [
-      "../images/apartment101.jpg",
-      "../images/apartment101_1.jpg",
-      "../images/apartment101_2.jpg"
+      "/images/apartment101.jpg",
+      "/images/apartment101_1.jpg",
+      "/images/apartment101_2.jpg"
     ],
     "description": "Apartament modern me ambiente të rehatshme dhe pajisje të plota për një qëndrim komod dhe të këndshëm.",
     "rooms": 1,
@@ -1703,10 +1703,10 @@
     "location": "Prizren",
     "rating": 4.1,
     "images": [
-      "../images/hotel93.jpg",
-      "../images/hotel93_1.jpg",
-      "../images/hotel93_2.jpg",
-      "../images/hotel93_3.jpg"
+      "/images/hotel93.jpg",
+      "/images/hotel93_1.jpg",
+      "/images/hotel93_2.jpg",
+      "/images/hotel93_3.jpg"
     ],
     "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
     "rooms": 1,
@@ -1730,9 +1730,9 @@
     "location": "Tirana",
     "rating": 4.2,
     "images": [
-      "../images/hotel55.jpg",
-      "../images/hotel55_1.jpg",
-      "../images/hotel55_2.jpg"
+      "/images/hotel55.jpg",
+      "/images/hotel55_1.jpg",
+      "/images/hotel55_2.jpg"
     ],
     "description": "Hotel modern dhe i përshtatshëm për një qëndrim të rehatshëm.",
     "rooms": 1,
@@ -1751,8 +1751,8 @@
     "location": "Sarandë",
     "rating": 4.5,
     "images": [
-      "../images/hotel76.jpg",
-      "../images/hotel76_1.jpg"
+      "/images/hotel76.jpg",
+      "/images/hotel76_1.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona me hapësirë private të jashtme.",
     "rooms": 1,
@@ -1774,9 +1774,9 @@
     "location": "Dhërmi",
     "rating": 5,
     "images": [
-      "../images/villa87.jpg",
-      "../images/villa87_1.jpg",
-      "../images/villa87_2.jpg"
+      "/images/villa87.jpg",
+      "/images/villa87_1.jpg",
+      "/images/villa87_2.jpg"
     ],
     "description": "Villa luksoze me pamje nga deti, qasje të përbashkët në plazh, kuzhinë të pajisur, Wifi, hapësirë për punë, parkim falas, pishinë private dhe Jacuzzi privat.",
     "rooms": 1,
@@ -1799,11 +1799,11 @@
     "location": "Himarë",
     "rating": 4.6,
     "images": [
-      "../images/hotel18.jpg",
-      "../images/hotel18_1.jpg",
-      "../images/hotel18_2.jpg",
-      "../images/hotel18_3.jpg",
-      "../images/hotel18_4.jpg"
+      "/images/hotel18.jpg",
+      "/images/hotel18_1.jpg",
+      "/images/hotel18_2.jpg",
+      "/images/hotel18_3.jpg",
+      "/images/hotel18_4.jpg"
     ],
     "description": "Hotel i ri me dizajn modern dhe ballkone me pamje të mrekullueshme.",
     "rooms": 1,
@@ -1823,10 +1823,10 @@
     "location": "Himarë",
     "rating": 4.8,
     "images": [
-      "../images/hotel19.jpg",
-      "../images/hotel19_1.jpg",
-      "../images/hotel19_2.jpg",
-      "../images/hotel19_3.jpg"
+      "/images/hotel19.jpg",
+      "/images/hotel19_1.jpg",
+      "/images/hotel19_2.jpg",
+      "/images/hotel19_3.jpg"
     ],
     "description": "Hotel familjar me mikpritje tradicionale dhe mëngjes vendas shumë të shijshëm.",
     "rooms": 1,
@@ -1846,11 +1846,11 @@
     "location": "Prishtina",
     "rating": 4.8,
     "images": [
-      "../images/hotel22.jpg",
-      "../images/hotel22_1.jpg",
-      "../images/hotel22_2.jpg",
-      "../images/hotel22_3.jpg",
-      "../images/hotel22_4.jpg"
+      "/images/hotel22.jpg",
+      "/images/hotel22_1.jpg",
+      "/images/hotel22_2.jpg",
+      "/images/hotel22_3.jpg",
+      "/images/hotel22_4.jpg"
     ],
     "description": "Hotel luksoz me spa, pishinë të madhe dhe restorant elegant, ideal për pushime relaksuese pranë Prishtinës.",
     "rooms": 2,
@@ -1871,8 +1871,8 @@
     "location": "Himarë",
     "rating": 3.9,
     "images": [
-      "../images/hotel72.jpg",
-      "../images/hotel72_1.jpg"
+      "/images/hotel72.jpg",
+      "/images/hotel72_1.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona.",
     "rooms": 1,
@@ -1891,11 +1891,11 @@
     "location": "Brezovicë",
     "rating": 4.6,
     "images": [
-      "../images/villa4.jpg",
-      "../images/villa4_1.jpg",
-      "../images/villa4_2.jpg",
-      "../images/villa4_3.jpg",
-      "../images/villa4_4.jpg"
+      "/images/villa4.jpg",
+      "/images/villa4_1.jpg",
+      "/images/villa4_2.jpg",
+      "/images/villa4_3.jpg",
+      "/images/villa4_4.jpg"
     ],
     "description": "Hapësira të ngrohta me dekor modern, ideal për relaks dhe aktivitete të ndryshme.",
     "rooms": 3,
@@ -1916,10 +1916,10 @@
     "location": "Prishtina",
     "rating": 4.6,
     "images": [
-      "../images/hotel32.jpg",
-      "../images/hotel32_1.jpg",
-      "../images/hotel32_2.jpg",
-      "../images/hotel32_3.jpg"
+      "/images/hotel32.jpg",
+      "/images/hotel32_1.jpg",
+      "/images/hotel32_2.jpg",
+      "/images/hotel32_3.jpg"
     ],
     "description": "Hotel butik elegant në qendër të Prishtinës, me dhoma moderne, restorant gourmet dhe shërbim të shkëlqyer.",
     "rooms": 1,
@@ -1940,9 +1940,9 @@
     "location": "Pejë",
     "rating": 4.7,
     "images": [
-      "../images/villa73.jpg",
-      "../images/villa73_1.jpg",
-      "../images/villa73_2.jpg"
+      "/images/villa73.jpg",
+      "/images/villa73_1.jpg",
+      "/images/villa73_2.jpg"
     ],
     "description": "Vilë moderne me pamje nga mali, ideale për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 3,
@@ -1963,10 +1963,10 @@
     "location": "Himarë",
     "rating": 4,
     "images": [
-      "../images/apartment33.jpg",
-      "../images/apartment33_1.jpg",
-      "../images/apartment33_2.jpg",
-      "../images/apartment33_3.jpg"
+      "/images/apartment33.jpg",
+      "/images/apartment33_1.jpg",
+      "/images/apartment33_2.jpg",
+      "/images/apartment33_3.jpg"
     ],
     "description": "Apartament komod me lehtësira të plota për një qëndrim relaksues.",
     "rooms": 1,
@@ -1985,11 +1985,11 @@
     "location": "Prishtina",
     "rating": 4.9,
     "images": [
-      "../images/hotel24.jpg",
-      "../images/hotel24_1.jpg",
-      "../images/hotel24_2.jpg",
-      "../images/hotel24_3.jpg",
-      "../images/hotel24_4.jpg"
+      "/images/hotel24.jpg",
+      "/images/hotel24_1.jpg",
+      "/images/hotel24_2.jpg",
+      "/images/hotel24_3.jpg",
+      "/images/hotel24_4.jpg"
     ],
     "description": "Hotel luksoz me spa, pishinë dhe kazino, vetëm disa minuta nga qendra e qytetit.",
     "rooms": 1,
@@ -2010,10 +2010,10 @@
     "location": "Sarandë",
     "rating": 4,
     "images": [
-      "../images/hotel33.jpg",
-      "../images/hotel33_1.jpg",
-      "../images/hotel33_2.jpg",
-      "../images/hotel33_3.jpg"
+      "/images/hotel33.jpg",
+      "/images/hotel33_1.jpg",
+      "/images/hotel33_2.jpg",
+      "/images/hotel33_3.jpg"
     ],
     "description": "Dhomë moderne dhe e rehatshme, afër plazhit dhe atraksioneve kryesore të Sarandës.",
     "rooms": 1,
@@ -2033,9 +2033,9 @@
     "location": "Pejë",
     "rating": 4.5,
     "images": [
-      "../images/villa72.jpg",
-      "../images/villa72_1.jpg",
-      "../images/villa72_2.jpg"
+      "/images/villa72.jpg",
+      "/images/villa72_1.jpg",
+      "/images/villa72_2.jpg"
     ],
     "description": "Vilë moderne dhe komode, ideale për një qëndrim relaksues për 3 persona.",
     "rooms": 1,
@@ -2056,9 +2056,9 @@
     "location": "Prizren",
     "rating": 4,
     "images": [
-      "../images/hotel89.jpg",
-      "../images/hotel89_1.jpg",
-      "../images/hotel89_2.jpg"
+      "/images/hotel89.jpg",
+      "/images/hotel89_1.jpg",
+      "/images/hotel89_2.jpg"
     ],
     "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të nevojshme për pushuesit.",
     "rooms": 1,
@@ -2080,10 +2080,10 @@
     "location": "Tirana",
     "rating": 4.6,
     "images": [
-      "../images/villa34.jpg",
-      "../images/villa34_1.jpg",
-      "../images/villa34_2.jpg",
-      "../images/villa34_3.jpg"
+      "/images/villa34.jpg",
+      "/images/villa34_1.jpg",
+      "/images/villa34_2.jpg",
+      "/images/villa34_3.jpg"
     ],
     "description": "Vilë moderne dhe e rehatshme me hapësirë private të jashtme, ideale për një qëndrim relaksues.",
     "rooms": 1,
@@ -2106,11 +2106,11 @@
     "location": "Sarandë",
     "rating": 4.8,
     "images": [
-      "../images/villa23.jpg",
-      "../images/villa23_1.jpg",
-      "../images/villa23_2.jpg",
-      "../images/villa23_3.jpg",
-      "../images/villa23_4.jpg"
+      "/images/villa23.jpg",
+      "/images/villa23_1.jpg",
+      "/images/villa23_2.jpg",
+      "/images/villa23_3.jpg",
+      "/images/villa23_4.jpg"
     ],
     "description": "Vilë moderne me ambient të ndritshëm, pishinë dhe parkim të siguruar.",
     "rooms": 4,
@@ -2132,11 +2132,11 @@
     "location": "Brezovicë",
     "rating": 4.8,
     "images": [
-      "../images/villa2.jpg",
-      "../images/villa2_1.jpg",
-      "../images/villa2_2.jpg",
-      "../images/villa2_3.jpg",
-      "../images/villa2_4.jpg"
+      "/images/villa2.jpg",
+      "/images/villa2_1.jpg",
+      "/images/villa2_2.jpg",
+      "/images/villa2_3.jpg",
+      "/images/villa2_4.jpg"
     ],
     "description": "Oaz modern me dritare panoramike që ofron pamje mahnitëse të maleve dhe hapësira të bollshme për argëtim.",
     "rooms": 4,
@@ -2157,9 +2157,9 @@
     "location": "Tirana",
     "rating": 4.2,
     "images": [
-      "../images/hotel46.jpg",
-      "../images/hotel46_1.jpg",
-      "../images/hotel46_2.jpg"
+      "/images/hotel46.jpg",
+      "/images/hotel46_1.jpg",
+      "/images/hotel46_2.jpg"
     ],
     "description": "Hotel modern me pamje të qytetit dhe oborrit, ideal për një qëndrim të rehatshëm.",
     "rooms": 1,
@@ -2181,10 +2181,10 @@
     "location": "Prishtina",
     "rating": 4.5,
     "images": [
-      "../images/hotel25.jpg",
-      "../images/hotel25_1.jpg",
-      "../images/hotel25_2.jpg",
-      "../images/hotel25_3.jpg"
+      "/images/hotel25.jpg",
+      "/images/hotel25_1.jpg",
+      "/images/hotel25_2.jpg",
+      "/images/hotel25_3.jpg"
     ],
     "description": "Hotel komod në qendër të Prishtinës me dhoma të rehatshme, mëngjes të pasur dhe staf mikpritës.",
     "rooms": 1,
@@ -2205,8 +2205,8 @@
     "location": "near Prizren",
     "rating": 4.3,
     "images": [
-      "../images/villa91.jpg",
-      "../images/villa91_1.jpg"
+      "/images/villa91.jpg",
+      "/images/villa91_1.jpg"
     ],
     "description": "Vilë e rehatshme dhe e përshtatshme për grup të vogël, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
     "rooms": 3,
@@ -2227,9 +2227,9 @@
     "location": "Himarë",
     "rating": 4.1,
     "images": [
-      "../images/hotel63.jpg",
-      "../images/hotel63_1.jpg",
-      "../images/hotel63_2.jpg"
+      "/images/hotel63.jpg",
+      "/images/hotel63_1.jpg",
+      "/images/hotel63_2.jpg"
     ],
     "description": "Hotel modern dhe relaksues, i pajisur me pishinë dhe jacuzzi privat për një qëndrim komod.",
     "rooms": 1,
@@ -2250,10 +2250,10 @@
     "location": "Sarandë",
     "rating": 4.5,
     "images": [
-      "../images/hotel39.jpg",
-      "../images/hotel39_1.jpg",
-      "../images/hotel39_2.jpg",
-      "../images/hotel39_3.jpg"
+      "/images/hotel39.jpg",
+      "/images/hotel39_1.jpg",
+      "/images/hotel39_2.jpg",
+      "/images/hotel39_3.jpg"
     ],
     "description": "Hotel luksoz dhe i rehatshëm pranë plazhit.",
     "rooms": 1,
@@ -2276,9 +2276,9 @@
     "location": "Pejë",
     "rating": 4.5,
     "images": [
-      "../images/villa69.jpg",
-      "../images/villa69_1.jpg",
-      "../images/villa69_2.jpg"
+      "/images/villa69.jpg",
+      "/images/villa69_1.jpg",
+      "/images/villa69_2.jpg"
     ],
     "description": "Vilë moderne me pamje nga lugina dhe mali, ideale për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 2,
@@ -2299,9 +2299,9 @@
     "location": "Prizren",
     "rating": 4.3,
     "images": [
-      "../images/villa94.jpg",
-      "../images/villa94_1.jpg",
-      "../images/villa94_2.jpg"
+      "/images/villa94.jpg",
+      "/images/villa94_1.jpg",
+      "/images/villa94_2.jpg"
     ],
     "description": "Vilë e rehatshme dhe e përshtatshme për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
     "rooms": 3,
@@ -2321,10 +2321,10 @@
     "location": "Tirana",
     "rating": 4.5,
     "images": [
-      "../images/villa39.jpg",
-      "../images/villa39_1.jpg",
-      "../images/villa39_2.jpg",
-      "../images/villa39_3.jpg"
+      "/images/villa39.jpg",
+      "/images/villa39_1.jpg",
+      "/images/villa39_2.jpg",
+      "/images/villa39_3.jpg"
     ],
     "description": "Vilë moderne dhe e rehatshme me pishinë sezonale, ideale për një qëndrim të këndshëm për familje ose miq.",
     "rooms": 1,
@@ -2345,10 +2345,10 @@
     "location": "Himarë",
     "rating": 3.8,
     "images": [
-      "../images/hotel42.jpg",
-      "../images/hotel42_1.jpg",
-      "../images/hotel42_2.jpg",
-      "../images/hotel42_3.jpg"
+      "/images/hotel42.jpg",
+      "/images/hotel42_1.jpg",
+      "/images/hotel42_2.jpg",
+      "/images/hotel42_3.jpg"
     ],
     "description": "Hotel i thjeshtë dhe i përshtatshëm për një qëndrim komod.",
     "rooms": 1,
@@ -2366,10 +2366,10 @@
     "location": "Prishtina",
     "rating": 4,
     "images": [
-      "../images/apartment48.jpg",
-      "../images/apartment48_1.jpg",
-      "../images/apartment48_2.jpg",
-      "../images/apartment48_3.jpg"
+      "/images/apartment48.jpg",
+      "/images/apartment48_1.jpg",
+      "/images/apartment48_2.jpg",
+      "/images/apartment48_3.jpg"
     ],
     "description": "Apartament i thjeshtë dhe i rehatshëm me lehtësira të plota për një qëndrim praktik.",
     "rooms": 1,
@@ -2390,10 +2390,10 @@
     "location": "Tirana",
     "rating": 4.4,
     "images": [
-      "../images/apartment81.jpg",
-      "../images/apartment81_1.jpg",
-      "../images/apartment81_2.jpg",
-      "../images/apartment81_3.jpg"
+      "/images/apartment81.jpg",
+      "/images/apartment81_1.jpg",
+      "/images/apartment81_2.jpg",
+      "/images/apartment81_3.jpg"
     ],
     "description": "Apartament modern dhe i rehatshëm me pamje të qytetit, ideal për familje ose grup miqsh.",
     "rooms": 2,
@@ -2416,9 +2416,9 @@
     "location": "Dhërmi",
     "rating": 4.1,
     "images": [
-      "../images/apartment97.jpg",
-      "../images/apartment97_1.jpg",
-      "../images/apartment97_2.jpg"
+      "/images/apartment97.jpg",
+      "/images/apartment97_1.jpg",
+      "/images/apartment97_2.jpg"
     ],
     "description": "Apartament modern me qasje në plazh dhe ambiente të rehatshme për një qëndrim relaksues.",
     "rooms": 1,
@@ -2438,10 +2438,10 @@
     "location": "Brezovicë",
     "rating": 4.8,
     "images": [
-      "../images/villa12.jpg",
-      "../images/villa12_1.jpg",
-      "../images/villa12_2.jpg",
-      "../images/villa12_3.jpg"
+      "/images/villa12.jpg",
+      "/images/villa12_1.jpg",
+      "/images/villa12_2.jpg",
+      "/images/villa12_3.jpg"
     ],
     "description": "Stil luksoz me dizajn të veçantë, hapësira të bollshme dhe relaks të plotë.",
     "rooms": 3,
@@ -2461,11 +2461,11 @@
     "location": "Prishtina",
     "rating": 4.8,
     "images": [
-      "../images/hotel30.jpg",
-      "../images/hotel30_1.jpg",
-      "../images/hotel30_2.jpg",
-      "../images/hotel30_3.jpg",
-      "../images/hotel30_4.jpg"
+      "/images/hotel30.jpg",
+      "/images/hotel30_1.jpg",
+      "/images/hotel30_2.jpg",
+      "/images/hotel30_3.jpg",
+      "/images/hotel30_4.jpg"
     ],
     "description": "Hotel modern luksoz me dhoma elegante, restorant gourmet dhe qendër fitnesi, vetëm disa minuta nga qendra e Prishtinës.",
     "rooms": 1,
@@ -2487,9 +2487,9 @@
     "location": "Sarandë",
     "rating": 4,
     "images": [
-      "../images/apartment1.jpg",
-      "../images/apartment1_1.jpg",
-      "../images/apartment1_2.jpg"
+      "/images/apartment1.jpg",
+      "/images/apartment1_1.jpg",
+      "/images/apartment1_2.jpg"
     ],
     "description": "Akomodim i qetë me ballkon, pamje dhe ambiente familjare, ideal për 3 persona.",
     "rooms": 1,
@@ -2511,10 +2511,10 @@
     "location": "Himarë",
     "rating": 4.2,
     "images": [
-      "../images/apartment38.jpg",
-      "../images/apartment38_1.jpg",
-      "../images/apartment38_2.jpg",
-      "../images/apartment38_3.jpg"
+      "/images/apartment38.jpg",
+      "/images/apartment38_1.jpg",
+      "/images/apartment38_2.jpg",
+      "/images/apartment38_3.jpg"
     ],
     "description": "Apartament i gjerë dhe komod, i përshtatshëm për grupe dhe qëndrime relaksuese pranë detit.",
     "rooms": 2,
@@ -2535,10 +2535,10 @@
     "location": "Prishtina",
     "rating": 4.7,
     "images": [
-      "../images/hotel27.jpg",
-      "../images/hotel27_1.jpg",
-      "../images/hotel27_2.jpg",
-      "../images/hotel27_3.jpg"
+      "/images/hotel27.jpg",
+      "/images/hotel27_1.jpg",
+      "/images/hotel27_2.jpg",
+      "/images/hotel27_3.jpg"
     ],
     "description": "Hotel luksoz me ambient modern, dhoma të rehatshme dhe restorant elegant në qendër të Prishtinës.",
     "rooms": 2,
@@ -2559,10 +2559,10 @@
     "location": "Sarandë",
     "rating": 3.8,
     "images": [
-      "../images/apartment15.jpg",
-      "../images/apartment15_1.jpg",
-      "../images/apartment15_2.jpg",
-      "../images/apartment15_3.jpg"
+      "/images/apartment15.jpg",
+      "/images/apartment15_1.jpg",
+      "/images/apartment15_2.jpg",
+      "/images/apartment15_3.jpg"
     ],
     "description": "Apartament komod me të gjitha lehtësitë e nevojshme për një qëndrim të rehatshëm.",
     "rooms": 1,
@@ -2584,9 +2584,9 @@
     "location": "Himarë",
     "rating": 4,
     "images": [
-      "../images/apartment34.jpg",
-      "../images/apartment34_1.jpg",
-      "../images/apartment34_2.jpg"
+      "/images/apartment34.jpg",
+      "/images/apartment34_1.jpg",
+      "/images/apartment34_2.jpg"
     ],
     "description": "Apartament i rehatshëm me lehtësira të plota dhe i përshtatshëm për një qëndrim të këndshëm.",
     "rooms": 1,
@@ -2606,9 +2606,9 @@
     "location": "Pejë",
     "rating": 4.3,
     "images": [
-      "../images/villa76.jpg",
-      "../images/villa76_1.jpg",
-      "../images/villa76_2.jpg"
+      "/images/villa76.jpg",
+      "/images/villa76_1.jpg",
+      "/images/villa76_2.jpg"
     ],
     "description": "Villa moderne dhe e rehatshme, ideale për pushime familjare ose qëndrime relaksuese në Pejë.",
     "rooms": 2,
@@ -2629,9 +2629,9 @@
     "location": "Dhërmi",
     "rating": 4.4,
     "images": [
-      "../images/hotel83.jpg",
-      "../images/hotel83_1.jpg",
-      "../images/hotel83_2.jpg"
+      "/images/hotel83.jpg",
+      "/images/hotel83_1.jpg",
+      "/images/hotel83_2.jpg"
     ],
     "description": "Hotel modern me pishinë jashtme, spa, dhoma jo-duhan, transport nga/drejt aeroportit, parkim falas, restorant, dhoma familjare, qendër fitness dhe mëngjes të shkëlqyer.",
     "rooms": 1,
@@ -2655,9 +2655,9 @@
     "location": "Prizren",
     "rating": 4.1,
     "images": [
-      "../images/apartment105.jpg",
-      "../images/apartment105_1.jpg",
-      "../images/apartment105_2.jpg"
+      "/images/apartment105.jpg",
+      "/images/apartment105_1.jpg",
+      "/images/apartment105_2.jpg"
     ],
     "description": "Apartament i rehatshëm dhe i përshtatshëm për grupet e vogla, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
     "rooms": 2,
@@ -2675,9 +2675,9 @@
     "location": "Pejë",
     "rating": 4.6,
     "images": [
-      "../images/villa66.jpg",
-      "../images/villa66_1.jpg",
-      "../images/villa66_2.jpg"
+      "/images/villa66.jpg",
+      "/images/villa66_1.jpg",
+      "/images/villa66_2.jpg"
     ],
     "description": "Vilë moderne me pamje nga mali, ideale për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 5,
@@ -2698,9 +2698,9 @@
     "location": "Dhërmi",
     "rating": 4.6,
     "images": [
-      "../images/villa82.jpg",
-      "../images/villa82_1.jpg",
-      "../images/villa82_2.jpg"
+      "/images/villa82.jpg",
+      "/images/villa82_1.jpg",
+      "/images/villa82_2.jpg"
     ],
     "description": "Villa moderne me kuzhinë të pajisur, Wifi, hapësirë për punë, parkim falas, TV, lavanderi, ajër të kondicionuar dhe vaskë për një qëndrim relaksues.",
     "rooms": 2,
@@ -2723,9 +2723,9 @@
     "location": "Prizren",
     "rating": 4.1,
     "images": [
-      "../images/hotel96.jpg",
-      "../images/hotel96_1.jpg",
-      "../images/hotel96_2.jpg"
+      "/images/hotel96.jpg",
+      "/images/hotel96_1.jpg",
+      "/images/hotel96_2.jpg"
     ],
     "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
     "rooms": 1,
@@ -2747,9 +2747,9 @@
     "location": "Tirana",
     "rating": 4.7,
     "images": [
-      "../images/villa32.jpg",
-      "../images/villa32_1.jpg",
-      "../images/villa32_2.jpg"
+      "/images/villa32.jpg",
+      "/images/villa32_1.jpg",
+      "/images/villa32_2.jpg"
     ],
     "description": "Vilë komode dhe moderne, ideale për një qëndrim relaksues për dy persona.",
     "rooms": 1,
@@ -2769,11 +2769,11 @@
     "location": "Brezovicë",
     "rating": 4.9,
     "images": [
-      "../images/villa1.jpg",
-      "../images/villa1_1.jpg",
-      "../images/villa1_2.jpg",
-      "../images/villa1_3.jpg",
-      "../images/villa1_4.jpg"
+      "/images/villa1.jpg",
+      "/images/villa1_1.jpg",
+      "/images/villa1_2.jpg",
+      "/images/villa1_3.jpg",
+      "/images/villa1_4.jpg"
     ],
     "description": "Villë luksoze në natyrë me pamje mahnitëse, dhoma moderne dhe ambient të qetë, perfekt për pushime dimërore.",
     "rooms": 3,
@@ -2793,10 +2793,10 @@
     "location": "Prishtina",
     "rating": 4.6,
     "images": [
-      "../images/hotel26.jpg",
-      "../images/hotel26_1.jpg",
-      "../images/hotel26_2.jpg",
-      "../images/hotel26_3.jpg"
+      "/images/hotel26.jpg",
+      "/images/hotel26_1.jpg",
+      "/images/hotel26_2.jpg",
+      "/images/hotel26_3.jpg"
     ],
     "description": "Hotel modern dhe elegant pranë qendrës së Prishtinës, me restorant, mëngjes të pasur dhe dhoma të rehatshme.",
     "rooms": 1,
@@ -2817,9 +2817,9 @@
     "location": "Tirana",
     "rating": 4.3,
     "images": [
-      "../images/hotel47.jpg",
-      "../images/hotel47_1.jpg",
-      "../images/hotel47_2.jpg"
+      "/images/hotel47.jpg",
+      "/images/hotel47_1.jpg",
+      "/images/hotel47_2.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim të shkurtër ose të gjatë.",
     "rooms": 1,
@@ -2840,10 +2840,10 @@
     "location": "Sarandë",
     "rating": 4.8,
     "images": [
-      "../images/apartment6.jpg",
-      "../images/apartment6_1.jpg",
-      "../images/apartment6_2.jpg",
-      "../images/apartment6_3.jpg"
+      "/images/apartment6.jpg",
+      "/images/apartment6_1.jpg",
+      "/images/apartment6_2.jpg",
+      "/images/apartment6_3.jpg"
     ],
     "description": "Apartament modern me hapësira të bollshme dhe ambiente të rehatshme.",
     "rooms": 2,
@@ -2865,10 +2865,10 @@
     "location": "Himarë",
     "rating": 4.2,
     "images": [
-      "../images/apartment24.jpg",
-      "../images/apartment24_1.jpg",
-      "../images/apartment24_2.jpg",
-      "../images/apartment24_3.jpg"
+      "/images/apartment24.jpg",
+      "/images/apartment24_1.jpg",
+      "/images/apartment24_2.jpg",
+      "/images/apartment24_3.jpg"
     ],
     "description": "Apartament komod me lehtësira bazë dhe i përshtatshëm për një qëndrim relaksues.",
     "rooms": 1,
@@ -2889,10 +2889,10 @@
     "location": "Brezovicë",
     "rating": 4.7,
     "images": [
-      "../images/villa11.jpg",
-      "../images/villa11_1.jpg",
-      "../images/villa11_2.jpg",
-      "../images/villa11_3.jpg"
+      "/images/villa11.jpg",
+      "/images/villa11_1.jpg",
+      "/images/villa11_2.jpg",
+      "/images/villa11_3.jpg"
     ],
     "description": "Dhoma me stil modern dhe ambiente të bollshme, perfekte për pushime të qeta.",
     "rooms": 3,
@@ -2913,11 +2913,11 @@
     "location": "Prishtina",
     "rating": 4.7,
     "images": [
-      "../images/hotel28.jpg",
-      "../images/hotel28_1.jpg",
-      "../images/hotel28_2.jpg",
-      "../images/hotel28_3.jpg",
-      "../images/hotel28_4.jpg"
+      "/images/hotel28.jpg",
+      "/images/hotel28_1.jpg",
+      "/images/hotel28_2.jpg",
+      "/images/hotel28_3.jpg",
+      "/images/hotel28_4.jpg"
     ],
     "description": "Hotel modern dhe komod në qendër të Prishtinës, me dhoma elegante, restorant dhe shërbim të shkëlqyer.",
     "rooms": 1,
@@ -2938,10 +2938,10 @@
     "location": "Brezovicë",
     "rating": 4.6,
     "images": [
-      "../images/villa7.jpg",
-      "../images/villa7_1.jpg",
-      "../images/villa7_2.jpg",
-      "../images/villa7_3.jpg"
+      "/images/villa7.jpg",
+      "/images/villa7_1.jpg",
+      "/images/villa7_2.jpg",
+      "/images/villa7_3.jpg"
     ],
     "description": "Villë komode me hapësira të ndara dhe dekor të kujdesshëm për rehati maksimale.",
     "rooms": 2,
@@ -2962,9 +2962,9 @@
     "location": "Ksamil",
     "rating": 4.5,
     "images": [
-      "../images/hotel10.jpg",
-      "../images/hotel10_1.jpg",
-      "../images/hotel10_2.jpg"
+      "/images/hotel10.jpg",
+      "/images/hotel10_1.jpg",
+      "/images/hotel10_2.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm, i përshtatshëm për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
     "rooms": 2,
@@ -2989,9 +2989,9 @@
     "location": "Himarë",
     "rating": 3.5,
     "images": [
-      "../images/villa56.jpg",
-      "../images/villa56_1.jpg",
-      "../images/villa56_2.jpg"
+      "/images/villa56.jpg",
+      "/images/villa56_1.jpg",
+      "/images/villa56_2.jpg"
     ],
     "description": "Vilë luksoze dhe e rehatshme me hapësira të bollshme, ideale për familje ose grup miqsh.",
     "rooms": 2,
@@ -3009,9 +3009,9 @@
     "location": "near Tirana",
     "rating": 4.7,
     "images": [
-      "../images/villa41.jpg",
-      "../images/villa41_1.jpg",
-      "../images/villa41_2.jpg"
+      "/images/villa41.jpg",
+      "/images/villa41_1.jpg",
+      "/images/villa41_2.jpg"
     ],
     "description": "Vilë moderne dhe e rehatshme me pishinë, ideale për familje ose grup miqsh.",
     "rooms": 2,
@@ -3032,10 +3032,10 @@
     "location": "Sarandë",
     "rating": 4.6,
     "images": [
-      "../images/apartment8.jpg",
-      "../images/apartment8_1.jpg",
-      "../images/apartment8_2.jpg",
-      "../images/apartment8_3.jpg"
+      "/images/apartment8.jpg",
+      "/images/apartment8_1.jpg",
+      "/images/apartment8_2.jpg",
+      "/images/apartment8_3.jpg"
     ],
     "description": "Apartament modern dhe i rehatshëm me ballkon dhe ambient të qetë.",
     "rooms": 1,
@@ -3055,9 +3055,9 @@
     "location": "Tirana",
     "rating": 4.1,
     "images": [
-      "../images/hotel50.jpg",
-      "../images/hotel50_1.jpg",
-      "../images/hotel50_2.jpg"
+      "/images/hotel50.jpg",
+      "/images/hotel50_1.jpg",
+      "/images/hotel50_2.jpg"
     ],
     "description": "Hotel i rehatshëm dhe praktik, ideal për një qëndrim të shkurtër ose të gjatë.",
     "rooms": 1,
@@ -3078,9 +3078,9 @@
     "location": "Pejë",
     "rating": 4.1,
     "images": [
-      "../images/apartment93.jpg",
-      "../images/apartment93_1.jpg",
-      "../images/apartment93_2.jpg"
+      "/images/apartment93.jpg",
+      "/images/apartment93_1.jpg",
+      "/images/apartment93_2.jpg"
     ],
     "description": "Apartament i rehatshëm për 4 persona, me kuzhinë të pajisur dhe facilitete të tjera për një qëndrim të komod.",
     "rooms": 1,
@@ -3101,9 +3101,9 @@
     "location": "Dhërmi",
     "rating": 4.6,
     "images": [
-      "../images/hotel82.jpg",
-      "../images/hotel82_1.jpg",
-      "../images/hotel82_2.jpg"
+      "/images/hotel82.jpg",
+      "/images/hotel82_1.jpg",
+      "/images/hotel82_2.jpg"
     ],
     "description": "Hotel modern me qasje në plazh, Wifi, parkim falas, TV dhe ajër të kondicionuar për një qëndrim relaksues.",
     "rooms": 1,
@@ -3123,10 +3123,10 @@
     "location": "Prishtina",
     "rating": 4.4,
     "images": [
-      "../images/apartment44.jpg",
-      "../images/apartment44_1.jpg",
-      "../images/apartment44_2.jpg",
-      "../images/apartment44_3.jpg"
+      "/images/apartment44.jpg",
+      "/images/apartment44_1.jpg",
+      "/images/apartment44_2.jpg",
+      "/images/apartment44_3.jpg"
     ],
     "description": "Apartament luksoz me lehtësira të plota dhe hapësira për një qëndrim komod dhe relaksues.",
     "rooms": 3,
@@ -3149,9 +3149,9 @@
     "location": "Himarë",
     "rating": 4.5,
     "images": [
-      "../images/hotel70.jpg",
-      "../images/hotel70_1.jpg",
-      "../images/hotel70_2.jpg"
+      "/images/hotel70.jpg",
+      "/images/hotel70_1.jpg",
+      "/images/hotel70_2.jpg"
     ],
     "description": "Hotel modern dhe luksoz me jacuzzi, ideal për një qëndrim relaksues për familje ose miq.",
     "rooms": 1,
@@ -3172,9 +3172,9 @@
     "location": "Pejë",
     "rating": 4.4,
     "images": [
-      "../images/apartment86.jpg",
-      "../images/apartment86_1.jpg",
-      "../images/apartment86_2.jpg"
+      "/images/apartment86.jpg",
+      "/images/apartment86_1.jpg",
+      "/images/apartment86_2.jpg"
     ],
     "description": "Apartament modern dhe komod, ideal për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 1,
@@ -3193,9 +3193,9 @@
     "location": "near Prizren",
     "rating": 4.5,
     "images": [
-      "../images/villa90.jpg",
-      "../images/villa90_1.jpg",
-      "../images/villa90_2.jpg"
+      "/images/villa90.jpg",
+      "/images/villa90_1.jpg",
+      "/images/villa90_2.jpg"
     ],
     "description": "Vilë komode dhe e gjerë e përshtatshme për grupet, me ambiente të rehatshme dhe hapësira të mirëmbajtura për pushime relaksuese.",
     "rooms": 2,
@@ -3218,9 +3218,9 @@
     "location": "Himarë",
     "rating": 4,
     "images": [
-      "../images/apartment36.jpg",
-      "../images/apartment36_1.jpg",
-      "../images/apartment36_2.jpg"
+      "/images/apartment36.jpg",
+      "/images/apartment36_1.jpg",
+      "/images/apartment36_2.jpg"
     ],
     "description": "Apartament komod dhe i pajisur mirë për një qëndrim të rehatshëm.",
     "rooms": 1,
@@ -3241,10 +3241,10 @@
     "location": "Prishtina",
     "rating": 4.1,
     "images": [
-      "../images/apartment47.jpg",
-      "../images/apartment47_1.jpg",
-      "../images/apartment47_2.jpg",
-      "../images/apartment47_3.jpg"
+      "/images/apartment47.jpg",
+      "/images/apartment47_1.jpg",
+      "/images/apartment47_2.jpg",
+      "/images/apartment47_3.jpg"
     ],
     "description": "Apartament komod me lehtësira të plota dhe hapësirë të përshtatshme për një qëndrim të rehatshëm.",
     "rooms": 1,
@@ -3266,10 +3266,10 @@
     "location": "Brezovicë",
     "rating": 4.8,
     "images": [
-      "../images/villa14.jpg",
-      "../images/villa14_1.jpg",
-      "../images/villa14_2.jpg",
-      "../images/villa14_3.jpg"
+      "/images/villa14.jpg",
+      "/images/villa14_1.jpg",
+      "/images/villa14_2.jpg",
+      "/images/villa14_3.jpg"
     ],
     "description": "Dhoma të dizajnuara me stil dhe pajisje moderne për rehati maksimale.",
     "rooms": 3,
@@ -3292,9 +3292,9 @@
     "location": "Tirana",
     "rating": 4.4,
     "images": [
-      "../images/hotel56.jpg",
-      "../images/hotel56_1.jpg",
-      "../images/hotel56_2.jpg"
+      "/images/hotel56.jpg",
+      "/images/hotel56_1.jpg",
+      "/images/hotel56_2.jpg"
     ],
     "description": "Hotel i rehatshëm me hapësirë të jashtme private dhe pajisje moderne për një qëndrim komod.",
     "rooms": 2,
@@ -3315,9 +3315,9 @@
     "location": "Pejë",
     "rating": 4.6,
     "images": [
-      "../images/villa59.jpg",
-      "../images/villa59_1.jpg",
-      "../images/villa59_2.jpg"
+      "/images/villa59.jpg",
+      "/images/villa59_1.jpg",
+      "/images/villa59_2.jpg"
     ],
     "description": "Vilë moderne dhe komode me jacuzzi dhe hapësira të bollshme, ideale për një qëndrim relaksues për familje ose miq.",
     "rooms": 1,
@@ -3340,8 +3340,8 @@
     "location": "Tirana",
     "rating": 4,
     "images": [
-      "../images/apartment68.jpg",
-      "../images/apartment68_1.jpg"
+      "/images/apartment68.jpg",
+      "/images/apartment68_1.jpg"
     ],
     "description": "Apartament i rehatshëm dhe i përshtatshëm për një qëndrim të shkurtër ose të gjatë.",
     "rooms": 1,
@@ -3361,10 +3361,10 @@
     "location": "Tirana",
     "rating": 4.9,
     "images": [
-      "../images/villa40.jpg",
-      "../images/villa40_1.jpg",
-      "../images/villa40_2.jpg",
-      "../images/villa40_3.jpg"
+      "/images/villa40.jpg",
+      "/images/villa40_1.jpg",
+      "/images/villa40_2.jpg",
+      "/images/villa40_3.jpg"
     ],
     "description": "Vilë luksoze dhe e hapur me pishinë, ideale për grupet e mëdha dhe qëndrime të rehatshme.",
     "rooms": 4,
@@ -3386,9 +3386,9 @@
     "location": "Dhërmi",
     "rating": 4.2,
     "images": [
-      "../images/hotel84.jpg",
-      "../images/hotel84_1.jpg",
-      "../images/hotel84_2.jpg"
+      "/images/hotel84.jpg",
+      "/images/hotel84_1.jpg",
+      "/images/hotel84_2.jpg"
     ],
     "description": "Hotel modern me dhoma jo-duhan, Wifi falas, restorant, dhoma familjare, qasje në plazh dhe bar.",
     "rooms": 1,
@@ -3409,9 +3409,9 @@
     "location": "Ksamil",
     "rating": 4,
     "images": [
-      "../images/hotel8.jpg",
-      "../images/hotel8_1.jpg",
-      "../images/hotel8_2.jpg"
+      "/images/hotel8.jpg",
+      "/images/hotel8_1.jpg",
+      "/images/hotel8_2.jpg"
     ],
     "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
     "rooms": 1,
@@ -3433,9 +3433,9 @@
     "location": "Prizren",
     "rating": 4.1,
     "images": [
-      "../images/hotel91.jpg",
-      "../images/hotel91_1.jpg",
-      "../images/hotel91_2.jpg"
+      "/images/hotel91.jpg",
+      "/images/hotel91_1.jpg",
+      "/images/hotel91_2.jpg"
     ],
     "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
     "rooms": 1,
@@ -3459,9 +3459,9 @@
     "location": "Pejë",
     "rating": 4.4,
     "images": [
-      "../images/apartment83.jpg",
-      "../images/apartment83_1.jpg",
-      "../images/apartment83_2.jpg"
+      "/images/apartment83.jpg",
+      "/images/apartment83_1.jpg",
+      "/images/apartment83_2.jpg"
     ],
     "description": "Apartament modern dhe i gjerë, ideal për familje ose grupe miqsh me komoditete të plota.",
     "rooms": 3,
@@ -3482,8 +3482,8 @@
     "location": "Himarë",
     "rating": 4.2,
     "images": [
-      "../images/hotel67.jpg",
-      "../images/hotel67_1.jpg"
+      "/images/hotel67.jpg",
+      "/images/hotel67_1.jpg"
     ],
     "description": "Hotel modern dhe i sigurt, ideal për një qëndrim të shkurtër ose të gjatë.",
     "rooms": 1,
@@ -3502,9 +3502,9 @@
     "location": "Tirana",
     "rating": 4.1,
     "images": [
-      "../images/apartment74.jpg",
-      "../images/apartment74_1.jpg",
-      "../images/apartment74_2.jpg"
+      "/images/apartment74.jpg",
+      "/images/apartment74_1.jpg",
+      "/images/apartment74_2.jpg"
     ],
     "description": "Apartament i thjeshtë dhe komod, ideal për një qëndrim të shkurtër ose të gjatë.",
     "rooms": 1,
@@ -3524,10 +3524,10 @@
     "location": "Prishtina",
     "rating": 4.6,
     "images": [
-      "../images/hotel29.jpg",
-      "../images/hotel29_1.jpg",
-      "../images/hotel29_2.jpg",
-      "../images/hotel29_3.jpg"
+      "/images/hotel29.jpg",
+      "/images/hotel29_1.jpg",
+      "/images/hotel29_2.jpg",
+      "/images/hotel29_3.jpg"
     ],
     "description": "Hotel modern dhe i qetë në Prishtinë, me dhoma të rehatshme, restorant dhe staf shumë mikpritës.",
     "rooms": 1,
@@ -3548,8 +3548,8 @@
     "location": "Himarë",
     "rating": 3.9,
     "images": [
-      "../images/hotel68.jpg",
-      "../images/hotel68_1.jpg"
+      "/images/hotel68.jpg",
+      "/images/hotel68_1.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm, i përshtatshëm për familje ose çiftet që kërkojnë një qëndrim të qetë.",
     "rooms": 1,
@@ -3570,9 +3570,9 @@
     "location": "Pejë",
     "rating": 4,
     "images": [
-      "../images/apartment92.jpg",
-      "../images/apartment92_1.jpg",
-      "../images/apartment92_2.jpg"
+      "/images/apartment92.jpg",
+      "/images/apartment92_1.jpg",
+      "/images/apartment92_2.jpg"
     ],
     "description": "Apartament i rehatshëm për 3 persona, me kuzhinë të pajisur dhe facilitete për një qëndrim komod.",
     "rooms": 1,
@@ -3593,10 +3593,10 @@
     "location": "Himarë",
     "rating": 4.67,
     "images": [
-      "../images/apartment30.jpg",
-      "../images/apartment30_1.jpg",
-      "../images/apartment30_2.jpg",
-      "../images/apartment30_3.jpg"
+      "/images/apartment30.jpg",
+      "/images/apartment30_1.jpg",
+      "/images/apartment30_2.jpg",
+      "/images/apartment30_3.jpg"
     ],
     "description": "Apartament i rehatshëm me lehtësira bazë dhe siguri të shtuar për një qëndrim komod.",
     "rooms": 1,
@@ -3616,9 +3616,9 @@
     "location": "Pejë",
     "rating": 4.5,
     "images": [
-      "../images/apartment89.jpg",
-      "../images/apartment89_1.jpg",
-      "../images/apartment89_2.jpg"
+      "/images/apartment89.jpg",
+      "/images/apartment89_1.jpg",
+      "/images/apartment89_2.jpg"
     ],
     "description": "Apartamente moderne dhe komode, ideale për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 2,
@@ -3639,10 +3639,10 @@
     "location": "Brezovicë",
     "rating": 4.7,
     "images": [
-      "../images/villa18.jpg",
-      "../images/villa18_1.jpg",
-      "../images/villa18_2.jpg",
-      "../images/villa18_3.jpg"
+      "/images/villa18.jpg",
+      "/images/villa18_1.jpg",
+      "/images/villa18_2.jpg",
+      "/images/villa18_3.jpg"
     ],
     "description": "Villë moderne me akses direkt në pistat e skijimit dhe ambiente të rehatshme për pushime relaksuese.",
     "rooms": 3,
@@ -3665,10 +3665,10 @@
     "location": "Sarandë",
     "rating": 4,
     "images": [
-      "../images/hotel38.jpg",
-      "../images/hotel38_1.jpg",
-      "../images/hotel38_2.jpg",
-      "../images/hotel38_3.jpg"
+      "/images/hotel38.jpg",
+      "/images/hotel38_1.jpg",
+      "/images/hotel38_2.jpg",
+      "/images/hotel38_3.jpg"
     ],
     "description": "Hotel modern dhe i përshtatshëm për familje.",
     "rooms": 2,
@@ -3692,10 +3692,10 @@
     "location": "Himarë",
     "rating": 4,
     "images": [
-      "../images/hotel41.jpg",
-      "../images/hotel41_1.jpg",
-      "../images/hotel41_2.jpg",
-      "../images/hotel41_3.jpg"
+      "/images/hotel41.jpg",
+      "/images/hotel41_1.jpg",
+      "/images/hotel41_2.jpg",
+      "/images/hotel41_3.jpg"
     ],
     "description": "Hotel i thjeshtë dhe i rehatshëm, i përshtatshëm për një qëndrim pranë bregdetit.",
     "rooms": 1,
@@ -3713,9 +3713,9 @@
     "location": "Prizren",
     "rating": 4.1,
     "images": [
-      "../images/hotel87.jpg",
-      "../images/hotel87_1.jpg",
-      "../images/hotel87_2.jpg"
+      "/images/hotel87.jpg",
+      "/images/hotel87_1.jpg",
+      "/images/hotel87_2.jpg"
     ],
     "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të dobishme për pushuesit.",
     "rooms": 1,
@@ -3739,9 +3739,9 @@
     "location": "Prizren",
     "rating": 4.2,
     "images": [
-      "../images/apartment103.jpg",
-      "../images/apartment103_1.jpg",
-      "../images/apartment103_2.jpg"
+      "/images/apartment103.jpg",
+      "/images/apartment103_1.jpg",
+      "/images/apartment103_2.jpg"
     ],
     "description": "Apartament i rehatshëm dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira komode për pushuesit.",
     "rooms": 1,
@@ -3760,10 +3760,10 @@
     "location": "Tirana",
     "rating": 4,
     "images": [
-      "../images/apartment62.jpg",
-      "../images/apartment62_1.jpg",
-      "../images/apartment62_2.jpg",
-      "../images/apartment62_3.jpg"
+      "/images/apartment62.jpg",
+      "/images/apartment62_1.jpg",
+      "/images/apartment62_2.jpg",
+      "/images/apartment62_3.jpg"
     ],
     "description": "Apartament komod dhe modern për një qëndrim të këndshëm.",
     "rooms": 1,
@@ -3785,10 +3785,10 @@
     "location": "Prishtina",
     "rating": 4.2,
     "images": [
-      "../images/apartment46.jpg",
-      "../images/apartment46_1.jpg",
-      "../images/apartment46_2.jpg",
-      "../images/apartment46_3.jpg"
+      "/images/apartment46.jpg",
+      "/images/apartment46_1.jpg",
+      "/images/apartment46_2.jpg",
+      "/images/apartment46_3.jpg"
     ],
     "description": "Apartament modern dhe komod me lehtësira bazë për një qëndrim të këndshëm.",
     "rooms": 2,
@@ -3802,10 +3802,10 @@
     "location": "Prishtina",
     "rating": 4.5,
     "images": [
-      "../images/hotel31.jpg",
-      "../images/hotel31_1.jpg",
-      "../images/hotel31_2.jpg",
-      "../images/hotel31_3.jpg"
+      "/images/hotel31.jpg",
+      "/images/hotel31_1.jpg",
+      "/images/hotel31_2.jpg",
+      "/images/hotel31_3.jpg"
     ],
     "description": "Hotel modern dhe komod në Prishtinë, me dhoma të rehatshme, mëngjes të pasur dhe staf mikpritës.",
     "rooms": 1,
@@ -3826,10 +3826,10 @@
     "location": "Brezovicë",
     "rating": 4.8,
     "images": [
-      "../images/villa19.jpg",
-      "../images/villa19_1.jpg",
-      "../images/villa19_2.jpg",
-      "../images/villa19_3.jpg"
+      "/images/villa19.jpg",
+      "/images/villa19_1.jpg",
+      "/images/villa19_2.jpg",
+      "/images/villa19_3.jpg"
     ],
     "description": "Villë me dizajn të ngrohtë dhe pajisje moderne, ideale për pushime komode në mal.",
     "rooms": 4,
@@ -3852,10 +3852,10 @@
     "location": "Tirana",
     "rating": 4.5,
     "images": [
-      "../images/apartment66.jpg",
-      "../images/apartment66_1.jpg",
-      "../images/apartment66_2.jpg",
-      "../images/apartment66_3.jpg"
+      "/images/apartment66.jpg",
+      "/images/apartment66_1.jpg",
+      "/images/apartment66_2.jpg",
+      "/images/apartment66_3.jpg"
     ],
     "description": "Apartament luksoz dhe i rehatshëm për një qëndrim të këndshëm.",
     "rooms": 1,
@@ -3874,8 +3874,8 @@
     "location": "Himarë",
     "rating": 4.4,
     "images": [
-      "../images/hotel74.jpg",
-      "../images/hotel74_1.jpg"
+      "/images/hotel74.jpg",
+      "/images/hotel74_1.jpg"
     ],
     "description": "Hotel modern dhe i sigurt, ideal për një qëndrim relaksues për dy persona.",
     "rooms": 1,
@@ -3896,10 +3896,10 @@
     "location": "Sarandë",
     "rating": 4.8,
     "images": [
-      "../images/villa21.jpg",
-      "../images/villa21_1.jpg",
-      "../images/villa21_2.jpg",
-      "../images/villa21_3.jpg"
+      "/images/villa21.jpg",
+      "/images/villa21_1.jpg",
+      "/images/villa21_2.jpg",
+      "/images/villa21_3.jpg"
     ],
     "description": "Vila premium me pishinë të jashtme, ambiente familjare dhe pamje relaksuese.",
     "rooms": 3,
@@ -3923,10 +3923,10 @@
     "location": "Sarandë",
     "rating": 3.3,
     "images": [
-      "../images/apartment5.jpg",
-      "../images/apartment5_1.jpg",
-      "../images/apartment5_2.jpg",
-      "../images/apartment5_3.jpg"
+      "/images/apartment5.jpg",
+      "/images/apartment5_1.jpg",
+      "/images/apartment5_2.jpg",
+      "/images/apartment5_3.jpg"
     ],
     "description": "Apartament i thjeshtë dhe i rehatshëm me akses në të gjitha shërbimet bazë.",
     "rooms": 1,
@@ -3947,9 +3947,9 @@
     "location": "Pejë",
     "rating": 4.5,
     "images": [
-      "../images/apartment84.jpg",
-      "../images/apartment84_1.jpg",
-      "../images/apartment84_2.jpg"
+      "/images/apartment84.jpg",
+      "/images/apartment84_1.jpg",
+      "/images/apartment84_2.jpg"
     ],
     "description": "Apartament modern dhe i rehatshëm me kuzhinë të pajisur dhe hapësirë të dedikuar për punë, ideal për 8 persona.",
     "rooms": 3,
@@ -3972,8 +3972,8 @@
     "location": "Ksamil",
     "rating": 4.2,
     "images": [
-      "../images/hotel98.jpg",
-      "../images/hotel98_1.jpg"
+      "/images/hotel98.jpg",
+      "/images/hotel98_1.jpg"
     ],
     "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
     "rooms": 1,
@@ -3993,9 +3993,9 @@
     "location": "Brezovicë",
     "rating": 4.8,
     "images": [
-      "../images/villa17.jpg",
-      "../images/villa17_1.jpg",
-      "../images/villa17_2.jpg"
+      "/images/villa17.jpg",
+      "/images/villa17_1.jpg",
+      "/images/villa17_2.jpg"
     ],
     "description": "Villë komode me pamje mahnitëse nga liqeni dhe ambiente të bollshme për pushime të qeta.",
     "rooms": 3,
@@ -4018,10 +4018,10 @@
     "location": "Himarë",
     "rating": 4.8,
     "images": [
-      "../images/villa53.jpg",
-      "../images/villa53_1.jpg",
-      "../images/villa53_2.jpg",
-      "../images/villa53_3.jpg"
+      "/images/villa53.jpg",
+      "/images/villa53_1.jpg",
+      "/images/villa53_2.jpg",
+      "/images/villa53_3.jpg"
     ],
     "description": "Vilë luksoze dhe e gjerë, ideale për familje ose grupe të mëdha me hapësira të bollshme dhe komoditete moderne.",
     "rooms": 3,
@@ -4044,10 +4044,10 @@
     "location": "Tirana",
     "rating": 4.3,
     "images": [
-      "../images/apartment64.jpg",
-      "../images/apartment64_1.jpg",
-      "../images/apartment64_2.jpg",
-      "../images/apartment64_3.jpg"
+      "/images/apartment64.jpg",
+      "/images/apartment64_1.jpg",
+      "/images/apartment64_2.jpg",
+      "/images/apartment64_3.jpg"
     ],
     "description": "Një apartament modern dhe i rehatshëm për një qëndrim të këndshëm.",
     "rooms": 1,
@@ -4069,10 +4069,10 @@
     "location": "Sarandë",
     "rating": 4.72,
     "images": [
-      "../images/apartment16.jpg",
-      "../images/apartment16_1.jpg",
-      "../images/apartment16_2.jpg",
-      "../images/apartment16_3.jpg"
+      "/images/apartment16.jpg",
+      "/images/apartment16_1.jpg",
+      "/images/apartment16_2.jpg",
+      "/images/apartment16_3.jpg"
     ],
     "description": "Apartament modern me pamje të qytetit dhe lehtësira të plota për një qëndrim të rehatshëm.",
     "rooms": 2,
@@ -4093,10 +4093,10 @@
     "location": "Himarë",
     "rating": 4,
     "images": [
-      "../images/villa24.jpg",
-      "../images/villa24_1.jpg",
-      "../images/villa24_2.jpg",
-      "../images/villa24_3.jpg"
+      "/images/villa24.jpg",
+      "/images/villa24_1.jpg",
+      "/images/villa24_2.jpg",
+      "/images/villa24_3.jpg"
     ],
     "description": "Vila luksoze me lehtësira të plota dhe siguri të jashtme për një qëndrim komod dhe relaksues.",
     "rooms": 2,
@@ -4119,10 +4119,10 @@
     "location": "Prishtina",
     "rating": 4.1,
     "images": [
-      "../images/apartment49.jpg",
-      "../images/apartment49_1.jpg",
-      "../images/apartment49_2.jpg",
-      "../images/apartment49_3.jpg"
+      "/images/apartment49.jpg",
+      "/images/apartment49_1.jpg",
+      "/images/apartment49_2.jpg",
+      "/images/apartment49_3.jpg"
     ],
     "description": "Apartament modern dhe i rehatshëm me lehtësira të plota për një qëndrim të këndshëm.",
     "rooms": 1,
@@ -4144,10 +4144,10 @@
     "location": "Tirana",
     "rating": 4.5,
     "images": [
-      "../images/apartment75.jpg",
-      "../images/apartment75_1.jpg",
-      "../images/apartment75_2.jpg",
-      "../images/apartment75_3.jpg"
+      "/images/apartment75.jpg",
+      "/images/apartment75_1.jpg",
+      "/images/apartment75_2.jpg",
+      "/images/apartment75_3.jpg"
     ],
     "description": "Apartament modern dhe luksoz me pamje të qytetit, ideal për një qëndrim të rehatshëm.",
     "rooms": 2,
@@ -4168,9 +4168,9 @@
     "location": "Himarë",
     "rating": 4.3,
     "images": [
-      "../images/hotel65.jpg",
-      "../images/hotel65_1.jpg",
-      "../images/hotel65_2.jpg"
+      "/images/hotel65.jpg",
+      "/images/hotel65_1.jpg",
+      "/images/hotel65_2.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për dy persona.",
     "rooms": 1,
@@ -4190,9 +4190,9 @@
     "location": "Himarë",
     "rating": 4.3,
     "images": [
-      "../images/villa45.jpg",
-      "../images/villa45_1.jpg",
-      "../images/villa45_2.jpg"
+      "/images/villa45.jpg",
+      "/images/villa45_1.jpg",
+      "/images/villa45_2.jpg"
     ],
     "description": "Vilë familjare me ambiente të bollshme, akses plazhi dhe pamje relaksuese të kopshtit dhe oborrit.",
     "rooms": 1,
@@ -4215,9 +4215,9 @@
     "location": "Prizren",
     "rating": 4,
     "images": [
-      "../images/hotel92.jpg",
-      "../images/hotel92_1.jpg",
-      "../images/hotel92_2.jpg"
+      "/images/hotel92.jpg",
+      "/images/hotel92_1.jpg",
+      "/images/hotel92_2.jpg"
     ],
     "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të dobishme për pushuesit.",
     "rooms": 1,
@@ -4237,9 +4237,9 @@
     "location": "Dhërmi",
     "rating": 4.5,
     "images": [
-      "../images/apartment98.jpg",
-      "../images/apartment98_1.jpg",
-      "../images/apartment98_2.jpg"
+      "/images/apartment98.jpg",
+      "/images/apartment98_1.jpg",
+      "/images/apartment98_2.jpg"
     ],
     "description": "Apartament modern me pamje nga plazhi dhe hapësira të pajisura për rehati dhe relaks.",
     "rooms": 2,
@@ -4262,9 +4262,9 @@
     "location": "Pejë",
     "rating": 4.6,
     "images": [
-      "../images/villa71.jpg",
-      "../images/villa71_1.jpg",
-      "../images/villa71_2.jpg"
+      "/images/villa71.jpg",
+      "/images/villa71_1.jpg",
+      "/images/villa71_2.jpg"
     ],
     "description": "Vilë moderne dhe komode, ideale për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 1,
@@ -4287,9 +4287,9 @@
     "location": "Tirana",
     "rating": 4.5,
     "images": [
-      "../images/villa36.jpg",
-      "../images/villa36_1.jpg",
-      "../images/villa36_2.jpg"
+      "/images/villa36.jpg",
+      "/images/villa36_1.jpg",
+      "/images/villa36_2.jpg"
     ],
     "description": "Vilë moderne dhe komode, ideale për një qëndrim relaksues me miq ose familje.",
     "rooms": 1,
@@ -4313,9 +4313,9 @@
     "location": "Himarë",
     "rating": 4.7,
     "images": [
-      "../images/villa58.jpg",
-      "../images/villa58_1.jpg",
-      "../images/villa58_2.jpg"
+      "/images/villa58.jpg",
+      "/images/villa58_1.jpg",
+      "/images/villa58_2.jpg"
     ],
     "description": "Vilë komode dhe moderne, ideale për familje ose grupe të vogla me hapësira të bollshme dhe komoditete të plota.",
     "rooms": 2,
@@ -4337,10 +4337,10 @@
     "location": "Sarandë",
     "rating": 4,
     "images": [
-      "../images/apartment2.jpg",
-      "../images/apartment2_1.jpg",
-      "../images/apartment2_2.jpg",
-      "../images/apartment2_3.jpg"
+      "/images/apartment2.jpg",
+      "/images/apartment2_1.jpg",
+      "/images/apartment2_2.jpg",
+      "/images/apartment2_3.jpg"
     ],
     "description": "Apartament i qetë dhe komod me ballkon privat, parkim falas dhe ambiente moderne për një qëndrim relaksues.",
     "rooms": 1,
@@ -4362,11 +4362,11 @@
     "location": "Brezovicë",
     "rating": 4.9,
     "images": [
-      "../images/villa13.jpg",
-      "../images/villa13_1.jpg",
-      "../images/villa13_2.jpg",
-      "../images/villa13_3.jpg",
-      "../images/villa13_4.jpg"
+      "/images/villa13.jpg",
+      "/images/villa13_1.jpg",
+      "/images/villa13_2.jpg",
+      "/images/villa13_3.jpg",
+      "/images/villa13_4.jpg"
     ],
     "description": "Villë moderne me hapësira të ndara dhe dizajn inovativ, ideale për pushime të veçanta.",
     "rooms": 4,
@@ -4386,10 +4386,10 @@
     "location": "Himarë",
     "rating": 4.65,
     "images": [
-      "../images/apartment26.jpg",
-      "../images/apartment26_1.jpg",
-      "../images/apartment26_2.jpg",
-      "../images/apartment26_3.jpg"
+      "/images/apartment26.jpg",
+      "/images/apartment26_1.jpg",
+      "/images/apartment26_2.jpg",
+      "/images/apartment26_3.jpg"
     ],
     "description": "Apartament komod me lehtësira bazë dhe i përshtatshëm për një qëndrim relaksues.",
     "rooms": 1,
@@ -4409,10 +4409,10 @@
     "location": "Brezovicë",
     "rating": 4.7,
     "images": [
-      "../images/villa5.jpg",
-      "../images/villa5_1.jpg",
-      "../images/villa5_2.jpg",
-      "../images/villa5_3.jpg"
+      "/images/villa5.jpg",
+      "/images/villa5_1.jpg",
+      "/images/villa5_2.jpg",
+      "/images/villa5_3.jpg"
     ],
     "description": "Villë me dhoma të ndriçuara natyrshëm, hapësira të bollshme për aktivitet dhe qetësi.",
     "rooms": 2,
@@ -4433,10 +4433,10 @@
     "location": "Prishtina",
     "rating": 4.3,
     "images": [
-      "../images/apartment43.jpg",
-      "../images/apartment43_1.jpg",
-      "../images/apartment43_2.jpg",
-      "../images/apartment43_3.jpg"
+      "/images/apartment43.jpg",
+      "/images/apartment43_1.jpg",
+      "/images/apartment43_2.jpg",
+      "/images/apartment43_3.jpg"
     ],
     "description": "Apartament modern me lehtësira të plota dhe hapësirë për relaksim.",
     "rooms": 2,
@@ -4459,9 +4459,9 @@
     "location": "Himarë",
     "rating": 4.4,
     "images": [
-      "../images/villa48.jpg",
-      "../images/villa48_1.jpg",
-      "../images/villa48_2.jpg"
+      "/images/villa48.jpg",
+      "/images/villa48_1.jpg",
+      "/images/villa48_2.jpg"
     ],
     "description": "Vilë moderne dhe e rehatshme, ideale për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 1,
@@ -4480,9 +4480,9 @@
     "location": "Tirana",
     "rating": 4.5,
     "images": [
-      "../images/villa33.jpg",
-      "../images/villa33_1.jpg",
-      "../images/villa33_2.jpg"
+      "/images/villa33.jpg",
+      "/images/villa33_1.jpg",
+      "/images/villa33_2.jpg"
     ],
     "description": "Vilë moderne dhe komode, ideale për një qëndrim të qetë dhe relaksues.",
     "rooms": 1,
@@ -4505,9 +4505,9 @@
     "location": "Pejë",
     "rating": 4.6,
     "images": [
-      "../images/villa64.jpg",
-      "../images/villa64_1.jpg",
-      "../images/villa64_2.jpg"
+      "/images/villa64.jpg",
+      "/images/villa64_1.jpg",
+      "/images/villa64_2.jpg"
     ],
     "description": "Vilë moderne me qasje direkte në ski-in/ski-out, ideale për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 2,
@@ -4529,9 +4529,9 @@
     "location": "Dhërmi",
     "rating": 4.7,
     "images": [
-      "../images/apartment100.jpg",
-      "../images/apartment100_1.jpg",
-      "../images/apartment100_2.jpg"
+      "/images/apartment100.jpg",
+      "/images/apartment100_1.jpg",
+      "/images/apartment100_2.jpg"
     ],
     "description": "Apartament modern me ambiente të pajisura dhe hapësira komode për një qëndrim relaksues.",
     "rooms": 1,
@@ -4552,9 +4552,9 @@
     "location": "Pejë",
     "rating": 4.1,
     "images": [
-      "../images/villa77.jpg",
-      "../images/villa77_1.jpg",
-      "../images/villa77_2.jpg"
+      "/images/villa77.jpg",
+      "/images/villa77_1.jpg",
+      "/images/villa77_2.jpg"
     ],
     "description": "Villa e rehatshme me pamje nga mali me facilitete të plota për një qëndrim relaksues.",
     "rooms": 1,
@@ -4577,10 +4577,10 @@
     "location": "Sarandë",
     "rating": 4,
     "images": [
-      "../images/apartment7.jpg",
-      "../images/apartment7_1.jpg",
-      "../images/apartment7_2.jpg",
-      "../images/apartment7_3.jpg"
+      "/images/apartment7.jpg",
+      "/images/apartment7_1.jpg",
+      "/images/apartment7_2.jpg",
+      "/images/apartment7_3.jpg"
     ],
     "description": "Apartament modern me ambient të rehatshëm dhe akses të lehtë në shërbimet bazë.",
     "rooms": 2,
@@ -4601,10 +4601,10 @@
     "location": "Sarandë",
     "rating": 4.6,
     "images": [
-      "../images/apartment3.jpg",
-      "../images/apartment3_1.jpg",
-      "../images/apartment3_2.jpg",
-      "../images/apartment3_3.jpg"
+      "/images/apartment3.jpg",
+      "/images/apartment3_1.jpg",
+      "/images/apartment3_2.jpg",
+      "/images/apartment3_3.jpg"
     ],
     "description": "Apartament modern dhe i rehatshëm në zonë të qetë, me akses të lehtë në shërbimet kryesore.",
     "rooms": 3,
@@ -4624,8 +4624,8 @@
     "location": "Prizren",
     "rating": 3.5,
     "images": [
-      "../images/villa92.jpg",
-      "../images/villa92_1.jpg"
+      "/images/villa92.jpg",
+      "/images/villa92_1.jpg"
     ],
     "description": "Vilë komode dhe e përshtatshme për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira të rehatshme për pushuesit.",
     "rooms": 1,
@@ -4644,10 +4644,10 @@
     "location": "Himarë",
     "rating": 4.6,
     "images": [
-      "../images/villa28.jpg",
-      "../images/villa28_1.jpg",
-      "../images/villa28_2.jpg",
-      "../images/villa28_3.jpg"
+      "/images/villa28.jpg",
+      "/images/villa28_1.jpg",
+      "/images/villa28_2.jpg",
+      "/images/villa28_3.jpg"
     ],
     "description": "Vila luksoze në bregdet me lehtësira të plota për një qëndrim relaksues.",
     "rooms": 1,
@@ -4668,9 +4668,9 @@
     "location": "Prizren",
     "rating": 4.3,
     "images": [
-      "../images/apartment106.jpg",
-      "../images/apartment106_1.jpg",
-      "../images/apartment106_2.jpg"
+      "/images/apartment106.jpg",
+      "/images/apartment106_1.jpg",
+      "/images/apartment106_2.jpg"
     ],
     "description": "Apartament i rehatshëm dhe modern, i përshtatshëm për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
     "rooms": 2,
@@ -4692,10 +4692,10 @@
     "location": "Prishtina",
     "rating": 4.3,
     "images": [
-      "../images/apartment45.jpg",
-      "../images/apartment45_1.jpg",
-      "../images/apartment45_2.jpg",
-      "../images/apartment45_3.jpg"
+      "/images/apartment45.jpg",
+      "/images/apartment45_1.jpg",
+      "/images/apartment45_2.jpg",
+      "/images/apartment45_3.jpg"
     ],
     "description": "Apartament komod me pamje të qytetit dhe kopështit, i përshtatshëm për një qëndrim relaksues.",
     "rooms": 1,
@@ -4715,10 +4715,10 @@
     "location": "Tirana",
     "rating": 4.3,
     "images": [
-      "../images/apartment67.jpg",
-      "../images/apartment67_1.jpg",
-      "../images/apartment67_2.jpg",
-      "../images/apartment67_3.jpg"
+      "/images/apartment67.jpg",
+      "/images/apartment67_1.jpg",
+      "/images/apartment67_2.jpg",
+      "/images/apartment67_3.jpg"
     ],
     "description": "Apartament modern dhe i rehatshëm për një qëndrim të këndshëm.",
     "rooms": 2,
@@ -4738,9 +4738,9 @@
     "location": "Pejë",
     "rating": 4.2,
     "images": [
-      "../images/apartment91.jpg",
-      "../images/apartment91_1.jpg",
-      "../images/apartment91_2.jpg"
+      "/images/apartment91.jpg",
+      "/images/apartment91_1.jpg",
+      "/images/apartment91_2.jpg"
     ],
     "description": "Apartament modern dhe i rehatshëm, ideal për 4 persona, me kuzhinë të pajisur dhe facilitete të tjera për një qëndrim komod.",
     "rooms": 1,
@@ -4760,9 +4760,9 @@
     "location": "Tirana",
     "rating": 4.2,
     "images": [
-      "../images/hotel48.jpg",
-      "../images/hotel48_1.jpg",
-      "../images/hotel48_2.jpg"
+      "/images/hotel48.jpg",
+      "/images/hotel48_1.jpg",
+      "/images/hotel48_2.jpg"
     ],
     "description": "Hotel i qetë me akses në liqen dhe pajisje moderne për një qëndrim të këndshëm.",
     "rooms": 1,
@@ -4782,9 +4782,9 @@
     "location": "Pejë",
     "rating": 4.6,
     "images": [
-      "../images/villa65.jpg",
-      "../images/villa65_1.jpg",
-      "../images/villa65_2.jpg"
+      "/images/villa65.jpg",
+      "/images/villa65_1.jpg",
+      "/images/villa65_2.jpg"
     ],
     "description": "Vilë moderne dhe komode, ideale për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 2,
@@ -4806,9 +4806,9 @@
     "location": "Ksamil",
     "rating": 4.5,
     "images": [
-      "../images/villa99.jpg",
-      "../images/villa99_1.jpg",
-      "../images/villa99_2.jpg"
+      "/images/villa99.jpg",
+      "/images/villa99_1.jpg",
+      "/images/villa99_2.jpg"
     ],
     "description": "Vilë e rehatshme dhe luksoze, e përshtatshme për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
     "rooms": 1,
@@ -4829,9 +4829,9 @@
     "location": "Tirana",
     "rating": 4,
     "images": [
-      "../images/hotel44.jpg",
-      "../images/hotel44_1.jpg",
-      "../images/hotel44_2.jpg"
+      "/images/hotel44.jpg",
+      "/images/hotel44_1.jpg",
+      "/images/hotel44_2.jpg"
     ],
     "description": "Hotel i këndshëm me pamje të qytetit dhe parkut, ideal për një qëndrim të rehatshëm.",
     "rooms": 1,
@@ -4852,9 +4852,9 @@
     "location": "Dhërmi",
     "rating": 4.7,
     "images": [
-      "../images/villa85.jpg",
-      "../images/villa85_1.jpg",
-      "../images/villa85_2.jpg"
+      "/images/villa85.jpg",
+      "/images/villa85_1.jpg",
+      "/images/villa85_2.jpg"
     ],
     "description": "Villa moderne me kuzhinë të pajisur, Wifi, parkim falas, TV dhe ajër të kondicionuar për një qëndrim relaksues.",
     "rooms": 2,
@@ -4874,10 +4874,10 @@
     "location": "Prishtina",
     "rating": 4.2,
     "images": [
-      "../images/apartment53.jpg",
-      "../images/apartment53_1.jpg",
-      "../images/apartment53_2.jpg",
-      "../images/apartment53_3.jpg"
+      "/images/apartment53.jpg",
+      "/images/apartment53_1.jpg",
+      "/images/apartment53_2.jpg",
+      "/images/apartment53_3.jpg"
     ],
     "description": "Apartament modern dhe komod me lehtësira të plota, i përshtatshëm për grupe të vogla.",
     "rooms": 2,
@@ -4897,10 +4897,10 @@
     "location": "Sarandë",
     "rating": 4.3,
     "images": [
-      "../images/hotel35.jpg",
-      "../images/hotel35_1.jpg",
-      "../images/hotel35_2.jpg",
-      "../images/hotel35_3.jpg"
+      "/images/hotel35.jpg",
+      "/images/hotel35_1.jpg",
+      "/images/hotel35_2.jpg",
+      "/images/hotel35_3.jpg"
     ],
     "description": "Hotel modern me restorant, bar dhe terracë komode.",
     "rooms": 1,
@@ -4920,10 +4920,10 @@
     "location": "Prishtina",
     "rating": 4.1,
     "images": [
-      "../images/apartment57.jpg",
-      "../images/apartment57_1.jpg",
-      "../images/apartment57_2.jpg",
-      "../images/apartment57_3.jpg"
+      "/images/apartment57.jpg",
+      "/images/apartment57_1.jpg",
+      "/images/apartment57_2.jpg",
+      "/images/apartment57_3.jpg"
     ],
     "description": "Apartament i rehatshëm dhe modern me lehtësira bazë për një qëndrim të këndshëm.",
     "rooms": 1,
@@ -4943,10 +4943,10 @@
     "location": "Tirana",
     "rating": 4.2,
     "images": [
-      "../images/apartment69.jpg",
-      "../images/apartment69_1.jpg",
-      "../images/apartment69_2.jpg",
-      "../images/apartment69_3.jpg"
+      "/images/apartment69.jpg",
+      "/images/apartment69_1.jpg",
+      "/images/apartment69_2.jpg",
+      "/images/apartment69_3.jpg"
     ],
     "description": "Apartament i këndshëm dhe komod me pamje nga kopshti.",
     "rooms": 1,
@@ -4966,9 +4966,9 @@
     "location": "Himarë",
     "rating": 4.7,
     "images": [
-      "../images/villa51.jpg",
-      "../images/villa51_1.jpg",
-      "../images/villa51_2.jpg"
+      "/images/villa51.jpg",
+      "/images/villa51_1.jpg",
+      "/images/villa51_2.jpg"
     ],
     "description": "Vilë moderne dhe e rehatshme me pishinë, ideale për një qëndrim relaksues për familje ose miq.",
     "rooms": 1,
@@ -4990,8 +4990,8 @@
     "location": "Pejë",
     "rating": 4.5,
     "images": [
-      "../images/villa67.jpg",
-      "../images/villa67_1.jpg"
+      "/images/villa67.jpg",
+      "/images/villa67_1.jpg"
     ],
     "description": "Vilë moderne dhe e gjerë, ideale për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 3,
@@ -5012,10 +5012,10 @@
     "location": "Sarandë",
     "rating": 3.5,
     "images": [
-      "../images/apartment4.jpg",
-      "../images/apartment4_1.jpg",
-      "../images/apartment4_2.jpg",
-      "../images/apartment4_3.jpg"
+      "/images/apartment4.jpg",
+      "/images/apartment4_1.jpg",
+      "/images/apartment4_2.jpg",
+      "/images/apartment4_3.jpg"
     ],
     "description": "Apartament modern me akses të lehtë dhe ambiente të rehatshme.",
     "rooms": 1,
@@ -5035,9 +5035,9 @@
     "location": "Tirana",
     "rating": 4.2,
     "images": [
-      "../images/hotel62.jpg",
-      "../images/hotel62_1.jpg",
-      "../images/hotel62_2.jpg"
+      "/images/hotel62.jpg",
+      "/images/hotel62_1.jpg",
+      "/images/hotel62_2.jpg"
     ],
     "description": "Hotel modern dhe i sigurt, ideal për një qëndrim të shkurtër ose të gjatë.",
     "rooms": 1,
@@ -5057,10 +5057,10 @@
     "location": "Brezovicë",
     "rating": 4.7,
     "images": [
-      "../images/villa16.jpg",
-      "../images/villa16_1.jpg",
-      "../images/villa16_2.jpg",
-      "../images/villa16_3.jpg"
+      "/images/villa16.jpg",
+      "/images/villa16_1.jpg",
+      "/images/villa16_2.jpg",
+      "/images/villa16_3.jpg"
     ],
     "description": "Villë moderne me dizajn komod, e pajisur me kuzhinë të plotë dhe pamje të bukur të maleve .",
     "rooms": 3,
@@ -5083,10 +5083,10 @@
     "location": "Prishtina",
     "rating": 4.2,
     "images": [
-      "../images/apartment51.jpg",
-      "../images/apartment51_1.jpg",
-      "../images/apartment51_2.jpg",
-      "../images/apartment51_3.jpg"
+      "/images/apartment51.jpg",
+      "/images/apartment51_1.jpg",
+      "/images/apartment51_2.jpg",
+      "/images/apartment51_3.jpg"
     ],
     "description": "Apartament modern dhe komod me lehtësira të plota dhe hapësirë të përshtatshme për një qëndrim të këndshëm.",
     "rooms": 1,
@@ -5108,10 +5108,10 @@
     "location": "Brezovicë",
     "rating": 4.9,
     "images": [
-      "../images/villa15.jpg",
-      "../images/villa15_1.jpg",
-      "../images/villa15_2.jpg",
-      "../images/villa15_3.jpg"
+      "/images/villa15.jpg",
+      "/images/villa15_1.jpg",
+      "/images/villa15_2.jpg",
+      "/images/villa15_3.jpg"
     ],
     "description": "Villë luksoze me dizajn unik dhe akses të lehtë në pistat e skijimit.",
     "rooms": 2,
@@ -5134,10 +5134,10 @@
     "location": "Sarandë",
     "rating": 3.5,
     "images": [
-      "../images/hotel36.jpg",
-      "../images/hotel36_1.jpg",
-      "../images/hotel36_2.jpg",
-      "../images/hotel36_3.jpg"
+      "/images/hotel36.jpg",
+      "/images/hotel36_1.jpg",
+      "/images/hotel36_2.jpg",
+      "/images/hotel36_3.jpg"
     ],
     "description": "Hotel familjar me restorant, shërbim dhome dhe bar, pranë plazhit.",
     "rooms": 1,
@@ -5160,9 +5160,9 @@
     "location": "Sarandë",
     "rating": 4,
     "images": [
-      "../images/apartment11.jpg",
-      "../images/apartment11_1.jpg",
-      "../images/apartment11_2.jpg"
+      "/images/apartment11.jpg",
+      "/images/apartment11_1.jpg",
+      "/images/apartment11_2.jpg"
     ],
     "description": "Apartamente moderne dhe komode për një qëndrim të rehatshëm.",
     "rooms": 1,
@@ -5182,9 +5182,9 @@
     "location": "Tirana",
     "rating": 4.4,
     "images": [
-      "../images/apartment78.jpg",
-      "../images/apartment78_1.jpg",
-      "../images/apartment78_2.jpg"
+      "/images/apartment78.jpg",
+      "/images/apartment78_1.jpg",
+      "/images/apartment78_2.jpg"
     ],
     "description": "Apartament i hapur dhe i rehatshëm, ideal për një qëndrim familjar ose me miq.",
     "rooms": 2,
@@ -5205,10 +5205,10 @@
     "location": "Prizren",
     "rating": 4.2,
     "images": [
-      "../images/hotel94.jpg",
-      "../images/hotel94_1.jpg",
-      "../images/hotel94_2.jpg",
-      "../images/hotel94_3.jpg"
+      "/images/hotel94.jpg",
+      "/images/hotel94_1.jpg",
+      "/images/hotel94_2.jpg",
+      "/images/hotel94_3.jpg"
     ],
     "description": "Hotel komod dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
     "rooms": 1,
@@ -5232,9 +5232,9 @@
     "location": "near Prizren",
     "rating": 4.4,
     "images": [
-      "../images/villa96.jpg",
-      "../images/villa96_1.jpg",
-      "../images/villa96_2.jpg"
+      "/images/villa96.jpg",
+      "/images/villa96_1.jpg",
+      "/images/villa96_2.jpg"
     ],
     "description": "Vilë e rehatshme dhe e përshtatshme për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
     "rooms": 2,
@@ -5256,9 +5256,9 @@
     "location": "Himarë",
     "rating": 4.2,
     "images": [
-      "../images/hotel64.jpg",
-      "../images/hotel64_1.jpg",
-      "../images/hotel64_2.jpg"
+      "/images/hotel64.jpg",
+      "/images/hotel64_1.jpg",
+      "/images/hotel64_2.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim të shkurtër ose të gjatë.",
     "rooms": 1,
@@ -5277,9 +5277,9 @@
     "location": "Tirana",
     "rating": 4.5,
     "images": [
-      "../images/apartment80.jpg",
-      "../images/apartment80_1.jpg",
-      "../images/apartment80_2.jpg"
+      "/images/apartment80.jpg",
+      "/images/apartment80_1.jpg",
+      "/images/apartment80_2.jpg"
     ],
     "description": "Apartament i gjerë dhe i rehatshëm, ideal për familje ose grup miqsh.",
     "rooms": 3,
@@ -5300,10 +5300,10 @@
     "location": "Himarë",
     "rating": 4.1,
     "images": [
-      "../images/apartment40.jpg",
-      "../images/apartment40_1.jpg",
-      "../images/apartment40_2.jpg",
-      "../images/apartment40_3.jpg"
+      "/images/apartment40.jpg",
+      "/images/apartment40_1.jpg",
+      "/images/apartment40_2.jpg",
+      "/images/apartment40_3.jpg"
     ],
     "description": "Apartament i rehatshëm dhe modern, i përshtatshëm për një qëndrim pranë detit.",
     "rooms": 1,
@@ -5324,9 +5324,9 @@
     "location": "Pejë",
     "rating": 4.7,
     "images": [
-      "../images/villa60.jpg",
-      "../images/villa60_1.jpg",
-      "../images/villa60_2.jpg"
+      "/images/villa60.jpg",
+      "/images/villa60_1.jpg",
+      "/images/villa60_2.jpg"
     ],
     "description": "Vilë moderne me qasje në ski dhe ambiente të rehatshme, ideale për një qëndrim relaksues për familje ose miq.",
     "rooms": 1,
@@ -5346,9 +5346,9 @@
     "location": "Pejë",
     "rating": 4.4,
     "images": [
-      "../images/apartment96.jpg",
-      "../images/apartment96_1.jpg",
-      "../images/apartment96_2.jpg"
+      "/images/apartment96.jpg",
+      "/images/apartment96_1.jpg",
+      "/images/apartment96_2.jpg"
     ],
     "description": "Apartament i rehatshëm për 4 persona, me pamje nga kopshti dhe facilitete të plota për një qëndrim komod.",
     "rooms": 2,
@@ -5370,9 +5370,9 @@
     "location": "Dhërmi",
     "rating": 4.9,
     "images": [
-      "../images/villa88.jpg",
-      "../images/villa88_1.jpg",
-      "../images/villa88_2.jpg"
+      "/images/villa88.jpg",
+      "/images/villa88_1.jpg",
+      "/images/villa88_2.jpg"
     ],
     "description": "Villa luksoze me dhoma të rehatshme, kuzhinë të pajisur, Wifi, parkim falas, TV, lavanderi, ajër të kondicionuar dhe kamera sigurie në ambientet e jashtme.",
     "rooms": 2,
@@ -5394,9 +5394,9 @@
     "location": "Pejë",
     "rating": 4.5,
     "images": [
-      "../images/villa63.jpg",
-      "../images/villa63_1.jpg",
-      "../images/villa63_2.jpg"
+      "/images/villa63.jpg",
+      "/images/villa63_1.jpg",
+      "/images/villa63_2.jpg"
     ],
     "description": "Vilë me pamje malore dhe luginore, ideale për 5 persona, me sobë druri dhe oborr privat.",
     "rooms": 1,
@@ -5417,9 +5417,9 @@
     "location": "Himarë",
     "rating": 3.4,
     "images": [
-      "../images/apartment32.jpg",
-      "../images/apartment32_1.jpg",
-      "../images/apartment32_2.jpg"
+      "/images/apartment32.jpg",
+      "/images/apartment32_1.jpg",
+      "/images/apartment32_2.jpg"
     ],
     "description": "Apartament komod me pamje deti dhe lehtësira të plota për një qëndrim të rehatshëm.",
     "rooms": 1,
@@ -5440,9 +5440,9 @@
     "location": "Sarandë",
     "rating": 3,
     "images": [
-      "../images/apartment9.jpg",
-      "../images/apartment9_1.jpg",
-      "../images/apartment9_2.jpg"
+      "/images/apartment9.jpg",
+      "/images/apartment9_1.jpg",
+      "/images/apartment9_2.jpg"
     ],
     "description": "Apartament i qetë dhe komod për familje ose grupe të vogla.",
     "rooms": 1,
@@ -5460,10 +5460,10 @@
     "location": "Prishtina",
     "rating": 3.9,
     "images": [
-      "../images/apartment58.jpg",
-      "../images/apartment58_1.jpg",
-      "../images/apartment58_2.jpg",
-      "../images/apartment58_3.jpg"
+      "/images/apartment58.jpg",
+      "/images/apartment58_1.jpg",
+      "/images/apartment58_2.jpg",
+      "/images/apartment58_3.jpg"
     ],
     "description": "Apartament i thjeshtë dhe i rehatshëm, i përshtatshëm për një qëndrim të qetë.",
     "rooms": 1,
@@ -5482,9 +5482,9 @@
     "location": "Tirana",
     "rating": 4.3,
     "images": [
-      "../images/hotel57.jpg",
-      "../images/hotel57_1.jpg",
-      "../images/hotel57_2.jpg"
+      "/images/hotel57.jpg",
+      "/images/hotel57_1.jpg",
+      "/images/hotel57_2.jpg"
     ],
     "description": "Hotel modern dhe komod, ideal për një qëndrim të rehatshëm.",
     "rooms": 1,
@@ -5505,11 +5505,11 @@
     "location": "Brezovicë",
     "rating": 4.7,
     "images": [
-      "../images/villa20.jpg",
-      "../images/villa20_1.jpg",
-      "../images/villa20_2.jpg",
-      "../images/villa20_3.jpg",
-      "../images/villa20_4.jpg"
+      "/images/villa20.jpg",
+      "/images/villa20_1.jpg",
+      "/images/villa20_2.jpg",
+      "/images/villa20_3.jpg",
+      "/images/villa20_4.jpg"
     ],
     "description": "Villë moderne me ambiente të bollshme dhe pajisje të plota për një pushim të rehatshëm.",
     "rooms": 2,
@@ -5527,9 +5527,9 @@
     "location": "Sarandë",
     "rating": 3,
     "images": [
-      "../images/hotel37.jpg",
-      "../images/hotel37_1.jpg",
-      "../images/hotel37_2.jpg"
+      "/images/hotel37.jpg",
+      "/images/hotel37_1.jpg",
+      "/images/hotel37_2.jpg"
     ],
     "description": "Hotel i thjeshtë dhe i përshtatshëm për një qëndrim të rehatshëm.",
     "rooms": 1,
@@ -5548,9 +5548,9 @@
     "location": "Himarë",
     "rating": 4.4,
     "images": [
-      "../images/villa46.jpg",
-      "../images/villa46_1.jpg",
-      "../images/villa46_2.jpg"
+      "/images/villa46.jpg",
+      "/images/villa46_1.jpg",
+      "/images/villa46_2.jpg"
     ],
     "description": "Vilë komode dhe moderne me hapësira të jashtme, ideale për një qëndrim relaksues për dy persona.",
     "rooms": 1,
@@ -5571,9 +5571,9 @@
     "location": "Pejë",
     "rating": 4.7,
     "images": [
-      "../images/villa75.jpg",
-      "../images/villa75_1.jpg",
-      "../images/villa75_2.jpg"
+      "/images/villa75.jpg",
+      "/images/villa75_1.jpg",
+      "/images/villa75_2.jpg"
     ],
     "description": "Vilë moderne dhe komode, ideale për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 2,
@@ -5594,9 +5594,9 @@
     "location": "Dhërmi",
     "rating": 4.6,
     "images": [
-      "../images/villa80.jpg",
-      "../images/villa80_1.jpg",
-      "../images/villa80_2.jpg"
+      "/images/villa80.jpg",
+      "/images/villa80_1.jpg",
+      "/images/villa80_2.jpg"
     ],
     "description": "Villa moderne me kuzhinë të pajisur, Wifi, hapësirë për punë, parkim falas, TV dhe ajër të kondicionuar, ideale për një qëndrim relaksues.",
     "rooms": 2,
@@ -5618,11 +5618,11 @@
     "location": "Sarandë",
     "rating": 4.7,
     "images": [
-      "../images/villa22.jpg",
-      "../images/villa22_1.jpg",
-      "../images/villa22_2.jpg",
-      "../images/villa22_3.jpg",
-      "../images/villa22_4.jpg"
+      "/images/villa22.jpg",
+      "/images/villa22_1.jpg",
+      "/images/villa22_2.jpg",
+      "/images/villa22_3.jpg",
+      "/images/villa22_4.jpg"
     ],
     "description": "Vilë moderne me ambient të ndritshëm, qasje në pishinë, parkim të siguruar dhe hapësira komode për një qëndrim relaksues.",
     "rooms": 3,
@@ -5643,10 +5643,10 @@
     "location": "Himarë",
     "rating": 4.3,
     "images": [
-      "../images/apartment39.jpg",
-      "../images/apartment39_1.jpg",
-      "../images/apartment39_2.jpg",
-      "../images/apartment39_3.jpg"
+      "/images/apartment39.jpg",
+      "/images/apartment39_1.jpg",
+      "/images/apartment39_2.jpg",
+      "/images/apartment39_3.jpg"
     ],
     "description": "Apartament modern dhe i rehatshëm me akses në plazh dhe kushte të plota për një qëndrim të këndshëm.",
     "rooms": 1,
@@ -5669,10 +5669,10 @@
     "location": "Prishtina",
     "rating": 4.2,
     "images": [
-      "../images/apartment42.jpg",
-      "../images/apartment42_1.jpg",
-      "../images/apartment42_2.jpg",
-      "../images/apartment42_3.jpg"
+      "/images/apartment42.jpg",
+      "/images/apartment42_1.jpg",
+      "/images/apartment42_2.jpg",
+      "/images/apartment42_3.jpg"
     ],
     "description": "Apartament modern dhe i rehatshëm, i përshtatshëm për një qëndrim të qetë në qytet.",
     "rooms": 1,
@@ -5694,9 +5694,9 @@
     "location": "Tirana",
     "rating": 3.6,
     "images": [
-      "../images/villa44.jpg",
-      "../images/villa44_1.jpg",
-      "../images/villa44_2.jpg"
+      "/images/villa44.jpg",
+      "/images/villa44_1.jpg",
+      "/images/villa44_2.jpg"
     ],
     "description": "Vilë moderne dhe e rehatshme, e pajisur për qëndrime të gjata dhe pushime komode.",
     "rooms": 3,
@@ -5717,10 +5717,10 @@
     "location": "Prishtina",
     "rating": 4.3,
     "images": [
-      "../images/apartment60.jpg",
-      "../images/apartment60_1.jpg",
-      "../images/apartment60_2.jpg",
-      "../images/apartment60_3.jpg"
+      "/images/apartment60.jpg",
+      "/images/apartment60_1.jpg",
+      "/images/apartment60_2.jpg",
+      "/images/apartment60_3.jpg"
     ],
     "description": "Apartament luksoz dhe komod me lehtësira të plota dhe hapësira relaksuese, i përshtatshëm për grupe.",
     "rooms": 3,
@@ -5740,10 +5740,10 @@
     "location": "Prizren",
     "rating": 4.3,
     "images": [
-      "../images/villa93.jpg",
-      "../images/villa93_1.jpg",
-      "../images/villa93_2.jpg",
-      "../images/villa93_3.jpg"
+      "/images/villa93.jpg",
+      "/images/villa93_1.jpg",
+      "/images/villa93_2.jpg",
+      "/images/villa93_3.jpg"
     ],
     "description": "Vilë e rehatshme dhe e përshtatshme për grupet, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
     "rooms": 3,
@@ -5761,9 +5761,9 @@
     "location": "Ksamil",
     "rating": 4.3,
     "images": [
-      "../images/villa98.jpg",
-      "../images/villa98_1.jpg",
-      "../images/villa98_2.jpg"
+      "/images/villa98.jpg",
+      "/images/villa98_1.jpg",
+      "/images/villa98_2.jpg"
     ],
     "description": "Vilë e rehatshme dhe e përshtatshme për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira të sigurta dhe komode.",
     "rooms": 1,
@@ -5785,8 +5785,8 @@
     "location": "Tirana",
     "rating": 4,
     "images": [
-      "../images/hotel61.jpg",
-      "../images/hotel61_1.jpg"
+      "/images/hotel61.jpg",
+      "/images/hotel61_1.jpg"
     ],
     "description": "Hotel i thjeshtë dhe i rehatshëm, ideal për një qëndrim të shkurtër.",
     "rooms": 1,
@@ -5805,9 +5805,9 @@
     "location": "Prishtina",
     "rating": 4,
     "images": [
-      "../images/apartment56.jpg",
-      "../images/apartment56_1.jpg",
-      "../images/apartment56_2.jpg"
+      "/images/apartment56.jpg",
+      "/images/apartment56_1.jpg",
+      "/images/apartment56_2.jpg"
     ],
     "description": "Apartament praktik dhe i rehatshëm me lehtësira bazë për një qëndrim të qetë.",
     "rooms": 1,
@@ -5827,10 +5827,10 @@
     "location": "Himarë",
     "rating": 4.5,
     "images": [
-      "../images/villa49.jpg",
-      "../images/villa49_1.jpg",
-      "../images/villa49_2.jpg",
-      "../images/villa49_3.jpg"
+      "/images/villa49.jpg",
+      "/images/villa49_1.jpg",
+      "/images/villa49_2.jpg",
+      "/images/villa49_3.jpg"
     ],
     "description": "Vilë moderne dhe komode me hapësirë të jashtme, ideale për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 1,
@@ -5852,10 +5852,10 @@
     "location": "Sarandë",
     "rating": 4.2,
     "images": [
-      "../images/hotel34.jpg",
-      "../images/hotel34_1.jpg",
-      "../images/hotel34_2.jpg",
-      "../images/hotel34_3.jpg"
+      "/images/hotel34.jpg",
+      "/images/hotel34_1.jpg",
+      "/images/hotel34_2.jpg",
+      "/images/hotel34_3.jpg"
     ],
     "description": "Hotel i vogël dhe komod me dhoma moderne dhe lehtësira të shumta.",
     "rooms": 1,
@@ -5877,10 +5877,10 @@
     "location": "Himarë",
     "rating": 4.68,
     "images": [
-      "../images/apartment23.jpg",
-      "../images/apartment23_1.jpg",
-      "../images/apartment23_2.jpg",
-      "../images/apartment23_3.jpg"
+      "/images/apartment23.jpg",
+      "/images/apartment23_1.jpg",
+      "/images/apartment23_2.jpg",
+      "/images/apartment23_3.jpg"
     ],
     "description": "Suitë komode me pamje malore dhe lehtësira të plota për një qëndrim relaksues.",
     "rooms": 1,
@@ -5901,10 +5901,10 @@
     "location": "Prishtina",
     "rating": 4.2,
     "images": [
-      "../images/apartment55.jpg",
-      "../images/apartment55_1.jpg",
-      "../images/apartment55_2.jpg",
-      "../images/apartment55_3.jpg"
+      "/images/apartment55.jpg",
+      "/images/apartment55_1.jpg",
+      "/images/apartment55_2.jpg",
+      "/images/apartment55_3.jpg"
     ],
     "description": "Apartament modern dhe i rehatshëm me lehtësira të plota për një qëndrim të këndshëm.",
     "rooms": 1,
@@ -5927,9 +5927,9 @@
     "location": "Sarandë",
     "rating": 5,
     "images": [
-      "../images/apartment12.jpg",
-      "../images/apartment12_1.jpg",
-      "../images/apartment12_2.jpg"
+      "/images/apartment12.jpg",
+      "/images/apartment12_1.jpg",
+      "/images/apartment12_2.jpg"
     ],
     "description": "Apartament i gjerë,i përshtatshëm dhe i pajisur me komoditete moderne.",
     "rooms": 2,
@@ -5951,10 +5951,10 @@
     "location": "Tirana",
     "rating": 4.1,
     "images": [
-      "../images/apartment63.jpg",
-      "../images/apartment63_1.jpg",
-      "../images/apartment63_2.jpg",
-      "../images/apartment63_3.jpg"
+      "/images/apartment63.jpg",
+      "/images/apartment63_1.jpg",
+      "/images/apartment63_2.jpg",
+      "/images/apartment63_3.jpg"
     ],
     "description": "Hapësirë moderne me pamje të qytetit, ideale për një qëndrim relaksues.",
     "rooms": 1,
@@ -5975,9 +5975,9 @@
     "location": "Prizren",
     "rating": 4.2,
     "images": [
-      "../images/villa95.jpg",
-      "../images/villa95_1.jpg",
-      "../images/villa95_2.jpg"
+      "/images/villa95.jpg",
+      "/images/villa95_1.jpg",
+      "/images/villa95_2.jpg"
     ],
     "description": "Vilë e rehatshme dhe e përshtatshme për grupet e vogla, me ambiente të mirëmbajtura dhe hapësira komode për pushime relaksuese.",
     "rooms": 2,
@@ -5996,9 +5996,9 @@
     "location": "Tirana",
     "rating": 4,
     "images": [
-      "../images/apartment70.jpg",
-      "../images/apartment70_1.jpg",
-      "../images/apartment70_2.jpg"
+      "/images/apartment70.jpg",
+      "/images/apartment70_1.jpg",
+      "/images/apartment70_2.jpg"
     ],
     "description": "Apartament i thjeshtë dhe i rehatshëm për një qëndrim relaksues.",
     "rooms": 1,
@@ -6019,9 +6019,9 @@
     "location": "Himarë",
     "rating": 4.9,
     "images": [
-      "../images/villa55.jpg",
-      "../images/villa55_1.jpg",
-      "../images/villa55_2.jpg"
+      "/images/villa55.jpg",
+      "/images/villa55_1.jpg",
+      "/images/villa55_2.jpg"
     ],
     "description": "Vilë moderne dhe e gjerë, ideale për familje ose grupe të mëdha, me hapësira të bollshme dhe komoditete të plota.",
     "rooms": 5,
@@ -6040,9 +6040,9 @@
     "location": "Pejë",
     "rating": 4.2,
     "images": [
-      "../images/apartment90.jpg",
-      "../images/apartment90_1.jpg",
-      "../images/apartment90_2.jpg"
+      "/images/apartment90.jpg",
+      "/images/apartment90_1.jpg",
+      "/images/apartment90_2.jpg"
     ],
     "description": "Apartament i rehatshëm dhe praktik, i përkryer për qëndrime të shpejta ose afatshkurtra.",
     "rooms": 1,
@@ -6063,9 +6063,9 @@
     "location": "Pejë",
     "rating": 4.4,
     "images": [
-      "../images/villa78.jpg",
-      "../images/villa78_1.jpg",
-      "../images/villa78_2.jpg"
+      "/images/villa78.jpg",
+      "/images/villa78_1.jpg",
+      "/images/villa78_2.jpg"
     ],
     "description": "Villa e rehatshme dhe moderne me hapësirë për relaks dhe argëtim.",
     "rooms": 2,
@@ -6086,9 +6086,9 @@
     "location": "Prizren",
     "rating": 4.2,
     "images": [
-      "../images/apartment102.jpg",
-      "../images/apartment102_1.jpg",
-      "../images/apartment102_2.jpg"
+      "/images/apartment102.jpg",
+      "/images/apartment102_1.jpg",
+      "/images/apartment102_2.jpg"
     ],
     "description": "Apartament i rehatshëm dhe i përshtatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe hapësira komode për pushuesit.",
     "rooms": 1,
@@ -6111,10 +6111,10 @@
     "location": "Himarë",
     "rating": 4.5,
     "images": [
-      "../images/villa27.jpg",
-      "../images/villa27_1.jpg",
-      "../images/villa27_2.jpg",
-      "../images/villa27_3.jpg"
+      "/images/villa27.jpg",
+      "/images/villa27_1.jpg",
+      "/images/villa27_2.jpg",
+      "/images/villa27_3.jpg"
     ],
     "description": "Vila elegante me lehtësira të plota dhe hapësirë për një qëndrim të rehatshëm.",
     "rooms": 1,
@@ -6133,10 +6133,10 @@
     "location": "Tirana",
     "rating": 4.6,
     "images": [
-      "../images/villa38.jpg",
-      "../images/villa38_1.jpg",
-      "../images/villa38_2.jpg",
-      "../images/villa38_3.jpg"
+      "/images/villa38.jpg",
+      "/images/villa38_1.jpg",
+      "/images/villa38_2.jpg",
+      "/images/villa38_3.jpg"
     ],
     "description": "Vilë moderne dhe komode, ideale për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 2,
@@ -6157,10 +6157,10 @@
     "location": "Sarandë",
     "rating": 4.63,
     "images": [
-      "../images/apartment17.jpg",
-      "../images/apartment17_1.jpg",
-      "../images/apartment17_2.jpg",
-      "../images/apartment17_3.jpg"
+      "/images/apartment17.jpg",
+      "/images/apartment17_1.jpg",
+      "/images/apartment17_2.jpg",
+      "/images/apartment17_3.jpg"
     ],
     "description": "Apartament komod me akses të përbashkët në plazh dhe lehtësira të nevojshme për një qëndrim relaksues.",
     "rooms": 1,
@@ -6181,9 +6181,9 @@
     "location": "Pejë",
     "rating": 4.6,
     "images": [
-      "../images/villa70.jpg",
-      "../images/villa70_1.jpg",
-      "../images/villa70_2.jpg"
+      "/images/villa70.jpg",
+      "/images/villa70_1.jpg",
+      "/images/villa70_2.jpg"
     ],
     "description": "Vilë moderne me akses në liqen, ideale për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 3,
@@ -6204,10 +6204,10 @@
     "location": "Himarë",
     "rating": 3.62,
     "images": [
-      "../images/apartment25.jpg",
-      "../images/apartment25_1.jpg",
-      "../images/apartment25_2.jpg",
-      "../images/apartment25_3.jpg"
+      "/images/apartment25.jpg",
+      "/images/apartment25_1.jpg",
+      "/images/apartment25_2.jpg",
+      "/images/apartment25_3.jpg"
     ],
     "description": "Apartament i rehatshëm me pamje dhe lehtësira të nevojshme për një qëndrim relaksues.",
     "rooms": 1,
@@ -6228,10 +6228,10 @@
     "location": "Himarë",
     "rating": 3.5,
     "images": [
-      "../images/apartment21.jpg",
-      "../images/apartment21_1.jpg",
-      "../images/apartment21_2.jpg",
-      "../images/apartment21_3.jpg"
+      "/images/apartment21.jpg",
+      "/images/apartment21_1.jpg",
+      "/images/apartment21_2.jpg",
+      "/images/apartment21_3.jpg"
     ],
     "description": "Apartament modern me lehtësira të plota dhe hapësirë të jashtme private për relaksim.",
     "rooms": 1,
@@ -6252,9 +6252,9 @@
     "location": "Prishtina",
     "rating": 4,
     "images": [
-      "../images/apartment50.jpg",
-      "../images/apartment50_1.jpg",
-      "../images/apartment50_2.jpg"
+      "/images/apartment50.jpg",
+      "/images/apartment50_1.jpg",
+      "/images/apartment50_2.jpg"
     ],
     "description": "Apartament i thjeshtë dhe i rehatshëm, i përshtatshëm për një qëndrim të qetë në qytet.",
     "rooms": 1,
@@ -6274,10 +6274,10 @@
     "location": "Tirana",
     "rating": 5,
     "images": [
-      "../images/villa42.jpg",
-      "../images/villa42_1.jpg",
-      "../images/villa42_2.jpg",
-      "../images/villa42_3.jpg"
+      "/images/villa42.jpg",
+      "/images/villa42_1.jpg",
+      "/images/villa42_2.jpg",
+      "/images/villa42_3.jpg"
     ],
     "description": "Vilë luksoze dhe e madhe me pishinë private gjatë gjithë vitit, ideale për grupet e mëdha dhe qëndrime komode.",
     "rooms": 6,
@@ -6300,9 +6300,9 @@
     "location": "Pejë",
     "rating": 4.8,
     "images": [
-      "../images/villa74.jpg",
-      "../images/villa74_1.jpg",
-      "../images/villa74_2.jpg"
+      "/images/villa74.jpg",
+      "/images/villa74_1.jpg",
+      "/images/villa74_2.jpg"
     ],
     "description": "Vilë moderne dhe luksoze, ideale për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 3,
@@ -6323,10 +6323,10 @@
     "location": "Prizren",
     "rating": 4.2,
     "images": [
-      "../images/hotel88.jpg",
-      "../images/hotel88_1.jpg",
-      "../images/hotel88_2.jpg",
-      "../images/hotel88_3.jpg"
+      "/images/hotel88.jpg",
+      "/images/hotel88_1.jpg",
+      "/images/hotel88_2.jpg",
+      "/images/hotel88_3.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm për qëndrime të shkurtra, me ambiente të mirëmbajtura dhe shërbime të ndryshme për pushuesit.",
     "rooms": 1,
@@ -6351,10 +6351,10 @@
     "location": "Sarandë",
     "rating": 4.71,
     "images": [
-      "../images/apartment20.jpg",
-      "../images/apartment20_1.jpg",
-      "../images/apartment20_2.jpg",
-      "../images/apartment20_3.jpg"
+      "/images/apartment20.jpg",
+      "/images/apartment20_1.jpg",
+      "/images/apartment20_2.jpg",
+      "/images/apartment20_3.jpg"
     ],
     "description": "Apartament modern me lehtësira të plota për një qëndrim të rehatshëm dhe praktik.",
     "rooms": 1,
@@ -6374,10 +6374,10 @@
     "location": "Sarandë",
     "rating": 4.2,
     "images": [
-      "../images/apartment13.jpg",
-      "../images/apartment13_1.jpg",
-      "../images/apartment13_2.jpg",
-      "../images/apartment13_3.jpg"
+      "/images/apartment13.jpg",
+      "/images/apartment13_1.jpg",
+      "/images/apartment13_2.jpg",
+      "/images/apartment13_3.jpg"
     ],
     "description": "Apartament modern i përshtatshëm dhe me akses plazhi.",
     "rooms": 2,
@@ -6398,9 +6398,9 @@
     "location": "Tirana",
     "rating": 4.7,
     "images": [
-      "../images/villa30.jpg",
-      "../images/villa30_1.jpg",
-      "../images/villa30_2.jpg"
+      "/images/villa30.jpg",
+      "/images/villa30_1.jpg",
+      "/images/villa30_2.jpg"
     ],
     "description": "Vilë moderne dhe komode, ideale për një qëndrim relaksues.",
     "rooms": 1,
@@ -6421,10 +6421,10 @@
     "location": "Himarë",
     "rating": 4.81,
     "images": [
-      "../images/villa26.jpg",
-      "../images/villa26_1.jpg",
-      "../images/villa26_2.jpg",
-      "../images/villa26_3.jpg"
+      "/images/villa26.jpg",
+      "/images/villa26_1.jpg",
+      "/images/villa26_2.jpg",
+      "/images/villa26_3.jpg"
     ],
     "description": "Vila elegante me lehtësira të plota dhe siguri të jashtme për një qëndrim relaksues.",
     "rooms": 1,
@@ -6447,9 +6447,9 @@
     "location": "Dhërmi",
     "rating": 4.3,
     "images": [
-      "../images/hotel85.jpg",
-      "../images/hotel85_1.jpg",
-      "../images/hotel85_2.jpg"
+      "/images/hotel85.jpg",
+      "/images/hotel85_1.jpg",
+      "/images/hotel85_2.jpg"
     ],
     "description": "Hotel modern me pishinë jashtme, dhoma jo-duhan, transport nga/drejt aeroportit, parkim falas, Wifi falas, bar dhe mëngjes të përfshirë.",
     "rooms": 1,
@@ -6471,10 +6471,10 @@
     "location": "Prishtina",
     "rating": 4.2,
     "images": [
-      "../images/apartment59.jpg",
-      "../images/apartment59_1.jpg",
-      "../images/apartment59_2.jpg",
-      "../images/apartment59_3.jpg"
+      "/images/apartment59.jpg",
+      "/images/apartment59_1.jpg",
+      "/images/apartment59_2.jpg",
+      "/images/apartment59_3.jpg"
     ],
     "description": "Apartament modern dhe i rehatshëm me lehtësira të plota dhe hapësirë të jashtme për relaksim.",
     "rooms": 2,
@@ -6498,10 +6498,10 @@
     "location": "Tirana",
     "rating": 4.9,
     "images": [
-      "../images/villa43.jpg",
-      "../images/villa43_1.jpg",
-      "../images/villa43_2.jpg",
-      "../images/villa43_3.jpg"
+      "/images/villa43.jpg",
+      "/images/villa43_1.jpg",
+      "/images/villa43_2.jpg",
+      "/images/villa43_3.jpg"
     ],
     "description": "Vilë luksoze me pamje nga kodrat dhe pishinë, ideale për grupet e mëdha dhe qëndrime komode.",
     "rooms": 4,
@@ -6524,9 +6524,9 @@
     "location": "Himarë",
     "rating": 3.2,
     "images": [
-      "../images/hotel66.jpg",
-      "../images/hotel66_1.jpg",
-      "../images/hotel66_2.jpg"
+      "/images/hotel66.jpg",
+      "/images/hotel66_1.jpg",
+      "/images/hotel66_2.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për familje ose miq.",
     "rooms": 1,
@@ -6546,10 +6546,10 @@
     "location": "Sarandë",
     "rating": 4.58,
     "images": [
-      "../images/apartment18.jpg",
-      "../images/apartment18_1.jpg",
-      "../images/apartment18_2.jpg",
-      "../images/apartment18_3.jpg"
+      "/images/apartment18.jpg",
+      "/images/apartment18_1.jpg",
+      "/images/apartment18_2.jpg",
+      "/images/apartment18_3.jpg"
     ],
     "description": "Apartament i rehatshëm me lehtësira bazë për një qëndrim të këndshëm dhe praktik.",
     "rooms": 1,
@@ -6570,10 +6570,10 @@
     "location": "Himarë",
     "rating": 4.5,
     "images": [
-      "../images/villa29.jpg",
-      "../images/villa29_1.jpg",
-      "../images/villa29_2.jpg",
-      "../images/villa29_3.jpg"
+      "/images/villa29.jpg",
+      "/images/villa29_1.jpg",
+      "/images/villa29_2.jpg",
+      "/images/villa29_3.jpg"
     ],
     "description": "Vila komode me akses në plazh dhe lehtësira të plota për një qëndrim të rehatshëm.",
     "rooms": 1,
@@ -6593,9 +6593,9 @@
     "location": "Tirana",
     "rating": 4.6,
     "images": [
-      "../images/villa31.jpg",
-      "../images/villa31_1.jpg",
-      "../images/villa31_2.jpg"
+      "/images/villa31.jpg",
+      "/images/villa31_1.jpg",
+      "/images/villa31_2.jpg"
     ],
     "description": "Vilë moderne dhe komode, ideale për grupet ose familjet që kërkojnë një qëndrim relaksues.",
     "rooms": 3,
@@ -6618,8 +6618,8 @@
     "location": "Pejë",
     "rating": 4.4,
     "images": [
-      "../images/apartment82.jpg",
-      "../images/apartment82_1.jpg"
+      "/images/apartment82.jpg",
+      "/images/apartment82_1.jpg"
     ],
     "description": "Apartament modern me pamje nga lumi dhe mali, ideal për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 2,
@@ -6642,9 +6642,9 @@
     "location": "Himarë",
     "rating": 4.9,
     "images": [
-      "../images/villa57.jpg",
-      "../images/villa57_1.jpg",
-      "../images/villa57_2.jpg"
+      "/images/villa57.jpg",
+      "/images/villa57_1.jpg",
+      "/images/villa57_2.jpg"
     ],
     "description": "Vilë luksoze dhe moderne me pishinë dhe jacuzzi, ideale për grupet e mëdha dhe qëndrime relaksuese.",
     "rooms": 4,
@@ -6666,10 +6666,10 @@
     "location": "Sarandë",
     "rating": 4,
     "images": [
-      "../images/apartment14.jpg",
-      "../images/apartment14_1.jpg",
-      "../images/apartment14_2.jpg",
-      "../images/apartment14_3.jpg"
+      "/images/apartment14.jpg",
+      "/images/apartment14_1.jpg",
+      "/images/apartment14_2.jpg",
+      "/images/apartment14_3.jpg"
     ],
     "description": "Apartament komod me të gjitha pajisjet esenciale për një qëndrim të rehatshëm.",
     "rooms": 1,
@@ -6691,9 +6691,9 @@
     "location": "Prishtina",
     "rating": 4.1,
     "images": [
-      "../images/apartment54.jpg",
-      "../images/apartment54_1.jpg",
-      "../images/apartment54_2.jpg"
+      "/images/apartment54.jpg",
+      "/images/apartment54_1.jpg",
+      "/images/apartment54_2.jpg"
     ],
     "description": "Apartament komod me lehtësira të plota dhe i përshtatshëm për një qëndrim të rehatshëm.",
     "rooms": 2,
@@ -6713,9 +6713,9 @@
     "location": "Tirana",
     "rating": 4.4,
     "images": [
-      "../images/hotel52.jpg",
-      "../images/hotel52_1.jpg",
-      "../images/hotel52_2.jpg"
+      "/images/hotel52.jpg",
+      "/images/hotel52_1.jpg",
+      "/images/hotel52_2.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm me pajisje të përshtatshme për një qëndrim të këndshëm.",
     "rooms": 1,
@@ -6734,10 +6734,10 @@
     "location": "Tirana",
     "rating": 4.3,
     "images": [
-      "../images/hotel51.jpg",
-      "../images/hotel51_1.jpg",
-      "../images/hotel51_2.jpg",
-      "../images/hotel51_3.jpg"
+      "/images/hotel51.jpg",
+      "/images/hotel51_1.jpg",
+      "/images/hotel51_2.jpg",
+      "/images/hotel51_3.jpg"
     ],
     "description": "Hotel modern dhe komod, ideal për një qëndrim të rehatshëm në qytet.",
     "rooms": 1,
@@ -6755,10 +6755,10 @@
     "location": "Sarandë",
     "rating": 4.67,
     "images": [
-      "../images/apartment19.jpg",
-      "../images/apartment19_1.jpg",
-      "../images/apartment19_2.jpg",
-      "../images/apartment19_3.jpg"
+      "/images/apartment19.jpg",
+      "/images/apartment19_1.jpg",
+      "/images/apartment19_2.jpg",
+      "/images/apartment19_3.jpg"
     ],
     "description": "Apartament komod me lehtësira të nevojshme dhe hapësirë të jashtme për relaksim.",
     "rooms": 1,
@@ -6779,10 +6779,10 @@
     "location": "Himarë",
     "rating": 4.7,
     "images": [
-      "../images/apartment28.jpg",
-      "../images/apartment28_1.jpg",
-      "../images/apartment28_2.jpg",
-      "../images/apartment28_3.jpg"
+      "/images/apartment28.jpg",
+      "/images/apartment28_1.jpg",
+      "/images/apartment28_2.jpg",
+      "/images/apartment28_3.jpg"
     ],
     "description": "Apartament i rehatshëm me lehtësira të plota dhe hapësirë të jashtme për relaksim.",
     "rooms": 1,
@@ -6805,10 +6805,10 @@
     "location": "Himarë",
     "rating": 4.6,
     "images": [
-      "../images/apartment31.jpg",
-      "../images/apartment31_1.jpg",
-      "../images/apartment31_2.jpg",
-      "../images/apartment31_3.jpg"
+      "/images/apartment31.jpg",
+      "/images/apartment31_1.jpg",
+      "/images/apartment31_2.jpg",
+      "/images/apartment31_3.jpg"
     ],
     "description": "Apartament komod me lehtësira të plota dhe hapësirë për relaksim.",
     "rooms": 1,
@@ -6828,9 +6828,9 @@
     "location": "Pejë",
     "rating": 4.4,
     "images": [
-      "../images/hotel80.jpg",
-      "../images/hotel80_1.jpg",
-      "../images/hotel80_2.jpg"
+      "/images/hotel80.jpg",
+      "/images/hotel80_1.jpg",
+      "/images/hotel80_2.jpg"
     ],
     "description": "Hotel modern me pamje nga mali dhe lumi, ideal për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 1,
@@ -6850,10 +6850,10 @@
     "location": "Himarë",
     "rating": 4.78,
     "images": [
-      "../images/villa25.jpg",
-      "../images/villa25_1.jpg",
-      "../images/villa25_2.jpg",
-      "../images/villa25_3.jpg"
+      "/images/villa25.jpg",
+      "/images/villa25_1.jpg",
+      "/images/villa25_2.jpg",
+      "/images/villa25_3.jpg"
     ],
     "description": "Vila komode me pamje deti dhe lehtësira të plota për një qëndrim relaksues.",
     "rooms": 1,
@@ -6873,10 +6873,10 @@
     "location": "Tirana",
     "rating": 4.6,
     "images": [
-      "../images/apartment76.jpg",
-      "../images/apartment76_1.jpg",
-      "../images/apartment76_2.jpg",
-      "../images/apartment76_3.jpg"
+      "/images/apartment76.jpg",
+      "/images/apartment76_1.jpg",
+      "/images/apartment76_2.jpg",
+      "/images/apartment76_3.jpg"
     ],
     "description": "Apartament luksoz dhe i hapur, ideal për qëndrim të gjatë ose pushime komode.",
     "rooms": 2,
@@ -6897,9 +6897,9 @@
     "location": "Tirana",
     "rating": 4.3,
     "images": [
-      "../images/hotel53.jpg",
-      "../images/hotel53_1.jpg",
-      "../images/hotel53_2.jpg"
+      "/images/hotel53.jpg",
+      "/images/hotel53_1.jpg",
+      "/images/hotel53_2.jpg"
     ],
     "description": "Hotel i rehatshëm me hapësirë të jashtme dhe pajisje moderne për një qëndrim komod.",
     "rooms": 1,
@@ -6920,8 +6920,8 @@
     "location": "Pejë",
     "rating": 4,
     "images": [
-      "../images/hotel81.jpg",
-      "../images/hotel81_1.jpg"
+      "/images/hotel81.jpg",
+      "/images/hotel81_1.jpg"
     ],
     "description": "Hotel modern dhe komod, ideal për 2 persona, me hapësirë për punë dhe facilitete të tjera për një qëndrim të rehatshëm.",
     "rooms": 1,
@@ -6942,9 +6942,9 @@
     "location": "Sarandë",
     "rating": 3,
     "images": [
-      "../images/apartment10.jpg",
-      "../images/apartment10_1.jpg",
-      "../images/apartment10_2.jpg"
+      "/images/apartment10.jpg",
+      "/images/apartment10_1.jpg",
+      "/images/apartment10_2.jpg"
     ],
     "description": "Apartament komod dhe i përshtatshëm për familje pranë plazhit.",
     "rooms": 1,
@@ -6966,9 +6966,9 @@
     "location": "Prishtina",
     "rating": 4.1,
     "images": [
-      "../images/apartment52.jpg",
-      "../images/apartment52_1.jpg",
-      "../images/apartment52_2.jpg"
+      "/images/apartment52.jpg",
+      "/images/apartment52_1.jpg",
+      "/images/apartment52_2.jpg"
     ],
     "description": "Apartament i rehatshëm dhe praktik me lehtësira të plota për një qëndrim të këndshëm.",
     "rooms": 1,
@@ -6991,10 +6991,10 @@
     "location": "Himarë",
     "rating": 4.66,
     "images": [
-      "../images/apartment27.jpg",
-      "../images/apartment27_1.jpg",
-      "../images/apartment27_2.jpg",
-      "../images/apartment27_3.jpg"
+      "/images/apartment27.jpg",
+      "/images/apartment27_1.jpg",
+      "/images/apartment27_2.jpg",
+      "/images/apartment27_3.jpg"
     ],
     "description": "Apartament komod me lehtësira të plota dhe hapësirë të jashtme për relaksim.",
     "rooms": 1,
@@ -7017,9 +7017,9 @@
     "location": "Ksamil",
     "rating": 4,
     "images": [
-      "../images/hotel99.jpg",
-      "../images/hotel99_1.jpg",
-      "../images/hotel99_2.jpg"
+      "/images/hotel99.jpg",
+      "/images/hotel99_1.jpg",
+      "/images/hotel99_2.jpg"
     ],
     "description": "Komod dhe i përshtatshëm për një qëndrim të rehatshëm në qendër të qytetit.",
     "rooms": 1,
@@ -7042,10 +7042,10 @@
     "location": "Tirana",
     "rating": 4.1,
     "images": [
-      "../images/hotel43.jpg",
-      "../images/hotel43_1.jpg",
-      "../images/hotel43_2.jpg",
-      "../images/hotel43_3.jpg"
+      "/images/hotel43.jpg",
+      "/images/hotel43_1.jpg",
+      "/images/hotel43_2.jpg",
+      "/images/hotel43_3.jpg"
     ],
     "description": "Hotel komod dhe i përshtatshëm për një qëndrim të rehatshëm.",
     "rooms": 1,
@@ -7065,8 +7065,8 @@
     "location": "Sarandë",
     "rating": 3.4,
     "images": [
-      "../images/hotel79.jpg",
-      "../images/hotel79_1.jpg"
+      "/images/hotel79.jpg",
+      "/images/hotel79_1.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për familje ose miq.",
     "rooms": 1,
@@ -7085,9 +7085,9 @@
     "location": "Pejë",
     "rating": 4.5,
     "images": [
-      "../images/apartment87.jpg",
-      "../images/apartment87_1.jpg",
-      "../images/apartment87_2.jpg"
+      "/images/apartment87.jpg",
+      "/images/apartment87_1.jpg",
+      "/images/apartment87_2.jpg"
     ],
     "description": "Apartament modern dhe i gjerë, ideal për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 2,
@@ -7108,10 +7108,10 @@
     "location": "Tirana",
     "rating": 4.4,
     "images": [
-      "../images/hotel58.jpg",
-      "../images/hotel58_1.jpg",
-      "../images/hotel58_2.jpg",
-      "../images/hotel58_3.jpg"
+      "/images/hotel58.jpg",
+      "/images/hotel58_1.jpg",
+      "/images/hotel58_2.jpg",
+      "/images/hotel58_3.jpg"
     ],
     "description": "Hotel i rehatshëm dhe modern, ideal për një qëndrim të shkurtër ose të gjatë.",
     "rooms": 1,
@@ -7132,9 +7132,9 @@
     "location": "Himarë",
     "rating": 4.6,
     "images": [
-      "../images/villa47.jpg",
-      "../images/villa47_1.jpg",
-      "../images/villa47_2.jpg"
+      "/images/villa47.jpg",
+      "/images/villa47_1.jpg",
+      "/images/villa47_2.jpg"
     ],
     "description": "Vilë komode dhe moderne me akses plazhi, ideale për një qëndrim relaksues për dy persona.",
     "rooms": 1,
@@ -7153,10 +7153,10 @@
     "location": "Ksamil",
     "rating": 4,
     "images": [
-      "../images/hotel100.jpg",
-      "../images/hotel100_1.jpg",
-      "../images/hotel100_2.jpg",
-      "../images/hotel100_3.jpg"
+      "/images/hotel100.jpg",
+      "/images/hotel100_1.jpg",
+      "/images/hotel100_2.jpg",
+      "/images/hotel100_3.jpg"
     ],
     "description": "Komod dhe i përshtatshëm për një qëndrim të rehatshëm.",
     "rooms": 1,
@@ -7174,10 +7174,10 @@
     "location": "Tirana",
     "rating": 4.2,
     "images": [
-      "../images/apartment65.jpg",
-      "../images/apartment65_1.jpg",
-      "../images/apartment65_2.jpg",
-      "../images/apartment65_3.jpg"
+      "/images/apartment65.jpg",
+      "/images/apartment65_1.jpg",
+      "/images/apartment65_2.jpg",
+      "/images/apartment65_3.jpg"
     ],
     "description": "Apartament modern dhe i këndshëm për një qëndrim relaksues.",
     "rooms": 1,
@@ -7198,9 +7198,9 @@
     "location": "Himarë",
     "rating": 4.4,
     "images": [
-      "../images/hotel69.jpg",
-      "../images/hotel69_1.jpg",
-      "../images/hotel69_2.jpg"
+      "/images/hotel69.jpg",
+      "/images/hotel69_1.jpg",
+      "/images/hotel69_2.jpg"
     ],
     "description": "Hotel modern dhe i rehatshëm, ideal për një qëndrim relaksues për familje ose grup miqsh.",
     "rooms": 1,

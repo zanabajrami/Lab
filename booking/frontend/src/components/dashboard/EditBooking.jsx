@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { hotels } from "../../data/HotelsData";
 
 export default function EditBookingModal({ booking, onClose, onUpdated }) {
     const token = localStorage.getItem("token");
@@ -8,6 +7,13 @@ export default function EditBookingModal({ booking, onClose, onUpdated }) {
     const [pricePerNight] = useState(
         booking.total_price / booking.nights || 100
     );
+    const [hotels, setHotels] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://localhost:8000/api/hotels")
+            .then(res => setHotels(res.data))
+            .catch(err => console.error("Error fetching hotels:", err));
+    }, []);
 
     useEffect(() => {
         const checkIn = new Date(form.check_in);
@@ -87,7 +93,9 @@ export default function EditBookingModal({ booking, onClose, onUpdated }) {
                                 className={inputStyle}
                             >
                                 {hotels.map(h => (
-                                    <option key={h.id} value={h.id}>{h.name} — {h.location}</option>
+                                    <option key={h.id} value={h.id}>
+                                        {h.name} — {h.location}
+                                    </option>
                                 ))}
                             </select>
                         </div>
