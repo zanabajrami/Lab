@@ -7,6 +7,7 @@ import LastLogin from "./LoginActivity";
 import Settings from "./Settings";
 import Bookings from "./Bookings";
 import CancelBookings from "./CancelBookings";
+import Hotels from "./Hotels";
 
 function AdminLayout() {
     const [activePage, setActivePage] = useState("dashboard");
@@ -27,12 +28,13 @@ function AdminLayout() {
                 <Topbar />
                 <main className="flex-1 p-6 overflow-y-auto min-h-0">
                     <div className="max-w-[1400px] mx-auto">
-                        {activePage === "dashboard" && <Dashboard isSidebarCollapsed={isSidebarCollapsed} />}
-                        {activePage === "users" && <Users isSidebarCollapsed={isSidebarCollapsed} />}
-                        {activePage === "last-login" && <LastLogin isSidebarCollapsed={isSidebarCollapsed} />}
+                        {activePage === "dashboard" && <Dashboard />}
+                        {activePage === "users" && <Users />}
+                        {activePage === "last-login" && <LastLogin />}
                         {activePage === "bookings" && <Bookings />}
                         {activePage === "cancel-bookings" && <CancelBookings />}
-                        {activePage === "settings" && <Settings isSidebarCollapsed={isSidebarCollapsed} />}
+                        {activePage === "settings" && <Settings />}
+                        {activePage === "hotels" && <Hotels />} 
                     </div>
                 </main>
             </div>

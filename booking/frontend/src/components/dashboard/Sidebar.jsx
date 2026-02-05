@@ -1,5 +1,5 @@
 import React from "react";
-import { LayoutDashboard, Users, ShieldUser, Settings, LogOut, UserLock, ChevronRight, CalendarCheck } from "lucide-react";
+import { LayoutDashboard, Users, ShieldUser, Settings, LogOut, UserLock, ChevronRight, CalendarCheck, Hotel} from "lucide-react";
 import { TbCalendarCancel } from "react-icons/tb";
 
 function Sidebar({ activePage, setActivePage }) {
@@ -87,6 +87,21 @@ function Sidebar({ activePage, setActivePage }) {
             size={14}
             className={`hidden lg:block ml-auto opacity-0 group-hover:opacity-100 transition-opacity
               ${activePage === "last-login" ? "opacity-100" : ""}`}
+          />
+        </button>
+
+        <button onClick={() => setActivePage("hotels")} className={navItemClass("hotels")}>
+          <Hotel size={20} strokeWidth={activePage === "hotels" ? 2.5 : 2} /> 
+          <span className="hidden lg:inline ml-3 font-semibold text-[15px]">Hotels</span>
+
+          {activePage === "hotels" && (
+            <div className="hidden lg:block absolute left-0 w-1 h-6 bg-indigo-900 rounded-r-full" />
+          )}
+
+          <ChevronRight
+            size={14}
+            className={`hidden lg:block ml-auto opacity-0 group-hover:opacity-100 transition-opacity
+      ${activePage === "hotels" ? "opacity-100" : ""}`}
           />
         </button>
 
