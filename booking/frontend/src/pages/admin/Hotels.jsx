@@ -5,12 +5,13 @@ import {
 } from 'lucide-react';
 import { BiStar } from "react-icons/bi";
 import { MdOutlineDomainAdd } from "react-icons/md";
+import EditHotel from "../../components/dashboard/EditHotel";
 
 const HotelTable = () => {
     const [hotels, setHotels] = useState([]);
+    const [editingHotel, setEditingHotel] = useState(null);
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
-
     const [currentPage, setCurrentPage] = useState(1);
     const hotelsPerPage = 10;
     const tableTopRef = useRef(null);
@@ -39,16 +40,16 @@ const HotelTable = () => {
         if (name.includes('parking')) return <Car size={14} />;
         if (name.includes('pool')) return <WavesLadder size={14} />;
         if (name.includes('washer')) return <Bubbles size={14} />;
-        if (name.includes('bar')) return <Martini size={14} />; 
+        if (name.includes('bar')) return <Martini size={14} />;
         if (name.includes('restaurant')) return <Utensils size={14} />;
-        if (name.includes('kitchen')) return <ChefHat size={14} />; 
-        if (name.includes('ski acces') || name.includes('ski-in/ski-out')) return <CableCar size={14} />; 
-        if (name.includes('spa') || name.includes('luxury spa')) return <Leaf size={14} />; 
-        if (name.includes('non-smoking rooms')) return <CigaretteOff size={14} />; 
-        if (name.includes('air conditioning') || name.includes('ac')) return <Fan size={14} />; 
-        if (name.includes('sea view') || name.includes('shared beach')) return <Waves size={14} />; 
-        if (name.includes('pet')) return <PawPrint size={14} />; 
-        if (name.includes('room service')) return <HandPlatter size={14} />; 
+        if (name.includes('kitchen')) return <ChefHat size={14} />;
+        if (name.includes('ski acces') || name.includes('ski-in/ski-out')) return <CableCar size={14} />;
+        if (name.includes('spa') || name.includes('luxury spa')) return <Leaf size={14} />;
+        if (name.includes('non-smoking rooms')) return <CigaretteOff size={14} />;
+        if (name.includes('air conditioning') || name.includes('ac')) return <Fan size={14} />;
+        if (name.includes('sea view') || name.includes('shared beach')) return <Waves size={14} />;
+        if (name.includes('pet')) return <PawPrint size={14} />;
+        if (name.includes('room service')) return <HandPlatter size={14} />;
         return <Check size={14} />;
     };
 
@@ -195,7 +196,7 @@ const HotelTable = () => {
 
                                         <td className="p-6 text-right align-top">
                                             <div className="flex justify-end gap-2">
-                                                <button title="Edit" className="p-3 bg-slate-900 rounded-xl text-slate-400 hover:text-indigo-300 border border-slate-700 hover:border-indigo-500/50 transition-all shadow-lg"><Pencil size={18} /></button>
+                                                <button title="Edit" onClick={() => setEditingHotel(hotel)} className="p-3 bg-slate-900 rounded-xl text-slate-400 hover:text-indigo-300 border border-slate-700 hover:border-indigo-500/50 transition-all shadow-lg"><Pencil size={18} /></button>
                                                 <button title="Delete" className="p-3 bg-slate-900 rounded-xl text-slate-400 hover:text-red-400 border border-slate-700 hover:border-red-500/50 transition-all shadow-lg"><Trash2 size={18} /></button>
                                             </div>
                                         </td>
@@ -247,6 +248,21 @@ const HotelTable = () => {
                     </div>
                 </div>
             </div>
+
+            {editingHotel && (
+                <EditHotel
+                    hotel={editingHotel}
+                    onClose={() => setEditingHotel(null)}
+                    onUpdated={(updatedHotel) => {
+                        setHotels(prev =>
+                            prev.map(h =>
+                                h.id === updatedHotel.id ? updatedHotel : h
+                            )
+                        );
+                    }}
+                />
+            )}
+
         </div>
     );
 };

@@ -212,5 +212,4 @@ function Favorites({ favorites, setFavorites }) {
     </div>
   );
 }
-
 export default Favorites;
