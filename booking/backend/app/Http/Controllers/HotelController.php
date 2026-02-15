@@ -21,34 +21,48 @@ class HotelController extends Controller
     }
 
     // Create hotel
-    public function store(Request $request)
-    {
-        $validated = $request->validate([
-            'name' => 'required|string',
-            'location' => 'required|string',
-            'rating' => 'required|numeric',
-            'description' => 'nullable|string',
-            'rooms' => 'required|integer',
-            'capacity' => 'required|integer',
-            'price' => 'required|numeric',
-            'amenities' => 'nullable|array',
-            'images' => 'nullable|array',
-        ]);
+ public function store(Request $request)
+{
+    $request->validate([
+        'name' => 'required|string',
+        'location' => 'required|string',
+        'rating' => 'required|numeric',
+        'description' => 'nullable|string',
+        'rooms' => 'required|integer',
+        'capacity' => 'required|integer',
+        'price' => 'required|numeric',
+        'amenities' => 'nullable|string', 
+        'images.*' => 'nullable|image|mimes:jpg,jpeg,png,gif,webp,avif|max:2048',
+    ]);
 
-        $hotel = Hotel::create([
-            'name' => $validated['name'],
-            'location' => $validated['location'],
-            'rating' => $validated['rating'],
-            'description' => $validated['description'] ?? '',
-            'rooms' => $validated['rooms'],
-            'capacity' => $validated['capacity'],
-            'price' => $validated['price'],
-            'amenities' => $validated['amenities'] ?? [],
-            'images' => $validated['images'] ?? [],
-        ]);
-
-        return response()->json($hotel, 201);
+    $amenities = [];
+    if ($request->filled('amenities')) {
+        $amenities = json_decode($request->input('amenities'), true) ?? [];
     }
+
+    $imagePaths = [];
+    if ($request->hasFile('images')) {
+        foreach ($request->file('images') as $file) {
+            $filename = $file->getClientOriginalName(); 
+            $file->storeAs('public/images', $filename);
+            $imagePaths[] = $filename;
+        }
+    }
+
+    $hotel = Hotel::create([
+        'name' => $request->name,
+        'location' => $request->location,
+        'rating' => $request->rating,
+        'description' => $request->description ?? '',
+        'rooms' => $request->rooms,
+        'capacity' => $request->capacity,
+        'price' => $request->price,
+        'amenities' => $amenities,
+        'images' => $imagePaths,
+    ]);
+
+    return response()->json($hotel, 201);
+}
 
     // Update hotel
     public function update(Request $request, $id)

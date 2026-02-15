@@ -193,13 +193,12 @@ export default function HotelsPage({ favorites, setFavorites }) {
     const nights = Math.ceil(diff / (1000 * 60 * 60 * 24));
     return nights > 0 ? nights : 1;
   };
-  const nights = calculateNights(checkInDate, checkOutDate);
 
+  const nights = calculateNights(checkInDate, checkOutDate);
   const [showInfoModal, setShowInfoModal] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-
   const [phone, setPhone] = useState("");
   const [specialRequests, setSpecialRequests] = useState("");
 
@@ -220,7 +219,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
-  const [isBooked, setIsBooked] = useState(false); // State i ri
+  const [isBooked, setIsBooked] = useState(false);
 
   const closeAllModals = () => {
     setIsBooked(false);
@@ -279,7 +278,7 @@ export default function HotelsPage({ favorites, setFavorites }) {
       }
 
       console.log("Booking success:", data);
-      setIsBooked(true);       // Modal i suksesit
+      setIsBooked(true);       
       setShowInfoModal(false); // Mbyll modalin e informacionit
       setCalendarHotel(null);  // Reset calendar
     } catch (err) {
@@ -287,6 +286,19 @@ export default function HotelsPage({ favorites, setFavorites }) {
       alert("Something went wrong while booking. Please try again.");
     }
   };
+
+  useEffect(() => {
+    const handleHotelAddedEvent = (e) => {
+      const newHotel = e.detail;
+      setHotels(prev => [newHotel, ...prev]);
+    };
+
+    window.addEventListener("hotelAdded", handleHotelAddedEvent);
+
+    return () => {
+      window.removeEventListener("hotelAdded", handleHotelAddedEvent);
+    };
+  }, []);
 
   return (
     <div className="px-6 py-8">

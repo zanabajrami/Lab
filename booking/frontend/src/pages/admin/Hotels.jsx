@@ -1,11 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
-import {
-    MapPin, BedDouble, Users, Wifi, Coffee, Tv, Pencil, Trash2, Car, Check, WavesLadder, ChevronLeft, ChevronRight,
-    MoreHorizontal, CheckCircle2, Bubbles, Martini, Utensils, ChefHat, CableCar, Leaf, CigaretteOff, Fan, Waves, PawPrint, HandPlatter
-} from 'lucide-react';
+import {MapPin, BedDouble, Users, Wifi, Coffee, Tv, Pencil, Trash2, Car, Check, WavesLadder, ChevronLeft, ChevronRight,MoreHorizontal, 
+CheckCircle2, Bubbles, Martini, Utensils, ChefHat, CableCar, Leaf, CigaretteOff, Fan, Waves, PawPrint, HandPlatter} from 'lucide-react';
 import { BiStar } from "react-icons/bi";
 import { MdOutlineDomainAdd } from "react-icons/md";
 import EditHotel from "../../components/dashboard/EditHotel";
+import AddHotel from "../../components/dashboard/AddHotel";
 
 const HotelTable = () => {
     const [hotels, setHotels] = useState([]);
@@ -15,16 +14,53 @@ const HotelTable = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const hotelsPerPage = 10;
     const tableTopRef = useRef(null);
+    const [showAddModal, setShowAddModal] = useState(false);
 
+    const getFullImageUrl = (img) => {
+        if (!img) return null;
+        return img.startsWith("http")
+            ? img
+            : `http://localhost:8000/storage/images/${img}`;
+    };
+
+    const parseAmenities = (a) => {
+        if (!a) return [];
+        if (Array.isArray(a)) return a;
+        if (typeof a === 'string') {
+            try { return JSON.parse(a); }
+            catch { return a.split(',').map(x => x.trim()); }
+        }
+        return [];
+    };
+
+    // Fetch hotels
     useEffect(() => {
-        fetch('http://localhost:8000/api/hotels')
-            .then((res) => res.json())
-            .then((data) => {
-                setHotels(data);
+        const token = localStorage.getItem("token");
+        fetch('http://localhost:8000/api/hotels', {
+            headers: { Authorization: `Bearer ${token}` }
+        })
+            .then(res => res.json())
+            .then(data => {
+                const hotelsWithFullImages = data.map(hotel => ({
+                    ...hotel,
+                    images: Array.isArray(hotel.images) ? hotel.images.map(getFullImageUrl) : [],
+                    amenities: parseAmenities(hotel.amenities)
+                }));
+                setHotels(hotelsWithFullImages);
                 setLoading(false);
             })
-            .catch((err) => console.error("Error:", err));
+            .catch(err => console.error(err));
     }, []);
+
+    // Shto hotelin direkt
+    const handleHotelAdded = (newHotel) => {
+        const hotelWithFullImages = {
+            ...newHotel,
+            images: Array.isArray(newHotel.images) ? newHotel.images.map(getFullImageUrl) : [],
+            amenities: parseAmenities(newHotel.amenities)
+        };
+        setHotels(prev => [hotelWithFullImages, ...prev]);
+    };
 
     useEffect(() => {
         if (!loading && tableTopRef.current) {
@@ -54,8 +90,8 @@ const HotelTable = () => {
     };
 
     const filteredHotels = hotels.filter(hotel =>
-        hotel.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        hotel.location.toLowerCase().includes(searchTerm.toLowerCase())
+        (hotel.name?.toLowerCase().includes(searchTerm.toLowerCase()) || false) ||
+        (hotel.location?.toLowerCase().includes(searchTerm.toLowerCase()) || false)
     );
 
     const indexOfLastHotel = currentPage * hotelsPerPage;
@@ -80,6 +116,30 @@ const HotelTable = () => {
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-indigo-400"></div>
         </div>
     );
+
+    const handleDelete = (hotelId) => {
+        if (!window.confirm("Are you sure you want to delete this hotel?")) return;
+
+        const token = localStorage.getItem("token");
+
+        fetch(`http://localhost:8000/api/hotels/${hotelId}`, {
+            method: "DELETE",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json"
+            }
+        })
+            .then(async res => {
+                if (!res.ok) {
+                    const text = await res.text();
+                    console.error("Failed to delete hotel:", text);
+                    throw new Error(`HTTP ${res.status}`);
+                }
+                // Success → hiq hotelin nga state
+                setHotels(prev => prev.filter(h => h.id !== hotelId));
+            })
+            .catch(err => console.error("Error:", err));
+    };
 
     return (
         <div className="min-h-screen bg-slate-900 p-4 md:p-12 text-slate-100 rounded-[2.5rem]">
@@ -108,8 +168,7 @@ const HotelTable = () => {
                                     onChange={(e) => { setSearchTerm(e.target.value); setCurrentPage(1); }}
                                 />
                             </div>
-                            <button className="relative group flex items-center justify-center w-14 h-14 bg-slate-900 text-indigo-300 rounded-2xl hover:bg-slate-800 transition-all duration-300 shadow-xl active:scale-95 border border-slate-700/50 flex-shrink-0">
-                                {/*(glow) hover */}
+                            <button onClick={() => setShowAddModal(true)} className="relative group flex items-center justify-center w-14 h-14 bg-slate-900 text-indigo-300 rounded-2xl hover:bg-slate-800 transition-all duration-300 shadow-xl active:scale-95 border border-slate-700/50 flex-shrink-0">
                                 <MdOutlineDomainAdd
                                     size={26}
                                     className="relative z-10 transition-transform duration-300 group-hover:scale-110"
@@ -135,7 +194,7 @@ const HotelTable = () => {
                             <tbody className="divide-y divide-slate-700/30">
                                 {currentHotels.map((hotel) => (
                                     <tr key={hotel.id} className="hover:bg-indigo-500/[0.03] transition-colors group">
-                                        {/* INFORMATION - FULL DESCRIPTION */}
+                                        {/* INFO */}
                                         <td className="p-6 align-top min-w-[300px]">
                                             <div className="flex flex-col gap-1">
                                                 <div className="flex items-center gap-3">
@@ -168,7 +227,7 @@ const HotelTable = () => {
                                             </div>
                                         </td>
 
-                                        {/* AMENITIES WITH TOOLTIP */}
+                                        {/* AMENITIES */}
                                         <td className="p-6 align-top">
                                             <div className="flex flex-wrap justify-center gap-2 max-w-[140px] mx-auto">
                                                 {hotel.amenities?.map((item, idx) => (
@@ -197,7 +256,7 @@ const HotelTable = () => {
                                         <td className="p-6 text-right align-top">
                                             <div className="flex justify-end gap-2">
                                                 <button title="Edit" onClick={() => setEditingHotel(hotel)} className="p-3 bg-slate-900 rounded-xl text-slate-400 hover:text-indigo-300 border border-slate-700 hover:border-indigo-500/50 transition-all shadow-lg"><Pencil size={18} /></button>
-                                                <button title="Delete" className="p-3 bg-slate-900 rounded-xl text-slate-400 hover:text-red-400 border border-slate-700 hover:border-red-500/50 transition-all shadow-lg"><Trash2 size={18} /></button>
+                                                <button title="Delete" onClick={() => handleDelete(hotel.id)} className="p-3 bg-slate-900 rounded-xl text-slate-400 hover:text-red-400 border border-slate-700 hover:border-red-500/50 transition-all shadow-lg"><Trash2 size={18} /></button>
                                             </div>
                                         </td>
                                     </tr>
@@ -263,8 +322,14 @@ const HotelTable = () => {
                 />
             )}
 
+            {showAddModal && (
+                <AddHotel
+                    onClose={() => setShowAddModal(false)}
+                    onHotelAdded={handleHotelAdded}
+                />
+            )}
+
         </div>
     );
 };
-
 export default HotelTable;

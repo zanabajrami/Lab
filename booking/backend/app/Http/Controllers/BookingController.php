@@ -77,6 +77,7 @@ class BookingController extends Controller
         'check_out' => 'required|date|after_or_equal:check_in',
         'nights' => 'required|integer|min:1',
         'total_price' => 'required|numeric|min:0',
+        'status' => 'required|in:confirmed,cancelled'
     ]);
 
     $booking->update([
@@ -89,6 +90,7 @@ class BookingController extends Controller
         'check_out' => $request->check_out,
         'nights' => $request->nights,
         'total_price' => $request->total_price,
+        'status' => $request->status
     ]);
 
     return response()->json([
