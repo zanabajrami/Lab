@@ -6,6 +6,14 @@ export default function CreateBooking({ onClose, onCreated }) {
     const [users, setUsers] = useState([]);
     const [hotels, setHotels] = useState([]);
 
+    // Bllock scroll
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+        return () => {
+            document.body.style.overflow = "unset";
+        };
+    }, []);
+
     useEffect(() => {
         axios.get("http://localhost:8000/api/hotels")
             .then(res => setHotels(res.data))
