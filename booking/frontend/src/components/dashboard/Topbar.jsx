@@ -24,21 +24,21 @@ export default function Topbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-const fetchMessages = async () => {
-  try {
-    const token = localStorage.getItem("token"); // supozon se token ruhet
-    const res = await fetch("http://127.0.0.1:8000/api/admin/messages", {
-      headers: {
-        "Authorization": `Bearer ${token}`,
-        "Content-Type": "application/json"
-      }
-    });
-    const data = await res.json();
-    if (data.status === "success") setMessages(data.data);
-  } catch (err) {
-    console.error(err);
-  }
-};
+  const fetchMessages = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const res = await fetch("http://127.0.0.1:8000/api/admin/messages", {
+        headers: {
+          "Authorization": `Bearer ${token}`,
+          "Content-Type": "application/json"
+        }
+      });
+      const data = await res.json();
+      if (data.status === "success") setMessages(data.data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   useEffect(() => {
     fetchMessages();
@@ -68,6 +68,25 @@ const fetchMessages = async () => {
       // Përditëso mesazhet + set is_read = 1
       setMessages(prev => prev.map(m => m.id === id ? { ...m, reply: data.data.reply, is_read: 1 } : m));
     } catch (err) { console.error(err); }
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      const token = localStorage.getItem("token");
+      const res = await fetch(`http://127.0.0.1:8000/api/messages/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Authorization": `Bearer ${token}`,
+          "Content-Type": "application/json"
+        }
+      });
+      if (!res.ok) throw new Error("Failed to delete message");
+
+      // Hiq mesazhin nga lista
+      setMessages(prev => prev.filter(m => m.id !== id));
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
@@ -108,7 +127,7 @@ const fetchMessages = async () => {
                   </div>
                 )}
               </div>
-              <Messages messages={messages} onReply={handleReply} />
+              <Messages messages={messages} onReply={handleReply} onDelete={handleDelete} />
             </div>
           )}
         </div>

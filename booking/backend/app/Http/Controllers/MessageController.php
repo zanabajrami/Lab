@@ -114,4 +114,24 @@ class MessageController extends Controller
     ]);
 }
 
+// DELETE MESSAGE
+public function destroy($id)
+{
+    $message = Message::find($id);
+
+    if (!$message) {
+        return response()->json([
+            'status' => 'error',
+            'message' => 'Message not found'
+        ], 404);
+    }
+
+    $message->delete();
+
+    return response()->json([
+        'status' => 'success',
+        'message' => 'Message deleted successfully'
+    ]);
+}
+
 }

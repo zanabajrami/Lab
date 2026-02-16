@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { MailOpen, CheckCheck } from "lucide-react";
+import { MailOpen, CheckCheck, Trash2 } from "lucide-react";
 
-export default function Messages({ messages, onReply }) {  
+export default function Messages({ messages, onReply, onDelete }) {  
   const [replyText, setReplyText] = useState({});
 
   const handleReplyChange = (id, value) => {
@@ -12,6 +12,12 @@ export default function Messages({ messages, onReply }) {
     if (!replyText[id] || replyText[id].trim() === "") return;
     onReply(id, replyText[id]);  
     setReplyText(prev => ({ ...prev, [id]: "" }));
+  };
+
+  const handleDeleteClick = (id) => {
+    if (window.confirm("Are you sure you want to delete this message?")) {
+      onDelete(id);
+    }
   };
 
   return (
@@ -39,8 +45,15 @@ export default function Messages({ messages, onReply }) {
                   </span>
                 )}
               </p>
-              <div className="flex items-center gap-1 text-[10px] text-gray-500">
+              <div className="flex items-center gap-2 text-[10px] text-gray-500">
                 {new Date(msg.created_at).toLocaleTimeString()}
+
+                {/* Delete icon */}
+                <Trash2
+                  size={14}
+                  className="text-red-600 cursor-pointer hover:text-red-800"
+                  onClick={() => handleDeleteClick(msg.id)}
+                />
               </div>
             </div>
 
