@@ -8,6 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Message extends Model
 {
     use HasFactory;
+protected $fillable = [
+        'name',
+        'email',
+        'message',
+        'reply',
+        'is_read'
+    ];
 
-     protected $fillable = ['name','email','message','is_read'];
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
+    
 }

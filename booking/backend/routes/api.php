@@ -13,10 +13,7 @@ use App\Http\Controllers\HotelController;
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 
-// PUBLIC: Route për mesazhet (Contact form)
-Route::get('/messages', [MessageController::class, 'index']);
 Route::post('/messages', [MessageController::class, 'store']);
-Route::patch('/messages/{id}/read', [MessageController::class, 'markAsRead']);
 
 Route::post('/bookings', [BookingController::class, 'store']);
 
@@ -25,18 +22,22 @@ Route::post('/cancel-bookings', [CancelBookingController::class, 'store']);
 Route::get('/hotels', [HotelController::class, 'index']);
 Route::get('/hotels/{id}', [HotelController::class, 'show']);
 
+Route::middleware(['auth:api'])->group(function () {
+    Route::get('/messages', [MessageController::class, 'userMessages']);
+});
+
 // Routes me JWT
 Route::middleware('jwt.auth')->group(function () {
 
     Route::get('me', [AuthController::class, 'me']);
     Route::post('logout', [AuthController::class, 'logout']);
 
-    // Vetëm admin
     Route::middleware('admin')->group(function () {
 
     // Users CRUD
     Route::get('users', [UserController::class, 'index']);
-    Route::get('users/{id}', [UserController::class, 'show']);        Route::post('users', [UserController::class, 'store']);
+    Route::get('users/{id}', [UserController::class, 'show']);        
+    Route::post('users', [UserController::class, 'store']);
     Route::put('users/{id}', [UserController::class, 'update']);
     Route::delete('users/{id}', [UserController::class, 'destroy']);
 
@@ -60,5 +61,15 @@ Route::middleware('jwt.auth')->group(function () {
     Route::put('/hotels/{id}', [HotelController::class, 'update']);
     Route::delete('/hotels/{id}', [HotelController::class, 'destroy']);
 
+    // Messages
+    //ADMIN
+    Route::middleware('admin')->group(function () {
+
+        Route::get('/admin/messages', [MessageController::class, 'index']);
+        Route::put('/messages/{id}/reply', [MessageController::class, 'reply']);
+        Route::put('/messages/{id}', [MessageController::class, 'update']);
+        Route::delete('/messages/{id}', [MessageController::class, 'destroy']);
+    });
+    
     });
 });

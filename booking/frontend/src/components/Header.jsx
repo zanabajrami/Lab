@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X, Heart, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
@@ -14,6 +14,8 @@ function Header() {
   const [scrolled, setScrolled] = useState(false);
   const user = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
+  const [messages, setMessages] = useState([]);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   // Dropdown për madhësinë
   const [headerSize, setHeaderSize] = useState("7xl");
@@ -34,6 +36,30 @@ function Header() {
     { name: "Hotels", to: "/hotels" },
     { name: "Deals", to: "/deals" },
   ];
+
+  useEffect(() => {
+    const fetchMessages = async () => {
+      if (!user) return;
+      try {
+        const token = localStorage.getItem("token");
+        const res = await fetch("http://127.0.0.1:8000/api/messages", {
+          headers: {
+            "Authorization": `Bearer ${token}`,
+          },
+        });
+        const data = await res.json();
+        if (data.status === "success") {
+          setMessages(data.data);
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    fetchMessages();
+    const interval = setInterval(fetchMessages, 10000); // refresh çdo 10s
+    return () => clearInterval(interval);
+  }, [user]);
 
   return (
     <>
@@ -82,6 +108,49 @@ function Header() {
               </Link>
             </nav>
 
+            {/* Replies */}
+            {user && user.role !== "admin" && (
+              <div className="relative">
+                <button
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  className={`relative p-2 rounded-full ${messages.some(m => !m.is_read)
+                      ? "ring-1 ring-red-500 animate-pulse"
+                      : "text-gray-500 hover:bg-white/10"
+                    }`}
+                >
+                  <MessageSquare size={22} />
+                  {messages.some(m => !m.is_read) && (
+                    <span className="absolute top-1 right-1 w-2.5 h-2.5 bg-red-600 rounded-full animate-ping" />
+                  )}
+                </button>
+
+                {dropdownOpen && (
+                  <div className="absolute right-0 mt-2 w-80 bg-white border shadow-xl rounded-xl z-50">
+                    <div className="px-4 py-2 font-bold border-b">Replies</div>
+                    {messages.filter(m => m.reply).length === 0 ? (
+                      <div className="p-4 text-gray-400 text-sm">No replies yet.</div>
+                    ) : (
+                      <div className="max-h-64 overflow-y-auto">
+                        {messages
+                          .filter(m => m.reply)
+                          .map(msg => (
+                            <div key={msg.id} className="px-4 py-2 border-b hover:bg-indigo-50">
+                              <p className="text-xs text-gray-500">{new Date(msg.created_at).toLocaleDateString()}</p>
+
+                              {/* Komenti i user-it */}
+                              <p className="text-sm text-gray-700 font-medium">You: {msg.message}</p>
+
+                              {/* Reply nga admin */}
+                              <p className="text-sm text-slate-800 font-semibold mt-1">Admin: {msg.reply}</p>
+                            </div>
+                          ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
+
             {user && user.role === 'admin' && (
               <Link to="/admin" className="text-indigo-100 hover:underline">Dashboard</Link>
             )}
@@ -93,7 +162,7 @@ function Header() {
                   onClick={() => {
                     localStorage.removeItem("user");
                     localStorage.removeItem("token");
-                    navigate("/"); 
+                    navigate("/");
                   }}
                   className="px-5 py-2 rounded-2xl bg-transparent text-indigo-200 font-semibold border border-indigo-200 hover:bg-indigo-50 transition duration-300"
                 >

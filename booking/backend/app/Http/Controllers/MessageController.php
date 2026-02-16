@@ -24,12 +24,15 @@ class MessageController extends Controller
             ], 422);
         }
 
-        $message = Message::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'message' => $request->message,
-            'is_read' => 0 
-        ]);
+        $user = \App\Models\User::where('email', $request->email)->first();
+
+       $message = Message::create([
+        'user_id' => $user?->id,
+        'name' => $request->name,
+        'email' => $request->email,
+        'message' => $request->message,
+        'is_read' => 0
+    ]);
 
         return response()->json([
             'status' => 'success',
@@ -40,29 +43,75 @@ class MessageController extends Controller
 
     // GET ALL MESSAGES
     public function index()
-    {
-        $messages = Message::orderBy('created_at', 'desc')->get();
+{
+    $messages = Message::orderBy('created_at', 'desc')->get();
 
-        return response()->json([
-            'status' => 'success',
-            'data' => $messages
-        ]);
+    return response()->json([
+        'status' => 'success',
+        'data' => $messages
+    ]);
+}
+
+    //REPLY
+    public function reply(Request $request, $id)
+{
+    $request->validate(['reply' => 'required|string']);
+
+    $message = Message::findOrFail($id);
+
+    $message->update([
+        'reply' => $request->reply,
+        'is_read' => 1,
+    ]);
+
+    // Mund të dërgosh event ose notifikim
+    if ($message->user_id) {
+        $user = $message->user;
     }
 
-    // MARK MESSAGE AS READ
-    public function markAsRead($id)
-    {
-        $message = Message::findOrFail($id);
+    return response()->json([
+        'status' => 'success',
+        'message' => 'Reply sent successfully',
+        'data' => $message
+    ]);
+}
 
-        if ($message->is_read == 0) {
-            $message->update([
-                'is_read' => 1
-            ]);
-        }
+    //UPDATE
+    public function update(Request $request, $id)
+{
+    $message = Message::findOrFail($id);
 
-        return response()->json([
-            'status' => 'success',
-            'message' => 'Message marked as read'
-        ]);
-    }
+    $message->update([
+        'message' => $request->message
+    ]);
+
+    return response()->json([
+        'status' => 'success',
+        'message' => 'Message updated'
+    ]);
+}
+
+    // GET messages + replies për user-in e loguar
+    public function userMessages()
+{
+    $user = auth('api')->user();
+
+    if (!$user) {
+    return response()->json([
+        'status' => 'error',
+        'message' => 'Unauthorized'
+    ], 401);
+}
+
+    $messages = Message::where('user_id', $user->id)
+        ->whereNotNull('reply')
+        ->orderBy('created_at', 'desc')
+        ->get();
+
+    return response()->json([
+        'status' => 'success',
+        'data' => $messages
+    ]);
+}
+
 }
